@@ -83,6 +83,7 @@ project "SaraganEngine"
 		systemversion "latest"
 		cppdialect "C++17"
 		staticruntime "on"
+		links { "OpenGL32" }
 
 		postbuildcommands
 		{

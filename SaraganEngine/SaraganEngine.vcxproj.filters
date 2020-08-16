@@ -55,6 +55,12 @@
     <Filter Include="Systems\Base">
       <UniqueIdentifier>{bdf425ab-244e-47e8-bb78-2f80f4bcb91b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Renderer">
+      <UniqueIdentifier>{b867bc6b-c3ae-4493-a4ca-f311c44e29e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Renderer\OpenGL">
+      <UniqueIdentifier>{833ab3aa-2f5e-43d7-b83a-68a13b6845f2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\ThirdParty\glew\include\GL\eglew.h">
@@ -1196,6 +1202,13 @@
     <ClInclude Include="Component.h">
       <Filter>Systems\Base</Filter>
     </ClInclude>
+    <ClInclude Include="Engine.h" />
+    <ClInclude Include="Renderer.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenGLRenderer.h">
+      <Filter>Renderer\OpenGL</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="EngineLibrary.cpp" />
@@ -1232,6 +1245,13 @@
     </ClCompile>
     <ClCompile Include="Component.cpp">
       <Filter>Systems\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine.cpp" />
+    <ClCompile Include="Renderer.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="OpenGLRenderer.cpp">
+      <Filter>Renderer\OpenGL</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
