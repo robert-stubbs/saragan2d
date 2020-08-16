@@ -6,6 +6,7 @@
 class Renderer;
 class SystemManager;
 class StateMachine;
+class EntityManager;
 
 class Engine
 {
@@ -13,9 +14,13 @@ public:
 	Engine();
 	~Engine();
 
+	float width;
+	float height;
+
 	Renderer* renderer;
 	StateMachine* GameFSM;
 	SystemManager* System;
+	EntityManager* EntityMgr;
 
 	glm::mat4 ProjectionMatrix;
 	glm::mat4 viewMatrix; // Store the view matrix  
@@ -38,6 +43,9 @@ public:
 	void MouseDown(UINT Msg, WPARAM wParam, LPARAM lParam);
 	void MouseUp(UINT Msg, WPARAM wParam, LPARAM lParam);
 	void MouseMove(UINT Msg, WPARAM wParam, LPARAM lParam);
+
+	static Engine* engine;
+	static inline Engine& getEngine() { return *engine; }
 
 };
 

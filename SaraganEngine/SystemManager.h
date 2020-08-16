@@ -28,6 +28,10 @@ public:
 	void RenderUI();
 	void CleanUp();
 
+
+	static SystemManager* SysMgr;
+	static inline SystemManager& getEngine() { return *SysMgr; }
+
 private:
 	//map<string, cSystem> m_systems;
 	SystemBank sysBank;

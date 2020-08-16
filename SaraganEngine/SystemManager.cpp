@@ -5,8 +5,11 @@
 #include "Component.h"
 #include "cErrorLogger.h"
 
+SystemManager* SystemManager::SysMgr = nullptr;
+
 SystemManager::SystemManager()
 {
+	SysMgr = this;
 	sysBank.clear();
 
 }

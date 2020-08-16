@@ -4,17 +4,24 @@
 #include "OpenGLRenderer.h"
 #include "StateMachine.h"
 #include "SystemManager.h"
+#include "EntityManager.h"
 #include "SafeDelete.h"
+
+Engine* Engine::engine = nullptr;
 
 Engine::Engine()
 {
+	engine = this;
+
 	renderer = new OpenGLRenderer();
 	System = new SystemManager();
+	EntityMgr = new EntityManager();
 
 }
 
 Engine::~Engine()
 {
+	SAFE_DELETE(EntityMgr);
 
 	System->CleanUp();
 	SAFE_DELETE(System);
@@ -79,6 +86,8 @@ bool Engine::cleanup()
 bool Engine::ResizeWindow(int Width, int Height)
 {
 	return renderer->ResizeWindow(Width, Height);
+	width = (float)Width;
+	height = (float)Height;
 }
 
 void Engine::KeyDown(UINT Msg, WPARAM wParam, LPARAM lParam)

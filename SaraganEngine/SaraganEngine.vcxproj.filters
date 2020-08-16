@@ -61,6 +61,18 @@
     <Filter Include="Renderer\OpenGL">
       <UniqueIdentifier>{833ab3aa-2f5e-43d7-b83a-68a13b6845f2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Objects">
+      <UniqueIdentifier>{ae5a7bd5-bdde-4a41-be76-d5703cf22db0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entity">
+      <UniqueIdentifier>{d7661b37-8fc9-4a23-9e2b-5e98e3e2a760}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entity\Base">
+      <UniqueIdentifier>{7b0d1fe2-30a8-4cfb-93df-f8b292854e33}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Camera">
+      <UniqueIdentifier>{304c07df-b730-4f75-ad2a-1f17d2510ca6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\ThirdParty\glew\include\GL\eglew.h">
@@ -1215,6 +1227,21 @@
     <ClInclude Include="OpenGLShader.h">
       <Filter>Renderer\OpenGL</Filter>
     </ClInclude>
+    <ClInclude Include="Object.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityManager.h">
+      <Filter>Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity.h">
+      <Filter>Entity\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera2D.h">
+      <Filter>Camera</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="EngineLibrary.cpp" />
@@ -1264,6 +1291,21 @@
     </ClCompile>
     <ClCompile Include="OpenGLShader.cpp">
       <Filter>Renderer\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="Object.cpp">
+      <Filter>Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityManager.cpp">
+      <Filter>Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity.cpp">
+      <Filter>Entity\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera2D.cpp">
+      <Filter>Camera</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

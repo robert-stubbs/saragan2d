@@ -1,11 +1,14 @@
 #ifndef _COMPONENT_H_
 #define _COMPONENT_H_
 
+class Entity;
+
 class Component
 {
 public:
 	std::string m_handle;
 	std::string m_type;
+	Entity* ent;
 
 	Component();
 	virtual ~Component();

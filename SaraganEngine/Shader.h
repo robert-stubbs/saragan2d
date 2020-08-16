@@ -5,7 +5,7 @@ class Shader
 {
 public:
 	Shader();
-	virtual ~Shader() = 0;
+	virtual ~Shader();
 
 	bool isAnimShader;
 	bool active;

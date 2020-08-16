@@ -132,7 +132,7 @@ OpenGLRenderer::~OpenGLRenderer()
 	 glGetIntegerv(GL_MAJOR_VERSION, &Major); // major = 3
 	 glGetIntegerv(GL_MINOR_VERSION, &Minor); // minor = 2
 
-	 cErrorLogger::Log().WriteToConsole("> OpenGL version: ");
+	 cErrorLogger::Log().WriteToConsole("> OpenGL version: ", false);
 	 cErrorLogger::Log().WriteToConsole(Major);
 	 cErrorLogger::Log().WriteToConsole(Minor);
 	 cErrorLogger::Log().WriteToConsole("");
@@ -154,7 +154,7 @@ bool OpenGLRenderer::SetUpShaders()
 	CurrentShader = shader;
 	CurrentShader->bind();
 
-	return false;
+	return true;
 }
 
  bool OpenGLRenderer::init(HWND hWnd)

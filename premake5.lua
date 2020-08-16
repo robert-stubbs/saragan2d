@@ -26,8 +26,9 @@ project "SaraganGame"
 
 	includedirs
 	{
-		"SaraganEngine"
-		"ThirdParty/glm/include"
+		"SaraganEngine",
+		"ThirdParty/glm/include",
+		"ThirdParty/glew/include"
 	}
 
 	links
@@ -37,14 +38,14 @@ project "SaraganGame"
 
 	libdirs  
 	{
-		"ThirdParty/glew/lib/Release/x64/**"
+		"ThirdParty/glew/lib/**"
 	}
 
 	filter "system:windows"
 		systemversion "latest"
 		cppdialect "C++17"
 		staticruntime "on"
-		links { "SaraganEngine", "OpenGL32" }
+		links { "SaraganEngine", "OpenGL32", "glew32" }
 
 	filter "configurations.Debug"
 		defines { "SARAGAN_DEBUG" }
@@ -81,7 +82,7 @@ project "SaraganEngine"
 
 	libdirs  
 	{
-		"ThirdParty/glew/lib/Release/x64/**"
+		"ThirdParty/glew/lib/**"
 	}
 
 	filter "system:windows"

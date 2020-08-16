@@ -34,4 +34,9 @@
 #include <glm/gtx/quaternion.hpp>
 #include <glm/gtx/compatibility.hpp>
 
+#include <ft2build.h>
+#include FT_FREETYPE_H
+#include <freetype-gl\freetype-gl.h>
+#include <freetype-gl\vertex-buffer.h>
+
 #endif

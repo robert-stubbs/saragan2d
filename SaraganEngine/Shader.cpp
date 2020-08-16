@@ -5,3 +5,5 @@ Shader::Shader() {
 	active = false;
 	isAnimShader = false;
 }
+
+Shader::~Shader() {}
