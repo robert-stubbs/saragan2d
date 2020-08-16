@@ -73,6 +73,9 @@
     <Filter Include="Camera">
       <UniqueIdentifier>{304c07df-b730-4f75-ad2a-1f17d2510ca6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Font">
+      <UniqueIdentifier>{225bee4f-b274-4d1c-8273-7cd61b2b87e9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\ThirdParty\glew\include\GL\eglew.h">
@@ -1242,6 +1245,9 @@
     <ClInclude Include="Camera2D.h">
       <Filter>Camera</Filter>
     </ClInclude>
+    <ClInclude Include="Font.h">
+      <Filter>Font</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="EngineLibrary.cpp" />
@@ -1306,6 +1312,9 @@
     </ClCompile>
     <ClCompile Include="Camera2D.cpp">
       <Filter>Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="Font.cpp">
+      <Filter>Font</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
