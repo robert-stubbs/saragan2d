@@ -1,6 +1,9 @@
 #ifndef _RENDERER_H_
 #define _RENDERER_H_
 
+class StateMachine;
+class SystemManager;
+
 class Renderer
 {
 public:
@@ -21,10 +24,12 @@ public:
 	virtual bool load() = 0;
 	virtual bool Update(float DeltaTime) = 0;
 	virtual bool UpdateOrtho(float DeltaTime) = 0;
-	virtual void render() = 0;
-	virtual void renderOrtho() = 0;
+	virtual void render(StateMachine* GameFSM, SystemManager* System, glm::mat4 projection, glm::mat4 view) = 0;
+	virtual void renderOrtho(StateMachine* GameFSM, SystemManager* System, glm::mat4 projection, glm::mat4 view) = 0;
 	virtual bool cleanup() = 0;
 
+	virtual glm::vec3 GetWorldPos(int x, int y, glm::mat4 projection, glm::mat4 view) = 0;
+	virtual glm::vec3 GetWorldPos2D(int x, int y, glm::mat4 projection, glm::mat4 view) = 0;
 
 	virtual bool ResizeWindow(int Width, int Height) = 0;
 

@@ -3,6 +3,9 @@
 #include "Renderer.h"
 
 #include "cErrorLogger.h"
+#include "OpenGLShader.h"
+#include "StateMachine.h"
+#include "SystemManager.h"
 
 OpenGLRenderer::OpenGLRenderer() : Renderer()
 {
@@ -137,11 +140,22 @@ OpenGLRenderer::~OpenGLRenderer()
 	 return true;
  }
 
- bool OpenGLRenderer::SetUpShaders()
- {
+bool OpenGLRenderer::SetUpShaders()
+{
+	std::string asset_dir = "C:/Assets/";
 
-	 return false;
- }
+	shader = new OpenGLShader();
+	shader->init(asset_dir + "Shaders/VertexShader.glsl", asset_dir + "Shaders/FragmentShader.glsl");
+
+	animShader = new OpenGLShader();
+	animShader->isAnimShader = true;
+	animShader->init(asset_dir + "Shaders/VertexShaderAnim.glsl", asset_dir + "Shaders/FragmentShaderAnim.glsl");
+
+	CurrentShader = shader;
+	CurrentShader->bind();
+
+	return false;
+}
 
  bool OpenGLRenderer::init(HWND hWnd)
  {
@@ -151,7 +165,18 @@ OpenGLRenderer::~OpenGLRenderer()
 		 return false;
 	 }
 
+	 if (!SetUpShaders())
+	 {
+		 cErrorLogger::Log().WriteToConsole("Failed to setup Shaders\n");
+		 return false;
+	 }
 
+	 return true;
+ }
+
+ bool OpenGLRenderer::PostInit()
+ {
+	 check_gl_error();
 
 	 glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
 	 glClearDepth(1.0f);
@@ -163,11 +188,6 @@ OpenGLRenderer::~OpenGLRenderer()
 
 	 glShadeModel(GL_SMOOTH);
 
-	 return true;
- }
-
- bool OpenGLRenderer::PostInit()
- {
 	 return true;
  }
 
@@ -188,55 +208,55 @@ OpenGLRenderer::~OpenGLRenderer()
 	 return true;
  }
 
- void OpenGLRenderer::render()
+ void OpenGLRenderer::render(StateMachine* GameFSM, SystemManager* System, glm::mat4 projection, glm::mat4 view)
  {
 	 glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-	 //if (CurrentShader != shader)
-	 //{
-		// CurrentShader->unbind();
-		// CurrentShader = shader;
-		// CurrentShader->bind();
-	 //}
+	 if (CurrentShader != shader)
+	 {
+		 CurrentShader->unbind();
+		 CurrentShader = shader;
+		 CurrentShader->bind();
+	 }
 
-	 //glUniform1i(CurrentShader->isText, 0);
-	 //glUniformMatrix4fv(CurrentShader->projectionMatrixLocation, 1, GL_FALSE, glm::value_ptr(pCam->ProjectionMatrix)); // Send our view matrix to the shader 
-	 //glUniformMatrix4fv(CurrentShader->viewMatrixLocation, 1, GL_FALSE, glm::value_ptr(pCam->ViewMatrix)); // Send our view matrix to the shader  
-	 //glUniformMatrix4fv(CurrentShader->modelMatrixLocation, 1, GL_FALSE, glm::value_ptr(glm::mat4(1.0f)));
+	 glUniform1i(CurrentShader->isText, 0);
+	 glUniformMatrix4fv(CurrentShader->projectionMatrixLocation, 1, GL_FALSE, glm::value_ptr(projection)); // Send our view matrix to the shader 
+	 glUniformMatrix4fv(CurrentShader->viewMatrixLocation, 1, GL_FALSE, glm::value_ptr(view)); // Send our view matrix to the shader  
+	 glUniformMatrix4fv(CurrentShader->modelMatrixLocation, 1, GL_FALSE, glm::value_ptr(glm::mat4(1.0f)));
 
-	 //GameFSM->Render();
-	 //System->Render();
+	 GameFSM->Render();
+	 System->Render();
 
-	 //if (CurrentShader != animShader)
-	 //{
-		// CurrentShader->unbind();
-		// CurrentShader = animShader;
-		// CurrentShader->bind();
-	 //}
+	 if (CurrentShader != animShader)
+	 {
+		 CurrentShader->unbind();
+		 CurrentShader = animShader;
+		 CurrentShader->bind();
+	 }
 
-	 //glUniformMatrix4fv(CurrentShader->projectionMatrixLocation, 1, GL_FALSE, glm::value_ptr(pCam->ProjectionMatrix)); // Send our view matrix to the shader 
-	 //glUniformMatrix4fv(CurrentShader->viewMatrixLocation, 1, GL_FALSE, glm::value_ptr(pCam->ViewMatrix)); // Send our view matrix to the shader  
+	 glUniformMatrix4fv(CurrentShader->projectionMatrixLocation, 1, GL_FALSE, glm::value_ptr(projection)); // Send our view matrix to the shader 
+	 glUniformMatrix4fv(CurrentShader->viewMatrixLocation, 1, GL_FALSE, glm::value_ptr(view)); // Send our view matrix to the shader  
 
-	 //System->RenderAnim();
-	 //GameFSM->RenderAnim();
+	 System->RenderAnim();
+	 GameFSM->RenderAnim();
 
  }
 
- void OpenGLRenderer::renderOrtho()
+ void OpenGLRenderer::renderOrtho(StateMachine* GameFSM, SystemManager* System, glm::mat4 projection, glm::mat4 view)
  {
-	 //if (CurrentShader != shader)
-	 //{
-		// CurrentShader->unbind();
-		// CurrentShader = shader;
-		// CurrentShader->bind();
-	 //}
+	 if (CurrentShader != shader)
+	 {
+		 CurrentShader->unbind();
+		 CurrentShader = shader;
+		 CurrentShader->bind();
+	 }
 
-	 //glUniformMatrix4fv(CurrentShader->projectionMatrixLocation, 1, GL_FALSE, glm::value_ptr(pCam2D->ProjectionMatrix)); // Send our view matrix to the shader 
-	 //glUniformMatrix4fv(CurrentShader->viewMatrixLocation, 1, GL_FALSE, glm::value_ptr(pCam2D->ViewMatrix)); // Send our view matrix to the shader  
-	 //glUniformMatrix4fv(CurrentShader->modelMatrixLocation, 1, GL_FALSE, glm::value_ptr(glm::mat4(1.0f)));
+	 glUniformMatrix4fv(CurrentShader->projectionMatrixLocation, 1, GL_FALSE, glm::value_ptr(projection)); // Send our view matrix to the shader 
+	 glUniformMatrix4fv(CurrentShader->viewMatrixLocation, 1, GL_FALSE, glm::value_ptr(view)); // Send our view matrix to the shader  
+	 glUniformMatrix4fv(CurrentShader->modelMatrixLocation, 1, GL_FALSE, glm::value_ptr(glm::mat4(1.0f)));
 
-	 //GameFSM->RenderOrth();
-	 //System->RenderUI();
+	 GameFSM->RenderOrth();
+	 System->RenderUI();
 
 	 SwapBuffers(hDC);
  }
@@ -307,4 +327,30 @@ OpenGLRenderer::~OpenGLRenderer()
 		 //cout << "Error: " << error << endl;
 		 cErrorLogger::Log().WriteToConsole(error);
 	 }
+ }
+
+
+ glm::vec3 OpenGLRenderer::GetWorldPos(int x, int y, glm::mat4 projection, glm::mat4 view)
+ {
+	 GLint viewport[4];
+	 GLfloat winY, z;
+	 glGetIntegerv(GL_VIEWPORT, viewport);
+
+	 winY = (GLfloat)((viewport[1] + viewport[3]) - y);
+
+	 glReadPixels((GLint)x, (GLint)winY, 1, 1, GL_DEPTH_COMPONENT, GL_FLOAT, &z);
+
+	 return glm::unProject(glm::vec3((double)x, (double)winY, (double)z), view, projection, glm::vec4(viewport[0], viewport[1], viewport[2], viewport[3]));
+	 
+ }
+
+ glm::vec3 OpenGLRenderer::GetWorldPos2D(int x, int y, glm::mat4 projection, glm::mat4 view)
+ {
+	 GLint viewport[4];
+	 GLfloat winY;
+	 glGetIntegerv(GL_VIEWPORT, viewport);
+
+	 winY = (GLfloat)((viewport[1] + viewport[3]) - y);
+
+	 return glm::unProject(glm::vec3((double)x, (double)winY, 0.0f), view, projection, glm::vec4(viewport[0], viewport[1], viewport[2], viewport[3]));
  }

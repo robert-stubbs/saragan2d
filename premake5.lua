@@ -18,12 +18,16 @@ project "SaraganGame"
 
 	files {
 		"%{prj.name}/**.h",
-		"%{prj.name}/**.cpp"
+		"%{prj.name}/**.cpp",
+		"ThirdParty/glm/include/**.hpp",
+		"ThirdParty/glm/include/**.inl",
+		"ThirdParty/glew/include/**.h"
 	}
 
 	includedirs
 	{
 		"SaraganEngine"
+		"ThirdParty/glm/include"
 	}
 
 	links

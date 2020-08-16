@@ -4,7 +4,9 @@
 #include "cCreateWnd.h"
 #include "cRegWnd.h"
 #include "cErrorLogger.h"
+#include "Engine.h"
 
+Engine* pEngine;
 
 //https://github.com/HectorPeeters/opengl_premake_boilerplate
 
@@ -97,6 +99,11 @@ void PreLoad()
 {
 	cErrorLogger::Log().WriteToConsole("#######################################################");
 	cErrorLogger::Log().WriteToConsole("> Created Console");
+
+	cErrorLogger::Log().WriteToConsole("> Creating Engine");
+	pEngine = new Engine();
+
+
 }
 
 cCreateWnd CreateEngineWindow()
@@ -117,19 +124,29 @@ cCreateWnd CreateEngineWindow()
 
 void Load()
 {
+	cErrorLogger::Log().WriteToConsole("> Loading Engine\n");
+	if (!pEngine->init(hWnd)) {
+		cErrorLogger::Log().WriteToConsole("Failed to Initialize OpenGL\n");
+		return;
+	}
+
 }
 
 void PostLoad()
 {
-
+	pEngine->PostInit();
 }
 
 void Update(float dt)
 {
+	pEngine->Update(dt);
+	pEngine->UpdateOrth(dt);
 }
 
 void Render()
 {
+	pEngine->render();
+	pEngine->renderOrth();
 }
 
 void CleanUp()
@@ -138,6 +155,8 @@ void CleanUp()
 	cErrorLogger::Log().WriteToConsole("> Shutting Down\n");
 	cErrorLogger::Log().WriteToConsole("#######################################################\n");
 	cErrorLogger::Log().DestroyConsole();
+
+	pEngine->cleanup();
 
 	if (!UnregisterClass(CLASSNAME, hInst))               // Are We Able To Unregister Class
 	{

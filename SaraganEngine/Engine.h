@@ -1,11 +1,25 @@
 #ifndef _ENGINE_H_	
 #define _ENGINE_H_
 
+#include "glm/glm.hpp"
+
+class Renderer;
+class SystemManager;
+class StateMachine;
+
 class Engine
 {
+public:
 	Engine();
 	~Engine();
 
+	Renderer* renderer;
+	StateMachine* GameFSM;
+	SystemManager* System;
+
+	glm::mat4 ProjectionMatrix;
+	glm::mat4 viewMatrix; // Store the view matrix  
+	glm::mat4 modelMatrix; // Store the model matrix  
 
 	bool init(HWND hWnd);
 	bool PostInit();
