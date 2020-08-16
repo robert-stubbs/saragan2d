@@ -7,7 +7,7 @@
 
 #include "System.h"
 
-class cSoundItem;
+class SoundItem;
 
 struct ListenerPos
 {
@@ -36,11 +36,11 @@ public:
 	virtual void CleanUp();
 
 
-	virtual void AddSoundComponent(cSoundItem* newSound);
-	virtual cSoundItem* getSoundComponent(std::string handle);
+	virtual void AddSoundComponent(SoundItem* newSound);
+	virtual SoundItem* getSoundComponent(std::string handle);
 
 	virtual void AddComponent(std::string handle);
-	virtual cComponent* getComponent(std::string handle);
+	virtual Component* getComponent(std::string handle);
 	virtual void RemoveComponent(std::string handle);
 
 	void AddSound(std::string filename, std::string instance_name);

@@ -59,7 +59,7 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>GamePCH.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>..\SaraganEngine;..\ThirdParty\glm\include;..\ThirdParty\glew\include;..\ThirdParty\freetype2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\SaraganEngine;..\ThirdParty\glm\include;..\ThirdParty\glew\include;..\ThirdParty\freetype2;..\ThirdParty\OpenAL\include;..\ThirdParty\OpenAL\libs\Win64;..\ThirdParty\OpenAL\libs\Win64\EFX-Util_MT;..\ThirdParty\OpenAL\libs\Win64\EFX-Util_MTDLL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <LanguageStandard>stdcpp17</LanguageStandard>
@@ -75,7 +75,7 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>GamePCH.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>..\SaraganEngine;..\ThirdParty\glm\include;..\ThirdParty\glew\include;..\ThirdParty\freetype2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\SaraganEngine;..\ThirdParty\glm\include;..\ThirdParty\glew\include;..\ThirdParty\freetype2;..\ThirdParty\OpenAL\include;..\ThirdParty\OpenAL\libs\Win64;..\ThirdParty\OpenAL\libs\Win64\EFX-Util_MT;..\ThirdParty\OpenAL\libs\Win64\EFX-Util_MTDLL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <LanguageStandard>stdcpp17</LanguageStandard>

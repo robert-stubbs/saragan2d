@@ -224,6 +224,9 @@ bool OpenGLRenderer::SetUpShaders()
 	 glUniformMatrix4fv(CurrentShader->viewMatrixLocation, 1, GL_FALSE, glm::value_ptr(view)); // Send our view matrix to the shader  
 	 glUniformMatrix4fv(CurrentShader->modelMatrixLocation, 1, GL_FALSE, glm::value_ptr(glm::mat4(1.0f)));
 
+	 glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+	 glEnable(GL_BLEND);
+
 	 GameFSM->Render();
 	 System->Render();
 
@@ -240,6 +243,7 @@ bool OpenGLRenderer::SetUpShaders()
 	 System->RenderAnim();
 	 GameFSM->RenderAnim();
 
+	 glDisable(GL_BLEND);
  }
 
  void OpenGLRenderer::renderOrtho(StateMachine* GameFSM, SystemManager* System, glm::mat4 projection, glm::mat4 view)
@@ -255,8 +259,15 @@ bool OpenGLRenderer::SetUpShaders()
 	 glUniformMatrix4fv(CurrentShader->viewMatrixLocation, 1, GL_FALSE, glm::value_ptr(view)); // Send our view matrix to the shader  
 	 glUniformMatrix4fv(CurrentShader->modelMatrixLocation, 1, GL_FALSE, glm::value_ptr(glm::mat4(1.0f)));
 
+	 glDisable(GL_DEPTH_TEST);
+	 glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+	 glEnable(GL_BLEND);
+
 	 GameFSM->RenderOrth();
 	 System->RenderUI();
+
+	 glDisable(GL_BLEND);
+	 glEnable(GL_DEPTH_TEST);
 
 	 SwapBuffers(hDC);
  }

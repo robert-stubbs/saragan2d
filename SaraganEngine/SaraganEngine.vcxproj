@@ -57,7 +57,7 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>EnginePCH.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>..\ThirdParty\glm\include;..\ThirdParty\glew\include;..\ThirdParty\freetype2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\ThirdParty\glm\include;..\ThirdParty\glew\include;..\ThirdParty\freetype2;..\ThirdParty\OpenAL\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <LanguageStandard>stdcpp17</LanguageStandard>
@@ -67,7 +67,7 @@
     </Link>
     <Lib>
       <AdditionalDependencies>OpenGL32.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>..\ThirdParty\glew\lib\Release;..\ThirdParty\glew\lib\Release\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\ThirdParty\glew\lib\Release;..\ThirdParty\glew\lib\Release\x64;..\ThirdParty\OpenAL\libs\Win64;..\ThirdParty\OpenAL\libs\Win64\EFX-Util_MT;..\ThirdParty\OpenAL\libs\Win64\EFX-Util_MTDLL;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Lib>
     <PostBuildEvent>
       <Command>IF EXIST ..\bin\Debug-windows-x86_64\$(ProjectName)\ (xcopy /Q /E /Y /I ..\bin\Debug-windows-x86_64\$(ProjectName) ..\bin\Debug-windows-x86_64\SaraganGame &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Debug-windows-x86_64\$(ProjectName) ..\bin\Debug-windows-x86_64\SaraganGame &gt; nul)</Command>
@@ -78,7 +78,7 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>EnginePCH.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>..\ThirdParty\glm\include;..\ThirdParty\glew\include;..\ThirdParty\freetype2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\ThirdParty\glm\include;..\ThirdParty\glew\include;..\ThirdParty\freetype2;..\ThirdParty\OpenAL\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <LanguageStandard>stdcpp17</LanguageStandard>
@@ -88,7 +88,7 @@
     </Link>
     <Lib>
       <AdditionalDependencies>OpenGL32.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>..\ThirdParty\glew\lib\Release;..\ThirdParty\glew\lib\Release\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\ThirdParty\glew\lib\Release;..\ThirdParty\glew\lib\Release\x64;..\ThirdParty\OpenAL\libs\Win64;..\ThirdParty\OpenAL\libs\Win64\EFX-Util_MT;..\ThirdParty\OpenAL\libs\Win64\EFX-Util_MTDLL;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Lib>
     <PostBuildEvent>
       <Command>IF EXIST ..\bin\Release-windows-x86_64\$(ProjectName)\ (xcopy /Q /E /Y /I ..\bin\Release-windows-x86_64\$(ProjectName) ..\bin\Release-windows-x86_64\SaraganGame &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Release-windows-x86_64\$(ProjectName) ..\bin\Release-windows-x86_64\SaraganGame &gt; nul)</Command>

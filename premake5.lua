@@ -49,7 +49,7 @@ project "SaraganGame"
 		systemversion "latest"
 		cppdialect "C++17"
 		staticruntime "on"
-		links { "SaraganEngine", "OpenGL32", "glew32" }
+		links { "SaraganEngine", "OpenGL32", "glew32", "OpenAL" }
 
 	filter "configurations.Debug"
 		defines { "SARAGAN_DEBUG" }
@@ -97,7 +97,7 @@ project "SaraganEngine"
 		systemversion "latest"
 		cppdialect "C++17"
 		staticruntime "on"
-		links { "OpenGL32" }
+		links { "OpenGL32", "OpenAL" }
 
 		postbuildcommands
 		{

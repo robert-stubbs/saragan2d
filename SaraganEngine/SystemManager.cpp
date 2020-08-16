@@ -1,9 +1,14 @@
 #include "EnginePCH.h"
 #include "SystemManager.h"
 
+#include "Entity.h"
+#include "Engine.h"
+#include "EntityManager.h"
+
 #include "System.h"
 #include "Component.h"
 #include "cErrorLogger.h"
+#include "SoundSystem.h"
 
 SystemManager* SystemManager::SysMgr = nullptr;
 
@@ -35,7 +40,7 @@ void SystemManager::Init()
 
 
 	//AddSystem(new cGUISystem(true));
-	//AddSystem(new cSoundSystem());
+	AddSystem(new SoundSystem());
 	//AddSystem(new cAISystem());
 	//AddSystem(new cModelSystem(false, true));
 	//AddSystem(new cPositionSystem());
@@ -56,8 +61,6 @@ void SystemManager::Update(float dt)
 
 void SystemManager::Render()
 {
-	//glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-	//glEnable(GL_BLEND);
 
 	for (iter = sysBank.begin(); iter != sysBank.end(); iter++)
 	{
@@ -66,15 +69,10 @@ void SystemManager::Render()
 			(*iter).second->Render();
 		}
 	}
-
-	//glDisable(GL_BLEND);
 }
 
 void SystemManager::RenderAnim()
 {
-	//glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-	//glEnable(GL_BLEND);
-
 	for (iter = sysBank.begin(); iter != sysBank.end(); iter++)
 	{
 		if ((*iter).second->isAnim && !(*iter).second->isUI)
@@ -82,16 +80,10 @@ void SystemManager::RenderAnim()
 			(*iter).second->RenderAnim();
 		}
 	}
-
-	//glDisable(GL_BLEND);
 }
 
 void SystemManager::RenderUI()
 {
-	//glDisable(GL_DEPTH_TEST);
-	//glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-	//glEnable(GL_BLEND);
-
 	for (iter = sysBank.begin(); iter != sysBank.end(); iter++)
 	{
 		if (!(*iter).second->isAnim && (*iter).second->isUI)
@@ -99,9 +91,6 @@ void SystemManager::RenderUI()
 			(*iter).second->RenderUI();
 		}
 	}
-
-	//glDisable(GL_BLEND);
-	//glEnable(GL_DEPTH_TEST);
 }
 
 
@@ -158,11 +147,11 @@ void SystemManager::AddComponentClass(std::string SystemName, Component* comp)
 
 	sys->AddComponentObject(comp);
 
-	//cEntity* Ent = pEngine->EntityMgr->getEntity(comp->m_handle);
-	//if (Ent != nullptr)
-	//{
-	//	Ent->addComponent(comp);
-	//}
+	Entity* Ent = Engine::getEngine().EntityMgr->getEntity(comp->m_handle);
+	if (Ent != nullptr)
+	{
+		Ent->addComponent(comp);
+	}
 }
 
 void SystemManager::CleanUp()

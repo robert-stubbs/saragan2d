@@ -14,14 +14,14 @@ SoundSystem::SoundSystem(bool isui, bool isanim) : System(isui, isanim)
 	device = alcOpenDevice(NULL);                                               //Open the device
 	if (!device)
 	{
-		Er->WriteToConsole("no sound device\n");
+		cErrorLogger::Log().WriteToConsole("no sound device\n");
 		return;
 	}
 	context = alcCreateContext(device, NULL);                                   //Give the device a context
 	alcMakeContextCurrent(context);                                             //Make the context the current
 	if (!context)
 	{
-		Er->WriteToConsole("no sound context\n");
+		cErrorLogger::Log().WriteToConsole("no sound context\n");
 		return;
 	}
 
@@ -70,7 +70,7 @@ void SoundSystem::AddComponent(std::string handle)
 
 void SoundSystem::AddSoundComponent(SoundItem* newSound)
 {
-	cComponent* comp = getComponent(newSound->m_handle);
+	Component* comp = getComponent(newSound->m_handle);
 
 	if (comp == nullptr)
 	{
@@ -93,7 +93,7 @@ SoundItem* SoundSystem::getSoundComponent(std::string handle)
 	return nullptr;
 }
 
-cComponent* SoundSystem::getComponent(std::string handle)
+Component* SoundSystem::getComponent(std::string handle)
 {
 	for (mapiter = map_components.begin(); mapiter != map_components.end(); mapiter++) {
 
@@ -160,7 +160,7 @@ bool SoundSystem::SetListeners(ListenerPos Listener)
 	alListenerfv(AL_POSITION, &Listener.pos[0]);
 	if (alGetError() != AL_NO_ERROR)
 	{
-		Er->WriteToConsole("Error playing sound\n");
+		cErrorLogger::Log().WriteToConsole("Error playing sound\n");
 		return false;
 	}
 	return true;
