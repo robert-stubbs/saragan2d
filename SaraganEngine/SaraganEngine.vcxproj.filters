@@ -34,6 +34,18 @@
     <Filter Include="ThirdParty\glm\include\glm\gtx">
       <UniqueIdentifier>{03718041-EF96-4AA8-D8DC-CF73C4A16F74}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Windows">
+      <UniqueIdentifier>{38378f9c-f21a-4e09-951a-360bd95bc38d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Helpers">
+      <UniqueIdentifier>{0a11d617-23f9-4bd2-a190-43ff94cb4043}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Logging">
+      <UniqueIdentifier>{888f4dad-432a-48a4-8260-01930e97ff7d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="File Management">
+      <UniqueIdentifier>{9170170d-49f6-443d-b81b-a4f2da792763}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\ThirdParty\glew\include\GL\eglew.h">
@@ -1136,23 +1148,51 @@
     </ClInclude>
     <ClInclude Include="EngineLibrary.h" />
     <ClInclude Include="EnginePCH.h" />
-    <ClInclude Include="SafeDelete.h" />
-    <ClInclude Include="cCallback.h" />
-    <ClInclude Include="cCreateWnd.h" />
-    <ClInclude Include="cErrorLogger.h" />
-    <ClInclude Include="cFileSystem.h" />
-    <ClInclude Include="cIni.h" />
-    <ClInclude Include="cRegWnd.h" />
-    <ClInclude Include="standards.h" />
+    <ClInclude Include="cCreateWnd.h">
+      <Filter>Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="cRegWnd.h">
+      <Filter>Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="cCallback.h">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="standards.h">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="SafeDelete.h">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="cErrorLogger.h">
+      <Filter>Logging</Filter>
+    </ClInclude>
+    <ClInclude Include="cFileSystem.h">
+      <Filter>File Management</Filter>
+    </ClInclude>
+    <ClInclude Include="cIni.h">
+      <Filter>File Management</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="EngineLibrary.cpp" />
     <ClCompile Include="EnginePCH.cpp" />
-    <ClCompile Include="cCreateWnd.cpp" />
-    <ClCompile Include="cErrorLogger.cpp" />
-    <ClCompile Include="cFileSystem.cpp" />
-    <ClCompile Include="cIni.cpp" />
-    <ClCompile Include="cRegWnd.cpp" />
-    <ClCompile Include="standards.cpp" />
+    <ClCompile Include="cCreateWnd.cpp">
+      <Filter>Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="cRegWnd.cpp">
+      <Filter>Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="standards.cpp">
+      <Filter>Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="cErrorLogger.cpp">
+      <Filter>Logging</Filter>
+    </ClCompile>
+    <ClCompile Include="cFileSystem.cpp">
+      <Filter>File Management</Filter>
+    </ClCompile>
+    <ClCompile Include="cIni.cpp">
+      <Filter>File Management</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
