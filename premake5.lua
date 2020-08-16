@@ -29,7 +29,9 @@ project "SaraganGame"
 		"SaraganEngine",
 		"ThirdParty/glm/include",
 		"ThirdParty/glew/include",
-		"ThirdParty/freetype2"
+		"ThirdParty/freetype2",
+		"ThirdParty/OpenAL/include",
+		"ThirdParty/OpenAL/libs/**"
 	}
 
 	links
@@ -80,13 +82,15 @@ project "SaraganEngine"
 	{
 		"ThirdParty/glm/include",
 		"ThirdParty/glew/include",
-		"ThirdParty/freetype2"
+		"ThirdParty/freetype2",
+		"ThirdParty/OpenAL/include"
 	}
 
 	libdirs  
 	{
 		"ThirdParty/glew/lib/**",
-		"ThirdParty/freetype2/lib/**"
+		"ThirdParty/freetype2/lib/**",
+		"ThirdParty/OpenAL/libs/**"
 	}
 
 	filter "system:windows"

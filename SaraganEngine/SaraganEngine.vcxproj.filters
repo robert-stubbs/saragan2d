@@ -76,6 +76,9 @@
     <Filter Include="Font">
       <UniqueIdentifier>{225bee4f-b274-4d1c-8273-7cd61b2b87e9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Systems\Systems">
+      <UniqueIdentifier>{fe9a9c54-59ed-4f05-ada9-dce57791dd08}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\ThirdParty\glew\include\GL\eglew.h">
@@ -1248,6 +1251,12 @@
     <ClInclude Include="Font.h">
       <Filter>Font</Filter>
     </ClInclude>
+    <ClInclude Include="SoundSystem.h">
+      <Filter>Systems\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundItem.h">
+      <Filter>Systems\Systems</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="EngineLibrary.cpp" />
@@ -1315,6 +1324,12 @@
     </ClCompile>
     <ClCompile Include="Font.cpp">
       <Filter>Font</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundSystem.cpp">
+      <Filter>Systems\Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundItem.cpp">
+      <Filter>Systems\Systems</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
