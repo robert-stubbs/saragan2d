@@ -30,8 +30,7 @@ project "SaraganGame"
 		"ThirdParty/glm/include",
 		"ThirdParty/glew/include",
 		"ThirdParty/freetype2",
-		"ThirdParty/OpenAL/include",
-		"ThirdParty/OpenAL/libs/**"
+		"ThirdParty/OpenAL/include"
 	}
 
 	links
@@ -42,14 +41,15 @@ project "SaraganGame"
 	libdirs  
 	{
 		"ThirdParty/glew/lib/**",
-		"ThirdParty/freetype2/lib/**"
+		"ThirdParty/freetype2/lib/**",
+		"ThirdParty/OpenAL/**"
 	}
 
 	filter "system:windows"
 		systemversion "latest"
 		cppdialect "C++17"
 		staticruntime "on"
-		links { "SaraganEngine", "OpenGL32", "glew32", "OpenAL" }
+		links { "SaraganEngine", "OpenGL32", "glew32", "OpenAL32" }
 
 	filter "configurations.Debug"
 		defines { "SARAGAN_DEBUG" }
@@ -90,14 +90,14 @@ project "SaraganEngine"
 	{
 		"ThirdParty/glew/lib/**",
 		"ThirdParty/freetype2/lib/**",
-		"ThirdParty/OpenAL/libs/**"
+		"ThirdParty/OpenAL/**"
 	}
 
 	filter "system:windows"
 		systemversion "latest"
 		cppdialect "C++17"
 		staticruntime "on"
-		links { "OpenGL32", "OpenAL" }
+		links { "OpenGL32" }
 
 		postbuildcommands
 		{
