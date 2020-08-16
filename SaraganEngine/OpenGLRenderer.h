@@ -7,23 +7,24 @@ class Renderer;
 
 class OpenGLRenderer : public Renderer
 {
-	GLuint& PixelFormat;
+public:
+	GLuint PixelFormat = 0;
 
 	OpenGLRenderer();
-	virtual ~OpenGLRenderer();
+	virtual ~OpenGLRenderer() override;
 
-	virtual bool CreateDC(HWND thisHwnd, PIXELFORMATDESCRIPTOR& pfd, HDC& hDC);
-	virtual bool SetUpContext(HWND hWnd, PIXELFORMATDESCRIPTOR& pfd, HGLRC& hRC, HDC& hDC);
-	virtual bool SetUpShaders();
+	virtual bool CreateDC(HWND thisHwnd, PIXELFORMATDESCRIPTOR& pfd, HDC& hDC) override;
+	virtual bool SetUpContext(HWND hWnd, PIXELFORMATDESCRIPTOR& pfd, HGLRC& hRC, HDC& hDC) override;
+	virtual bool SetUpShaders() override;
 
-	virtual bool init(HWND hWnd);
-	virtual bool PostInit();
-	virtual bool load();
-	virtual bool Update(float DeltaTime);
-	virtual bool UpdateOrtho(float DeltaTime);
-	virtual void render();
-	virtual void renderOrtho();
-	virtual bool cleanup();
+	virtual bool init(HWND hWnd) override;
+	virtual bool PostInit() override;
+	virtual bool load() override;
+	virtual bool Update(float DeltaTime) override;
+	virtual bool UpdateOrtho(float DeltaTime) override;
+	virtual void render() override;
+	virtual void renderOrtho() override;
+	virtual bool cleanup() override;
 
 	void check_gl_error();
 	static void check_error();

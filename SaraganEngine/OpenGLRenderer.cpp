@@ -4,9 +4,8 @@
 
 #include "cErrorLogger.h"
 
-OpenGLRenderer::OpenGLRenderer()
+OpenGLRenderer::OpenGLRenderer() : Renderer()
 {
-
 }
 
 OpenGLRenderer::~OpenGLRenderer()
@@ -17,9 +16,9 @@ OpenGLRenderer::~OpenGLRenderer()
  bool OpenGLRenderer::CreateDC(HWND thisHwnd, PIXELFORMATDESCRIPTOR& pfd, HDC& hDC)
  {	
 	 // generate new context, sore in map
-	 if (!(hDC = GetDC(thishWnd)))                         // Did We Get A Device Context?
+	 if (!(hDC = GetDC(thisHwnd)))                         // Did We Get A Device Context?
 	 {								// Reset The Display
-		 cErrorLogger::Log().WriteToConsole("#### Can't Create A GL Device Context ####\n");
+		 cErrorLogger::Log().WriteToConsole("#### Can't Create A GL Device Context ####");
 
 		 OpenGLRenderer::check_error();
 		 return false;								 // Return FALSE
@@ -29,7 +28,7 @@ OpenGLRenderer::~OpenGLRenderer()
 	 {
 		 if (!(PixelFormat = ChoosePixelFormat(hDC, &pfd)))
 		 {
-			 cErrorLogger::Log().WriteToConsole("#### Can't Find A Suitable PixelFormat ####\n");
+			 cErrorLogger::Log().WriteToConsole("#### Can't Find A Suitable PixelFormat ####");
 			 OpenGLRenderer::check_error();
 			 return false;
 		 }
@@ -38,7 +37,7 @@ OpenGLRenderer::~OpenGLRenderer()
 
 	 if (SetPixelFormat(hDC, PixelFormat, &pfd) == FALSE)
 	 {
-		 cErrorLogger::Log().WriteToConsole("#### SetPixelFormat failed ####\n");
+		 cErrorLogger::Log().WriteToConsole("#### SetPixelFormat failed ####");
 		 OpenGLRenderer::check_error();
 		 return false;
 	 }
@@ -72,13 +71,13 @@ OpenGLRenderer::~OpenGLRenderer()
 	 };
 	 PixelFormat = 0;
 
-	 createDC(hWnd, pfd, hDC);
+	 CreateDC(hWnd, pfd, hDC);
 
 	 HGLRC tempOpenGLContext;
 
 	 if (!(tempOpenGLContext = wglCreateContext(hDC)))
 	 {
-		 cErrorLogger::Log().WriteToConsole("#### Can't Create A GL Rendering Context ####\n");
+		 cErrorLogger::Log().WriteToConsole("#### Can't Create A GL Rendering Context ####");
 		 OpenGLRenderer::check_error();
 		 return false;
 	 }
@@ -86,8 +85,8 @@ OpenGLRenderer::~OpenGLRenderer()
 
 	 if (!wglMakeCurrent(hDC, tempOpenGLContext))
 	 {
-		 cErrorLogger::Log().WriteToConsole("#### Can't Activate The GL Rendering Context ####\n");
-		 cEngine::check_error();
+		 cErrorLogger::Log().WriteToConsole("#### Can't Activate The GL Rendering Context ####");
+		 OpenGLRenderer::check_error();
 		 return false;
 	 }
 
@@ -95,7 +94,7 @@ OpenGLRenderer::~OpenGLRenderer()
 	 GLenum err = glewInit();
 	 if (err != GLEW_OK)
 	 {
-		 cErrorLogger::Log().WriteToConsole("####glewInit failed, aborting ####\n");
+		 cErrorLogger::Log().WriteToConsole("####glewInit failed, aborting ####");
 		 OpenGLRenderer::check_error();
 	 }
 
@@ -114,7 +113,7 @@ OpenGLRenderer::~OpenGLRenderer()
 		 // Make our OpenGL 3.0 context current
 		 if (!wglMakeCurrent(hDC, hRC))
 		 {
-			 cErrorLogger::Log().WriteToConsole("#### Can't Activate The GL Rendering Context ####\n");
+			 cErrorLogger::Log().WriteToConsole("#### Can't Activate The GL Rendering Context ####");
 			 OpenGLRenderer::check_error();
 			 return false;
 		 }
@@ -133,7 +132,7 @@ OpenGLRenderer::~OpenGLRenderer()
 	 cErrorLogger::Log().WriteToConsole("> OpenGL version: ");
 	 cErrorLogger::Log().WriteToConsole(Major);
 	 cErrorLogger::Log().WriteToConsole(Minor);
-	 cErrorLogger::Log().WriteToConsole("\n");
+	 cErrorLogger::Log().WriteToConsole("");
 
 	 return true;
  }
@@ -141,59 +140,171 @@ OpenGLRenderer::~OpenGLRenderer()
  bool OpenGLRenderer::SetUpShaders()
  {
 
+	 return false;
  }
 
  bool OpenGLRenderer::init(HWND hWnd)
  {
+	 if (!SetUpContext(hWnd, pfd, hRC, hDC))
+	 {
+		 cErrorLogger::Log().WriteToConsole("Failed to setup Context");
+		 return false;
+	 }
 
+
+
+	 glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
+	 glClearDepth(1.0f);
+
+	 // Enable depth test
+	 glEnable(GL_DEPTH_TEST);
+	 // Accept fragment if it closer to the camera than the former one
+	 glDepthFunc(GL_LESS);
+
+	 glShadeModel(GL_SMOOTH);
+
+	 return true;
  }
 
  bool OpenGLRenderer::PostInit()
  {
-
+	 return true;
  }
 
  bool OpenGLRenderer::load()
  {
-
+	 return false;
  }
 
  bool OpenGLRenderer::Update(float DeltaTime)
  {
 
+	 return true;
  }
 
  bool OpenGLRenderer::UpdateOrtho(float DeltaTime)
  {
 
+	 return true;
  }
 
  void OpenGLRenderer::render()
  {
+	 glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+	 //if (CurrentShader != shader)
+	 //{
+		// CurrentShader->unbind();
+		// CurrentShader = shader;
+		// CurrentShader->bind();
+	 //}
+
+	 //glUniform1i(CurrentShader->isText, 0);
+	 //glUniformMatrix4fv(CurrentShader->projectionMatrixLocation, 1, GL_FALSE, glm::value_ptr(pCam->ProjectionMatrix)); // Send our view matrix to the shader 
+	 //glUniformMatrix4fv(CurrentShader->viewMatrixLocation, 1, GL_FALSE, glm::value_ptr(pCam->ViewMatrix)); // Send our view matrix to the shader  
+	 //glUniformMatrix4fv(CurrentShader->modelMatrixLocation, 1, GL_FALSE, glm::value_ptr(glm::mat4(1.0f)));
+
+	 //GameFSM->Render();
+	 //System->Render();
+
+	 //if (CurrentShader != animShader)
+	 //{
+		// CurrentShader->unbind();
+		// CurrentShader = animShader;
+		// CurrentShader->bind();
+	 //}
+
+	 //glUniformMatrix4fv(CurrentShader->projectionMatrixLocation, 1, GL_FALSE, glm::value_ptr(pCam->ProjectionMatrix)); // Send our view matrix to the shader 
+	 //glUniformMatrix4fv(CurrentShader->viewMatrixLocation, 1, GL_FALSE, glm::value_ptr(pCam->ViewMatrix)); // Send our view matrix to the shader  
+
+	 //System->RenderAnim();
+	 //GameFSM->RenderAnim();
 
  }
 
  void OpenGLRenderer::renderOrtho()
  {
+	 //if (CurrentShader != shader)
+	 //{
+		// CurrentShader->unbind();
+		// CurrentShader = shader;
+		// CurrentShader->bind();
+	 //}
 
+	 //glUniformMatrix4fv(CurrentShader->projectionMatrixLocation, 1, GL_FALSE, glm::value_ptr(pCam2D->ProjectionMatrix)); // Send our view matrix to the shader 
+	 //glUniformMatrix4fv(CurrentShader->viewMatrixLocation, 1, GL_FALSE, glm::value_ptr(pCam2D->ViewMatrix)); // Send our view matrix to the shader  
+	 //glUniformMatrix4fv(CurrentShader->modelMatrixLocation, 1, GL_FALSE, glm::value_ptr(glm::mat4(1.0f)));
+
+	 //GameFSM->RenderOrth();
+	 //System->RenderUI();
+
+	 SwapBuffers(hDC);
  }
 
  bool OpenGLRenderer::cleanup()
  {
+	 if (fullscreen)
+	 {
+		 ChangeDisplaySettings(NULL, 0);
+		 ShowCursor(true);
+	 }
 
+	 if (hRC)
+	 {
+		 if (!wglMakeCurrent(NULL, NULL))                 // Are We Able To Release The DC And RC Contexts?
+		 {
+			 MessageBox(NULL, L"Release Of DC And RC Failed.", L"SHUTDOWN ERROR", MB_OK | MB_ICONINFORMATION);
+		 }
+	 }
+
+	 if (!wglDeleteContext(hRC))
+	 {
+		 MessageBox(NULL, L"Release Rendering Context Failed.", L"SHUTDOWN ERROR", MB_OK | MB_ICONINFORMATION);
+	 }
+	 hRC = NULL;
+
+	 return true;
  }
 
  bool OpenGLRenderer::ResizeWindow(int Width, int Height)
  {
+	 if (Height == 0)
+	 {
+		 Height = 1;
+	 }
 
+	 glViewport(0, 0, Width, Height);
+	 //ProjectionMatrix = glm::perspective(45.0f, (GLfloat)Width / (GLfloat)Height, 0.1f, 400.0f);
+
+	 return true;
  }
 
  void OpenGLRenderer::check_gl_error()
  {
-
+	 OpenGLRenderer::check_error();
  }
 
  void OpenGLRenderer::check_error()
  {
+	 GLenum err(glGetError());
+	 std::string error;
 
+	 if (!err)
+	 {
+		 return;
+	 }
+	 else if (err != GL_NO_ERROR) {
+
+		 switch (err) {
+		 case GL_INVALID_OPERATION:      error = "INVALID_OPERATION";      break;
+		 case GL_INVALID_ENUM:           error = "INVALID_ENUM";           break;
+		 case GL_INVALID_VALUE:          error = "INVALID_VALUE";          break;
+		 case GL_OUT_OF_MEMORY:          error = "OUT_OF_MEMORY";          break;
+		 case GL_INVALID_FRAMEBUFFER_OPERATION:  error = "INVALID_FRAMEBUFFER_OPERATION";  break;
+		 }
+
+		 err = glGetError();
+		 //cout << "Error: " << error << endl;
+		 cErrorLogger::Log().WriteToConsole(error);
+	 }
  }

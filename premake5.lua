@@ -40,6 +40,7 @@ project "SaraganGame"
 		systemversion "latest"
 		cppdialect "C++17"
 		staticruntime "on"
+		links { "SaraganEngine", "OpenGL32" }
 
 	filter "configurations.Debug"
 		defines { "SARAGAN_DEBUG" }
