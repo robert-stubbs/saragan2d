@@ -49,6 +49,12 @@
     <Filter Include="States">
       <UniqueIdentifier>{058a2b4e-316e-401b-b860-3b10cc26a51b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Systems">
+      <UniqueIdentifier>{e6624aab-992f-40b7-b0ae-45c115b349bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Systems\Base">
+      <UniqueIdentifier>{bdf425ab-244e-47e8-bb78-2f80f4bcb91b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\ThirdParty\glew\include\GL\eglew.h">
@@ -1181,6 +1187,15 @@
     <ClInclude Include="StateMachine.h">
       <Filter>States</Filter>
     </ClInclude>
+    <ClInclude Include="System.h">
+      <Filter>Systems\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="SystemManager.h">
+      <Filter>Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="Component.h">
+      <Filter>Systems\Base</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="EngineLibrary.cpp" />
@@ -1208,6 +1223,15 @@
     </ClCompile>
     <ClCompile Include="StateMachine.cpp">
       <Filter>States</Filter>
+    </ClCompile>
+    <ClCompile Include="System.cpp">
+      <Filter>Systems\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="SystemManager.cpp">
+      <Filter>Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="Component.cpp">
+      <Filter>Systems\Base</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
