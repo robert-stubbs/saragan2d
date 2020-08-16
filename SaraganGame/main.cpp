@@ -6,7 +6,10 @@
 #include "cErrorLogger.h"
 #include "Engine.h"
 
+#include "RayState.h"
+
 Engine* pEngine;
+RayState* raystate;
 
 //https://github.com/HectorPeeters/opengl_premake_boilerplate
 
@@ -33,6 +36,7 @@ int CALLBACK WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR pCmdLin
 	Wnd.show(true);
 	PostLoad();
 
+	double dt = 0.15;
 	MSG msg = { 0 };
 
 	while (WM_QUIT != msg.message)
@@ -43,7 +47,7 @@ int CALLBACK WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR pCmdLin
 			DispatchMessage(&msg);
 		}
 
-		//Update((float)dt);
+		Update((float)dt);
 
 
 		Render();
@@ -103,6 +107,7 @@ void PreLoad()
 	cErrorLogger::Log().WriteToConsole("> Creating Engine");
 	pEngine = new Engine();
 
+	raystate = new RayState();
 
 }
 
@@ -130,6 +135,8 @@ void Load()
 		return;
 	}
 
+	raystate->Init();
+	Engine::getEngine().GameFSM->AddState(raystate, true);
 }
 
 void PostLoad()

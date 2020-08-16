@@ -3,6 +3,9 @@
 
 class StateMachine;
 class SystemManager;
+class Shader;
+
+#include "Object.h"
 
 class Renderer
 {
@@ -11,6 +14,10 @@ public:
 	HGLRC hRC;
 	HDC   hDC;
 	bool  fullscreen;
+
+	Shader* shader; // Our GLSL shader 
+	Shader* animShader; // Our GLSL shader 
+	Shader* CurrentShader; // Our GLSL shader 
 
 	Renderer();
 	virtual ~Renderer();
@@ -33,6 +40,10 @@ public:
 
 	virtual bool ResizeWindow(int Width, int Height) = 0;
 
+	virtual void GenerateBuffer(unsigned int& VAIO, unsigned int& VBO, std::vector<vert>& verts) = 0;
+	virtual void ReGenerateBuffer(unsigned int& VAIO, unsigned int& VBO, std::vector<vert>& verts) = 0;
+	virtual bool UpdateBuffer(unsigned int& VBO, std::vector<vert>& verts) = 0;
+	virtual void GenerateIndexBuffer(GLuint& VAIO, GLuint& IBO, GLuint& VBO, std::vector<vert>& verts, std::vector<int>& VertIndex) = 0;
 };
 
 #endif // !_RENDERER_H_

@@ -455,6 +455,8 @@
     <ClInclude Include="..\ThirdParty\glm\include\glm\vector_relational.hpp" />
     <ClInclude Include="GameLibrary.h" />
     <ClInclude Include="GamePCH.h" />
+    <ClInclude Include="RayState.h" />
+    <ClInclude Include="TemplateState.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameLibrary.cpp" />
@@ -462,6 +464,8 @@
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="RayState.cpp" />
+    <ClCompile Include="TemplateState.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SaraganEngine\SaraganEngine.vcxproj">

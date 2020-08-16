@@ -82,6 +82,9 @@
     <Filter Include="Systems\Systems\Sound">
       <UniqueIdentifier>{17f03947-0d82-4661-b3aa-59353f703a32}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Geometry">
+      <UniqueIdentifier>{eb4511a9-dbca-4c87-9b40-b4d66f612962}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\ThirdParty\glew\include\GL\eglew.h">
@@ -1260,6 +1263,9 @@
     <ClInclude Include="SoundItem.h">
       <Filter>Systems\Systems\Sound</Filter>
     </ClInclude>
+    <ClInclude Include="Line.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="EngineLibrary.cpp" />
@@ -1333,6 +1339,9 @@
     </ClCompile>
     <ClCompile Include="SoundSystem.cpp">
       <Filter>Systems\Systems\Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="Line.cpp">
+      <Filter>Geometry</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -2,10 +2,12 @@
 #include "OpenGLRenderer.h"
 #include "Renderer.h"
 
+#include "Engine.h"
 #include "cErrorLogger.h"
 #include "OpenGLShader.h"
 #include "StateMachine.h"
 #include "SystemManager.h"
+#include "Object.h"
 
 OpenGLRenderer::OpenGLRenderer() : Renderer()
 {
@@ -364,4 +366,88 @@ bool OpenGLRenderer::SetUpShaders()
 	 winY = (GLfloat)((viewport[1] + viewport[3]) - y);
 
 	 return glm::unProject(glm::vec3((double)x, (double)winY, 0.0f), view, projection, glm::vec4(viewport[0], viewport[1], viewport[2], viewport[3]));
+ }
+
+
+ void OpenGLRenderer::GenerateBuffer(unsigned int& VAIO, unsigned int& VBO, std::vector<vert>& verts)
+ {
+	 glGenVertexArrays(1, &VAIO);
+	 glBindVertexArray(VAIO);
+
+	 glGenBuffers(1, &VBO);
+	 glBindBuffer(GL_ARRAY_BUFFER, VBO);
+	 glBufferData(GL_ARRAY_BUFFER, sizeof(vert) * verts.size(), &verts[0], GL_STATIC_DRAW);
+
+	 glVertexAttribPointer(CurrentShader->Position, 4, GL_FLOAT, GL_FALSE, sizeof(vert), 0);
+	 glVertexAttribPointer(CurrentShader->Texture, 2, GL_FLOAT, GL_TRUE, sizeof(vert), (GLvoid*)offsetof(vert, Text));
+
+	 glEnableVertexAttribArray(CurrentShader->Position);
+	 glEnableVertexAttribArray(CurrentShader->Texture);
+
+	 glBindBuffer(GL_ARRAY_BUFFER, 0);
+	 glBindVertexArray(0);
+ }
+
+ void OpenGLRenderer::ReGenerateBuffer(unsigned int& VAIO, unsigned int& VBO, std::vector<vert>& verts)
+ {
+	 glBindVertexArray(VAIO);
+	 glBindBuffer(GL_ARRAY_BUFFER, VBO);
+	 glBufferData(GL_ARRAY_BUFFER, sizeof(vert) * verts.size(), &verts[0], GL_STATIC_DRAW);
+
+	 glVertexAttribPointer(CurrentShader->Position, 4, GL_FLOAT, GL_FALSE, sizeof(vert), 0);
+	 glVertexAttribPointer(CurrentShader->Texture, 2, GL_FLOAT, GL_TRUE, sizeof(vert), (GLvoid*)offsetof(vert, Text));
+
+	 glEnableVertexAttribArray(CurrentShader->Position);
+	 glEnableVertexAttribArray(CurrentShader->Texture);
+
+	 glBindBuffer(GL_ARRAY_BUFFER, 0);
+	 glBindVertexArray(0);
+ }
+
+ bool OpenGLRenderer::UpdateBuffer(unsigned int& VBO, std::vector<vert>& verts)
+ {
+	 if (VBO != -1)
+	 {
+		 glBindBuffer(GL_ARRAY_BUFFER, VBO);
+		 glBufferSubData(GL_ARRAY_BUFFER, 0, sizeof(vert) * (int)verts.size(), &verts[0]);
+		 glBindBuffer(GL_ARRAY_BUFFER, 0);
+
+		 return true;
+	 }
+
+	 return false;
+ }
+
+ void OpenGLRenderer::GenerateIndexBuffer(GLuint& VAIO, GLuint& IBO, GLuint& VBO, std::vector<vert>& verts, std::vector<int>& VertIndex)
+ {
+	 check_gl_error();
+
+	 glGenVertexArrays(1, &VAIO);
+	 glBindVertexArray(VAIO);
+	 check_gl_error();
+
+	 glGenBuffers(1, &IBO);
+	 glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, IBO);
+	 glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(int) * VertIndex.size(), &VertIndex[0], GL_STATIC_DRAW);
+
+	 check_gl_error();
+	 VBO = 0;
+	 glGenBuffers(1, &VBO);
+	 glBindBuffer(GL_ARRAY_BUFFER, VBO);
+	 glBufferData(GL_ARRAY_BUFFER, sizeof(vert) * (int)verts.size(), &verts[0], GL_STATIC_DRAW);
+
+	 check_gl_error();
+	 glVertexAttribPointer(shader->Position, 4, GL_FLOAT, GL_FALSE, sizeof(vert), 0);
+	 glVertexAttribPointer(shader->Texture, 2, GL_FLOAT, GL_TRUE, sizeof(vert), (GLvoid*)offsetof(vert, Text));
+
+	 check_gl_error();
+	 glEnableVertexAttribArray(shader->Position);
+	 glEnableVertexAttribArray(shader->Texture);
+
+	 check_gl_error();
+	 glBindBuffer(GL_ARRAY_BUFFER, 0);
+	 glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
+	 glBindVertexArray(0); // Unbind our Vertex Array Object
+
+	 check_gl_error();
  }

@@ -1,5 +1,6 @@
 #include "EnginePCH.h"
 #include "Renderer.h"
+#include "Shader.h"
 
 Renderer::Renderer()
 {

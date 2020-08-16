@@ -34,6 +34,15 @@
     <Filter Include="ThirdParty\glm\include\glm\gtx">
       <UniqueIdentifier>{03718041-EF96-4AA8-D8DC-CF73C4A16F74}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Games">
+      <UniqueIdentifier>{22c9ecec-e9b7-4a85-b999-43d997268582}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Games\Template">
+      <UniqueIdentifier>{07f39724-2f74-40f6-b3db-533f2a147f6e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Games\Ray">
+      <UniqueIdentifier>{57e70860-fd1d-4dd9-9b1d-7165f9a5daae}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\ThirdParty\glew\include\GL\eglew.h">
@@ -1136,10 +1145,22 @@
     </ClInclude>
     <ClInclude Include="GameLibrary.h" />
     <ClInclude Include="GamePCH.h" />
+    <ClInclude Include="TemplateState.h">
+      <Filter>Games\Template</Filter>
+    </ClInclude>
+    <ClInclude Include="RayState.h">
+      <Filter>Games\Ray</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameLibrary.cpp" />
     <ClCompile Include="GamePCH.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="TemplateState.cpp">
+      <Filter>Games\Template</Filter>
+    </ClCompile>
+    <ClCompile Include="RayState.cpp">
+      <Filter>Games\Ray</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

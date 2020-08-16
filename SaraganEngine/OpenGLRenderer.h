@@ -12,9 +12,6 @@ class OpenGLRenderer : public Renderer
 {
 public:
 	GLuint PixelFormat = 0;
-	OpenGLShader* shader; // Our GLSL shader 
-	OpenGLShader* animShader; // Our GLSL shader 
-	OpenGLShader* CurrentShader; // Our GLSL shader 
 
 	OpenGLRenderer();
 	virtual ~OpenGLRenderer() override;
@@ -38,10 +35,15 @@ public:
 	static void check_error();
 
 
-	virtual glm::vec3 GetWorldPos(int x, int y, glm::mat4 projection, glm::mat4 view);
-	virtual glm::vec3 GetWorldPos2D(int x, int y, glm::mat4 projection, glm::mat4 view);
+	virtual glm::vec3 GetWorldPos(int x, int y, glm::mat4 projection, glm::mat4 view) override;
+	virtual glm::vec3 GetWorldPos2D(int x, int y, glm::mat4 projection, glm::mat4 view) override;
 
-	virtual bool ResizeWindow(int Width, int Height);
+	virtual bool ResizeWindow(int Width, int Height) override;
+
+	virtual void GenerateBuffer(unsigned int& VAIO, unsigned int& VBO, std::vector<vert>& verts) override;
+	virtual void ReGenerateBuffer(unsigned int& VAIO, unsigned int& VBO, std::vector<vert>& verts) override;
+	virtual bool UpdateBuffer(unsigned int& VBO, std::vector<vert>& verts) override;
+	virtual void GenerateIndexBuffer(GLuint& VAIO, GLuint& IBO, GLuint& VBO, std::vector<vert>& verts, std::vector<int>& VertIndex) override;
 };
 
 #endif
