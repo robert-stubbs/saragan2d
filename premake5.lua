@@ -37,9 +37,9 @@ project "SaraganGame"
 	}
 
 	filter "system:windows"
-		cppdialect "C++17"
-		staticruntime "On"
 		systemversion "latest"
+		cppdialect "C++17"
+		staticruntime "on"
 
 	filter "configurations.Debug"
 		defines { "SARAGAN_DEBUG" }
@@ -80,9 +80,9 @@ project "SaraganEngine"
 	}
 
 	filter "system:windows"
-		cppdialect "C++17"
-		staticruntime "On"
 		systemversion "latest"
+		cppdialect "C++17"
+		staticruntime "on"
 
 		postbuildcommands
 		{

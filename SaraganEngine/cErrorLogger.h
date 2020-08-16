@@ -19,7 +19,7 @@ public:
 
 	//use stl and allocConsole and Write to file functions
 	void CreateConsole();
-	void WriteToConsole(const char* writetext);
+	void WriteToConsole(const char* writetext, bool newline = true);
 	void WriteToConsole(std::string writetext);
 	void WriteToConsole(int number);
 	void WriteToConsole(float number);
@@ -27,6 +27,11 @@ public:
 
 	void ClearConsole();
 	void DestroyConsole();
+		
+	static cErrorLogger* Er;
+
+	static inline cErrorLogger& Log() { return GetErrorLogger(); }
+	static cErrorLogger& GetErrorLogger();
 
 };
 

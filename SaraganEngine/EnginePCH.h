@@ -8,8 +8,11 @@
 #include <string>
 
 #include <map>
+#include <vector>
+#include <random>
+#include <memory>
+
 #include <fstream>
 #include <sstream>
-#include <random>
 
 #endif

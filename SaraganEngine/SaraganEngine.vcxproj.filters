@@ -46,6 +46,9 @@
     <Filter Include="File Management">
       <UniqueIdentifier>{9170170d-49f6-443d-b81b-a4f2da792763}</UniqueIdentifier>
     </Filter>
+    <Filter Include="States">
+      <UniqueIdentifier>{058a2b4e-316e-401b-b860-3b10cc26a51b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\ThirdParty\glew\include\GL\eglew.h">
@@ -1172,6 +1175,12 @@
     <ClInclude Include="cIni.h">
       <Filter>File Management</Filter>
     </ClInclude>
+    <ClInclude Include="State.h">
+      <Filter>States</Filter>
+    </ClInclude>
+    <ClInclude Include="StateMachine.h">
+      <Filter>States</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="EngineLibrary.cpp" />
@@ -1193,6 +1202,12 @@
     </ClCompile>
     <ClCompile Include="cIni.cpp">
       <Filter>File Management</Filter>
+    </ClCompile>
+    <ClCompile Include="State.cpp">
+      <Filter>States</Filter>
+    </ClCompile>
+    <ClCompile Include="StateMachine.cpp">
+      <Filter>States</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

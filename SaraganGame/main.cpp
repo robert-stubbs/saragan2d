@@ -3,6 +3,7 @@
 
 #include "cCreateWnd.h"
 #include "cRegWnd.h"
+#include "cErrorLogger.h"
 
 
 //https://github.com/HectorPeeters/opengl_premake_boilerplate
@@ -94,16 +95,22 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT Msg, WPARAM wParam, LPARAM lParam)
 
 void PreLoad()
 {
-
+	cErrorLogger::Log().WriteToConsole("#######################################################");
+	cErrorLogger::Log().WriteToConsole("> Created Console");
 }
 
 cCreateWnd CreateEngineWindow()
 {
+	cErrorLogger::Log().WriteToConsole("#######################################################");
+	cErrorLogger::Log().WriteToConsole("> Creating Window");
+
 	cRegWnd WinApp(hInst, WndProc, false, 800, 600);
 	WinApp.Register();
 
 	cCreateWnd Wnd(&WinApp);
 	hWnd = Wnd.Create();
+
+	cErrorLogger::Log().WriteToConsole("#######################################################");
 
 	return Wnd;
 }
@@ -127,5 +134,15 @@ void Render()
 
 void CleanUp()
 {
+	cErrorLogger::Log().WriteToConsole("#######################################################\n");
+	cErrorLogger::Log().WriteToConsole("> Shutting Down\n");
+	cErrorLogger::Log().WriteToConsole("#######################################################\n");
+	cErrorLogger::Log().DestroyConsole();
+
+	if (!UnregisterClass(CLASSNAME, hInst))               // Are We Able To Unregister Class
+	{
+		MessageBox(NULL, L"Could Not Unregister Class.", L"SHUTDOWN ERROR", MB_OK | MB_ICONINFORMATION);
+		hInst = NULL;                         // Set hInstance To NULL
+	}
 }
 

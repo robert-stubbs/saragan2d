@@ -463,6 +463,8 @@
     <ClInclude Include="cIni.h" />
     <ClInclude Include="cRegWnd.h" />
     <ClInclude Include="standards.h" />
+    <ClInclude Include="State.h" />
+    <ClInclude Include="StateMachine.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="EngineLibrary.cpp" />
@@ -475,8 +477,10 @@
     <ClCompile Include="cIni.cpp" />
     <ClCompile Include="cRegWnd.cpp" />
     <ClCompile Include="standards.cpp" />
+    <ClCompile Include="State.cpp" />
+    <ClCompile Include="StateMachine.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
-</Project> 
+</Project>

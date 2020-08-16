@@ -2,6 +2,7 @@
 
 #include "cErrorLogger.h"
 
+cErrorLogger* cErrorLogger::Er = nullptr;
 
 void cErrorLogger::CreateConsole()
 {
@@ -20,19 +21,30 @@ void cErrorLogger::CreateConsole()
 
 		myfile.open("ErrorLogger.txt", std::ios::out | std::ios::app);
 
-
+		Er = this;
 	}	
 }
 
-void cErrorLogger::WriteToConsole(const char* writetext)
+void cErrorLogger::WriteToConsole(const char* writetext, bool newline)
 {
-    const size_t mylen = strlen(writetext);
-	WriteConsole(hOut, writetext, (DWORD)mylen, &len, NULL);
-	if (myfile.is_open())
-	{
-		myfile << writetext;
-	}
+	if (newline) {
+		std::string addNewLine = writetext;
+		addNewLine += "\n";
+		const char* newline = addNewLine.c_str();
 
+		WriteConsoleA(hOut, newline, (DWORD)strlen(newline), &len, NULL);
+		if (myfile.is_open())
+		{
+			myfile << writetext << std::endl;
+		}
+	}
+	else {
+		WriteConsoleA(hOut, writetext, (DWORD)strlen(writetext), &len, NULL);
+		if (myfile.is_open())
+		{
+			myfile << writetext << std::endl;
+		}
+	}
 }
 
 void cErrorLogger::WriteToConsole(std::string writetext)
@@ -45,7 +57,7 @@ void cErrorLogger::WriteToConsole(int number)
 	char buffer [50];
 	sprintf_s(buffer, "%d ", number);
     const size_t mylen = strlen(buffer);
-	WriteConsole(hOut, buffer, (DWORD)mylen, &len, NULL);
+	WriteConsoleA(hOut, buffer, (DWORD)mylen, &len, NULL);
 
 	if (myfile.is_open())
 	{
@@ -58,7 +70,7 @@ void cErrorLogger::WriteToConsole(float number)
 	char buffer [50];
 	sprintf_s(buffer, "%f ", number);
     const size_t mylen = strlen(buffer);
-	WriteConsole(hOut, buffer, (DWORD)mylen, &len, NULL);
+	WriteConsoleA(hOut, buffer, (DWORD)mylen, &len, NULL);
 
 	if (myfile.is_open())
 	{
@@ -71,7 +83,7 @@ void cErrorLogger::WriteToConsole(double number)
 	char buffer [50];
 	sprintf_s(buffer, "%f ", number);
    const size_t mylen = strlen(buffer);
-	WriteConsole(hOut, buffer, (DWORD)mylen, &len, NULL);
+	WriteConsoleA(hOut, buffer, (DWORD)mylen, &len, NULL);
 
 	if (myfile.is_open())
 	{
@@ -84,7 +96,6 @@ void cErrorLogger::ClearConsole()
 	system("cls");
 }
 
-
 void cErrorLogger::DestroyConsole()
 {
 	myfile.close();	
@@ -92,7 +103,16 @@ void cErrorLogger::DestroyConsole()
 	FreeConsole();
 }
 
+cErrorLogger& cErrorLogger::GetErrorLogger()
+{
+	if (!Er || Er == nullptr)
+	{
+		Er = new cErrorLogger();
+		Er->CreateConsole();
+	}
 
+	return *Er;
+}
 
 
 
