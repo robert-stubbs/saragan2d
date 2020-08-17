@@ -12,6 +12,9 @@
 #include "Engine.h"
 #include "Renderer.h"
 
+#include "SystemManager.h"
+#include "SoundSystem.h"
+
 
 MinesweeperState::MinesweeperState() {
 	stateName = "MinesweeperState";
@@ -70,6 +73,10 @@ MinesweeperState::~MinesweeperState() {
 void MinesweeperState::Init() {
 
 	glm::mat4 temp = glm::mat4(1.0f);
+
+
+	SoundSystem* smgr = (SoundSystem*)(Engine::getEngine().System->getSystem("AUDIO"));
+	smgr->AddSound("C:/Assets/Sound/Sound.wav", "Bomb");
 
 }
 
@@ -170,8 +177,8 @@ void MinesweeperState::MouseMove(UINT Msg, WPARAM wParam, LPARAM lParam) {
 
 void MinesweeperState::RevealAll() {
 
-	//cSoundSystem* smgr = (cSoundSystem*)(pEngine->System->getSystem("AUDIO"));
-	//smgr->PlaySoundClip("Bomb");
+	SoundSystem* smgr = (SoundSystem*)(Engine::getEngine().System->getSystem("AUDIO"));
+	smgr->PlaySoundClip("Bomb");
 	for (int x = 0; x < xsize; x++)
 	{
 		for (int y = 0; y < ysize; y++)

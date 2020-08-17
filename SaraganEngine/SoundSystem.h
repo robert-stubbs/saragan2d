@@ -4,6 +4,8 @@
 //https://www.openal.org/downloads/
 
 
+#include "AL\al.h"
+#include "AL\alc.h"
 
 #include "System.h"
 
