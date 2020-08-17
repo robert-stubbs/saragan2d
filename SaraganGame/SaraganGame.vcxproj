@@ -59,15 +59,15 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>GamePCH.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>..\SaraganEngine;..\ThirdParty\glm\include;..\ThirdParty\glew\include;..\ThirdParty\freetype2;..\ThirdParty\OpenAL\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\SaraganEngine;..\ThirdParty\glm\include;..\ThirdParty\glew\include;..\ThirdParty\freetype2;..\ThirdParty\freetype-gl;..\ThirdParty\OpenAL\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
-      <AdditionalDependencies>OpenGL32.lib;glew32.lib;OpenAL32.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>..\ThirdParty\glew\lib\Release;..\ThirdParty\glew\lib\Release\x64;..\ThirdParty\OpenAL\docs;..\ThirdParty\OpenAL\include;..\ThirdParty\OpenAL\lib;..\ThirdParty\OpenAL\redist;..\ThirdParty\OpenAL\samples;..\ThirdParty\OpenAL\include\AL;..\ThirdParty\OpenAL\lib\EFX-Util_MT;..\ThirdParty\OpenAL\lib\EFX-Util_MTDLL;..\ThirdParty\OpenAL\samples\capture;..\ThirdParty\OpenAL\samples\efxenumerate;..\ThirdParty\OpenAL\samples\efxfilter;..\ThirdParty\OpenAL\samples\efxreverb;..\ThirdParty\OpenAL\samples\enumerate;..\ThirdParty\OpenAL\samples\media;..\ThirdParty\OpenAL\samples\playmultichannel;..\ThirdParty\OpenAL\samples\playoggvorbis;..\ThirdParty\OpenAL\samples\playstatic;..\ThirdParty\OpenAL\samples\playstream;..\ThirdParty\OpenAL\samples\renderer;..\ThirdParty\OpenAL\samples\xramdemo;..\ThirdParty\OpenAL\samples\capture\Source;..\ThirdParty\OpenAL\samples\capture\Win64;..\ThirdParty\OpenAL\samples\efxenumerate\Source;..\ThirdParty\OpenAL\samples\efxenumerate\Win64;..\ThirdParty\OpenAL\samples\efxfilter\Source;..\ThirdParty\OpenAL\samples\efxfilter\Win64;..\ThirdParty\OpenAL\samples\efxreverb\Source;..\ThirdParty\OpenAL\samples\efxreverb\Win64;..\ThirdParty\OpenAL\samples\enumerate\Source;..\ThirdParty\OpenAL\samples\enumerate\Win64;..\ThirdParty\OpenAL\samples\playmultichannel\Source;..\ThirdParty\OpenAL\samples\playmultichannel\Win64;..\ThirdParty\OpenAL\samples\playoggvorbis\include;..\ThirdParty\OpenAL\samples\playoggvorbis\Source;..\ThirdParty\OpenAL\samples\playoggvorbis\include\Ogg;..\ThirdParty\OpenAL\samples\playoggvorbis\include\Vorbis;..\ThirdParty\OpenAL\samples\playstatic\Source;..\ThirdParty\OpenAL\samples\playstatic\Win64;..\ThirdParty\OpenAL\samples\playstream\Source;..\ThirdParty\OpenAL\samples\playstream\Win64;..\ThirdParty\OpenAL\samples\renderer\Source;..\ThirdParty\OpenAL\samples\renderer\Win64;..\ThirdParty\OpenAL\samples\xramdemo\Source;..\ThirdParty\OpenAL\samples\xramdemo\Win64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>OpenGL32.lib;glew32.lib;OpenAL32.lib;freetype.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\ThirdParty\glew\lib\Release;..\ThirdParty\glew\lib\Release\x64;..\ThirdParty\freetype2\lib;..\ThirdParty\freetype-gl\lib;..\ThirdParty\OpenAL\docs;..\ThirdParty\OpenAL\include;..\ThirdParty\OpenAL\lib;..\ThirdParty\OpenAL\redist;..\ThirdParty\OpenAL\samples;..\ThirdParty\OpenAL\include\AL;..\ThirdParty\OpenAL\lib\EFX-Util_MT;..\ThirdParty\OpenAL\lib\EFX-Util_MTDLL;..\ThirdParty\OpenAL\samples\capture;..\ThirdParty\OpenAL\samples\efxenumerate;..\ThirdParty\OpenAL\samples\efxfilter;..\ThirdParty\OpenAL\samples\efxreverb;..\ThirdParty\OpenAL\samples\enumerate;..\ThirdParty\OpenAL\samples\media;..\ThirdParty\OpenAL\samples\playmultichannel;..\ThirdParty\OpenAL\samples\playoggvorbis;..\ThirdParty\OpenAL\samples\playstatic;..\ThirdParty\OpenAL\samples\playstream;..\ThirdParty\OpenAL\samples\renderer;..\ThirdParty\OpenAL\samples\xramdemo;..\ThirdParty\OpenAL\samples\capture\Source;..\ThirdParty\OpenAL\samples\capture\Win64;..\ThirdParty\OpenAL\samples\efxenumerate\Source;..\ThirdParty\OpenAL\samples\efxenumerate\Win64;..\ThirdParty\OpenAL\samples\efxfilter\Source;..\ThirdParty\OpenAL\samples\efxfilter\Win64;..\ThirdParty\OpenAL\samples\efxreverb\Source;..\ThirdParty\OpenAL\samples\efxreverb\Win64;..\ThirdParty\OpenAL\samples\enumerate\Source;..\ThirdParty\OpenAL\samples\enumerate\Win64;..\ThirdParty\OpenAL\samples\playmultichannel\Source;..\ThirdParty\OpenAL\samples\playmultichannel\Win64;..\ThirdParty\OpenAL\samples\playoggvorbis\include;..\ThirdParty\OpenAL\samples\playoggvorbis\Source;..\ThirdParty\OpenAL\samples\playoggvorbis\include\Ogg;..\ThirdParty\OpenAL\samples\playoggvorbis\include\Vorbis;..\ThirdParty\OpenAL\samples\playstatic\Source;..\ThirdParty\OpenAL\samples\playstatic\Win64;..\ThirdParty\OpenAL\samples\playstream\Source;..\ThirdParty\OpenAL\samples\playstream\Win64;..\ThirdParty\OpenAL\samples\renderer\Source;..\ThirdParty\OpenAL\samples\renderer\Win64;..\ThirdParty\OpenAL\samples\xramdemo\Source;..\ThirdParty\OpenAL\samples\xramdemo\Win64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -75,15 +75,15 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>GamePCH.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>..\SaraganEngine;..\ThirdParty\glm\include;..\ThirdParty\glew\include;..\ThirdParty\freetype2;..\ThirdParty\OpenAL\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\SaraganEngine;..\ThirdParty\glm\include;..\ThirdParty\glew\include;..\ThirdParty\freetype2;..\ThirdParty\freetype-gl;..\ThirdParty\OpenAL\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
-      <AdditionalDependencies>OpenGL32.lib;glew32.lib;OpenAL32.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>..\ThirdParty\glew\lib\Release;..\ThirdParty\glew\lib\Release\x64;..\ThirdParty\OpenAL\docs;..\ThirdParty\OpenAL\include;..\ThirdParty\OpenAL\lib;..\ThirdParty\OpenAL\redist;..\ThirdParty\OpenAL\samples;..\ThirdParty\OpenAL\include\AL;..\ThirdParty\OpenAL\lib\EFX-Util_MT;..\ThirdParty\OpenAL\lib\EFX-Util_MTDLL;..\ThirdParty\OpenAL\samples\capture;..\ThirdParty\OpenAL\samples\efxenumerate;..\ThirdParty\OpenAL\samples\efxfilter;..\ThirdParty\OpenAL\samples\efxreverb;..\ThirdParty\OpenAL\samples\enumerate;..\ThirdParty\OpenAL\samples\media;..\ThirdParty\OpenAL\samples\playmultichannel;..\ThirdParty\OpenAL\samples\playoggvorbis;..\ThirdParty\OpenAL\samples\playstatic;..\ThirdParty\OpenAL\samples\playstream;..\ThirdParty\OpenAL\samples\renderer;..\ThirdParty\OpenAL\samples\xramdemo;..\ThirdParty\OpenAL\samples\capture\Source;..\ThirdParty\OpenAL\samples\capture\Win64;..\ThirdParty\OpenAL\samples\efxenumerate\Source;..\ThirdParty\OpenAL\samples\efxenumerate\Win64;..\ThirdParty\OpenAL\samples\efxfilter\Source;..\ThirdParty\OpenAL\samples\efxfilter\Win64;..\ThirdParty\OpenAL\samples\efxreverb\Source;..\ThirdParty\OpenAL\samples\efxreverb\Win64;..\ThirdParty\OpenAL\samples\enumerate\Source;..\ThirdParty\OpenAL\samples\enumerate\Win64;..\ThirdParty\OpenAL\samples\playmultichannel\Source;..\ThirdParty\OpenAL\samples\playmultichannel\Win64;..\ThirdParty\OpenAL\samples\playoggvorbis\include;..\ThirdParty\OpenAL\samples\playoggvorbis\Source;..\ThirdParty\OpenAL\samples\playoggvorbis\include\Ogg;..\ThirdParty\OpenAL\samples\playoggvorbis\include\Vorbis;..\ThirdParty\OpenAL\samples\playstatic\Source;..\ThirdParty\OpenAL\samples\playstatic\Win64;..\ThirdParty\OpenAL\samples\playstream\Source;..\ThirdParty\OpenAL\samples\playstream\Win64;..\ThirdParty\OpenAL\samples\renderer\Source;..\ThirdParty\OpenAL\samples\renderer\Win64;..\ThirdParty\OpenAL\samples\xramdemo\Source;..\ThirdParty\OpenAL\samples\xramdemo\Win64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>OpenGL32.lib;glew32.lib;OpenAL32.lib;freetype.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\ThirdParty\glew\lib\Release;..\ThirdParty\glew\lib\Release\x64;..\ThirdParty\freetype2\lib;..\ThirdParty\freetype-gl\lib;..\ThirdParty\OpenAL\docs;..\ThirdParty\OpenAL\include;..\ThirdParty\OpenAL\lib;..\ThirdParty\OpenAL\redist;..\ThirdParty\OpenAL\samples;..\ThirdParty\OpenAL\include\AL;..\ThirdParty\OpenAL\lib\EFX-Util_MT;..\ThirdParty\OpenAL\lib\EFX-Util_MTDLL;..\ThirdParty\OpenAL\samples\capture;..\ThirdParty\OpenAL\samples\efxenumerate;..\ThirdParty\OpenAL\samples\efxfilter;..\ThirdParty\OpenAL\samples\efxreverb;..\ThirdParty\OpenAL\samples\enumerate;..\ThirdParty\OpenAL\samples\media;..\ThirdParty\OpenAL\samples\playmultichannel;..\ThirdParty\OpenAL\samples\playoggvorbis;..\ThirdParty\OpenAL\samples\playstatic;..\ThirdParty\OpenAL\samples\playstream;..\ThirdParty\OpenAL\samples\renderer;..\ThirdParty\OpenAL\samples\xramdemo;..\ThirdParty\OpenAL\samples\capture\Source;..\ThirdParty\OpenAL\samples\capture\Win64;..\ThirdParty\OpenAL\samples\efxenumerate\Source;..\ThirdParty\OpenAL\samples\efxenumerate\Win64;..\ThirdParty\OpenAL\samples\efxfilter\Source;..\ThirdParty\OpenAL\samples\efxfilter\Win64;..\ThirdParty\OpenAL\samples\efxreverb\Source;..\ThirdParty\OpenAL\samples\efxreverb\Win64;..\ThirdParty\OpenAL\samples\enumerate\Source;..\ThirdParty\OpenAL\samples\enumerate\Win64;..\ThirdParty\OpenAL\samples\playmultichannel\Source;..\ThirdParty\OpenAL\samples\playmultichannel\Win64;..\ThirdParty\OpenAL\samples\playoggvorbis\include;..\ThirdParty\OpenAL\samples\playoggvorbis\Source;..\ThirdParty\OpenAL\samples\playoggvorbis\include\Ogg;..\ThirdParty\OpenAL\samples\playoggvorbis\include\Vorbis;..\ThirdParty\OpenAL\samples\playstatic\Source;..\ThirdParty\OpenAL\samples\playstatic\Win64;..\ThirdParty\OpenAL\samples\playstream\Source;..\ThirdParty\OpenAL\samples\playstream\Win64;..\ThirdParty\OpenAL\samples\renderer\Source;..\ThirdParty\OpenAL\samples\renderer\Win64;..\ThirdParty\OpenAL\samples\xramdemo\Source;..\ThirdParty\OpenAL\samples\xramdemo\Win64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -453,27 +453,30 @@
     <ClInclude Include="..\ThirdParty\glm\include\glm\vec3.hpp" />
     <ClInclude Include="..\ThirdParty\glm\include\glm\vec4.hpp" />
     <ClInclude Include="..\ThirdParty\glm\include\glm\vector_relational.hpp" />
-    <ClInclude Include="cTile.h" />
     <ClInclude Include="GameLibrary.h" />
     <ClInclude Include="GamePCH.h" />
     <ClInclude Include="MinsweeperState.h" />
     <ClInclude Include="RayState.h" />
     <ClInclude Include="TemplateState.h" />
+    <ClInclude Include="cTile.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="cTile.cpp" />
     <ClCompile Include="GameLibrary.cpp" />
     <ClCompile Include="GamePCH.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="main.cpp" />
     <ClCompile Include="MinsweeperState.cpp" />
     <ClCompile Include="RayState.cpp" />
     <ClCompile Include="TemplateState.cpp" />
+    <ClCompile Include="cTile.cpp" />
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SaraganEngine\SaraganEngine.vcxproj">
       <Project>{D87EC9BF-443F-45F6-0D7A-8E7379F989D2}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\ThirdParty\freetype-gl\freetype-gl.vcxproj">
+      <Project>{09D6E609-758B-5FFF-FE7F-59D66A345603}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

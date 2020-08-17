@@ -4,7 +4,7 @@
 #include "Object.h"
 #include "Component.h"
 
-class cFont;
+class Font;
 
 class Text : public Component
 {
@@ -23,7 +23,7 @@ public:
 	float y;
 	float fontSize;
 	glm::vec4 color;
-	cFont* f;
+	Font* f;
 	glm::vec2 pen;
 
 	std::vector<vert> verts;

@@ -1,0 +1,855 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="..">
+      <UniqueIdentifier>{61705900-4DFC-870B-B6AA-880BA255880B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\glew">
+      <UniqueIdentifier>{9FA89047-0B88-0FE3-14A0-9AB980FE7544}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\glew\include">
+      <UniqueIdentifier>{12FF8FD5-7E8A-FD99-879B-808EF3A5599A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\glew\include\GL">
+      <UniqueIdentifier>{344F0EAB-2033-CF00-8993-C9537596B982}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\glm">
+      <UniqueIdentifier>{30438876-1CE5-B24C-05A0-C6A0F1E0399D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\glm\include">
+      <UniqueIdentifier>{A39AFDE1-8F68-F1E7-78FC-610E6469CD4C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\glm\include\glm">
+      <UniqueIdentifier>{72BEDB86-5EA2-9CDC-C702-972FB305875E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\glm\include\glm\detail">
+      <UniqueIdentifier>{F4C16406-6084-9890-A934-271D1536716E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\glm\include\glm\ext">
+      <UniqueIdentifier>{D22AB5F2-BE24-DE44-A791-7455932A44B1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\glm\include\glm\gtc">
+      <UniqueIdentifier>{BF32B5F2-AB2C-DE44-9499-7455803244B1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\glm\include\glm\gtx">
+      <UniqueIdentifier>{D432B5F2-C02C-DE44-A999-7455953244B1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="freetype-gl">
+      <UniqueIdentifier>{09D6E609-758B-5FFF-FE7F-59D66A345603}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="windows">
+      <UniqueIdentifier>{70CAFEC8-DCA9-7D64-E5C1-083B5120E4C5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="windows\AntTweakBar">
+      <UniqueIdentifier>{93E7D38B-FF48-B199-88B6-F74BF416E858}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="windows\AntTweakBar\include">
+      <UniqueIdentifier>{06F2CCD6-72FF-FABC-FBE5-F6A767F2C673}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="windows\freetype">
+      <UniqueIdentifier>{238762A1-0F80-81F3-38B2-6678240A61FF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="windows\freetype\freetype">
+      <UniqueIdentifier>{363D1D2F-A2FF-50B9-EBAF-DF4557B12997}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="windows\freetype\freetype\config">
+      <UniqueIdentifier>{9B131003-8764-FB44-B0C8-E9069C788EAE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="windows\freetype\freetype\internal">
+      <UniqueIdentifier>{421CE651-2E58-E9BB-976A-01B383C591D6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="windows\freetype\freetype\internal\services">
+      <UniqueIdentifier>{7508E3FC-E16D-7683-6A46-185CD6AA6BF2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="windows\glew">
+      <UniqueIdentifier>{0EA49B52-FA06-2BF7-A38C-63AD8FCEF679}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="windows\glew\include">
+      <UniqueIdentifier>{81F95ACF-6D88-E498-16A7-F8930215F53E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="windows\glew\include\GL">
+      <UniqueIdentifier>{43E7EB51-AF1E-34E9-B828-980C24DF5AE2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\glew\include\GL\eglew.h">
+      <Filter>..\glew\include\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glew\include\GL\glew.h">
+      <Filter>..\glew\include\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glew\include\GL\glxew.h">
+      <Filter>..\glew\include\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glew\include\GL\wglew.h">
+      <Filter>..\glew\include\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\detail\func_common.inl">
+      <Filter>..\glm\include\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\detail\func_common_simd.inl">
+      <Filter>..\glm\include\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\detail\func_exponential.inl">
+      <Filter>..\glm\include\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\detail\func_exponential_simd.inl">
+      <Filter>..\glm\include\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\detail\func_geometric.inl">
+      <Filter>..\glm\include\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\detail\func_geometric_simd.inl">
+      <Filter>..\glm\include\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\detail\func_integer.inl">
+      <Filter>..\glm\include\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\detail\func_integer_simd.inl">
+      <Filter>..\glm\include\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\detail\func_matrix.inl">
+      <Filter>..\glm\include\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\detail\func_matrix_simd.inl">
+      <Filter>..\glm\include\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\detail\func_packing.inl">
+      <Filter>..\glm\include\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\detail\func_packing_simd.inl">
+      <Filter>..\glm\include\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\detail\func_trigonometric.inl">
+      <Filter>..\glm\include\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\detail\func_trigonometric_simd.inl">
+      <Filter>..\glm\include\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\detail\func_vector_relational.inl">
+      <Filter>..\glm\include\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\detail\func_vector_relational_simd.inl">
+      <Filter>..\glm\include\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\detail\type_half.inl">
+      <Filter>..\glm\include\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\detail\type_mat2x2.inl">
+      <Filter>..\glm\include\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\detail\type_mat2x3.inl">
+      <Filter>..\glm\include\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\detail\type_mat2x4.inl">
+      <Filter>..\glm\include\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\detail\type_mat3x2.inl">
+      <Filter>..\glm\include\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\detail\type_mat3x3.inl">
+      <Filter>..\glm\include\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\detail\type_mat3x4.inl">
+      <Filter>..\glm\include\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\detail\type_mat4x2.inl">
+      <Filter>..\glm\include\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\detail\type_mat4x3.inl">
+      <Filter>..\glm\include\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\detail\type_mat4x4.inl">
+      <Filter>..\glm\include\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\detail\type_mat4x4_simd.inl">
+      <Filter>..\glm\include\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\detail\type_quat.inl">
+      <Filter>..\glm\include\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\detail\type_quat_simd.inl">
+      <Filter>..\glm\include\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\detail\type_vec1.inl">
+      <Filter>..\glm\include\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\detail\type_vec2.inl">
+      <Filter>..\glm\include\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\detail\type_vec3.inl">
+      <Filter>..\glm\include\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\detail\type_vec4.inl">
+      <Filter>..\glm\include\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\detail\type_vec4_simd.inl">
+      <Filter>..\glm\include\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\ext\matrix_clip_space.inl">
+      <Filter>..\glm\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\ext\matrix_projection.inl">
+      <Filter>..\glm\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\ext\matrix_relational.inl">
+      <Filter>..\glm\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\ext\matrix_transform.inl">
+      <Filter>..\glm\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\ext\quaternion_common.inl">
+      <Filter>..\glm\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\ext\quaternion_common_simd.inl">
+      <Filter>..\glm\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\ext\quaternion_exponential.inl">
+      <Filter>..\glm\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\ext\quaternion_geometric.inl">
+      <Filter>..\glm\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\ext\quaternion_relational.inl">
+      <Filter>..\glm\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\ext\quaternion_transform.inl">
+      <Filter>..\glm\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\ext\quaternion_trigonometric.inl">
+      <Filter>..\glm\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\ext\scalar_common.inl">
+      <Filter>..\glm\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\ext\scalar_constants.inl">
+      <Filter>..\glm\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\ext\scalar_relational.inl">
+      <Filter>..\glm\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\ext\scalar_ulp.inl">
+      <Filter>..\glm\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\ext\vector_common.inl">
+      <Filter>..\glm\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\ext\vector_relational.inl">
+      <Filter>..\glm\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\ext\vector_ulp.inl">
+      <Filter>..\glm\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtc\bitfield.inl">
+      <Filter>..\glm\include\glm\gtc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtc\color_space.inl">
+      <Filter>..\glm\include\glm\gtc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtc\constants.inl">
+      <Filter>..\glm\include\glm\gtc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtc\epsilon.inl">
+      <Filter>..\glm\include\glm\gtc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtc\integer.inl">
+      <Filter>..\glm\include\glm\gtc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtc\matrix_access.inl">
+      <Filter>..\glm\include\glm\gtc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtc\matrix_inverse.inl">
+      <Filter>..\glm\include\glm\gtc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtc\matrix_transform.inl">
+      <Filter>..\glm\include\glm\gtc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtc\noise.inl">
+      <Filter>..\glm\include\glm\gtc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtc\packing.inl">
+      <Filter>..\glm\include\glm\gtc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtc\quaternion.inl">
+      <Filter>..\glm\include\glm\gtc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtc\quaternion_simd.inl">
+      <Filter>..\glm\include\glm\gtc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtc\random.inl">
+      <Filter>..\glm\include\glm\gtc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtc\reciprocal.inl">
+      <Filter>..\glm\include\glm\gtc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtc\round.inl">
+      <Filter>..\glm\include\glm\gtc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtc\type_precision.inl">
+      <Filter>..\glm\include\glm\gtc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtc\type_ptr.inl">
+      <Filter>..\glm\include\glm\gtc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtc\ulp.inl">
+      <Filter>..\glm\include\glm\gtc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtx\associated_min_max.inl">
+      <Filter>..\glm\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtx\bit.inl">
+      <Filter>..\glm\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtx\closest_point.inl">
+      <Filter>..\glm\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtx\color_encoding.inl">
+      <Filter>..\glm\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtx\color_space.inl">
+      <Filter>..\glm\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtx\color_space_YCoCg.inl">
+      <Filter>..\glm\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtx\common.inl">
+      <Filter>..\glm\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtx\compatibility.inl">
+      <Filter>..\glm\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtx\component_wise.inl">
+      <Filter>..\glm\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtx\dual_quaternion.inl">
+      <Filter>..\glm\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtx\easing.inl">
+      <Filter>..\glm\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtx\euler_angles.inl">
+      <Filter>..\glm\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtx\extend.inl">
+      <Filter>..\glm\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtx\extended_min_max.inl">
+      <Filter>..\glm\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtx\exterior_product.inl">
+      <Filter>..\glm\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtx\fast_exponential.inl">
+      <Filter>..\glm\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtx\fast_square_root.inl">
+      <Filter>..\glm\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtx\fast_trigonometry.inl">
+      <Filter>..\glm\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtx\float_notmalize.inl">
+      <Filter>..\glm\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtx\functions.inl">
+      <Filter>..\glm\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtx\gradient_paint.inl">
+      <Filter>..\glm\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtx\handed_coordinate_space.inl">
+      <Filter>..\glm\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtx\hash.inl">
+      <Filter>..\glm\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtx\integer.inl">
+      <Filter>..\glm\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtx\intersect.inl">
+      <Filter>..\glm\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtx\io.inl">
+      <Filter>..\glm\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtx\log_base.inl">
+      <Filter>..\glm\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtx\matrix_cross_product.inl">
+      <Filter>..\glm\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtx\matrix_decompose.inl">
+      <Filter>..\glm\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtx\matrix_factorisation.inl">
+      <Filter>..\glm\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtx\matrix_interpolation.inl">
+      <Filter>..\glm\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtx\matrix_major_storage.inl">
+      <Filter>..\glm\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtx\matrix_operation.inl">
+      <Filter>..\glm\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtx\matrix_query.inl">
+      <Filter>..\glm\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtx\matrix_transform_2d.inl">
+      <Filter>..\glm\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtx\mixed_product.inl">
+      <Filter>..\glm\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtx\norm.inl">
+      <Filter>..\glm\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtx\normal.inl">
+      <Filter>..\glm\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtx\normalize_dot.inl">
+      <Filter>..\glm\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtx\number_precision.inl">
+      <Filter>..\glm\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtx\optimum_pow.inl">
+      <Filter>..\glm\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtx\orthonormalize.inl">
+      <Filter>..\glm\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtx\perpendicular.inl">
+      <Filter>..\glm\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtx\polar_coordinates.inl">
+      <Filter>..\glm\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtx\projection.inl">
+      <Filter>..\glm\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtx\quaternion.inl">
+      <Filter>..\glm\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtx\raw_data.inl">
+      <Filter>..\glm\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtx\rotate_normalized_axis.inl">
+      <Filter>..\glm\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtx\rotate_vector.inl">
+      <Filter>..\glm\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtx\scalar_relational.inl">
+      <Filter>..\glm\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtx\spline.inl">
+      <Filter>..\glm\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtx\std_based_type.inl">
+      <Filter>..\glm\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtx\string_cast.inl">
+      <Filter>..\glm\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtx\texture.inl">
+      <Filter>..\glm\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtx\transform.inl">
+      <Filter>..\glm\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtx\transform2.inl">
+      <Filter>..\glm\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtx\type_aligned.inl">
+      <Filter>..\glm\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtx\type_trait.inl">
+      <Filter>..\glm\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtx\vector_angle.inl">
+      <Filter>..\glm\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtx\vector_query.inl">
+      <Filter>..\glm\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glm\include\glm\gtx\wrap.inl">
+      <Filter>..\glm\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="distance-field.h" />
+    <ClInclude Include="edtaa3func.h" />
+    <ClInclude Include="font-manager.h" />
+    <ClInclude Include="freetype-gl.h" />
+    <ClInclude Include="freetype-gl\distance-field.h">
+      <Filter>freetype-gl</Filter>
+    </ClInclude>
+    <ClInclude Include="freetype-gl\edtaa3func.h">
+      <Filter>freetype-gl</Filter>
+    </ClInclude>
+    <ClInclude Include="freetype-gl\font-manager.h">
+      <Filter>freetype-gl</Filter>
+    </ClInclude>
+    <ClInclude Include="freetype-gl\freetype-gl.h">
+      <Filter>freetype-gl</Filter>
+    </ClInclude>
+    <ClInclude Include="freetype-gl\markup.h">
+      <Filter>freetype-gl</Filter>
+    </ClInclude>
+    <ClInclude Include="freetype-gl\opengl.h">
+      <Filter>freetype-gl</Filter>
+    </ClInclude>
+    <ClInclude Include="freetype-gl\platform.h">
+      <Filter>freetype-gl</Filter>
+    </ClInclude>
+    <ClInclude Include="freetype-gl\text-buffer.h">
+      <Filter>freetype-gl</Filter>
+    </ClInclude>
+    <ClInclude Include="freetype-gl\texture-atlas.h">
+      <Filter>freetype-gl</Filter>
+    </ClInclude>
+    <ClInclude Include="freetype-gl\texture-font.h">
+      <Filter>freetype-gl</Filter>
+    </ClInclude>
+    <ClInclude Include="freetype-gl\utf8-utils.h">
+      <Filter>freetype-gl</Filter>
+    </ClInclude>
+    <ClInclude Include="freetype-gl\vec234.h">
+      <Filter>freetype-gl</Filter>
+    </ClInclude>
+    <ClInclude Include="freetype-gl\vector.h">
+      <Filter>freetype-gl</Filter>
+    </ClInclude>
+    <ClInclude Include="freetype-gl\vertex-attribute.h">
+      <Filter>freetype-gl</Filter>
+    </ClInclude>
+    <ClInclude Include="freetype-gl\vertex-buffer.h">
+      <Filter>freetype-gl</Filter>
+    </ClInclude>
+    <ClInclude Include="markup.h" />
+    <ClInclude Include="opengl.h" />
+    <ClInclude Include="platform.h" />
+    <ClInclude Include="text-buffer.h" />
+    <ClInclude Include="texture-atlas.h" />
+    <ClInclude Include="texture-font.h" />
+    <ClInclude Include="utf8-utils.h" />
+    <ClInclude Include="vec234.h" />
+    <ClInclude Include="vector.h" />
+    <ClInclude Include="vertex-attribute.h" />
+    <ClInclude Include="vertex-buffer.h" />
+    <ClInclude Include="windows\AntTweakBar\include\AntTweakBar.h">
+      <Filter>windows\AntTweakBar\include</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\config\ftconfig.h">
+      <Filter>windows\freetype\freetype\config</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\config\ftheader.h">
+      <Filter>windows\freetype\freetype\config</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\config\ftmodule.h">
+      <Filter>windows\freetype\freetype\config</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\config\ftoption.h">
+      <Filter>windows\freetype\freetype\config</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\config\ftstdlib.h">
+      <Filter>windows\freetype\freetype\config</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\freetype.h">
+      <Filter>windows\freetype\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\ftadvanc.h">
+      <Filter>windows\freetype\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\ftbbox.h">
+      <Filter>windows\freetype\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\ftbdf.h">
+      <Filter>windows\freetype\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\ftbitmap.h">
+      <Filter>windows\freetype\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\ftbzip2.h">
+      <Filter>windows\freetype\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\ftcache.h">
+      <Filter>windows\freetype\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\ftchapters.h">
+      <Filter>windows\freetype\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\ftcid.h">
+      <Filter>windows\freetype\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\fterrdef.h">
+      <Filter>windows\freetype\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\fterrors.h">
+      <Filter>windows\freetype\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\ftgasp.h">
+      <Filter>windows\freetype\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\ftglyph.h">
+      <Filter>windows\freetype\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\ftgxval.h">
+      <Filter>windows\freetype\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\ftgzip.h">
+      <Filter>windows\freetype\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\ftimage.h">
+      <Filter>windows\freetype\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\ftincrem.h">
+      <Filter>windows\freetype\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\ftlcdfil.h">
+      <Filter>windows\freetype\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\ftlist.h">
+      <Filter>windows\freetype\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\ftlzw.h">
+      <Filter>windows\freetype\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\ftmac.h">
+      <Filter>windows\freetype\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\ftmm.h">
+      <Filter>windows\freetype\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\ftmodapi.h">
+      <Filter>windows\freetype\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\ftmoderr.h">
+      <Filter>windows\freetype\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\ftotval.h">
+      <Filter>windows\freetype\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\ftoutln.h">
+      <Filter>windows\freetype\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\ftpfr.h">
+      <Filter>windows\freetype\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\ftrender.h">
+      <Filter>windows\freetype\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\ftsizes.h">
+      <Filter>windows\freetype\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\ftsnames.h">
+      <Filter>windows\freetype\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\ftstroke.h">
+      <Filter>windows\freetype\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\ftsynth.h">
+      <Filter>windows\freetype\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\ftsystem.h">
+      <Filter>windows\freetype\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\fttrigon.h">
+      <Filter>windows\freetype\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\fttypes.h">
+      <Filter>windows\freetype\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\ftwinfnt.h">
+      <Filter>windows\freetype\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\ftxf86.h">
+      <Filter>windows\freetype\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\internal\autohint.h">
+      <Filter>windows\freetype\freetype\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\internal\ftcalc.h">
+      <Filter>windows\freetype\freetype\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\internal\ftdebug.h">
+      <Filter>windows\freetype\freetype\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\internal\ftdriver.h">
+      <Filter>windows\freetype\freetype\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\internal\ftgloadr.h">
+      <Filter>windows\freetype\freetype\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\internal\ftmemory.h">
+      <Filter>windows\freetype\freetype\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\internal\ftobjs.h">
+      <Filter>windows\freetype\freetype\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\internal\ftpic.h">
+      <Filter>windows\freetype\freetype\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\internal\ftrfork.h">
+      <Filter>windows\freetype\freetype\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\internal\ftserv.h">
+      <Filter>windows\freetype\freetype\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\internal\ftstream.h">
+      <Filter>windows\freetype\freetype\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\internal\fttrace.h">
+      <Filter>windows\freetype\freetype\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\internal\ftvalid.h">
+      <Filter>windows\freetype\freetype\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\internal\internal.h">
+      <Filter>windows\freetype\freetype\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\internal\psaux.h">
+      <Filter>windows\freetype\freetype\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\internal\pshints.h">
+      <Filter>windows\freetype\freetype\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\internal\services\svbdf.h">
+      <Filter>windows\freetype\freetype\internal\services</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\internal\services\svcid.h">
+      <Filter>windows\freetype\freetype\internal\services</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\internal\services\svgldict.h">
+      <Filter>windows\freetype\freetype\internal\services</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\internal\services\svgxval.h">
+      <Filter>windows\freetype\freetype\internal\services</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\internal\services\svkern.h">
+      <Filter>windows\freetype\freetype\internal\services</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\internal\services\svmm.h">
+      <Filter>windows\freetype\freetype\internal\services</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\internal\services\svotval.h">
+      <Filter>windows\freetype\freetype\internal\services</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\internal\services\svpfr.h">
+      <Filter>windows\freetype\freetype\internal\services</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\internal\services\svpostnm.h">
+      <Filter>windows\freetype\freetype\internal\services</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\internal\services\svpscmap.h">
+      <Filter>windows\freetype\freetype\internal\services</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\internal\services\svpsinfo.h">
+      <Filter>windows\freetype\freetype\internal\services</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\internal\services\svsfnt.h">
+      <Filter>windows\freetype\freetype\internal\services</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\internal\services\svttcmap.h">
+      <Filter>windows\freetype\freetype\internal\services</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\internal\services\svtteng.h">
+      <Filter>windows\freetype\freetype\internal\services</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\internal\services\svttglyf.h">
+      <Filter>windows\freetype\freetype\internal\services</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\internal\services\svwinfnt.h">
+      <Filter>windows\freetype\freetype\internal\services</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\internal\services\svxf86nm.h">
+      <Filter>windows\freetype\freetype\internal\services</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\internal\sfnt.h">
+      <Filter>windows\freetype\freetype\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\internal\t1types.h">
+      <Filter>windows\freetype\freetype\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\internal\tttypes.h">
+      <Filter>windows\freetype\freetype\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\t1tables.h">
+      <Filter>windows\freetype\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\ttnameid.h">
+      <Filter>windows\freetype\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\tttables.h">
+      <Filter>windows\freetype\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\tttags.h">
+      <Filter>windows\freetype\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\freetype\ttunpat.h">
+      <Filter>windows\freetype\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\freetype\ft2build.h">
+      <Filter>windows\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\glew\include\GL\glew.h">
+      <Filter>windows\glew\include\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\glew\include\GL\glxew.h">
+      <Filter>windows\glew\include\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\glew\include\GL\wglew.h">
+      <Filter>windows\glew\include\GL</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="distance-field.c" />
+    <ClCompile Include="edtaa3func.c" />
+    <ClCompile Include="font-manager.c" />
+    <ClCompile Include="freetype-gl\distance-field.c">
+      <Filter>freetype-gl</Filter>
+    </ClCompile>
+    <ClCompile Include="freetype-gl\edtaa3func.c">
+      <Filter>freetype-gl</Filter>
+    </ClCompile>
+    <ClCompile Include="freetype-gl\font-manager.c">
+      <Filter>freetype-gl</Filter>
+    </ClCompile>
+    <ClCompile Include="freetype-gl\makefont.c">
+      <Filter>freetype-gl</Filter>
+    </ClCompile>
+    <ClCompile Include="freetype-gl\platform.c">
+      <Filter>freetype-gl</Filter>
+    </ClCompile>
+    <ClCompile Include="freetype-gl\text-buffer.c">
+      <Filter>freetype-gl</Filter>
+    </ClCompile>
+    <ClCompile Include="freetype-gl\texture-atlas.c">
+      <Filter>freetype-gl</Filter>
+    </ClCompile>
+    <ClCompile Include="freetype-gl\texture-font.c">
+      <Filter>freetype-gl</Filter>
+    </ClCompile>
+    <ClCompile Include="freetype-gl\utf8-utils.c">
+      <Filter>freetype-gl</Filter>
+    </ClCompile>
+    <ClCompile Include="freetype-gl\vector.c">
+      <Filter>freetype-gl</Filter>
+    </ClCompile>
+    <ClCompile Include="freetype-gl\vertex-attribute.c">
+      <Filter>freetype-gl</Filter>
+    </ClCompile>
+    <ClCompile Include="freetype-gl\vertex-buffer.c">
+      <Filter>freetype-gl</Filter>
+    </ClCompile>
+    <ClCompile Include="makefont.c" />
+    <ClCompile Include="platform.c" />
+    <ClCompile Include="text-buffer.c" />
+    <ClCompile Include="texture-atlas.c" />
+    <ClCompile Include="texture-font.c" />
+    <ClCompile Include="utf8-utils.c" />
+    <ClCompile Include="vector.c" />
+    <ClCompile Include="vertex-attribute.c" />
+    <ClCompile Include="vertex-buffer.c" />
+  </ItemGroup>
+</Project>

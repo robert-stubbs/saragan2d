@@ -7,9 +7,11 @@
 #include "Engine.h"
 
 #include "RayState.h"
+#include "MinsweeperState.h"
 
 Engine* pEngine;
 RayState* raystate;
+MinesweeperState* MSWState;
 
 //https://github.com/HectorPeeters/opengl_premake_boilerplate
 
@@ -150,7 +152,12 @@ void Load()
 
 	raystate = new RayState();
 	raystate->Init();
-	Engine::getEngine().GameFSM->AddState(raystate, true);
+
+	MSWState = new MinesweeperState();
+	MSWState->Init();
+
+	Engine::getEngine().GameFSM->AddState(raystate, false);
+	Engine::getEngine().GameFSM->AddState(MSWState, true);
 }
 
 void PostLoad()

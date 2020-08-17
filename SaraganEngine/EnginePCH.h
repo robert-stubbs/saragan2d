@@ -36,6 +36,8 @@
 
 #include <ft2build.h>
 #include FT_FREETYPE_H
+#include <freetype-gl\freetype-gl.h>
+#include <freetype-gl\vertex-buffer.h>
 
 #include <AL\al.h>
 #include <AL\alc.h>
