@@ -15,6 +15,8 @@ public:
 	HDC   hDC;
 	bool  fullscreen;
 
+	unsigned int CurrentTextureID;
+
 	Shader* shader; // Our GLSL shader 
 	Shader* animShader; // Our GLSL shader 
 	Shader* CurrentShader; // Our GLSL shader 

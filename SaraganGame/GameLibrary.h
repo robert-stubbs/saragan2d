@@ -3,4 +3,7 @@
 
 #include "EngineLibrary.h"
 
+#define xsize		10
+#define ysize		10
+
 #endif

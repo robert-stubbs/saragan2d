@@ -453,17 +453,21 @@
     <ClInclude Include="..\ThirdParty\glm\include\glm\vec3.hpp" />
     <ClInclude Include="..\ThirdParty\glm\include\glm\vec4.hpp" />
     <ClInclude Include="..\ThirdParty\glm\include\glm\vector_relational.hpp" />
+    <ClInclude Include="cTile.h" />
     <ClInclude Include="GameLibrary.h" />
     <ClInclude Include="GamePCH.h" />
+    <ClInclude Include="MinsweeperState.h" />
     <ClInclude Include="RayState.h" />
     <ClInclude Include="TemplateState.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="cTile.cpp" />
     <ClCompile Include="GameLibrary.cpp" />
     <ClCompile Include="GamePCH.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MinsweeperState.cpp" />
     <ClCompile Include="RayState.cpp" />
     <ClCompile Include="TemplateState.cpp" />
   </ItemGroup>

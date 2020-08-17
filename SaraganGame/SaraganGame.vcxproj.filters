@@ -43,6 +43,9 @@
     <Filter Include="Games\Ray">
       <UniqueIdentifier>{57e70860-fd1d-4dd9-9b1d-7165f9a5daae}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Games\MineSweeper">
+      <UniqueIdentifier>{1a9e92d4-4ed3-4530-a65c-349784549287}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\ThirdParty\glew\include\GL\eglew.h">
@@ -1151,6 +1154,12 @@
     <ClInclude Include="RayState.h">
       <Filter>Games\Ray</Filter>
     </ClInclude>
+    <ClInclude Include="cTile.h">
+      <Filter>Games\MineSweeper</Filter>
+    </ClInclude>
+    <ClInclude Include="MinsweeperState.h">
+      <Filter>Games\MineSweeper</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameLibrary.cpp" />
@@ -1161,6 +1170,12 @@
     </ClCompile>
     <ClCompile Include="RayState.cpp">
       <Filter>Games\Ray</Filter>
+    </ClCompile>
+    <ClCompile Include="cTile.cpp">
+      <Filter>Games\MineSweeper</Filter>
+    </ClCompile>
+    <ClCompile Include="MinsweeperState.cpp">
+      <Filter>Games\MineSweeper</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

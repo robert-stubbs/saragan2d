@@ -1266,6 +1266,12 @@
     <ClInclude Include="Line.h">
       <Filter>Geometry</Filter>
     </ClInclude>
+    <ClInclude Include="Square.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Text.h">
+      <Filter>Font</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="EngineLibrary.cpp" />
@@ -1342,6 +1348,12 @@
     </ClCompile>
     <ClCompile Include="Line.cpp">
       <Filter>Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Square.cpp">
+      <Filter>Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Text.cpp">
+      <Filter>Font</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

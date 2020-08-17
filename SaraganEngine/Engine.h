@@ -9,6 +9,7 @@ class StateMachine;
 class EntityManager;
 class Camera;
 class Camera2D;
+class Font;
 
 class Engine
 {
@@ -26,6 +27,8 @@ public:
 
 	Camera* pCam;
 	Camera2D* pCam2D;
+
+	Font* font;
 
 	glm::mat4 ProjectionMatrix;
 	glm::mat4 viewMatrix; // Store the view matrix  

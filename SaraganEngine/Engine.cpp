@@ -9,6 +9,7 @@
 
 #include "Camera.h"
 #include "Camera2D.h"
+#include "Font.h"
 
 
 Engine* Engine::engine = nullptr;
@@ -39,6 +40,10 @@ bool Engine::init(HWND hWnd, int Width, int Height)
 	renderer->init(hWnd);
 
 	System->Init();
+
+	std::string asset_dir = "C:/Assets/";
+	std::string ft = asset_dir + "Font/Vera.ttf";
+	font = new Font(30, ft.c_str());
 
 	GameFSM = new StateMachine();
 

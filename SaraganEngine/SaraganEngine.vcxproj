@@ -479,6 +479,7 @@
     <ClInclude Include="Shader.h" />
     <ClInclude Include="SoundItem.h" />
     <ClInclude Include="SoundSystem.h" />
+    <ClInclude Include="Square.h" />
     <ClInclude Include="State.h" />
     <ClInclude Include="StateMachine.h" />
     <ClInclude Include="System.h" />
@@ -490,6 +491,7 @@
     <ClInclude Include="cIni.h" />
     <ClInclude Include="cRegWnd.h" />
     <ClInclude Include="standards.h" />
+    <ClInclude Include="Text.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Camera.cpp" />
@@ -511,6 +513,7 @@
     <ClCompile Include="Shader.cpp" />
     <ClCompile Include="SoundItem.cpp" />
     <ClCompile Include="SoundSystem.cpp" />
+    <ClCompile Include="Square.cpp" />
     <ClCompile Include="State.cpp" />
     <ClCompile Include="StateMachine.cpp" />
     <ClCompile Include="System.cpp" />
@@ -521,6 +524,7 @@
     <ClCompile Include="cIni.cpp" />
     <ClCompile Include="cRegWnd.cpp" />
     <ClCompile Include="standards.cpp" />
+    <ClCompile Include="Text.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
