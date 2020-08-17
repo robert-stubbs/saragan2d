@@ -5,36 +5,39 @@
 #include "Engine.h"
 #include "Renderer.h"
 #include "Line.h"
-
+#include "Camera2D.h"
 
 
 RayState::RayState() {
 	stateName = "RayState";
 	mousex = 0;
 	mousey = 0;
+
+	GLfloat width = Engine::getEngine().width;
+	GLfloat height = Engine::getEngine().height;
 		
 	Line top = Line();
-	top.Init(0.1f, 0.1f, (GLfloat)Engine::getEngine().width, 0.1f);
+	top.Init(0.1f, 0.1f, width, 0.1f);
 	hitLines.push_back(top);
 
 	Line bottom = Line();
-	bottom.Init(0.1f, (GLfloat)Engine::getEngine().height - 1, (GLfloat)Engine::getEngine().width, (GLfloat)Engine::getEngine().height - 1);
+	bottom.Init(0.1f, height - 1, width, height - 1);
 	hitLines.push_back(bottom);
 
 	Line left = Line();
-	left.Init(0.1f, 0.1f, 0.1f, (GLfloat)Engine::getEngine().height);
+	left.Init(0.1f, 0.1f, 0.1f, height);
 	hitLines.push_back(left);
 
 	Line right = Line();
-	right.Init((GLfloat)Engine::getEngine().width, 0.1f, (GLfloat)Engine::getEngine().width, (GLfloat)Engine::getEngine().height);
+	right.Init(width, 0.1f, width, height);
 	hitLines.push_back(right);
 
 	for (size_t i = 0; i < 10; i++)
 	{
-		float x = (float)(rand() % ((int)Engine::getEngine().width + 1) + 0);
-		float y = (float)(rand() % ((int)Engine::getEngine().height + 1) + 0);
-		float x1 = (float)(rand() % ((int)Engine::getEngine().width + 1) + 0);
-		float y1 = (float)(rand() % ((int)Engine::getEngine().height + 1) + 0);
+		float x = (float)(rand() % ((int)width + 1) + 0);
+		float y = (float)(rand() % ((int)height + 1) + 0);
+		float x1 = (float)(rand() % ((int)width + 1) + 0);
+		float y1 = (float)(rand() % ((int)height + 1) + 0);
 
 		Line random = Line();
 		random.Init(x, y, x1, y1);
@@ -51,7 +54,7 @@ RayState::RayState() {
 }
 
 RayState::RayState(StateMachine* fsm) {
-	stateName = "GameState";
+	stateName = "RayState";
 
 }
 
@@ -121,7 +124,11 @@ void RayState::MouseMove(UINT Msg, WPARAM wParam, LPARAM lParam) {
 	POINT mouse;                        // Stores The X And Y Coords For The Current Mouse Position
 	GetCursorPos(&mouse);                   // Gets The Current Cursor Coordinates (Mouse Coordinates)
 	ScreenToClient(hWnd, &mouse);
-	glm::vec3 pt = Engine::getEngine().renderer->GetWorldPos2D((int)mouse.x, (int)mouse.y, glm::mat4(1.0f), glm::mat4(1.0f));
+
+	auto& engine = Engine::getEngine();
+		
+
+	glm::vec3 pt = engine.renderer->GetWorldPos2D((int)mouse.x, (int)mouse.y, engine.pCam2D->ProjectionMatrix, engine.pCam2D->ViewMatrix);
 
 	mousex = (float)pt.x;
 	mousey = (float)pt.y;
@@ -132,6 +139,4 @@ void RayState::MouseMove(UINT Msg, WPARAM wParam, LPARAM lParam) {
 		mouseLines[i].UpdatePos(mousex, mousey, hitLines);
 		mouseLines[i].hasUpdate = true;
 	}
-
-	//pEngine->UpdateLine(wPos.x,wPos.y,wPos.z);
 }

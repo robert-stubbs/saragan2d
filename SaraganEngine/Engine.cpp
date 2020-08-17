@@ -7,6 +7,10 @@
 #include "EntityManager.h"
 #include "SafeDelete.h"
 
+#include "Camera.h"
+#include "Camera2D.h"
+
+
 Engine* Engine::engine = nullptr;
 
 Engine::Engine()
@@ -27,14 +31,20 @@ Engine::~Engine()
 	SAFE_DELETE(System);
 }
 
-bool Engine::init(HWND hWnd)
+bool Engine::init(HWND hWnd, int Width, int Height)
 {
+	width = (float)Width;
+	height = (float)Height;
+
 	renderer->init(hWnd);
 
 	System->Init();
 
 	GameFSM = new StateMachine();
 
+
+	pCam = new Camera(Engine::getEngine().width, Engine::getEngine().height);
+	pCam2D = new Camera2D(Engine::getEngine().width, Engine::getEngine().height);
 
 	return true;
 }
@@ -51,31 +61,35 @@ bool Engine::load()
 
 bool Engine::Update(float DeltaTime)
 {
-	renderer->Update(DeltaTime);
+	pCam->Update(DeltaTime);
 
 	System->Update(DeltaTime);
 
 	GameFSM->Update(DeltaTime);
+
+	renderer->Update(DeltaTime);
 
 	return true;
 }
 
 bool Engine::UpdateOrth(float DeltaTime)
 {
-	renderer->UpdateOrtho(DeltaTime);
+	pCam2D->Update(DeltaTime);
 
 	GameFSM->UpdateOrth(0);
+
+	renderer->UpdateOrtho(DeltaTime);
 	return true;
 }
 
 void Engine::render()
 {
-	return renderer->render(GameFSM, System, ProjectionMatrix, viewMatrix);
+	renderer->render(GameFSM, System, pCam->ProjectionMatrix, pCam->ViewMatrix);
 }
 
 void Engine::renderOrth()
 {
-	return renderer->renderOrtho(GameFSM, System, ProjectionMatrix, viewMatrix);
+	renderer->renderOrtho(GameFSM, System, pCam2D->ProjectionMatrix, pCam2D->ViewMatrix);
 }
 
 bool Engine::cleanup()
@@ -85,9 +99,9 @@ bool Engine::cleanup()
 
 bool Engine::ResizeWindow(int Width, int Height)
 {
-	return renderer->ResizeWindow(Width, Height);
 	width = (float)Width;
 	height = (float)Height;
+	return renderer->ResizeWindow(Width, Height);
 }
 
 void Engine::KeyDown(UINT Msg, WPARAM wParam, LPARAM lParam)

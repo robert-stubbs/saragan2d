@@ -149,18 +149,20 @@ bool Line::Render()
 
 	if (Buffer.size() > 0) {
 
+		Shader* s = Engine::getEngine().renderer->CurrentShader;
+
 		if (this->mouseLine) {
-			glUniform4fv(Engine::getEngine().renderer->CurrentShader->Color, 1, glm::value_ptr(this->mouseLineColour));
+			glUniform4fv(s->Color, 1, glm::value_ptr(this->mouseLineColour));
 		}
 		else {
-			glUniform4fv(Engine::getEngine().renderer->CurrentShader->Color, 1, glm::value_ptr(this->colour));
+			glUniform4fv(s->Color, 1, glm::value_ptr(this->colour));
 		}
 
-		glUniformMatrix4fv(Engine::getEngine().renderer->CurrentShader->modelMatrixLocation, 1, GL_FALSE, glm::value_ptr(glm::mat4(1.0f)));
+		glUniformMatrix4fv(s->modelMatrixLocation, 1, GL_FALSE, glm::value_ptr(glm::mat4(1.0f)));
 		glBindVertexArray(VAOID[0]); // Bind our Vertex Array Object
 
 		glDrawArrays(GL_LINES, 0, (GLsizei)Buffer.size()); // Draw our line
-
+				
 		glBindVertexArray(0); // Unbind our Vertex Array Object
 	}
 

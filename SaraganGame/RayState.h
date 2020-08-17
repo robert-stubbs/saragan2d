@@ -5,7 +5,6 @@
 #include "StateMachine.h"
 
 class Line;
-
 class RayState : public State
 {
 private:
@@ -14,8 +13,6 @@ private:
 
 
     std::vector<Line> hitLines;
-
-
 
     float mousex;
     float mousey;

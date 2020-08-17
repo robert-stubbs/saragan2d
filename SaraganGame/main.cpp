@@ -62,25 +62,39 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT Msg, WPARAM wParam, LPARAM lParam)
 	{
 	case WM_KEYDOWN:
 	{
+		Engine::getEngine().KeyDown(Msg, wParam, lParam);
 	}break;
 
 	case WM_KEYUP:
 	{
+		Engine::getEngine().KeyUp(Msg, wParam, lParam);
 	}break;
 	case WM_LBUTTONDOWN:
 	{
 	} break;
 	case WM_LBUTTONUP:
 	{
+		Engine::getEngine().MouseUp(Msg, wParam, lParam);
 	} break;
 	case WM_RBUTTONDOWN:
 	{
+		Engine::getEngine().MouseDown(Msg, wParam, lParam);
 	} break;
 	case WM_RBUTTONUP:
 	{
+		Engine::getEngine().MouseUp(Msg, wParam, lParam);
 	} break;
 	case WM_MOUSEMOVE:
 	{
+		Engine::getEngine().MouseMove(Msg, wParam, lParam);
+	} break;
+	case WM_SIZE:
+	{
+		//Resize The OpenGL Window
+		if (wglGetCurrentDC() && wglGetCurrentContext())
+		{
+			Engine::getEngine().ResizeWindow(LOWORD(lParam), HIWORD(lParam));
+		}
 	} break;
 	case WM_CLOSE:
 	{
@@ -107,8 +121,6 @@ void PreLoad()
 	cErrorLogger::Log().WriteToConsole("> Creating Engine");
 	pEngine = new Engine();
 
-	raystate = new RayState();
-
 }
 
 cCreateWnd CreateEngineWindow()
@@ -130,11 +142,13 @@ cCreateWnd CreateEngineWindow()
 void Load()
 {
 	cErrorLogger::Log().WriteToConsole("> Loading Engine\n");
-	if (!pEngine->init(hWnd)) {
+	if (!pEngine->init(hWnd, 800, 600)) {
 		cErrorLogger::Log().WriteToConsole("Failed to Initialize OpenGL\n");
 		return;
 	}
 
+
+	raystate = new RayState();
 	raystate->Init();
 	Engine::getEngine().GameFSM->AddState(raystate, true);
 }

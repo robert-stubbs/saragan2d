@@ -7,6 +7,8 @@ class Renderer;
 class SystemManager;
 class StateMachine;
 class EntityManager;
+class Camera;
+class Camera2D;
 
 class Engine
 {
@@ -22,11 +24,14 @@ public:
 	SystemManager* System;
 	EntityManager* EntityMgr;
 
+	Camera* pCam;
+	Camera2D* pCam2D;
+
 	glm::mat4 ProjectionMatrix;
 	glm::mat4 viewMatrix; // Store the view matrix  
 	glm::mat4 modelMatrix; // Store the model matrix  
 
-	bool init(HWND hWnd);
+	bool init(HWND hWnd, int Width = 800, int Height = 600);
 	bool PostInit();
 	bool load();
 	bool Update(float DeltaTime);
