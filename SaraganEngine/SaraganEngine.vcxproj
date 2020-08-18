@@ -464,6 +464,7 @@
     <ClInclude Include="Brain.h" />
     <ClInclude Include="Camera.h" />
     <ClInclude Include="Camera2D.h" />
+    <ClInclude Include="ChildWnd.h" />
     <ClInclude Include="Component.h" />
     <ClInclude Include="Cube.h" />
     <ClInclude Include="Dispatch.h" />
@@ -503,6 +504,8 @@
     <ClInclude Include="cRegWnd.h" />
     <ClInclude Include="standards.h" />
     <ClInclude Include="Texture.h" />
+    <ClInclude Include="Viewport.h" />
+    <ClInclude Include="ViewportManager.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AISystem.cpp" />
@@ -510,6 +513,7 @@
     <ClCompile Include="Brain.cpp" />
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="Camera2D.cpp" />
+    <ClCompile Include="ChildWnd.cpp" />
     <ClCompile Include="Component.cpp" />
     <ClCompile Include="Cube.cpp" />
     <ClCompile Include="Dispatch.cpp" />
@@ -549,6 +553,8 @@
     <ClCompile Include="cRegWnd.cpp" />
     <ClCompile Include="standards.cpp" />
     <ClCompile Include="Texture.cpp" />
+    <ClCompile Include="Viewport.cpp" />
+    <ClCompile Include="ViewportManager.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

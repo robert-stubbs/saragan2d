@@ -17,6 +17,7 @@
 #define DEG2RAD(a)	(PI/180*(a))
 #define RAD2DEG(a)	(180/PI*(a))
 
+
 extern HWND hWnd;
 extern HINSTANCE hInst;
 
