@@ -8,6 +8,11 @@
 #include "System.h"
 #include "Component.h"
 #include "cErrorLogger.h"
+
+#include "ModelSystem.h"
+#include "PositionSystem.h"
+#include "AISystem.h"
+#include "GUISystem.h"
 #include "SoundSystem.h"
 
 SystemManager* SystemManager::SysMgr = nullptr;
@@ -28,22 +33,19 @@ SystemManager::~SystemManager()
 
 void SystemManager::Init()
 {
-	//SysMgr->AddSystem("position");
 	//SysMgr->AddSystem("script");
 	//SysMgr->AddSystem("input");
-	//SysMgr->AddSystem("sound");
 	//SysMgr->AddSystem("render");
 	//SysMgr->AddSystem("collision");
 	//SysMgr->AddSystem("camera");
 	//SysMgr->AddSystem("sprite");
-	//SysMgr->AddSystem("ai");
 
 
-	//AddSystem(new cGUISystem(true));
+	AddSystem(new GUISystem(true));
 	AddSystem(new SoundSystem());
-	//AddSystem(new cAISystem());
-	//AddSystem(new cModelSystem(false, true));
-	//AddSystem(new cPositionSystem());
+	AddSystem(new AISystem());
+	AddSystem(new ModelSystem(false, true));
+	AddSystem(new PositionSystem());
 }
 
 void SystemManager::Update(float dt)

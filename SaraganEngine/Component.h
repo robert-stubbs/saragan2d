@@ -10,6 +10,9 @@ public:
 	std::string m_type;
 	Entity* ent;
 
+	bool isAnim;
+	int renderLevel;
+
 	Component();
 	virtual ~Component();
 

@@ -9,6 +9,8 @@
 #include <gl\glu.h>
 #include <gl\wglew.h>
 
+#include <stdio.h>
+#include <stdlib.h>
 
 #include <iostream>	
 #include <string>
@@ -18,8 +20,13 @@
 #include <random>
 #include <memory>
 
+#include <math.h>
+#include <assert.h>
+#include <algorithm>
+
 #include <fstream>
 #include <sstream>
+#include <istream>
 
 #include <glm/glm.hpp>  
 #include <glm/gtc/matrix_transform.hpp>  
