@@ -34,18 +34,6 @@
     <Filter Include="ThirdParty\glm\include\glm\gtx">
       <UniqueIdentifier>{03718041-EF96-4AA8-D8DC-CF73C4A16F74}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Windows">
-      <UniqueIdentifier>{38378f9c-f21a-4e09-951a-360bd95bc38d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Helpers">
-      <UniqueIdentifier>{0a11d617-23f9-4bd2-a190-43ff94cb4043}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Logging">
-      <UniqueIdentifier>{888f4dad-432a-48a4-8260-01930e97ff7d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="File Management">
-      <UniqueIdentifier>{9170170d-49f6-443d-b81b-a4f2da792763}</UniqueIdentifier>
-    </Filter>
     <Filter Include="States">
       <UniqueIdentifier>{058a2b4e-316e-401b-b860-3b10cc26a51b}</UniqueIdentifier>
     </Filter>
@@ -73,17 +61,11 @@
     <Filter Include="Camera">
       <UniqueIdentifier>{304c07df-b730-4f75-ad2a-1f17d2510ca6}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Font">
-      <UniqueIdentifier>{225bee4f-b274-4d1c-8273-7cd61b2b87e9}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Systems\Systems">
       <UniqueIdentifier>{fe9a9c54-59ed-4f05-ada9-dce57791dd08}</UniqueIdentifier>
     </Filter>
     <Filter Include="Systems\Systems\Sound">
       <UniqueIdentifier>{17f03947-0d82-4661-b3aa-59353f703a32}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Geometry">
-      <UniqueIdentifier>{eb4511a9-dbca-4c87-9b40-b4d66f612962}</UniqueIdentifier>
     </Filter>
     <Filter Include="Entity\GUI">
       <UniqueIdentifier>{c69397c9-f077-427f-9646-0938ea4c556d}</UniqueIdentifier>
@@ -100,23 +82,59 @@
     <Filter Include="Systems\Systems\Model">
       <UniqueIdentifier>{e6e09629-bdfd-44c5-87c2-0537889a3cc7}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Systems\Systems\AI\Brain">
-      <UniqueIdentifier>{438ac16b-4f73-4fa7-a502-c9bb3cbae385}</UniqueIdentifier>
+    <Filter Include="Tools">
+      <UniqueIdentifier>{2cffab07-73f8-4624-8f41-d8a79585a7b9}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Systems\Systems\AI\Behaviour">
-      <UniqueIdentifier>{9f80a6c0-0813-409c-922d-cbc62055746b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Textures">
-      <UniqueIdentifier>{d7dc2c48-bcb5-4018-a57d-7ff9d2dbdcd7}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Noise">
+    <Filter Include="Tools\Noise">
       <UniqueIdentifier>{3b0272df-5438-497b-8f56-251b9f20a319}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Dispatch">
+    <Filter Include="Tools\Logging">
+      <UniqueIdentifier>{888f4dad-432a-48a4-8260-01930e97ff7d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tools\Helpers">
+      <UniqueIdentifier>{0a11d617-23f9-4bd2-a190-43ff94cb4043}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tools\Windows">
+      <UniqueIdentifier>{38378f9c-f21a-4e09-951a-360bd95bc38d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OLD">
+      <UniqueIdentifier>{631d5dc0-7d5a-4ccc-99f6-c377ef3be5bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OLD\Viewport">
+      <UniqueIdentifier>{06e40c34-97b8-4d65-82a3-4aeb3c8f23ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OLD\Textures">
+      <UniqueIdentifier>{d7dc2c48-bcb5-4018-a57d-7ff9d2dbdcd7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OLD\Dispatch">
       <UniqueIdentifier>{c686433a-ef54-47a0-81f5-9fe430b26fbf}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Viewport">
-      <UniqueIdentifier>{06e40c34-97b8-4d65-82a3-4aeb3c8f23ac}</UniqueIdentifier>
+    <Filter Include="OLD\File Management">
+      <UniqueIdentifier>{9170170d-49f6-443d-b81b-a4f2da792763}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Components">
+      <UniqueIdentifier>{15104320-b4f7-4d1f-9aef-ae60b7e70310}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tools\Font">
+      <UniqueIdentifier>{225bee4f-b274-4d1c-8273-7cd61b2b87e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Components\AI">
+      <UniqueIdentifier>{dabda1e5-02a7-436f-8b4b-85d8ac106046}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Components\AI\Behaviour">
+      <UniqueIdentifier>{9f80a6c0-0813-409c-922d-cbc62055746b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Components\Location">
+      <UniqueIdentifier>{25d73690-6bc5-49b3-9720-ad03f192e234}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Components\Sound">
+      <UniqueIdentifier>{9cdac493-372e-461a-bd6d-0a2ddd574e65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Components\Graphics">
+      <UniqueIdentifier>{1e2e4887-fae3-429d-9c7b-3daac217aefd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects\Geometry">
+      <UniqueIdentifier>{eb4511a9-dbca-4c87-9b40-b4d66f612962}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -1221,28 +1239,28 @@
     <ClInclude Include="EngineLibrary.h" />
     <ClInclude Include="EnginePCH.h" />
     <ClInclude Include="cCreateWnd.h">
-      <Filter>Windows</Filter>
+      <Filter>Tools\Windows</Filter>
     </ClInclude>
     <ClInclude Include="cRegWnd.h">
-      <Filter>Windows</Filter>
+      <Filter>Tools\Windows</Filter>
     </ClInclude>
     <ClInclude Include="cCallback.h">
-      <Filter>Helpers</Filter>
+      <Filter>Tools\Helpers</Filter>
     </ClInclude>
     <ClInclude Include="standards.h">
-      <Filter>Helpers</Filter>
+      <Filter>Tools\Helpers</Filter>
     </ClInclude>
     <ClInclude Include="SafeDelete.h">
-      <Filter>Helpers</Filter>
+      <Filter>Tools\Helpers</Filter>
     </ClInclude>
     <ClInclude Include="cErrorLogger.h">
-      <Filter>Logging</Filter>
+      <Filter>Tools\Logging</Filter>
     </ClInclude>
     <ClInclude Include="cFileSystem.h">
-      <Filter>File Management</Filter>
+      <Filter>OLD\File Management</Filter>
     </ClInclude>
     <ClInclude Include="cIni.h">
-      <Filter>File Management</Filter>
+      <Filter>OLD\File Management</Filter>
     </ClInclude>
     <ClInclude Include="State.h">
       <Filter>States</Filter>
@@ -1255,9 +1273,6 @@
     </ClInclude>
     <ClInclude Include="SystemManager.h">
       <Filter>Systems</Filter>
-    </ClInclude>
-    <ClInclude Include="Component.h">
-      <Filter>Systems\Base</Filter>
     </ClInclude>
     <ClInclude Include="Engine.h" />
     <ClInclude Include="Renderer.h">
@@ -1288,30 +1303,21 @@
       <Filter>Camera</Filter>
     </ClInclude>
     <ClInclude Include="Font.h">
-      <Filter>Font</Filter>
+      <Filter>Tools\Font</Filter>
     </ClInclude>
     <ClInclude Include="SoundSystem.h">
       <Filter>Systems\Systems\Sound</Filter>
     </ClInclude>
-    <ClInclude Include="SoundItem.h">
-      <Filter>Systems\Systems\Sound</Filter>
-    </ClInclude>
     <ClInclude Include="Line.h">
-      <Filter>Geometry</Filter>
+      <Filter>Objects\Geometry</Filter>
     </ClInclude>
     <ClInclude Include="Square.h">
-      <Filter>Geometry</Filter>
-    </ClInclude>
-    <ClInclude Include="Text.h">
-      <Filter>Font</Filter>
+      <Filter>Objects\Geometry</Filter>
     </ClInclude>
     <ClInclude Include="LabelEntity.h">
       <Filter>Entity\GUI</Filter>
     </ClInclude>
     <ClInclude Include="PositionSystem.h">
-      <Filter>Systems\Systems\Position</Filter>
-    </ClInclude>
-    <ClInclude Include="Position.h">
       <Filter>Systems\Systems\Position</Filter>
     </ClInclude>
     <ClInclude Include="ModelSystem.h">
@@ -1320,60 +1326,72 @@
     <ClInclude Include="AISystem.h">
       <Filter>Systems\Systems\AI</Filter>
     </ClInclude>
-    <ClInclude Include="Brain.h">
-      <Filter>Systems\Systems\AI\Brain</Filter>
-    </ClInclude>
-    <ClInclude Include="Behaviour.h">
-      <Filter>Systems\Systems\AI\Behaviour</Filter>
-    </ClInclude>
     <ClInclude Include="GUISystem.h">
       <Filter>Systems\Systems\GUI</Filter>
     </ClInclude>
     <ClInclude Include="lodepng.h">
-      <Filter>Textures</Filter>
+      <Filter>OLD\Textures</Filter>
     </ClInclude>
     <ClInclude Include="Texture.h">
-      <Filter>Textures</Filter>
+      <Filter>OLD\Textures</Filter>
     </ClInclude>
     <ClInclude Include="FastNoise.h">
-      <Filter>Noise</Filter>
+      <Filter>Tools\Noise</Filter>
     </ClInclude>
     <ClInclude Include="Cube.h">
-      <Filter>Geometry</Filter>
+      <Filter>Objects\Geometry</Filter>
     </ClInclude>
     <ClInclude Include="Dispatch.h">
-      <Filter>Dispatch</Filter>
+      <Filter>OLD\Dispatch</Filter>
     </ClInclude>
     <ClInclude Include="Viewport.h">
-      <Filter>Viewport</Filter>
+      <Filter>OLD\Viewport</Filter>
     </ClInclude>
     <ClInclude Include="ViewportManager.h">
-      <Filter>Viewport</Filter>
+      <Filter>OLD\Viewport</Filter>
     </ClInclude>
     <ClInclude Include="ChildWnd.h">
-      <Filter>Windows</Filter>
+      <Filter>Tools\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="Brain.h">
+      <Filter>Components\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="Behaviour.h">
+      <Filter>Components\AI\Behaviour</Filter>
+    </ClInclude>
+    <ClInclude Include="Position.h">
+      <Filter>Components\Location</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundItem.h">
+      <Filter>Components\Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="Text.h">
+      <Filter>Components\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Component.h">
+      <Filter>Components</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="EngineLibrary.cpp" />
     <ClCompile Include="EnginePCH.cpp" />
     <ClCompile Include="cCreateWnd.cpp">
-      <Filter>Windows</Filter>
+      <Filter>Tools\Windows</Filter>
     </ClCompile>
     <ClCompile Include="cRegWnd.cpp">
-      <Filter>Windows</Filter>
+      <Filter>Tools\Windows</Filter>
     </ClCompile>
     <ClCompile Include="standards.cpp">
-      <Filter>Helpers</Filter>
+      <Filter>Tools\Helpers</Filter>
     </ClCompile>
     <ClCompile Include="cErrorLogger.cpp">
-      <Filter>Logging</Filter>
+      <Filter>Tools\Logging</Filter>
     </ClCompile>
     <ClCompile Include="cFileSystem.cpp">
-      <Filter>File Management</Filter>
+      <Filter>OLD\File Management</Filter>
     </ClCompile>
     <ClCompile Include="cIni.cpp">
-      <Filter>File Management</Filter>
+      <Filter>OLD\File Management</Filter>
     </ClCompile>
     <ClCompile Include="State.cpp">
       <Filter>States</Filter>
@@ -1386,9 +1404,6 @@
     </ClCompile>
     <ClCompile Include="SystemManager.cpp">
       <Filter>Systems</Filter>
-    </ClCompile>
-    <ClCompile Include="Component.cpp">
-      <Filter>Systems\Base</Filter>
     </ClCompile>
     <ClCompile Include="Engine.cpp" />
     <ClCompile Include="Renderer.cpp">
@@ -1419,30 +1434,21 @@
       <Filter>Camera</Filter>
     </ClCompile>
     <ClCompile Include="Font.cpp">
-      <Filter>Font</Filter>
-    </ClCompile>
-    <ClCompile Include="SoundItem.cpp">
-      <Filter>Systems\Systems\Sound</Filter>
+      <Filter>Tools\Font</Filter>
     </ClCompile>
     <ClCompile Include="SoundSystem.cpp">
       <Filter>Systems\Systems\Sound</Filter>
     </ClCompile>
     <ClCompile Include="Line.cpp">
-      <Filter>Geometry</Filter>
+      <Filter>Objects\Geometry</Filter>
     </ClCompile>
     <ClCompile Include="Square.cpp">
-      <Filter>Geometry</Filter>
-    </ClCompile>
-    <ClCompile Include="Text.cpp">
-      <Filter>Font</Filter>
+      <Filter>Objects\Geometry</Filter>
     </ClCompile>
     <ClCompile Include="LabelEntity.cpp">
       <Filter>Entity\GUI</Filter>
     </ClCompile>
     <ClCompile Include="PositionSystem.cpp">
-      <Filter>Systems\Systems\Position</Filter>
-    </ClCompile>
-    <ClCompile Include="Position.cpp">
       <Filter>Systems\Systems\Position</Filter>
     </ClCompile>
     <ClCompile Include="ModelSystem.cpp">
@@ -1451,38 +1457,50 @@
     <ClCompile Include="AISystem.cpp">
       <Filter>Systems\Systems\AI</Filter>
     </ClCompile>
-    <ClCompile Include="Brain.cpp">
-      <Filter>Systems\Systems\AI\Brain</Filter>
-    </ClCompile>
-    <ClCompile Include="Behaviour.cpp">
-      <Filter>Systems\Systems\AI\Behaviour</Filter>
-    </ClCompile>
     <ClCompile Include="GUISystem.cpp">
       <Filter>Systems\Systems\GUI</Filter>
     </ClCompile>
     <ClCompile Include="lodepng.cpp">
-      <Filter>Textures</Filter>
+      <Filter>OLD\Textures</Filter>
     </ClCompile>
     <ClCompile Include="Texture.cpp">
-      <Filter>Textures</Filter>
+      <Filter>OLD\Textures</Filter>
     </ClCompile>
     <ClCompile Include="FastNoise.cpp">
-      <Filter>Noise</Filter>
+      <Filter>Tools\Noise</Filter>
     </ClCompile>
     <ClCompile Include="Cube.cpp">
-      <Filter>Geometry</Filter>
+      <Filter>Objects\Geometry</Filter>
     </ClCompile>
     <ClCompile Include="Dispatch.cpp">
-      <Filter>Dispatch</Filter>
+      <Filter>OLD\Dispatch</Filter>
     </ClCompile>
     <ClCompile Include="Viewport.cpp">
-      <Filter>Viewport</Filter>
+      <Filter>OLD\Viewport</Filter>
     </ClCompile>
     <ClCompile Include="ViewportManager.cpp">
-      <Filter>Viewport</Filter>
+      <Filter>OLD\Viewport</Filter>
     </ClCompile>
     <ClCompile Include="ChildWnd.cpp">
-      <Filter>Windows</Filter>
+      <Filter>Tools\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="Brain.cpp">
+      <Filter>Components\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="Behaviour.cpp">
+      <Filter>Components\AI\Behaviour</Filter>
+    </ClCompile>
+    <ClCompile Include="Position.cpp">
+      <Filter>Components\Location</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundItem.cpp">
+      <Filter>Components\Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="Text.cpp">
+      <Filter>Components\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Component.cpp">
+      <Filter>Components</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
