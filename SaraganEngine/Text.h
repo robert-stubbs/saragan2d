@@ -43,7 +43,7 @@ public:
 	virtual void Render();
 	virtual void RenderAnim() {};
 	virtual void RenderUI() {};
-	//virtual bool handleMessage(SystemMessage msg);
+	virtual bool handleMessage(SystemMessage msg);
 
 	virtual void CleanUp();
 };

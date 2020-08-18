@@ -180,28 +180,28 @@ void Brain::Render()
 	current->Render();
 }
 
-//bool Brain::handleMessage(SystemMessage msg)
-//{
-//	if (currentState.empty())
-//	{
-//		return false;
-//	}
-//
-//	bool handled = false;
-//
-//	for (size_t i = 0; i < Passives.size(); i++)
-//	{
-//		cBehaviour* passive = getPassive(Passives.at(i));
-//		passive->Ent = ent;
-//		passive->handleMessage(msg);
-//	}
-//
-//	cBehaviour* current = getState(currentState);
-//	current->Ent = ent;
-//	handled = current->handleMessage(msg);
-//
-//	return handled;
-//}
+bool Brain::handleMessage(SystemMessage msg)
+{
+	if (currentState.empty())
+	{
+		return false;
+	}
+
+	bool handled = false;
+
+	for (size_t i = 0; i < Passives.size(); i++)
+	{
+		Behaviour* passive = getPassive(Passives.at(i));
+		passive->Ent = ent;
+		passive->handleMessage(msg);
+	}
+
+	Behaviour* current = getState(currentState);
+	current->Ent = ent;
+	handled = current->handleMessage(msg);
+
+	return handled;
+}
 
 void Brain::CleanUp()
 {

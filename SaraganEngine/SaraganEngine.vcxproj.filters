@@ -112,6 +112,9 @@
     <Filter Include="Noise">
       <UniqueIdentifier>{3b0272df-5438-497b-8f56-251b9f20a319}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Dispatch">
+      <UniqueIdentifier>{c686433a-ef54-47a0-81f5-9fe430b26fbf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\ThirdParty\glew\include\GL\eglew.h">
@@ -1335,6 +1338,9 @@
     <ClInclude Include="Cube.h">
       <Filter>Geometry</Filter>
     </ClInclude>
+    <ClInclude Include="Dispatch.h">
+      <Filter>Dispatch</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="EngineLibrary.cpp" />
@@ -1453,6 +1459,9 @@
     </ClCompile>
     <ClCompile Include="Cube.cpp">
       <Filter>Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Dispatch.cpp">
+      <Filter>Dispatch</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

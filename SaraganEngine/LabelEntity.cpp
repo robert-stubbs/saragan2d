@@ -5,6 +5,8 @@
 #include "SystemManager.h"
 #include "Text.h"
 
+#include "Dispatch.h"
+
 
 LabelEntity::LabelEntity()
 {
@@ -38,25 +40,25 @@ void LabelEntity::UpdateLabel(std::string text)
 		textItem->changeText(text);
 	}
 }
-//
-//bool LabelEntity::handleMessage(SystemMessage msg)
-//{
-//	if (msg.MessageLevel == ENTITY_COMPONENT)
-//	{
-//		for (iter = m_components.begin(); iter != m_components.end(); iter++)
-//		{
-//			(*iter)->handleMessage(msg);
-//		}
-//		return true;
-//	}
-//
-//	//switch (msg.MessageType)
-//	//{
-//	//	default:
-//	//	{
-//	//	}break;
-//
-//	//}
-//
-//	return false;
-//}
+
+bool LabelEntity::handleMessage(SystemMessage msg)
+{
+	if (msg.MessageLevel == ENTITY_COMPONENT)
+	{
+		for (iter = m_components.begin(); iter != m_components.end(); iter++)
+		{
+			(*iter)->handleMessage(msg);
+		}
+		return true;
+	}
+
+	//switch (msg.MessageType)
+	//{
+	//	default:
+	//	{
+	//	}break;
+
+	//}
+
+	return false;
+}

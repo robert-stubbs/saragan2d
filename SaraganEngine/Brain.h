@@ -36,7 +36,7 @@ public:
 	virtual void Update(float dt);
 	virtual void Render();
 	virtual void RenderAnim() {};
-	//virtual bool handleMessage(SystemMessage msg);
+	virtual bool handleMessage(SystemMessage msg);
 
 	virtual void CleanUp();
 

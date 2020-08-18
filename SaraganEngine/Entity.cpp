@@ -2,7 +2,7 @@
 #include "Entity.h"
 
 #include "Component.h"
-
+#include "Dispatch.h"
 
 Entity::Entity()
 {

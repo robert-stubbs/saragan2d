@@ -25,7 +25,7 @@ public:
 	virtual void Update(float dt);
 	virtual void Render() {};
 	virtual void RenderAnim() {};
-	//virtual bool handleMessage(SystemMessage msg);
+	virtual bool handleMessage(SystemMessage msg);
 
 	virtual position getPosition();
 	virtual glm::mat4 getPositionMat();

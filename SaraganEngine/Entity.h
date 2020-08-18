@@ -1,6 +1,8 @@
 #ifndef _ENTITY_H_
 #define _ENTITY_H_
 
+#include "Dispatch.h"
+
 
 class Component;
 
@@ -41,7 +43,7 @@ public:
 	virtual Component* getComponent(std::string CompName);
 	virtual void addComponent(Component* comp);
 
-	//virtual bool handleMessage(SystemMessage msg) = 0;
+	virtual bool handleMessage(SystemMessage msg) = 0;
 };
 
 #endif

@@ -94,38 +94,38 @@ void SoundItem::Render()
 
 }
 
-//bool SoundItem::handleMessage(SystemMessage msg)
-//{
-//	if (msg.MessageLevel == ENTITY_COMPONENT)
-//	{
-//		// check message name
-//		if (msg.MessageName == "PLAY")
-//		{
-//			if (m_soundHandle == msg.stringValues.at("sound"))
-//			{
-//				//cPosition* pos = ent->getPosition();
-//				//float posit[3] = { 0.0, 0.0, 0.0 };
-//				//soundBank->SetSource(m_soundHandle, posit, posit, false);
-//
-//				//if (pWorld->currentPlayer->hasCamera)
-//				//{
-//				//	cCameraItem* cam = pWorld->currentPlayer->getCamera();
-//				//	cCameraBase* pCam = &Cameras[cam->m_cameraName];
-//				//	soundBank->SetListeners(pCam->Position, pCam->LookAt, pCam->Up);
-//				//}
-//				//else {
-//				//	cCameraBase* pCam = &Cameras["Main"];
-//				//	soundBank->SetListeners(pCam->Position, pCam->LookAt, pCam->Up);
-//				//}
-//
-//				//soundBank->PlaySoundClip(m_soundHandle);
-//				return true;
-//			}
-//		}
-//	}
-//
-//	return false;
-//}
+bool SoundItem::handleMessage(SystemMessage msg)
+{
+	if (msg.MessageLevel == ENTITY_COMPONENT)
+	{
+		// check message name
+		if (msg.MessageName == "PLAY")
+		{
+			if (m_soundHandle == msg.stringValues.at("sound"))
+			{
+				//cPosition* pos = ent->getPosition();
+				//float posit[3] = { 0.0, 0.0, 0.0 };
+				//soundBank->SetSource(m_soundHandle, posit, posit, false);
+
+				//if (pWorld->currentPlayer->hasCamera)
+				//{
+				//	cCameraItem* cam = pWorld->currentPlayer->getCamera();
+				//	cCameraBase* pCam = &Cameras[cam->m_cameraName];
+				//	soundBank->SetListeners(pCam->Position, pCam->LookAt, pCam->Up);
+				//}
+				//else {
+				//	cCameraBase* pCam = &Cameras["Main"];
+				//	soundBank->SetListeners(pCam->Position, pCam->LookAt, pCam->Up);
+				//}
+
+				//soundBank->PlaySoundClip(m_soundHandle);
+				return true;
+			}
+		}
+	}
+
+	return false;
+}
 
 void SoundItem::CleanUp()
 {

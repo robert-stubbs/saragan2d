@@ -44,25 +44,25 @@ void Position::setPosition(float m_x, float m_y, float m_z)
 	z = m_z;
 }
 
-//bool Position::handleMessage(SystemMessage msg)
-//{
-//	switch (msg.MessageType)
-//	{
-//	case 0:
-//	{
-//
-//
-//	} break;
-//	default:
-//	{
-//
-//
-//	}break;
-//
-//	}
-//
-//	return false;
-//}
+bool Position::handleMessage(SystemMessage msg)
+{
+	switch (msg.MessageType)
+	{
+	case 0:
+	{
+
+
+	} break;
+	default:
+	{
+
+
+	}break;
+
+	}
+
+	return false;
+}
 
 void Position::CleanUp()
 {

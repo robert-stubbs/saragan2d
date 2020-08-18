@@ -19,6 +19,7 @@
 #include <vector>
 #include <random>
 #include <memory>
+#include <deque>
 
 #include <math.h>
 #include <assert.h>

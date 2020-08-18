@@ -7,6 +7,7 @@
 #include "Shader.h"
 #include "SafeDelete.h"
 #include "cErrorLogger.h"
+#include "Dispatch.h"
 
 
 Text::Text()
@@ -158,6 +159,11 @@ void Text::Render()
 		glBindVertexArray(0);
 		glUniform1i(Engine::getEngine().renderer->CurrentShader->isText, 0);
 	}
+}
+
+bool Text::handleMessage(SystemMessage msg)
+{
+	return false;
 }
 
 void Text::CleanUp()

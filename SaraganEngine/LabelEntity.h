@@ -15,7 +15,7 @@ public:
 	virtual void InitWithPositionAndText(float x, float y, std::string text);
 	virtual void UpdateLabel(std::string text);
 
-	//virtual bool handleMessage(SystemMessage msg);
+	virtual bool handleMessage(SystemMessage msg);
 };
 
 #endif
