@@ -2,40 +2,46 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="ThirdParty">
-      <UniqueIdentifier>{da1a6304-a6f0-4268-b5c5-a6ccac981646}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ThirdParty\glm">
-      <UniqueIdentifier>{6577880B-D180-887C-5AFC-9E7CC604947C}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ThirdParty\glm\include">
-      <UniqueIdentifier>{D833B5DB-44E9-2DD1-CDDD-27A8399224D5}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ThirdParty\glm\include\glm">
-      <UniqueIdentifier>{27EA7658-9375-E41C-9C86-67110891401D}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ThirdParty\glm\include\glm\detail">
-      <UniqueIdentifier>{0910EDB4-F509-1607-DE76-AC17CA0F7C73}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ThirdParty\glm\include\glm\ext">
-      <UniqueIdentifier>{0729B930-738A-963E-FCF7-DCF06858CDFD}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ThirdParty\glm\include\glm\gtc">
-      <UniqueIdentifier>{F430B930-6092-963E-E9FF-DCF05560CDFD}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ThirdParty\glm\include\glm\gtx">
-      <UniqueIdentifier>{0931B930-7592-963E-FEFF-DCF06A60CDFD}</UniqueIdentifier>
+      <UniqueIdentifier>{107145F9-FC28-8746-6530-60A251072237}</UniqueIdentifier>
     </Filter>
     <Filter Include="ThirdParty\glew">
-      <UniqueIdentifier>{7463977C-609A-980D-0987-7E10F59C140F}</UniqueIdentifier>
+      <UniqueIdentifier>{AE6E334C-1AFA-A010-230B-24058F15FD10}</UniqueIdentifier>
     </Filter>
     <Filter Include="ThirdParty\glew\include">
-      <UniqueIdentifier>{E7BE3A06-D321-CAAA-7CA7-026168E9952D}</UniqueIdentifier>
+      <UniqueIdentifier>{2164E36E-8D9B-2B06-96A5-8F29025C52FF}</UniqueIdentifier>
     </Filter>
     <Filter Include="ThirdParty\glew\include\GL">
-      <UniqueIdentifier>{E97AA97C-5506-1741-5E17-9A35CA217341}</UniqueIdentifier>
+      <UniqueIdentifier>{E3CDEB5E-CFDD-972F-3897-FC4D24C686C8}</UniqueIdentifier>
     </Filter>
     <Filter Include="ThirdParty\glfw">
-      <UniqueIdentifier>{a13acea0-8052-4c83-81c2-45638961e52c}</UniqueIdentifier>
+      <UniqueIdentifier>{CF6E334C-3BFA-A010-440B-2405B015FD10}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ThirdParty\glfw\include">
+      <UniqueIdentifier>{42F5ED72-AE2C-360A-B736-9A2D23ED5C03}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ThirdParty\glfw\include\GLFW">
+      <UniqueIdentifier>{C1495E6C-AD04-4E18-56BC-C662425698A8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ThirdParty\glm">
+      <UniqueIdentifier>{5F03D311-4BD1-C617-3465-373E20D2A27C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ThirdParty\glm\include">
+      <UniqueIdentifier>{D219E1DE-BE13-0A31-A780-A0419319709D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ThirdParty\glm\include\glm">
+      <UniqueIdentifier>{213DB93A-0D4D-650B-7606-CA29623554A4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ThirdParty\glm\include\glm\detail">
+      <UniqueIdentifier>{C3056907-2F74-BE86-785D-7986E40AB422}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ThirdParty\glm\include\glm\ext">
+      <UniqueIdentifier>{01698041-ED8E-4AA8-D6D4-CF73C2996F74}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ThirdParty\glm\include\glm\gtc">
+      <UniqueIdentifier>{EE708041-DA96-4AA8-C3DC-CF73AFA16F74}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ThirdParty\glm\include\glm\gtx">
+      <UniqueIdentifier>{03718041-EF96-4AA8-D8DC-CF73C4A16F74}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -50,6 +56,12 @@
     </ClInclude>
     <ClInclude Include="..\ThirdParty\glew\include\GL\wglew.h">
       <Filter>ThirdParty\glew\include\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\glfw\include\GLFW\glfw3.h">
+      <Filter>ThirdParty\glfw\include\GLFW</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\glfw\include\GLFW\glfw3native.h">
+      <Filter>ThirdParty\glfw\include\GLFW</Filter>
     </ClInclude>
     <ClInclude Include="..\ThirdParty\glm\include\glm\common.hpp">
       <Filter>ThirdParty\glm\include\glm</Filter>
@@ -1138,12 +1150,6 @@
       <Filter>ThirdParty\glm\include\glm</Filter>
     </ClInclude>
     <ClInclude Include="GamePCH.h" />
-    <ClInclude Include="..\ThirdParty\glfw\include\GLFW\glfw3native.h">
-      <Filter>ThirdParty\glfw</Filter>
-    </ClInclude>
-    <ClInclude Include="..\ThirdParty\glfw\include\GLFW\glfw3.h">
-      <Filter>ThirdParty\glfw</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GamePCH.cpp" />
