@@ -27,10 +27,20 @@ namespace GameEngine {
 			virtual void GenerateBuffer(unsigned int& VBO, std::vector<vert>& verts);
 			virtual void ReGenerateBuffer(unsigned int& VBO, std::vector<vert>& verts);
 			virtual bool UpdateBuffer(unsigned int& VBO, std::vector<vert>& verts);
+
+			virtual void BindVertexBuffer(unsigned int& VBO);
 			virtual void UnbindVertexBuffer();
 
 			virtual void GenerateIndexBuffer(unsigned& IBO, std::vector<int>& VertIndex);
+
+			virtual void BindIndexBuffer(unsigned int& IBO);
 			virtual void UnbindIndexBuffer();
+
+			// Buffer Structure Functions
+			virtual void VertexStructurePointerF(int location, int size, bool normalized, int stride, const void* pointer = 0);
+
+			// Binding uniforms to shader 
+			virtual void UniformMat4(int location = 0, glm::mat4& transform = glm::mat4(1.0f), int size = 1, bool transpose = false);
 	};
 }
 

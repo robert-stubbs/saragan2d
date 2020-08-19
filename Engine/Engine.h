@@ -10,13 +10,12 @@ namespace GameEngine {
 		private:
 			Engine() {};
 
-			std::string asset_dir;
-
 			Renderer renderer;
 		public:
 			~Engine();
 
 			bool fullscreen = false;
+			std::string asset_dir;
 
 			GLFWwindow* window;
 			std::string WindowName = "";
@@ -37,7 +36,14 @@ namespace GameEngine {
 			void Render();
 			void Render3D();
 			void RenderOrth();
+			void RenderEnd();
 			bool Cleanup();
+
+
+
+			static RenderEngineBase& getRenderer() {
+				return get().renderer.RenderEngine();
+			}
 
 			static Engine& get() {
 				//instantiate the engine

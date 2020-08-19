@@ -53,14 +53,14 @@ namespace GameEngine {
 	}
 
 	bool Engine::Init()
-	{
-		renderer.init();
+	{		
+		getRenderer().Init();
 		return true;
 	}
 
 	bool Engine::PostInit()
 	{
-		renderer.PostInit();
+		getRenderer().PostInit();
 		return true;
 	}
 
@@ -85,16 +85,10 @@ namespace GameEngine {
 
 	void Engine::Render()
 	{
-		renderer.RenderStart();
+		getRenderer().RenderStart();
 
 		Render3D();
 		RenderOrth();
-
-		// Swap front and back buffers
-		glfwSwapBuffers(window);
-
-		// Poll for and process events
-		glfwPollEvents();
 	}
 
 	void Engine::Render3D()
@@ -107,9 +101,18 @@ namespace GameEngine {
 
 	}
 
+	void Engine::RenderEnd()
+	{
+		// Swap front and back buffers
+		glfwSwapBuffers(window);
+
+		// Poll for and process events
+		glfwPollEvents();
+	}
+
 	bool Engine::Cleanup()
 	{
-		renderer.Cleanup();
+		getRenderer().Cleanup();
 
 		glfwTerminate();
 		return true;

@@ -6,20 +6,16 @@
 
 using namespace GameEngine;
 
-//
-//Shader* shader; // Our GLSL shader 
-//
-//
-//typedef struct
-//{
-//    float  pos[4];
-//    float  Text[2];
-//} vert;
-//
-//std::vector<vert> verts = std::vector<vert>();
-//
-//unsigned int		VAIO;
-//unsigned int        VBO;
+// Time Step Videos
+// https://stackoverflow.com/questions/20390028/c-using-glfwgettime-for-a-fixed-time-step
+// https://www.youtube.com/watch?v=rh31YOZh5ZM&t
+static double limitFPS = 1.0 / 60.0;
+
+Shader* shader; // Our GLSL shader 
+
+std::vector<vert> verts = std::vector<vert>();
+unsigned int        VBO;
+unsigned int        VAIO;
 
 void PreLoad();
 void Load();
@@ -34,11 +30,34 @@ int main(void)
     Load();
     PostLoad();
 
+    double lastTime = glfwGetTime(), timer = lastTime;
+    double deltaTime = 0, nowTime = 0;
+    int frames = 0, updates = 0;
+
     /* Loop until the user closes the window */
     while (!glfwWindowShouldClose(Engine::get().window))
     {
-        Update(0);
+        // - Measure time
+        nowTime = glfwGetTime();
+        deltaTime += (nowTime - lastTime) / limitFPS;
+        lastTime = nowTime;
+
+        // - Only update at 60 frames / s
+        while (deltaTime >= 1.0) {
+            Update((float)deltaTime);
+            updates++;
+            deltaTime--;
+        }
+                
         Render();
+        frames++;
+
+        // - Reset after one second
+        if (glfwGetTime() - timer > 1.0) {
+            timer++;
+            std::cout << "FPS: " << frames << " Updates:" << updates << std::endl;
+            updates = 0, frames = 0;
+        }
 
     }
 
@@ -72,33 +91,22 @@ void PostLoad()
 
     // After Engine Post Initialisation should be done here
     
-    //shader = new OpenGLShader();
-    //shader->init(asset_dir + "Shaders/VertexShader.glsl", asset_dir + "Shaders/FragmentShader.glsl");
+    shader = new OpenGLShader();
+    shader->init(Engine::get().asset_dir + "Shaders/VertexShader.glsl", Engine::get().asset_dir + "Shaders/FragmentShader.glsl");
 
-    //shader->bind();
+    shader->bind();
 
-    //std::cout << glGetString(GL_VERSION) << std::endl;
-
-    //verts.push_back({ {-0.5f, -0.5f,0.0f,1.0f},{-99.0f,-99.0f} });
-    //verts.push_back({ {0.0f, 0.5f,0.0f,1.0f},{-99.0f,-99.0f} });
-    //verts.push_back({ {0.5f, -0.5f,0.0f,1.0f},{-99.0f,-99.0f} });
+    verts.push_back({ {-0.5f, -0.5f,0.0f,1.0f},{-99.0f,-99.0f} });
+    verts.push_back({ {0.0f, 0.5f,0.0f,1.0f},{-99.0f,-99.0f} });
+    verts.push_back({ {0.5f, -0.5f,0.0f,1.0f},{-99.0f,-99.0f} });
 
 
-    //glGenVertexArrays(1, &VAIO);
-    //glBindVertexArray(VAIO);
+    Engine::getRenderer().GenerateBuffer(VBO, verts);
+    Engine::getRenderer().VertexStructurePointerF(shader->Position, 4, GL_FALSE, sizeof(vert), 0);
+    Engine::getRenderer().VertexStructurePointerF(shader->Texture, 2, GL_TRUE, sizeof(vert), (GLvoid*)offsetof(vert, Text));
 
-    //glGenBuffers(1, &VBO);
-    //glBindBuffer(GL_ARRAY_BUFFER, VBO);
-    //glBufferData(GL_ARRAY_BUFFER, sizeof(vert) * verts.size(), &verts[0], GL_STATIC_DRAW);
+    Engine::getRenderer().UnbindVertexBuffer();
 
-    //glVertexAttribPointer(shader->Position, 4, GL_FLOAT, GL_FALSE, sizeof(vert), 0);
-    //glVertexAttribPointer(shader->Texture, 2, GL_FLOAT, GL_TRUE, sizeof(vert), (GLvoid*)offsetof(vert, Text));
-
-    //glEnableVertexAttribArray(shader->Position);
-    //glEnableVertexAttribArray(shader->Texture);
-
-    //glBindBuffer(GL_ARRAY_BUFFER, 0);
-    //glBindVertexArray(0);
 }
 
 void Update(float dt)
@@ -110,27 +118,28 @@ void Update(float dt)
 
 void Render()
 {
+    Engine::get().Render();
     // put this in its own function in case you want to do 
     // your own renders outside of the engine
-    Engine::get().Render();
 
-    //glUniform1i(shader->isText, 0);
+    glUniform1i(shader->isText, 0);
 
     //glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
     //glEnable(GL_BLEND);
 
-    //glBindVertexArray(VAIO); // Bind our Vertex Array Object
-    //glm::vec4 colour = glm::vec4(0.0f, 1.0f, 0.0f, 1.0f);
+    Engine::getRenderer().BindVertexBuffer(VBO);
 
-    //glUniform4fv(shader->Color, 1, glm::value_ptr(colour));
+    glm::vec4 colour = glm::vec4(0.0f, 1.0f, 0.0f, 1.0f);
 
-    //glDrawArrays(GL_TRIANGLES, 0, (GLsizei)verts.size()); // Draw our line
-    //glDrawArrays(GL_TRIANGLES, 0, (GLsizei)verts.size()); // Draw our line
+    glUniform4fv(shader->Color, 1, glm::value_ptr(colour));
 
-    //glBindVertexArray(0); // Unbind our Vertex Array Object
+    glDrawArrays(GL_TRIANGLES, 0, (GLsizei)verts.size()); // Draw our line
+
+    Engine::getRenderer().UnbindVertexBuffer();
 
     //glDisable(GL_BLEND);
 
+    Engine::get().RenderEnd();
 }
 
 void CleanUp()

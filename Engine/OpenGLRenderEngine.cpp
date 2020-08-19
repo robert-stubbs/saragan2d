@@ -149,6 +149,11 @@ namespace GameEngine {
 		return false;
 	}
 
+	void OpenGLRenderEngine::BindVertexBuffer(unsigned int& VBO)
+	{
+		glBindBuffer(GL_ARRAY_BUFFER, VBO);
+	}
+
 	void OpenGLRenderEngine::UnbindVertexBuffer()
 	{
 		glBindBuffer(GL_ARRAY_BUFFER, 0);
@@ -159,12 +164,26 @@ namespace GameEngine {
 		glGenBuffers(1, &IBO);
 		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, IBO);
 		glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(int) * VertIndex.size(), &VertIndex[0], GL_STATIC_DRAW);
+	}
 
-
+	void OpenGLRenderEngine::BindIndexBuffer(unsigned int& IBO)
+	{
+		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, IBO);
 	}
 		
 	void OpenGLRenderEngine::UnbindIndexBuffer()
 	{
 		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
+	}
+
+	void OpenGLRenderEngine::VertexStructurePointerF(int location, int size, bool normalized, int stride, const void* pointer)
+	{
+		glVertexAttribPointer(location, size, GL_FLOAT, normalized, stride, pointer);
+		glEnableVertexAttribArray(location);
+	}
+
+	void OpenGLRenderEngine::UniformMat4(int location, glm::mat4& transform, int size, bool transpose)
+	{
+		glUniformMatrix4fv(location, size, transpose, glm::value_ptr(transform));
 	}
 }
