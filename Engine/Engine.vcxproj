@@ -11,10 +11,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{D87EC9BF-443F-45F6-0D7A-8E7379F989D2}</ProjectGuid>
+    <ProjectGuid>{DBC7D3B0-C769-FE86-B024-12DB9C6585D7}</ProjectGuid>
     <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>SaraganEngine</RootNamespace>
+    <RootNamespace>Engine</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -41,15 +41,15 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>..\bin\Debug-windows-x86_64\SaraganEngine\</OutDir>
-    <IntDir>..\obj\Debug-windows-x86_64\SaraganEngine\</IntDir>
-    <TargetName>SaraganEngine</TargetName>
+    <OutDir>..\bin\Debug-windows-x86_64\Engine\</OutDir>
+    <IntDir>..\obj\Debug-windows-x86_64\Engine\</IntDir>
+    <TargetName>Engine</TargetName>
     <TargetExt>.lib</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <OutDir>..\bin\Release-windows-x86_64\SaraganEngine\</OutDir>
-    <IntDir>..\obj\Release-windows-x86_64\SaraganEngine\</IntDir>
-    <TargetName>SaraganEngine</TargetName>
+    <OutDir>..\bin\Release-windows-x86_64\Engine\</OutDir>
+    <IntDir>..\obj\Release-windows-x86_64\Engine\</IntDir>
+    <TargetName>Engine</TargetName>
     <TargetExt>.lib</TargetExt>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -459,102 +459,12 @@
     <ClInclude Include="..\ThirdParty\glm\include\glm\vec3.hpp" />
     <ClInclude Include="..\ThirdParty\glm\include\glm\vec4.hpp" />
     <ClInclude Include="..\ThirdParty\glm\include\glm\vector_relational.hpp" />
-    <ClInclude Include="AISystem.h" />
-    <ClInclude Include="Behaviour.h" />
-    <ClInclude Include="Brain.h" />
-    <ClInclude Include="Camera.h" />
-    <ClInclude Include="Camera2D.h" />
-    <ClInclude Include="ChildWnd.h" />
-    <ClInclude Include="Component.h" />
-    <ClInclude Include="Cube.h" />
-    <ClInclude Include="Dispatch.h" />
-    <ClInclude Include="Engine.h" />
-    <ClInclude Include="EngineLibrary.h" />
     <ClInclude Include="EnginePCH.h" />
-    <ClInclude Include="Entity.h" />
-    <ClInclude Include="EntityManager.h" />
-    <ClInclude Include="FastNoise.h" />
-    <ClInclude Include="Font.h" />
-    <ClInclude Include="GUISystem.h" />
-    <ClInclude Include="LabelEntity.h" />
-    <ClInclude Include="Line.h" />
-    <ClInclude Include="ModelSystem.h" />
-    <ClInclude Include="Object.h" />
-    <ClInclude Include="OpenGLRenderer.h" />
-    <ClInclude Include="OpenGLShader.h" />
-    <ClInclude Include="Position.h" />
-    <ClInclude Include="PositionSystem.h" />
-    <ClInclude Include="Renderer.h" />
-    <ClInclude Include="SafeDelete.h" />
-    <ClInclude Include="Shader.h" />
-    <ClInclude Include="SoundItem.h" />
-    <ClInclude Include="SoundSystem.h" />
-    <ClInclude Include="Square.h" />
-    <ClInclude Include="State.h" />
-    <ClInclude Include="StateMachine.h" />
-    <ClInclude Include="System.h" />
-    <ClInclude Include="SystemManager.h" />
-    <ClInclude Include="Text.h" />
-    <ClInclude Include="Texture.h" />
-    <ClInclude Include="Viewport.h" />
-    <ClInclude Include="ViewportManager.h" />
-    <ClInclude Include="cCallback.h" />
-    <ClInclude Include="cCreateWnd.h" />
-    <ClInclude Include="cErrorLogger.h" />
-    <ClInclude Include="cFileSystem.h" />
-    <ClInclude Include="cIni.h" />
-    <ClInclude Include="cRegWnd.h" />
-    <ClInclude Include="lodepng.h" />
-    <ClInclude Include="standards.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AISystem.cpp" />
-    <ClCompile Include="Behaviour.cpp" />
-    <ClCompile Include="Brain.cpp" />
-    <ClCompile Include="Camera.cpp" />
-    <ClCompile Include="Camera2D.cpp" />
-    <ClCompile Include="ChildWnd.cpp" />
-    <ClCompile Include="Component.cpp" />
-    <ClCompile Include="Cube.cpp" />
-    <ClCompile Include="Dispatch.cpp" />
-    <ClCompile Include="Engine.cpp" />
-    <ClCompile Include="EngineLibrary.cpp" />
     <ClCompile Include="EnginePCH.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="Entity.cpp" />
-    <ClCompile Include="EntityManager.cpp" />
-    <ClCompile Include="FastNoise.cpp" />
-    <ClCompile Include="Font.cpp" />
-    <ClCompile Include="GUISystem.cpp" />
-    <ClCompile Include="LabelEntity.cpp" />
-    <ClCompile Include="Line.cpp" />
-    <ClCompile Include="ModelSystem.cpp" />
-    <ClCompile Include="Object.cpp" />
-    <ClCompile Include="OpenGLRenderer.cpp" />
-    <ClCompile Include="OpenGLShader.cpp" />
-    <ClCompile Include="Position.cpp" />
-    <ClCompile Include="PositionSystem.cpp" />
-    <ClCompile Include="Renderer.cpp" />
-    <ClCompile Include="Shader.cpp" />
-    <ClCompile Include="SoundItem.cpp" />
-    <ClCompile Include="SoundSystem.cpp" />
-    <ClCompile Include="Square.cpp" />
-    <ClCompile Include="State.cpp" />
-    <ClCompile Include="StateMachine.cpp" />
-    <ClCompile Include="System.cpp" />
-    <ClCompile Include="SystemManager.cpp" />
-    <ClCompile Include="Text.cpp" />
-    <ClCompile Include="Texture.cpp" />
-    <ClCompile Include="Viewport.cpp" />
-    <ClCompile Include="ViewportManager.cpp" />
-    <ClCompile Include="cCreateWnd.cpp" />
-    <ClCompile Include="cErrorLogger.cpp" />
-    <ClCompile Include="cFileSystem.cpp" />
-    <ClCompile Include="cIni.cpp" />
-    <ClCompile Include="cRegWnd.cpp" />
-    <ClCompile Include="lodepng.cpp" />
-    <ClCompile Include="standards.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

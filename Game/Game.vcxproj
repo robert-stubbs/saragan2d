@@ -11,21 +11,21 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{D87EC9BF-443F-45F6-0D7A-8E7379F989D2}</ProjectGuid>
+    <ProjectGuid>{7FA9857C-6BE0-860D-14CD-6C1000E3020F}</ProjectGuid>
     <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>SaraganEngine</RootNamespace>
+    <RootNamespace>Game</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <CharacterSet>Unicode</CharacterSet>
     <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <CharacterSet>Unicode</CharacterSet>
     <PlatformToolset>v142</PlatformToolset>
@@ -41,56 +41,50 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>..\bin\Debug-windows-x86_64\SaraganEngine\</OutDir>
-    <IntDir>..\obj\Debug-windows-x86_64\SaraganEngine\</IntDir>
-    <TargetName>SaraganEngine</TargetName>
-    <TargetExt>.lib</TargetExt>
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>..\bin\Debug-windows-x86_64\Game\</OutDir>
+    <IntDir>..\obj\Debug-windows-x86_64\Game\</IntDir>
+    <TargetName>Game</TargetName>
+    <TargetExt>.exe</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <OutDir>..\bin\Release-windows-x86_64\SaraganEngine\</OutDir>
-    <IntDir>..\obj\Release-windows-x86_64\SaraganEngine\</IntDir>
-    <TargetName>SaraganEngine</TargetName>
-    <TargetExt>.lib</TargetExt>
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>..\bin\Release-windows-x86_64\Game\</OutDir>
+    <IntDir>..\obj\Release-windows-x86_64\Game\</IntDir>
+    <TargetName>Game</TargetName>
+    <TargetExt>.exe</TargetExt>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
-      <PrecompiledHeaderFile>EnginePCH.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile>GamePCH.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>..\ThirdParty\glm\include;..\ThirdParty\glew\include;..\ThirdParty\freetype2;..\ThirdParty\freetype-gl;..\ThirdParty\OpenAL\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\Engine;..\ThirdParty\glm\include;..\ThirdParty\glew\include;..\ThirdParty\freetype2;..\ThirdParty\freetype-gl;..\ThirdParty\OpenAL\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>OpenGL32.lib;glew32.lib;OpenAL32.lib;freetype.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\ThirdParty\glew\lib\Release;..\ThirdParty\glew\lib\Release\x64;..\ThirdParty\freetype2\lib;..\ThirdParty\freetype-gl\lib;..\ThirdParty\OpenAL\docs;..\ThirdParty\OpenAL\include;..\ThirdParty\OpenAL\lib;..\ThirdParty\OpenAL\redist;..\ThirdParty\OpenAL\samples;..\ThirdParty\OpenAL\include\AL;..\ThirdParty\OpenAL\lib\EFX-Util_MT;..\ThirdParty\OpenAL\lib\EFX-Util_MTDLL;..\ThirdParty\OpenAL\samples\capture;..\ThirdParty\OpenAL\samples\efxenumerate;..\ThirdParty\OpenAL\samples\efxfilter;..\ThirdParty\OpenAL\samples\efxreverb;..\ThirdParty\OpenAL\samples\enumerate;..\ThirdParty\OpenAL\samples\media;..\ThirdParty\OpenAL\samples\playmultichannel;..\ThirdParty\OpenAL\samples\playoggvorbis;..\ThirdParty\OpenAL\samples\playstatic;..\ThirdParty\OpenAL\samples\playstream;..\ThirdParty\OpenAL\samples\renderer;..\ThirdParty\OpenAL\samples\xramdemo;..\ThirdParty\OpenAL\samples\capture\Source;..\ThirdParty\OpenAL\samples\capture\Win64;..\ThirdParty\OpenAL\samples\efxenumerate\Source;..\ThirdParty\OpenAL\samples\efxenumerate\Win64;..\ThirdParty\OpenAL\samples\efxfilter\Source;..\ThirdParty\OpenAL\samples\efxfilter\Win64;..\ThirdParty\OpenAL\samples\efxreverb\Source;..\ThirdParty\OpenAL\samples\efxreverb\Win64;..\ThirdParty\OpenAL\samples\enumerate\Source;..\ThirdParty\OpenAL\samples\enumerate\Win64;..\ThirdParty\OpenAL\samples\playmultichannel\Source;..\ThirdParty\OpenAL\samples\playmultichannel\Win64;..\ThirdParty\OpenAL\samples\playoggvorbis\include;..\ThirdParty\OpenAL\samples\playoggvorbis\Source;..\ThirdParty\OpenAL\samples\playoggvorbis\include\Ogg;..\ThirdParty\OpenAL\samples\playoggvorbis\include\Vorbis;..\ThirdParty\OpenAL\samples\playstatic\Source;..\ThirdParty\OpenAL\samples\playstatic\Win64;..\ThirdParty\OpenAL\samples\playstream\Source;..\ThirdParty\OpenAL\samples\playstream\Win64;..\ThirdParty\OpenAL\samples\renderer\Source;..\ThirdParty\OpenAL\samples\renderer\Win64;..\ThirdParty\OpenAL\samples\xramdemo\Source;..\ThirdParty\OpenAL\samples\xramdemo\Win64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
-    <Lib>
-      <AdditionalLibraryDirectories>..\ThirdParty\glew\lib\Release;..\ThirdParty\glew\lib\Release\x64;..\ThirdParty\OpenAL\docs;..\ThirdParty\OpenAL\include;..\ThirdParty\OpenAL\lib;..\ThirdParty\OpenAL\redist;..\ThirdParty\OpenAL\samples;..\ThirdParty\OpenAL\include\AL;..\ThirdParty\OpenAL\lib\EFX-Util_MT;..\ThirdParty\OpenAL\lib\EFX-Util_MTDLL;..\ThirdParty\OpenAL\samples\capture;..\ThirdParty\OpenAL\samples\efxenumerate;..\ThirdParty\OpenAL\samples\efxfilter;..\ThirdParty\OpenAL\samples\efxreverb;..\ThirdParty\OpenAL\samples\enumerate;..\ThirdParty\OpenAL\samples\media;..\ThirdParty\OpenAL\samples\playmultichannel;..\ThirdParty\OpenAL\samples\playoggvorbis;..\ThirdParty\OpenAL\samples\playstatic;..\ThirdParty\OpenAL\samples\playstream;..\ThirdParty\OpenAL\samples\renderer;..\ThirdParty\OpenAL\samples\xramdemo;..\ThirdParty\OpenAL\samples\capture\Source;..\ThirdParty\OpenAL\samples\capture\Win64;..\ThirdParty\OpenAL\samples\efxenumerate\Source;..\ThirdParty\OpenAL\samples\efxenumerate\Win64;..\ThirdParty\OpenAL\samples\efxfilter\Source;..\ThirdParty\OpenAL\samples\efxfilter\Win64;..\ThirdParty\OpenAL\samples\efxreverb\Source;..\ThirdParty\OpenAL\samples\efxreverb\Win64;..\ThirdParty\OpenAL\samples\enumerate\Source;..\ThirdParty\OpenAL\samples\enumerate\Win64;..\ThirdParty\OpenAL\samples\playmultichannel\Source;..\ThirdParty\OpenAL\samples\playmultichannel\Win64;..\ThirdParty\OpenAL\samples\playoggvorbis\include;..\ThirdParty\OpenAL\samples\playoggvorbis\Source;..\ThirdParty\OpenAL\samples\playoggvorbis\include\Ogg;..\ThirdParty\OpenAL\samples\playoggvorbis\include\Vorbis;..\ThirdParty\OpenAL\samples\playstatic\Source;..\ThirdParty\OpenAL\samples\playstatic\Win64;..\ThirdParty\OpenAL\samples\playstream\Source;..\ThirdParty\OpenAL\samples\playstream\Win64;..\ThirdParty\OpenAL\samples\renderer\Source;..\ThirdParty\OpenAL\samples\renderer\Win64;..\ThirdParty\OpenAL\samples\xramdemo\Source;..\ThirdParty\OpenAL\samples\xramdemo\Win64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-    </Lib>
-    <PostBuildEvent>
-      <Command>IF EXIST ..\bin\Debug-windows-x86_64\$(ProjectName)\ (xcopy /Q /E /Y /I ..\bin\Debug-windows-x86_64\$(ProjectName) ..\bin\Debug-windows-x86_64\SaraganGame &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Debug-windows-x86_64\$(ProjectName) ..\bin\Debug-windows-x86_64\SaraganGame &gt; nul)</Command>
-    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
-      <PrecompiledHeaderFile>EnginePCH.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile>GamePCH.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>..\ThirdParty\glm\include;..\ThirdParty\glew\include;..\ThirdParty\freetype2;..\ThirdParty\freetype-gl;..\ThirdParty\OpenAL\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\Engine;..\ThirdParty\glm\include;..\ThirdParty\glew\include;..\ThirdParty\freetype2;..\ThirdParty\freetype-gl;..\ThirdParty\OpenAL\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>OpenGL32.lib;glew32.lib;OpenAL32.lib;freetype.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\ThirdParty\glew\lib\Release;..\ThirdParty\glew\lib\Release\x64;..\ThirdParty\freetype2\lib;..\ThirdParty\freetype-gl\lib;..\ThirdParty\OpenAL\docs;..\ThirdParty\OpenAL\include;..\ThirdParty\OpenAL\lib;..\ThirdParty\OpenAL\redist;..\ThirdParty\OpenAL\samples;..\ThirdParty\OpenAL\include\AL;..\ThirdParty\OpenAL\lib\EFX-Util_MT;..\ThirdParty\OpenAL\lib\EFX-Util_MTDLL;..\ThirdParty\OpenAL\samples\capture;..\ThirdParty\OpenAL\samples\efxenumerate;..\ThirdParty\OpenAL\samples\efxfilter;..\ThirdParty\OpenAL\samples\efxreverb;..\ThirdParty\OpenAL\samples\enumerate;..\ThirdParty\OpenAL\samples\media;..\ThirdParty\OpenAL\samples\playmultichannel;..\ThirdParty\OpenAL\samples\playoggvorbis;..\ThirdParty\OpenAL\samples\playstatic;..\ThirdParty\OpenAL\samples\playstream;..\ThirdParty\OpenAL\samples\renderer;..\ThirdParty\OpenAL\samples\xramdemo;..\ThirdParty\OpenAL\samples\capture\Source;..\ThirdParty\OpenAL\samples\capture\Win64;..\ThirdParty\OpenAL\samples\efxenumerate\Source;..\ThirdParty\OpenAL\samples\efxenumerate\Win64;..\ThirdParty\OpenAL\samples\efxfilter\Source;..\ThirdParty\OpenAL\samples\efxfilter\Win64;..\ThirdParty\OpenAL\samples\efxreverb\Source;..\ThirdParty\OpenAL\samples\efxreverb\Win64;..\ThirdParty\OpenAL\samples\enumerate\Source;..\ThirdParty\OpenAL\samples\enumerate\Win64;..\ThirdParty\OpenAL\samples\playmultichannel\Source;..\ThirdParty\OpenAL\samples\playmultichannel\Win64;..\ThirdParty\OpenAL\samples\playoggvorbis\include;..\ThirdParty\OpenAL\samples\playoggvorbis\Source;..\ThirdParty\OpenAL\samples\playoggvorbis\include\Ogg;..\ThirdParty\OpenAL\samples\playoggvorbis\include\Vorbis;..\ThirdParty\OpenAL\samples\playstatic\Source;..\ThirdParty\OpenAL\samples\playstatic\Win64;..\ThirdParty\OpenAL\samples\playstream\Source;..\ThirdParty\OpenAL\samples\playstream\Win64;..\ThirdParty\OpenAL\samples\renderer\Source;..\ThirdParty\OpenAL\samples\renderer\Win64;..\ThirdParty\OpenAL\samples\xramdemo\Source;..\ThirdParty\OpenAL\samples\xramdemo\Win64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
-    <Lib>
-      <AdditionalLibraryDirectories>..\ThirdParty\glew\lib\Release;..\ThirdParty\glew\lib\Release\x64;..\ThirdParty\OpenAL\docs;..\ThirdParty\OpenAL\include;..\ThirdParty\OpenAL\lib;..\ThirdParty\OpenAL\redist;..\ThirdParty\OpenAL\samples;..\ThirdParty\OpenAL\include\AL;..\ThirdParty\OpenAL\lib\EFX-Util_MT;..\ThirdParty\OpenAL\lib\EFX-Util_MTDLL;..\ThirdParty\OpenAL\samples\capture;..\ThirdParty\OpenAL\samples\efxenumerate;..\ThirdParty\OpenAL\samples\efxfilter;..\ThirdParty\OpenAL\samples\efxreverb;..\ThirdParty\OpenAL\samples\enumerate;..\ThirdParty\OpenAL\samples\media;..\ThirdParty\OpenAL\samples\playmultichannel;..\ThirdParty\OpenAL\samples\playoggvorbis;..\ThirdParty\OpenAL\samples\playstatic;..\ThirdParty\OpenAL\samples\playstream;..\ThirdParty\OpenAL\samples\renderer;..\ThirdParty\OpenAL\samples\xramdemo;..\ThirdParty\OpenAL\samples\capture\Source;..\ThirdParty\OpenAL\samples\capture\Win64;..\ThirdParty\OpenAL\samples\efxenumerate\Source;..\ThirdParty\OpenAL\samples\efxenumerate\Win64;..\ThirdParty\OpenAL\samples\efxfilter\Source;..\ThirdParty\OpenAL\samples\efxfilter\Win64;..\ThirdParty\OpenAL\samples\efxreverb\Source;..\ThirdParty\OpenAL\samples\efxreverb\Win64;..\ThirdParty\OpenAL\samples\enumerate\Source;..\ThirdParty\OpenAL\samples\enumerate\Win64;..\ThirdParty\OpenAL\samples\playmultichannel\Source;..\ThirdParty\OpenAL\samples\playmultichannel\Win64;..\ThirdParty\OpenAL\samples\playoggvorbis\include;..\ThirdParty\OpenAL\samples\playoggvorbis\Source;..\ThirdParty\OpenAL\samples\playoggvorbis\include\Ogg;..\ThirdParty\OpenAL\samples\playoggvorbis\include\Vorbis;..\ThirdParty\OpenAL\samples\playstatic\Source;..\ThirdParty\OpenAL\samples\playstatic\Win64;..\ThirdParty\OpenAL\samples\playstream\Source;..\ThirdParty\OpenAL\samples\playstream\Win64;..\ThirdParty\OpenAL\samples\renderer\Source;..\ThirdParty\OpenAL\samples\renderer\Win64;..\ThirdParty\OpenAL\samples\xramdemo\Source;..\ThirdParty\OpenAL\samples\xramdemo\Win64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-    </Lib>
-    <PostBuildEvent>
-      <Command>IF EXIST ..\bin\Release-windows-x86_64\$(ProjectName)\ (xcopy /Q /E /Y /I ..\bin\Release-windows-x86_64\$(ProjectName) ..\bin\Release-windows-x86_64\SaraganGame &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Release-windows-x86_64\$(ProjectName) ..\bin\Release-windows-x86_64\SaraganGame &gt; nul)</Command>
-    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="..\ThirdParty\glew\include\GL\eglew.h" />
@@ -459,102 +453,23 @@
     <ClInclude Include="..\ThirdParty\glm\include\glm\vec3.hpp" />
     <ClInclude Include="..\ThirdParty\glm\include\glm\vec4.hpp" />
     <ClInclude Include="..\ThirdParty\glm\include\glm\vector_relational.hpp" />
-    <ClInclude Include="AISystem.h" />
-    <ClInclude Include="Behaviour.h" />
-    <ClInclude Include="Brain.h" />
-    <ClInclude Include="Camera.h" />
-    <ClInclude Include="Camera2D.h" />
-    <ClInclude Include="ChildWnd.h" />
-    <ClInclude Include="Component.h" />
-    <ClInclude Include="Cube.h" />
-    <ClInclude Include="Dispatch.h" />
-    <ClInclude Include="Engine.h" />
-    <ClInclude Include="EngineLibrary.h" />
-    <ClInclude Include="EnginePCH.h" />
-    <ClInclude Include="Entity.h" />
-    <ClInclude Include="EntityManager.h" />
-    <ClInclude Include="FastNoise.h" />
-    <ClInclude Include="Font.h" />
-    <ClInclude Include="GUISystem.h" />
-    <ClInclude Include="LabelEntity.h" />
-    <ClInclude Include="Line.h" />
-    <ClInclude Include="ModelSystem.h" />
-    <ClInclude Include="Object.h" />
-    <ClInclude Include="OpenGLRenderer.h" />
-    <ClInclude Include="OpenGLShader.h" />
-    <ClInclude Include="Position.h" />
-    <ClInclude Include="PositionSystem.h" />
-    <ClInclude Include="Renderer.h" />
-    <ClInclude Include="SafeDelete.h" />
-    <ClInclude Include="Shader.h" />
-    <ClInclude Include="SoundItem.h" />
-    <ClInclude Include="SoundSystem.h" />
-    <ClInclude Include="Square.h" />
-    <ClInclude Include="State.h" />
-    <ClInclude Include="StateMachine.h" />
-    <ClInclude Include="System.h" />
-    <ClInclude Include="SystemManager.h" />
-    <ClInclude Include="Text.h" />
-    <ClInclude Include="Texture.h" />
-    <ClInclude Include="Viewport.h" />
-    <ClInclude Include="ViewportManager.h" />
-    <ClInclude Include="cCallback.h" />
-    <ClInclude Include="cCreateWnd.h" />
-    <ClInclude Include="cErrorLogger.h" />
-    <ClInclude Include="cFileSystem.h" />
-    <ClInclude Include="cIni.h" />
-    <ClInclude Include="cRegWnd.h" />
-    <ClInclude Include="lodepng.h" />
-    <ClInclude Include="standards.h" />
+    <ClInclude Include="GamePCH.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AISystem.cpp" />
-    <ClCompile Include="Behaviour.cpp" />
-    <ClCompile Include="Brain.cpp" />
-    <ClCompile Include="Camera.cpp" />
-    <ClCompile Include="Camera2D.cpp" />
-    <ClCompile Include="ChildWnd.cpp" />
-    <ClCompile Include="Component.cpp" />
-    <ClCompile Include="Cube.cpp" />
-    <ClCompile Include="Dispatch.cpp" />
-    <ClCompile Include="Engine.cpp" />
-    <ClCompile Include="EngineLibrary.cpp" />
-    <ClCompile Include="EnginePCH.cpp">
+    <ClCompile Include="GamePCH.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="Entity.cpp" />
-    <ClCompile Include="EntityManager.cpp" />
-    <ClCompile Include="FastNoise.cpp" />
-    <ClCompile Include="Font.cpp" />
-    <ClCompile Include="GUISystem.cpp" />
-    <ClCompile Include="LabelEntity.cpp" />
-    <ClCompile Include="Line.cpp" />
-    <ClCompile Include="ModelSystem.cpp" />
-    <ClCompile Include="Object.cpp" />
-    <ClCompile Include="OpenGLRenderer.cpp" />
-    <ClCompile Include="OpenGLShader.cpp" />
-    <ClCompile Include="Position.cpp" />
-    <ClCompile Include="PositionSystem.cpp" />
-    <ClCompile Include="Renderer.cpp" />
-    <ClCompile Include="Shader.cpp" />
-    <ClCompile Include="SoundItem.cpp" />
-    <ClCompile Include="SoundSystem.cpp" />
-    <ClCompile Include="Square.cpp" />
-    <ClCompile Include="State.cpp" />
-    <ClCompile Include="StateMachine.cpp" />
-    <ClCompile Include="System.cpp" />
-    <ClCompile Include="SystemManager.cpp" />
-    <ClCompile Include="Text.cpp" />
-    <ClCompile Include="Texture.cpp" />
-    <ClCompile Include="Viewport.cpp" />
-    <ClCompile Include="ViewportManager.cpp" />
-    <ClCompile Include="cCreateWnd.cpp" />
-    <ClCompile Include="cErrorLogger.cpp" />
-    <ClCompile Include="cFileSystem.cpp" />
-    <ClCompile Include="cIni.cpp" />
-    <ClCompile Include="cRegWnd.cpp" />
-    <ClCompile Include="lodepng.cpp" />
-    <ClCompile Include="standards.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Engine\Engine.vcxproj">
+      <Project>{DBC7D3B0-C769-FE86-B024-12DB9C6585D7}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\SaraganEngine\SaraganEngine.vcxproj">
+      <Project>{D87EC9BF-443F-45F6-0D7A-8E7379F989D2}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\ThirdParty\freetype-gl\freetype-gl.vcxproj">
+      <Project>{09D6E609-758B-5FFF-FE7F-59D66A345603}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
