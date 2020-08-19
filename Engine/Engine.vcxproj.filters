@@ -37,6 +37,24 @@
     <Filter Include="ThirdParty\glfw">
       <UniqueIdentifier>{899db60e-8b82-4404-850c-9496960311b9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Shader">
+      <UniqueIdentifier>{22cec00c-e0fe-41ab-81b4-a89db27de48a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shader\OpenGL">
+      <UniqueIdentifier>{2bceccef-f377-4d54-bb97-14bfc96c6507}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Renderer">
+      <UniqueIdentifier>{80666bce-ba61-4754-9523-5560011a219e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tools">
+      <UniqueIdentifier>{a88dfc0b-5813-4eb5-bfe4-85449f6bdc86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Renderer\RenderEngines">
+      <UniqueIdentifier>{f2b11abf-9e31-4f23-85f5-cc2c5de835f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Renderer\RenderEngines\OpenGL">
+      <UniqueIdentifier>{67e5e2c2-89c6-418e-b58c-45e99b477e3f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\ThirdParty\glew\include\GL\eglew.h">
@@ -1144,8 +1162,46 @@
     <ClInclude Include="..\ThirdParty\glfw\include\GLFW\glfw3native.h">
       <Filter>ThirdParty\glfw</Filter>
     </ClInclude>
+    <ClInclude Include="Shader.h">
+      <Filter>Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenGLShader.h">
+      <Filter>Shader\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine.h" />
+    <ClInclude Include="Renderer.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Types.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderEngineBase.h">
+      <Filter>Renderer\RenderEngines</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenGLRenderEngine.h">
+      <Filter>Renderer\RenderEngines\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="SafeDelete.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="EnginePCH.cpp" />
+    <ClCompile Include="Shader.cpp">
+      <Filter>Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="OpenGLShader.cpp">
+      <Filter>Shader\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine.cpp" />
+    <ClCompile Include="Renderer.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderEngineBase.cpp">
+      <Filter>Renderer\RenderEngines</Filter>
+    </ClCompile>
+    <ClCompile Include="OpenGLRenderEngine.cpp">
+      <Filter>Renderer\RenderEngines\OpenGL</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
