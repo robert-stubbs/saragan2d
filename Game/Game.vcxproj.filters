@@ -34,6 +34,9 @@
     <Filter Include="ThirdParty\glew\include\GL">
       <UniqueIdentifier>{E97AA97C-5506-1741-5E17-9A35CA217341}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ThirdParty\glfw">
+      <UniqueIdentifier>{a13acea0-8052-4c83-81c2-45638961e52c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\ThirdParty\glew\include\GL\eglew.h">
@@ -1135,8 +1138,15 @@
       <Filter>ThirdParty\glm\include\glm</Filter>
     </ClInclude>
     <ClInclude Include="GamePCH.h" />
+    <ClInclude Include="..\ThirdParty\glfw\include\GLFW\glfw3native.h">
+      <Filter>ThirdParty\glfw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\glfw\include\GLFW\glfw3.h">
+      <Filter>ThirdParty\glfw</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GamePCH.cpp" />
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
 </Project>

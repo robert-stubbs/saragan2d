@@ -125,21 +125,21 @@ void PreLoad()
 
 }
 
-cCreateWnd CreateEngineWindow()
-{
-	//cErrorLogger::Log().WriteToConsole("#######################################################");
-	//cErrorLogger::Log().WriteToConsole("> Creating Window");
-
-	//cRegWnd WinApp(hInst, WndProc, false, 800, 600);
-	//WinApp.Register();
-
-	//cCreateWnd Wnd(&WinApp);
-	//hWnd = Wnd.Create();
-
-	//cErrorLogger::Log().WriteToConsole("#######################################################");
-
-	//return Wnd;
-}
+//cCreateWnd CreateEngineWindow()
+//{
+//	//cErrorLogger::Log().WriteToConsole("#######################################################");
+//	//cErrorLogger::Log().WriteToConsole("> Creating Window");
+//
+//	//cRegWnd WinApp(hInst, WndProc, false, 800, 600);
+//	//WinApp.Register();
+//
+//	//cCreateWnd Wnd(&WinApp);
+//	//hWnd = Wnd.Create();
+//
+//	//cErrorLogger::Log().WriteToConsole("#######################################################");
+//
+//	//return Wnd;
+//}
 
 void Load()
 {

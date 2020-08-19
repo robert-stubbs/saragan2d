@@ -34,6 +34,9 @@
     <Filter Include="ThirdParty\glm\include\glm\gtx">
       <UniqueIdentifier>{03718041-EF96-4AA8-D8DC-CF73C4A16F74}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ThirdParty\glfw">
+      <UniqueIdentifier>{899db60e-8b82-4404-850c-9496960311b9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\ThirdParty\glew\include\GL\eglew.h">
@@ -1135,6 +1138,12 @@
       <Filter>ThirdParty\glm\include\glm</Filter>
     </ClInclude>
     <ClInclude Include="EnginePCH.h" />
+    <ClInclude Include="..\ThirdParty\glfw\include\GLFW\glfw3.h">
+      <Filter>ThirdParty\glfw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\glfw\include\GLFW\glfw3native.h">
+      <Filter>ThirdParty\glfw</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="EnginePCH.cpp" />

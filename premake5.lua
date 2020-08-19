@@ -22,6 +22,7 @@ project "Game"
 		"ThirdParty/glm/include/**.hpp",
 		"ThirdParty/glm/include/**.inl",
 		"ThirdParty/glew/include/**.h",
+		"ThirdParty/glfw/include/**.h",
 		"ThirdParty/freetype-gl/include/**.h"
 	}
 
@@ -29,6 +30,7 @@ project "Game"
 	{
 		"Engine",
 		"ThirdParty/glm/include",
+		"ThirdParty/glfw/include",
 		"ThirdParty/glew/include",
 		"ThirdParty/freetype2",
 		"ThirdParty/freetype-gl",
@@ -42,6 +44,7 @@ project "Game"
 
 	libdirs  
 	{
+		"ThirdParty/glfw/lib",
 		"ThirdParty/glew/lib/**",
 		"ThirdParty/freetype2/lib",
 		"ThirdParty/freetype-gl/lib",
@@ -52,7 +55,7 @@ project "Game"
 		systemversion "latest"
 		cppdialect "C++17"
 		staticruntime "on"
-		links { "SaraganEngine", "OpenGL32", "glew32", "OpenAL32", "freetype", "freetype-gl" }
+		links { "SaraganEngine", "OpenGL32", "glfw3", "glew32", "OpenAL32", "freetype", "freetype-gl" }
 
 	filter "configurations.Debug"
 		defines { "SARAGAN_DEBUG" }
@@ -78,12 +81,14 @@ project "Engine"
 		"%{prj.name}/**.cpp",
 		"ThirdParty/glm/include/**.hpp",
 		"ThirdParty/glm/include/**.inl",
+		"ThirdParty/glfw/include/**.h",
 		"ThirdParty/glew/include/**.h"
 	}
 
 	includedirs
 	{
 		"ThirdParty/glm/include",
+		"ThirdParty/glfw/include",
 		"ThirdParty/glew/include",
 		"ThirdParty/freetype2",
 		"ThirdParty/freetype-gl",
@@ -92,6 +97,7 @@ project "Engine"
 
 	libdirs  
 	{
+		"ThirdParty/glfw/lib",
 		"ThirdParty/glew/lib/**",
 		"ThirdParty/OpenAL/**"
 	}
