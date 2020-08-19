@@ -54,7 +54,7 @@ project "Game"
 		systemversion "latest"
 		cppdialect "C++17"
 		staticruntime "on"
-		links { "SaraganEngine", "OpenGL32", "glfw", "glew32", "OpenAL32", "freetype", "freetype-gl" }
+		links { "SaraganEngine", "OpenGL32", "glfw", "glew32s", "OpenAL32", "freetype", "freetype-gl" }
 
 	filter "configurations.Debug"
 		defines { "SARAGAN_DEBUG" }
