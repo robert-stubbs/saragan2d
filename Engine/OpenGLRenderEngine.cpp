@@ -129,10 +129,23 @@ namespace GameEngine {
 
 	}
 
+	void OpenGLRenderEngine::GenerateBuffer(unsigned int& VBO, std::vector<vert2D>& verts)
+	{
+		glGenBuffers(1, &VBO);
+		glBindBuffer(GL_ARRAY_BUFFER, VBO);
+		glBufferData(GL_ARRAY_BUFFER, sizeof(vert2D) * verts.size(), &verts[0], GL_STATIC_DRAW);
+	}
+
 	void OpenGLRenderEngine::ReGenerateBuffer(unsigned int& VBO, std::vector<vert>& verts)
 	{
 		glBindBuffer(GL_ARRAY_BUFFER, VBO);
 		glBufferData(GL_ARRAY_BUFFER, sizeof(vert) * verts.size(), &verts[0], GL_STATIC_DRAW);
+	}
+
+	void OpenGLRenderEngine::ReGenerateBuffer(unsigned int& VBO, std::vector<vert2D>& verts)
+	{
+		glBindBuffer(GL_ARRAY_BUFFER, VBO);
+		glBufferData(GL_ARRAY_BUFFER, sizeof(vert2D) * verts.size(), &verts[0], GL_STATIC_DRAW);
 	}
 
 	bool OpenGLRenderEngine::UpdateBuffer(unsigned int& VBO, std::vector<vert>& verts)
@@ -141,6 +154,20 @@ namespace GameEngine {
 		{
 			glBindBuffer(GL_ARRAY_BUFFER, VBO);
 			glBufferSubData(GL_ARRAY_BUFFER, 0, sizeof(vert) * (int)verts.size(), &verts[0]);
+			glBindBuffer(GL_ARRAY_BUFFER, 0);
+
+			return true;
+		}
+
+		return false;
+	}
+
+	bool OpenGLRenderEngine::UpdateBuffer(unsigned int& VBO, std::vector<vert2D>& verts)
+	{
+		if (VBO != -1)
+		{
+			glBindBuffer(GL_ARRAY_BUFFER, VBO);
+			glBufferSubData(GL_ARRAY_BUFFER, 0, sizeof(vert2D) * (int)verts.size(), &verts[0]);
 			glBindBuffer(GL_ARRAY_BUFFER, 0);
 
 			return true;

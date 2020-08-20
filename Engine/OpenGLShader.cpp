@@ -63,6 +63,7 @@ bool OpenGLShader::bind3dElements()
 {
 	glBindAttribLocation(ShaderID, 0, "in_Position"); // Bind a constant attribute location for positions of vertices
 	glBindAttribLocation(ShaderID, 1, "in_Texture"); // Bind another constant attribute location, this time for color
+	glBindAttribLocation(ShaderID, 2, "in_Color"); // Bind another constant attribute location, this time for color
 
 	glLinkProgram(ShaderID); // Link the vertex and fragment shaders in the program
 	validateProgram(ShaderID); // Validate the shader program
@@ -71,11 +72,12 @@ bool OpenGLShader::bind3dElements()
 	viewMatrixLocation = glGetUniformLocation(ShaderID, "viewMatrix"); // Get the location of our view matrix in the shader
 	modelMatrixLocation = glGetUniformLocation(ShaderID, "modelMatrix"); // Get the location of our model matrix in the shader
 
-	Color = glGetUniformLocation(ShaderID, "in_Color");
+	//Color = glGetUniformLocation(ShaderID, "in_Color");
 	isText = glGetUniformLocation(ShaderID, "is_Text");
 
 	Position = glGetAttribLocation(ShaderID, "in_Position");
 	Texture = glGetAttribLocation(ShaderID, "in_Texture");
+	Color = glGetAttribLocation(ShaderID, "in_Color");
 
 	WorldLight.Color = glGetUniformLocation(ShaderID, "WorldLight.Color");
 	WorldLight.AmbientIntensity = glGetUniformLocation(ShaderID, "WorldLight.AmbientIntensity");

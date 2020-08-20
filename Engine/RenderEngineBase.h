@@ -28,6 +28,10 @@ namespace GameEngine {
 			virtual void ReGenerateBuffer(unsigned int& VBO, std::vector<vert>& verts) = 0;
 			virtual bool UpdateBuffer(unsigned int& VBO, std::vector<vert>& verts) = 0;
 
+			virtual void GenerateBuffer(unsigned int& VBO, std::vector<vert2D>& verts) = 0;
+			virtual void ReGenerateBuffer(unsigned int& VBO, std::vector<vert2D>& verts) = 0;
+			virtual bool UpdateBuffer(unsigned int& VBO, std::vector<vert2D>& verts) = 0;
+
 			virtual void BindVertexBuffer(unsigned int& VBO) = 0;
 			virtual void UnbindVertexBuffer() = 0;
 

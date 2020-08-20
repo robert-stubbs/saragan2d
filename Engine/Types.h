@@ -20,7 +20,7 @@ namespace GameEngine {
 
 	typedef struct
 	{
-		float  pos[3];
+		float  pos[4];
 		float  Text[2];
 		float  col[4];
 	} vert2D;
