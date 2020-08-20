@@ -24,6 +24,38 @@ namespace GameEngine {
 		float  Text[2];
 		float  col[4];
 	} vert2D;
+
+	enum class DRAW_TYPE
+	{
+		LINES,
+		LINE_LOOP,
+		LINE_STRIP,
+		TRIANGLES,
+		TRIANGLE_STRIP,
+		TRIANGLE_FAN,
+		QUADS,
+		QUAD_STRIP
+	};
+
+	enum class VALUE_TYPE
+	{
+		UNSIGNED_BYTE, 
+		UNSIGNED_SHORT,
+		UNSIGNED_INT
+	};
+
+	enum class BLEND_TYPE
+	{
+		SRC_COLOR,
+		ONE_MINUS_SRC_COLOR,
+		SRC_ALPHA,
+		ONE_MINUS_SRC_ALPHA,
+		DST_ALPHA,
+		ONE_MINUS_DST_ALPHA,
+		DST_COLOR,
+		ONE_MINUS_DST_COLOR,
+		SRC_ALPHA_SATURATE
+	};
 }
 
 #endif 

@@ -100,13 +100,11 @@ void PostLoad()
     verts.push_back({ {0.0f, 0.5f,0.0f,1.0f},{-99.0f,-99.0f} });
     verts.push_back({ {0.5f, -0.5f,0.0f,1.0f},{-99.0f,-99.0f} });
 
-
     Engine::getRenderer().GenerateBuffer(VBO, verts);
     Engine::getRenderer().VertexStructurePointerF(shader->Position, 4, GL_FALSE, sizeof(vert), 0);
     Engine::getRenderer().VertexStructurePointerF(shader->Texture, 2, GL_TRUE, sizeof(vert), (GLvoid*)offsetof(vert, Text));
 
     Engine::getRenderer().UnbindVertexBuffer();
-
 }
 
 void Update(float dt)
@@ -122,22 +120,19 @@ void Render()
     // put this in its own function in case you want to do 
     // your own renders outside of the engine
 
-    glUniform1i(shader->isText, 0);
+    Engine::getRenderer().UniformInt(shader->isText, 0);
 
-    //glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-    //glEnable(GL_BLEND);
+    Engine::getRenderer().EnableBlend(true, BLEND_TYPE::SRC_ALPHA, BLEND_TYPE::ONE_MINUS_SRC_ALPHA);
 
     Engine::getRenderer().BindVertexBuffer(VBO);
 
-    glm::vec4 colour = glm::vec4(0.0f, 1.0f, 0.0f, 1.0f);
+    Engine::getRenderer().UniformVec4(shader->Color, glm::vec4(0.0f, 1.0f, 0.0f, 1.0f), 1);
 
-    glUniform4fv(shader->Color, 1, glm::value_ptr(colour));
-
-    glDrawArrays(GL_TRIANGLES, 0, (GLsizei)verts.size()); // Draw our line
+    Engine::getRenderer().DrawArrays(DRAW_TYPE::TRIANGLES, (GLsizei)verts.size());
 
     Engine::getRenderer().UnbindVertexBuffer();
 
-    //glDisable(GL_BLEND);
+    Engine::getRenderer().EnableBlend(false);
 
     Engine::get().RenderEnd();
 }

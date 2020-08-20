@@ -182,8 +182,203 @@ namespace GameEngine {
 		glEnableVertexAttribArray(location);
 	}
 
+	void OpenGLRenderEngine::UniformInt(int location, int value)
+	{
+		glUniform1i(location, value);
+	}
+
+	void OpenGLRenderEngine::UniformVec4(int location, glm::vec4& vector, int count)
+	{
+		glUniform4fv(location, count, glm::value_ptr(vector));
+	}
+
 	void OpenGLRenderEngine::UniformMat4(int location, glm::mat4& transform, int size, bool transpose)
 	{
 		glUniformMatrix4fv(location, size, transpose, glm::value_ptr(transform));
+	}
+
+	void OpenGLRenderEngine::EnableBlend(bool enabled, BLEND_TYPE sfactor, BLEND_TYPE dfactor)
+	{
+		if (!enabled) {
+			glDisable(GL_BLEND);
+			return;
+		}
+
+		GLenum sfact;
+		GLenum dfact;
+
+		switch (sfactor)
+		{
+		case BLEND_TYPE::SRC_COLOR:
+			sfact = GL_SRC_COLOR;
+			break;
+		case BLEND_TYPE::ONE_MINUS_SRC_COLOR:
+			sfact = GL_ONE_MINUS_SRC_COLOR;
+			break;
+		case BLEND_TYPE::SRC_ALPHA:
+			sfact = GL_SRC_ALPHA;
+			break;
+		case BLEND_TYPE::ONE_MINUS_SRC_ALPHA:
+			sfact = GL_ONE_MINUS_SRC_ALPHA;
+			break;
+		case BLEND_TYPE::DST_ALPHA:
+			sfact = GL_DST_ALPHA;
+			break;
+		case BLEND_TYPE::ONE_MINUS_DST_ALPHA:
+			sfact = GL_ONE_MINUS_DST_ALPHA;
+			break;
+		case BLEND_TYPE::DST_COLOR:
+			sfact = GL_DST_COLOR;
+			break;
+		case BLEND_TYPE::ONE_MINUS_DST_COLOR:
+			sfact = GL_ONE_MINUS_DST_COLOR;
+			break;
+		case BLEND_TYPE::SRC_ALPHA_SATURATE:
+			sfact = GL_SRC_ALPHA_SATURATE;
+			break;
+		default:
+			sfact = GL_SRC_ALPHA;
+			break;
+		}
+
+		switch (dfactor)
+		{
+			case BLEND_TYPE::SRC_COLOR:
+				dfact = GL_SRC_COLOR;
+				break;
+			case BLEND_TYPE::ONE_MINUS_SRC_COLOR:
+				dfact = GL_ONE_MINUS_SRC_COLOR;
+				break;
+			case BLEND_TYPE::SRC_ALPHA:
+				dfact = GL_SRC_ALPHA;
+				break;
+			case BLEND_TYPE::ONE_MINUS_SRC_ALPHA:
+				dfact = GL_ONE_MINUS_SRC_ALPHA;
+				break;
+			case BLEND_TYPE::DST_ALPHA:
+				dfact = GL_DST_ALPHA;
+				break;
+			case BLEND_TYPE::ONE_MINUS_DST_ALPHA:
+				dfact = GL_ONE_MINUS_DST_ALPHA;
+				break;
+			case BLEND_TYPE::DST_COLOR:
+				dfact = GL_DST_COLOR;
+				break;
+			case BLEND_TYPE::ONE_MINUS_DST_COLOR:
+				dfact = GL_ONE_MINUS_DST_COLOR;
+				break;
+			case BLEND_TYPE::SRC_ALPHA_SATURATE:
+				dfact = GL_SRC_ALPHA_SATURATE;
+				break;
+			default:
+				dfact = GL_ONE_MINUS_SRC_ALPHA;
+				break;
+		}
+
+		glBlendFunc(sfact, dfact);
+		glEnable(GL_BLEND);
+	}
+
+	void OpenGLRenderEngine::EnableDepthTest(bool enabled)
+	{
+		if (enabled)
+		{
+			glEnable(GL_DEPTH_TEST);
+			return;
+		}
+
+		glDisable(GL_DEPTH_TEST);
+	}
+
+	void OpenGLRenderEngine::DrawArrays(DRAW_TYPE type, int count, int first)
+	{
+		GLenum val;
+
+		switch (type)
+		{
+		case DRAW_TYPE::LINES:
+			val = GL_LINES;
+			break;
+		case DRAW_TYPE::LINE_LOOP:
+			val = GL_LINE_LOOP;
+			break;
+		case DRAW_TYPE::LINE_STRIP:
+			val = GL_LINE_STRIP;
+			break;
+		case DRAW_TYPE::TRIANGLES:
+			val = GL_TRIANGLES;
+			break;
+		case DRAW_TYPE::TRIANGLE_STRIP:
+			val = GL_TRIANGLE_STRIP;
+			break;
+		case DRAW_TYPE::TRIANGLE_FAN:
+			val = GL_TRIANGLE_FAN;
+			break;
+		case DRAW_TYPE::QUADS:
+			val = GL_QUADS;
+			break;
+		case DRAW_TYPE::QUAD_STRIP:
+			val = GL_QUAD_STRIP;
+			break;
+		default:
+			val = GL_LINES;
+			break;
+		}
+
+		glDrawArrays(GL_TRIANGLES, first, count);
+	}
+
+	void OpenGLRenderEngine::DrawElements(DRAW_TYPE type, int count, VALUE_TYPE indice_type, const void* indices)
+	{
+		GLenum val;
+		GLenum ind;
+
+		switch (type)
+		{
+		case DRAW_TYPE::LINES:
+			val = GL_LINES;
+			break;
+		case DRAW_TYPE::LINE_LOOP:
+			val = GL_LINE_LOOP;
+			break;
+		case DRAW_TYPE::LINE_STRIP:
+			val = GL_LINE_STRIP;
+			break;
+		case DRAW_TYPE::TRIANGLES:
+			val = GL_TRIANGLES;
+			break;
+		case DRAW_TYPE::TRIANGLE_STRIP:
+			val = GL_TRIANGLE_STRIP;
+			break;
+		case DRAW_TYPE::TRIANGLE_FAN:
+			val = GL_TRIANGLE_FAN;
+			break;
+		case DRAW_TYPE::QUADS:
+			val = GL_QUADS;
+			break;
+		case DRAW_TYPE::QUAD_STRIP:
+			val = GL_QUAD_STRIP;
+			break;
+		default:
+			val = GL_LINES;
+			break;
+		}
+
+		switch (indice_type)
+		{
+			case VALUE_TYPE::UNSIGNED_BYTE:
+				ind = GL_UNSIGNED_BYTE;
+			break;
+			case VALUE_TYPE::UNSIGNED_SHORT:
+				ind = GL_UNSIGNED_SHORT;
+			break;
+			case VALUE_TYPE::UNSIGNED_INT:
+				ind = GL_UNSIGNED_INT;
+			break;
+			default:
+			break;
+		}
+
+		glDrawElements(val, count, ind, indices);
 	}
 }

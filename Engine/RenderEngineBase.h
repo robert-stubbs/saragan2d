@@ -39,7 +39,15 @@ namespace GameEngine {
 			virtual void VertexStructurePointerF(int location, int size, bool normalized, int stride, const void* pointer) = 0;
 
 			// Binding uniforms to shader 
+			virtual void UniformInt(int location, int value) = 0;
+			virtual void UniformVec4(int location, glm::vec4& vector, int count = 1) = 0;
 			virtual void UniformMat4(int location, glm::mat4& transform, int size, bool transpose) = 0;
+
+			virtual void EnableBlend(bool enabled = true, BLEND_TYPE sfactor = BLEND_TYPE::SRC_ALPHA, BLEND_TYPE dfactor = BLEND_TYPE::ONE_MINUS_SRC_ALPHA) = 0;
+			virtual void EnableDepthTest(bool enabled = true) = 0;
+
+			virtual void DrawArrays(DRAW_TYPE type, int count, int first = 0) = 0;
+			virtual void DrawElements (DRAW_TYPE type, int count, VALUE_TYPE indice_type = VALUE_TYPE::UNSIGNED_INT, const void* indices = 0) = 0;
 
 	};
 }
