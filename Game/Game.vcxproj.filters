@@ -43,6 +43,9 @@
     <Filter Include="ThirdParty\glm\include\glm\gtx">
       <UniqueIdentifier>{03718041-EF96-4AA8-D8DC-CF73C4A16F74}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Shaders">
+      <UniqueIdentifier>{bffd53c3-28d2-41a4-9bc8-3ff45118be6d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\ThirdParty\glew\include\GL\eglew.h">

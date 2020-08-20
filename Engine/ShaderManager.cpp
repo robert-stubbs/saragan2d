@@ -6,29 +6,55 @@ namespace GameEngine {
 
 	ShaderManager::ShaderManager()
 	{
+		_shaders = std::map<std::string, std::shared_ptr<Shader>>();
 		engine_type = RenderEngines::None;
-		shader_engine = nullptr;		
+		current_shader = nullptr;
 	}
 
 	ShaderManager::ShaderManager(RenderEngines EngineType)
 	{
+		_shaders = std::map<std::string, std::shared_ptr<Shader>>();
 		engine_type = EngineType;
-		shader_engine = nullptr;
+		current_shader = nullptr;
 
+	}
+
+	Shader& ShaderManager::CreateShaderSpace(std::string name)
+	{
 		switch (engine_type)
 		{
 		case GameEngine::None:
-			shader_engine = nullptr;
-			return;
 			break;
 		case GameEngine::OpenGL:
-			shader_engine = std::make_shared<OpenGLShader>();
+			_shaders[name] = std::make_shared<OpenGLShader>();
 			break;
 		case GameEngine::DirectX:
 			break;
 		default:
 			break;
 		}
+		
+		current_shader = _shaders[name];
+
+		return *(_shaders[name]);
+	}
+
+	Shader& ShaderManager::operator[](std::string name)
+	{
+		return *(_shaders[name]);
+	}
+
+	Shader& ShaderManager::BindNewShader(std::string name)
+	{
+		if (current_shader != nullptr) {
+			current_shader->unbind();
+			current_shader = nullptr;
+		}
+
+		current_shader = _shaders[name];
+		current_shader->bind();
+
+		return *current_shader;
 	}
 
 	ShaderManager::~ShaderManager()

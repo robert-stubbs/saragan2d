@@ -1,5 +1,6 @@
 #include "EnginePCH.h"
 #include "Engine.h"
+#include "Default2DShader.h"
 
 namespace GameEngine {
 
@@ -56,6 +57,21 @@ namespace GameEngine {
 	bool Engine::Init()
 	{		
 		getRenderer().Init();
+
+		AddShaderDef(
+			std::make_shared<Default2DShader>(
+				Default2DShader(
+					Engine::get().asset_dir + "Shaders/VertexShader.glsl",
+					Engine::get().asset_dir + "Shaders/FragmentShader.glsl"
+				)
+			)
+		);
+
+		for (std::shared_ptr<ShaderDef>& def : _shader_definitions)
+		{
+			def->SetupShader();
+		}
+
 		return true;
 	}
 
@@ -119,4 +135,8 @@ namespace GameEngine {
 		return true;
 	}
 
+	void Engine::AddShaderDef(std::shared_ptr<ShaderDef> _def)
+	{
+		_shader_definitions.push_back(_def);
+	}
 }

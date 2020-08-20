@@ -58,6 +58,15 @@
     <Filter Include="File">
       <UniqueIdentifier>{d0cc5ded-3e5a-442f-85a2-97021af1f468}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Shader\ShaderDefs">
+      <UniqueIdentifier>{a62e9a1f-1873-4fa0-87fd-d91b624f6382}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Camera">
+      <UniqueIdentifier>{a345a4d5-895e-4e15-8924-1af1d17af503}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Geometry">
+      <UniqueIdentifier>{0db492fc-3455-4f37-a615-39b95fbd63f0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\ThirdParty\glew\include\GL\eglew.h">
@@ -1184,14 +1193,35 @@
     <ClInclude Include="SafeDelete.h">
       <Filter>Tools</Filter>
     </ClInclude>
-    <ClInclude Include="Shader.h">
-      <Filter>Shader\OpenGL</Filter>
-    </ClInclude>
     <ClInclude Include="ShaderManager.h">
       <Filter>Shader</Filter>
     </ClInclude>
     <ClInclude Include="FileManager.h">
       <Filter>File</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader.h">
+      <Filter>Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="ShaderDef.h">
+      <Filter>Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="Default2DShader.h">
+      <Filter>Shader\ShaderDefs</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera2D.h">
+      <Filter>Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="Triangle.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Object.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Line.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Square.h">
+      <Filter>Geometry</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -1209,14 +1239,35 @@
     <ClCompile Include="OpenGLRenderEngine.cpp">
       <Filter>Renderer\RenderEngines\OpenGL</Filter>
     </ClCompile>
-    <ClCompile Include="Shader.cpp">
-      <Filter>Shader\OpenGL</Filter>
-    </ClCompile>
     <ClCompile Include="ShaderManager.cpp">
       <Filter>Shader</Filter>
     </ClCompile>
     <ClCompile Include="FileManager.cpp">
       <Filter>File</Filter>
+    </ClCompile>
+    <ClCompile Include="Shader.cpp">
+      <Filter>Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="ShaderDef.cpp">
+      <Filter>Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="Default2DShader.cpp">
+      <Filter>Shader\ShaderDefs</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera2D.cpp">
+      <Filter>Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="Triangle.cpp">
+      <Filter>Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Object.cpp">
+      <Filter>Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Line.cpp">
+      <Filter>Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Square.cpp">
+      <Filter>Geometry</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

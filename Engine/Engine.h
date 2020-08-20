@@ -4,6 +4,7 @@
 #include "Renderer.h"
 #include "Shader.h"
 #include "ShaderManager.h"
+#include "ShaderDef.h"
 
 namespace GameEngine {
 
@@ -14,6 +15,9 @@ namespace GameEngine {
 
 			Renderer renderer;
 			ShaderManager shader_mgr;
+
+			std::vector<std::shared_ptr<ShaderDef>> _shader_definitions;
+
 		public:
 			~Engine();
 
@@ -42,8 +46,13 @@ namespace GameEngine {
 			void RenderEnd();
 			bool Cleanup();
 
+			void AddShaderDef(std::shared_ptr<ShaderDef> _def);
 
-			static Shader& getShader() {
+			static ShaderManager& getShader() {
+				return get().shader_mgr;
+			}
+
+			static Shader& getCurrentShader() {
 				return get().shader_mgr.ShaderEngine();
 			}
 

@@ -3,24 +3,84 @@
 #include "Shader.h"
 
 #include "Engine.h"
+#include "Line.h"
+#include "Square.h"
+
 
 using namespace GameEngine;
+
+Line t;
+//Square sq;
 
 // Time Step Videos
 // https://stackoverflow.com/questions/20390028/c-using-glfwgettime-for-a-fixed-time-step
 // https://www.youtube.com/watch?v=rh31YOZh5ZM&t
 static double limitFPS = 1.0 / 60.0;
 
-std::vector<vert2D> verts = std::vector<vert2D>();
-unsigned int        VBO;
-unsigned int        VAIO;
+void PreLoad()
+{
+    Engine& e = Engine::get();
 
-void PreLoad();
-void Load();
-void PostLoad();
-void Update(float dt);
-void Render();
-void CleanUp();
+    e.SetAssetDir("C:/Assets/");
+    e.SetWindowName("Saragan");
+    e.SetWindowSize(800, 600);
+    e.PreInit();        
+
+}
+
+void Load()
+{
+    Engine::get().Init();
+
+    // After Engine Initialisation should be done here
+
+    t = Line();
+    t.Init(0.0f, 0.0f, 1.0f, 1.0f, 0.0f, glm::vec4(0.0f, 1.0f, 0.0f, 1.0f));
+
+    /*sq = Square();
+    sq.Init(0.5f, 0.5f, 10.0f, 10.0f, true, glm::vec4(1.0f, 1.0f, 1.0f, 1.0f));*/
+}
+
+void PostLoad()
+{
+    Engine::get().PostInit();
+
+    // After Engine Post Initialisation should be done here
+}
+
+void Update(float dt)
+{
+    // put this in its own function in case you want to do 
+    // your own updates outside of the engine
+    Engine::get().Update(dt);
+    t.Update(dt);
+}
+
+void Render()
+{
+    Engine::get().Render();
+    // put this in its own function in case you want to do 
+    // your own renders outside of the engine
+
+    Engine::getShader().BindNewShader("DEFAULT2D");
+
+    Engine::getRenderer().UniformInt(Engine::getCurrentShader()["is_Text"], 0);
+    Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["projectionMatrix"], glm::mat4(1.0f), 1, false);
+    Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["viewMatrix"], glm::mat4(1.0f), 1, false);
+    Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["modelMatrix"], glm::mat4(1.0f), 1, false);
+
+    //Render Here
+
+    t.Render();
+
+    Engine::get().RenderEnd();
+}
+
+void CleanUp()
+{
+    //Clean up anything you have created prior to this line
+    Engine::get().Cleanup();
+}
 
 int main(void)
 {
@@ -46,7 +106,7 @@ int main(void)
             updates++;
             deltaTime--;
         }
-                
+
         Render();
         frames++;
 
@@ -62,93 +122,3 @@ int main(void)
     CleanUp();
     return 0;
 }
-
-void PreLoad()
-{
-    Engine& e = Engine::get();
-
-    e.SetAssetDir("C:/Assets/");
-    e.SetWindowName("Saragan");
-    e.SetWindowSize(800, 600);
-    e.PreInit();  
-    
-    // After Engine Pre Initialisation should be done here
-
-
-}
-void Load()
-{
-    Engine::get().Init();
-
-    // After Engine Initialisation should be done here
-}
-
-void PostLoad()
-{
-    Engine::get().PostInit();
-
-    // After Engine Post Initialisation should be done here
-    
-    Engine::getShader().bindings.push_back({ SHADER_TYPES::ATRIBLOCATION, "in_Position", 0 });
-    Engine::getShader().bindings.push_back({ SHADER_TYPES::ATRIBLOCATION, "in_Texture", 1 });
-    Engine::getShader().bindings.push_back({ SHADER_TYPES::ATRIBLOCATION, "in_Color", 2 });
-
-    Engine::getShader().bindings.push_back({ SHADER_TYPES::UNIFORM, "projectionMatrix", 0 });
-    Engine::getShader().bindings.push_back({ SHADER_TYPES::UNIFORM, "viewMatrix", 0 });
-    Engine::getShader().bindings.push_back({ SHADER_TYPES::UNIFORM, "modelMatrix", 0 });
-    Engine::getShader().bindings.push_back({ SHADER_TYPES::UNIFORM, "is_Text", 0 });
-
-    Engine::getShader().init(Engine::get().asset_dir + "Shaders/VertexShader.glsl", Engine::get().asset_dir + "Shaders/FragmentShader.glsl");
-
-    Engine::getShader().bind();
-
-    verts.push_back({ {-0.5f, -0.5f, 0.0f, 1.0f }, {-99.0f,-99.0f},  {1.0f, 0.0f, 0.0f, 1.0f } });
-    verts.push_back({ { 0.0f,  0.5f, 0.0f, 1.0f }, {-99.0f,-99.0f},  {0.0f, 1.0f, 0.0f, 1.0f } });
-    verts.push_back({ { 0.5f, -0.5f, 0.0f, 1.0f }, {-99.0f,-99.0f},  {0.0f, 0.0f, 1.0f, 1.0f } });
-
-    Engine::getRenderer().GenerateBuffer(VBO, verts);
-    Engine::getRenderer().VertexStructurePointerF(Engine::getShader()["in_Position"], 4, GL_FALSE, sizeof(vert2D), 0);
-    Engine::getRenderer().VertexStructurePointerF(Engine::getShader()["in_Texture"], 2, GL_TRUE, sizeof(vert2D), (GLvoid*)offsetof(vert2D, Text));
-    Engine::getRenderer().VertexStructurePointerF(Engine::getShader()["in_Color"], 4, GL_TRUE, sizeof(vert2D), (GLvoid*)offsetof(vert2D, col));
-
-    Engine::getRenderer().UnbindVertexBuffer();
-}
-
-void Update(float dt)
-{
-    // put this in its own function in case you want to do 
-    // your own updates outside of the engine
-    Engine::get().Update(dt);
-}
-
-void Render()
-{
-    Engine::get().Render();
-    // put this in its own function in case you want to do 
-    // your own renders outside of the engine
-
-    Engine::getRenderer().UniformInt(Engine::getShader()["is_Text"], 0);
-    Engine::getRenderer().UniformMat4(Engine::getShader()["projectionMatrix"], glm::mat4(1.0f), 1, false);
-    Engine::getRenderer().UniformMat4(Engine::getShader()["viewMatrix"], glm::mat4(1.0f), 1, false);
-    Engine::getRenderer().UniformMat4(Engine::getShader()["modelMatrix"], glm::mat4(1.0f), 1, false);
-
-    Engine::getRenderer().EnableBlend(true, BLEND_TYPE::SRC_ALPHA, BLEND_TYPE::ONE_MINUS_SRC_ALPHA);
-
-    Engine::getRenderer().BindVertexBuffer(VBO);
-
-
-    Engine::getRenderer().DrawArrays(DRAW_TYPE::TRIANGLES, (GLsizei)verts.size());
-
-    Engine::getRenderer().UnbindVertexBuffer();
-
-    Engine::getRenderer().EnableBlend(false);
-
-    Engine::get().RenderEnd();
-}
-
-void CleanUp()
-{
-    //Clean up anything you have created prior to this line
-    Engine::get().Cleanup();
-}
-
