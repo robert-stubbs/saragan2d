@@ -1204,4 +1204,7 @@
       <Filter>Renderer\RenderEngines\OpenGL</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="Notes.txt" />
+  </ItemGroup>
 </Project>
