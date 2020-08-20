@@ -13,7 +13,7 @@ namespace GameEngine
 		isLoaded = false;
 		vertexBuffer = 0;
 		mouseLine = false;
-
+		Buffer = std::vector<vert2D>();
 		colour = glm::vec4(0.0f, 1.0f, 0.0f, 1.0f);
 		mouseLineColour = glm::vec4(1.0f, 1.0f, 1.0f, 1.0f);
 	}
@@ -38,9 +38,9 @@ namespace GameEngine
 		this->colour = col;
 
 		Buffer.clear();
-		vert2D dummy = { {this->origin.x,this->origin.y,z,1.0f},{-99.0f,-99.0f}, {colour.r, colour.g, colour.b, colour.a } };
+		vert2D dummy = { {this->origin.x,this->origin.y,0.0f,1.0f},{-99.0f,-99.0f}, {colour.r, colour.g, colour.b, colour.a } };
 		Buffer.push_back(dummy);
-		vert2D dummy2 = { {this->direction.x,this->direction.y,z,1.0f},{-99.0f,-99.0f}, {colour.r, colour.g, colour.b, colour.a } };
+		vert2D dummy2 = { {this->direction.x,this->direction.y,0.0f,1.0f},{-99.0f,-99.0f}, {colour.r, colour.g, colour.b, colour.a } };
 		Buffer.push_back(dummy2);
 
 		isLoaded = true;
@@ -161,7 +161,7 @@ namespace GameEngine
 			hasUpdate = false;
 		}
 
-		if (Buffer.size() > 0) {
+		if (Buffer.size() > 0 && vertexBuffer != 0) {
 
 			//Engine::getShader().BindNewShader(shader_name);
 

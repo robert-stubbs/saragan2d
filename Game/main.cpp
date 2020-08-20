@@ -35,7 +35,7 @@ void Load()
     // After Engine Initialisation should be done here
 
     t = Line();
-    t.Init(0.0f, 0.0f, 1.0f, 1.0f, 0.0f, glm::vec4(0.0f, 1.0f, 0.0f, 1.0f));
+    t.Init(-1.0f, -1.0f, 1.0f, 1.0f, 0.0f, glm::vec4(0.0f, 1.0f, 0.0f, 1.0f));
 
     /*sq = Square();
     sq.Init(0.5f, 0.5f, 10.0f, 10.0f, true, glm::vec4(1.0f, 1.0f, 1.0f, 1.0f));*/
@@ -46,6 +46,7 @@ void PostLoad()
     Engine::get().PostInit();
 
     // After Engine Post Initialisation should be done here
+    Engine::getRenderer().CheckError();
 }
 
 void Update(float dt)
@@ -54,6 +55,7 @@ void Update(float dt)
     // your own updates outside of the engine
     Engine::get().Update(dt);
     t.Update(dt);
+    Engine::getRenderer().CheckError();
 }
 
 void Render()

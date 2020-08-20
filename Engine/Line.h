@@ -23,7 +23,7 @@ namespace GameEngine
 
 			bool IntersectsLine(Line* line, vert2D& result);
 
-			GLuint		VAOID[1];
+			GLuint		VAOID;
 			GLuint		vertexBuffer;
 			std::vector<vert2D> Buffer;
 
