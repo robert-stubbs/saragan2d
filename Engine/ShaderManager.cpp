@@ -7,13 +7,13 @@ namespace GameEngine {
 	ShaderManager::ShaderManager()
 	{
 		engine_type = RenderEngines::None;
-		shader_engine = nullptr;
+		//shader_engine = nullptr;
 	}
 
 	ShaderManager::ShaderManager(RenderEngines EngineType)
 	{
 		engine_type = EngineType;
-		shader_engine = nullptr;
+		//shader_engine = nullptr;
 
 		//switch (engine_type)
 		//{

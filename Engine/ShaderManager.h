@@ -12,14 +12,14 @@ namespace GameEngine {
 	{
 		private:
 			RenderEngines engine_type;
-			std::shared_ptr<Shader> shader_engine;
+			//std::shared_ptr<Shader> shader_engine;
 		public:
 
 			ShaderManager();
 			ShaderManager(RenderEngines EngineType);
 			virtual ~ShaderManager();
 
-			Shader& RenderEngine() { return *shader_engine; }
+			//Shader& RenderEngine() { return *shader_engine; }
 	};
 
 }
