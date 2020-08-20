@@ -471,6 +471,7 @@
     <ClInclude Include="Renderer.h" />
     <ClInclude Include="SafeDelete.h" />
     <ClInclude Include="Shader.h" />
+    <ClInclude Include="ShaderManager.h" />
     <ClInclude Include="Types.h" />
   </ItemGroup>
   <ItemGroup>
@@ -483,6 +484,7 @@
     <ClCompile Include="RenderEngineBase.cpp" />
     <ClCompile Include="Renderer.cpp" />
     <ClCompile Include="Shader.cpp" />
+    <ClCompile Include="ShaderManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="Notes.txt" />

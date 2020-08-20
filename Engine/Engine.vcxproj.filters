@@ -1162,9 +1162,6 @@
     <ClInclude Include="..\ThirdParty\glfw\include\GLFW\glfw3native.h">
       <Filter>ThirdParty\glfw</Filter>
     </ClInclude>
-    <ClInclude Include="Shader.h">
-      <Filter>Shader</Filter>
-    </ClInclude>
     <ClInclude Include="OpenGLShader.h">
       <Filter>Shader\OpenGL</Filter>
     </ClInclude>
@@ -1184,12 +1181,15 @@
     <ClInclude Include="SafeDelete.h">
       <Filter>Tools</Filter>
     </ClInclude>
+    <ClInclude Include="Shader.h">
+      <Filter>Shader\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="ShaderManager.h">
+      <Filter>Shader</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="EnginePCH.cpp" />
-    <ClCompile Include="Shader.cpp">
-      <Filter>Shader</Filter>
-    </ClCompile>
     <ClCompile Include="OpenGLShader.cpp">
       <Filter>Shader\OpenGL</Filter>
     </ClCompile>
@@ -1202,6 +1202,12 @@
     </ClCompile>
     <ClCompile Include="OpenGLRenderEngine.cpp">
       <Filter>Renderer\RenderEngines\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="Shader.cpp">
+      <Filter>Shader\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="ShaderManager.cpp">
+      <Filter>Shader</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
