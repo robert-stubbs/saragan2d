@@ -55,6 +55,9 @@
     <Filter Include="Renderer\RenderEngines\OpenGL">
       <UniqueIdentifier>{67e5e2c2-89c6-418e-b58c-45e99b477e3f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="File">
+      <UniqueIdentifier>{d0cc5ded-3e5a-442f-85a2-97021af1f468}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\ThirdParty\glew\include\GL\eglew.h">
@@ -1187,6 +1190,9 @@
     <ClInclude Include="ShaderManager.h">
       <Filter>Shader</Filter>
     </ClInclude>
+    <ClInclude Include="FileManager.h">
+      <Filter>File</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="EnginePCH.cpp" />
@@ -1208,6 +1214,9 @@
     </ClCompile>
     <ClCompile Include="ShaderManager.cpp">
       <Filter>Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="FileManager.cpp">
+      <Filter>File</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

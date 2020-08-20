@@ -25,6 +25,29 @@ namespace GameEngine {
 		float  col[4];
 	} vert2D;
 
+	enum class SHADER_TYPES
+	{
+		UNIFORM,
+		ATRIBLOCATION
+	};
+
+	enum class SHADER_VAR_TYPES
+	{
+		INT,
+		FLOAT,
+		VEC2,
+		VEC3,
+		VEC4,
+		MAT4		
+	};
+
+	typedef struct
+	{
+		SHADER_TYPES location_type;
+		std::string name;
+		unsigned int index;
+	} ShaderBinding;
+
 	enum class DRAW_TYPE
 	{
 		LINES,

@@ -49,6 +49,7 @@ namespace GameEngine {
 		glfwMakeContextCurrent(window);
 
 		renderer = Renderer(RenderEngines::OpenGL);
+		shader_mgr = ShaderManager(RenderEngines::OpenGL);
 		return true;
 	}
 

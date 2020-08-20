@@ -14,44 +14,9 @@
 
 4. when binding a shader we can loop over these items? (maybe store as a struct so we can get type)
 
-	struct shaderProp
-	{
-		Prop type (attrib location or uniform)
-		Prop var type (mat4 or vec3 or?)	
-		prop name,
-		prop location,
-		prop position,
-		prop stride/offset,
-		prop size
-		prop normalize?
-	}
-
 	e.g. we need to abstract this
 	 Engine::getRenderer().VertexStructurePointerF(shader->Position, 4, GL_FALSE, sizeof(vert2D), 0);
 
-	glBindAttribLocation(ShaderID, 0, "in_Position"); // Bind a constant attribute location for positions of vertices
-	glBindAttribLocation(ShaderID, 1, "in_Texture"); // Bind another constant attribute location, this time for color
-	glBindAttribLocation(ShaderID, 2, "in_Color"); // Bind another constant attribute location, this time for color
-
-	glLinkProgram(ShaderID); // Link the vertex and fragment shaders in the program
-	validateProgram(ShaderID); // Validate the shader program
-
-	projectionMatrixLocation = glGetUniformLocation(ShaderID, "projectionMatrix"); // Get the location of our projection matrix in the shader
-	viewMatrixLocation = glGetUniformLocation(ShaderID, "viewMatrix"); // Get the location of our view matrix in the shader
-	modelMatrixLocation = glGetUniformLocation(ShaderID, "modelMatrix"); // Get the location of our model matrix in the shader
-
-	//Color = glGetUniformLocation(ShaderID, "in_Color");
-	isText = glGetUniformLocation(ShaderID, "is_Text");
-
-	Position = glGetAttribLocation(ShaderID, "in_Position");
-	Texture = glGetAttribLocation(ShaderID, "in_Texture");
-	Color = glGetAttribLocation(ShaderID, "in_Color");
-
-	WorldLight.Color = glGetUniformLocation(ShaderID, "WorldLight.Color");
-	WorldLight.AmbientIntensity = glGetUniformLocation(ShaderID, "WorldLight.AmbientIntensity");
-	WorldLight.Direction = glGetUniformLocation(ShaderID, "WorldLight.Direction");
-	WorldLight.DiffuseIntensity = glGetUniformLocation(ShaderID, "WorldLight.DiffuseIntensity");
-	WorldLight.isWorldSource = glGetUniformLocation(ShaderID, "WorldLight.isWorldSource");
 
 
 5. Shader Manager should be like the renderer, it should be abstract but

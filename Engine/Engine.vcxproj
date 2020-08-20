@@ -465,6 +465,7 @@
     <ClInclude Include="..\ThirdParty\glm\include\glm\vector_relational.hpp" />
     <ClInclude Include="Engine.h" />
     <ClInclude Include="EnginePCH.h" />
+    <ClInclude Include="FileManager.h" />
     <ClInclude Include="OpenGLRenderEngine.h" />
     <ClInclude Include="OpenGLShader.h" />
     <ClInclude Include="RenderEngineBase.h" />
@@ -479,6 +480,7 @@
     <ClCompile Include="EnginePCH.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="FileManager.cpp" />
     <ClCompile Include="OpenGLRenderEngine.cpp" />
     <ClCompile Include="OpenGLShader.cpp" />
     <ClCompile Include="RenderEngineBase.cpp" />

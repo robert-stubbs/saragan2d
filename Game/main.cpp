@@ -11,8 +11,6 @@ using namespace GameEngine;
 // https://www.youtube.com/watch?v=rh31YOZh5ZM&t
 static double limitFPS = 1.0 / 60.0;
 
-//Shader* shader; // Our GLSL shader 
-
 std::vector<vert2D> verts = std::vector<vert2D>();
 unsigned int        VBO;
 unsigned int        VAIO;
@@ -91,19 +89,27 @@ void PostLoad()
 
     // After Engine Post Initialisation should be done here
     
-    //shader = new OpenGLShader();
-    //shader->init(Engine::get().asset_dir + "Shaders/VertexShader.glsl", Engine::get().asset_dir + "Shaders/FragmentShader.glsl");
+    Engine::getShader().bindings.push_back({ SHADER_TYPES::ATRIBLOCATION, "in_Position", 0 });
+    Engine::getShader().bindings.push_back({ SHADER_TYPES::ATRIBLOCATION, "in_Texture", 1 });
+    Engine::getShader().bindings.push_back({ SHADER_TYPES::ATRIBLOCATION, "in_Color", 2 });
 
-    //shader->bind();
+    Engine::getShader().bindings.push_back({ SHADER_TYPES::UNIFORM, "projectionMatrix", 0 });
+    Engine::getShader().bindings.push_back({ SHADER_TYPES::UNIFORM, "viewMatrix", 0 });
+    Engine::getShader().bindings.push_back({ SHADER_TYPES::UNIFORM, "modelMatrix", 0 });
+    Engine::getShader().bindings.push_back({ SHADER_TYPES::UNIFORM, "is_Text", 0 });
+
+    Engine::getShader().init(Engine::get().asset_dir + "Shaders/VertexShader.glsl", Engine::get().asset_dir + "Shaders/FragmentShader.glsl");
+
+    Engine::getShader().bind();
 
     verts.push_back({ {-0.5f, -0.5f, 0.0f, 1.0f }, {-99.0f,-99.0f},  {1.0f, 0.0f, 0.0f, 1.0f } });
     verts.push_back({ { 0.0f,  0.5f, 0.0f, 1.0f }, {-99.0f,-99.0f},  {0.0f, 1.0f, 0.0f, 1.0f } });
     verts.push_back({ { 0.5f, -0.5f, 0.0f, 1.0f }, {-99.0f,-99.0f},  {0.0f, 0.0f, 1.0f, 1.0f } });
 
     Engine::getRenderer().GenerateBuffer(VBO, verts);
-    //Engine::getRenderer().VertexStructurePointerF(shader->Position, 4, GL_FALSE, sizeof(vert2D), 0);
-    //Engine::getRenderer().VertexStructurePointerF(shader->Texture, 2, GL_TRUE, sizeof(vert2D), (GLvoid*)offsetof(vert2D, Text));
-    //Engine::getRenderer().VertexStructurePointerF(shader->Color, 4, GL_TRUE, sizeof(vert2D), (GLvoid*)offsetof(vert2D, col));
+    Engine::getRenderer().VertexStructurePointerF(Engine::getShader()["in_Position"], 4, GL_FALSE, sizeof(vert2D), 0);
+    Engine::getRenderer().VertexStructurePointerF(Engine::getShader()["in_Texture"], 2, GL_TRUE, sizeof(vert2D), (GLvoid*)offsetof(vert2D, Text));
+    Engine::getRenderer().VertexStructurePointerF(Engine::getShader()["in_Color"], 4, GL_TRUE, sizeof(vert2D), (GLvoid*)offsetof(vert2D, col));
 
     Engine::getRenderer().UnbindVertexBuffer();
 }
@@ -121,11 +127,10 @@ void Render()
     // put this in its own function in case you want to do 
     // your own renders outside of the engine
 
-    //Engine::getRenderer().UniformInt(shader->isText, 0);
-    //Engine::getRenderer().UniformMat4(shader->projectionMatrixLocation, glm::mat4(1.0f), 1, false);
-    //Engine::getRenderer().UniformMat4(shader->viewMatrixLocation, glm::mat4(1.0f), 1, false);
-    //Engine::getRenderer().UniformMat4(shader->modelMatrixLocation, glm::mat4(1.0f), 1, false);
-    //Engine::getRenderer().UniformVec4(shader->Color, glm::vec4(0.0f, 1.0f, 0.0f, 1.0f), 1);
+    Engine::getRenderer().UniformInt(Engine::getShader()["is_Text"], 0);
+    Engine::getRenderer().UniformMat4(Engine::getShader()["projectionMatrix"], glm::mat4(1.0f), 1, false);
+    Engine::getRenderer().UniformMat4(Engine::getShader()["viewMatrix"], glm::mat4(1.0f), 1, false);
+    Engine::getRenderer().UniformMat4(Engine::getShader()["modelMatrix"], glm::mat4(1.0f), 1, false);
 
     Engine::getRenderer().EnableBlend(true, BLEND_TYPE::SRC_ALPHA, BLEND_TYPE::ONE_MINUS_SRC_ALPHA);
 
