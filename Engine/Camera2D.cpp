@@ -15,7 +15,7 @@ namespace GameEngine
 		LookAt = glm::vec3(0.0f, 0.0f, 0.0f);
 
 		aspect = (float)(width / height);
-		ProjectionMatrix = glm::ortho(0.0f, width, height, 0.0f, -1.0f, 1.0f);
+		ProjectionMatrix = glm::ortho(0.0f, width, height, 0.0f, -10.0f, 10.0f);
 
 
 		ViewMatrix = glm::mat4(1.0f);
@@ -34,7 +34,8 @@ namespace GameEngine
 
 		glm::vec3 strafe(mat[0][0], mat[1][0], mat[2][0]);
 
-		LookAt += (dx * strafe) * speed;
+		LookAt.x += (dx) * speed;
+		LookAt.y += (dy) * speed;
 
 		glm::mat4 translate = glm::mat4(1.0f);
 		translate = glm::translate(translate, -LookAt);

@@ -50,8 +50,8 @@ namespace GameEngine {
 	{
 		// should be moved to the renderer
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-		glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
-		glClearDepth(1.0f);
+		//glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
+		//glClearDepth(1.0f);
 
 
 
@@ -123,6 +123,22 @@ namespace GameEngine {
 		return true;
 	}
 
+	void OpenGLRenderEngine::GenerateVertexArrayBuffer(unsigned int& VAB)
+	{
+		glGenVertexArrays(1, &VAB);
+		glBindVertexArray(VAB);
+	}
+
+	void OpenGLRenderEngine::DeleteVertexBuffer(unsigned int& VAB)
+	{
+		glDeleteVertexArrays(1, &VAB);
+	}
+
+	void OpenGLRenderEngine::DeleteBuffer(unsigned int& VAO)
+	{
+		glDeleteBuffers(1, &VAO);
+	}
+
 	void OpenGLRenderEngine::GenerateBuffer(unsigned int& VBO, std::vector<vert>& verts)
 	{
 		glGenBuffers(1, &VBO);
@@ -180,10 +196,20 @@ namespace GameEngine {
 
 	void OpenGLRenderEngine::BindVertexBuffer(unsigned int& VBO)
 	{
-		glBindBuffer(GL_ARRAY_BUFFER, VBO);
+		glBindVertexArray(VBO);
 	}
 
 	void OpenGLRenderEngine::UnbindVertexBuffer()
+	{
+		glBindVertexArray(0);
+	}
+
+	void OpenGLRenderEngine::BindBuffer(unsigned int& VBO)
+	{
+		glBindBuffer(GL_ARRAY_BUFFER, VBO);
+	}
+
+	void OpenGLRenderEngine::UnbindBuffer()
 	{
 		glBindBuffer(GL_ARRAY_BUFFER, 0);
 	}
@@ -207,8 +233,8 @@ namespace GameEngine {
 
 	void OpenGLRenderEngine::VertexStructurePointerF(int location, int size, bool normalized, int stride, const void* pointer)
 	{
-		glEnableVertexAttribArray(location);
 		glVertexAttribPointer(location, size, GL_FLOAT, normalized, stride, pointer);
+		glEnableVertexAttribArray(location);
 		CheckError();
 	}
 
@@ -320,6 +346,8 @@ namespace GameEngine {
 		glDisable(GL_DEPTH_TEST);
 	}
 
+	
+
 	void OpenGLRenderEngine::DrawArrays(DRAW_TYPE type, int count, int first)
 	{
 		GLenum val;
@@ -358,7 +386,7 @@ namespace GameEngine {
 			break;
 		}
 
-		glDrawArrays(GL_TRIANGLES, first, count);
+		glDrawArrays(val, first, count);
 	}
 
 	void OpenGLRenderEngine::DrawElements(DRAW_TYPE type, int count, VALUE_TYPE indice_type, const void* indices)

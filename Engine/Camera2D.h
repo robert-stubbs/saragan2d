@@ -18,6 +18,7 @@ namespace GameEngine
 		float aspect;
 
 		float dx; //how much we strafe on x
+		float dy; //how much we walk on z
 		float dz; //how much we walk on z
 
 		glm::vec3 LookAt;

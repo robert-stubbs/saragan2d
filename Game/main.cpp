@@ -6,13 +6,12 @@
 #include "Line.h"
 #include "Triangle.h"
 #include "Square.h"
-
+#include "Camera2D.h"
 
 using namespace GameEngine;
 
-Triangle p;
-Line t;
-//Square sq;
+
+Triangle t;
 
 // Time Step Videos
 // https://stackoverflow.com/questions/20390028/c-using-glfwgettime-for-a-fixed-time-step
@@ -26,7 +25,7 @@ void PreLoad()
     e.SetAssetDir("C:/Assets/");
     e.SetWindowName("Saragan");
     e.SetWindowSize(800, 600);
-    e.PreInit();        
+    e.PreInit();   
 
 }
 
@@ -42,26 +41,20 @@ void PostLoad()
 {
     Engine::get().PostInit();
 
-    p = Triangle();
-    p.Init();
-
-    t = Line();
-    t.Init(-1.0f, -1.0f, 1.0f, 1.0f, 1.0f, glm::vec4(1.0f, 1.0f,1.0f, 1.0f));
-
     // After Engine Post Initialisation should be done here
-    Engine::getRenderer().CheckError();
+    t.Init(0.0f,0.0f, 100.0f, 100.0f, 100.0f, 0.0f);
+
 }
 
 void Update(float dt)
 {
+
     // put this in its own function in case you want to do 
     // your own updates outside of the engine
     Engine::get().Update(dt);
 
-    p.Update(dt);
     t.Update(dt);
 
-    Engine::getRenderer().CheckError();
 }
 
 void Render()
@@ -73,12 +66,12 @@ void Render()
     Engine::getShader().BindNewShader("DEFAULT2D");
 
     Engine::getRenderer().UniformInt(Engine::getCurrentShader()["is_Text"], 0);
-    Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["projectionMatrix"], glm::mat4(1.0f), 1, false);
-    Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["viewMatrix"], glm::mat4(1.0f), 1, false);
+    Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["projectionMatrix"], Engine::get().cam->ProjectionMatrix, 1, false);
+    Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["viewMatrix"], Engine::get().cam->ViewMatrix, 1, false);
+    //Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["projectionMatrix"], glm::mat4(1.0f), 1, false);
+    //Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["viewMatrix"], glm::mat4(1.0f), 1, false);
     Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["modelMatrix"], glm::mat4(1.0f), 1, false);
 
-    //Render Here
-    p.Render();
     t.Render();
 
     Engine::get().RenderEnd();

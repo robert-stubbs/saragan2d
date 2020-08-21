@@ -136,41 +136,23 @@ namespace GameEngine
 	{
 		if (!VBO || VBO == 0)
 		{
-			glGenVertexArrays(1, &VAIO);
-			glBindVertexArray(VAIO);
-
-			glGenBuffers(1, &VBO);
-			glBindBuffer(GL_ARRAY_BUFFER, VBO);
-			glBufferData(GL_ARRAY_BUFFER, sizeof(vert) * verts.size(), &verts[0], GL_STATIC_DRAW);
-
-			glVertexAttribPointer(0, 4, GL_FLOAT, GL_FALSE, sizeof(vert2D), 0);
-			glVertexAttribPointer(1, 2, GL_FLOAT, GL_TRUE, sizeof(vert2D), (GLvoid*)offsetof(vert2D, Text));
-			glVertexAttribPointer(2, 4, GL_FLOAT, GL_TRUE, sizeof(vert2D), (GLvoid*)offsetof(vert2D, col));
-
-			glEnableVertexAttribArray(0);
-			glEnableVertexAttribArray(1);
-			glEnableVertexAttribArray(2);
-
-			glBindBuffer(GL_ARRAY_BUFFER, 0);
-			glBindVertexArray(0);
-
-
-	/*			Engine::getRenderer().GenerateBuffer(VBO, verts);
-			
 			Shader& s = Engine::getShader()[shader_name];
 
+			Engine::getRenderer().GenerateVertexArrayBuffer(VAIO);
+			Engine::getRenderer().GenerateBuffer(VBO, verts);
 	
 			Engine::getRenderer().VertexStructurePointerF(s["in_Position"], 4, GL_FALSE, sizeof(vert2D), 0);
-		Engine::getRenderer().VertexStructurePointerF(s["in_Texture"], 2, GL_TRUE, sizeof(vert2D), (GLvoid*)offsetof(vert2D, Text));
+			Engine::getRenderer().VertexStructurePointerF(s["in_Texture"], 2, GL_TRUE, sizeof(vert2D), (GLvoid*)offsetof(vert2D, Text));
 			Engine::getRenderer().VertexStructurePointerF(s["in_Color"], 4, GL_TRUE, sizeof(vert2D), (GLvoid*)offsetof(vert2D, col));
 
-			Engine::getRenderer().UnbindVertexBuffer();*/
+			Engine::getRenderer().UnbindBuffer();
 
+			Engine::getRenderer().UnbindVertexBuffer();
 			isLoaded = true;
 		}
 		else {
 			Engine::getRenderer().UpdateBuffer(VBO, verts);
-			Engine::getRenderer().UnbindVertexBuffer();
+			Engine::getRenderer().UnbindBuffer();
 		}
 	}
 
@@ -180,7 +162,7 @@ namespace GameEngine
 
 		if (VBO && hasUpdate) {
 			Engine::getRenderer().UpdateBuffer(VBO, verts);
-			Engine::getRenderer().UnbindVertexBuffer();
+			Engine::getRenderer().UnbindBuffer();
 
 		}
 	}
@@ -194,27 +176,17 @@ namespace GameEngine
 		}
 
 		if (verts.size() > 0 && VBO != 0) {
+			Engine::getShader().BindNewShader(shader_name);
 
-			//Engine::getShader().BindNewShader(shader_name);
+			Engine::getRenderer().EnableBlend(true, BLEND_TYPE::SRC_ALPHA, BLEND_TYPE::ONE_MINUS_SRC_ALPHA);
 
-			//Engine::getRenderer().UniformInt(Engine::getCurrentShader()["is_Text"], 0);
-			//Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["projectionMatrix"], glm::mat4(1.0f), 1, false);
-			//Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["viewMatrix"], glm::mat4(1.0f), 1, false);
-			Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["modelMatrix"], glm::mat4(1.0f), 1, false);
+			Engine::getRenderer().BindVertexBuffer(VAIO);
 
+			Engine::getRenderer().DrawArrays(DRAW_TYPE::LINES, (GLsizei)verts.size());
 
-			glBindVertexArray(VAIO); // Bind our Vertex Array Object
+			Engine::getRenderer().UnbindVertexBuffer();
 
-			glDrawArrays(GL_LINES, 0, (GLsizei)verts.size()); // Draw our line
-
-			glBindVertexArray(0); // Unbind our Vertex Array Object
-
-			//Engine::getRenderer().BindVertexBuffer(VBO);
-
-			//Engine::getRenderer().DrawArrays(DRAW_TYPE::LINES, (GLsizei)verts.size());
-
-			//Engine::getRenderer().UnbindVertexBuffer();
-
+			Engine::getRenderer().EnableBlend(false);
 		}
 
 		return true;

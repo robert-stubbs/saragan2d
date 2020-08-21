@@ -23,6 +23,11 @@ namespace GameEngine {
 			virtual glm::vec3 GetWorldPos2D(int x, int y, glm::mat4 projection, glm::mat4 view);
 
 			virtual bool ResizeWindow(int Width, int Height);
+			
+			virtual void GenerateVertexArrayBuffer(unsigned int& VAB);
+
+			virtual void DeleteBuffer(unsigned int& VAB);
+			virtual void DeleteVertexBuffer(unsigned int& VAO);
 
 			virtual void GenerateBuffer(unsigned int& VBO, std::vector<vert>& verts);
 			virtual void GenerateBuffer(unsigned int& VBO, std::vector<vert2D>& verts);
@@ -35,6 +40,9 @@ namespace GameEngine {
 
 			virtual void BindVertexBuffer(unsigned int& VBO);
 			virtual void UnbindVertexBuffer();
+
+			virtual void BindBuffer(unsigned int& VBO);
+			virtual void UnbindBuffer();
 
 			virtual void GenerateIndexBuffer(unsigned& IBO, std::vector<int>& VertIndex);
 

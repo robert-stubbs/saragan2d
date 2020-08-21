@@ -12,10 +12,10 @@ namespace GameEngine
 	{
 		shader_name = "DEFAULT2D";
 		isLoaded = false;
-		vertexBuffer = 0;
+		VBO = 0;
 		colour = glm::vec4(0.5f, 0.5f, 0.5f, 1.0f);
 
-		VAOID[0] = 0;
+		VAIO = 0;
 
 		origin = glm::vec3(1.0f);
 		height = 10;
@@ -53,6 +53,7 @@ namespace GameEngine
 			this->strokeColour = strokeColour;
 			GenerateStroke();
 		}
+		GenerateBuffers();
 	}
 
 	void Square::GenerateVerts()
@@ -65,15 +66,15 @@ namespace GameEngine
 
 		vert2D bleft = { {this->origin.x,this->origin.y + this->height,0.0f,1.0f},{-99.0f,-99.0f}, {colour.r, colour.g, colour.b, colour.a } };
 
-		Buffer.push_back(tleft);
-		Buffer.push_back(tright);
-		Buffer.push_back(bright);
-		Buffer.push_back(bleft);
+		verts.push_back(tleft);
+		verts.push_back(tright);
+		verts.push_back(bright);
+		verts.push_back(bleft);
 
 		isLoaded = true;
 	}
 
-	void  Square::GenerateStroke()
+	void Square::GenerateStroke()
 	{
 		top->Init(this->origin.x + 1, this->origin.y + 1, this->origin.x + this->width - 1, this->origin.y + 1, 1.0f, this->strokeColour);
 		left->Init(this->origin.x + 1, this->origin.y + 1, this->origin.x + 1, this->origin.y + this->height - 1, 1.0f, this->strokeColour);
@@ -81,48 +82,45 @@ namespace GameEngine
 		bottom->Init(this->origin.x, this->origin.y + this->height, this->origin.x + this->width, this->origin.y + this->height, 1.0f, this->strokeColour);
 	}
 
-	void Square::Update(float dt)
+	void Square::GenerateBuffers()
 	{
-		if (!isLoaded) return;
+		if (!VBO || VBO == 0)
+		{
+			Shader& s = Engine::getShader()[shader_name];
 
-		if (vertexBuffer && hasUpdate) {
-			Engine::getRenderer().ReGenerateBuffer(vertexBuffer, Buffer);
+			Engine::getRenderer().GenerateVertexArrayBuffer(VAIO);
+			Engine::getRenderer().GenerateBuffer(VBO, verts);
 
-			if (this->stroke) {
-				top->colour = this->strokeColour;
-				left->colour = this->strokeColour;
-				right->colour = this->strokeColour;
-				bottom->colour = this->strokeColour;
-
-				top->Update(dt);
-				left->Update(dt);
-				right->Update(dt);
-				bottom->Update(dt);
-			}
-
-		}
-		else if (!vertexBuffer || vertexBuffer == 0 || hasUpdate) {
-
-			Engine::getRenderer().GenerateBuffer(vertexBuffer, Buffer);
-
-			Shader& s = Engine::getShader().BindNewShader(shader_name);
 			Engine::getRenderer().VertexStructurePointerF(s["in_Position"], 4, GL_FALSE, sizeof(vert2D), 0);
 			Engine::getRenderer().VertexStructurePointerF(s["in_Texture"], 2, GL_TRUE, sizeof(vert2D), (GLvoid*)offsetof(vert2D, Text));
 			Engine::getRenderer().VertexStructurePointerF(s["in_Color"], 4, GL_TRUE, sizeof(vert2D), (GLvoid*)offsetof(vert2D, col));
 
-			if (this->stroke) {
-				top->colour = this->strokeColour;
-				left->colour = this->strokeColour;
-				right->colour = this->strokeColour;
-				bottom->colour = this->strokeColour;
+			Engine::getRenderer().UnbindBuffer();
 
-				top->Update(dt);
-				left->Update(dt);
-				right->Update(dt);
-				bottom->Update(dt);
-			}
+			Engine::getRenderer().UnbindVertexBuffer();
 
-			hasUpdate = true;
+			isLoaded = true;
+		}
+		else {
+			Engine::getRenderer().UpdateBuffer(VBO, verts);
+			Engine::getRenderer().UnbindBuffer();
+		}
+	}
+
+	void Square::Update(float dt)
+	{
+		if (!isLoaded) return;
+
+		if (this->stroke) {
+			top->colour = this->strokeColour;
+			left->colour = this->strokeColour;
+			right->colour = this->strokeColour;
+			bottom->colour = this->strokeColour;
+
+			top->Update(dt);
+			left->Update(dt);
+			right->Update(dt);
+			bottom->Update(dt);
 		}
 	}
 
@@ -130,16 +128,23 @@ namespace GameEngine
 	{
 		if (!isLoaded) return false;
 
-		if (Buffer.size() > 0) {
+		if (!VBO || VBO == 0) {
+			hasUpdate = true;
+		}
 
+		if (VAIO && VAIO > 0 && verts.size() > 0) {
 
 			Engine::getShader().BindNewShader(shader_name);
 
-			Engine::getRenderer().BindVertexBuffer(vertexBuffer);
+			Engine::getRenderer().EnableBlend(true, BLEND_TYPE::SRC_ALPHA, BLEND_TYPE::ONE_MINUS_SRC_ALPHA);
 
-			Engine::getRenderer().DrawArrays(DRAW_TYPE::TRIANGLE_FAN, (GLsizei)Buffer.size());
+			Engine::getRenderer().BindVertexBuffer(VAIO);
+
+			Engine::getRenderer().DrawArrays(DRAW_TYPE::TRIANGLE_FAN, (GLsizei)verts.size());
 
 			Engine::getRenderer().UnbindVertexBuffer();
+
+			Engine::getRenderer().EnableBlend(false);
 
 			if (this->stroke) {
 				top->Render();
@@ -147,6 +152,7 @@ namespace GameEngine
 				right->Render();
 				bottom->Render();
 			}
+
 		}
 
 		return true;

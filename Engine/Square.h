@@ -22,15 +22,17 @@ namespace GameEngine
 		virtual void GenerateVerts();
 		virtual void GenerateStroke();
 
+		virtual void GenerateBuffers();
+
 		virtual void Update(float dt);
 		virtual bool Render();
 		virtual void CleanUp();
 
 		virtual bool pointInSquare(float x, float y);
 
-		GLuint		VAOID[1];
-		GLuint		vertexBuffer;
-		std::vector<vert2D> Buffer;
+		GLuint		VAIO;
+		GLuint		VBO;
+		std::vector<vert2D> verts;
 
 		glm::vec3 origin;
 		float width;

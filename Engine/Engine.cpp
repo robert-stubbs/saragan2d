@@ -17,6 +17,7 @@ namespace GameEngine {
 	void Engine::SetWindowName(std::string name)
 	{
 		WindowName = name;
+		cam = new Camera2D(800, 600);
 	}
 
 	void Engine::SetWindowSize(int width, int height, bool isFullScreen)
@@ -28,6 +29,7 @@ namespace GameEngine {
 
 	bool Engine::PreInit()
 	{
+
 		/* Initialize the library */
 		if (!glfwInit()) {
 			return false;
@@ -48,6 +50,8 @@ namespace GameEngine {
 		}
 
 		glfwMakeContextCurrent(window);
+
+		glfwSetKeyCallback(window, key_callback);
 
 		renderer = Renderer(RenderEngines::OpenGL);
 		shader_mgr = ShaderManager(RenderEngines::OpenGL);
@@ -96,6 +100,8 @@ namespace GameEngine {
 
 	bool Engine::UpdateOrth(float DeltaTime)
 	{
+		cam->Update(DeltaTime);
+
 
 		return true;
 	}
@@ -138,5 +144,60 @@ namespace GameEngine {
 	void Engine::AddShaderDef(std::shared_ptr<ShaderDef> _def)
 	{
 		_shader_definitions.push_back(_def);
+	}
+	
+	
+	void Engine::key_callback(GLFWwindow* window, int key, int scancode, int action, int mods)
+	{
+		if (action == GLFW_PRESS || action == GLFW_REPEAT)
+		{
+			switch (key) {
+				case GLFW_KEY_A:
+				{
+					Engine::get().cam->dx = 10;
+				}break;
+				case GLFW_KEY_D:
+				{
+					Engine::get().cam->dx = -10;
+				}break;
+				case GLFW_KEY_W:
+				{
+					Engine::get().cam->dy = 10;
+				}break;
+				case GLFW_KEY_S:
+				{
+					Engine::get().cam->dy = -10;
+				}break;
+			}
+
+		} else if (action == GLFW_RELEASE) {
+				switch (key) {
+				case GLFW_KEY_A:
+				{
+					Engine::get().cam->dx = 0;
+				}break;
+				case GLFW_KEY_D:
+				{
+					Engine::get().cam->dx = 0;
+				}break;
+				case GLFW_KEY_W:
+				{
+					Engine::get().cam->dy = 0;
+				}break;
+				case GLFW_KEY_S:
+				{
+					Engine::get().cam->dy = 0;
+				}break;
+			}
+
+		}
+
+
+		if (key == GLFW_KEY_E && (action == GLFW_PRESS || action == GLFW_REPEAT))
+		{
+			std::cout << "E Pressed" << std::endl;
+		} else if (action == GLFW_RELEASE && key == GLFW_KEY_E) {			
+			Engine::get().cam->dx = 0;
+		}
 	}
 }

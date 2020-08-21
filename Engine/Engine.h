@@ -5,6 +5,7 @@
 #include "Shader.h"
 #include "ShaderManager.h"
 #include "ShaderDef.h"
+#include "Camera2D.h"
 
 namespace GameEngine {
 
@@ -19,6 +20,8 @@ namespace GameEngine {
 			std::vector<std::shared_ptr<ShaderDef>> _shader_definitions;
 
 		public:
+
+			Camera2D* cam;
 			~Engine();
 
 			bool fullscreen = false;
@@ -47,6 +50,8 @@ namespace GameEngine {
 			bool Cleanup();
 
 			void AddShaderDef(std::shared_ptr<ShaderDef> _def);
+
+			static void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods);
 
 			static ShaderManager& getShader() {
 				return get().shader_mgr;
