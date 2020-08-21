@@ -11,7 +11,7 @@ namespace GameEngine
 	Shader::~Shader() {}
 
 
-	unsigned int& Shader::operator[](std::string name)
+	unsigned int Shader::operator[](std::string name)
 	{
 		return locations[name];
 	}

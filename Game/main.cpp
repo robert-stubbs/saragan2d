@@ -4,11 +4,13 @@
 
 #include "Engine.h"
 #include "Line.h"
+#include "Triangle.h"
 #include "Square.h"
 
 
 using namespace GameEngine;
 
+Triangle p;
 Line t;
 //Square sq;
 
@@ -34,16 +36,17 @@ void Load()
 
     // After Engine Initialisation should be done here
 
-    t = Line();
-    t.Init(-1.0f, -1.0f, 1.0f, 1.0f, 0.0f, glm::vec4(0.0f, 1.0f, 0.0f, 1.0f));
-
-    /*sq = Square();
-    sq.Init(0.5f, 0.5f, 10.0f, 10.0f, true, glm::vec4(1.0f, 1.0f, 1.0f, 1.0f));*/
 }
 
 void PostLoad()
 {
     Engine::get().PostInit();
+
+    p = Triangle();
+    p.Init();
+
+    t = Line();
+    t.Init(-1.0f, -1.0f, 1.0f, 1.0f, 1.0f, glm::vec4(1.0f, 1.0f,1.0f, 1.0f));
 
     // After Engine Post Initialisation should be done here
     Engine::getRenderer().CheckError();
@@ -54,7 +57,10 @@ void Update(float dt)
     // put this in its own function in case you want to do 
     // your own updates outside of the engine
     Engine::get().Update(dt);
+
+    p.Update(dt);
     t.Update(dt);
+
     Engine::getRenderer().CheckError();
 }
 
@@ -72,7 +78,7 @@ void Render()
     Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["modelMatrix"], glm::mat4(1.0f), 1, false);
 
     //Render Here
-
+    p.Render();
     t.Render();
 
     Engine::get().RenderEnd();

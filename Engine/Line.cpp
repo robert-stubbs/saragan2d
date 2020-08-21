@@ -11,9 +11,9 @@ namespace GameEngine
 	{
 		shader_name = "DEFAULT2D";
 		isLoaded = false;
-		vertexBuffer = 0;
+		VBO = 0;
 		mouseLine = false;
-		Buffer = std::vector<vert2D>();
+		verts = std::vector<vert2D>();
 		colour = glm::vec4(0.0f, 1.0f, 0.0f, 1.0f);
 		mouseLineColour = glm::vec4(1.0f, 1.0f, 1.0f, 1.0f);
 	}
@@ -37,13 +37,13 @@ namespace GameEngine
 		this->direction.y = y2;
 		this->colour = col;
 
-		Buffer.clear();
-		vert2D dummy = { {this->origin.x,this->origin.y,0.0f,1.0f},{-99.0f,-99.0f}, {colour.r, colour.g, colour.b, colour.a } };
-		Buffer.push_back(dummy);
-		vert2D dummy2 = { {this->direction.x,this->direction.y,0.0f,1.0f},{-99.0f,-99.0f}, {colour.r, colour.g, colour.b, colour.a } };
-		Buffer.push_back(dummy2);
+		verts.clear();
+		vert2D dummy = { {this->origin.x,this->origin.y,z,1.0f},{-99.0f,-99.0f}, {colour.r, colour.g, colour.b, colour.a } };
+		verts.push_back(dummy);
+		vert2D dummy2 = { {this->direction.x,this->direction.y,z,1.0f},{-99.0f,-99.0f}, {colour.r, colour.g, colour.b, colour.a } };
+		verts.push_back(dummy2);
 
-		isLoaded = true;
+		GenerateBuffers();
 	}
 
 	void Line::Init(float x, float y, float angle)
@@ -53,15 +53,15 @@ namespace GameEngine
 		this->origin.x = x;
 		this->origin.y = y;
 
-		Buffer.clear();
+		verts.clear();
 		vert2D dummy = { {this->origin.x,this->origin.y,0.0f,1.0f},{-99.0f,-99.0f}, {mouseLineColour.r, mouseLineColour.g, mouseLineColour.b, mouseLineColour.a } };
-		Buffer.push_back(dummy);
+		verts.push_back(dummy);
 
 		this->direction.x = this->origin.x + cos(this->angle) * 100;
 		this->direction.y = this->origin.y + sin(this->angle) * 100;
 
 		vert2D dummy2 = { {this->direction.x,this->direction.y,0.0f,1.0f},{-99.0f,-99.0f}, {mouseLineColour.r, mouseLineColour.g, mouseLineColour.b, mouseLineColour.a } };
-		Buffer.push_back(dummy2);
+		verts.push_back(dummy2);
 
 		isLoaded = true;
 	}
@@ -71,9 +71,9 @@ namespace GameEngine
 		this->origin.x = x;
 		this->origin.y = y;
 
-		Buffer.clear();
+		verts.clear();
 		vert2D dummy = { {this->origin.x,this->origin.y,0.0f,1.0f},{-99.0f,-99.0f}, {mouseLineColour.r, mouseLineColour.g, mouseLineColour.b, mouseLineColour.a } };
-		Buffer.push_back(dummy);
+		verts.push_back(dummy);
 
 		this->direction.x = this->origin.x + cos(this->angle) * 100;
 		this->direction.y = this->origin.y + sin(this->angle) * 100;
@@ -103,8 +103,9 @@ namespace GameEngine
 		this->direction.y = closest.pos[1];
 
 		vert2D dummy2 = { {this->direction.x,this->direction.y,0.0f,1.0f},{-99.0f,-99.0f}, {mouseLineColour.r, mouseLineColour.g, mouseLineColour.b, mouseLineColour.a } };
-		Buffer.push_back(dummy2);
+		verts.push_back(dummy2);
 
+		GenerateBuffers();
 		isLoaded = true;
 
 	}
@@ -131,25 +132,56 @@ namespace GameEngine
 		return false;
 	}
 
+	void Line::GenerateBuffers()
+	{
+		if (!VBO || VBO == 0)
+		{
+			glGenVertexArrays(1, &VAIO);
+			glBindVertexArray(VAIO);
+
+			glGenBuffers(1, &VBO);
+			glBindBuffer(GL_ARRAY_BUFFER, VBO);
+			glBufferData(GL_ARRAY_BUFFER, sizeof(vert) * verts.size(), &verts[0], GL_STATIC_DRAW);
+
+			glVertexAttribPointer(0, 4, GL_FLOAT, GL_FALSE, sizeof(vert2D), 0);
+			glVertexAttribPointer(1, 2, GL_FLOAT, GL_TRUE, sizeof(vert2D), (GLvoid*)offsetof(vert2D, Text));
+			glVertexAttribPointer(2, 4, GL_FLOAT, GL_TRUE, sizeof(vert2D), (GLvoid*)offsetof(vert2D, col));
+
+			glEnableVertexAttribArray(0);
+			glEnableVertexAttribArray(1);
+			glEnableVertexAttribArray(2);
+
+			glBindBuffer(GL_ARRAY_BUFFER, 0);
+			glBindVertexArray(0);
+
+
+	/*			Engine::getRenderer().GenerateBuffer(VBO, verts);
+			
+			Shader& s = Engine::getShader()[shader_name];
+
+	
+			Engine::getRenderer().VertexStructurePointerF(s["in_Position"], 4, GL_FALSE, sizeof(vert2D), 0);
+		Engine::getRenderer().VertexStructurePointerF(s["in_Texture"], 2, GL_TRUE, sizeof(vert2D), (GLvoid*)offsetof(vert2D, Text));
+			Engine::getRenderer().VertexStructurePointerF(s["in_Color"], 4, GL_TRUE, sizeof(vert2D), (GLvoid*)offsetof(vert2D, col));
+
+			Engine::getRenderer().UnbindVertexBuffer();*/
+
+			isLoaded = true;
+		}
+		else {
+			Engine::getRenderer().UpdateBuffer(VBO, verts);
+			Engine::getRenderer().UnbindVertexBuffer();
+		}
+	}
+
 	void Line::Update(float dt)
 	{
 		if (!isLoaded) return;
 
-		if (vertexBuffer && hasUpdate) {
-			Engine::getRenderer().ReGenerateBuffer(vertexBuffer, Buffer);
-
-		}
-		else if (!vertexBuffer || vertexBuffer == 0 || hasUpdate) {
-			Engine::getRenderer().GenerateBuffer(vertexBuffer, Buffer);
-
-			Shader& s = Engine::getShader().BindNewShader(shader_name);
-			Engine::getRenderer().VertexStructurePointerF(s["in_Position"], 4, GL_FALSE, sizeof(vert2D), 0);
-			Engine::getRenderer().VertexStructurePointerF(s["in_Texture"], 2, GL_TRUE, sizeof(vert2D), (GLvoid*)offsetof(vert2D, Text));
-			Engine::getRenderer().VertexStructurePointerF(s["in_Color"], 4, GL_TRUE, sizeof(vert2D), (GLvoid*)offsetof(vert2D, col));
-
+		if (VBO && hasUpdate) {
+			Engine::getRenderer().UpdateBuffer(VBO, verts);
 			Engine::getRenderer().UnbindVertexBuffer();
 
-			hasUpdate = true;
 		}
 	}
 
@@ -161,15 +193,27 @@ namespace GameEngine
 			hasUpdate = false;
 		}
 
-		if (Buffer.size() > 0 && vertexBuffer != 0) {
+		if (verts.size() > 0 && VBO != 0) {
 
 			//Engine::getShader().BindNewShader(shader_name);
 
-			Engine::getRenderer().BindVertexBuffer(vertexBuffer);
+			//Engine::getRenderer().UniformInt(Engine::getCurrentShader()["is_Text"], 0);
+			//Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["projectionMatrix"], glm::mat4(1.0f), 1, false);
+			//Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["viewMatrix"], glm::mat4(1.0f), 1, false);
+			Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["modelMatrix"], glm::mat4(1.0f), 1, false);
 
-			Engine::getRenderer().DrawArrays(DRAW_TYPE::LINES, (GLsizei)Buffer.size());
 
-			Engine::getRenderer().UnbindVertexBuffer();
+			glBindVertexArray(VAIO); // Bind our Vertex Array Object
+
+			glDrawArrays(GL_LINES, 0, (GLsizei)verts.size()); // Draw our line
+
+			glBindVertexArray(0); // Unbind our Vertex Array Object
+
+			//Engine::getRenderer().BindVertexBuffer(VBO);
+
+			//Engine::getRenderer().DrawArrays(DRAW_TYPE::LINES, (GLsizei)verts.size());
+
+			//Engine::getRenderer().UnbindVertexBuffer();
 
 		}
 

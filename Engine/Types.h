@@ -50,6 +50,7 @@ namespace GameEngine {
 
 	enum class DRAW_TYPE
 	{
+		LINE,
 		LINES,
 		LINE_LOOP,
 		LINE_STRIP,

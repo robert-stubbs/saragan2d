@@ -16,6 +16,7 @@ namespace GameEngine
 		~Object();
 		virtual void Init();
 		virtual void Update(float dt);
+		virtual void GenerateBuffers() {};
 		virtual bool Render();
 		virtual void CleanUp();
 

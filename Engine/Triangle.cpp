@@ -47,8 +47,11 @@ namespace GameEngine
 	{
 		if (!isLoaded) return false;
 
-		Engine::getShader().BindNewShader("DEFAULT2D");
-		Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["modelMatrix"], glm::mat4(1.0f), 1, false);
+		//Engine::getShader().BindNewShader("DEFAULT2D");
+		//Engine::getRenderer().UniformInt(Engine::getCurrentShader()["is_Text"], 0);
+		//Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["projectionMatrix"], glm::mat4(1.0f), 1, false);
+		//Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["viewMatrix"], glm::mat4(1.0f), 1, false);
+		//Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["modelMatrix"], glm::mat4(1.0f), 1, false);
 
 		Engine::getRenderer().EnableBlend(true, BLEND_TYPE::SRC_ALPHA, BLEND_TYPE::ONE_MINUS_SRC_ALPHA);
 

@@ -17,15 +17,17 @@ namespace GameEngine
 
 			virtual void UpdatePos(float x, float y, std::vector<Line> hittest);
 
+			virtual void GenerateBuffers();
+
 			virtual void Update(float dt);
 			virtual bool Render();
 			virtual void CleanUp();
 
 			bool IntersectsLine(Line* line, vert2D& result);
 
-			GLuint		VAOID;
-			GLuint		vertexBuffer;
-			std::vector<vert2D> Buffer;
+			GLuint VAIO;
+			GLuint		VBO;
+			std::vector<vert2D> verts;
 
 			glm::vec4 colour;
 			glm::vec4 mouseLineColour;

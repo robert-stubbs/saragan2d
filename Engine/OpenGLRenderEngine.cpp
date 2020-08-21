@@ -41,6 +41,8 @@ namespace GameEngine {
 
 		glShadeModel(GL_SMOOTH);
 
+		CheckError();
+
 		return true;
 	}
 
@@ -205,8 +207,9 @@ namespace GameEngine {
 
 	void OpenGLRenderEngine::VertexStructurePointerF(int location, int size, bool normalized, int stride, const void* pointer)
 	{
-		glVertexAttribPointer(location, size, GL_FLOAT, normalized, stride, pointer);
 		glEnableVertexAttribArray(location);
+		glVertexAttribPointer(location, size, GL_FLOAT, normalized, stride, pointer);
+		CheckError();
 	}
 
 	void OpenGLRenderEngine::UniformInt(int location, int value)
@@ -323,6 +326,9 @@ namespace GameEngine {
 
 		switch (type)
 		{
+		case DRAW_TYPE::LINE:
+			val = GL_LINE;
+			break;
 		case DRAW_TYPE::LINES:
 			val = GL_LINES;
 			break;

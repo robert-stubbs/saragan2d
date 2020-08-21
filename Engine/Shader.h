@@ -18,7 +18,7 @@ namespace GameEngine
 		std::vector<ShaderBinding> bindings;
 		std::map<std::string, unsigned int> locations;
 
-		unsigned int& operator[](std::string name);
+		unsigned int operator[](std::string name);
 		
 		virtual void init(std::string vsFile, std::string fsFile) = 0; // Initialize our shader file if we have to
 
