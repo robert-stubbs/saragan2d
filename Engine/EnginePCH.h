@@ -54,4 +54,7 @@
 
 #include "SafeDelete.h"
 
+#define CLASSNAME L"ENGINE"
+#define WNDNAME L"ENGINE"
+
 #endif

@@ -2,6 +2,14 @@
 #define _TYPES_H_
 namespace GameEngine {
 
+	struct viewPos
+	{
+		float x;
+		float y;
+		float width;
+		float height;
+	};
+
 	typedef struct
 	{
 		float  pos[4];
@@ -24,6 +32,21 @@ namespace GameEngine {
 		float  Text[2];
 		float  col[4];
 	} vert2D;
+
+	enum class PLATFORM
+	{
+		WINDOWS,
+		GLFW,
+		LINUX,
+		MAC
+	};
+
+	enum RenderEngines
+	{
+		None = 0,
+		OpenGL,
+		DirectX
+	};
 
 	enum class SHADER_TYPES
 	{

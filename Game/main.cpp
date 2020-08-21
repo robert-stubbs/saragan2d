@@ -22,6 +22,8 @@ void PreLoad()
 {
     Engine& e = Engine::get();
 
+    e.SetPlatform(PLATFORM::GLFW);
+    e.SetRenderEngine(RenderEngines::OpenGL);
     e.SetAssetDir("C:/Assets/");
     e.SetWindowName("Saragan");
     e.SetWindowSize(800, 600);
@@ -92,6 +94,7 @@ int main(void)
     double lastTime = glfwGetTime(), timer = lastTime;
     double deltaTime = 0, nowTime = 0;
     int frames = 0, updates = 0;
+
 
     /* Loop until the user closes the window */
     while (!glfwWindowShouldClose(Engine::get().window))

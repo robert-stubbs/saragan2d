@@ -6,6 +6,10 @@
 #include "ShaderManager.h"
 #include "ShaderDef.h"
 #include "Camera2D.h"
+#include "StateMachine.h"
+#include "SystemManager.h"
+#include "EntityManager.h"
+#include "Font.h"
 
 namespace GameEngine {
 
@@ -20,6 +24,11 @@ namespace GameEngine {
 			std::vector<std::shared_ptr<ShaderDef>> _shader_definitions;
 
 		public:
+			StateMachine* GameFSM;
+			SystemManager* System;
+			EntityManager* EntityMgr;
+
+			Font* font;
 
 			Camera2D* cam;
 			~Engine();
@@ -27,11 +36,16 @@ namespace GameEngine {
 			bool fullscreen = false;
 			std::string asset_dir;
 
+			PLATFORM _platform = PLATFORM::GLFW;
+			RenderEngines _engine = RenderEngines::OpenGL;
+
 			GLFWwindow* window;
 			std::string WindowName = "";
 			int WindowWidth = 0;
 			int WindowHeight = 0;
 
+			inline void SetPlatform(PLATFORM platform) { _platform = platform; };
+			inline void SetRenderEngine(RenderEngines engine) { _engine = engine; };
 			void SetAssetDir(std::string directory);
 			void SetWindowName(std::string name);
 			void SetWindowSize(int width, int height, bool isFullScreen = false);
@@ -71,6 +85,7 @@ namespace GameEngine {
 				//return static instance
 				return instance;
 			}
+			static inline Engine& getEngine() { return get(); }
 		
 	};
 }

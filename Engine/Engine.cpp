@@ -29,6 +29,8 @@ namespace GameEngine {
 
 	bool Engine::PreInit()
 	{
+		System = new SystemManager();
+		EntityMgr = new EntityManager();
 
 		/* Initialize the library */
 		if (!glfwInit()) {
@@ -53,8 +55,17 @@ namespace GameEngine {
 
 		glfwSetKeyCallback(window, key_callback);
 
-		renderer = Renderer(RenderEngines::OpenGL);
-		shader_mgr = ShaderManager(RenderEngines::OpenGL);
+		renderer = Renderer(_engine);
+		shader_mgr = ShaderManager(_engine);
+
+		System->Init();
+
+		std::string asset_dir = "C:/Assets/";
+		std::string ft = asset_dir + "Font/Vera.ttf";
+		font = new Font(30, ft.c_str());
+
+		GameFSM = new StateMachine();
+
 		return true;
 	}
 
@@ -94,13 +105,16 @@ namespace GameEngine {
 
 	bool Engine::Update3D(float DeltaTime)
 	{
-
 		return true;
 	}
 
 	bool Engine::UpdateOrth(float DeltaTime)
 	{
 		cam->Update(DeltaTime);
+
+		System->Update(DeltaTime);
+		GameFSM->Update(DeltaTime);
+
 
 
 		return true;

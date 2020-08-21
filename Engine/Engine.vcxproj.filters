@@ -67,6 +67,21 @@
     <Filter Include="Geometry">
       <UniqueIdentifier>{0db492fc-3455-4f37-a615-39b95fbd63f0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Tools\Windows">
+      <UniqueIdentifier>{d9743ebf-0fc5-4e6a-9bf0-26cb181882fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="States">
+      <UniqueIdentifier>{c0581840-8cdb-4636-9d48-2ec53735c6d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SORT">
+      <UniqueIdentifier>{effeac0a-7645-4908-b5b6-413033c28b20}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Systems">
+      <UniqueIdentifier>{7d5bc699-8150-4dbf-aa46-45d4b31810a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Systems\Base">
+      <UniqueIdentifier>{3551560a-c519-4623-9710-118207ddf67b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\ThirdParty\glew\include\GL\eglew.h">
@@ -1223,6 +1238,99 @@
     <ClInclude Include="Square.h">
       <Filter>Geometry</Filter>
     </ClInclude>
+    <ClInclude Include="FastNoise.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="standards.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="Font.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="cCreateWnd.h">
+      <Filter>Tools\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="ChildWnd.h">
+      <Filter>Tools\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="cRegWnd.h">
+      <Filter>Tools\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="State.h">
+      <Filter>States</Filter>
+    </ClInclude>
+    <ClInclude Include="StateMachine.h">
+      <Filter>States</Filter>
+    </ClInclude>
+    <ClInclude Include="AISystem.h">
+      <Filter>SORT</Filter>
+    </ClInclude>
+    <ClInclude Include="Behaviour.h">
+      <Filter>SORT</Filter>
+    </ClInclude>
+    <ClInclude Include="Brain.h">
+      <Filter>SORT</Filter>
+    </ClInclude>
+    <ClInclude Include="cIni.h">
+      <Filter>SORT</Filter>
+    </ClInclude>
+    <ClInclude Include="Component.h">
+      <Filter>SORT</Filter>
+    </ClInclude>
+    <ClInclude Include="Dispatch.h">
+      <Filter>SORT</Filter>
+    </ClInclude>
+    <ClInclude Include="GUISystem.h">
+      <Filter>SORT</Filter>
+    </ClInclude>
+    <ClInclude Include="LabelEntity.h">
+      <Filter>SORT</Filter>
+    </ClInclude>
+    <ClInclude Include="lodepng.h">
+      <Filter>SORT</Filter>
+    </ClInclude>
+    <ClInclude Include="Position.h">
+      <Filter>SORT</Filter>
+    </ClInclude>
+    <ClInclude Include="PositionSystem.h">
+      <Filter>SORT</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundItem.h">
+      <Filter>SORT</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundSystem.h">
+      <Filter>SORT</Filter>
+    </ClInclude>
+    <ClInclude Include="Text.h">
+      <Filter>SORT</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>SORT</Filter>
+    </ClInclude>
+    <ClInclude Include="Viewport.h">
+      <Filter>SORT</Filter>
+    </ClInclude>
+    <ClInclude Include="ViewportManager.h">
+      <Filter>SORT</Filter>
+    </ClInclude>
+    <ClInclude Include="System.h">
+      <Filter>Systems\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="SystemManager.h">
+      <Filter>Systems\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity.h">
+      <Filter>SORT</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityManager.h">
+      <Filter>SORT</Filter>
+    </ClInclude>
+    <ClInclude Include="cErrorLogger.h">
+      <Filter>SORT</Filter>
+    </ClInclude>
+    <ClInclude Include="ModelSystem.h">
+      <Filter>SORT</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="EnginePCH.cpp" />
@@ -1268,6 +1376,99 @@
     </ClCompile>
     <ClCompile Include="Square.cpp">
       <Filter>Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="FastNoise.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="standards.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="Font.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="cCreateWnd.cpp">
+      <Filter>Tools\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="ChildWnd.cpp">
+      <Filter>Tools\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="cRegWnd.cpp">
+      <Filter>Tools\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="State.cpp">
+      <Filter>States</Filter>
+    </ClCompile>
+    <ClCompile Include="StateMachine.cpp">
+      <Filter>States</Filter>
+    </ClCompile>
+    <ClCompile Include="AISystem.cpp">
+      <Filter>SORT</Filter>
+    </ClCompile>
+    <ClCompile Include="Behaviour.cpp">
+      <Filter>SORT</Filter>
+    </ClCompile>
+    <ClCompile Include="Brain.cpp">
+      <Filter>SORT</Filter>
+    </ClCompile>
+    <ClCompile Include="cIni.cpp">
+      <Filter>SORT</Filter>
+    </ClCompile>
+    <ClCompile Include="Component.cpp">
+      <Filter>SORT</Filter>
+    </ClCompile>
+    <ClCompile Include="Dispatch.cpp">
+      <Filter>SORT</Filter>
+    </ClCompile>
+    <ClCompile Include="GUISystem.cpp">
+      <Filter>SORT</Filter>
+    </ClCompile>
+    <ClCompile Include="LabelEntity.cpp">
+      <Filter>SORT</Filter>
+    </ClCompile>
+    <ClCompile Include="lodepng.cpp">
+      <Filter>SORT</Filter>
+    </ClCompile>
+    <ClCompile Include="Position.cpp">
+      <Filter>SORT</Filter>
+    </ClCompile>
+    <ClCompile Include="PositionSystem.cpp">
+      <Filter>SORT</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundItem.cpp">
+      <Filter>SORT</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundSystem.cpp">
+      <Filter>SORT</Filter>
+    </ClCompile>
+    <ClCompile Include="Text.cpp">
+      <Filter>SORT</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>SORT</Filter>
+    </ClCompile>
+    <ClCompile Include="Viewport.cpp">
+      <Filter>SORT</Filter>
+    </ClCompile>
+    <ClCompile Include="ViewportManager.cpp">
+      <Filter>SORT</Filter>
+    </ClCompile>
+    <ClCompile Include="System.cpp">
+      <Filter>Systems\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="SystemManager.cpp">
+      <Filter>Systems\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity.cpp">
+      <Filter>SORT</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityManager.cpp">
+      <Filter>SORT</Filter>
+    </ClCompile>
+    <ClCompile Include="cErrorLogger.cpp">
+      <Filter>SORT</Filter>
+    </ClCompile>
+    <ClCompile Include="ModelSystem.cpp">
+      <Filter>SORT</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

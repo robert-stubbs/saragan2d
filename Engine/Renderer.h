@@ -6,12 +6,6 @@
 
 namespace GameEngine {
 
-	enum RenderEngines
-	{
-		None = 0,
-		OpenGL,
-		DirectX
-	};
 
 	class Renderer
 	{

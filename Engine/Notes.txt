@@ -2,22 +2,4 @@
  TODO
 ########################################################################################################
 
-1. Create a shader manager, each shader should have a name
-	shader["name of shader"]
-
-	which will return a class of shader type
-
-2. create base class for shader types
-	has shader id
-3. each shader should have a map of things to bind, a structure? maybe
-	map<string, int> - ProjectionMatrix, 1 (location)
-
-4. when binding a shader we can loop over these items? (maybe store as a struct so we can get type)
-
-	e.g. we need to abstract this
-	 Engine::getRenderer().VertexStructurePointerF(shader->Position, 4, GL_FALSE, sizeof(vert2D), 0);
-
-
-
-5. Shader Manager should be like the renderer, it should be abstract but
-   called from the engine in the same way
+Sort out the windows window api classes into engine properly
