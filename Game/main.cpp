@@ -7,9 +7,12 @@
 #include "Triangle.h"
 #include "Square.h"
 #include "Camera2D.h"
+#include "Context.h"
+#include "ContextPlatform.h"
+
+#include "Input.h"
 
 using namespace GameEngine;
-
 
 Triangle t;
 
@@ -18,17 +21,19 @@ Triangle t;
 // https://www.youtube.com/watch?v=rh31YOZh5ZM&t
 static double limitFPS = 1.0 / 60.0;
 
-void PreLoad()
+bool PreLoad()
 {
     Engine& e = Engine::get();
 
-    e.SetPlatform(PLATFORM::GLFW);
+    e.SetPlatform(PLATFORM::WINDOWS);
     e.SetRenderEngine(RenderEngines::OpenGL);
     e.SetAssetDir("C:/Assets/");
     e.SetWindowName("Saragan");
     e.SetWindowSize(800, 600);
-    e.PreInit();   
-
+    if (!e.PreInit()) {
+        return false;
+    }
+    return true;
 }
 
 void Load()
@@ -56,6 +61,7 @@ void Update(float dt)
     Engine::get().Update(dt);
 
     t.Update(dt);
+
 
 }
 
@@ -87,41 +93,63 @@ void CleanUp()
 
 int main(void)
 {
-    PreLoad();
+    if (!PreLoad())
+    {
+        return false;
+    }
+
     Load();
     PostLoad();
 
-    double lastTime = glfwGetTime(), timer = lastTime;
-    double deltaTime = 0, nowTime = 0;
-    int frames = 0, updates = 0;
+    //double lastTime = glfwGetTime(), timer = lastTime;
+    //double deltaTime = 0, nowTime = 0;
+    //int frames = 0, updates = 0;
 
+    ContextPlatform& platform = Engine::getContext().GetWindow();
 
-    /* Loop until the user closes the window */
-    while (!glfwWindowShouldClose(Engine::get().window))
+    double dt = 0.15;
+    MSG msg = { 0 };
+
+    while (WM_QUIT != msg.message)
     {
-        // - Measure time
-        nowTime = glfwGetTime();
-        deltaTime += (nowTime - lastTime) / limitFPS;
-        lastTime = nowTime;
-
-        // - Only update at 60 frames / s
-        while (deltaTime >= 1.0) {
-            Update((float)deltaTime);
-            updates++;
-            deltaTime--;
+        while (PeekMessage(&msg, NULL, 0, 0, PM_REMOVE) == TRUE)
+        {
+            TranslateMessage(&msg);
+            DispatchMessage(&msg);
         }
+
+        Update((float)dt);
+
 
         Render();
-        frames++;
-
-        // - Reset after one second
-        if (glfwGetTime() - timer > 1.0) {
-            timer++;
-            std::cout << "FPS: " << frames << " Updates:" << updates << std::endl;
-            updates = 0, frames = 0;
-        }
-
     }
+
+    ///* Loop until the user closes the window */
+    //while (!glfwWindowShouldClose(((GLFWwindow*)platform.GetWindowHandle())))
+    //{
+    //    // - Measure time
+    //    nowTime = glfwGetTime();
+    //    deltaTime += (nowTime - lastTime) / limitFPS;
+    //    lastTime = nowTime;
+
+    //    // - Only update at 60 frames / s
+    //    while (deltaTime >= 1.0) {
+    //        Update((float)deltaTime);
+    //        updates++;
+    //        deltaTime--;
+    //    }
+
+    //    Render();
+    //    frames++;
+
+    //    // - Reset after one second
+    //    if (glfwGetTime() - timer > 1.0) {
+    //        timer++;
+    //        std::cout << "FPS: " << frames << " Updates:" << updates << std::endl;
+    //        updates = 0, frames = 0;
+    //    }
+
+    //}
 
     CleanUp();
     return 0;

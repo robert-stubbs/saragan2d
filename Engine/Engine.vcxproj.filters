@@ -37,38 +37,17 @@
     <Filter Include="ThirdParty\glfw">
       <UniqueIdentifier>{899db60e-8b82-4404-850c-9496960311b9}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Shader">
-      <UniqueIdentifier>{22cec00c-e0fe-41ab-81b4-a89db27de48a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Shader\OpenGL">
-      <UniqueIdentifier>{2bceccef-f377-4d54-bb97-14bfc96c6507}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Renderer">
-      <UniqueIdentifier>{80666bce-ba61-4754-9523-5560011a219e}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Tools">
       <UniqueIdentifier>{a88dfc0b-5813-4eb5-bfe4-85449f6bdc86}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Renderer\RenderEngines">
-      <UniqueIdentifier>{f2b11abf-9e31-4f23-85f5-cc2c5de835f9}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Renderer\RenderEngines\OpenGL">
-      <UniqueIdentifier>{67e5e2c2-89c6-418e-b58c-45e99b477e3f}</UniqueIdentifier>
-    </Filter>
     <Filter Include="File">
       <UniqueIdentifier>{d0cc5ded-3e5a-442f-85a2-97021af1f468}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Shader\ShaderDefs">
-      <UniqueIdentifier>{a62e9a1f-1873-4fa0-87fd-d91b624f6382}</UniqueIdentifier>
     </Filter>
     <Filter Include="Camera">
       <UniqueIdentifier>{a345a4d5-895e-4e15-8924-1af1d17af503}</UniqueIdentifier>
     </Filter>
     <Filter Include="Geometry">
       <UniqueIdentifier>{0db492fc-3455-4f37-a615-39b95fbd63f0}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Tools\Windows">
-      <UniqueIdentifier>{d9743ebf-0fc5-4e6a-9bf0-26cb181882fa}</UniqueIdentifier>
     </Filter>
     <Filter Include="States">
       <UniqueIdentifier>{c0581840-8cdb-4636-9d48-2ec53735c6d1}</UniqueIdentifier>
@@ -82,11 +61,56 @@
     <Filter Include="Systems\Base">
       <UniqueIdentifier>{3551560a-c519-4623-9710-118207ddf67b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Event Manager">
+    <Filter Include="Events">
       <UniqueIdentifier>{d0723ef3-d7b0-4907-a738-a5c69d30f4ab}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Event Manager\EventHandler">
+    <Filter Include="Events\EventHandler">
       <UniqueIdentifier>{2dfa0cff-337f-4d13-8531-8f825ffd9752}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine Platform">
+      <UniqueIdentifier>{ebe7063c-f784-4e86-ba12-dadd43ca725e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine Platform\Renderer">
+      <UniqueIdentifier>{80666bce-ba61-4754-9523-5560011a219e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine Platform\Renderer\RenderEngines">
+      <UniqueIdentifier>{f2b11abf-9e31-4f23-85f5-cc2c5de835f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine Platform\Renderer\RenderEngines\OpenGL">
+      <UniqueIdentifier>{67e5e2c2-89c6-418e-b58c-45e99b477e3f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine Platform\Shader">
+      <UniqueIdentifier>{22cec00c-e0fe-41ab-81b4-a89db27de48a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine Platform\Shader\OpenGL">
+      <UniqueIdentifier>{2bceccef-f377-4d54-bb97-14bfc96c6507}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine Platform\Shader\ShaderDefs">
+      <UniqueIdentifier>{a62e9a1f-1873-4fa0-87fd-d91b624f6382}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine Platform\Input">
+      <UniqueIdentifier>{feb57195-d528-460c-a130-9a645de411c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine Platform\Input\Platform">
+      <UniqueIdentifier>{43ad329e-3153-4dce-871b-0d862ab073bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine Platform\Input\Platform\Windows">
+      <UniqueIdentifier>{9ef16afb-4171-47fe-8e75-3cb493853d06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine Platform\Input\Platform\GLFW">
+      <UniqueIdentifier>{f96d65c2-91f5-4d35-aa12-030502649403}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine Platform\Context">
+      <UniqueIdentifier>{ef9b4584-46ff-4ef1-9fae-64351e344f09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine Platform\Context\Platform">
+      <UniqueIdentifier>{f3f4ad1e-42be-4637-868e-c3bee93e97f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine Platform\Context\Platform\Windows">
+      <UniqueIdentifier>{a4264ade-d168-405f-88d6-c84c665cd586}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine Platform\Context\Platform\GLFW">
+      <UniqueIdentifier>{93b7ed85-ba89-4e18-8b6e-e05de997fff5}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -1196,38 +1220,38 @@
       <Filter>ThirdParty\glfw</Filter>
     </ClInclude>
     <ClInclude Include="OpenGLShader.h">
-      <Filter>Shader\OpenGL</Filter>
+      <Filter>Engine Platform\Shader\OpenGL</Filter>
     </ClInclude>
     <ClInclude Include="Engine.h" />
     <ClInclude Include="Renderer.h">
-      <Filter>Renderer</Filter>
+      <Filter>Engine Platform\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="Types.h">
       <Filter>Tools</Filter>
     </ClInclude>
     <ClInclude Include="RenderEngineBase.h">
-      <Filter>Renderer\RenderEngines</Filter>
+      <Filter>Engine Platform\Renderer\RenderEngines</Filter>
     </ClInclude>
     <ClInclude Include="OpenGLRenderEngine.h">
-      <Filter>Renderer\RenderEngines\OpenGL</Filter>
+      <Filter>Engine Platform\Renderer\RenderEngines\OpenGL</Filter>
     </ClInclude>
     <ClInclude Include="SafeDelete.h">
       <Filter>Tools</Filter>
     </ClInclude>
     <ClInclude Include="ShaderManager.h">
-      <Filter>Shader</Filter>
+      <Filter>Engine Platform\Shader</Filter>
     </ClInclude>
     <ClInclude Include="FileManager.h">
       <Filter>File</Filter>
     </ClInclude>
     <ClInclude Include="Shader.h">
-      <Filter>Shader</Filter>
+      <Filter>Engine Platform\Shader</Filter>
     </ClInclude>
     <ClInclude Include="ShaderDef.h">
-      <Filter>Shader</Filter>
+      <Filter>Engine Platform\Shader</Filter>
     </ClInclude>
     <ClInclude Include="Default2DShader.h">
-      <Filter>Shader\ShaderDefs</Filter>
+      <Filter>Engine Platform\Shader\ShaderDefs</Filter>
     </ClInclude>
     <ClInclude Include="Camera2D.h">
       <Filter>Camera</Filter>
@@ -1252,15 +1276,6 @@
     </ClInclude>
     <ClInclude Include="Font.h">
       <Filter>Tools</Filter>
-    </ClInclude>
-    <ClInclude Include="cCreateWnd.h">
-      <Filter>Tools\Windows</Filter>
-    </ClInclude>
-    <ClInclude Include="ChildWnd.h">
-      <Filter>Tools\Windows</Filter>
-    </ClInclude>
-    <ClInclude Include="cRegWnd.h">
-      <Filter>Tools\Windows</Filter>
     </ClInclude>
     <ClInclude Include="State.h">
       <Filter>States</Filter>
@@ -1338,44 +1353,68 @@
       <Filter>SORT</Filter>
     </ClInclude>
     <ClInclude Include="EventManager.h">
-      <Filter>Event Manager</Filter>
+      <Filter>Events</Filter>
     </ClInclude>
     <ClInclude Include="EventHandler.h">
-      <Filter>Event Manager\EventHandler</Filter>
+      <Filter>Events\EventHandler</Filter>
     </ClInclude>
     <ClInclude Include="Event.h">
-      <Filter>Event Manager\EventHandler</Filter>
+      <Filter>Events\EventHandler</Filter>
+    </ClInclude>
+    <ClInclude Include="Input.h">
+      <Filter>Engine Platform\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="InputPlatform.h">
+      <Filter>Engine Platform\Input\Platform</Filter>
+    </ClInclude>
+    <ClInclude Include="InputWindows.h">
+      <Filter>Engine Platform\Input\Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="InputGLFW.h">
+      <Filter>Engine Platform\Input\Platform\GLFW</Filter>
+    </ClInclude>
+    <ClInclude Include="ContextWindows.h">
+      <Filter>Engine Platform\Context\Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="ContextGLFW.h">
+      <Filter>Engine Platform\Context\Platform\GLFW</Filter>
+    </ClInclude>
+    <ClInclude Include="Context.h">
+      <Filter>Engine Platform\Context</Filter>
+    </ClInclude>
+    <ClInclude Include="ContextPlatform.h">
+      <Filter>Engine Platform\Context\Platform</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="EnginePCH.cpp" />
     <ClCompile Include="OpenGLShader.cpp">
-      <Filter>Shader\OpenGL</Filter>
+      <Filter>Engine Platform\Shader\OpenGL</Filter>
     </ClCompile>
     <ClCompile Include="Engine.cpp" />
     <ClCompile Include="Renderer.cpp">
-      <Filter>Renderer</Filter>
+      <Filter>Engine Platform\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="RenderEngineBase.cpp">
-      <Filter>Renderer\RenderEngines</Filter>
+      <Filter>Engine Platform\Renderer\RenderEngines</Filter>
     </ClCompile>
     <ClCompile Include="OpenGLRenderEngine.cpp">
-      <Filter>Renderer\RenderEngines\OpenGL</Filter>
+      <Filter>Engine Platform\Renderer\RenderEngines\OpenGL</Filter>
     </ClCompile>
     <ClCompile Include="ShaderManager.cpp">
-      <Filter>Shader</Filter>
+      <Filter>Engine Platform\Shader</Filter>
     </ClCompile>
     <ClCompile Include="FileManager.cpp">
       <Filter>File</Filter>
     </ClCompile>
     <ClCompile Include="Shader.cpp">
-      <Filter>Shader</Filter>
+      <Filter>Engine Platform\Shader</Filter>
     </ClCompile>
     <ClCompile Include="ShaderDef.cpp">
-      <Filter>Shader</Filter>
+      <Filter>Engine Platform\Shader</Filter>
     </ClCompile>
     <ClCompile Include="Default2DShader.cpp">
-      <Filter>Shader\ShaderDefs</Filter>
+      <Filter>Engine Platform\Shader\ShaderDefs</Filter>
     </ClCompile>
     <ClCompile Include="Camera2D.cpp">
       <Filter>Camera</Filter>
@@ -1400,15 +1439,6 @@
     </ClCompile>
     <ClCompile Include="Font.cpp">
       <Filter>Tools</Filter>
-    </ClCompile>
-    <ClCompile Include="cCreateWnd.cpp">
-      <Filter>Tools\Windows</Filter>
-    </ClCompile>
-    <ClCompile Include="ChildWnd.cpp">
-      <Filter>Tools\Windows</Filter>
-    </ClCompile>
-    <ClCompile Include="cRegWnd.cpp">
-      <Filter>Tools\Windows</Filter>
     </ClCompile>
     <ClCompile Include="State.cpp">
       <Filter>States</Filter>
@@ -1486,13 +1516,37 @@
       <Filter>SORT</Filter>
     </ClCompile>
     <ClCompile Include="EventManager.cpp">
-      <Filter>Event Manager</Filter>
+      <Filter>Events</Filter>
     </ClCompile>
     <ClCompile Include="EventHandler.cpp">
-      <Filter>Event Manager\EventHandler</Filter>
+      <Filter>Events\EventHandler</Filter>
     </ClCompile>
     <ClCompile Include="Event.cpp">
-      <Filter>Event Manager\EventHandler</Filter>
+      <Filter>Events\EventHandler</Filter>
+    </ClCompile>
+    <ClCompile Include="Input.cpp">
+      <Filter>Engine Platform\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="InputPlatform.cpp">
+      <Filter>Engine Platform\Input\Platform</Filter>
+    </ClCompile>
+    <ClCompile Include="InputWindows.cpp">
+      <Filter>Engine Platform\Input\Platform\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="InputGLFW.cpp">
+      <Filter>Engine Platform\Input\Platform\GLFW</Filter>
+    </ClCompile>
+    <ClCompile Include="ContextWindows.cpp">
+      <Filter>Engine Platform\Context\Platform\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="ContextGLFW.cpp">
+      <Filter>Engine Platform\Context\Platform\GLFW</Filter>
+    </ClCompile>
+    <ClCompile Include="ContextPlatform.cpp">
+      <Filter>Engine Platform\Context\Platform</Filter>
+    </ClCompile>
+    <ClCompile Include="Context.cpp">
+      <Filter>Engine Platform\Context</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -17,6 +17,9 @@ namespace GameEngine {
 			virtual void RenderStart();
 			virtual bool Cleanup();
 			
+			// IF WINDOWS THIS - this generally i think is only used for raw openGL not glfw
+			virtual void SetCurrentContext(HGLRC hRC, HDC hDC);
+
 			virtual void CheckError();
 
 			virtual glm::vec3 GetWorldPos(int x, int y, glm::mat4 projection, glm::mat4 view);

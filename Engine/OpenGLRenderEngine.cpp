@@ -57,6 +57,55 @@ namespace GameEngine {
 
 	}
 
+	void OpenGLRenderEngine::SetCurrentContext(HGLRC hRC, HDC hDC)
+	{
+		HGLRC tempOpenGLContext;
+
+		if (!(tempOpenGLContext = wglCreateContext(hDC)))
+		{
+			std::cout << "#### Can't Create A GL Rendering Context ####" << std::endl;
+			return;
+		}
+
+
+		if (!wglMakeCurrent(hDC, tempOpenGLContext))
+		{
+			std::cout << "#### Can't Activate The GL Rendering Context ####" << std::endl;
+			return;
+		}
+
+		int attributes[] = {
+			WGL_CONTEXT_MAJOR_VERSION_ARB, 4, // Set the MAJOR version of OpenGL to 3
+			WGL_CONTEXT_MINOR_VERSION_ARB, 2, // Set the MINOR version of OpenGL to 2
+			WGL_CONTEXT_FLAGS_ARB, WGL_CONTEXT_FORWARD_COMPATIBLE_BIT_ARB, // Set our OpenGL context to be forward compatible
+			0
+		};
+
+		glewExperimental = TRUE;
+		if (glewInit() != GLEW_OK)
+		{
+			std::cout << "Error Loading Glew" << std::endl;
+		}
+
+		std::cout << glGetString(GL_VERSION) << std::endl;
+
+		if (wglewIsSupported("WGL_ARB_create_context") == 1) { // If the OpenGL 3.x context creation extension is available
+
+			hRC = wglCreateContextAttribsARB(hDC, NULL, attributes); // Create and OpenGL 3.x context based on the given attributes
+			wglMakeCurrent(NULL, NULL); // Remove the temporary context from being active
+			wglDeleteContext(tempOpenGLContext); // Delete the temporary OpenGL 2.1 context			
+			if (!wglMakeCurrent(hDC, hRC))
+			{
+				std::cout << "#### Can't Activate The GL Rendering Context ####" << std::endl;
+				return;
+			}
+		}
+		else {
+			hRC = tempOpenGLContext; // If we didn't have support for OpenGL 3.x and up, use the OpenGL 2.1 context
+
+		}
+	}
+
 	bool OpenGLRenderEngine::Cleanup()
 	{
 		return true;

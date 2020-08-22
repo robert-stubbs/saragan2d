@@ -1,6 +1,7 @@
 #ifndef _ENGINE_H_
 #define _ENGINE_H_
 
+#include "Context.h"
 #include "Renderer.h"
 #include "Shader.h"
 #include "ShaderManager.h"
@@ -12,6 +13,7 @@
 #include "SystemManager.h"
 #include "EntityManager.h"
 #include "Font.h"
+#include "Input.h"
 
 namespace GameEngine {
 
@@ -20,6 +22,7 @@ namespace GameEngine {
 		private:
 			Engine() {};
 
+			Context ctx;
 			Renderer renderer;
 			ShaderManager shader_mgr;
 
@@ -46,7 +49,11 @@ namespace GameEngine {
 			int WindowWidth = 0;
 			int WindowHeight = 0;
 
-			inline void SetPlatform(PLATFORM platform) { _platform = platform; };
+			inline void SetPlatform(PLATFORM platform) { 
+				_platform = platform; 
+				Input::Get().SetPlatform(platform);
+			};
+
 			inline void SetRenderEngine(RenderEngines engine) { _engine = engine; };
 			void SetAssetDir(std::string directory);
 			void SetWindowName(std::string name);
@@ -81,6 +88,10 @@ namespace GameEngine {
 
 			static RenderEngineBase& getRenderer() {
 				return get().renderer.RenderEngine();
+			}
+
+			static Context& getContext() {
+				return get().ctx;
 			}
 
 			static EventManager& Events() {

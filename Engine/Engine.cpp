@@ -35,50 +35,36 @@ namespace GameEngine {
 
 	bool Engine::PreInit()
 	{
-		//System = new SystemManager();
-		//EntityMgr = new EntityManager();
-
-		/* Initialize the library */
-		if (!glfwInit()) {
-			return false;
-		}
-
-		if (fullscreen) {
-			window = glfwCreateWindow(WindowWidth, WindowHeight, WindowName.c_str(), glfwGetPrimaryMonitor(), NULL);
-		}
-		else {
-			/* Create a windowed mode window and its OpenGL context */
-			window = glfwCreateWindow(WindowWidth, WindowHeight, WindowName.c_str(), NULL, NULL);
-		}
-
-		if (!window)
+		ctx.SetPlatform(_platform);
+		if (ctx.InitWindow(WindowWidth, WindowHeight, WindowName, fullscreen))
 		{
-			glfwTerminate();
-			return false;
+			renderer = Renderer(_engine);
+
+			ctx.InitContext();
+
+			shader_mgr = ShaderManager(_engine);
+
+			//System = new SystemManager();
+			//EntityMgr = new EntityManager();
+
+			//glfwSetKeyCallback(window, key_callback);
+
+
+			//System->Init();
+
+			std::string asset_dir = "C:/Assets/";
+			std::string ft = asset_dir + "Font/Vera.ttf";
+			//font = new Font(30, ft.c_str());
+
+			//GameFSM = new StateMachine();
+			return true;
 		}
 
-		glfwMakeContextCurrent(window);
-
-		glfwSetKeyCallback(window, key_callback);
-
-		renderer = Renderer(_engine);
-		shader_mgr = ShaderManager(_engine);
-
-		//System->Init();
-
-		std::string asset_dir = "C:/Assets/";
-		std::string ft = asset_dir + "Font/Vera.ttf";
-		//font = new Font(30, ft.c_str());
-
-		//GameFSM = new StateMachine();
-
-		return true;
+		return false;
 	}
 
 	bool Engine::Init()
 	{		
-		getRenderer().Init();
-
 		AddShaderDef(
 			std::make_shared<Default2DShader>(
 				Default2DShader(
@@ -148,7 +134,7 @@ namespace GameEngine {
 	void Engine::RenderEnd()
 	{
 		// Swap front and back buffers
-		glfwSwapBuffers(window);
+		glfwSwapBuffers((GLFWwindow*)ctx.GetWindow().GetWindowHandle());
 
 		// Poll for and process events
 		glfwPollEvents();
@@ -170,55 +156,44 @@ namespace GameEngine {
 	
 	void Engine::key_callback(GLFWwindow* window, int key, int scancode, int action, int mods)
 	{
-		if (action == GLFW_PRESS || action == GLFW_REPEAT)
-		{
-			switch (key) {
-				case GLFW_KEY_A:
-				{
-					Engine::get().cam->dx = 10;
-				}break;
-				case GLFW_KEY_D:
-				{
-					Engine::get().cam->dx = -10;
-				}break;
-				case GLFW_KEY_W:
-				{
-					Engine::get().cam->dy = 10;
-				}break;
-				case GLFW_KEY_S:
-				{
-					Engine::get().cam->dy = -10;
-				}break;
-			}
-
-		} else if (action == GLFW_RELEASE) {
-				switch (key) {
-				case GLFW_KEY_A:
-				{
-					Engine::get().cam->dx = 0;
-				}break;
-				case GLFW_KEY_D:
-				{
-					Engine::get().cam->dx = 0;
-				}break;
-				case GLFW_KEY_W:
-				{
-					Engine::get().cam->dy = 0;
-				}break;
-				case GLFW_KEY_S:
-				{
-					Engine::get().cam->dy = 0;
-				}break;
-			}
-
+		if (Input::Get().IsKeyPressed(ENGINE_KEY_A)) {
+			Engine::get().cam->dx = 10;
+		}
+		else {
+			if (Input::Get().IsKeyReleased(ENGINE_KEY_D))
+			{
+				Engine::get().cam->dx = 0;
+			}			
 		}
 
+		if (Input::Get().IsKeyPressed(ENGINE_KEY_D)) {
+			Engine::get().cam->dx = -10;
+		}
+		else {
+			if (Input::Get().IsKeyReleased(ENGINE_KEY_A))
+			{
+				Engine::get().cam->dx = 0;
+			}
+		}
 
-		if (key == GLFW_KEY_E && (action == GLFW_PRESS || action == GLFW_REPEAT))
-		{
-			std::cout << "E Pressed" << std::endl;
-		} else if (action == GLFW_RELEASE && key == GLFW_KEY_E) {			
-			Engine::get().cam->dx = 0;
+		if (Input::Get().IsKeyPressed(ENGINE_KEY_W)) {
+			Engine::get().cam->dy = 10;
+		}
+		else {
+			if (Input::Get().IsKeyReleased(ENGINE_KEY_S))
+			{
+				Engine::get().cam->dy = 0;
+			}
+		}
+
+		if (Input::Get().IsKeyPressed(ENGINE_KEY_S)) {
+			Engine::get().cam->dy = -10;
+		}
+		else {
+			if (Input::Get().IsKeyReleased(ENGINE_KEY_W))
+			{
+				Engine::get().cam->dy = 0;
+			}
 		}
 	}
 }

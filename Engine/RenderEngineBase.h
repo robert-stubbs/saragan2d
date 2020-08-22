@@ -14,6 +14,9 @@ namespace GameEngine {
 			virtual bool Init() = 0;
 			virtual bool PostInit() = 0;
 			virtual void RenderStart() = 0;
+
+			// TODO if windows this
+			virtual void SetCurrentContext(HGLRC hRC, HDC hDC) = 0;
 			
 			virtual bool Cleanup() = 0;
 

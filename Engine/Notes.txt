@@ -3,3 +3,11 @@
 ########################################################################################################
 
 Sort out the windows window api classes into engine properly
+HWND glfwGetWin32Window	(	GLFWwindow * 	window	)	
+
+
+Input Manager
+
+this needs abstracted like the Renderer and Shader
+
+different types of input are needed to be defined
