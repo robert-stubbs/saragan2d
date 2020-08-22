@@ -82,6 +82,12 @@
     <Filter Include="Systems\Base">
       <UniqueIdentifier>{3551560a-c519-4623-9710-118207ddf67b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Event Manager">
+      <UniqueIdentifier>{d0723ef3-d7b0-4907-a738-a5c69d30f4ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Event Manager\EventHandler">
+      <UniqueIdentifier>{2dfa0cff-337f-4d13-8531-8f825ffd9752}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\ThirdParty\glew\include\GL\eglew.h">
@@ -1331,6 +1337,15 @@
     <ClInclude Include="ModelSystem.h">
       <Filter>SORT</Filter>
     </ClInclude>
+    <ClInclude Include="EventManager.h">
+      <Filter>Event Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="EventHandler.h">
+      <Filter>Event Manager\EventHandler</Filter>
+    </ClInclude>
+    <ClInclude Include="Event.h">
+      <Filter>Event Manager\EventHandler</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="EnginePCH.cpp" />
@@ -1469,6 +1484,15 @@
     </ClCompile>
     <ClCompile Include="ModelSystem.cpp">
       <Filter>SORT</Filter>
+    </ClCompile>
+    <ClCompile Include="EventManager.cpp">
+      <Filter>Event Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="EventHandler.cpp">
+      <Filter>Event Manager\EventHandler</Filter>
+    </ClCompile>
+    <ClCompile Include="Event.cpp">
+      <Filter>Event Manager\EventHandler</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

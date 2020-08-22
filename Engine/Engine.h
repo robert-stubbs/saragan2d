@@ -6,6 +6,8 @@
 #include "ShaderManager.h"
 #include "ShaderDef.h"
 #include "Camera2D.h"
+#include "EventManager.h"
+
 #include "StateMachine.h"
 #include "SystemManager.h"
 #include "EntityManager.h"
@@ -24,11 +26,11 @@ namespace GameEngine {
 			std::vector<std::shared_ptr<ShaderDef>> _shader_definitions;
 
 		public:
-			StateMachine* GameFSM;
+			//StateMachine* GameFSM;
 			SystemManager* System;
 			EntityManager* EntityMgr;
 
-			Font* font;
+			//Font* font;
 
 			Camera2D* cam;
 			~Engine();
@@ -63,6 +65,8 @@ namespace GameEngine {
 			void RenderEnd();
 			bool Cleanup();
 
+			void TestFunction() { std::cout << "Test Called" << std::endl; }
+
 			void AddShaderDef(std::shared_ptr<ShaderDef> _def);
 
 			static void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods);
@@ -77,6 +81,10 @@ namespace GameEngine {
 
 			static RenderEngineBase& getRenderer() {
 				return get().renderer.RenderEngine();
+			}
+
+			static EventManager& Events() {
+				return EventManager::Instance();
 			}
 
 			static Engine& get() {

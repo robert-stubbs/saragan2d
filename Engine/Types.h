@@ -2,6 +2,14 @@
 #define _TYPES_H_
 namespace GameEngine {
 
+#pragma region Events
+	struct EventType {
+		class Event* event;
+		std::string name;
+	};
+#pragma endregion Events
+
+#pragma region Positions
 	struct viewPos
 	{
 		float x;
@@ -32,6 +40,9 @@ namespace GameEngine {
 		float  Text[2];
 		float  col[4];
 	} vert2D;
+#pragma endregion Positions
+
+#pragma region platform enums
 
 	enum class PLATFORM
 	{
@@ -103,6 +114,7 @@ namespace GameEngine {
 		ONE_MINUS_DST_COLOR,
 		SRC_ALPHA_SATURATE
 	};
+#pragma endregion platform enums
 }
 
 #endif 

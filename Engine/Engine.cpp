@@ -1,5 +1,6 @@
 #include "EnginePCH.h"
 #include "Engine.h"
+#include "EventManager.h"
 #include "Default2DShader.h"
 
 namespace GameEngine {
@@ -29,8 +30,13 @@ namespace GameEngine {
 
 	bool Engine::PreInit()
 	{
-		System = new SystemManager();
-		EntityMgr = new EntityManager();
+
+		Engine::Events().CreateNewEvent("TestEvent");
+		Engine::Events().Subscribe(std::string("TestEvent"), this, &Engine::TestFunction);
+
+
+		//System = new SystemManager();
+		//EntityMgr = new EntityManager();
 
 		/* Initialize the library */
 		if (!glfwInit()) {
@@ -58,13 +64,13 @@ namespace GameEngine {
 		renderer = Renderer(_engine);
 		shader_mgr = ShaderManager(_engine);
 
-		System->Init();
+		//System->Init();
 
 		std::string asset_dir = "C:/Assets/";
 		std::string ft = asset_dir + "Font/Vera.ttf";
-		font = new Font(30, ft.c_str());
+		//font = new Font(30, ft.c_str());
 
-		GameFSM = new StateMachine();
+		//GameFSM = new StateMachine();
 
 		return true;
 	}
@@ -93,6 +99,9 @@ namespace GameEngine {
 	bool Engine::PostInit()
 	{
 		getRenderer().PostInit();
+
+		Engine::Events().Execute("TestEvent");
+
 		return true;
 	}
 
@@ -112,8 +121,8 @@ namespace GameEngine {
 	{
 		cam->Update(DeltaTime);
 
-		System->Update(DeltaTime);
-		GameFSM->Update(DeltaTime);
+		//System->Update(DeltaTime);
+		///GameFSM->Update(DeltaTime);
 
 
 
