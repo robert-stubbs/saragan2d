@@ -28,13 +28,13 @@ namespace GameEngine {
 		fullscreen = isFullScreen;
 	}
 
+	void Engine::TestFunction()
+	{
+		std::cout << "Test Called" << std::endl; 
+	}
+
 	bool Engine::PreInit()
 	{
-
-		Engine::Events().CreateNewEvent("TestEvent");
-		Engine::Events().Subscribe(std::string("TestEvent"), this, &Engine::TestFunction);
-
-
 		//System = new SystemManager();
 		//EntityMgr = new EntityManager();
 
@@ -99,8 +99,6 @@ namespace GameEngine {
 	bool Engine::PostInit()
 	{
 		getRenderer().PostInit();
-
-		Engine::Events().Execute("TestEvent");
 
 		return true;
 	}

@@ -13,10 +13,15 @@ namespace GameEngine {
 		public:
 
 			template <typename T>
-			void AddListener(T* obj, void (T::* func)(void));
+			void AddListener(T* obj, void (T::* func)(void)) {
+				handlers.push_back(new EventHandler<T>(obj, func));
+			}
 
-			void Execute();
-
+			void Execute() {
+				for (EventHandlerBase* e : handlers) {
+					e->Execute();
+				}
+			}
 	};
 
 }

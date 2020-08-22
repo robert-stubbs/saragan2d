@@ -20,12 +20,44 @@ namespace GameEngine {
 				return _Instance;
 			}
 
-			void CreateNewEvent(std::string name);
+			void CreateNewEvent(std::string name) {
+
+				for (EventType e : _events)
+				{
+					if (e.name.compare(name) == 0)
+					{
+						return;
+					}
+				}
+
+				_events.push_back({ new Event(), name });
+			}
 
 			template <typename T>
-			bool Subscribe(std::string name, T* obj, void (T::* func)(void));
+			bool Subscribe(std::string name, T* obj, void (T::* func)(void))
+			{
+				for (EventType e : _events)
+				{
+					if (e.name.compare(name) == 0)
+					{
+						e.event->AddListener(obj, func);
+						return true;
+					}
+				}
 
-			void Execute(std::string name);
+				return false;
+			}
+
+			void Execute(std::string name) {
+
+				for (EventType e : _events)
+				{
+					if (e.name.compare(name) == 0)
+					{
+						e.event->Execute();
+					}
+				}
+			}
 	};
 }
 

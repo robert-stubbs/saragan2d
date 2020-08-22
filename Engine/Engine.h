@@ -65,7 +65,7 @@ namespace GameEngine {
 			void RenderEnd();
 			bool Cleanup();
 
-			void TestFunction() { std::cout << "Test Called" << std::endl; }
+			void TestFunction();
 
 			void AddShaderDef(std::shared_ptr<ShaderDef> _def);
 
