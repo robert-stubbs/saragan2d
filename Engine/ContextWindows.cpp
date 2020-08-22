@@ -6,7 +6,8 @@ namespace GameEngine
 {
 	ContextWindows::ContextWindows() : ContextPlatform()
 	{
-
+		hInst = NULL;
+		hWnd = NULL;
 	}
 
 	ContextWindows::~ContextWindows()
@@ -26,9 +27,13 @@ namespace GameEngine
 		_window_width = width;
 		_window_height = height;
 
+		//hInst = GetModuleHandle(NULL);
+
+		wc = { };
+
 		wc.cbSize = sizeof(WNDCLASSEX);
 		wc.style = CS_VREDRAW | CS_HREDRAW | CS_OWNDC;
-		wc.lpfnWndProc = WndProc;
+		wc.lpfnWndProc = &WndProc;
 		wc.cbClsExtra = 0;
 		wc.cbWndExtra = 0;
 		wc.hInstance = hInst;
@@ -73,6 +78,7 @@ namespace GameEngine
 
 		if (hWnd == NULL)
 		{
+			std::cout << GetLastError() << std::endl;
 			MessageBox(NULL, TEXT("Create Window Failed!"), TEXT("Error"), MB_ICONEXCLAMATION | MB_OK);
 			return false;
 		}
@@ -142,56 +148,57 @@ namespace GameEngine
 
 	LRESULT CALLBACK ContextWindows::WndProc(HWND hWnd, UINT Msg, WPARAM wParam, LPARAM lParam)
 	{
+
 		switch (Msg)
 		{
-		case WM_KEYDOWN:
-		{
-			//Engine::getEngine().KeyDown(Msg, wParam, lParam);
-		}break;
+		//case WM_KEYDOWN:
+		//{
+		//	//Engine::getEngine().KeyDown(Msg, wParam, lParam);
+		//}break;
 
-		case WM_KEYUP:
-		{
-			//Engine::getEngine().KeyUp(Msg, wParam, lParam);
-		}break;
-		case WM_LBUTTONDOWN:
-		{
-		} break;
-		case WM_LBUTTONUP:
-		{
-			//Engine::getEngine().MouseUp(Msg, wParam, lParam);
-		} break;
-		case WM_RBUTTONDOWN:
-		{
-			//Engine::getEngine().MouseDown(Msg, wParam, lParam);
-		} break;
-		case WM_RBUTTONUP:
-		{
-			//Engine::getEngine().MouseUp(Msg, wParam, lParam);
-		} break;
-		case WM_MOUSEMOVE:
-		{
-			//Engine::getEngine().MouseMove(Msg, wParam, lParam);
-		} break;
-		case WM_SIZE:
-		{
-			//Resize The OpenGL Window
-			if (wglGetCurrentDC() && wglGetCurrentContext())
-			{
-				//Engine::getEngine().ResizeWindow(LOWORD(lParam), HIWORD(lParam));
-			}
-		} break;
-		case WM_CLOSE:
-		{
-			DestroyWindow(hWnd);
-			PostQuitMessage(0);
-		} break;
-		case WM_DESTROY:
-		{
-			DestroyWindow(hWnd);
-			PostQuitMessage(0);
-		} break;
-		default:
-			return DefWindowProc(hWnd, Msg, wParam, lParam);
+		//case WM_KEYUP:
+		//{
+		//	//Engine::getEngine().KeyUp(Msg, wParam, lParam);
+		//}break;
+		//case WM_LBUTTONDOWN:
+		//{
+		//} break;
+		//case WM_LBUTTONUP:
+		//{
+		//	//Engine::getEngine().MouseUp(Msg, wParam, lParam);
+		//} break;
+		//case WM_RBUTTONDOWN:
+		//{
+		//	//Engine::getEngine().MouseDown(Msg, wParam, lParam);
+		//} break;
+		//case WM_RBUTTONUP:
+		//{
+		//	//Engine::getEngine().MouseUp(Msg, wParam, lParam);
+		//} break;
+		//case WM_MOUSEMOVE:
+		//{
+		//	//Engine::getEngine().MouseMove(Msg, wParam, lParam);
+		//} break;
+		//case WM_SIZE:
+		//{
+		//	//Resize The OpenGL Window
+		//	if (wglGetCurrentDC() && wglGetCurrentContext())
+		//	{
+		//		//Engine::getEngine().ResizeWindow(LOWORD(lParam), HIWORD(lParam));
+		//	}
+		//} break;
+		//case WM_CLOSE:
+		//{
+		//	DestroyWindow(hWnd);
+		//	PostQuitMessage(0);
+		//} break;
+		//case WM_DESTROY:
+		//{
+		//	DestroyWindow(hWnd);
+		//	PostQuitMessage(0);
+		//} break;
+			default:
+				return DefWindowProc(hWnd, Msg, wParam, lParam);
 		}
 
 		return DefWindowProc(hWnd, Msg, wParam, lParam);

@@ -808,3 +808,83 @@ POSITION
 
 #######################################################
 
+#######################################################
+> Created Console
+> Creating Engine
+#######################################################
+> Creating Window
+#######################################################
+> Loading Engine
+
+> OpenGL version: 
+3 3 
+> Add System: 
+GUI
+..Done
+
+> Add System: 
+AUDIO
+..Done
+
+> Add System: 
+AI
+..Done
+
+> Add System: 
+MODEL
+..Done
+
+> Add System: 
+POSITION
+..Done
+
+> Initialized SoundItem
+
+#######################################################
+> Created Console
+> Creating Engine
+#######################################################
+> Creating Window
+#######################################################
+> Loading Engine
+
+> OpenGL version: 
+3 3 
+> Add System: 
+GUI
+..Done
+
+> Add System: 
+AUDIO
+..Done
+
+> Add System: 
+AI
+..Done
+
+> Add System: 
+MODEL
+..Done
+
+> Add System: 
+POSITION
+..Done
+
+> Initialized SoundItem
+
+#######################################################
+
+> Shutting Down
+
+#######################################################
+
+#######################################################
+> Created Console
+> Creating Engine
+#######################################################
+> Creating Window
+#######################################################
+> Created Console
+> Creating Engine
+#######################################################
+> Creating Window

@@ -14,7 +14,7 @@ namespace GameEngine
 		private:
 			HWND hWnd;
 			HINSTANCE hInst;
-			WNDCLASSEX wc;
+			WNDCLASSEX wc = { };
 
 			DWORD dStyle;
 			DWORD dXStyle;
