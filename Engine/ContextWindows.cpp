@@ -150,6 +150,51 @@ namespace GameEngine
 		return false;
 	}
 
+	void ContextWindows::RenderLoop()
+	{
+		double lastTime = GetTime();
+		double timer = lastTime;
+		double deltaTime = 0;
+		double nowTime = 0;
+		int frames = 0;
+		int updates = 0;
+
+		double dt = 0.15;
+		MSG msg = { 0 };
+
+		while (WM_QUIT != msg.message)
+		{
+			while (PeekMessage(&msg, NULL, 0, 0, PM_REMOVE) == TRUE)
+			{
+				TranslateMessage(&msg);
+				DispatchMessage(&msg);
+			}
+			// - Measure time
+
+			nowTime = GetTime();
+			deltaTime += (nowTime - lastTime) / limitFPS;
+			lastTime = nowTime;
+
+			// - Only update at 60 frames / s
+			while (deltaTime >= 1.0) {
+				Engine::get().Update((float)deltaTime);
+				updates++;
+				deltaTime--;
+			}
+
+			Engine::get().Render();
+
+			frames++;
+
+			// - Reset after one second
+			if (GetTime() - timer > 1.0) {
+				timer++;
+				std::cout << "FPS: " << frames << " Updates:" << updates << std::endl;
+				updates = 0, frames = 0;
+			}
+		}
+	}
+
 	void ContextWindows::SwapContextBuffers()
 	{
 		SwapBuffers(hDC);

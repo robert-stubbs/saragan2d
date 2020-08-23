@@ -119,6 +119,8 @@ namespace GameEngine {
 
 		Render3D();
 		RenderOrth();
+
+		RenderEnd();
 	}
 
 	void Engine::Render3D()

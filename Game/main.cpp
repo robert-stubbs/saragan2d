@@ -19,7 +19,7 @@ Triangle t;
 // Time Step Videos
 // https://stackoverflow.com/questions/20390028/c-using-glfwgettime-for-a-fixed-time-step
 // https://www.youtube.com/watch?v=rh31YOZh5ZM&t
-static double limitFPS = 1.0 / 60.0;
+
 
 bool PreLoad()
 {
@@ -101,77 +101,7 @@ int main(void)
     Load();
     PostLoad();
 
-    double lastTime = Engine::getContext().GetWindow().GetTime();
-    double timer = lastTime;
-    double deltaTime = 0;
-    double nowTime = 0;
-    int frames = 0;
-    int updates = 0;
-
-    ContextPlatform& platform = Engine::getContext().GetWindow();
-
-    double dt = 0.15;
-    MSG msg = { 0 };
-
-    while (WM_QUIT != msg.message)
-    {
-        while (PeekMessage(&msg, NULL, 0, 0, PM_REMOVE) == TRUE)
-        {
-            TranslateMessage(&msg);
-            DispatchMessage(&msg);
-        }
-        // - Measure time
-
-        nowTime = Engine::getContext().GetWindow().GetTime();
-        deltaTime += (nowTime - lastTime) / limitFPS;
-        lastTime = nowTime;
-
-        // - Only update at 60 frames / s
-        while (deltaTime >= 1.0) {
-            Update((float)deltaTime);
-            updates++;
-            deltaTime--;
-        }
-
-        Render();
-
-        frames++;
-
-        // - Reset after one second
-        if (Engine::getContext().GetWindow().GetTime() - timer > 1.0) {
-            timer++;
-            std::cout << "FPS: " << frames << " Updates:" << updates << std::endl;
-            updates = 0, frames = 0;
-        }
-    }
-    ///* Loop until the user closes the window */
-    //while (!glfwWindowShouldClose(((GLFWwindow*)platform.GetWindowHandle())))
-    //{
-    //    // - Measure time
-    //    nowTime = glfwGetTime();
-    //    deltaTime += (nowTime - lastTime) / limitFPS;
-    //    lastTime = nowTime;
-
-    //    // - Only update at 60 frames / s
-    //    while (deltaTime >= 1.0) {
-    //        Update((float)deltaTime);
-    //        updates++;
-    //        deltaTime--;
-    //    }
-
-    //    Render();
-
-
-    //    frames++;
-
-    //    // - Reset after one second
-    //    if (glfwGetTime() - timer > 1.0) {
-    //        timer++;
-    //        std::cout << "FPS: " << frames << " Updates:" << updates << std::endl;
-    //        updates = 0, frames = 0;
-    //    }
-
-    //}
+    Engine::getContext().GetWindow().RenderLoop();
 
     CleanUp();
     return 0;

@@ -13,6 +13,7 @@ namespace GameEngine
 	class ContextPlatform
 	{
 		protected:
+			double limitFPS = 1.0 / 60.0;
 			std::string _window_name;
 			bool _fullscreen;
 			int _window_width;
@@ -26,6 +27,7 @@ namespace GameEngine
 
 			virtual bool InitWindow(int width, int height, std::string window_name, bool fullscreen = false) = 0;
 			virtual bool InitContext() = 0;
+			virtual void RenderLoop() = 0;
 
 			virtual void SwapContextBuffers() = 0;
 

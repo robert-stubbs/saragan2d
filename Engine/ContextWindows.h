@@ -37,6 +37,7 @@ namespace GameEngine
 			virtual bool InitWindow(int width, int height, std::string window_name, bool fullscreen = false) override;
 			virtual bool InitContext() override;
 			virtual void SwapContextBuffers() override;
+			virtual void RenderLoop() override;
 			virtual double GetTime() override;
 			virtual double GetSystemTime();
 			virtual double GetSystemFrequency();

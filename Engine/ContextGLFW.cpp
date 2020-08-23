@@ -55,6 +55,43 @@ namespace GameEngine
 
 		return true;
 	}
+
+	void ContextGLFW::RenderLoop()
+	{
+		double lastTime = Engine::getContext().GetWindow().GetTime();
+		double timer = lastTime;
+		double deltaTime = 0;
+		double nowTime = 0;
+		int frames = 0;
+		int updates = 0;
+
+		/* Loop until the user closes the window */
+		while (!glfwWindowShouldClose(window))
+		{
+		    // - Measure time
+		    nowTime = glfwGetTime();
+		    deltaTime += (nowTime - lastTime) / limitFPS;
+		    lastTime = nowTime;
+
+		    // - Only update at 60 frames / s
+		    while (deltaTime >= 1.0) {
+		        Engine::get().Update((float)deltaTime);
+		        updates++;
+		        deltaTime--;
+		    }
+
+			Engine::get().Render();
+
+		    frames++;
+
+		    // - Reset after one second
+		    if (glfwGetTime() - timer > 1.0) {
+		        timer++;
+		        std::cout << "FPS: " << frames << " Updates:" << updates << std::endl;
+		        updates = 0, frames = 0;
+		    }
+		}
+	}
 	
 	void ContextGLFW::SwapContextBuffers()
 	{
