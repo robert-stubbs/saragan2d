@@ -69,11 +69,15 @@ namespace GameEngine {
 			void Render();
 			bool Cleanup();
 
+			void KeyDown(int Key);
+			void KeyUp(int Key);
+			void MouseDown(int button);
+			void MouseUp(int button);
+			void MouseMove(float x, float y);
+
 			void TestFunction();
 
 			void AddShaderDef(std::shared_ptr<ShaderDef> _def);
-
-			static void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods);
 
 			static StateMachine& state() {
 				return get().GameFSM;

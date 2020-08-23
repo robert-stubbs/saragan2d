@@ -18,8 +18,6 @@ TestState::~TestState()
 
 void TestState::Init()
 {
-	std::cout << "we got here" << std::endl;
-
 	t.Init(0.0f, 0.0f, 100.0f, 100.0f, 100.0f, 0.0f);
 }
 
@@ -52,12 +50,60 @@ void TestState::DoEXIT()
 
 void TestState::KeyDown(int Key)
 { 
-
+	switch (Input::Get().GetKey(Key))
+	{
+		case ENGINE_KEY_A:
+		{
+			Engine::get().cam->dx = 10;
+		}break;
+		case ENGINE_KEY_D:
+		{
+			Engine::get().cam->dx = -10;
+		}break;
+		case ENGINE_KEY_W:
+		{
+			Engine::get().cam->dy = 10;
+		}break;
+		case ENGINE_KEY_S:
+		{
+			Engine::get().cam->dy = -10;
+		}break;
+	}
 }
 
 void TestState::KeyUp(int Key)
-{ 
-
+{
+	switch (Input::Get().GetKey(Key))
+	{
+		case ENGINE_KEY_A:
+		{
+			if (Input::Get().IsKeyReleased(ENGINE_KEY_D))
+			{
+				Engine::get().cam->dx = 0;
+			}
+		}break;
+		case ENGINE_KEY_D:
+		{
+			if (Input::Get().IsKeyReleased(ENGINE_KEY_A))
+			{
+				Engine::get().cam->dx = 0;
+			}
+		}break;
+		case ENGINE_KEY_W:
+		{
+			if (Input::Get().IsKeyReleased(ENGINE_KEY_S))
+			{
+				Engine::get().cam->dy = 0;
+			}
+		}break;
+		case ENGINE_KEY_S:
+		{
+			if (Input::Get().IsKeyReleased(ENGINE_KEY_W))
+			{
+				Engine::get().cam->dy = 0;
+			}
+		}break;
+	}
 }
 
 void TestState::MouseDown(int button)

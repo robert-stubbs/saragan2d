@@ -255,52 +255,16 @@ namespace GameEngine
 		{
 			case WM_KEYDOWN:
 			{
-				//Engine::getEngine().KeyDown(Msg, wParam, lParam);
-				if (Input::Get().IsKeyPressed(ENGINE_KEY_A)) {
-					Engine::get().cam->dx = 10;
-				}
-				else {
-					if (Input::Get().IsKeyReleased(ENGINE_KEY_D))
-					{
-						Engine::get().cam->dx = 0;
-					}
-				}
-
-				if (Input::Get().IsKeyPressed(ENGINE_KEY_D)) {
-					Engine::get().cam->dx = -10;
-				}
-				else {
-					if (Input::Get().IsKeyReleased(ENGINE_KEY_A))
-					{
-						Engine::get().cam->dx = 0;
-					}
-				}
-
-				if (Input::Get().IsKeyPressed(ENGINE_KEY_W)) {
-					Engine::get().cam->dy = 10;
-				}
-				else {
-					if (Input::Get().IsKeyReleased(ENGINE_KEY_S))
-					{
-						Engine::get().cam->dy = 0;
-					}
-				}
-
-				if (Input::Get().IsKeyPressed(ENGINE_KEY_S)) {
-					Engine::get().cam->dy = -10;
-				}
-				else {
-					if (Input::Get().IsKeyReleased(ENGINE_KEY_W))
-					{
-						Engine::get().cam->dy = 0;
-					}
-				}
-			}break;
+				Engine::get().KeyDown(Input::Get().GetPlatformKey((int)wParam));
+			}
+			break;
 
 			case WM_KEYUP:
 			{
-				//Engine::getEngine().KeyUp(Msg, wParam, lParam);
-			}break;
+				Engine::get().KeyUp(Input::Get().GetPlatformKey((int)wParam));
+			}
+			break;
+
 			case WM_LBUTTONDOWN:
 			{
 			} break;

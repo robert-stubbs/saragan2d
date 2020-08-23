@@ -122,46 +122,13 @@ namespace GameEngine
 
 	void ContextGLFW::key_callback(GLFWwindow* window, int key, int scancode, int action, int mods)
 	{	
+		if (action == GLFW_PRESS || action == GLFW_REPEAT)
+		{
+			return Engine::get().KeyDown(key);
+		}
+		else if (action == GLFW_RELEASE) {
 
-		if (Input::Get().IsKeyPressed(ENGINE_KEY_A)) {
-			std::cout << "test" << std::endl;
-			Engine::get().cam->dx = 10;
-		}
-		else {
-			if (Input::Get().IsKeyReleased(ENGINE_KEY_D))
-			{
-				Engine::get().cam->dx = 0;
-			}
-		}
-
-		if (Input::Get().IsKeyPressed(ENGINE_KEY_D)) {
-			Engine::get().cam->dx = -10;
-		}
-		else {
-			if (Input::Get().IsKeyReleased(ENGINE_KEY_A))
-			{
-				Engine::get().cam->dx = 0;
-			}
-		}
-
-		if (Input::Get().IsKeyPressed(ENGINE_KEY_W)) {
-			Engine::get().cam->dy = 10;
-		}
-		else {
-			if (Input::Get().IsKeyReleased(ENGINE_KEY_S))
-			{
-				Engine::get().cam->dy = 0;
-			}
-		}
-
-		if (Input::Get().IsKeyPressed(ENGINE_KEY_S)) {
-			Engine::get().cam->dy = -10;
-		}
-		else {
-			if (Input::Get().IsKeyReleased(ENGINE_KEY_W))
-			{
-				Engine::get().cam->dy = 0;
-			}
+			return Engine::get().KeyUp(key);
 		}
 	}
 }

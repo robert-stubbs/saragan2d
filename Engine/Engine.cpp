@@ -130,6 +130,31 @@ namespace GameEngine {
 		return true;
 	}
 
+	void Engine::KeyDown(int Key)
+	{
+		GameFSM.KeyDown(Key);
+	}
+
+	void Engine::KeyUp(int Key)
+	{
+		GameFSM.KeyUp(Key);
+	}
+
+	void Engine::MouseDown(int button)
+	{
+		GameFSM.MouseDown(button);
+	}
+
+	void Engine::MouseUp(int button)
+	{
+		GameFSM.MouseUp(button);
+	}
+
+	void Engine::MouseMove(float x, float y)
+	{
+		GameFSM.MouseMove(x,y);
+	}
+
 	void Engine::AddShaderDef(std::shared_ptr<ShaderDef> _def)
 	{
 		_shader_definitions.push_back(_def);
