@@ -17,6 +17,8 @@ namespace GameEngine
 			WNDCLASSEX wc = { };
 
 			bool usePerformanceCounter;
+			double offset;
+			double frequency;
 
 			DWORD dStyle = WS_OVERLAPPEDWINDOW;
 			DWORD dXStyle = WS_EX_APPWINDOW | WS_EX_WINDOWEDGE;
@@ -36,6 +38,8 @@ namespace GameEngine
 			virtual bool InitContext() override;
 			virtual void SwapContextBuffers() override;
 			virtual double GetTime() override;
+			virtual double GetSystemTime();
+			virtual double GetSystemFrequency();
 
 			static LRESULT CALLBACK WndProcRouter(HWND hWnd, UINT Msg, WPARAM wParam, LPARAM lParam);
 			LRESULT CALLBACK WndProc(HWND hWnd, UINT Msg, WPARAM wParam, LPARAM lParam);

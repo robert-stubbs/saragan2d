@@ -11,6 +11,7 @@ namespace GameEngine
 		hInst = NULL;
 		hWnd = NULL;
 		usePerformanceCounter = false;
+		offset = -1;
 	}
 
 	ContextWindows::~ContextWindows()
@@ -138,14 +139,11 @@ namespace GameEngine
 
 		Engine::getRenderer().SetCurrentContext(hRC, hDC);
 
+		frequency = GetSystemFrequency();
+		if (offset == -1) { offset = GetSystemTime(); }
+
 		if (ShowWindow(hWnd, true) && UpdateWindow(hWnd))
 		{
-			uint64_t frequency;
-
-			if (QueryPerformanceFrequency((LARGE_INTEGER*)&frequency)) {
-				usePerformanceCounter = true;
-			}
-
 			return true;
 		}	
 
@@ -159,13 +157,34 @@ namespace GameEngine
 
 	double ContextWindows::GetTime()
 	{
+		double st = GetSystemTime();
+		double fq = GetSystemFrequency();
+
+		double val = (double)(st - offset) / fq;
+
+		return val;
+	}
+	double ContextWindows::GetSystemTime()
+	{
 		if (usePerformanceCounter) {
-			double value;
+			LARGE_INTEGER value;
 			QueryPerformanceCounter((LARGE_INTEGER*)&value);
-			return value;
+			return (double)value.QuadPart;
 		}
 
 		return (double)timeGetTime();
+	}
+
+	double ContextWindows::GetSystemFrequency()
+	{
+		LARGE_INTEGER freq;
+		if (QueryPerformanceFrequency((LARGE_INTEGER*)&freq))
+		{
+			usePerformanceCounter = true;
+			return (double)freq.QuadPart;
+		}
+
+		return 1000;
 	}
 
 	LRESULT CALLBACK ContextWindows::WndProcRouter(HWND hWnd, UINT Msg, WPARAM wParam, LPARAM lParam)

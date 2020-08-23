@@ -101,9 +101,12 @@ int main(void)
     Load();
     PostLoad();
 
-    //double lastTime = glfwGetTime(), timer = lastTime;
-    //double deltaTime = 0, nowTime = 0;
-    //int frames = 0, updates = 0;
+    double lastTime = Engine::getContext().GetWindow().GetTime();
+    double timer = lastTime;
+    double deltaTime = 0;
+    double nowTime = 0;
+    int frames = 0;
+    int updates = 0;
 
     ContextPlatform& platform = Engine::getContext().GetWindow();
 
@@ -117,13 +120,30 @@ int main(void)
             TranslateMessage(&msg);
             DispatchMessage(&msg);
         }
+        // - Measure time
 
-        Update((float)dt);
+        nowTime = Engine::getContext().GetWindow().GetTime();
+        deltaTime += (nowTime - lastTime) / limitFPS;
+        lastTime = nowTime;
 
+        // - Only update at 60 frames / s
+        while (deltaTime >= 1.0) {
+            Update((float)deltaTime);
+            updates++;
+            deltaTime--;
+        }
 
         Render();
-    }
 
+        frames++;
+
+        // - Reset after one second
+        if (Engine::getContext().GetWindow().GetTime() - timer > 1.0) {
+            timer++;
+            std::cout << "FPS: " << frames << " Updates:" << updates << std::endl;
+            updates = 0, frames = 0;
+        }
+    }
     ///* Loop until the user closes the window */
     //while (!glfwWindowShouldClose(((GLFWwindow*)platform.GetWindowHandle())))
     //{

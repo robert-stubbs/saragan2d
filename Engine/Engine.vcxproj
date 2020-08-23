@@ -467,8 +467,6 @@
     <ClInclude Include="Behaviour.h" />
     <ClInclude Include="Brain.h" />
     <ClInclude Include="Camera2D.h" />
-    <ClInclude Include="cErrorLogger.h" />
-    <ClInclude Include="cIni.h" />
     <ClInclude Include="Component.h" />
     <ClInclude Include="Context.h" />
     <ClInclude Include="ContextGLFW.h" />
@@ -493,7 +491,6 @@
     <ClInclude Include="InputWindows.h" />
     <ClInclude Include="LabelEntity.h" />
     <ClInclude Include="Line.h" />
-    <ClInclude Include="lodepng.h" />
     <ClInclude Include="ModelSystem.h" />
     <ClInclude Include="Object.h" />
     <ClInclude Include="OpenGLRenderEngine.h" />
@@ -509,7 +506,6 @@
     <ClInclude Include="SoundItem.h" />
     <ClInclude Include="SoundSystem.h" />
     <ClInclude Include="Square.h" />
-    <ClInclude Include="standards.h" />
     <ClInclude Include="State.h" />
     <ClInclude Include="StateMachine.h" />
     <ClInclude Include="System.h" />
@@ -520,14 +516,16 @@
     <ClInclude Include="Types.h" />
     <ClInclude Include="Viewport.h" />
     <ClInclude Include="ViewportManager.h" />
+    <ClInclude Include="cErrorLogger.h" />
+    <ClInclude Include="cIni.h" />
+    <ClInclude Include="lodepng.h" />
+    <ClInclude Include="standards.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AISystem.cpp" />
     <ClCompile Include="Behaviour.cpp" />
     <ClCompile Include="Brain.cpp" />
     <ClCompile Include="Camera2D.cpp" />
-    <ClCompile Include="cErrorLogger.cpp" />
-    <ClCompile Include="cIni.cpp" />
     <ClCompile Include="Component.cpp" />
     <ClCompile Include="Context.cpp" />
     <ClCompile Include="ContextGLFW.cpp" />
@@ -554,7 +552,6 @@
     <ClCompile Include="InputWindows.cpp" />
     <ClCompile Include="LabelEntity.cpp" />
     <ClCompile Include="Line.cpp" />
-    <ClCompile Include="lodepng.cpp" />
     <ClCompile Include="ModelSystem.cpp" />
     <ClCompile Include="Object.cpp" />
     <ClCompile Include="OpenGLRenderEngine.cpp" />
@@ -569,7 +566,6 @@
     <ClCompile Include="SoundItem.cpp" />
     <ClCompile Include="SoundSystem.cpp" />
     <ClCompile Include="Square.cpp" />
-    <ClCompile Include="standards.cpp" />
     <ClCompile Include="State.cpp" />
     <ClCompile Include="StateMachine.cpp" />
     <ClCompile Include="System.cpp" />
@@ -579,9 +575,10 @@
     <ClCompile Include="Triangle.cpp" />
     <ClCompile Include="Viewport.cpp" />
     <ClCompile Include="ViewportManager.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="Notes.txt" />
+    <ClCompile Include="cErrorLogger.cpp" />
+    <ClCompile Include="cIni.cpp" />
+    <ClCompile Include="lodepng.cpp" />
+    <ClCompile Include="standards.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
