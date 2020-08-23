@@ -26,6 +26,10 @@ namespace GameEngine
 
 			virtual bool InitWindow(int width, int height, std::string window_name, bool fullscreen = false) = 0;
 			virtual bool InitContext() = 0;
+
+			virtual void SwapContextBuffers() = 0;
+
+			virtual double GetTime() = 0;
 	};
 }
 

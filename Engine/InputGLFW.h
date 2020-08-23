@@ -17,6 +17,7 @@ namespace GameEngine
 		virtual std::pair<float, float> GetMousePos();
 
 		virtual int GetKey(int keycode);
+		virtual int GetPlatformKey(int keycode);
 	};
 }
 

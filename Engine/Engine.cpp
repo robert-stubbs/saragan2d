@@ -133,18 +133,13 @@ namespace GameEngine {
 
 	void Engine::RenderEnd()
 	{
-		// Swap front and back buffers
-		glfwSwapBuffers((GLFWwindow*)ctx.GetWindow().GetWindowHandle());
-
-		// Poll for and process events
-		glfwPollEvents();
+		getContext().SwapContextBuffers();
 	}
 
 	bool Engine::Cleanup()
 	{
 		getRenderer().Cleanup();
 
-		glfwTerminate();
 		return true;
 	}
 

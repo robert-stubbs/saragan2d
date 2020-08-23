@@ -16,15 +16,17 @@ namespace GameEngine
 			HINSTANCE hInst;
 			WNDCLASSEX wc = { };
 
-			DWORD dStyle;
-			DWORD dXStyle;
+			bool usePerformanceCounter;
+
+			DWORD dStyle = WS_OVERLAPPEDWINDOW;
+			DWORD dXStyle = WS_EX_APPWINDOW | WS_EX_WINDOWEDGE;
 
 			PIXELFORMATDESCRIPTOR pfd;
-			HGLRC hRC;
-			HDC hDC;
 			GLuint PixelFormat = 0;
 
 		public:
+			HGLRC hRC;
+			HDC hDC;
 			ContextWindows();
 			~ContextWindows();
 
@@ -32,8 +34,11 @@ namespace GameEngine
 
 			virtual bool InitWindow(int width, int height, std::string window_name, bool fullscreen = false) override;
 			virtual bool InitContext() override;
+			virtual void SwapContextBuffers() override;
+			virtual double GetTime() override;
 
-			static LRESULT CALLBACK WndProc(HWND hWnd, UINT Msg, WPARAM wParam, LPARAM lParam);
+			static LRESULT CALLBACK WndProcRouter(HWND hWnd, UINT Msg, WPARAM wParam, LPARAM lParam);
+			LRESULT CALLBACK WndProc(HWND hWnd, UINT Msg, WPARAM wParam, LPARAM lParam);
 	};
 }
 

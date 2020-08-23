@@ -11,7 +11,7 @@ namespace GameEngine
 
 	ContextGLFW::~ContextGLFW()
 	{
-
+		glfwTerminate();
 	}
 
 	void* ContextGLFW::GetWindowHandle()
@@ -54,5 +54,19 @@ namespace GameEngine
 		Engine::getRenderer().Init();
 
 		return true;
+	}
+	
+	void ContextGLFW::SwapContextBuffers()
+	{
+		// Swap front and back buffers
+		glfwSwapBuffers(window);
+
+		// Poll for and process events
+		glfwPollEvents();
+	}
+
+	double ContextGLFW::GetTime()
+	{
+		return glfwGetTime();
 	}
 }

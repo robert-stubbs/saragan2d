@@ -17,6 +17,7 @@ namespace GameEngine
 
 			bool InitWindow(int width, int height, std::string window_name, bool fullscreen = false);
 			bool InitContext();
+			void SwapContextBuffers();
 
 			inline ContextPlatform& GetWindow() { return *_platform; }
 	};

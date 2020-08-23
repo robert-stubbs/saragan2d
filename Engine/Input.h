@@ -28,6 +28,7 @@ namespace GameEngine
 			inline virtual std::pair<float, float> GetMousePos() { return _platform->GetMousePos(); };
 
 			inline virtual int GetKey(int keycode) { return _platform->GetKey(keycode); };
+			inline virtual int GetPlatformKey(int keycode) { return _platform->GetPlatformKey(keycode); };
 
 
 			static Input& Get() {

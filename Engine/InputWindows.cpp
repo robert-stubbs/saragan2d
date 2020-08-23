@@ -144,6 +144,14 @@ namespace GameEngine
 		_key_codes[ENGINE_MOUSE_BUTTON_LEFT]   = ENGINE_MOUSE_BUTTON_1;
 		_key_codes[ENGINE_MOUSE_BUTTON_RIGHT]  = ENGINE_MOUSE_BUTTON_2;
 		_key_codes[ENGINE_MOUSE_BUTTON_MIDDLE] = ENGINE_MOUSE_BUTTON_3;
+
+		_platform_key_codes = std::map<int, int>();
+		for (auto pair : _key_codes)
+		{
+			if (pair.second != 0) {
+				_platform_key_codes[pair.second] = pair.first;
+			}
+		}
 	}
 
 	bool InputWindows::IsKeyPressed(int key)
@@ -171,4 +179,8 @@ namespace GameEngine
 		return _key_codes[keycode];
 	}
 
+	int InputWindows::GetPlatformKey(int keycode)
+	{
+		return _platform_key_codes[keycode];
+	}
 }

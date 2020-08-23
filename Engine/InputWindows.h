@@ -9,6 +9,7 @@ namespace GameEngine
 	{
 		private:
 			std::map<int, int> _key_codes;
+			std::map<int, int> _platform_key_codes;
 
 		public:
 			InputWindows();
@@ -20,6 +21,7 @@ namespace GameEngine
 			virtual std::pair<float, float> GetMousePos();
 
 			virtual int GetKey(int keycode);
+			virtual int GetPlatformKey(int keycode);
 	};
 }
 

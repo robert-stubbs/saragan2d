@@ -35,4 +35,9 @@ namespace GameEngine {
 	{
 		return _platform->InitContext();
 	}
+
+	void Context::SwapContextBuffers()
+	{
+		return _platform->SwapContextBuffers();
+	}
 }

@@ -75,8 +75,8 @@ namespace GameEngine {
 		}
 
 		int attributes[] = {
-			WGL_CONTEXT_MAJOR_VERSION_ARB, 4, // Set the MAJOR version of OpenGL to 3
-			WGL_CONTEXT_MINOR_VERSION_ARB, 2, // Set the MINOR version of OpenGL to 2
+			WGL_CONTEXT_MAJOR_VERSION_ARB, 4, // Set the MAJOR version of OpenGL to 4
+			WGL_CONTEXT_MINOR_VERSION_ARB, 4, // Set the MINOR version of OpenGL to 4
 			WGL_CONTEXT_FLAGS_ARB, WGL_CONTEXT_FORWARD_COMPATIBLE_BIT_ARB, // Set our OpenGL context to be forward compatible
 			0
 		};
@@ -104,6 +104,14 @@ namespace GameEngine {
 			hRC = tempOpenGLContext; // If we didn't have support for OpenGL 3.x and up, use the OpenGL 2.1 context
 
 		}
+
+		int Major = 0;
+		int Minor = 0;
+
+		glGetIntegerv(GL_MAJOR_VERSION, &Major); // major = 3
+		glGetIntegerv(GL_MINOR_VERSION, &Minor); // minor = 2
+
+		std::cout << "OpenGL Version " << Major << " " << Minor << std::endl;
 	}
 
 	bool OpenGLRenderEngine::Cleanup()

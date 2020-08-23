@@ -43,4 +43,9 @@ namespace GameEngine
 		return keycode;
 	}
 
+	int InputGLFW::GetPlatformKey(int keycode)
+	{
+		return keycode;
+	}
+
 }

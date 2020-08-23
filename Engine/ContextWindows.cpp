@@ -2,12 +2,15 @@
 #include "ContextWindows.h"
 #include "Engine.h"
 
+//https://elcharolin.wordpress.com/2015/01/24/wndproc-as-a-class-member-win32/
+
 namespace GameEngine
 {
 	ContextWindows::ContextWindows() : ContextPlatform()
 	{
 		hInst = NULL;
 		hWnd = NULL;
+		usePerformanceCounter = false;
 	}
 
 	ContextWindows::~ContextWindows()
@@ -27,16 +30,15 @@ namespace GameEngine
 		_window_width = width;
 		_window_height = height;
 
-		//hInst = GetModuleHandle(NULL);
 
 		wc = { };
 
 		wc.cbSize = sizeof(WNDCLASSEX);
 		wc.style = CS_VREDRAW | CS_HREDRAW | CS_OWNDC;
-		wc.lpfnWndProc = &WndProc;
+		wc.lpfnWndProc = &WndProcRouter;
 		wc.cbClsExtra = 0;
 		wc.cbWndExtra = 0;
-		wc.hInstance = hInst;
+		wc.hInstance = GetModuleHandle(0);
 		wc.hIcon = LoadIcon(NULL, IDI_APPLICATION);
 		wc.hCursor = LoadCursor(NULL, IDC_ARROW);
 		wc.hbrBackground = static_cast<HBRUSH>(GetStockObject(WHITE_BRUSH));
@@ -74,7 +76,7 @@ namespace GameEngine
 			ShowCursor(FALSE);
 		}
 
-		hWnd = CreateWindowEx(dXStyle, CLASSNAME, WNDNAME, dStyle, 0, 0, _window_width, _window_height, NULL, NULL, hInst, this);
+		hWnd = CreateWindowEx(dXStyle, CLASSNAME, WNDNAME, dStyle, 0, 0, _window_width, _window_height, NULL, NULL, GetModuleHandle(0), this);
 
 		if (hWnd == NULL)
 		{
@@ -83,13 +85,11 @@ namespace GameEngine
 			return false;
 		}
 
-
 		return true;
 	}
 
 	bool ContextWindows::InitContext()
 	{
-
 		pfd =												// pfd Tells Windows How We Want Things To Be
 		{
 			sizeof(PIXELFORMATDESCRIPTOR),                  // Size Of This Pixel Format Descriptor
@@ -140,10 +140,47 @@ namespace GameEngine
 
 		if (ShowWindow(hWnd, true) && UpdateWindow(hWnd))
 		{
+			uint64_t frequency;
+
+			if (QueryPerformanceFrequency((LARGE_INTEGER*)&frequency)) {
+				usePerformanceCounter = true;
+			}
+
 			return true;
 		}	
 
 		return false;
+	}
+
+	void ContextWindows::SwapContextBuffers()
+	{
+		SwapBuffers(hDC);
+	}
+
+	double ContextWindows::GetTime()
+	{
+		if (usePerformanceCounter) {
+			double value;
+			QueryPerformanceCounter((LARGE_INTEGER*)&value);
+			return value;
+		}
+
+		return (double)timeGetTime();
+	}
+
+	LRESULT CALLBACK ContextWindows::WndProcRouter(HWND hWnd, UINT Msg, WPARAM wParam, LPARAM lParam)
+	{
+		ContextWindows* app;
+
+		if (Msg == WM_CREATE)
+		{
+			app = (ContextWindows*)(((LPCREATESTRUCT)lParam)->lpCreateParams);
+			SetWindowLongPtr(hWnd, GWLP_USERDATA, (LONG_PTR)app);
+		}
+		else {
+			app = (ContextWindows*)GetWindowLongPtr(hWnd, GWLP_USERDATA);
+		}
+		return app->WndProc(hWnd, Msg, wParam, lParam);
 	}
 
 	LRESULT CALLBACK ContextWindows::WndProc(HWND hWnd, UINT Msg, WPARAM wParam, LPARAM lParam)
@@ -151,52 +188,91 @@ namespace GameEngine
 
 		switch (Msg)
 		{
-		//case WM_KEYDOWN:
-		//{
-		//	//Engine::getEngine().KeyDown(Msg, wParam, lParam);
-		//}break;
+			case WM_KEYDOWN:
+			{
+				//Engine::getEngine().KeyDown(Msg, wParam, lParam);
+				if (Input::Get().IsKeyPressed(ENGINE_KEY_A)) {
+					Engine::get().cam->dx = 10;
+				}
+				else {
+					if (Input::Get().IsKeyReleased(ENGINE_KEY_D))
+					{
+						Engine::get().cam->dx = 0;
+					}
+				}
 
-		//case WM_KEYUP:
-		//{
-		//	//Engine::getEngine().KeyUp(Msg, wParam, lParam);
-		//}break;
-		//case WM_LBUTTONDOWN:
-		//{
-		//} break;
-		//case WM_LBUTTONUP:
-		//{
-		//	//Engine::getEngine().MouseUp(Msg, wParam, lParam);
-		//} break;
-		//case WM_RBUTTONDOWN:
-		//{
-		//	//Engine::getEngine().MouseDown(Msg, wParam, lParam);
-		//} break;
-		//case WM_RBUTTONUP:
-		//{
-		//	//Engine::getEngine().MouseUp(Msg, wParam, lParam);
-		//} break;
-		//case WM_MOUSEMOVE:
-		//{
-		//	//Engine::getEngine().MouseMove(Msg, wParam, lParam);
-		//} break;
-		//case WM_SIZE:
-		//{
-		//	//Resize The OpenGL Window
-		//	if (wglGetCurrentDC() && wglGetCurrentContext())
-		//	{
-		//		//Engine::getEngine().ResizeWindow(LOWORD(lParam), HIWORD(lParam));
-		//	}
-		//} break;
-		//case WM_CLOSE:
-		//{
-		//	DestroyWindow(hWnd);
-		//	PostQuitMessage(0);
-		//} break;
-		//case WM_DESTROY:
-		//{
-		//	DestroyWindow(hWnd);
-		//	PostQuitMessage(0);
-		//} break;
+				if (Input::Get().IsKeyPressed(ENGINE_KEY_D)) {
+					Engine::get().cam->dx = -10;
+				}
+				else {
+					if (Input::Get().IsKeyReleased(ENGINE_KEY_A))
+					{
+						Engine::get().cam->dx = 0;
+					}
+				}
+
+				if (Input::Get().IsKeyPressed(ENGINE_KEY_W)) {
+					Engine::get().cam->dy = 10;
+				}
+				else {
+					if (Input::Get().IsKeyReleased(ENGINE_KEY_S))
+					{
+						Engine::get().cam->dy = 0;
+					}
+				}
+
+				if (Input::Get().IsKeyPressed(ENGINE_KEY_S)) {
+					Engine::get().cam->dy = -10;
+				}
+				else {
+					if (Input::Get().IsKeyReleased(ENGINE_KEY_W))
+					{
+						Engine::get().cam->dy = 0;
+					}
+				}
+			}break;
+
+			case WM_KEYUP:
+			{
+				//Engine::getEngine().KeyUp(Msg, wParam, lParam);
+			}break;
+			case WM_LBUTTONDOWN:
+			{
+			} break;
+			case WM_LBUTTONUP:
+			{
+				//Engine::getEngine().MouseUp(Msg, wParam, lParam);
+			} break;
+			case WM_RBUTTONDOWN:
+			{
+				//Engine::getEngine().MouseDown(Msg, wParam, lParam);
+			} break;
+			case WM_RBUTTONUP:
+			{
+				//Engine::getEngine().MouseUp(Msg, wParam, lParam);
+			} break;
+			case WM_MOUSEMOVE:
+			{
+				//Engine::getEngine().MouseMove(Msg, wParam, lParam);
+			} break;
+			case WM_SIZE:
+			{
+				//Resize The OpenGL Window
+				if (wglGetCurrentDC() && wglGetCurrentContext())
+				{
+					//Engine::getEngine().ResizeWindow(LOWORD(lParam), HIWORD(lParam));
+				}
+			} break;
+			case WM_CLOSE:
+			{
+				DestroyWindow(hWnd);
+				PostQuitMessage(0);
+			} break;
+			case WM_DESTROY:
+			{
+				DestroyWindow(hWnd);
+				PostQuitMessage(0);
+			} break;
 			default:
 				return DefWindowProc(hWnd, Msg, wParam, lParam);
 		}
