@@ -49,6 +49,9 @@
     <Filter Include="States">
       <UniqueIdentifier>{c4c4b515-c27e-4085-b8ea-403392193299}</UniqueIdentifier>
     </Filter>
+    <Filter Include="States\RayState">
+      <UniqueIdentifier>{cf67a324-63fb-45da-815d-712edcadb3c5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\ThirdParty\glew\include\GL\eglew.h">
@@ -1159,12 +1162,18 @@
     <ClInclude Include="TestState.h">
       <Filter>States</Filter>
     </ClInclude>
+    <ClInclude Include="RayState.h">
+      <Filter>States\RayState</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GamePCH.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="TestState.cpp">
       <Filter>States</Filter>
+    </ClCompile>
+    <ClCompile Include="RayState.cpp">
+      <Filter>States\RayState</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

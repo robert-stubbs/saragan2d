@@ -282,7 +282,10 @@ namespace GameEngine
 			} break;
 			case WM_MOUSEMOVE:
 			{
-				//Engine::getEngine().MouseMove(Msg, wParam, lParam);
+				POINT mouse;                        // Stores The X And Y Coords For The Current Mouse Position
+				GetCursorPos(&mouse);                   // Gets The Current Cursor Coordinates (Mouse Coordinates)
+				ScreenToClient(hWnd, &mouse);
+				Engine::get().MouseMove((float)mouse.x, (float)mouse.y);
 			} break;
 			case WM_SIZE:
 			{

@@ -54,6 +54,7 @@ namespace GameEngine
 		glfwSetWindowUserPointer(window, this);
 		
 		glfwSetKeyCallback(window, ContextGLFW::static_key_callback);
+		glfwSetCursorPosCallback(window, cursor_position_callback);
 		// do mouse callback as well
 		//glfwSetCursorPosCallback && glfwSetMouseCallback
 
@@ -130,5 +131,19 @@ namespace GameEngine
 
 			return Engine::get().KeyUp(key);
 		}
+	}
+
+
+
+	void ContextGLFW::cursor_position_callback(GLFWwindow* window, double xpos, double ypos)
+	{
+		ContextGLFW* windowManager = static_cast<ContextGLFW*>(glfwGetWindowUserPointer(window));
+		return windowManager->cursor_callback(window, xpos, ypos);
+
+	}
+
+	void ContextGLFW::cursor_callback(GLFWwindow* window, double xpos, double ypos)
+	{
+		Engine::get().MouseMove((float)xpos, (float)ypos);
 	}
 }

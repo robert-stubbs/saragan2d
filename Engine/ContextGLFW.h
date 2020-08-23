@@ -25,6 +25,9 @@ namespace GameEngine
 
 			static void static_key_callback(GLFWwindow* window, int key, int scancode, int action, int mods);
 			void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods);
+
+			static void cursor_position_callback(GLFWwindow* window, double xpos, double ypos);
+			void cursor_callback(GLFWwindow* window, double xpos, double ypos);
 	};
 }
 

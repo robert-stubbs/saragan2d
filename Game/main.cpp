@@ -4,6 +4,7 @@
 #include "Types.h"
 
 #include "TestState.h"
+#include "RayState.h"
 
 using namespace GameEngine;
 
@@ -24,7 +25,8 @@ bool PreLoad()
 
 void PostLoad()
 {     
-    Engine::state().AddState(new TestState(), true);
+    Engine::state().AddState(new TestState(), false);
+    Engine::state().AddState(new RayState(), true);
 }
 
 int main(void)
