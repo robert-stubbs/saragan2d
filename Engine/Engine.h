@@ -68,9 +68,6 @@ namespace GameEngine {
 			bool UpdateOrth(float DeltaTime);
 
 			void Render();
-			void Render3D();
-			void RenderOrth();
-			void RenderEnd();
 			bool Cleanup();
 
 			void TestFunction();

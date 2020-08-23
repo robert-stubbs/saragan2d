@@ -116,25 +116,8 @@ namespace GameEngine {
 	{
 		getRenderer().RenderStart();
 
-		Render3D();
-		RenderOrth();
 		GameFSM.Render();
 
-		RenderEnd();
-	}
-
-	void Engine::Render3D()
-	{
-
-	}
-
-	void Engine::RenderOrth()
-	{
-
-	}
-
-	void Engine::RenderEnd()
-	{
 		getContext().SwapContextBuffers();
 	}
 

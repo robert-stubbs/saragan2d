@@ -39,7 +39,6 @@ bool PreLoad()
 void Load()
 {
     Engine::get().Init();
-
     // After Engine Initialisation should be done here
 
 }
@@ -53,42 +52,34 @@ void PostLoad()
 
 }
 
-void Update(float dt)
-{
-
-    // put this in its own function in case you want to do 
-    // your own updates outside of the engine
-    Engine::get().Update(dt);
-
-    t.Update(dt);
-
-
-}
+//void Update(float dt)
+//{
+//
+//    // put this in its own function in case you want to do 
+//    // your own updates outside of the engine
+//    Engine::get().Update(dt);
+//
+//    t.Update(dt);
+//
+//
+//}
 
 void Render()
 {
-    Engine::get().Render();
+    //Engine::get().Render();
     // put this in its own function in case you want to do 
     // your own renders outside of the engine
 
-    Engine::getShader().BindNewShader("DEFAULT2D");
+    //Engine::getShader().BindNewShader("DEFAULT2D");
 
-    Engine::getRenderer().UniformInt(Engine::getCurrentShader()["is_Text"], 0);
-    Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["projectionMatrix"], Engine::get().cam->ProjectionMatrix, 1, false);
-    Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["viewMatrix"], Engine::get().cam->ViewMatrix, 1, false);
-    //Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["projectionMatrix"], glm::mat4(1.0f), 1, false);
-    //Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["viewMatrix"], glm::mat4(1.0f), 1, false);
-    Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["modelMatrix"], glm::mat4(1.0f), 1, false);
+    //Engine::getRenderer().UniformInt(Engine::getCurrentShader()["is_Text"], 0);
+    //Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["projectionMatrix"], Engine::get().cam->ProjectionMatrix, 1, false);
+    //Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["viewMatrix"], Engine::get().cam->ViewMatrix, 1, false);
+    ////Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["projectionMatrix"], glm::mat4(1.0f), 1, false);
+    ////Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["viewMatrix"], glm::mat4(1.0f), 1, false);
+    //Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["modelMatrix"], glm::mat4(1.0f), 1, false);
 
-    t.Render();
-
-    Engine::get().RenderEnd();
-}
-
-void CleanUp()
-{
-    //Clean up anything you have created prior to this line
-    Engine::get().Cleanup();
+    //t.Render();
 }
 
 int main(void)
@@ -100,9 +91,8 @@ int main(void)
 
     Load();
     PostLoad();
-
     Engine::getContext().GetWindow().RenderLoop();
+    Engine::get().Cleanup();
 
-    CleanUp();
     return 0;
 }
