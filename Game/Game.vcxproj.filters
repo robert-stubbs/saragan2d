@@ -46,6 +46,9 @@
     <Filter Include="Shaders">
       <UniqueIdentifier>{bffd53c3-28d2-41a4-9bc8-3ff45118be6d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="States">
+      <UniqueIdentifier>{c4c4b515-c27e-4085-b8ea-403392193299}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\ThirdParty\glew\include\GL\eglew.h">
@@ -1153,9 +1156,15 @@
       <Filter>ThirdParty\glm\include\glm</Filter>
     </ClInclude>
     <ClInclude Include="GamePCH.h" />
+    <ClInclude Include="TestState.h">
+      <Filter>States</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GamePCH.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="TestState.cpp">
+      <Filter>States</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

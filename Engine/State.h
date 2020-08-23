@@ -13,7 +13,6 @@ namespace GameEngine {
             virtual void Init() = 0;
             virtual void Update(const float& dt) = 0;
             virtual void Render() = 0;
-            virtual void RenderAnim() = 0;
             virtual void UpdateOrth(const float& dt) = 0;
             virtual void RenderOrth() = 0;
             virtual void DoENTER() = 0;

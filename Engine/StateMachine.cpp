@@ -41,14 +41,6 @@ namespace GameEngine {
 		currentState->Render();
 	}
 
-	void StateMachine::RenderAnim()
-	{
-		//Make sure a current state is loaded
-		if (currentState == NULL) return;
-
-		currentState->RenderAnim();
-	}
-
 	//Update each tick
 	void StateMachine::UpdateOrth(const float& dt)
 	{
@@ -150,6 +142,7 @@ namespace GameEngine {
 		//cErrorLogger::Log().WriteToConsole(_T("> Info: Adding State\n"));
 		  //Add this state to the FSM
 		std::shared_ptr<State> newStatePtr(newState);
+		newStatePtr->Init();
 
 		stateBank.push_back(newStatePtr);
 		//Make this the current state?

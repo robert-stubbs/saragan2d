@@ -108,6 +108,7 @@ namespace GameEngine {
 		
 
 		GameFSM.Update(DeltaTime);
+		GameFSM.UpdateOrth(DeltaTime);
 
 		return true;
 	}
@@ -117,6 +118,7 @@ namespace GameEngine {
 		getRenderer().RenderStart();
 
 		GameFSM.Render();
+		GameFSM.RenderOrth();
 
 		getContext().SwapContextBuffers();
 	}

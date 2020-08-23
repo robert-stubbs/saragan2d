@@ -45,7 +45,6 @@ namespace GameEngine {
 			PLATFORM _platform = PLATFORM::GLFW;
 			RenderEngines _engine = RenderEngines::OpenGL;
 
-			GLFWwindow* window;
 			std::string WindowName = "";
 			int WindowWidth = 0;
 			int WindowHeight = 0;

@@ -15,7 +15,6 @@ namespace GameEngine {
         void Update(const float& dt);
         void Render();
 
-        void RenderAnim();
 
         void UpdateOrth(const float& dt);
         void RenderOrth();
