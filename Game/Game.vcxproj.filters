@@ -52,6 +52,9 @@
     <Filter Include="States\RayState">
       <UniqueIdentifier>{cf67a324-63fb-45da-815d-712edcadb3c5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="States\Minesweeper">
+      <UniqueIdentifier>{297f5b1b-7c89-4ab7-9cf7-3ced52107cf4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\ThirdParty\glew\include\GL\eglew.h">
@@ -1165,6 +1168,13 @@
     <ClInclude Include="RayState.h">
       <Filter>States\RayState</Filter>
     </ClInclude>
+    <ClInclude Include="cTile.h">
+      <Filter>States\Minesweeper</Filter>
+    </ClInclude>
+    <ClInclude Include="GameLibrary.h" />
+    <ClInclude Include="MinesweeperState.h">
+      <Filter>States\Minesweeper</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GamePCH.cpp" />
@@ -1174,6 +1184,12 @@
     </ClCompile>
     <ClCompile Include="RayState.cpp">
       <Filter>States\RayState</Filter>
+    </ClCompile>
+    <ClCompile Include="cTile.cpp">
+      <Filter>States\Minesweeper</Filter>
+    </ClCompile>
+    <ClCompile Include="MinesweeperState.cpp">
+      <Filter>States\Minesweeper</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

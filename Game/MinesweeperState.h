@@ -1,16 +1,14 @@
 #ifndef _MINESWEEPER_STATE_H_
 #define _MINESWEEPER_STATE_H_
 
-#include "GameLibrary.h"
-
 #include "cTile.h"
+#include "GameLibrary.h"
 
 #include "StateMachine.h"
 #include "State.h"
 #include "Text.h"
 
-class Tile;
-class cCube;
+using namespace GameEngine;
 
 class MinesweeperState : public State
 {
@@ -25,7 +23,7 @@ private:
 public:
 
     bool testLoaded = false;
-    Text* test = new Text();
+    //Text* test = new Text();
 
     Tile* squares[xsize][ysize];
     std::vector<Tile*> squareList;
@@ -36,16 +34,15 @@ public:
     virtual void Init();
     virtual void Update(const float& dt);
     virtual void Render();
-    virtual void RenderAnim();
     virtual void UpdateOrth(const float& dt);
     virtual void RenderOrth();
     virtual void DoENTER();
     virtual void DoEXIT();
-    virtual void KeyDown(UINT Msg, WPARAM wParam, LPARAM lParam);
-    virtual void KeyUp(UINT Msg, WPARAM wParam, LPARAM lParam);
-    virtual void MouseDown(UINT Msg, WPARAM wParam, LPARAM lParam);
-    virtual void MouseUp(UINT Msg, WPARAM wParam, LPARAM lParam);
-    virtual void MouseMove(UINT Msg, WPARAM wParam, LPARAM lParam);
+    virtual void KeyDown(int Key);
+    virtual void KeyUp(int Key);
+    virtual void MouseDown(int button);
+    virtual void MouseUp(int button);
+    virtual void MouseMove(float x, float y);
 
     virtual void RevealAll();
 };

@@ -43,7 +43,12 @@ RayState::RayState() {
 		hitLines.push_back(random);
 	}
 
-
+	//for (size_t i = 0; i < 1; i += 1)
+	//{
+	//	Line current = Line();
+	//	current.Init(mousex, mousey, (float)DEG2RAD(i));
+	//	mouseLines.push_back(current);
+	//}
 	for (size_t i = 0; i < 360; i += 3)
 	{
 		Line current = Line();
@@ -127,12 +132,6 @@ void RayState::MouseUp(int Button) {
 
 void RayState::MouseMove(float x, float y) {
 
-	//POINT mouse;                        // Stores The X And Y Coords For The Current Mouse Position
-	//GetCursorPos(&mouse);                   // Gets The Current Cursor Coordinates (Mouse Coordinates)
-	//ScreenToClient(hWnd, &mouse);
-
-	//auto& engine = Engine::getEngine();
-		
 	glm::vec3 pt = Engine::getRenderer().GetWorldPos2D((int)x, (int)y, Engine::get().cam->ProjectionMatrix, Engine::get().cam->ViewMatrix);
 
 	mousex = (float)pt.x;

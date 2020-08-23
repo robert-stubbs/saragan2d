@@ -18,7 +18,6 @@ namespace GameEngine {
 	void Engine::SetWindowName(std::string name)
 	{
 		WindowName = name;
-		cam = new Camera2D(800, 600);
 	}
 
 	void Engine::SetWindowSize(int width, int height, bool isFullScreen)
@@ -26,6 +25,7 @@ namespace GameEngine {
 		WindowWidth = width;
 		WindowHeight = height;
 		fullscreen = isFullScreen;
+		cam = new Camera2D((float)width, (float)height);
 	}
 
 	void Engine::TestFunction()

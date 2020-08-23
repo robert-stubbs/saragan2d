@@ -1,19 +1,18 @@
 #include "GamePCH.h"
-#include "MinsweeperState.h"
+#include "MinesweeperState.h"
 
-#include "standards.h"
 #include "SafeDelete.h"
+#include "standards.h"
 
 #include "StateMachine.h"
 #include "State.h"
 #include "cTile.h"
-#include "Camera.h"
 #include "Camera2D.h"
 #include "Engine.h"
 #include "Renderer.h"
 
-#include "SystemManager.h"
-#include "SoundSystem.h"
+//#include "SystemManager.h"
+//#include "SoundSystem.h"
 
 
 MinesweeperState::MinesweeperState() {
@@ -75,23 +74,20 @@ void MinesweeperState::Init() {
 	glm::mat4 temp = glm::mat4(1.0f);
 
 
-	SoundSystem* smgr = (SoundSystem*)(Engine::getEngine().System->getSystem("AUDIO"));
-	smgr->AddSound("C:/Assets/Sound/Sound.wav", "Bomb");
+	//SoundSystem* smgr = (SoundSystem*)(Engine::getEngine().System->getSystem("AUDIO"));
+	//smgr->AddSound("C:/Assets/Sound/Sound.wav", "Bomb");
 
 }
 
 void MinesweeperState::Update(const float& dt) {
-	Engine::getEngine().pCam->UpdateMouseLook(dt);
+	//Engine::getEngine().pCam->UpdateMouseLook(dt);
 }
 
 void MinesweeperState::Render() {
 }
 
-void MinesweeperState::RenderAnim() {
-
-}
-
 void MinesweeperState::UpdateOrth(const float& dt) {
+
 
 	for (int x = 0; x < xsize; x++)
 	{
@@ -104,6 +100,12 @@ void MinesweeperState::UpdateOrth(const float& dt) {
 }
 
 void MinesweeperState::RenderOrth() {
+	Engine::getShader().BindNewShader("DEFAULT2D");
+
+	Engine::getRenderer().UniformInt(Engine::getCurrentShader()["is_Text"], 0);
+	Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["projectionMatrix"], Engine::get().cam->ProjectionMatrix, 1, false);
+	Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["viewMatrix"], Engine::get().cam->ViewMatrix, 1, false);
+	Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["modelMatrix"], glm::mat4(1.0f), 1, false);
 	for (int x = 0; x < xsize; x++)
 	{
 		for (int y = 0; y < ysize; y++)
@@ -122,11 +124,11 @@ void MinesweeperState::DoEXIT() {
 
 }
 
-void MinesweeperState::KeyDown(UINT Msg, WPARAM wParam, LPARAM lParam) {
+void MinesweeperState::KeyDown(int Key) {
 
 }
 
-void MinesweeperState::KeyUp(UINT Msg, WPARAM wParam, LPARAM lParam) {
+void MinesweeperState::KeyUp(int Key) {
 	//cLabelEntity* ent = (cLabelEntity*)(pEngine->EntityMgr->getEntity("testingTest"));
 	//if (ent != nullptr) {
 	//	ent->UpdateLabel("foo bar");
@@ -134,41 +136,38 @@ void MinesweeperState::KeyUp(UINT Msg, WPARAM wParam, LPARAM lParam) {
 
 }
 
-void MinesweeperState::MouseDown(UINT Msg, WPARAM wParam, LPARAM lParam) {
+void MinesweeperState::MouseDown(int button) {
 
 }
 
-void MinesweeperState::MouseUp(UINT Msg, WPARAM wParam, LPARAM lParam) {
+void MinesweeperState::MouseUp(int button) {
 
-	for (int x = 0; x < xsize; x++)
+	switch (button)
 	{
-		for (int y = 0; y < ysize; y++)
+		case ENGINE_MOUSE_BUTTON_1:
 		{
-			Tile* t = (squares[x][y]);
+			for (int x = 0; x < xsize; x++)
+			{
+				for (int y = 0; y < ysize; y++)
+				{
+					Tile* t = (squares[x][y]);
 
-			if (t->pointInSquare(mousex, mousey)) {
-				t->ProcessNeighbours(x, y, this);
-				break;
+					if (t->pointInSquare(mousex, mousey)) {
+						t->ProcessNeighbours(x, y, this);
+						break;
+					}
+				}
 			}
-		}
+
+		} break;
 	}
+
 }
 
-void MinesweeperState::MouseMove(UINT Msg, WPARAM wParam, LPARAM lParam) {
-
-	POINT mouse;                        // Stores The X And Y Coords For The Current Mouse Position
-	GetCursorPos(&mouse);                   // Gets The Current Cursor Coordinates (Mouse Coordinates)
-	ScreenToClient(hWnd, &mouse);
+void MinesweeperState::MouseMove(float x, float y) {
 
 
-	auto& engine = Engine::getEngine();
-
-
-	glm::vec3 pt = engine.renderer->GetWorldPos2D((int)mouse.x, (int)mouse.y, engine.pCam2D->ProjectionMatrix, engine.pCam2D->ViewMatrix);
-
-	//static char  strFPS[100] = { 0 };
-	//sprintf_s(strFPS, "3D: %d,%d,%d", pt3d.x, pt3d.y, pt3d.z);
-	//SetWindowText(hWnd, strFPS);
+	glm::vec3 pt = Engine::getRenderer().GetWorldPos2D((int)x, (int)y, Engine::get().cam->ProjectionMatrix, Engine::get().cam->ViewMatrix);
 
 	mousex = (float)pt.x;
 	mousey = (float)pt.y;
@@ -177,8 +176,8 @@ void MinesweeperState::MouseMove(UINT Msg, WPARAM wParam, LPARAM lParam) {
 
 void MinesweeperState::RevealAll() {
 
-	SoundSystem* smgr = (SoundSystem*)(Engine::getEngine().System->getSystem("AUDIO"));
-	smgr->PlaySoundClip("Bomb");
+	//SoundSystem* smgr = (SoundSystem*)(Engine::getEngine().System->getSystem("AUDIO"));
+	//smgr->PlaySoundClip("Bomb");
 	for (int x = 0; x < xsize; x++)
 	{
 		for (int y = 0; y < ysize; y++)

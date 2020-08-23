@@ -5,6 +5,7 @@
 
 #include "TestState.h"
 #include "RayState.h"
+#include "MinesweeperState.h"
 
 using namespace GameEngine;
 
@@ -12,7 +13,7 @@ bool PreLoad()
 {
     Engine& e = Engine::get();
 
-    e.SetPlatform(PLATFORM::WINDOWS);
+    e.SetPlatform(PLATFORM::GLFW);
     e.SetRenderEngine(RenderEngines::OpenGL);
     e.SetAssetDir("C:/Assets/");
     e.SetWindowName("Saragan");
@@ -26,7 +27,8 @@ bool PreLoad()
 void PostLoad()
 {     
     Engine::state().AddState(new TestState(), false);
-    Engine::state().AddState(new RayState(), true);
+    Engine::state().AddState(new RayState(), false);
+    Engine::state().AddState(new MinesweeperState(), true);
 }
 
 int main(void)

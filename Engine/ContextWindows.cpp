@@ -267,18 +267,19 @@ namespace GameEngine
 
 			case WM_LBUTTONDOWN:
 			{
+				Engine::get().MouseDown(ENGINE_MOUSE_BUTTON_1);
 			} break;
 			case WM_LBUTTONUP:
 			{
-				//Engine::getEngine().MouseUp(Msg, wParam, lParam);
+				Engine::get().MouseUp(ENGINE_MOUSE_BUTTON_1);
 			} break;
 			case WM_RBUTTONDOWN:
 			{
-				//Engine::getEngine().MouseDown(Msg, wParam, lParam);
+				Engine::get().MouseDown(ENGINE_MOUSE_BUTTON_2);
 			} break;
 			case WM_RBUTTONUP:
 			{
-				//Engine::getEngine().MouseUp(Msg, wParam, lParam);
+				Engine::get().MouseUp(ENGINE_MOUSE_BUTTON_2);
 			} break;
 			case WM_MOUSEMOVE:
 			{

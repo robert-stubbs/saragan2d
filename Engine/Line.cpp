@@ -81,10 +81,10 @@ namespace GameEngine
 		vert2D closest = vert2D();
 		float last_distance = 0;
 
-		for (size_t i = 0; i < hittest.size(); i++)
+		vert2D test;
+		for (Line& testLine : hittest)
 		{
-			vert2D test;
-			if (this->IntersectsLine(&hittest[i], test)) {
+			if (this->IntersectsLine(&testLine, test)) {
 				if (last_distance == 0) {
 					closest = test;
 					last_distance = glm::distance(this->origin, glm::vec3(closest.pos[0], closest.pos[1], closest.pos[2]));
@@ -159,21 +159,11 @@ namespace GameEngine
 	void Line::Update(float dt)
 	{
 		if (!isLoaded) return;
-
-		if (VBO && hasUpdate) {
-			Engine::getRenderer().UpdateBuffer(VBO, verts);
-			Engine::getRenderer().UnbindBuffer();
-
-		}
 	}
 
 	bool Line::Render()
 	{
 		if (!isLoaded) return false;
-
-		if (hasUpdate) {
-			hasUpdate = false;
-		}
 
 		if (verts.size() > 0 && VBO != 0) {
 			Engine::getShader().BindNewShader(shader_name);

@@ -55,6 +55,8 @@ namespace GameEngine
 		
 		glfwSetKeyCallback(window, ContextGLFW::static_key_callback);
 		glfwSetCursorPosCallback(window, cursor_position_callback);
+
+		glfwSetMouseButtonCallback(window, mouse_button_callback);
 		// do mouse callback as well
 		//glfwSetCursorPosCallback && glfwSetMouseCallback
 
@@ -114,7 +116,6 @@ namespace GameEngine
 		return glfwGetTime();
 	}
 
-
 	void ContextGLFW::static_key_callback(GLFWwindow* window, int key, int scancode, int action, int mods)
 	{
 		ContextGLFW* windowManager = static_cast<ContextGLFW*>(glfwGetWindowUserPointer(window));
@@ -133,8 +134,6 @@ namespace GameEngine
 		}
 	}
 
-
-
 	void ContextGLFW::cursor_position_callback(GLFWwindow* window, double xpos, double ypos)
 	{
 		ContextGLFW* windowManager = static_cast<ContextGLFW*>(glfwGetWindowUserPointer(window));
@@ -145,5 +144,24 @@ namespace GameEngine
 	void ContextGLFW::cursor_callback(GLFWwindow* window, double xpos, double ypos)
 	{
 		Engine::get().MouseMove((float)xpos, (float)ypos);
+	}
+
+
+	void ContextGLFW::mouse_button_callback(GLFWwindow* window, int button, int action, int mods)
+	{
+		ContextGLFW* windowManager = static_cast<ContextGLFW*>(glfwGetWindowUserPointer(window));
+		return windowManager->button_callback(window, button, action, mods);
+	}
+
+	void ContextGLFW::button_callback(GLFWwindow* window, int button, int action, int mods)
+	{
+		if (action == GLFW_PRESS || action == GLFW_REPEAT)
+		{
+			return Engine::get().MouseDown(button);
+		}
+		else if (action == GLFW_RELEASE) {
+
+			return Engine::get().MouseUp(button);
+		}
 	}
 }
