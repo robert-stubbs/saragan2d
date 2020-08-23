@@ -25,11 +25,12 @@ namespace GameEngine {
 			Context ctx;
 			Renderer renderer;
 			ShaderManager shader_mgr;
+			StateMachine GameFSM;
 
 			std::vector<std::shared_ptr<ShaderDef>> _shader_definitions;
 
 		public:
-			//StateMachine* GameFSM;
+			//
 			SystemManager* System;
 			EntityManager* EntityMgr;
 
@@ -77,6 +78,10 @@ namespace GameEngine {
 			void AddShaderDef(std::shared_ptr<ShaderDef> _def);
 
 			static void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods);
+
+			static StateMachine& state() {
+				return get().GameFSM;
+			}
 
 			static ShaderManager& getShader() {
 				return get().shader_mgr;

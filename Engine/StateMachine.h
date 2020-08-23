@@ -24,11 +24,11 @@ namespace GameEngine {
         void TransitionTo(std::string stateName);
         void DelayTransitionTo(std::string stateName);
         void AddState(State* newState, bool makeCurrent);
-        void KeyDown(UINT Msg, WPARAM wParam, LPARAM lParam);
-        void KeyUp(UINT Msg, WPARAM wParam, LPARAM lParam);
-        void MouseDown(UINT Msg, WPARAM wParam, LPARAM lParam);
-        void MouseUp(UINT Msg, WPARAM wParam, LPARAM lParam);
-        void MouseMove(UINT Msg, WPARAM wParam, LPARAM lParam);
+        void KeyDown(int Key);
+        void KeyUp(int Key);
+        void MouseDown(int button);
+        void MouseUp(int button);
+        void MouseMove(float x, float y);
 
 
         std::string GetState();

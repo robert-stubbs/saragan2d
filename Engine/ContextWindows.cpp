@@ -209,6 +209,7 @@ namespace GameEngine
 
 		return val;
 	}
+
 	double ContextWindows::GetSystemTime()
 	{
 		if (usePerformanceCounter) {

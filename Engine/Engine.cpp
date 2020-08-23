@@ -47,7 +47,6 @@ namespace GameEngine {
 			//System = new SystemManager();
 			//EntityMgr = new EntityManager();
 
-			//glfwSetKeyCallback(window, key_callback);
 
 
 			//System->Init();
@@ -56,7 +55,7 @@ namespace GameEngine {
 			std::string ft = asset_dir + "Font/Vera.ttf";
 			//font = new Font(30, ft.c_str());
 
-			//GameFSM = new StateMachine();
+			GameFSM = StateMachine();
 			return true;
 		}
 
@@ -106,9 +105,9 @@ namespace GameEngine {
 		cam->Update(DeltaTime);
 
 		//System->Update(DeltaTime);
-		///GameFSM->Update(DeltaTime);
+		
 
-
+		GameFSM.Update(DeltaTime);
 
 		return true;
 	}
@@ -119,6 +118,7 @@ namespace GameEngine {
 
 		Render3D();
 		RenderOrth();
+		GameFSM.Render();
 
 		RenderEnd();
 	}
@@ -151,46 +151,4 @@ namespace GameEngine {
 	}
 	
 	
-	void Engine::key_callback(GLFWwindow* window, int key, int scancode, int action, int mods)
-	{
-		if (Input::Get().IsKeyPressed(ENGINE_KEY_A)) {
-			Engine::get().cam->dx = 10;
-		}
-		else {
-			if (Input::Get().IsKeyReleased(ENGINE_KEY_D))
-			{
-				Engine::get().cam->dx = 0;
-			}			
-		}
-
-		if (Input::Get().IsKeyPressed(ENGINE_KEY_D)) {
-			Engine::get().cam->dx = -10;
-		}
-		else {
-			if (Input::Get().IsKeyReleased(ENGINE_KEY_A))
-			{
-				Engine::get().cam->dx = 0;
-			}
-		}
-
-		if (Input::Get().IsKeyPressed(ENGINE_KEY_W)) {
-			Engine::get().cam->dy = 10;
-		}
-		else {
-			if (Input::Get().IsKeyReleased(ENGINE_KEY_S))
-			{
-				Engine::get().cam->dy = 0;
-			}
-		}
-
-		if (Input::Get().IsKeyPressed(ENGINE_KEY_S)) {
-			Engine::get().cam->dy = -10;
-		}
-		else {
-			if (Input::Get().IsKeyReleased(ENGINE_KEY_W))
-			{
-				Engine::get().cam->dy = 0;
-			}
-		}
-	}
 }

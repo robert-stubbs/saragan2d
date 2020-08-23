@@ -18,11 +18,11 @@ namespace GameEngine {
             virtual void RenderOrth() = 0;
             virtual void DoENTER() = 0;
             virtual void DoEXIT() = 0;
-            virtual void KeyDown(UINT Msg, WPARAM wParam, LPARAM lParam) = 0;
-            virtual void KeyUp(UINT Msg, WPARAM wParam, LPARAM lParam) = 0;
-            virtual void MouseDown(UINT Msg, WPARAM wParam, LPARAM lParam) = 0;
-            virtual void MouseUp(UINT Msg, WPARAM wParam, LPARAM lParam) = 0;
-            virtual void MouseMove(UINT Msg, WPARAM wParam, LPARAM lParam) = 0;
+            virtual void KeyDown(int Key) = 0;
+            virtual void KeyUp(int Key) = 0;
+            virtual void MouseDown(int button) = 0;
+            virtual void MouseUp(int button) = 0;
+            virtual void MouseMove(float x, float y) = 0;
 
             std::string stateName;  //used to switch between states
             StateMachine* fsm;

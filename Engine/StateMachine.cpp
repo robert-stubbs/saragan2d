@@ -74,29 +74,29 @@ namespace GameEngine {
 		currentState->RenderOrth();
 	}
 
-	void StateMachine::KeyDown(UINT Msg, WPARAM wParam, LPARAM lParam)
+	void StateMachine::KeyDown(int Key)
 	{
-		currentState->KeyDown(Msg, wParam, lParam);
+		currentState->KeyDown(Key);
 	}
 
-	void StateMachine::KeyUp(UINT Msg, WPARAM wParam, LPARAM lParam)
+	void StateMachine::KeyUp(int Key)
 	{
-		currentState->KeyUp(Msg, wParam, lParam);
+		currentState->KeyUp(Key);
 	}
 
-	void StateMachine::MouseDown(UINT Msg, WPARAM wParam, LPARAM lParam)
+	void StateMachine::MouseDown(int Button)
 	{
-		currentState->MouseDown(Msg, wParam, lParam);
+		currentState->MouseDown(Button);
 	}
 
-	void StateMachine::MouseUp(UINT Msg, WPARAM wParam, LPARAM lParam)
+	void StateMachine::MouseUp(int Button)
 	{
-		currentState->MouseUp(Msg, wParam, lParam);
+		currentState->MouseUp(Button);
 	}
 
-	void StateMachine::MouseMove(UINT Msg, WPARAM wParam, LPARAM lParam)
+	void StateMachine::MouseMove(float x, float y)
 	{
-		currentState->MouseMove(Msg, wParam, lParam);
+		currentState->MouseMove(x, y);
 	}
 
 	//Called to transition to another state

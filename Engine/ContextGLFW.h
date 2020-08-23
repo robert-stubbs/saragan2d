@@ -22,6 +22,9 @@ namespace GameEngine
 			virtual void RenderLoop() override;
 			virtual void SwapContextBuffers() override;
 			virtual double GetTime() override;
+
+			static void static_key_callback(GLFWwindow* window, int key, int scancode, int action, int mods);
+			void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods);
 	};
 }
 
