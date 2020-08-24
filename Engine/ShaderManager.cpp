@@ -8,14 +8,14 @@ namespace GameEngine {
 	{
 		_shaders = std::map<std::string, std::shared_ptr<Shader>>();
 		engine_type = RenderEngines::None;
-		current_shader = nullptr;
+		_instance = nullptr;
 	}
 
 	ShaderManager::ShaderManager(RenderEngines EngineType)
 	{
 		_shaders = std::map<std::string, std::shared_ptr<Shader>>();
 		engine_type = EngineType;
-		current_shader = nullptr;
+		_instance = nullptr;
 
 	}
 
@@ -34,7 +34,7 @@ namespace GameEngine {
 			break;
 		}
 		
-		current_shader = _shaders[name];
+		_instance = _shaders[name];
 
 		return *(_shaders[name]);
 	}
@@ -46,15 +46,15 @@ namespace GameEngine {
 
 	Shader& ShaderManager::BindNewShader(std::string name)
 	{
-		if (current_shader != nullptr) {
-			current_shader->unbind();
-			current_shader = nullptr;
+		if (_instance != nullptr) {
+			_instance->unbind();
+			_instance = nullptr;
 		}
 
-		current_shader = _shaders[name];
-		current_shader->bind();
+		_instance = _shaders[name];
+		_instance->bind();
 
-		return *current_shader;
+		return *_instance;
 	}
 
 	ShaderManager::~ShaderManager()

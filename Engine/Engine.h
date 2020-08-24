@@ -59,7 +59,7 @@ namespace GameEngine {
 
 			inline void SetPlatform(PLATFORM platform) { 
 				_platform = platform; 
-				Input::Get().SetPlatform(platform);
+				Input::GetInput().SetPlatform(platform);
 			};
 
 			inline void SetRenderEngine(RenderEngines engine) { _engine = engine; };
@@ -96,11 +96,11 @@ namespace GameEngine {
 			}
 
 			static Shader& getCurrentShader() {
-				return get().shader_mgr.ShaderEngine();
+				return get().shader_mgr.Get();
 			}
 
 			static RenderEngineBase& getRenderer() {
-				return get().renderer.RenderEngine();
+				return get().renderer.Get();
 			}
 
 			static Context& getContext() {

@@ -41,7 +41,7 @@ int main(void)
     Engine::get().Init();
     Engine::get().PostInit();
     PostLoad();
-    Engine::getContext().GetWindow().RenderLoop();
+    Engine::getContext().Get().RenderLoop();
     Engine::get().Cleanup();
 
     return 0;

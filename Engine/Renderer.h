@@ -2,23 +2,19 @@
 #define _RENDERER_H_
 
 #include "Types.h"
+#include "Layer.h"
 #include "RenderEngineBase.h"
 
 namespace GameEngine {
 
 
-	class Renderer
+	class Renderer : public Layer<RenderEngineBase>
 	{
-		private:
-			RenderEngines engine_type;
-			std::shared_ptr<RenderEngineBase> render_engine;
 		public:
-
 			Renderer();
 			Renderer(RenderEngines EngineType);
+			virtual void SetPlatform(PLATFORM platform) {};
 			virtual ~Renderer();
-
-			RenderEngineBase& RenderEngine() { return *render_engine; }
 	};
 
 }

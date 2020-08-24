@@ -12,10 +12,10 @@ namespace GameEngine {
 		switch (platform)
 		{
 		case GameEngine::PLATFORM::WINDOWS:
-			_platform = new ContextWindows();
+			_instance = std::make_shared<ContextWindows>();
 			break;
 		case GameEngine::PLATFORM::GLFW:
-			_platform = new ContextGLFW();
+			_instance = std::make_shared<ContextGLFW>();
 			break;
 		case GameEngine::PLATFORM::LINUX:
 			break;
@@ -28,16 +28,16 @@ namespace GameEngine {
 
 	bool Context::InitWindow(int width, int height, std::string window_name, bool fullscreen)
 	{
-		return _platform->InitWindow(width, height, window_name, fullscreen);
+		return _instance->InitWindow(width, height, window_name, fullscreen);
 	}
 
 	bool Context::InitContext()
 	{
-		return _platform->InitContext();
+		return _instance->InitContext();
 	}
 
 	void Context::SwapContextBuffers()
 	{
-		return _platform->SwapContextBuffers();
+		return _instance->SwapContextBuffers();
 	}
 }

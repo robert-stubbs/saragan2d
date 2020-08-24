@@ -67,7 +67,7 @@ namespace GameEngine
 
 	void ContextGLFW::RenderLoop()
 	{
-		double lastTime = Engine::getContext().GetWindow().GetTime();
+		double lastTime = Engine::getContext().Get().GetTime();
 		double timer = lastTime;
 		double deltaTime = 0;
 		double nowTime = 0;

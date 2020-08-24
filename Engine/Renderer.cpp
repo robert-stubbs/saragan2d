@@ -8,22 +8,22 @@ namespace GameEngine {
 	Renderer::Renderer()
 	{
 		engine_type = RenderEngines::None;
-		render_engine = nullptr;
+		_instance = nullptr;
 	}
 
 	Renderer::Renderer(RenderEngines EngineType)
 	{
 		engine_type = EngineType;
-		render_engine = nullptr;
+		_instance = nullptr;
 
 		switch (engine_type)
 		{
 		case GameEngine::None:
-			render_engine = nullptr;
+			_instance = nullptr;
 			return;
 			break;
 		case GameEngine::OpenGL:
-			render_engine = std::make_shared<OpenGLRenderEngine>();
+			_instance = std::make_shared<OpenGLRenderEngine>();
 			break;
 		case GameEngine::DirectX:
 			break;

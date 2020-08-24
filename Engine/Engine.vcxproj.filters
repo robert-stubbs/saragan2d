@@ -112,6 +112,9 @@
     <Filter Include="Engine Platform\Context\Platform\GLFW">
       <UniqueIdentifier>{93b7ed85-ba89-4e18-8b6e-e05de997fff5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine Platform\Layer">
+      <UniqueIdentifier>{c6e75eb4-b73a-4b78-87a1-debd9cc78b61}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\ThirdParty\glew\include\GL\eglew.h">
@@ -1385,6 +1388,9 @@
     <ClInclude Include="ContextPlatform.h">
       <Filter>Engine Platform\Context\Platform</Filter>
     </ClInclude>
+    <ClInclude Include="Layer.h">
+      <Filter>Engine Platform\Layer</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="EnginePCH.cpp" />
@@ -1548,8 +1554,8 @@
     <ClCompile Include="Context.cpp">
       <Filter>Engine Platform\Context</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="Notes.txt" />
+    <ClCompile Include="Layer.cpp">
+      <Filter>Engine Platform\Layer</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

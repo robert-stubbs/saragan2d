@@ -12,7 +12,7 @@ namespace GameEngine
 
 	bool InputGLFW::IsKeyPressed(int key)
 	{
-		GLFWwindow* window = (GLFWwindow *)(Engine::getContext().GetWindow().GetWindowHandle());
+		GLFWwindow* window = (GLFWwindow *)(Engine::getContext().Get().GetWindowHandle());
 		int val = glfwGetKey(window, key);
 
 		return val == GLFW_PRESS || val == GLFW_REPEAT;
@@ -20,7 +20,7 @@ namespace GameEngine
 
 	bool InputGLFW::IsMouseButtonPressed(int button)
 	{
-		GLFWwindow* window = (GLFWwindow*)(Engine::getContext().GetWindow().GetWindowHandle());
+		GLFWwindow* window = (GLFWwindow*)(Engine::getContext().Get().GetWindowHandle());
 		int val = glfwGetMouseButton(window, button);
 
 		return val == GLFW_PRESS || val == GLFW_REPEAT;
@@ -28,7 +28,7 @@ namespace GameEngine
 
 	std::pair<float, float> InputGLFW::GetMousePos()
 	{
-		GLFWwindow* window = (GLFWwindow*)(Engine::getContext().GetWindow().GetWindowHandle());
+		GLFWwindow* window = (GLFWwindow*)(Engine::getContext().Get().GetWindowHandle());
 
 		double x;
 		double y;

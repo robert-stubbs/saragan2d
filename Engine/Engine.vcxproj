@@ -490,6 +490,7 @@
     <ClInclude Include="InputPlatform.h" />
     <ClInclude Include="InputWindows.h" />
     <ClInclude Include="LabelEntity.h" />
+    <ClInclude Include="Layer.h" />
     <ClInclude Include="Line.h" />
     <ClInclude Include="ModelSystem.h" />
     <ClInclude Include="Object.h" />
@@ -551,6 +552,7 @@
     <ClCompile Include="InputPlatform.cpp" />
     <ClCompile Include="InputWindows.cpp" />
     <ClCompile Include="LabelEntity.cpp" />
+    <ClCompile Include="Layer.cpp" />
     <ClCompile Include="Line.cpp" />
     <ClCompile Include="ModelSystem.cpp" />
     <ClCompile Include="Object.cpp" />

@@ -3,37 +3,23 @@
 
 #include "InputPlatform.h"
 #include "Types.h"
+#include "Layer.h"
 
 namespace GameEngine
 {
-	class Input
+	class Input : public Layer<InputPlatform>
 	{
 		private:
-			InputPlatform* _platform;
+			static Input _input;
 
-			static Input _Instance;
-
-			Input() {};
 		public:
-			void SetPlatform(PLATFORM platform);
+			virtual void SetPlatform(PLATFORM platform) override;
 
-			inline virtual bool IsKeyPressed(int key) { return _platform->IsKeyPressed(key); };
-			inline virtual bool IsKeyReleased(int key) { return !IsKeyPressed(key); }
-
-			inline virtual bool IsMouseButtonPressed(int button) { return _platform->IsMouseButtonPressed(button); };
-			inline virtual bool IsMouseButtonReleased(int button) { return !IsMouseButtonPressed(button); }
-
-			inline virtual float GetMouseX() { auto [x, y] = GetMousePos(); return x; }
-			inline virtual float GetMouseY() { auto [x, y] = GetMousePos(); return y; }
-			inline virtual std::pair<float, float> GetMousePos() { return _platform->GetMousePos(); };
-
-			inline virtual int GetKey(int keycode) { return _platform->GetKey(keycode); };
-			inline virtual int GetPlatformKey(int keycode) { return _platform->GetPlatformKey(keycode); };
-
-
-			static Input& Get() {
-				return _Instance;
+			static Input& GetInput() {
+				return _input;
 			}
+
+			static inline InputPlatform& Get() { return GetInput().Get(); }
 	};
 }
 

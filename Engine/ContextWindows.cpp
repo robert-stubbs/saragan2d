@@ -1,6 +1,7 @@
 #include "EnginePCH.h"
 #include "ContextWindows.h"
 #include "Engine.h"
+#include "InputPlatform.h"
 
 //https://elcharolin.wordpress.com/2015/01/24/wndproc-as-a-class-member-win32/
 
@@ -254,7 +255,7 @@ namespace GameEngine
 		switch (Msg)
 		{
 			case WM_KEYDOWN:
-			{
+			{				
 				Engine::get().KeyDown(Input::Get().GetPlatformKey((int)wParam));
 			}
 			break;
