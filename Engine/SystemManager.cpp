@@ -12,7 +12,6 @@
 #include "ModelSystem.h"
 #include "PositionSystem.h"
 #include "AISystem.h"
-#include "GUISystem.h"
 #include "SoundSystem.h"
 
 namespace GameEngine
@@ -43,7 +42,7 @@ namespace GameEngine
 		//SysMgr->AddSystem("sprite");
 
 
-		AddSystem(new GUISystem(true));
+		//AddSystem(new GUISystem(true));
 		AddSystem(new SoundSystem());
 		AddSystem(new AISystem());
 		AddSystem(new ModelSystem(false, true));

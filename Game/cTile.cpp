@@ -4,7 +4,6 @@
 
 #include "MinesweeperState.h"
 #include "Engine.h"
-#include "Text.h"
 #include "Font.h"
 
 Tile::Tile() {

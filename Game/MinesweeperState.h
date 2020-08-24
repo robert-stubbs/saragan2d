@@ -6,7 +6,6 @@
 
 #include "StateMachine.h"
 #include "State.h"
-#include "Text.h"
 
 using namespace GameEngine;
 

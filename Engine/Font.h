@@ -1,27 +1,26 @@
 #ifndef _FONT_H_
 #define _FONT_H_
 
-//https://github.com/rougier/freetype-gl/blob/master/INSTALL.md
-//https://www.freetype.org/
+#include "InputPlatform.h"
+#include "Types.h"
+#include "Layer.h"
 
-#include "freetype-gl\freetype-gl.h"
-#include "freetype-gl\vertex-buffer.h"
 namespace GameEngine
 {
-	class Font
+	class Font : public Layer<InputPlatform>
 	{
+	private:
+		static Font _font;
+
 	public:
+		virtual void SetPlatform(PLATFORM platform) override;
 
-		Font() {};
-		Font(float fontSize, std::string filename = "Assets/Font/Vera.ttf");
-		~Font();
+		static Font& GetFont() {
+			return _font;
+		}
 
-		texture_font_t* font;
-		texture_atlas_t* atlas;
-		std::string filename;
-
+		static inline InputPlatform& Get() { return GetFont().Get(); }
 	};
 }
 
 #endif
-

@@ -115,6 +115,12 @@
     <Filter Include="Engine Platform\Layer">
       <UniqueIdentifier>{c6e75eb4-b73a-4b78-87a1-debd9cc78b61}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine Platform\Font">
+      <UniqueIdentifier>{cbb78b4f-8eec-4147-ae0e-1b98c642c7b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine Platform\Font\Renderer">
+      <UniqueIdentifier>{3f65802c-d467-4313-bb8e-f4f61b7d9f73}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\ThirdParty\glew\include\GL\eglew.h">
@@ -1277,9 +1283,6 @@
     <ClInclude Include="standards.h">
       <Filter>Tools</Filter>
     </ClInclude>
-    <ClInclude Include="Font.h">
-      <Filter>Tools</Filter>
-    </ClInclude>
     <ClInclude Include="State.h">
       <Filter>States</Filter>
     </ClInclude>
@@ -1304,12 +1307,6 @@
     <ClInclude Include="Dispatch.h">
       <Filter>SORT</Filter>
     </ClInclude>
-    <ClInclude Include="GUISystem.h">
-      <Filter>SORT</Filter>
-    </ClInclude>
-    <ClInclude Include="LabelEntity.h">
-      <Filter>SORT</Filter>
-    </ClInclude>
     <ClInclude Include="lodepng.h">
       <Filter>SORT</Filter>
     </ClInclude>
@@ -1323,9 +1320,6 @@
       <Filter>SORT</Filter>
     </ClInclude>
     <ClInclude Include="SoundSystem.h">
-      <Filter>SORT</Filter>
-    </ClInclude>
-    <ClInclude Include="Text.h">
       <Filter>SORT</Filter>
     </ClInclude>
     <ClInclude Include="Texture.h">
@@ -1391,6 +1385,9 @@
     <ClInclude Include="Layer.h">
       <Filter>Engine Platform\Layer</Filter>
     </ClInclude>
+    <ClInclude Include="Font.h">
+      <Filter>Engine Platform\Font</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="EnginePCH.cpp" />
@@ -1443,9 +1440,6 @@
     <ClCompile Include="standards.cpp">
       <Filter>Tools</Filter>
     </ClCompile>
-    <ClCompile Include="Font.cpp">
-      <Filter>Tools</Filter>
-    </ClCompile>
     <ClCompile Include="State.cpp">
       <Filter>States</Filter>
     </ClCompile>
@@ -1470,12 +1464,6 @@
     <ClCompile Include="Dispatch.cpp">
       <Filter>SORT</Filter>
     </ClCompile>
-    <ClCompile Include="GUISystem.cpp">
-      <Filter>SORT</Filter>
-    </ClCompile>
-    <ClCompile Include="LabelEntity.cpp">
-      <Filter>SORT</Filter>
-    </ClCompile>
     <ClCompile Include="lodepng.cpp">
       <Filter>SORT</Filter>
     </ClCompile>
@@ -1489,9 +1477,6 @@
       <Filter>SORT</Filter>
     </ClCompile>
     <ClCompile Include="SoundSystem.cpp">
-      <Filter>SORT</Filter>
-    </ClCompile>
-    <ClCompile Include="Text.cpp">
       <Filter>SORT</Filter>
     </ClCompile>
     <ClCompile Include="Texture.cpp">
@@ -1556,6 +1541,9 @@
     </ClCompile>
     <ClCompile Include="Layer.cpp">
       <Filter>Engine Platform\Layer</Filter>
+    </ClCompile>
+    <ClCompile Include="Font.cpp">
+      <Filter>Engine Platform\Font</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
