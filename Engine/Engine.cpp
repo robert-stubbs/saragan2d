@@ -45,10 +45,12 @@ namespace GameEngine {
 			shader_mgr = ShaderManager(_engine);
 
 			// Load the font engine
-			_font = Font(_engine);
+			Font::GetFont() = Font(_engine);
 			std::string asset_dir = "C:/Assets/";
 			std::string ft = asset_dir + "Font/Vera.ttf";
-			_font.Get().LoadFont(ft, 30);
+			FontPlatform& f = Font::GetFont().Get();
+
+			Font::GetFont().Get().LoadFont(ft, 30);
 
 			//System = new SystemManager();
 			//EntityMgr = new EntityManager();

@@ -22,7 +22,7 @@ namespace GameEngine
 			return _font;
 		}
 
-		static inline FontPlatform& Get() { return *GetFont()._instance; }
+		static inline FontPlatform& Get() { return *(_font._instance); }
 	};
 }
 
