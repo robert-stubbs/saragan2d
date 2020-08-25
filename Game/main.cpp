@@ -26,9 +26,9 @@ bool PreLoad()
 
 void PostLoad()
 {     
-    Engine::state().AddState(new TestState(), false);
+    Engine::state().AddState(new TestState(), true);
     Engine::state().AddState(new RayState(), false);
-    Engine::state().AddState(new MinesweeperState(), true);
+    Engine::state().AddState(new MinesweeperState(), false);
 }
 
 int main(void)

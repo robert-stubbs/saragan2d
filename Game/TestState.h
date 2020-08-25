@@ -2,12 +2,14 @@
 #define _TEST_STATE_H_
 
 #include "State.h"
+#include "Types.h"
 #include "Triangle.h"
 
 class TestState : public GameEngine::State
 {
     public:
         GameEngine::Triangle t;
+        GameEngine::FontBuffer f;
 
         TestState();
         virtual ~TestState();

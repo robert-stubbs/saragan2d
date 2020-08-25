@@ -121,6 +121,9 @@
     <Filter Include="Engine Platform\Font\Renderer">
       <UniqueIdentifier>{3f65802c-d467-4313-bb8e-f4f61b7d9f73}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine Platform\Font\Renderer\OpenGL">
+      <UniqueIdentifier>{cd430044-5a3f-42c7-9475-c1485af7f466}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\ThirdParty\glew\include\GL\eglew.h">
@@ -1388,6 +1391,12 @@
     <ClInclude Include="Font.h">
       <Filter>Engine Platform\Font</Filter>
     </ClInclude>
+    <ClInclude Include="FontPlatform.h">
+      <Filter>Engine Platform\Font\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenGLFont.h">
+      <Filter>Engine Platform\Font\Renderer\OpenGL</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="EnginePCH.cpp" />
@@ -1544,6 +1553,12 @@
     </ClCompile>
     <ClCompile Include="Font.cpp">
       <Filter>Engine Platform\Font</Filter>
+    </ClCompile>
+    <ClCompile Include="FontPlatform.cpp">
+      <Filter>Engine Platform\Font\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="OpenGLFont.cpp">
+      <Filter>Engine Platform\Font\Renderer\OpenGL</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

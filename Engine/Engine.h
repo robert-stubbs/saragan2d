@@ -34,6 +34,7 @@ namespace GameEngine {
 			Renderer renderer;
 			ShaderManager shader_mgr;
 			StateMachine GameFSM;
+			Font _font;
 
 			std::vector<std::shared_ptr<ShaderDef>> _shader_definitions;
 
@@ -86,6 +87,10 @@ namespace GameEngine {
 			void TestFunction();
 
 			void AddShaderDef(std::shared_ptr<ShaderDef> _def);
+
+			static Font& font() {
+				return get()._font;
+			}
 
 			static StateMachine& state() {
 				return get().GameFSM;

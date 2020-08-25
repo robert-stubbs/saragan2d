@@ -114,6 +114,24 @@ namespace GameEngine {
 		ONE_MINUS_DST_COLOR,
 		SRC_ALPHA_SATURATE
 	};
+
+	typedef struct
+	{
+		std::string text;
+		unsigned int VAIO;
+		unsigned int IBO;
+		unsigned int VBO;
+		float x;
+		float y;
+		glm::vec4 color;
+		texture_font_t* font;
+		texture_atlas_t* atlas;
+		unsigned int texture_id;
+		std::vector<vert2D> verts;
+		std::vector<int> VertIndex;
+		bool loaded;
+	} FontBuffer;
+
 #pragma endregion platform enums
 
 #pragma region Input 

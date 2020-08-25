@@ -484,6 +484,7 @@
     <ClInclude Include="FastNoise.h" />
     <ClInclude Include="FileManager.h" />
     <ClInclude Include="Font.h" />
+    <ClInclude Include="FontPlatform.h" />
     <ClInclude Include="Input.h" />
     <ClInclude Include="InputGLFW.h" />
     <ClInclude Include="InputPlatform.h" />
@@ -492,6 +493,7 @@
     <ClInclude Include="Line.h" />
     <ClInclude Include="ModelSystem.h" />
     <ClInclude Include="Object.h" />
+    <ClInclude Include="OpenGLFont.h" />
     <ClInclude Include="OpenGLRenderEngine.h" />
     <ClInclude Include="OpenGLShader.h" />
     <ClInclude Include="Position.h" />
@@ -543,6 +545,7 @@
     <ClCompile Include="FastNoise.cpp" />
     <ClCompile Include="FileManager.cpp" />
     <ClCompile Include="Font.cpp" />
+    <ClCompile Include="FontPlatform.cpp" />
     <ClCompile Include="Input.cpp" />
     <ClCompile Include="InputGLFW.cpp" />
     <ClCompile Include="InputPlatform.cpp" />
@@ -551,6 +554,7 @@
     <ClCompile Include="Line.cpp" />
     <ClCompile Include="ModelSystem.cpp" />
     <ClCompile Include="Object.cpp" />
+    <ClCompile Include="OpenGLFont.cpp" />
     <ClCompile Include="OpenGLRenderEngine.cpp" />
     <ClCompile Include="OpenGLShader.cpp" />
     <ClCompile Include="Position.cpp" />

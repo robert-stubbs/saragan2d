@@ -19,7 +19,7 @@ namespace GameEngine
 				return _input;
 			}
 
-			static inline InputPlatform& Get() { return GetInput().Get(); }
+			static inline InputPlatform& Get() { return *GetInput()._instance; }
 	};
 }
 
