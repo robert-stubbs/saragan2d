@@ -126,8 +126,8 @@ namespace GameEngine {
 	{
 		if (buffer.loaded) {
 
-			Engine::getRenderer().EnableBlend(true); 
-			Engine::getRenderer().EnableDepthTest(true);
+			Engine::getRenderer().EnableDepthTest(false);
+			Engine::getRenderer().EnableBlend(true,GameEngine::BLEND_TYPE::SRC_ALPHA,GameEngine::BLEND_TYPE::ONE_MINUS_SRC_ALPHA);
 
 			Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["modelMatrix"], glm::mat4(1.0f), 1, false);
 			Engine::getRenderer().UniformInt(Engine::getCurrentShader()["is_Text"], 1);
@@ -147,8 +147,8 @@ namespace GameEngine {
 			Engine::getRenderer().UnbindVertexBuffer();
 			Engine::getRenderer().UniformInt(Engine::getCurrentShader()["is_Text"], 0);
 
-			Engine::getRenderer().EnableDepthTest(false);
 			Engine::getRenderer().EnableBlend(false);
+			Engine::getRenderer().EnableDepthTest(true);
 		}
 	}
 }
