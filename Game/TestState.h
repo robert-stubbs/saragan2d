@@ -10,6 +10,7 @@ class TestState : public GameEngine::State
     public:
         GameEngine::Triangle t;
         GameEngine::FontBuffer f;
+        GameEngine::FontBuffer f2;
 
         TestState();
         virtual ~TestState();
