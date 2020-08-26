@@ -13,7 +13,7 @@ bool PreLoad()
 {
     Engine& e = Engine::get();
 
-    e.SetPlatform(PLATFORM::GLFW);
+    e.SetPlatform(PLATFORM::WINDOWS);
     e.SetRenderEngine(RenderEngines::OpenGL);
     e.SetAssetDir("C:/Assets/");
     e.SetWindowName("Saragan");
@@ -26,9 +26,9 @@ bool PreLoad()
 
 void PostLoad()
 {     
+    //Engine::state().AddState(new RayState(), false);
+    //Engine::state().AddState(new MinesweeperState(), false);
     Engine::state().AddState(new TestState(), true);
-    Engine::state().AddState(new RayState(), false);
-    Engine::state().AddState(new MinesweeperState(), false);
 }
 
 int main(void)

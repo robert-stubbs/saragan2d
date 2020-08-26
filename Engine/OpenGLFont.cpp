@@ -19,6 +19,7 @@ namespace GameEngine {
 
 	void OpenGLFont::LoadFont(std::string name, float size)
 	{
+		filename = name;
 		font = 0;
 		atlas = texture_atlas_new(512, 512, 1);
 		font = texture_font_new_from_file(atlas, size, filename.c_str());
@@ -96,9 +97,16 @@ namespace GameEngine {
 	void OpenGLFont::GenerateBuffer(FontBuffer& buffer)
 	{
 		if (!buffer.loaded) {
+			Engine::getRenderer().GenerateVertexArrayBuffer(buffer.VAIO);
 			Engine::getRenderer().GenerateBuffer(buffer.VBO, buffer.verts);
 			Engine::getRenderer().GenerateIndexBuffer(buffer.IBO, buffer.VertIndex);
 
+			Shader& s = Engine::getShader()["DEFAULT2D"];
+			Engine::getRenderer().VertexStructurePointerF(s["in_Position"], 4, GL_FALSE, sizeof(vert2D), 0);
+			Engine::getRenderer().VertexStructurePointerF(s["in_Texture"], 2, GL_TRUE, sizeof(vert2D), (GLvoid*)offsetof(vert2D, Text));
+			Engine::getRenderer().VertexStructurePointerF(s["in_Color"], 4, GL_TRUE, sizeof(vert2D), (GLvoid*)offsetof(vert2D, col));
+
+			// TODO - move this to the renderer
 			glGenTextures(1, &buffer.atlas->id);
 			glBindTexture(GL_TEXTURE_2D, buffer.atlas->id);
 			glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
@@ -106,28 +114,41 @@ namespace GameEngine {
 			glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 			glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
 			glTexImage2D(GL_TEXTURE_2D, 0, GL_RED, (int)buffer.atlas->width, (int)buffer.atlas->height, 0, GL_RED, GL_UNSIGNED_BYTE, buffer.atlas->data);
+
+			Engine::getRenderer().UnbindBuffer();
+			Engine::getRenderer().UnbindIndexBuffer();
+			Engine::getRenderer().UnbindVertexBuffer();
+			buffer.loaded = true;
 		}
 	}
 
 	void OpenGLFont::RenderBuffer(FontBuffer& buffer)
 	{
 		if (buffer.loaded) {
-			//glBindVertexArray(VAIO);
-			glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, buffer.IBO);
+
+			Engine::getRenderer().EnableBlend(true); 
+			Engine::getRenderer().EnableDepthTest(true);
+
+			Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["modelMatrix"], glm::mat4(1.0f), 1, false);
+			Engine::getRenderer().UniformInt(Engine::getCurrentShader()["is_Text"], 1);
+			Engine::getRenderer().BindVertexBuffer(buffer.VAIO);
+			Engine::getRenderer().BindIndexBuffer(buffer.IBO);
 
 			if (Engine::getRenderer().CurrentTextureID != buffer.atlas->id)
 			{
 				Engine::getRenderer().CurrentTextureID = buffer.atlas->id;
 				glActiveTexture(GL_TEXTURE0);
-				glBindTexture(GL_TEXTURE_2D, Engine::getRenderer().CurrentTextureID);
+				glBindTexture(GL_TEXTURE_2D, buffer.atlas->id);
 			}
 
-			glDrawElements(GL_TRIANGLES, (int)buffer.VertIndex.size(), GL_UNSIGNED_INT, 0);
+			Engine::getRenderer().DrawElements(GameEngine::DRAW_TYPE::TRIANGLES, (int)buffer.VertIndex.size(), GameEngine::VALUE_TYPE::UNSIGNED_INT, 0);
 
+			Engine::getRenderer().UnbindIndexBuffer();
+			Engine::getRenderer().UnbindVertexBuffer();
+			Engine::getRenderer().UniformInt(Engine::getCurrentShader()["is_Text"], 0);
 
-			glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
-			//glBindVertexArray(0);
-			//glUniform1i(Engine::getEngine().renderer->CurrentShader->isText, 0);
+			Engine::getRenderer().EnableDepthTest(false);
+			Engine::getRenderer().EnableBlend(false);
 		}
 	}
 }

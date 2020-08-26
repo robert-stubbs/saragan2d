@@ -20,8 +20,8 @@ void TestState::Init()
 {
 	t.Init(0.0f, 0.0f, 100.0f, 100.0f, 100.0f, 0.0f);
 
-	f = Engine::font().Get().GetString("Test String", 0, 0, glm::vec4(1.0f, 0.0f, 0.0f, 1.0f));
-	Engine::font().Get().GenerateBuffer(f);
+	f = Font::Get().GetString("Test String", 100, 100, glm::vec4(1.0f, 0.0f, 0.0f, 1.0f));
+	Font::Get().GenerateBuffer(f);
 }
 
 void TestState::UpdateOrth(const float& dt)
@@ -38,8 +38,8 @@ void TestState::RenderOrth()
     Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["viewMatrix"], Engine::get().cam->ViewMatrix, 1, false);
     Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["modelMatrix"], glm::mat4(1.0f), 1, false);
 
-    t.Render();
-	Engine::font().Get().RenderBuffer(f);
+    //t.Render();
+	Font::Get().RenderBuffer(f);
 }
 
 void TestState::DoENTER()

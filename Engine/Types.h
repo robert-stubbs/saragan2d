@@ -126,7 +126,6 @@ namespace GameEngine {
 		glm::vec4 color;
 		texture_font_t* font;
 		texture_atlas_t* atlas;
-		unsigned int texture_id;
 		std::vector<vert2D> verts;
 		std::vector<int> VertIndex;
 		bool loaded;

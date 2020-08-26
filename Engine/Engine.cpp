@@ -48,9 +48,7 @@ namespace GameEngine {
 			Font::GetFont() = Font(_engine);
 			std::string asset_dir = "C:/Assets/";
 			std::string ft = asset_dir + "Font/Vera.ttf";
-			FontPlatform& f = Font::GetFont().Get();
-
-			Font::GetFont().Get().LoadFont(ft, 30);
+			Font::Get().LoadFont(ft, 30);
 
 			//System = new SystemManager();
 			//EntityMgr = new EntityManager();

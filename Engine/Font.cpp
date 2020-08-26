@@ -10,6 +10,7 @@ namespace GameEngine
 	{
 		engine_type = RenderEngines::None;
 		_instance = nullptr;
+		_font = *this;
 	}
 
 	Font::Font(RenderEngines EngineType)
