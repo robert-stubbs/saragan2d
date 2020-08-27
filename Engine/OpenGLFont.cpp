@@ -106,15 +106,23 @@ namespace GameEngine {
 			Engine::getRenderer().VertexStructurePointerF(s["in_Texture"], 2, GL_TRUE, sizeof(vert2D), (GLvoid*)offsetof(vert2D, Text));
 			Engine::getRenderer().VertexStructurePointerF(s["in_Color"], 4, GL_TRUE, sizeof(vert2D), (GLvoid*)offsetof(vert2D, col));
 
-			// TODO - move this to the renderer
-			glGenTextures(1, &buffer.atlas->id);
-			glBindTexture(GL_TEXTURE_2D, buffer.atlas->id);
-			glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
-			glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
-			glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-			glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-			glTexImage2D(GL_TEXTURE_2D, 0, GL_RED, (int)buffer.atlas->width, (int)buffer.atlas->height, 0, GL_RED, GL_UNSIGNED_BYTE, buffer.atlas->data);
+			Engine::getRenderer().GenerateTextureBuffer(
+														buffer.atlas->id, 
+														(int)buffer.atlas->width, 
+														(int)buffer.atlas->height, 
+														buffer.atlas->data, 
+														COLOR_TYPE::ENGINE_RED, 
+														COLOR_TYPE::ENGINE_RED, 
+														VALUE_TYPE::UNSIGNED_BYTE
+													);
 
+			// TODO - sort bind texture params
+			Engine::getRenderer().BindTextureBufferParams(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+			Engine::getRenderer().BindTextureBufferParams(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+			Engine::getRenderer().BindTextureBufferParams(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+			Engine::getRenderer().BindTextureBufferParams(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+
+			Engine::getRenderer().UnbindTextureBuffer();
 			Engine::getRenderer().UnbindBuffer();
 			Engine::getRenderer().UnbindIndexBuffer();
 			Engine::getRenderer().UnbindVertexBuffer();
@@ -137,8 +145,8 @@ namespace GameEngine {
 			if (Engine::getRenderer().CurrentTextureID != buffer.atlas->id)
 			{
 				Engine::getRenderer().CurrentTextureID = buffer.atlas->id;
-				glActiveTexture(GL_TEXTURE0);
-				glBindTexture(GL_TEXTURE_2D, buffer.atlas->id);
+
+				Engine::getRenderer().BindTextureBuffer(buffer.atlas->id);
 			}
 
 			Engine::getRenderer().DrawElements(GameEngine::DRAW_TYPE::TRIANGLES, (int)buffer.VertIndex.size(), GameEngine::VALUE_TYPE::UNSIGNED_INT, 0);

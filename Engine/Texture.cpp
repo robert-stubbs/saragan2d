@@ -1,6 +1,7 @@
 #include "EnginePCH.h"
 
 #include "Texture.h"
+#include "Engine.h"
 
 #include "cErrorLogger.h"
 
@@ -48,66 +49,69 @@ namespace GameEngine
 
 	void Texture::GenerateBuffer()
 	{
-		// Create one OpenGL texture
-		glGenTextures(1, &TextureID);
 
-		// "Bind" the newly created texture : all future texture functions will modify this texture
-		glBindTexture(GL_TEXTURE_2D, TextureID);
+		Engine::getRenderer().GenerateTextureBuffer(
+			TextureID,
+			width,
+			height,
+			static_cast<void*>(&image_string),
+			COLOR_TYPE::ENGINE_RGB,
+			COLOR_TYPE::ENGINE_RGB,
+			VALUE_TYPE::UNSIGNED_BYTE
+		);
 
-		// Give the image to OpenGL
+		Engine::getRenderer().BindTextureBufferParams(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+		Engine::getRenderer().BindTextureBufferParams(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
 
-		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_BGR, GL_UNSIGNED_BYTE, image_string.c_str());
-
-		// When MAGnifying the image (no bigger mipmap available), use LINEAR filtering
-		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-		// When MINifying the image, use a LINEAR blend of two mipmaps, each filtered LINEARLY too
-		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
-		// Generate mipmaps, by the way.
 		glGenerateMipmap(GL_TEXTURE_2D);
-		glBindTexture(GL_TEXTURE_2D, 0);
+
+		Engine::getRenderer().UnbindTextureBuffer();
+
 		GeneratedBuffer = true;
 	}
 
 	void Texture::GenerateAlphaBuffer()
 	{
 		TextureID = 0;
-		//pEngine->check_error();
-		// Create one OpenGL texture
-		glGenTextures(1, &TextureID);
-		//pEngine->check_error();
 
-		// "Bind" the newly created texture : all future texture functions will modify this texture
-		glBindTexture(GL_TEXTURE_2D, TextureID);
 
-		// Give the image to OpenGL
-		//gluBuild2DMipmaps(GL_TEXTURE_2D, GL_RGBA, width, height, GL_RGBA, GL_UNSIGNED_BYTE, &imageResp[0]);
-		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, &imageResp[0]);
+		Engine::getRenderer().GenerateTextureBuffer(
+			TextureID,
+			width,
+			height,
+			&imageResp[0],
+			COLOR_TYPE::ENGINE_RGBA,
+			COLOR_TYPE::ENGINE_RGBA,
+			VALUE_TYPE::UNSIGNED_BYTE
+		);
 
-		glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST); //GL_NEAREST = no smoothing
+		Engine::getRenderer().BindTextureBufferParams(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+		Engine::getRenderer().BindTextureBufferParams(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
 
-		glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
-		// Generate mipmaps, by the way.
-		//pEngine->check_error();
 		glGenerateMipmap(GL_TEXTURE_2D);
 
-		//pEngine->check_error();
-		glBindTexture(GL_TEXTURE_2D, 0);
+		Engine::getRenderer().UnbindTextureBuffer();
 
 		GeneratedBuffer = true;
 	}
 
 	bool Texture::generateTgaBuffer()
 	{
-		// Typical Texture Generation Using Data From The TGA ( CHANGE )
-		glGenTextures(1, &TextureID);				// Create The Texture ( CHANGE )
-		glBindTexture(GL_TEXTURE_2D, TextureID);
 
-		glTexImage2D(GL_TEXTURE_2D, 0, TextureType, width, height, 0, TextureType, GL_UNSIGNED_BYTE, Data.c_str());
-		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+		Engine::getRenderer().GenerateTextureBuffer(
+			TextureID,
+			width,
+			height,
+			static_cast<void*>(&Data),
+			COLOR_TYPE::ENGINE_RGBA,
+			COLOR_TYPE::ENGINE_RGBA,
+			VALUE_TYPE::UNSIGNED_BYTE
+		);
 
+		Engine::getRenderer().BindTextureBufferParams(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+		Engine::getRenderer().BindTextureBufferParams(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
 
-		glBindTexture(GL_TEXTURE_2D, 0);
+		Engine::getRenderer().UnbindTextureBuffer();
 
 		GeneratedBuffer = true;
 		Data.clear();
@@ -117,15 +121,20 @@ namespace GameEngine
 
 	bool Texture::generateTgaStructBuffer()
 	{
-		// Typical Texture Generation Using Data From The TGA ( CHANGE )
-		glGenTextures(1, &TextureID);				// Create The Texture ( CHANGE )
-		glBindTexture(GL_TEXTURE_2D, TextureID);
+		Engine::getRenderer().GenerateTextureBuffer(
+			TextureID,
+			tgaFile.imageWidth,
+			tgaFile.imageHeight,
+			tgaFile.imageData,
+			COLOR_TYPE::ENGINE_RGB,
+			COLOR_TYPE::ENGINE_RGB,
+			VALUE_TYPE::UNSIGNED_BYTE
+		);
 
-		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, tgaFile.imageWidth, tgaFile.imageHeight, 0, GL_RGB, GL_UNSIGNED_BYTE, tgaFile.imageData);
-		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+		Engine::getRenderer().BindTextureBufferParams(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+		Engine::getRenderer().BindTextureBufferParams(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
 
-		ZeroMemory(&tgaFile.imageData, sizeof(tgaFile.imageData));
+		Engine::getRenderer().UnbindTextureBuffer();
 
 		GeneratedBuffer = true;
 

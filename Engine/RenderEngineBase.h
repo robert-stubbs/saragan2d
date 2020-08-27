@@ -28,28 +28,35 @@ namespace GameEngine {
 
 			virtual bool ResizeWindow(int Width, int Height) = 0;
 
+			// Vertex Array Buffers
 			virtual void GenerateVertexArrayBuffer(unsigned int& VAB) = 0;
-
-			virtual void DeleteBuffer(unsigned int& VAB) = 0;
 			virtual void DeleteVertexBuffer(unsigned int& VAO) = 0;
-
-			virtual void GenerateBuffer(unsigned int& VBO, std::vector<vert>& verts) = 0;
-			virtual void ReGenerateBuffer(unsigned int& VBO, std::vector<vert>& verts) = 0;
-			virtual bool UpdateBuffer(unsigned int& VBO, std::vector<vert>& verts) = 0;
-
-			virtual void GenerateBuffer(unsigned int& VBO, std::vector<vert2D>& verts) = 0;
-			virtual void ReGenerateBuffer(unsigned int& VBO, std::vector<vert2D>& verts) = 0;
-			virtual bool UpdateBuffer(unsigned int& VBO, std::vector<vert2D>& verts) = 0;
-
 			virtual void BindVertexBuffer(unsigned int& VBO) = 0;
 			virtual void UnbindVertexBuffer() = 0;
 
+			// Vertex Buffers
+			virtual void GenerateBuffer(unsigned int& VBO, std::vector<vert>& verts) = 0;
+			virtual void GenerateBuffer(unsigned int& VBO, std::vector<vert2D>& verts) = 0;
+			virtual void ReGenerateBuffer(unsigned int& VBO, std::vector<vert>& verts) = 0;
+			virtual void ReGenerateBuffer(unsigned int& VBO, std::vector<vert2D>& verts) = 0;
+			virtual bool UpdateBuffer(unsigned int& VBO, std::vector<vert>& verts) = 0;
+			virtual bool UpdateBuffer(unsigned int& VBO, std::vector<vert2D>& verts) = 0;
 			virtual void BindBuffer(unsigned int& VBO) = 0;
 			virtual void UnbindBuffer() = 0;
 
-			virtual void GenerateIndexBuffer(unsigned& IBO, std::vector<int>& VertIndex) = 0;
+
+			// Index Buffers
+			virtual void GenerateIndexBuffer(unsigned int& IBO, std::vector<int>& VertIndex) = 0;
 			virtual void BindIndexBuffer(unsigned int& IBO) = 0;
 			virtual void UnbindIndexBuffer() = 0;
+			virtual void DeleteBuffer(unsigned int& VAB) = 0;
+
+			// Texture Buffers
+			virtual void GenerateTextureBuffer(unsigned int& TBO, int width, int height, void* data, COLOR_TYPE internalformat, COLOR_TYPE format, VALUE_TYPE type) = 0;
+			virtual void BindTextureBuffer(unsigned int& TBO) = 0;
+			virtual void BindTextureBufferParams(int target, int name, int param) = 0;
+			virtual void UnbindTextureBuffer() = 0;
+
 
 			// Buffer Structure Functions
 			virtual void VertexStructurePointerF(int location, int size, bool normalized, int stride, const void* pointer) = 0;

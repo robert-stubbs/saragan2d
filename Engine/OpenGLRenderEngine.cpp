@@ -268,7 +268,7 @@ namespace GameEngine {
 		glBindBuffer(GL_ARRAY_BUFFER, 0);
 	}
 
-	void OpenGLRenderEngine::GenerateIndexBuffer(unsigned& IBO, std::vector<int>& VertIndex)
+	void OpenGLRenderEngine::GenerateIndexBuffer(unsigned int& IBO, std::vector<int>& VertIndex)
 	{
 		glGenBuffers(1, &IBO);
 		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, IBO);
@@ -283,6 +283,92 @@ namespace GameEngine {
 	void OpenGLRenderEngine::UnbindIndexBuffer()
 	{
 		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
+	}
+
+	void OpenGLRenderEngine::GenerateTextureBuffer(unsigned int& TBO, int width, int height, void* data, COLOR_TYPE internalformat, COLOR_TYPE format, VALUE_TYPE type)
+	{
+		int t = GL_UNSIGNED_BYTE;
+		switch (type)
+		{
+		case GameEngine::VALUE_TYPE::UNSIGNED_BYTE:
+			t = GL_UNSIGNED_BYTE;
+			break;
+		case GameEngine::VALUE_TYPE::UNSIGNED_SHORT:
+			t = GL_UNSIGNED_SHORT;
+			break;
+		case GameEngine::VALUE_TYPE::UNSIGNED_INT:
+			t = GL_UNSIGNED_INT;
+			break;
+		default:
+			break;
+		}
+
+		int iformat = GL_RGB;
+
+		switch (internalformat)
+		{
+		case GameEngine::COLOR_TYPE::ENGINE_RED:
+			iformat = GL_RED;
+			break;
+		case GameEngine::COLOR_TYPE::ENGINE_GREEN:
+			iformat = GL_GREEN;
+			break;
+		case GameEngine::COLOR_TYPE::ENGINE_BLUE:
+			iformat = GL_BLUE;
+			break;
+		case GameEngine::COLOR_TYPE::ENGINE_RGB:
+			iformat = GL_RGB;
+			break;
+		case GameEngine::COLOR_TYPE::ENGINE_RGBA:
+			iformat = GL_RGBA;
+			break;
+		default:
+			break;
+		}
+
+		int form = GL_RGB;
+
+		switch (format)
+		{
+		case GameEngine::COLOR_TYPE::ENGINE_RED:
+			form = GL_RED;
+			break;
+		case GameEngine::COLOR_TYPE::ENGINE_GREEN:
+			form = GL_GREEN;
+			break;
+		case GameEngine::COLOR_TYPE::ENGINE_BLUE:
+			form = GL_BLUE;
+			break;
+		case GameEngine::COLOR_TYPE::ENGINE_RGB:
+			form = GL_RGB;
+			break;
+		case GameEngine::COLOR_TYPE::ENGINE_RGBA:
+			form = GL_RGBA;
+			break;
+		default:
+			break;
+		}
+
+
+		glGenTextures(1, &TBO);
+		glBindTexture(GL_TEXTURE_2D, TBO);
+		glTexImage2D(GL_TEXTURE_2D, 0, iformat, width, height, 0, form, t, data);
+	}
+
+	void OpenGLRenderEngine::BindTextureBuffer(unsigned int& TBO)
+	{
+		glActiveTexture(GL_TEXTURE0);
+		glBindTexture(GL_TEXTURE_2D, TBO);
+	}
+	
+	void OpenGLRenderEngine::BindTextureBufferParams(int target, int name, int param)
+	{
+		glTexParameteri(target, name, param);
+	}
+
+	void OpenGLRenderEngine::UnbindTextureBuffer()
+	{
+		glBindTexture(GL_TEXTURE_2D, 0);
 	}
 
 	void OpenGLRenderEngine::VertexStructurePointerF(int location, int size, bool normalized, int stride, const void* pointer)

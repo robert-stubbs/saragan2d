@@ -95,6 +95,15 @@ namespace GameEngine {
 		QUAD_STRIP
 	};
 
+	enum class COLOR_TYPE
+	{
+		ENGINE_RED,
+		ENGINE_GREEN,
+		ENGINE_BLUE,
+		ENGINE_RGB,
+		ENGINE_RGBA
+	};
+
 	enum class VALUE_TYPE
 	{
 		UNSIGNED_BYTE, 

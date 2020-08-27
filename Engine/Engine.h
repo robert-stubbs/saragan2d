@@ -11,7 +11,6 @@
 
 #include "StateMachine.h"
 #include "SystemManager.h"
-#include "EntityManager.h"
 #include "Font.h"
 #include "Input.h"
 
@@ -40,7 +39,7 @@ namespace GameEngine {
 		public:
 			//
 			SystemManager* System;
-			EntityManager* EntityMgr;
+			//EntityManager* EntityMgr;
 
 			//Font* font;
 

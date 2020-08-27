@@ -124,6 +124,21 @@
     <Filter Include="Engine Platform\Font\Renderer\OpenGL">
       <UniqueIdentifier>{cd430044-5a3f-42c7-9475-c1485af7f466}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Components">
+      <UniqueIdentifier>{ba6ecf5b-1f2a-40e8-b856-60124d27959b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Components\UI">
+      <UniqueIdentifier>{047c046a-566b-422d-815e-41eac97af179}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Components\AI">
+      <UniqueIdentifier>{13e61f37-add4-4feb-b24a-beaff2fe6a5c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Components\Location">
+      <UniqueIdentifier>{3fe56874-3c78-49cc-8060-1ea221bb5323}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Components\Sound">
+      <UniqueIdentifier>{07760568-dfc7-44e9-994a-7e44b7f7c31b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\ThirdParty\glew\include\GL\eglew.h">
@@ -1292,46 +1307,13 @@
     <ClInclude Include="StateMachine.h">
       <Filter>States</Filter>
     </ClInclude>
-    <ClInclude Include="AISystem.h">
-      <Filter>SORT</Filter>
-    </ClInclude>
-    <ClInclude Include="Behaviour.h">
-      <Filter>SORT</Filter>
-    </ClInclude>
-    <ClInclude Include="Brain.h">
-      <Filter>SORT</Filter>
-    </ClInclude>
     <ClInclude Include="cIni.h">
-      <Filter>SORT</Filter>
-    </ClInclude>
-    <ClInclude Include="Component.h">
-      <Filter>SORT</Filter>
-    </ClInclude>
-    <ClInclude Include="Dispatch.h">
       <Filter>SORT</Filter>
     </ClInclude>
     <ClInclude Include="lodepng.h">
       <Filter>SORT</Filter>
     </ClInclude>
-    <ClInclude Include="Position.h">
-      <Filter>SORT</Filter>
-    </ClInclude>
-    <ClInclude Include="PositionSystem.h">
-      <Filter>SORT</Filter>
-    </ClInclude>
-    <ClInclude Include="SoundItem.h">
-      <Filter>SORT</Filter>
-    </ClInclude>
-    <ClInclude Include="SoundSystem.h">
-      <Filter>SORT</Filter>
-    </ClInclude>
     <ClInclude Include="Texture.h">
-      <Filter>SORT</Filter>
-    </ClInclude>
-    <ClInclude Include="Viewport.h">
-      <Filter>SORT</Filter>
-    </ClInclude>
-    <ClInclude Include="ViewportManager.h">
       <Filter>SORT</Filter>
     </ClInclude>
     <ClInclude Include="System.h">
@@ -1340,16 +1322,7 @@
     <ClInclude Include="SystemManager.h">
       <Filter>Systems\Base</Filter>
     </ClInclude>
-    <ClInclude Include="Entity.h">
-      <Filter>SORT</Filter>
-    </ClInclude>
-    <ClInclude Include="EntityManager.h">
-      <Filter>SORT</Filter>
-    </ClInclude>
     <ClInclude Include="cErrorLogger.h">
-      <Filter>SORT</Filter>
-    </ClInclude>
-    <ClInclude Include="ModelSystem.h">
       <Filter>SORT</Filter>
     </ClInclude>
     <ClInclude Include="EventManager.h">
@@ -1396,6 +1369,12 @@
     </ClInclude>
     <ClInclude Include="OpenGLFont.h">
       <Filter>Engine Platform\Font\Renderer\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="Component.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Text.h">
+      <Filter>Components\UI</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -1455,46 +1434,13 @@
     <ClCompile Include="StateMachine.cpp">
       <Filter>States</Filter>
     </ClCompile>
-    <ClCompile Include="AISystem.cpp">
-      <Filter>SORT</Filter>
-    </ClCompile>
-    <ClCompile Include="Behaviour.cpp">
-      <Filter>SORT</Filter>
-    </ClCompile>
-    <ClCompile Include="Brain.cpp">
-      <Filter>SORT</Filter>
-    </ClCompile>
     <ClCompile Include="cIni.cpp">
-      <Filter>SORT</Filter>
-    </ClCompile>
-    <ClCompile Include="Component.cpp">
-      <Filter>SORT</Filter>
-    </ClCompile>
-    <ClCompile Include="Dispatch.cpp">
       <Filter>SORT</Filter>
     </ClCompile>
     <ClCompile Include="lodepng.cpp">
       <Filter>SORT</Filter>
     </ClCompile>
-    <ClCompile Include="Position.cpp">
-      <Filter>SORT</Filter>
-    </ClCompile>
-    <ClCompile Include="PositionSystem.cpp">
-      <Filter>SORT</Filter>
-    </ClCompile>
-    <ClCompile Include="SoundItem.cpp">
-      <Filter>SORT</Filter>
-    </ClCompile>
-    <ClCompile Include="SoundSystem.cpp">
-      <Filter>SORT</Filter>
-    </ClCompile>
     <ClCompile Include="Texture.cpp">
-      <Filter>SORT</Filter>
-    </ClCompile>
-    <ClCompile Include="Viewport.cpp">
-      <Filter>SORT</Filter>
-    </ClCompile>
-    <ClCompile Include="ViewportManager.cpp">
       <Filter>SORT</Filter>
     </ClCompile>
     <ClCompile Include="System.cpp">
@@ -1503,16 +1449,7 @@
     <ClCompile Include="SystemManager.cpp">
       <Filter>Systems\Base</Filter>
     </ClCompile>
-    <ClCompile Include="Entity.cpp">
-      <Filter>SORT</Filter>
-    </ClCompile>
-    <ClCompile Include="EntityManager.cpp">
-      <Filter>SORT</Filter>
-    </ClCompile>
     <ClCompile Include="cErrorLogger.cpp">
-      <Filter>SORT</Filter>
-    </ClCompile>
-    <ClCompile Include="ModelSystem.cpp">
       <Filter>SORT</Filter>
     </ClCompile>
     <ClCompile Include="EventManager.cpp">
@@ -1559,6 +1496,12 @@
     </ClCompile>
     <ClCompile Include="OpenGLFont.cpp">
       <Filter>Engine Platform\Font\Renderer\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="Component.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Text.cpp">
+      <Filter>Components\UI</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
