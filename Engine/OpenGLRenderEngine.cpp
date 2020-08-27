@@ -366,6 +366,11 @@ namespace GameEngine {
 		glTexParameteri(target, name, param);
 	}
 
+	void OpenGLRenderEngine::GenerateTextureMipmap()
+	{
+		glGenerateMipmap(GL_TEXTURE_2D);
+	}
+
 	void OpenGLRenderEngine::UnbindTextureBuffer()
 	{
 		glBindTexture(GL_TEXTURE_2D, 0);

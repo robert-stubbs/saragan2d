@@ -54,6 +54,7 @@ namespace GameEngine {
 			virtual void GenerateTextureBuffer(unsigned int& TBO, int width, int height, void* data, COLOR_TYPE internalformat, COLOR_TYPE format, VALUE_TYPE type) override;
 			virtual void BindTextureBuffer(unsigned int& TBO) override;
 			virtual void BindTextureBufferParams(int target, int name, int param) override;
+			virtual void GenerateTextureMipmap() override;
 			virtual void UnbindTextureBuffer() override;
 
 
