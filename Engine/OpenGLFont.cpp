@@ -116,11 +116,11 @@ namespace GameEngine {
 														VALUE_TYPE::UNSIGNED_BYTE
 													);
 
-			// TODO - sort bind texture params
-			Engine::getRenderer().BindTextureBufferParams(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
-			Engine::getRenderer().BindTextureBufferParams(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
-			Engine::getRenderer().BindTextureBufferParams(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-			Engine::getRenderer().BindTextureBufferParams(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+
+			Engine::getRenderer().BindTextureBufferParams(TEXTURE_TARGET::ENGINE_TEXTURE_2D, TEXTURE_TARGET_NAME::ENGINE_TEXTURE_WRAP_S, TEXTURE_TARGET_PARAM::ENGINE_CLAMP_TO_EDGE);
+			Engine::getRenderer().BindTextureBufferParams(TEXTURE_TARGET::ENGINE_TEXTURE_2D, TEXTURE_TARGET_NAME::ENGINE_TEXTURE_WRAP_T, TEXTURE_TARGET_PARAM::ENGINE_CLAMP_TO_EDGE);
+			Engine::getRenderer().BindTextureBufferParams(TEXTURE_TARGET::ENGINE_TEXTURE_2D, TEXTURE_TARGET_NAME::ENGINE_TEXTURE_MAG_FILTER, TEXTURE_TARGET_PARAM::ENGINE_LINEAR);
+			Engine::getRenderer().BindTextureBufferParams(TEXTURE_TARGET::ENGINE_TEXTURE_2D, TEXTURE_TARGET_NAME::ENGINE_TEXTURE_MIN_FILTER, TEXTURE_TARGET_PARAM::ENGINE_LINEAR);
 
 			Engine::getRenderer().UnbindTextureBuffer();
 			Engine::getRenderer().UnbindBuffer();

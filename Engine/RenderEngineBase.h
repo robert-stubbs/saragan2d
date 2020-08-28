@@ -54,7 +54,7 @@ namespace GameEngine {
 			// Texture Buffers
 			virtual void GenerateTextureBuffer(unsigned int& TBO, int width, int height, void* data, COLOR_TYPE internalformat, COLOR_TYPE format, VALUE_TYPE type) = 0;
 			virtual void BindTextureBuffer(unsigned int& TBO) = 0;
-			virtual void BindTextureBufferParams(int target, int name, int param) = 0;
+			virtual void BindTextureBufferParams(TEXTURE_TARGET target, TEXTURE_TARGET_NAME name, TEXTURE_TARGET_PARAM param) = 0;
 			virtual void GenerateTextureMipmap() = 0;
 			virtual void UnbindTextureBuffer() = 0;
 

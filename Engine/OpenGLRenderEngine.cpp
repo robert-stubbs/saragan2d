@@ -361,9 +361,62 @@ namespace GameEngine {
 		glBindTexture(GL_TEXTURE_2D, TBO);
 	}
 	
-	void OpenGLRenderEngine::BindTextureBufferParams(int target, int name, int param)
+	void OpenGLRenderEngine::BindTextureBufferParams(TEXTURE_TARGET target, TEXTURE_TARGET_NAME name, TEXTURE_TARGET_PARAM param)
 	{
-		glTexParameteri(target, name, param);
+		unsigned int t = GL_TEXTURE_2D;
+
+		switch (target)
+		{
+		case TEXTURE_TARGET::ENGINE_TEXTURE_2D:
+			t = GL_TEXTURE_2D;
+			break;
+		default:
+			break;
+		}
+
+		unsigned int n = GL_TEXTURE_MAG_FILTER;
+
+		switch (name)
+		{
+		case TEXTURE_TARGET_NAME::ENGINE_TEXTURE_MAG_FILTER:
+			n = GL_TEXTURE_MAG_FILTER;
+			break;
+		case TEXTURE_TARGET_NAME::ENGINE_TEXTURE_MIN_FILTER:
+			n = GL_TEXTURE_MIN_FILTER;
+			break;
+		case TEXTURE_TARGET_NAME::ENGINE_TEXTURE_WRAP_S:
+			n = GL_TEXTURE_WRAP_S;
+			break;
+		case TEXTURE_TARGET_NAME::ENGINE_TEXTURE_WRAP_T:
+			n = GL_TEXTURE_WRAP_T;
+			break;
+		default:
+			break;
+		}
+
+		unsigned int p = GL_LINEAR;
+
+		switch (param)
+		{
+		case TEXTURE_TARGET_PARAM::ENGINE_CLAMP_TO_EDGE:
+			p = GL_CLAMP_TO_EDGE;
+			break;
+		case TEXTURE_TARGET_PARAM::ENGINE_LINEAR:
+			p = GL_LINEAR;
+			break;
+		case TEXTURE_TARGET_PARAM::ENGINE_NEAREST:
+			p = GL_NEAREST;
+			break;
+		case TEXTURE_TARGET_PARAM::ENGINE_LINEAR_MIPMAP_LINEAR:
+			p = GL_LINEAR_MIPMAP_LINEAR;
+			break;
+		default:
+			break;
+		}
+
+
+
+		glTexParameteri(t, n, p);
 	}
 
 	void OpenGLRenderEngine::GenerateTextureMipmap()

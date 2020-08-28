@@ -60,8 +60,9 @@ namespace GameEngine
 			VALUE_TYPE::UNSIGNED_BYTE
 		);
 
-		Engine::getRenderer().BindTextureBufferParams(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-		Engine::getRenderer().BindTextureBufferParams(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
+		// TODO - SORT THE BELOW into ENUMS
+		Engine::getRenderer().BindTextureBufferParams(TEXTURE_TARGET::ENGINE_TEXTURE_2D, TEXTURE_TARGET_NAME::ENGINE_TEXTURE_MAG_FILTER, TEXTURE_TARGET_PARAM::ENGINE_LINEAR);
+		Engine::getRenderer().BindTextureBufferParams(TEXTURE_TARGET::ENGINE_TEXTURE_2D, TEXTURE_TARGET_NAME::ENGINE_TEXTURE_MIN_FILTER, TEXTURE_TARGET_PARAM::ENGINE_LINEAR_MIPMAP_LINEAR);
 
 		Engine::getRenderer().GenerateTextureMipmap();
 
@@ -85,8 +86,8 @@ namespace GameEngine
 			VALUE_TYPE::UNSIGNED_BYTE
 		);
 
-		Engine::getRenderer().BindTextureBufferParams(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
-		Engine::getRenderer().BindTextureBufferParams(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+		Engine::getRenderer().BindTextureBufferParams(TEXTURE_TARGET::ENGINE_TEXTURE_2D, TEXTURE_TARGET_NAME::ENGINE_TEXTURE_MAG_FILTER, TEXTURE_TARGET_PARAM::ENGINE_NEAREST);
+		Engine::getRenderer().BindTextureBufferParams(TEXTURE_TARGET::ENGINE_TEXTURE_2D, TEXTURE_TARGET_NAME::ENGINE_TEXTURE_MIN_FILTER, TEXTURE_TARGET_PARAM::ENGINE_NEAREST);
 
 		Engine::getRenderer().GenerateTextureMipmap();
 
@@ -108,8 +109,8 @@ namespace GameEngine
 			VALUE_TYPE::UNSIGNED_BYTE
 		);
 
-		Engine::getRenderer().BindTextureBufferParams(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-		Engine::getRenderer().BindTextureBufferParams(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+		Engine::getRenderer().BindTextureBufferParams(TEXTURE_TARGET::ENGINE_TEXTURE_2D, TEXTURE_TARGET_NAME::ENGINE_TEXTURE_MAG_FILTER, TEXTURE_TARGET_PARAM::ENGINE_LINEAR);
+		Engine::getRenderer().BindTextureBufferParams(TEXTURE_TARGET::ENGINE_TEXTURE_2D, TEXTURE_TARGET_NAME::ENGINE_TEXTURE_MIN_FILTER, TEXTURE_TARGET_PARAM::ENGINE_LINEAR);
 
 		Engine::getRenderer().UnbindTextureBuffer();
 
@@ -131,8 +132,8 @@ namespace GameEngine
 			VALUE_TYPE::UNSIGNED_BYTE
 		);
 
-		Engine::getRenderer().BindTextureBufferParams(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-		Engine::getRenderer().BindTextureBufferParams(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+		Engine::getRenderer().BindTextureBufferParams(TEXTURE_TARGET::ENGINE_TEXTURE_2D, TEXTURE_TARGET_NAME::ENGINE_TEXTURE_MAG_FILTER, TEXTURE_TARGET_PARAM::ENGINE_LINEAR);
+		Engine::getRenderer().BindTextureBufferParams(TEXTURE_TARGET::ENGINE_TEXTURE_2D, TEXTURE_TARGET_NAME::ENGINE_TEXTURE_MIN_FILTER, TEXTURE_TARGET_PARAM::ENGINE_LINEAR);
 
 		Engine::getRenderer().UnbindTextureBuffer();
 

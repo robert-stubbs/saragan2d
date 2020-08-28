@@ -111,19 +111,6 @@ namespace GameEngine {
 		UNSIGNED_INT
 	};
 
-	enum class BLEND_TYPE
-	{
-		SRC_COLOR,
-		ONE_MINUS_SRC_COLOR,
-		SRC_ALPHA,
-		ONE_MINUS_SRC_ALPHA,
-		DST_ALPHA,
-		ONE_MINUS_DST_ALPHA,
-		DST_COLOR,
-		ONE_MINUS_DST_COLOR,
-		SRC_ALPHA_SATURATE
-	};
-
 	typedef struct
 	{
 		std::string text;
@@ -139,6 +126,44 @@ namespace GameEngine {
 		std::vector<int> VertIndex;
 		bool loaded;
 	} FontBuffer;
+
+#pragma region Texture enums
+
+	enum class BLEND_TYPE
+	{
+		SRC_COLOR,
+		ONE_MINUS_SRC_COLOR,
+		SRC_ALPHA,
+		ONE_MINUS_SRC_ALPHA,
+		DST_ALPHA,
+		ONE_MINUS_DST_ALPHA,
+		DST_COLOR,
+		ONE_MINUS_DST_COLOR,
+		SRC_ALPHA_SATURATE
+	};
+
+	enum class TEXTURE_TARGET
+	{
+		ENGINE_TEXTURE_2D
+	};
+
+	enum class TEXTURE_TARGET_NAME
+	{
+		ENGINE_TEXTURE_MAG_FILTER,
+		ENGINE_TEXTURE_MIN_FILTER,
+		ENGINE_TEXTURE_WRAP_S,
+		ENGINE_TEXTURE_WRAP_T
+	};
+
+	enum class TEXTURE_TARGET_PARAM
+	{
+		ENGINE_CLAMP_TO_EDGE,
+		ENGINE_LINEAR,
+		ENGINE_NEAREST,
+		ENGINE_LINEAR_MIPMAP_LINEAR
+	};
+
+#pragma endregion Texture enums
 
 #pragma endregion platform enums
 
