@@ -2,6 +2,7 @@
 #include "cTile.h"
 #include "SafeDelete.h"
 
+#include "Square.h"
 #include "MinesweeperState.h"
 #include "Engine.h"
 #include "Font.h"

@@ -36,7 +36,7 @@ namespace GameEngine
 		} break;
 		case SARAGAN_PNG:
 		{
-
+			TextureID = LoadPNG(imagepath);
 		} break;
 		case SARAGAN_JPG:
 		{

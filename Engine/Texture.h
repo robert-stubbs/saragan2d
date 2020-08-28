@@ -26,8 +26,8 @@ namespace GameEngine
 
 	public:
 
-		Texture(void);
-		~Texture(void);
+		Texture();
+		~Texture();
 
 		std::vector<unsigned char> imageResp;
 		std::string image_string;

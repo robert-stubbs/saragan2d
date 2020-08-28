@@ -1376,6 +1376,9 @@
     <ClInclude Include="Text.h">
       <Filter>Components\UI</Filter>
     </ClInclude>
+    <ClInclude Include="TextureQuad.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="EnginePCH.cpp" />
@@ -1502,6 +1505,9 @@
     </ClCompile>
     <ClCompile Include="Text.cpp">
       <Filter>Components\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureQuad.cpp">
+      <Filter>Geometry</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -1,8 +1,8 @@
 #ifndef _TILE_H_
 #define _TILE_H_
 
-#include "Square.h"
 #include "GameLibrary.h"
+#include "Square.h"
 
 class Text;
 class MinesweeperState;

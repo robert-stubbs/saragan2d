@@ -502,6 +502,7 @@
     <ClInclude Include="SystemManager.h" />
     <ClInclude Include="Text.h" />
     <ClInclude Include="Texture.h" />
+    <ClInclude Include="TextureQuad.h" />
     <ClInclude Include="Triangle.h" />
     <ClInclude Include="Types.h" />
     <ClInclude Include="cErrorLogger.h" />
@@ -550,6 +551,7 @@
     <ClCompile Include="SystemManager.cpp" />
     <ClCompile Include="Text.cpp" />
     <ClCompile Include="Texture.cpp" />
+    <ClCompile Include="TextureQuad.cpp" />
     <ClCompile Include="Triangle.cpp" />
     <ClCompile Include="cErrorLogger.cpp" />
     <ClCompile Include="cIni.cpp" />

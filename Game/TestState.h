@@ -4,6 +4,8 @@
 #include "State.h"
 #include "Types.h"
 #include "Triangle.h"
+#include "Texture.h"
+#include "TextureQuad.h"
 
 class TestState : public GameEngine::State
 {
@@ -11,6 +13,8 @@ class TestState : public GameEngine::State
         GameEngine::Triangle t;
         GameEngine::FontBuffer f;
         GameEngine::FontBuffer f2;
+
+        GameEngine::TextureQuad quad;
 
         TestState();
         virtual ~TestState();

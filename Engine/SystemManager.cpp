@@ -1,18 +1,18 @@
 #include "EnginePCH.h"
 #include "SystemManager.h"
 
-#include "Entity.h"
+//#include "Entity.h"
 #include "Engine.h"
-#include "EntityManager.h"
+//#include "EntityManager.h"
 
 #include "System.h"
 #include "Component.h"
 //#include "cErrorLogger.h"
 
-#include "ModelSystem.h"
-#include "PositionSystem.h"
-#include "AISystem.h"
-#include "SoundSystem.h"
+//#include "ModelSystem.h"
+//#include "PositionSystem.h"
+//#include "AISystem.h"
+//#include "SoundSystem.h"
 
 namespace GameEngine
 {
@@ -43,10 +43,10 @@ namespace GameEngine
 
 
 		//AddSystem(new GUISystem(true));
-		AddSystem(new SoundSystem());
-		AddSystem(new AISystem());
-		AddSystem(new ModelSystem(false, true));
-		AddSystem(new PositionSystem());
+		//AddSystem(new SoundSystem());
+		//AddSystem(new AISystem());
+		//AddSystem(new ModelSystem(false, true));
+		//AddSystem(new PositionSystem());
 	}
 
 	void SystemManager::Update(float dt)
@@ -150,11 +150,11 @@ namespace GameEngine
 
 		sys->AddComponentObject(comp);
 
-		Entity* Ent = Engine::getEngine().EntityMgr->getEntity(comp->m_handle);
+	/*	Entity* Ent = Engine::getEngine().EntityMgr->getEntity(comp->m_handle);
 		if (Ent != nullptr)
 		{
 			Ent->addComponent(comp);
-		}
+		}*/
 	}
 
 	void SystemManager::CleanUp()

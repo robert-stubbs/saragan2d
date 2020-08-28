@@ -3,6 +3,7 @@
 #include "Engine.h"
 #include "Camera2D.h"
 #include "Shader.h"
+#include "Texture.h"
 
 using namespace GameEngine;
 
@@ -25,11 +26,17 @@ void TestState::Init()
 
 	f2 = Font::Get().GetString("Test String 2", 200, 200, glm::vec4(1.0f, 0.0f, 0.0f, 1.0f));
 	Font::Get().GenerateBuffer(f2);
+
+
+
+	quad.Init(200, 200, 200, 200, glm::vec4(1.0f, 0.0f, 0.0f, 1.0f));
+
 }
 
 void TestState::UpdateOrth(const float& dt)
 { 
 	t.Update(dt);
+	quad.Update(dt);
 }
 
 void TestState::RenderOrth()
@@ -44,6 +51,8 @@ void TestState::RenderOrth()
     t.Render();
 	Font::Get().RenderBuffer(f);
 	Font::Get().RenderBuffer(f2);
+
+	quad.Render();
 }
 
 void TestState::DoENTER()
