@@ -127,6 +127,8 @@ namespace GameEngine {
 		bool loaded;
 	} FontBuffer;
 
+#pragma endregion platform enums
+
 #pragma region Texture enums
 
 	enum class BLEND_TYPE
@@ -164,8 +166,6 @@ namespace GameEngine {
 	};
 
 #pragma endregion Texture enums
-
-#pragma endregion platform enums
 
 #pragma region Input 
 
@@ -306,6 +306,46 @@ namespace GameEngine {
 #define ENGINE_MOUSE_BUTTON_MIDDLE    ENGINE_MOUSE_BUTTON_3
 
 #pragma endregion Input
+
+#pragma region Sprites
+
+typedef struct
+{
+	float min_texture_coords[2];
+	float max_texture_coords[2];
+	float width;
+	float height;
+
+} SpriteAnimFrame;
+
+typedef struct
+{
+	std::string name;
+	int texture_id;
+	int start_buffer_index;
+	int end_buffer_index;
+	int frame_speed;
+	int number_of_frames;
+	std::vector<SpriteAnimFrame> frames;
+	std::vector<vert2D> verts;
+	std::vector<int> vert_indices;
+
+} SpriteAnimDef;
+
+typedef struct
+{
+	std::string name;
+	std::string current_anim;
+	int current_frame;
+	unsigned int VAIO;
+	unsigned int VBO;
+	unsigned int IBO;
+	int index_counter;
+	std::map<std::string, SpriteAnimDef> anims;
+
+} AnimSprite;
+
+#pragma endregion Sprites
 
 }
 

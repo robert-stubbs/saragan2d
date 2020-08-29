@@ -29,7 +29,8 @@ void TestState::Init()
 
 
 
-	quad.Init(200, 200, 200, 200, glm::vec4(1.0f, 0.0f, 0.0f, 1.0f));
+	quad.Init(200, 200, 200, 200, true, glm::vec4(1.0f, 0.0f, 0.0f, 1.0f));
+	//21 / 13
 
 }
 

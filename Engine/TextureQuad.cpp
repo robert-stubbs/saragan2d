@@ -21,6 +21,13 @@ namespace GameEngine
 		origin = glm::vec3(1.0f);
 		height = 10;
 		width = 10;
+
+		stroke = false;
+		strokeColour = glm::vec4(1.0f);
+		top = new Line();
+		left = new Line();
+		right = new Line();
+		bottom = new Line();
 	}
 
 	TextureQuad::~TextureQuad()
@@ -34,13 +41,19 @@ namespace GameEngine
 
 	}
 
-	void TextureQuad::Init(float x, float y, float width, float height, glm::vec4 strokeColour)
+	void TextureQuad::Init(float x, float y, float width, float height, bool stroke, glm::vec4 strokeColour)
 	{
 		this->origin = glm::vec3(x, y, 0);
 		this->width = width;
 		this->height = height;
 
 		GenerateVerts();
+
+		if (stroke) {
+			this->stroke = true;
+			this->strokeColour = strokeColour;
+			GenerateStroke();
+		}
 
 		GenerateBuffers();
 
@@ -67,6 +80,14 @@ namespace GameEngine
 		verts.push_back(bleft);
 
 		isLoaded = true;
+	}
+
+	void TextureQuad::GenerateStroke()
+	{
+		top->Init(this->origin.x + 1, this->origin.y + 1, this->origin.x + this->width - 1, this->origin.y + 1, 1.0f, this->strokeColour);
+		left->Init(this->origin.x + 1, this->origin.y + 1, this->origin.x + 1, this->origin.y + this->height - 1, 1.0f, this->strokeColour);
+		right->Init(this->origin.x + this->width, this->origin.y, this->origin.x + this->width, this->origin.y + this->height, 1.0f, this->strokeColour);
+		bottom->Init(this->origin.x, this->origin.y + this->height, this->origin.x + this->width, this->origin.y + this->height, 1.0f, this->strokeColour);
 	}
 
 	void TextureQuad::GenerateBuffers()
@@ -97,6 +118,18 @@ namespace GameEngine
 	void TextureQuad::Update(float dt)
 	{
 		if (!isLoaded) return;
+
+		if (this->stroke) {
+			top->colour = this->strokeColour;
+			left->colour = this->strokeColour;
+			right->colour = this->strokeColour;
+			bottom->colour = this->strokeColour;
+
+			top->Update(dt);
+			left->Update(dt);
+			right->Update(dt);
+			bottom->Update(dt);
+		}
 	}
 
 	bool TextureQuad::Render()
@@ -125,6 +158,13 @@ namespace GameEngine
 			Engine::getRenderer().DrawArrays(DRAW_TYPE::TRIANGLE_FAN, (GLsizei)verts.size());
 
 			Engine::getRenderer().EnableBlend(false);
+
+			if (this->stroke) {
+				top->Render();
+				left->Render();
+				right->Render();
+				bottom->Render();
+			}
 		}
 
 		return true;
