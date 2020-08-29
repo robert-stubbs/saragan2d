@@ -19,25 +19,57 @@ TestState::~TestState()
 
 void TestState::Init()
 {
-	t.Init(0.0f, 0.0f, 100.0f, 100.0f, 100.0f, 0.0f);
 
-	f = Font::Get().GetString("Test String", 100, 100, glm::vec4(1.0f, 0.0f, 0.0f, 1.0f));
-	Font::Get().GenerateBuffer(f);
+	t = Texture();
+	if (t.LoadFile(Engine::get().asset_dir + "Textures/testsprite.png", TEXTURETYPES::SARAGAN_PNG))
+	{
+		t.GenerateAlphaBuffer();
+	}
 
-	f2 = Font::Get().GetString("Test String 2", 200, 200, glm::vec4(1.0f, 0.0f, 0.0f, 1.0f));
-	Font::Get().GenerateBuffer(f2);
+	// 832 / 1344
+	// 13 / 832
+	// 0.015625
 
+	GameEngine::SpriteAnimFrame one = { {0.0f,0.1f}, { 0.0769f,0.15f}, 200, 200 };
+	GameEngine::SpriteAnimFrame two = { {0.0769f,0.1f}, {0.1538f,0.15f}, 200, 200 };
+	GameEngine::SpriteAnimFrame three = { {0.1538f,0.1f}, {0.2307f,0.15f}, 200, 200 };
+	GameEngine::SpriteAnimFrame four = { {0.2307f,0.1f}, {0.3076f,0.15f}, 200, 200 };
+	GameEngine::SpriteAnimFrame five = { {0.3076f,0.1f}, {0.3845f,0.15f}, 200, 200 };
+	GameEngine::SpriteAnimFrame six = { {0.3845f,0.1f}, {0.4614f,0.15f}, 200, 200 };
+	GameEngine::SpriteAnimFrame seven = { {0.4614f,0.1f}, {0.5383f,0.15f}, 200, 200 };
 
+	GameEngine::SpriteAnimDef spell = SpriteAnimDef();
+	spell.frames = std::vector<SpriteAnimFrame>();
+	spell.frames.push_back(one);
+	spell.frames.push_back(two);
+	spell.frames.push_back(three);
+	spell.frames.push_back(four);
+	spell.frames.push_back(five);
+	spell.frames.push_back(six);
+	spell.frames.push_back(seven);
+	spell.frame_speed = 0.1;
+	spell.texture_id = t.TextureID;
 
-	quad.Init(200, 200, 200, 200, true, glm::vec4(1.0f, 0.0f, 0.0f, 1.0f));
+	GameEngine::AnimSprite sp = AnimSprite();
+	sp.name = "TestSprite";
+	sp.anims = std::map<std::string, SpriteAnimDef>();
+	sp.verts = std::vector<vert2D>();
+	sp.vert_indices = std::vector<int>();
+	sp.anims["Spell"] = spell;
+
+	spriteTest = Sprite();
+	spriteTest.m_shader = "DEFAULT2D";
+	spriteTest.LoadAnimSprite(sp);
+	spriteTest.SetAnim("Spell");
+
+	//quad.Init(200, 200, 200, 200, true, glm::vec4(1.0f, 0.0f, 0.0f, 1.0f));
 	//21 / 13
 
 }
 
 void TestState::UpdateOrth(const float& dt)
 { 
-	t.Update(dt);
-	quad.Update(dt);
+	spriteTest.Update(dt);
 }
 
 void TestState::RenderOrth()
@@ -49,11 +81,7 @@ void TestState::RenderOrth()
     Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["viewMatrix"], Engine::get().cam->ViewMatrix, 1, false);
     Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["modelMatrix"], glm::mat4(1.0f), 1, false);
 
-    t.Render();
-	Font::Get().RenderBuffer(f);
-	Font::Get().RenderBuffer(f2);
-
-	quad.Render();
+	spriteTest.Render();
 }
 
 void TestState::DoENTER()

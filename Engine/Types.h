@@ -320,28 +320,25 @@ typedef struct
 
 typedef struct
 {
-	std::string name;
 	int texture_id;
 	int start_buffer_index;
 	int end_buffer_index;
-	int frame_speed;
+	float frame_speed;
 	int number_of_frames;
 	std::vector<SpriteAnimFrame> frames;
-	std::vector<vert2D> verts;
-	std::vector<int> vert_indices;
 
 } SpriteAnimDef;
 
 typedef struct
 {
 	std::string name;
-	std::string current_anim;
-	int current_frame;
 	unsigned int VAIO;
 	unsigned int VBO;
 	unsigned int IBO;
 	int index_counter;
 	std::map<std::string, SpriteAnimDef> anims;
+	std::vector<vert2D> verts;
+	std::vector<int> vert_indices;
 
 } AnimSprite;
 

@@ -8,6 +8,8 @@ namespace GameEngine
 	{
 		public:
 			std::string m_handle;
+			std::string m_shader;
+			bool loaded = false;
 
 			Component();
 			virtual ~Component();

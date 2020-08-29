@@ -139,6 +139,9 @@
     <Filter Include="Components\Sound">
       <UniqueIdentifier>{07760568-dfc7-44e9-994a-7e44b7f7c31b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Components\Sprite">
+      <UniqueIdentifier>{400bcfeb-5cb4-4e6b-919f-2b3e0eb20177}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\ThirdParty\glew\include\GL\eglew.h">
@@ -1379,6 +1382,9 @@
     <ClInclude Include="TextureQuad.h">
       <Filter>Geometry</Filter>
     </ClInclude>
+    <ClInclude Include="Sprite.h">
+      <Filter>Components\Sprite</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="EnginePCH.cpp" />
@@ -1508,6 +1514,9 @@
     </ClCompile>
     <ClCompile Include="TextureQuad.cpp">
       <Filter>Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Sprite.cpp">
+      <Filter>Components\Sprite</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

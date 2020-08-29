@@ -1,5 +1,5 @@
-#ifndef _Texture_H_
-#define _Texture_H_
+#ifndef _TEXTURE_H_
+#define _TEXTURE_H_
 
 #include "lodepng.h"
 namespace GameEngine

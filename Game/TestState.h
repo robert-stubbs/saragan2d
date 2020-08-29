@@ -1,20 +1,17 @@
 #ifndef _TEST_STATE_H_
 #define _TEST_STATE_H_
 
+#include "Texture.h"
 #include "State.h"
 #include "Types.h"
-#include "Triangle.h"
-#include "Texture.h"
-#include "TextureQuad.h"
+#include "Sprite.h"
 
 class TestState : public GameEngine::State
 {
     public:
-        GameEngine::Triangle t;
-        GameEngine::FontBuffer f;
-        GameEngine::FontBuffer f2;
+        GameEngine::Texture t;
 
-        GameEngine::TextureQuad quad;
+        GameEngine::Sprite spriteTest;
 
         TestState();
         virtual ~TestState();

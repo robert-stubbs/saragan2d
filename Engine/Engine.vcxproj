@@ -495,6 +495,7 @@
     <ClInclude Include="Shader.h" />
     <ClInclude Include="ShaderDef.h" />
     <ClInclude Include="ShaderManager.h" />
+    <ClInclude Include="Sprite.h" />
     <ClInclude Include="Square.h" />
     <ClInclude Include="State.h" />
     <ClInclude Include="StateMachine.h" />
@@ -544,6 +545,7 @@
     <ClCompile Include="Shader.cpp" />
     <ClCompile Include="ShaderDef.cpp" />
     <ClCompile Include="ShaderManager.cpp" />
+    <ClCompile Include="Sprite.cpp" />
     <ClCompile Include="Square.cpp" />
     <ClCompile Include="State.cpp" />
     <ClCompile Include="StateMachine.cpp" />
