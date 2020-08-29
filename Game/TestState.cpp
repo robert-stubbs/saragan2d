@@ -26,9 +26,41 @@ void TestState::Init()
 		t.GenerateAlphaBuffer();
 	}
 
-	// 832 / 1344
+	// width 832 
 	// 13 / 832
-	// 0.015625
+	// 0.0769
+	// Height 1344
+	// 21 / 1344
+	// 0.0476
+	float startY = 0.0476 * 10;
+	float EndY = 0.0476 * 11;
+
+	// walk is  0.0476 * 11 (down)
+	// 9 sprites
+	GameEngine::SpriteAnimFrame walk_one   = { {0.0f   ,startY}, {0.0769f,EndY}, 200, 200 };
+	GameEngine::SpriteAnimFrame walk_two   = { {0.0769f,startY}, {0.1538f,EndY}, 200, 200 };
+	GameEngine::SpriteAnimFrame walk_three = { {0.1538f,startY}, {0.2307f,EndY}, 200, 200 };
+	GameEngine::SpriteAnimFrame walk_four  = { {0.2307f,startY}, {0.3076f,EndY}, 200, 200 };
+	GameEngine::SpriteAnimFrame walk_five  = { {0.3076f,startY}, {0.3845f,EndY}, 200, 200 };
+	GameEngine::SpriteAnimFrame walk_six   = { {0.3845f,startY}, {0.4614f,EndY}, 200, 200 };
+	GameEngine::SpriteAnimFrame walk_seven = { {0.4614f,startY}, {0.5383f,EndY}, 200, 200 };
+	GameEngine::SpriteAnimFrame walk_eight = { {0.5383f,startY}, {0.6152f,EndY}, 200, 200 };
+	GameEngine::SpriteAnimFrame walk_nine  = { {0.6152f,startY}, {0.6921f,EndY}, 200, 200 };
+
+	GameEngine::SpriteAnimDef walk = SpriteAnimDef();
+	walk.frames = std::vector<SpriteAnimFrame>();
+	walk.frames.push_back(walk_one);
+	walk.frames.push_back(walk_two);
+	walk.frames.push_back(walk_three);
+	walk.frames.push_back(walk_four);
+	walk.frames.push_back(walk_five);
+	walk.frames.push_back(walk_six);
+	walk.frames.push_back(walk_seven);
+	walk.frames.push_back(walk_eight);
+	walk.frames.push_back(walk_nine);
+	walk.frame_speed = 0.1f;
+	walk.texture_id = t.TextureID;
+
 
 	GameEngine::SpriteAnimFrame one = { {0.0f,0.1f}, { 0.0769f,0.15f}, 200, 200 };
 	GameEngine::SpriteAnimFrame two = { {0.0769f,0.1f}, {0.1538f,0.15f}, 200, 200 };
@@ -47,7 +79,7 @@ void TestState::Init()
 	spell.frames.push_back(five);
 	spell.frames.push_back(six);
 	spell.frames.push_back(seven);
-	spell.frame_speed = 0.1;
+	spell.frame_speed = 0.1f;
 	spell.texture_id = t.TextureID;
 
 	GameEngine::AnimSprite sp = AnimSprite();
@@ -56,11 +88,13 @@ void TestState::Init()
 	sp.verts = std::vector<vert2D>();
 	sp.vert_indices = std::vector<int>();
 	sp.anims["Spell"] = spell;
+	sp.anims["Walk"] = walk;
 
 	spriteTest = Sprite();
 	spriteTest.m_shader = "DEFAULT2D";
 	spriteTest.LoadAnimSprite(sp);
-	spriteTest.SetAnim("Spell");
+	//spriteTest.SetAnim("Spell");
+	spriteTest.SetAnim("Walk");
 
 	//quad.Init(200, 200, 200, 200, true, glm::vec4(1.0f, 0.0f, 0.0f, 1.0f));
 	//21 / 13

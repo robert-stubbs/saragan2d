@@ -150,10 +150,10 @@ namespace GameEngine {
 
 	void Sprite::LoadAnimSpriteFrame(SpriteAnimFrame& frame)
 	{
-		vert2D tleft = { {0.0f,0.0f,0.0f,1.0f},{frame.min_texture_coords[0], frame.min_texture_coords[1]}, { 1.0f, 1.0f, 1.0f, 1.0f } };
-		vert2D tright = { {frame.width,0.0f,0.0f,1.0f},{frame.max_texture_coords[0],frame.min_texture_coords[1]}, { 1.0f, 1.0f, 1.0f, 1.0f } };
-		vert2D bright = { {frame.width,frame.height,0.0f,1.0f},{frame.max_texture_coords[0],frame.max_texture_coords[1]}, { 1.0f, 1.0f, 1.0f, 1.0f } };
-		vert2D bleft = { {0.0f,frame.height,0.0f,1.0f},{frame.min_texture_coords[0],0.15f}, { 1.0f, 1.0f, 1.0f, 1.0f } };
+		vert2D tleft  = { {0.0f,0.0f,0.0f,1.0f				 },{frame.min_texture_coords[0], frame.min_texture_coords[1]}, { 1.0f, 1.0f, 1.0f, 1.0f } };
+		vert2D tright = { {frame.width,0.0f,0.0f,1.0f		 },{frame.max_texture_coords[0], frame.min_texture_coords[1]}, { 1.0f, 1.0f, 1.0f, 1.0f } };
+		vert2D bright = { {frame.width,frame.height,0.0f,1.0f},{frame.max_texture_coords[0], frame.max_texture_coords[1]}, { 1.0f, 1.0f, 1.0f, 1.0f } };
+		vert2D bleft  = { {0.0f,frame.height,0.0f,1.0f		 },{frame.min_texture_coords[0], frame.max_texture_coords[1]}, { 1.0f, 1.0f, 1.0f, 1.0f } };
 
 		_anim.verts.push_back(tleft);
 		_anim.verts.push_back(tright);
