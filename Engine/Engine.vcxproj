@@ -463,6 +463,7 @@
     <ClInclude Include="..\ThirdParty\glm\include\glm\vec3.hpp" />
     <ClInclude Include="..\ThirdParty\glm\include\glm\vec4.hpp" />
     <ClInclude Include="..\ThirdParty\glm\include\glm\vector_relational.hpp" />
+    <ClInclude Include="BatchRenderer.h" />
     <ClInclude Include="Camera2D.h" />
     <ClInclude Include="Component.h" />
     <ClInclude Include="Context.h" />
@@ -512,6 +513,7 @@
     <ClInclude Include="standards.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BatchRenderer.cpp" />
     <ClCompile Include="Camera2D.cpp" />
     <ClCompile Include="Component.cpp" />
     <ClCompile Include="Context.cpp" />
