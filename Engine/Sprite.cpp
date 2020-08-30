@@ -100,7 +100,9 @@ namespace GameEngine {
 	void Sprite::SetAnim(std::string name)
 	{
 		current_anim = name;
-		current_frame = 0;
+		if (_anim.anims[name].reset_on_start) {
+			current_frame = 0;
+		}
 	}
 	
 	void Sprite::LoadAnimSprite(AnimSprite& sprite)
@@ -139,6 +141,10 @@ namespace GameEngine {
 		// set the start of the buffers index
 		def->start_buffer_index = _anim.vert_indices.size();
 
+		if (def->frames.size() == 0) {
+			PopulateSpriteFrames(name);
+		}
+
 		for (SpriteAnimFrame& f: def->frames)
 		{
 			LoadAnimSpriteFrame(f);
@@ -150,6 +156,24 @@ namespace GameEngine {
 		// set the end of the buffer and increment by 1 for next buffer
 		def->end_buffer_index = _anim.vert_indices.size() - 1;// _anim.index_counter;
 		//_anim.index_counter++;
+	}
+
+	void Sprite::PopulateSpriteFrames(std::string name)
+	{
+		SpriteAnimDef* def = &_anim.anims[name];
+
+		float width_index = (float)(_anim.sheet_width / _anim.sheet_columns) / (float)_anim.sheet_width;
+		float height_index = (float)(_anim.sheet_height / _anim.sheet_rows) / (float)_anim.sheet_height;
+		int row = def->sheet_row;
+		int start_column = def->sheet_column;
+		int number_of_frames = def->number_of_frames;
+
+
+		for (int i = 0; i < number_of_frames; i++)
+		{
+			int column = start_column + i;
+			def->frames.push_back({ {column*width_index, row * height_index}, {(column+1) * width_index,(row + 1) * height_index}, 200, 200 });
+		}
 	}
 
 	void Sprite::LoadAnimSpriteFrame(SpriteAnimFrame& frame)

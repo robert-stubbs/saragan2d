@@ -587,7 +587,7 @@ namespace GameEngine {
 		glDrawArrays(val, first, count);
 	}
 
-	void OpenGLRenderEngine::DrawElements(DRAW_TYPE type, int count, VALUE_TYPE indice_type)
+	void OpenGLRenderEngine::DrawElements(DRAW_TYPE type, int count, VALUE_TYPE indice_type, void* offset)
 	{
 		GLenum val;
 		GLenum ind;
@@ -639,7 +639,7 @@ namespace GameEngine {
 			break;
 		}
 
-		glDrawElements(val, count, ind, 0);
+		glDrawElements(val, count, ind, offset);
 	}
 
 	void OpenGLRenderEngine::DrawIntElements(DRAW_TYPE type, int count, int offset)

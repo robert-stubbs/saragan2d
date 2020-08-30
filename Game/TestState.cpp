@@ -26,48 +26,53 @@ void TestState::Init()
 		t.GenerateAlphaBuffer();
 	}
 
-	// width 832 
-	// 13 / 832
-	// 0.0769
-	// Height 1344
-	// 21 / 1344
-	// 0.0476
-	float startY = 0.0476 * 10;
-	float EndY = 0.0476 * 11;
-
-	// walk is  0.0476 * 11 (down)
-	// 9 sprites 0.1428
-
 	GameEngine::SpriteAnimDef idle = SpriteAnimDef();
 	idle.frames = std::vector<SpriteAnimFrame>();
-	idle.frames.push_back({ {0.0f   ,startY}, {0.0769f,EndY}, 200, 200 });
 	idle.frame_speed = 0.1f;
+	idle.sheet_row = 10;
+	idle.sheet_column = 0;
+	idle.number_of_frames = 1;
 	idle.texture_id = t.TextureID;
 
 	GameEngine::SpriteAnimDef walk = SpriteAnimDef();
 	walk.frames = std::vector<SpriteAnimFrame>();
-	walk.frames.push_back({ {0.0f   ,startY}, {0.0769f,EndY}, 200, 200 });
-	walk.frames.push_back({ {0.0769f,startY}, {0.1538f,EndY}, 200, 200 });
-	walk.frames.push_back({ {0.1538f,startY}, {0.2307f,EndY}, 200, 200 });
-	walk.frames.push_back({ {0.2307f,startY}, {0.3076f,EndY}, 200, 200 });
-	walk.frames.push_back({ {0.3076f,startY}, {0.3845f,EndY}, 200, 200 });
-	walk.frames.push_back({ {0.3845f,startY}, {0.4614f,EndY}, 200, 200 });
-	walk.frames.push_back({ {0.4614f,startY}, {0.5383f,EndY}, 200, 200 });
-	walk.frames.push_back({ {0.5383f,startY}, {0.6152f,EndY}, 200, 200 });
-	walk.frames.push_back({ {0.6152f,startY}, {0.6921f,EndY}, 200, 200 });
+	walk.sheet_row = 10;
+	walk.sheet_column = 0;
+	walk.number_of_frames = 9;
 	walk.frame_speed = 0.1f;
 	walk.texture_id = t.TextureID;
 
+	GameEngine::SpriteAnimDef walkleft = SpriteAnimDef();
+	walkleft.frames = std::vector<SpriteAnimFrame>();
+	walkleft.sheet_row = 9;
+	walkleft.sheet_column = 0;
+	walkleft.number_of_frames = 9;
+	walkleft.frame_speed = 0.1f;
+	walkleft.texture_id = t.TextureID;
+
+	GameEngine::SpriteAnimDef walkright = SpriteAnimDef();
+	walkright.frames = std::vector<SpriteAnimFrame>();
+	walkright.sheet_row = 11;
+	walkright.sheet_column = 0;
+	walkright.number_of_frames = 9;
+	walkright.frame_speed = 0.1f;
+	walkright.texture_id = t.TextureID;
+
+	GameEngine::SpriteAnimDef walkup = SpriteAnimDef();
+	walkup.frames = std::vector<SpriteAnimFrame>();
+	walkup.sheet_row = 8;
+	walkup.sheet_column = 0;
+	walkup.number_of_frames = 9;
+	walkup.frame_speed = 0.1f;
+	walkup.texture_id = t.TextureID;
+
 	GameEngine::SpriteAnimDef spell = SpriteAnimDef();
 	spell.frames = std::vector<SpriteAnimFrame>();
-	spell.frames.push_back({ {0.0f,   0.0952f}, {0.0769f,0.1428f}, 200, 200 });
-	spell.frames.push_back({ {0.0769f,0.0952f}, {0.1538f,0.1428f}, 200, 200 });
-	spell.frames.push_back({ {0.1538f,0.0952f}, {0.2307f,0.1428f}, 200, 200 });
-	spell.frames.push_back({ {0.2307f,0.0952f}, {0.3076f,0.1428f}, 200, 200 });
-	spell.frames.push_back({ {0.3076f,0.0952f}, {0.3845f,0.1428f}, 200, 200 });
-	spell.frames.push_back({ {0.3845f,0.0952f}, {0.4614f,0.1428f}, 200, 200 });
-	spell.frames.push_back({ {0.4614f,0.0952f}, {0.5383f,0.1428f}, 200, 200 });
 	spell.frame_speed = 0.1f;
+	spell.reset_on_start = true;
+	spell.sheet_row = 2;
+	spell.sheet_column = 0;
+	spell.number_of_frames = 7;
 	spell.texture_id = t.TextureID;
 
 	GameEngine::AnimSprite sp = AnimSprite();
@@ -75,8 +80,15 @@ void TestState::Init()
 	sp.anims = std::map<std::string, SpriteAnimDef>();
 	sp.verts = std::vector<vert2D>();
 	sp.vert_indices = std::vector<int>();
+	sp.sheet_width = 832;
+	sp.sheet_height = 1344;
+	sp.sheet_columns = 13;
+	sp.sheet_rows = 21;
 	sp.anims["Idle"] = idle;
 	sp.anims["Walk"] = walk;
+	sp.anims["WalkLeft"] = walkleft;
+	sp.anims["WalkRight"] = walkright;
+	sp.anims["WalkUp"] = walkup;
 	sp.anims["Spell"] = spell;
 
 	spriteTest = Sprite();
@@ -120,14 +132,17 @@ void TestState::KeyDown(int Key)
 		case ENGINE_KEY_A:
 		{
 			Engine::get().cam->dx = 10;
+			spriteTest.SetAnim("WalkLeft");
 		}break;
 		case ENGINE_KEY_D:
 		{
 			Engine::get().cam->dx = -10;
+			spriteTest.SetAnim("WalkRight");
 		}break;
 		case ENGINE_KEY_W:
 		{
 			Engine::get().cam->dy = 10;
+			spriteTest.SetAnim("WalkUp");
 		}break;
 		case ENGINE_KEY_S:
 		{
@@ -150,6 +165,7 @@ void TestState::KeyUp(int Key)
 			if (Input::Get().IsKeyReleased(ENGINE_KEY_D))
 			{
 				Engine::get().cam->dx = 0;
+				spriteTest.SetAnim("Idle");
 			}
 		}break;
 		case ENGINE_KEY_D:
@@ -157,6 +173,7 @@ void TestState::KeyUp(int Key)
 			if (Input::Get().IsKeyReleased(ENGINE_KEY_A))
 			{
 				Engine::get().cam->dx = 0;
+				spriteTest.SetAnim("Idle");
 			}
 		}break;
 		case ENGINE_KEY_W:

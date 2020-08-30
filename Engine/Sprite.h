@@ -30,6 +30,7 @@ namespace GameEngine {
 
 			virtual void LoadAnimSprite(AnimSprite& sprite);
 			virtual void LoadAnimSpriteDef(std::string name);
+			virtual void PopulateSpriteFrames(std::string name);
 			virtual void LoadAnimSpriteFrame(SpriteAnimFrame& frame);
 	};
 

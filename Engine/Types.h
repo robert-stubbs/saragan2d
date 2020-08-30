@@ -324,6 +324,9 @@ typedef struct
 	int start_buffer_index;
 	int end_buffer_index;
 	float frame_speed;
+	int sheet_row;
+	int sheet_column;
+	bool reset_on_start;
 	int number_of_frames;
 	std::vector<SpriteAnimFrame> frames;
 
@@ -336,6 +339,10 @@ typedef struct
 	unsigned int VBO;
 	unsigned int IBO;
 	int index_counter;
+	int sheet_width;
+	int sheet_height;
+	int sheet_rows;
+	int sheet_columns;
 	std::map<std::string, SpriteAnimDef> anims;
 	std::vector<vert2D> verts;
 	std::vector<int> vert_indices;

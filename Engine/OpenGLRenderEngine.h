@@ -71,7 +71,7 @@ namespace GameEngine {
 
 			virtual void DrawArrays(DRAW_TYPE type, int count, int first = 0);
 
-			virtual void DrawElements(DRAW_TYPE type, int count, VALUE_TYPE indice_type = VALUE_TYPE::UNSIGNED_INT);
+			virtual void DrawElements(DRAW_TYPE type, int count, VALUE_TYPE indice_type = VALUE_TYPE::UNSIGNED_INT, void* offset = 0);
 			virtual void DrawIntElements(DRAW_TYPE type, int count, int offset = 0);
 			virtual void DrawByteElements(DRAW_TYPE type, int count, unsigned char offset = 0);
 			virtual void DrawShortElements(DRAW_TYPE type, int count, short offset = 0);
