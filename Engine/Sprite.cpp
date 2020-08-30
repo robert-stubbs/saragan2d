@@ -78,6 +78,7 @@ namespace GameEngine {
 					last_anim_loop_count = 0;
 					anim_loop_count = 0;
 					AnimTime = 0;
+					next_anim = "";
 				}
 			} else if (current->wait_til_finished &&  current->loop_count != 0 && anim_loop_count >= current->loop_count)
 			{

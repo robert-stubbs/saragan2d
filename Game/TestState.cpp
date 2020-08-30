@@ -89,7 +89,7 @@ void TestState::Init()
 	spell.sheet_row = 2;
 	spell.sheet_column = 0;
 	spell.number_of_frames = 7;
-	spell.loop_count = 0;
+	spell.loop_count = 1;
 	spell.reset_on_start = true;
 	spell.wait_til_finished = true;
 	spell.texture_id = t.TextureID;
@@ -156,7 +156,7 @@ void TestState::KeyDown(int Key)
 		}break;
 		case ENGINE_KEY_D:
 		{
-			std::cout << "Setting Anim Walk Right" << std::endl;
+			//std::cout << "Setting Anim Walk Right" << std::endl;
 			Engine::get().cam->dx = -10;
 			spriteTest.SetAnim("WalkRight");
 		}break;
