@@ -149,7 +149,7 @@ namespace GameEngine {
 				Engine::getRenderer().BindTextureBuffer(buffer.atlas->id);
 			}
 
-			Engine::getRenderer().DrawElements(GameEngine::DRAW_TYPE::TRIANGLES, (int)buffer.VertIndex.size(), GameEngine::VALUE_TYPE::UNSIGNED_INT, 0);
+			Engine::getRenderer().DrawElements(GameEngine::DRAW_TYPE::TRIANGLES, (int)buffer.VertIndex.size(), GameEngine::VALUE_TYPE::UNSIGNED_INT);
 
 			Engine::getRenderer().UnbindIndexBuffer();
 			Engine::getRenderer().UnbindVertexBuffer();

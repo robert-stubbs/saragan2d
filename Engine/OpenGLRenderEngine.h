@@ -70,7 +70,11 @@ namespace GameEngine {
 			virtual void EnableDepthTest(bool enabled = true);
 
 			virtual void DrawArrays(DRAW_TYPE type, int count, int first = 0);
-			virtual void DrawElements(DRAW_TYPE type, int count, VALUE_TYPE indice_type = VALUE_TYPE::UNSIGNED_INT, const void* indices = 0);
+
+			virtual void DrawElements(DRAW_TYPE type, int count, VALUE_TYPE indice_type = VALUE_TYPE::UNSIGNED_INT);
+			virtual void DrawIntElements(DRAW_TYPE type, int count, int offset = 0);
+			virtual void DrawByteElements(DRAW_TYPE type, int count, unsigned char offset = 0);
+			virtual void DrawShortElements(DRAW_TYPE type, int count, short offset = 0);
 	};
 }
 

@@ -587,10 +587,11 @@ namespace GameEngine {
 		glDrawArrays(val, first, count);
 	}
 
-	void OpenGLRenderEngine::DrawElements(DRAW_TYPE type, int count, VALUE_TYPE indice_type, const void* indices)
+	void OpenGLRenderEngine::DrawElements(DRAW_TYPE type, int count, VALUE_TYPE indice_type)
 	{
 		GLenum val;
 		GLenum ind;
+
 
 		switch (type)
 		{
@@ -625,19 +626,133 @@ namespace GameEngine {
 
 		switch (indice_type)
 		{
-			case VALUE_TYPE::UNSIGNED_BYTE:
-				ind = GL_UNSIGNED_BYTE;
+		case VALUE_TYPE::UNSIGNED_BYTE:
+			ind = GL_UNSIGNED_BYTE;
 			break;
-			case VALUE_TYPE::UNSIGNED_SHORT:
-				ind = GL_UNSIGNED_SHORT;
+		case VALUE_TYPE::UNSIGNED_SHORT:
+			ind = GL_UNSIGNED_SHORT;
 			break;
-			case VALUE_TYPE::UNSIGNED_INT:
-				ind = GL_UNSIGNED_INT;
+		case VALUE_TYPE::UNSIGNED_INT:
+			ind = GL_UNSIGNED_INT;
 			break;
-			default:
+		default:
 			break;
 		}
-		//glDrawRangeElements(GLenum mode, GLuint start, GLuint end, GLsizei count, GLenum type, const void* indices);
-		glDrawElements(val, count, ind, indices);
+
+		glDrawElements(val, count, ind, 0);
+	}
+
+	void OpenGLRenderEngine::DrawIntElements(DRAW_TYPE type, int count, int offset)
+	{
+		GLenum val;
+
+		switch (type)
+		{
+		case DRAW_TYPE::LINES:
+			val = GL_LINES;
+			break;
+		case DRAW_TYPE::LINE_LOOP:
+			val = GL_LINE_LOOP;
+			break;
+		case DRAW_TYPE::LINE_STRIP:
+			val = GL_LINE_STRIP;
+			break;
+		case DRAW_TYPE::TRIANGLES:
+			val = GL_TRIANGLES;
+			break;
+		case DRAW_TYPE::TRIANGLE_STRIP:
+			val = GL_TRIANGLE_STRIP;
+			break;
+		case DRAW_TYPE::TRIANGLE_FAN:
+			val = GL_TRIANGLE_FAN;
+			break;
+		case DRAW_TYPE::QUADS:
+			val = GL_QUADS;
+			break;
+		case DRAW_TYPE::QUAD_STRIP:
+			val = GL_QUAD_STRIP;
+			break;
+		default:
+			val = GL_LINES;
+			break;
+		}
+
+		glDrawElements(val, count, GL_UNSIGNED_INT, (void*)(offset * sizeof(unsigned int)));
+	}
+
+	void OpenGLRenderEngine::DrawByteElements(DRAW_TYPE type, int count, unsigned char offset)
+	{
+		GLenum val;
+
+		switch (type)
+		{
+		case DRAW_TYPE::LINES:
+			val = GL_LINES;
+			break;
+		case DRAW_TYPE::LINE_LOOP:
+			val = GL_LINE_LOOP;
+			break;
+		case DRAW_TYPE::LINE_STRIP:
+			val = GL_LINE_STRIP;
+			break;
+		case DRAW_TYPE::TRIANGLES:
+			val = GL_TRIANGLES;
+			break;
+		case DRAW_TYPE::TRIANGLE_STRIP:
+			val = GL_TRIANGLE_STRIP;
+			break;
+		case DRAW_TYPE::TRIANGLE_FAN:
+			val = GL_TRIANGLE_FAN;
+			break;
+		case DRAW_TYPE::QUADS:
+			val = GL_QUADS;
+			break;
+		case DRAW_TYPE::QUAD_STRIP:
+			val = GL_QUAD_STRIP;
+			break;
+		default:
+			val = GL_LINES;
+			break;
+		}
+
+		glDrawElements(val, count, GL_UNSIGNED_BYTE, (void*)(offset * sizeof(unsigned char)));
+	}
+
+	void OpenGLRenderEngine::DrawShortElements(DRAW_TYPE type, int count, short offset)
+	{
+		GLenum val;
+
+		switch (type)
+		{
+		case DRAW_TYPE::LINES:
+			val = GL_LINES;
+			break;
+		case DRAW_TYPE::LINE_LOOP:
+			val = GL_LINE_LOOP;
+			break;
+		case DRAW_TYPE::LINE_STRIP:
+			val = GL_LINE_STRIP;
+			break;
+		case DRAW_TYPE::TRIANGLES:
+			val = GL_TRIANGLES;
+			break;
+		case DRAW_TYPE::TRIANGLE_STRIP:
+			val = GL_TRIANGLE_STRIP;
+			break;
+		case DRAW_TYPE::TRIANGLE_FAN:
+			val = GL_TRIANGLE_FAN;
+			break;
+		case DRAW_TYPE::QUADS:
+			val = GL_QUADS;
+			break;
+		case DRAW_TYPE::QUAD_STRIP:
+			val = GL_QUAD_STRIP;
+			break;
+		default:
+			val = GL_LINES;
+			break;
+		}
+
+		glDrawElements(val, count, GL_UNSIGNED_SHORT, (void*)(offset * sizeof(unsigned short)));
 	}
 }

@@ -77,9 +77,13 @@ namespace GameEngine {
 			Engine::getRenderer().BindVertexBuffer(_anim.VAIO);
 			Engine::getRenderer().BindIndexBuffer(_anim.IBO);
 
-			int start = _anim.anims[current_anim].start_buffer_index + (current_frame * 6) * sizeof(unsigned int);
+			
+			int start_index = _anim.anims[current_anim].start_buffer_index;
+			int frame_count = current_frame * 6;
+
+			int start = (start_index + frame_count);
 			 
-			Engine::getRenderer().DrawElements(DRAW_TYPE::TRIANGLES, 6, VALUE_TYPE::UNSIGNED_INT, (const void*)start);
+			Engine::getRenderer().DrawIntElements(DRAW_TYPE::TRIANGLES, 6, start);
 
 			Engine::getRenderer().UnbindIndexBuffer();
 			Engine::getRenderer().UnbindVertexBuffer();
@@ -133,7 +137,7 @@ namespace GameEngine {
 		SpriteAnimDef* def = &_anim.anims[name];
 
 		// set the start of the buffers index
-		def->start_buffer_index = _anim.index_counter;
+		def->start_buffer_index = _anim.vert_indices.size();
 
 		for (SpriteAnimFrame& f: def->frames)
 		{
@@ -144,8 +148,8 @@ namespace GameEngine {
 		def->number_of_frames = (int)def->frames.size();
 
 		// set the end of the buffer and increment by 1 for next buffer
-		def->end_buffer_index = _anim.index_counter;
-		_anim.index_counter++;
+		def->end_buffer_index = _anim.vert_indices.size() - 1;// _anim.index_counter;
+		//_anim.index_counter++;
 	}
 
 	void Sprite::LoadAnimSpriteFrame(SpriteAnimFrame& frame)
