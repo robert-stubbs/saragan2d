@@ -326,6 +326,8 @@ typedef struct
 	float frame_speed;
 	int sheet_row;
 	int sheet_column;
+	float frame_width;
+	float frame_height;
 	bool reset_on_start;
 	int number_of_frames;
 	std::vector<SpriteAnimFrame> frames;
