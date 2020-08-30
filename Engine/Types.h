@@ -329,6 +329,8 @@ typedef struct
 	float frame_width;
 	float frame_height;
 	bool reset_on_start;
+	int loop_count;
+	bool wait_til_finished;
 	int number_of_frames;
 	std::vector<SpriteAnimFrame> frames;
 
@@ -345,6 +347,7 @@ typedef struct
 	int sheet_height;
 	int sheet_rows;
 	int sheet_columns;
+	std::string idle_anim;
 	std::map<std::string, SpriteAnimDef> anims;
 	std::vector<vert2D> verts;
 	std::vector<int> vert_indices;

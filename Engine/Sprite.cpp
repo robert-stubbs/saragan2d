@@ -20,6 +20,9 @@ namespace GameEngine {
 		AnimTime = 0.0f;
 		last_frame = 0;
 		current_frame = 0;
+		next_anim = "";
+		anim_loop_count = 0;
+		last_anim_loop_count = 0;
 	}
 
 	Sprite::~Sprite()
@@ -48,14 +51,41 @@ namespace GameEngine {
 			if (iFrame0 > numFrames)
 			{
 				current_frame = 0;
-			}
-			else {
+
+			}  else {
 
 				if (current_frame != last_frame)
 				{
 					last_frame = current_frame;
+
+					if (last_frame >= numFrames - 1)
+					{
+						anim_loop_count++;
+						//std::cout << "Loop Count " << anim_loop_count << std::endl;
+
+					}
 				}
 				current_frame = iFrame0;
+			}
+
+			SpriteAnimDef* current = &_anim.anims[current_anim];
+
+			if (current->wait_til_finished && current->loop_count == 0 && next_anim.size() > 0) {
+				if (last_anim_loop_count != anim_loop_count) {
+					// loop finished
+					current_anim = next_anim.size() > 0 ? next_anim : _anim.idle_anim;
+
+					last_anim_loop_count = 0;
+					anim_loop_count = 0;
+					AnimTime = 0;
+				}
+			} else if (current->wait_til_finished &&  current->loop_count != 0 && anim_loop_count >= current->loop_count)
+			{
+				anim_loop_count = 0;
+				AnimTime = 0;
+				//std::cout << "Current Anim " << current_anim << " switching to " << next_anim << std::endl;
+				current_anim = next_anim.size() > 0 ? next_anim : _anim.idle_anim;
+				next_anim = "";
 			}
 		}
 	}
@@ -99,10 +129,22 @@ namespace GameEngine {
 
 	void Sprite::SetAnim(std::string name)
 	{
-		if (_anim.anims[name].reset_on_start) {
-			current_frame = 0;
+		SpriteAnimDef* current = &_anim.anims[current_anim];
+		SpriteAnimDef* def = &_anim.anims[name];
+
+		if (current->wait_til_finished)
+		{
+			next_anim = name;
+			//std::cout << "Trying to set next anim: " << next_anim << std::endl;
 		}
-		current_anim = name;
+		else {
+			if (_anim.anims[name].reset_on_start) {
+				current_frame = 0;
+				AnimTime = 0;
+			}
+			current_anim = name;
+			anim_loop_count = 0;
+		}
 	}
 	
 	void Sprite::LoadAnimSprite(AnimSprite& sprite)

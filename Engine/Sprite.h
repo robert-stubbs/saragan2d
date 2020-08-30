@@ -10,8 +10,11 @@ namespace GameEngine {
 		private:
 			AnimSprite _anim;
 			std::string current_anim;
+			std::string next_anim;
 			int current_frame;
 			int last_frame;
+			int anim_loop_count;
+			int last_anim_loop_count;
 			float AnimTime;
 
 		public:
