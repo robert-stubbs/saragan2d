@@ -74,6 +74,7 @@ namespace GameEngine
 		currentIndex = 0;
 		CurrentQuadSize = 0;
 		verts.clear();
+		verts = std::vector<vert2D>();
 	}
 
 	void BatchRenderer::EndBatch()
