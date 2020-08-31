@@ -35,9 +35,9 @@ void TestState::Init()
 
 	float x1 = 0;
 	float y1 = 0;
-	for (int x = 0; x < TestState::xsize; x++)
+	for (int x = 0; x < 10; x++)
 	{
-		for (int y = 0; y < TestState::ysize; y++)
+		for (int y = 0; y < 10; y++)
 		{
 			quads[x][y] = TextureQuad();
 			quads[x][y].Init(x1, y1, 100, 100, false, glm::vec4(x/10.0f, y/10.0f, x+y/10.0f, 1.0f));
@@ -161,9 +161,9 @@ void TestState::RenderOrth()
 		Engine::getRenderer().BindTextureBuffer(t.TextureID);
 	}
 
-	for (int x = 0; x < TestState::xsize; x++)
+	for (int x = 0; x < 10; x++)
 	{
-		for (int y = 0; y < TestState::ysize; y++)
+		for (int y = 0; y < 10; y++)
 		{
 			b.AddQuad(quads[x][y]);
 		}

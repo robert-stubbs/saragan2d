@@ -17,10 +17,7 @@ class TestState : public GameEngine::State
         GameEngine::BatchRenderer b;
         GameEngine::TextureQuad q;
 
-        static const int xsize = 10;
-        static const int ysize = 10;
-
-        GameEngine::TextureQuad quads[xsize][ysize];
+        GameEngine::TextureQuad quads[10][10];
 
         TestState();
         virtual ~TestState();
