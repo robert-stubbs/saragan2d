@@ -177,15 +177,15 @@ namespace GameEngine {
 		return true;
 	}
 
-	void OpenGLRenderEngine::GenerateVertexArrayBuffer(unsigned int& VAB)
+	void OpenGLRenderEngine::GenerateVertexArrayBuffer(unsigned int& VAO)
 	{
-		glGenVertexArrays(1, &VAB);
-		glBindVertexArray(VAB);
+		glGenVertexArrays(1, &VAO);
+		glBindVertexArray(VAO);
 	}
 
-	void OpenGLRenderEngine::DeleteVertexBuffer(unsigned int& VAB)
+	void OpenGLRenderEngine::DeleteVertexBuffer(unsigned int& VAO)
 	{
-		glDeleteVertexArrays(1, &VAB);
+		glDeleteVertexArrays(1, &VAO);
 	}
 
 	void OpenGLRenderEngine::DeleteBuffer(unsigned int& VAO)
@@ -227,6 +227,12 @@ namespace GameEngine {
 		glBufferData(GL_ARRAY_BUFFER, sizeof(vert2D) * verts.size(), &verts[0], GL_STATIC_DRAW);
 	}
 
+	void OpenGLRenderEngine::BufferSubData(unsigned int& VBO, std::vector<vert2D>& verts)
+	{
+		glBindBuffer(GL_ARRAY_BUFFER, VBO);
+		glBufferSubData(GL_ARRAY_BUFFER, 0, sizeof(vert2D) * verts.size(), &verts[0]);
+	}
+
 	bool OpenGLRenderEngine::UpdateBuffer(unsigned int& VBO, std::vector<vert>& verts)
 	{
 		if (VBO != -1)
@@ -255,9 +261,9 @@ namespace GameEngine {
 		return false;
 	}
 
-	void OpenGLRenderEngine::BindVertexBuffer(unsigned int& VBO)
+	void OpenGLRenderEngine::BindVertexBuffer(unsigned int& VAO)
 	{
-		glBindVertexArray(VBO);
+		glBindVertexArray(VAO);
 	}
 
 	void OpenGLRenderEngine::UnbindVertexBuffer()

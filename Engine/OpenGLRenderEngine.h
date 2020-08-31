@@ -28,9 +28,9 @@ namespace GameEngine {
 			virtual bool ResizeWindow(int Width, int Height);
 			
 			// Vertex Array Buffers
-			virtual void GenerateVertexArrayBuffer(unsigned int& VAB) override;
+			virtual void GenerateVertexArrayBuffer(unsigned int& VAO) override;
 			virtual void DeleteVertexBuffer(unsigned int& VAO) override;
-			virtual void BindVertexBuffer(unsigned int& VBO) override;
+			virtual void BindVertexBuffer(unsigned int& VAO) override;
 			virtual void UnbindVertexBuffer() override;
 
 			// Vertex Buffers
@@ -39,6 +39,7 @@ namespace GameEngine {
 			virtual void GenerateEmptyBuffer(unsigned int& VBO, int size) override;
 			virtual void ReGenerateBuffer(unsigned int& VBO, std::vector<vert>& verts) override;
 			virtual void ReGenerateBuffer(unsigned int& VBO, std::vector<vert2D>& verts) override;
+			virtual void BufferSubData(unsigned int& VBO, std::vector<vert2D>& verts) override;
 			virtual bool UpdateBuffer(unsigned int& VBO, std::vector<vert>& verts) override;
 			virtual bool UpdateBuffer(unsigned int& VBO, std::vector<vert2D>& verts) override;
 			virtual void BindBuffer(unsigned int& VBO) override;

@@ -28,6 +28,11 @@ namespace GameEngine
 
 	void BatchRenderer::Init(int max_quads)
 	{
+		// set size of our verts
+		// set size of our indicies
+		// buffer empty vert stack
+		// generate indicies
+
 		MaxQuadSize = max_quads;
 
 		int max_verts = MaxVertSize();
@@ -61,12 +66,6 @@ namespace GameEngine
 		Engine::getRenderer().UnbindBuffer();
 		Engine::getRenderer().UnbindIndexBuffer();
 		Engine::getRenderer().UnbindVertexBuffer();
-
-		// set size of our verts
-		// set size of our indicies
-		// buffer empty vert stack
-		// generate indicies
-
 	}
 
 	void BatchRenderer::BeginBatch()
@@ -78,10 +77,16 @@ namespace GameEngine
 
 	void BatchRenderer::EndBatch()
 	{
+		Engine::getRenderer().BufferSubData(VBO, verts);
+
+		Engine::getRenderer().BindVertexBuffer(VAO);
+		Engine::getRenderer().BindIndexBuffer(IBO);
+
 		// flush/render data
-		// pass subdata for vert buffer
-		// render buffer
-		// clear buffer?
+		Engine::getRenderer().DrawElements(GameEngine::DRAW_TYPE::TRIANGLES, currentIndex);
+		
+		Engine::getRenderer().UnbindIndexBuffer();
+		Engine::getRenderer().UnbindVertexBuffer();
 	}
 	
 	void BatchRenderer::AddQuad(TextureQuad quad)
@@ -92,5 +97,9 @@ namespace GameEngine
 		}
 
 		// TODO add quad to verts
+		std::vector<vert2D>& v = quad.verts;
+
+		// add those verts to verts
+
 	}
 }
