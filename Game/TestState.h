@@ -17,7 +17,7 @@ class TestState : public GameEngine::State
         GameEngine::BatchRenderer b;
         GameEngine::TextureQuad q;
 
-        GameEngine::TextureQuad quads[10][10];
+        GameEngine::TextureQuad quads[100][100];
 
         TestState();
         virtual ~TestState();

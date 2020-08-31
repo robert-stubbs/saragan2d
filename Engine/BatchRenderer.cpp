@@ -48,7 +48,7 @@ namespace GameEngine
 		Engine::getRenderer().VertexStructurePointerF(s["in_Color"], 4, GL_TRUE, sizeof(vert2D), (GLvoid*)offsetof(vert2D, col));
 
 		int counter = 0;
-		for (int i = 0; i < MaxQuadSize; i += 6)
+		for (int i = 0; i < max_indicies; i += 6)
 		{
 			indicies.push_back(counter + 0);
 			indicies.push_back(counter + 1);
