@@ -36,6 +36,7 @@ namespace GameEngine {
 			// Vertex Buffers
 			virtual void GenerateBuffer(unsigned int& VBO, std::vector<vert>& verts) override;
 			virtual void GenerateBuffer(unsigned int& VBO, std::vector<vert2D>& verts) override;
+			virtual void GenerateEmptyBuffer(unsigned int& VBO, int size) override;
 			virtual void ReGenerateBuffer(unsigned int& VBO, std::vector<vert>& verts) override;
 			virtual void ReGenerateBuffer(unsigned int& VBO, std::vector<vert2D>& verts) override;
 			virtual bool UpdateBuffer(unsigned int& VBO, std::vector<vert>& verts) override;

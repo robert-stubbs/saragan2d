@@ -208,6 +208,13 @@ namespace GameEngine {
 		glBufferData(GL_ARRAY_BUFFER, sizeof(vert2D) * verts.size(), &verts[0], GL_STATIC_DRAW);
 	}
 
+	void OpenGLRenderEngine::GenerateEmptyBuffer(unsigned int& VBO, int size)
+	{
+		glGenBuffers(1, &VBO);
+		glBindBuffer(GL_ARRAY_BUFFER, VBO);
+		glBufferData(GL_ARRAY_BUFFER, size, nullptr, GL_DYNAMIC_DRAW);
+	}
+
 	void OpenGLRenderEngine::ReGenerateBuffer(unsigned int& VBO, std::vector<vert>& verts)
 	{
 		glBindBuffer(GL_ARRAY_BUFFER, VBO);
