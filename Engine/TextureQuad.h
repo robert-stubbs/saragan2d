@@ -35,7 +35,7 @@ namespace GameEngine
 		GLuint		VBO;
 		std::vector<vert2D> verts;
 
-		Texture text;
+		//Texture text;
 
 		glm::vec3 origin;
 		float width;
@@ -43,13 +43,13 @@ namespace GameEngine
 
 		glm::vec4 colour;
 
-		bool stroke;
-		glm::vec4 strokeColour;
+		//bool stroke;
+		//glm::vec4 strokeColour;
 
-		Line* top;
-		Line* left;
-		Line* right;
-		Line* bottom;
+		//Line* top;
+		//Line* left;
+		//Line* right;
+		//Line* bottom;
 
 	};
 }

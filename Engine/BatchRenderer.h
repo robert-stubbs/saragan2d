@@ -23,7 +23,7 @@ namespace GameEngine
 			int currentIndex;
 
 		public:
-
+			BatchRenderer() {}
 			BatchRenderer(std::string shadername);
 			virtual ~BatchRenderer();
 			virtual void Init(int max_quads = 1000);

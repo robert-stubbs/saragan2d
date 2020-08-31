@@ -5,13 +5,22 @@
 #include "State.h"
 #include "Types.h"
 #include "Sprite.h"
+#include "BatchRenderer.h"
+#include "TextureQuad.h"
 
 class TestState : public GameEngine::State
 {
     public:
         GameEngine::Texture t;
 
-        GameEngine::Sprite spriteTest;
+        //GameEngine::Sprite spriteTest;
+        GameEngine::BatchRenderer b;
+        GameEngine::TextureQuad q;
+
+        static const int xsize = 10;
+        static const int ysize = 10;
+
+        GameEngine::TextureQuad quads[xsize][ysize];
 
         TestState();
         virtual ~TestState();

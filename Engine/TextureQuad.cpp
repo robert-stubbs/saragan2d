@@ -22,12 +22,12 @@ namespace GameEngine
 		height = 10;
 		width = 10;
 
-		stroke = false;
-		strokeColour = glm::vec4(1.0f);
-		top = new Line();
-		left = new Line();
-		right = new Line();
-		bottom = new Line();
+		//stroke = false;
+		//strokeColour = glm::vec4(1.0f);
+		//top = new Line();
+		//left = new Line();
+		//right = new Line();
+		//bottom = new Line();
 	}
 
 	TextureQuad::~TextureQuad()
@@ -46,33 +46,35 @@ namespace GameEngine
 		this->origin = glm::vec3(x, y, 0);
 		this->width = width;
 		this->height = height;
+		colour = strokeColour;
 
 		GenerateVerts();
+		/*
 
 		if (stroke) {
 			this->stroke = true;
 			this->strokeColour = strokeColour;
 			GenerateStroke();
-		}
+		}*/
 
-		GenerateBuffers();
+		//GenerateBuffers();
 
-		text = Texture();
-		if (text.LoadFile(Engine::get().asset_dir + "Textures/testsprite.png", TEXTURETYPES::SARAGAN_PNG))
-		{
-			text.GenerateAlphaBuffer();
-		}
+		//text = Texture();
+		//if (text.LoadFile(Engine::get().asset_dir + "Textures/testsprite.png", TEXTURETYPES::SARAGAN_PNG))
+		//{
+		//	text.GenerateAlphaBuffer();
+		//}
 	}
 
 	void TextureQuad::GenerateVerts()
 	{
-		vert2D tleft = { {this->origin.x,this->origin.y,0.0f,1.0f},{0.0f,0.1f}, {colour.r, colour.g, colour.b, colour.a } };
+		vert2D tleft = { {this->origin.x,this->origin.y,0.0f,1.0f},{-99.0f, -99.0f}, {colour.r, colour.g, colour.b, colour.a } };
 
-		vert2D tright = { {this->origin.x + this->width,this->origin.y,0.0f,1.0f},{0.07f,0.1f}, {colour.r, colour.g, colour.b, colour.a } };
+		vert2D tright = { {this->origin.x + this->width,this->origin.y,0.0f,1.0f},{-99.0f, -99.0f}, {colour.r, colour.g, colour.b, colour.a } };
 
-		vert2D bright = { {this->origin.x + this->width,this->origin.y + this->height,0.0f,1.0f},{0.07f,0.15f}, {colour.r, colour.g, colour.b, colour.a } };
+		vert2D bright = { {this->origin.x + this->width,this->origin.y + this->height,0.0f,1.0f},{-99.0f, -99.0f}, {colour.r, colour.g, colour.b, colour.a } };
 
-		vert2D bleft = { {this->origin.x,this->origin.y + this->height,0.0f,1.0f},{0.0f,0.15f}, {colour.r, colour.g, colour.b, colour.a } };
+		vert2D bleft = { {this->origin.x,this->origin.y + this->height,0.0f,1.0f},{-99.0f, -99.0f}, {colour.r, colour.g, colour.b, colour.a } };
 
 		verts.push_back(tleft);
 		verts.push_back(tright);
@@ -84,10 +86,10 @@ namespace GameEngine
 
 	void TextureQuad::GenerateStroke()
 	{
-		top->Init(this->origin.x + 1, this->origin.y + 1, this->origin.x + this->width - 1, this->origin.y + 1, 1.0f, this->strokeColour);
-		left->Init(this->origin.x + 1, this->origin.y + 1, this->origin.x + 1, this->origin.y + this->height - 1, 1.0f, this->strokeColour);
-		right->Init(this->origin.x + this->width, this->origin.y, this->origin.x + this->width, this->origin.y + this->height, 1.0f, this->strokeColour);
-		bottom->Init(this->origin.x, this->origin.y + this->height, this->origin.x + this->width, this->origin.y + this->height, 1.0f, this->strokeColour);
+		//top->Init(this->origin.x + 1, this->origin.y + 1, this->origin.x + this->width - 1, this->origin.y + 1, 1.0f, this->strokeColour);
+		//left->Init(this->origin.x + 1, this->origin.y + 1, this->origin.x + 1, this->origin.y + this->height - 1, 1.0f, this->strokeColour);
+		//right->Init(this->origin.x + this->width, this->origin.y, this->origin.x + this->width, this->origin.y + this->height, 1.0f, this->strokeColour);
+		//bottom->Init(this->origin.x, this->origin.y + this->height, this->origin.x + this->width, this->origin.y + this->height, 1.0f, this->strokeColour);
 	}
 
 	void TextureQuad::GenerateBuffers()
@@ -119,17 +121,17 @@ namespace GameEngine
 	{
 		if (!isLoaded) return;
 
-		if (this->stroke) {
-			top->colour = this->strokeColour;
-			left->colour = this->strokeColour;
-			right->colour = this->strokeColour;
-			bottom->colour = this->strokeColour;
+		//if (this->stroke) {
+		//	top->colour = this->strokeColour;
+		//	left->colour = this->strokeColour;
+		//	right->colour = this->strokeColour;
+		//	bottom->colour = this->strokeColour;
 
-			top->Update(dt);
-			left->Update(dt);
-			right->Update(dt);
-			bottom->Update(dt);
-		}
+		//	top->Update(dt);
+		//	left->Update(dt);
+		//	right->Update(dt);
+		//	bottom->Update(dt);
+		//}
 	}
 
 	bool TextureQuad::Render()
@@ -146,12 +148,12 @@ namespace GameEngine
 
 			Engine::getRenderer().EnableBlend(true, BLEND_TYPE::SRC_ALPHA, BLEND_TYPE::ONE_MINUS_SRC_ALPHA);
 
-			if (Engine::getRenderer().CurrentTextureID != text.TextureID)
-			{
-				Engine::getRenderer().CurrentTextureID = text.TextureID;
+			//if (Engine::getRenderer().CurrentTextureID != text.TextureID)
+			//{
+			//	Engine::getRenderer().CurrentTextureID = text.TextureID;
 
-				Engine::getRenderer().BindTextureBuffer(text.TextureID);
-			}
+			//	Engine::getRenderer().BindTextureBuffer(text.TextureID);
+			//}
 
 			Engine::getRenderer().BindVertexBuffer(VAIO);
 
@@ -159,12 +161,12 @@ namespace GameEngine
 
 			Engine::getRenderer().EnableBlend(false);
 
-			if (this->stroke) {
-				top->Render();
-				left->Render();
-				right->Render();
-				bottom->Render();
-			}
+			//if (this->stroke) {
+			//	top->Render();
+			//	left->Render();
+			//	right->Render();
+			//	bottom->Render();
+			//}
 		}
 
 		return true;

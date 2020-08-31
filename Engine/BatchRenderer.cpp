@@ -50,13 +50,13 @@ namespace GameEngine
 		int counter = 0;
 		for (int i = 0; i < MaxQuadSize; i += 6)
 		{
-			indicies.push_back(i + 0);
-			indicies.push_back(i + 1);
-			indicies.push_back(i + 2);
+			indicies.push_back(counter + 0);
+			indicies.push_back(counter + 1);
+			indicies.push_back(counter + 2);
 
-			indicies.push_back(i + 2);
-			indicies.push_back(i + 3);
-			indicies.push_back(i + 0);
+			indicies.push_back(counter + 2);
+			indicies.push_back(counter + 3);
+			indicies.push_back(counter + 0);
 
 			counter += 4;
 		}
@@ -78,6 +78,10 @@ namespace GameEngine
 
 	void BatchRenderer::EndBatch()
 	{
+		if (verts.size() == 0) {
+			return;
+		}
+
 		Engine::getRenderer().BufferSubData(VBO, verts);
 
 		Engine::getRenderer().BindVertexBuffer(VAO);
@@ -99,5 +103,7 @@ namespace GameEngine
 
 		std::vector<vert2D>& v = quad.verts;
 		verts.insert(verts.end(), v.begin(), v.end());
+		currentIndex += 6;
+		CurrentQuadSize++;
 	}
 }
