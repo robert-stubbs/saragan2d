@@ -40,10 +40,11 @@ void TestState::Init()
 		for (int y = 0; y < TestState::ysize; y++)
 		{
 			quads[x][y] = TextureQuad();
-			quads[x][y].Init(x1, y1, 100, 100, false, glm::vec4(x/5.0f, y/5.0f, 0.0f, 1.0f));
+			quads[x][y].Init(x1, y1, 100, 100, false, glm::vec4(x/10.0f, y/10.0f, x+y/10.0f, 1.0f));
 			y1 += 100;
 		}
 		x1 += 100;
+		y1 = 0;
 	}
 
 	//GameEngine::SpriteAnimDef idle = SpriteAnimDef();
