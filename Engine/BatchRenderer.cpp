@@ -73,6 +73,7 @@ namespace GameEngine
 		// clear current index
 		currentIndex = 0;
 		CurrentQuadSize = 0;
+		verts.clear();
 	}
 
 	void BatchRenderer::EndBatch()
@@ -96,10 +97,7 @@ namespace GameEngine
 			BeginBatch();
 		}
 
-		// TODO add quad to verts
 		std::vector<vert2D>& v = quad.verts;
-
-		// add those verts to verts
-
+		verts.insert(verts.end(), v.begin(), v.end());
 	}
 }
