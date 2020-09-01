@@ -366,6 +366,7 @@ typedef struct
 	{
 		int tile_index_x;
 		int tile_index_y;
+		int texture_index;
 
 	} SingleTile;
 
@@ -378,14 +379,23 @@ typedef struct
 
 	typedef struct
 	{
+		int image_width;
+		int image_height;
+		std::string image_path;
+
+	} TileAtlas;
+
+	typedef struct
+	{
 		int tile_width; // The size of each tile in pixels across / pixels down.
 		int tile_height;
 
+		std::vector<TileAtlas> _images;
 		std::vector<TileLayer> _layers;
 
 		int map_width; // The dimensions of the map, either in tiles across / tiles down, or pixels across / pixels down.
 		int map_height;
-
+		int number_of_layers;
 
 
 	} TileMap;

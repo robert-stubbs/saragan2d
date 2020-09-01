@@ -19,7 +19,7 @@ namespace GameEngine
 
 			std::vector<Texture> _textures;
 
-			std::vector<std::vector<TextureQuad>> _quads;
+			std::vector<std::vector<std::vector<TextureQuad>>> _quads;
 
 			std::future<bool> _fut;
 
@@ -30,6 +30,7 @@ namespace GameEngine
 			void Init(std::string name, std::string map_path);
 			void ThreadLoad();
 			bool LoadMapDefinition();
+			void LoadTextureBuffers();
 			void Update();
 			void Render();
 			void Cleanup();
