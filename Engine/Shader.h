@@ -26,6 +26,7 @@ namespace GameEngine
 		virtual void SetupLocations();
 		virtual unsigned int SortLocation(ShaderBinding item) = 0;
 
+
 		virtual void bind() = 0; // Bind our shader program
 		virtual void unbind() = 0; // Unbind our shader program
 	};

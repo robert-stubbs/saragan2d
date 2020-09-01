@@ -22,6 +22,7 @@
 #include <random>
 #include <memory>
 #include <deque>
+#include <future>
 
 #include <math.h>
 #include <assert.h>

@@ -145,6 +145,9 @@
     <Filter Include="Batch">
       <UniqueIdentifier>{bd435ccc-f34e-48d1-90b9-feff57eae2c4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="World">
+      <UniqueIdentifier>{8dedd00a-d831-4e6b-9e09-dd77bef3ea2c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\ThirdParty\glew\include\GL\eglew.h">
@@ -1391,6 +1394,9 @@
     <ClInclude Include="BatchRenderer.h">
       <Filter>Batch</Filter>
     </ClInclude>
+    <ClInclude Include="Map.h">
+      <Filter>World</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="EnginePCH.cpp" />
@@ -1526,6 +1532,9 @@
     </ClCompile>
     <ClCompile Include="BatchRenderer.cpp">
       <Filter>Batch</Filter>
+    </ClCompile>
+    <ClCompile Include="Map.cpp">
+      <Filter>World</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

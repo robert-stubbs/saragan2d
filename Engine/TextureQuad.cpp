@@ -41,29 +41,14 @@ namespace GameEngine
 
 	}
 
-	void TextureQuad::Init(float x, float y, float width, float height, bool stroke, glm::vec4 strokeColour)
+	void TextureQuad::Init(float x, float y, float width, float height, bool stroke, glm::vec4 Color)
 	{
 		this->origin = glm::vec3(x, y, 0);
 		this->width = width;
 		this->height = height;
-		colour = strokeColour;
+		colour = Color;
 
 		GenerateVerts();
-		/*
-
-		if (stroke) {
-			this->stroke = true;
-			this->strokeColour = strokeColour;
-			GenerateStroke();
-		}*/
-
-		//GenerateBuffers();
-
-		//text = Texture();
-		//if (text.LoadFile(Engine::get().asset_dir + "Textures/testsprite.png", TEXTURETYPES::SARAGAN_PNG))
-		//{
-		//	text.GenerateAlphaBuffer();
-		//}
 	}
 
 	void TextureQuad::GenerateVerts()
@@ -82,14 +67,6 @@ namespace GameEngine
 		verts.push_back(bleft);
 
 		isLoaded = true;
-	}
-
-	void TextureQuad::GenerateStroke()
-	{
-		//top->Init(this->origin.x + 1, this->origin.y + 1, this->origin.x + this->width - 1, this->origin.y + 1, 1.0f, this->strokeColour);
-		//left->Init(this->origin.x + 1, this->origin.y + 1, this->origin.x + 1, this->origin.y + this->height - 1, 1.0f, this->strokeColour);
-		//right->Init(this->origin.x + this->width, this->origin.y, this->origin.x + this->width, this->origin.y + this->height, 1.0f, this->strokeColour);
-		//bottom->Init(this->origin.x, this->origin.y + this->height, this->origin.x + this->width, this->origin.y + this->height, 1.0f, this->strokeColour);
 	}
 
 	void TextureQuad::GenerateBuffers()
@@ -120,18 +97,6 @@ namespace GameEngine
 	void TextureQuad::Update(float dt)
 	{
 		if (!isLoaded) return;
-
-		//if (this->stroke) {
-		//	top->colour = this->strokeColour;
-		//	left->colour = this->strokeColour;
-		//	right->colour = this->strokeColour;
-		//	bottom->colour = this->strokeColour;
-
-		//	top->Update(dt);
-		//	left->Update(dt);
-		//	right->Update(dt);
-		//	bottom->Update(dt);
-		//}
 	}
 
 	bool TextureQuad::Render()
@@ -148,25 +113,18 @@ namespace GameEngine
 
 			Engine::getRenderer().EnableBlend(true, BLEND_TYPE::SRC_ALPHA, BLEND_TYPE::ONE_MINUS_SRC_ALPHA);
 
-			//if (Engine::getRenderer().CurrentTextureID != text.TextureID)
-			//{
-			//	Engine::getRenderer().CurrentTextureID = text.TextureID;
+			if (texture_id > 0 && Engine::getRenderer().CurrentTextureID != texture_id)
+			{
+				Engine::getRenderer().CurrentTextureID = texture_id;
 
-			//	Engine::getRenderer().BindTextureBuffer(text.TextureID);
-			//}
+				Engine::getRenderer().BindTextureBuffer(texture_id);
+			}
 
 			Engine::getRenderer().BindVertexBuffer(VAIO);
 
 			Engine::getRenderer().DrawArrays(DRAW_TYPE::TRIANGLE_FAN, (GLsizei)verts.size());
 
 			Engine::getRenderer().EnableBlend(false);
-
-			//if (this->stroke) {
-			//	top->Render();
-			//	left->Render();
-			//	right->Render();
-			//	bottom->Render();
-			//}
 		}
 
 		return true;

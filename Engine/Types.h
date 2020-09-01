@@ -373,25 +373,14 @@ typedef struct
 	{
 		int layer_index; // should match position in layers array
 		//Includes indices showing what type of tile should be placed on each position in the grid.
-		//std::vector<int, std::vector<GameEngine::SingleTile>> Tiles;
+		std::vector<std::vector<GameEngine::SingleTile>> Tiles;
 	} TileLayer;
-
-	typedef struct
-	{
-		int image_width;
-		int image_height;
-		std::string image_path; //The Image atlas that will be used
-
-		unsigned int ImageBuffer;
-
-	} TileAtlas;
 
 	typedef struct
 	{
 		int tile_width; // The size of each tile in pixels across / pixels down.
 		int tile_height;
 
-		std::vector<TileAtlas> _atlas; // list of atlases to be used (potentially just 1)
 		std::vector<TileLayer> _layers;
 
 		int map_width; // The dimensions of the map, either in tiles across / tiles down, or pixels across / pixels down.

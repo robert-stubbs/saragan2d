@@ -15,6 +15,7 @@ class ShaderDef
 		virtual void SetupAttributeLocations() = 0;
 		virtual void SetupUniformLocations() = 0;
 
+		virtual void BindVertStructure() = 0;
 };
 
 #endif

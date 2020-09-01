@@ -486,6 +486,7 @@
     <ClInclude Include="InputWindows.h" />
     <ClInclude Include="Layer.h" />
     <ClInclude Include="Line.h" />
+    <ClInclude Include="Map.h" />
     <ClInclude Include="Object.h" />
     <ClInclude Include="OpenGLFont.h" />
     <ClInclude Include="OpenGLRenderEngine.h" />
@@ -538,6 +539,7 @@
     <ClCompile Include="InputWindows.cpp" />
     <ClCompile Include="Layer.cpp" />
     <ClCompile Include="Line.cpp" />
+    <ClCompile Include="Map.cpp" />
     <ClCompile Include="Object.cpp" />
     <ClCompile Include="OpenGLFont.cpp" />
     <ClCompile Include="OpenGLRenderEngine.cpp" />

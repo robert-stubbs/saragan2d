@@ -4,21 +4,24 @@
 #include "ShaderDef.h"
 #include "Shader.h"
 
-class Default2DShader: public ShaderDef
-{
-public:
-	GameEngine::Shader* s;
+namespace GameEngine {
 
-	Default2DShader();
-	Default2DShader(std::string vs, std::string fs);
-	virtual ~Default2DShader();
+	class Default2DShader : public ShaderDef
+	{
+	public:
+		Shader* s;
 
-	virtual void SetupShader() override;
-	virtual void SetupAttributeLocations() override;
-	virtual void SetupUniformLocations() override;
+		Default2DShader();
+		Default2DShader(std::string vs, std::string fs);
+		virtual ~Default2DShader();
 
-};
+		virtual void SetupShader() override;
+		virtual void SetupAttributeLocations() override;
+		virtual void SetupUniformLocations() override;
 
+		virtual void BindVertStructure() override;
 
+	};
+}
 
 #endif 

@@ -18,10 +18,9 @@ namespace GameEngine
 		TextureQuad();
 		~TextureQuad();
 		virtual void Init();
-		virtual void Init(float x, float y, float width, float height, bool stroke = false, glm::vec4 strokeColour = glm::vec4());
+		virtual void Init(float x, float y, float width, float height, bool stroke = false, glm::vec4 Color = glm::vec4());
 
 		virtual void GenerateVerts();
-		virtual void GenerateStroke();
 
 		virtual void GenerateBuffers();
 
@@ -35,22 +34,13 @@ namespace GameEngine
 		GLuint		VBO;
 		std::vector<vert2D> verts;
 
-		//Texture text;
-
 		glm::vec3 origin;
 		float width;
 		float height;
 
+		unsigned int texture_id;
+
 		glm::vec4 colour;
-
-		//bool stroke;
-		//glm::vec4 strokeColour;
-
-		//Line* top;
-		//Line* left;
-		//Line* right;
-		//Line* bottom;
-
 	};
 }
 
