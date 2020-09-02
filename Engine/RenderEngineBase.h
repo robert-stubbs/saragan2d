@@ -7,7 +7,7 @@ namespace GameEngine {
 	class RenderEngineBase
 	{
 		public:
-			unsigned int CurrentTextureID;
+			unsigned int CurrentTextureID = -1;
 
 			RenderEngineBase();
 			virtual ~RenderEngineBase();

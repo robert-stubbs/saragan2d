@@ -23,6 +23,8 @@ namespace GameEngine
 
 			std::future<bool> _fut;
 
+			bool _loaded;
+
 		public:
 			Map();
 			~Map();
@@ -31,7 +33,7 @@ namespace GameEngine
 			void ThreadLoad();
 			bool LoadMapDefinition();
 			void LoadTextureBuffers();
-			void Update();
+			void Update(float dt);
 			void Render();
 			void Cleanup();
 	};

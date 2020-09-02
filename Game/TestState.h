@@ -7,17 +7,20 @@
 #include "Sprite.h"
 #include "BatchRenderer.h"
 #include "TextureQuad.h"
+#include "Map.h"
 
 class TestState : public GameEngine::State
 {
     public:
         GameEngine::Texture t;
 
-        //GameEngine::Sprite spriteTest;
-        GameEngine::BatchRenderer b;
-        GameEngine::TextureQuad q;
+        GameEngine::Sprite spriteTest;
+        glm::mat4 model;
+        //GameEngine::BatchRenderer b;
+        //GameEngine::TextureQuad q;
 
-        GameEngine::TextureQuad quads[100][100];
+        //GameEngine::TextureQuad quads[100][100];
+        GameEngine::Map* m;
 
         TestState();
         virtual ~TestState();

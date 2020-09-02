@@ -389,6 +389,8 @@ typedef struct
 	{
 		int tile_width; // The size of each tile in pixels across / pixels down.
 		int tile_height;
+		int quad_width;
+		int quad_height;
 
 		std::vector<TileAtlas> _images;
 		std::vector<TileLayer> _layers;

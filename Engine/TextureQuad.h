@@ -18,7 +18,7 @@ namespace GameEngine
 		TextureQuad();
 		~TextureQuad();
 		virtual void Init();
-		virtual void Init(float x, float y, float width, float height, bool stroke = false, glm::vec4 Color = glm::vec4());
+		virtual void Init(float x, float y, float width, float height, float z_depth, glm::vec2 text_min, glm::vec2 text_max, glm::vec4 Color = glm::vec4());
 
 		virtual void GenerateVerts();
 
@@ -37,6 +37,8 @@ namespace GameEngine
 		glm::vec3 origin;
 		float width;
 		float height;
+		glm::vec2 texture_min;
+		glm::vec2 texture_max;
 
 		unsigned int texture_id;
 

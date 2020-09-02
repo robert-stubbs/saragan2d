@@ -41,25 +41,24 @@ namespace GameEngine
 
 	}
 
-	void TextureQuad::Init(float x, float y, float width, float height, bool stroke, glm::vec4 Color)
+	void TextureQuad::Init(float x, float y, float width, float height, float z_depth, glm::vec2 text_min, glm::vec2 text_max, glm::vec4 Color)
 	{
-		this->origin = glm::vec3(x, y, 0);
+		this->origin = glm::vec3(x, y, z_depth);
 		this->width = width;
 		this->height = height;
 		colour = Color;
+		texture_min = text_min;
+		texture_max = text_max;
 
 		GenerateVerts();
 	}
 
 	void TextureQuad::GenerateVerts()
 	{
-		vert2D tleft = { {this->origin.x,this->origin.y,0.0f,1.0f},{-99.0f, -99.0f}, {colour.r, colour.g, colour.b, colour.a } };
-
-		vert2D tright = { {this->origin.x + this->width,this->origin.y,0.0f,1.0f},{-99.0f, -99.0f}, {colour.r, colour.g, colour.b, colour.a } };
-
-		vert2D bright = { {this->origin.x + this->width,this->origin.y + this->height,0.0f,1.0f},{-99.0f, -99.0f}, {colour.r, colour.g, colour.b, colour.a } };
-
-		vert2D bleft = { {this->origin.x,this->origin.y + this->height,0.0f,1.0f},{-99.0f, -99.0f}, {colour.r, colour.g, colour.b, colour.a } };
+		vert2D tleft = { {this->origin.x,this->origin.y,this->origin.z,1.0f},{texture_min.x, texture_min.y}, {colour.r, colour.g, colour.b, colour.a } };
+		vert2D tright = { {this->origin.x + this->width,this->origin.y,this->origin.z,1.0f},{texture_max.x, texture_min.y}, {colour.r, colour.g, colour.b, colour.a } };
+		vert2D bright = { {this->origin.x + this->width,this->origin.y + this->height,this->origin.z,1.0f},{texture_max.x, texture_max.y}, {colour.r, colour.g, colour.b, colour.a } };
+		vert2D bleft = { {this->origin.x,this->origin.y + this->height,this->origin.z,1.0f},{texture_min.x, texture_max.y}, {colour.r, colour.g, colour.b, colour.a } };
 
 		verts.push_back(tleft);
 		verts.push_back(tright);
