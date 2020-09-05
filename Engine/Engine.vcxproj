@@ -57,8 +57,8 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>EnginePCH.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;GLFW_INCLUDE_NONE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\ThirdParty\glm\include;..\ThirdParty\glfw\include;..\ThirdParty\glew\include;..\ThirdParty\freetype2;..\ThirdParty\freetype-gl;..\ThirdParty\OpenAL\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>GLFW_INCLUDE_NONE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\ThirdParty\glm\include;..\ThirdParty\glfw\include;..\ThirdParty\glew\include;..\ThirdParty\freetype2;..\ThirdParty\freetype-gl;..\ThirdParty\OpenAL\include;..\ThirdParty\ImGui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <LanguageStandard>stdcpp17</LanguageStandard>
@@ -78,8 +78,8 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>EnginePCH.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;GLFW_INCLUDE_NONE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\ThirdParty\glm\include;..\ThirdParty\glfw\include;..\ThirdParty\glew\include;..\ThirdParty\freetype2;..\ThirdParty\freetype-gl;..\ThirdParty\OpenAL\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>GLFW_INCLUDE_NONE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\ThirdParty\glm\include;..\ThirdParty\glfw\include;..\ThirdParty\glew\include;..\ThirdParty\freetype2;..\ThirdParty\freetype-gl;..\ThirdParty\OpenAL\include;..\ThirdParty\ImGui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <LanguageStandard>stdcpp17</LanguageStandard>
@@ -95,6 +95,12 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\ThirdParty\ImGui\imconfig.h" />
+    <ClInclude Include="..\ThirdParty\ImGui\imgui.h" />
+    <ClInclude Include="..\ThirdParty\ImGui\imgui_internal.h" />
+    <ClInclude Include="..\ThirdParty\ImGui\imstb_rectpack.h" />
+    <ClInclude Include="..\ThirdParty\ImGui\imstb_textedit.h" />
+    <ClInclude Include="..\ThirdParty\ImGui\imstb_truetype.h" />
     <ClInclude Include="..\ThirdParty\glew\include\GL\eglew.h" />
     <ClInclude Include="..\ThirdParty\glew\include\GL\glew.h" />
     <ClInclude Include="..\ThirdParty\glew\include\GL\glxew.h" />
