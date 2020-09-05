@@ -23,7 +23,9 @@ project "Game"
 		"ThirdParty/glm/include/**.inl",
 		"ThirdParty/glew/include/**.h",
 		"ThirdParty/glfw/include/**.h",
-		"ThirdParty/freetype-gl/include/**.h"
+		"ThirdParty/freetype-gl/include/**.h",
+		"ThirdParty/ImGui/*.h",
+		"ThirdParty/ImGui/*.cpp"
 	}
 
 	includedirs
@@ -34,7 +36,8 @@ project "Game"
 		"ThirdParty/glew/include",
 		"ThirdParty/freetype2",
 		"ThirdParty/freetype-gl",
-		"ThirdParty/OpenAL/include"
+		"ThirdParty/OpenAL/include",
+		"ThirdParty/ImGui"
 	}
 
 	links
@@ -54,7 +57,7 @@ project "Game"
 		systemversion "latest"
 		cppdialect "C++17"
 		staticruntime "on"
-		links { "SaraganEngine", "OpenGL32", "glfw", "glew32", "OpenAL32", "freetype", "freetype-gl", "winmm" }
+		links { "SaraganEngine", "OpenGL32", "glfw", "glew32", "OpenAL32", "freetype", "freetype-gl", "winmm", "ImGui" }
 
 	filter "configurations.Debug"
 		defines { "SARAGAN_DEBUG" }
@@ -87,7 +90,9 @@ project "Engine"
 		"ThirdParty/glm/include/**.hpp",
 		"ThirdParty/glm/include/**.inl",
 		"ThirdParty/glfw/include/**.h",
-		"ThirdParty/glew/include/**.h"
+		"ThirdParty/glew/include/**.h",
+		"ThirdParty/ImGui/*.h",
+		"ThirdParty/ImGui/*.cpp"
 	}
 
 	includedirs
@@ -97,7 +102,8 @@ project "Engine"
 		"ThirdParty/glew/include",
 		"ThirdParty/freetype2",
 		"ThirdParty/freetype-gl",
-		"ThirdParty/OpenAL/include"
+		"ThirdParty/OpenAL/include",
+		"ThirdParty/ImGui"
 	}
 
 	libdirs  
@@ -354,6 +360,52 @@ project "GLFW"
 		{
 			("{COPY} ../../bin/" .. outputdir .. "/%{prj.name} ../../bin/" .. outputdir .. "/SaraganGame")
 		}
+
+	filter "configurations:Debug"
+		runtime "Debug"
+		symbols "on"
+
+	filter "configurations:Release"
+		runtime "Release"
+		optimize "on"
+
+project "ImGui"
+	location "ThirdParty/%{prj.name}"
+	kind "StaticLib"
+	language "C++"
+
+	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
+	objdir ("obj/" .. outputdir .. "/%{prj.name}")
+
+	files
+	{
+		"ThirdParty/%{prj.name}/imconfig.h",
+		"ThirdParty/%{prj.name}/imgui.h",
+		"ThirdParty/%{prj.name}/imgui.cpp",
+		"ThirdParty/%{prj.name}/imgui_draw.cpp",
+		"ThirdParty/%{prj.name}/imgui_internal.h",
+		"ThirdParty/%{prj.name}/imgui_widgets.cpp",
+		"ThirdParty/%{prj.name}/imstb_rectpack.h",
+		"ThirdParty/%{prj.name}/imstb_textedit.h",
+		"ThirdParty/%{prj.name}/imstb_truetype.h",
+		"ThirdParty/%{prj.name}/imgui_demo.cpp"
+	}
+
+	filter "system:windows"
+		systemversion "latest"
+		cppdialect "C++17"
+		staticruntime "On"
+		
+		postbuildcommands
+		{
+			("{COPY} ../../bin/" .. outputdir .. "/%{prj.name} ../../bin/" .. outputdir .. "/SaraganGame")
+		}
+
+	filter "system:linux"
+		pic "On"
+		systemversion "latest"
+		cppdialect "C++17"
+		staticruntime "On"
 
 	filter "configurations:Debug"
 		runtime "Debug"
