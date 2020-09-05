@@ -10,7 +10,11 @@ namespace GameEngine
 	{
 	public:
 		OpenGLGUIPlatform() {};
+		~OpenGLGUIPlatform();
 
+		virtual void Init() override;
+
+		virtual void DemoTest(float dt) override;
 	};
 }
 

@@ -4,13 +4,13 @@
 
 namespace GameEngine
 {
-	GUI GUI::_gui = GUI();
+	GUI* GUI::_gui = nullptr;
 
 	GUI::GUI()
 	{
 		engine_type = RenderEngines::None;
 		_instance = nullptr;
-		_gui = *this;
+		_gui = this;
 	}
 
 	GUI::GUI(RenderEngines EngineType)
@@ -32,5 +32,6 @@ namespace GameEngine
 		default:
 			break;
 		}
+		_gui = this;
 	}
 }

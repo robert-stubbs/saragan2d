@@ -488,6 +488,7 @@
     <ClInclude Include="FontPlatform.h" />
     <ClInclude Include="GUI.h" />
     <ClInclude Include="GUIPlatform.h" />
+    <ClInclude Include="imgui_impl_opengl3.h" />
     <ClInclude Include="Input.h" />
     <ClInclude Include="InputGLFW.h" />
     <ClInclude Include="InputPlatform.h" />
@@ -544,6 +545,7 @@
     <ClCompile Include="FontPlatform.cpp" />
     <ClCompile Include="GUI.cpp" />
     <ClCompile Include="GUIPlatform.cpp" />
+    <ClCompile Include="imgui_impl_opengl3.cpp" />
     <ClCompile Include="Input.cpp" />
     <ClCompile Include="InputGLFW.cpp" />
     <ClCompile Include="InputPlatform.cpp" />

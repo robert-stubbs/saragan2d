@@ -3,6 +3,7 @@
 
 #include "Context.h"
 #include "Renderer.h"
+#include "GUI.h"
 #include "Shader.h"
 #include "ShaderManager.h"
 #include "ShaderDef.h"
@@ -31,6 +32,7 @@ namespace GameEngine {
 
 			Context ctx;
 			Renderer renderer;
+			GUI* _gui;
 			ShaderManager shader_mgr;
 			StateMachine GameFSM;
 
@@ -45,6 +47,8 @@ namespace GameEngine {
 
 			Camera2D* cam;
 			~Engine();
+
+			float current_dt;
 
 			bool fullscreen = false;
 			std::string asset_dir;
@@ -88,6 +92,10 @@ namespace GameEngine {
 
 			static StateMachine& state() {
 				return get().GameFSM;
+			}
+
+			static GUIPlatform& getGUI() {
+				return get()._gui->Get();
 			}
 
 			static ShaderManager& getShader() {

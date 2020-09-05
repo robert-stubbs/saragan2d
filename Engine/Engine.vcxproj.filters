@@ -1436,6 +1436,9 @@
     <ClInclude Include="..\ThirdParty\ImGui\imstb_truetype.h">
       <Filter>ThirdParty\ImGUI</Filter>
     </ClInclude>
+    <ClInclude Include="imgui_impl_opengl3.h">
+      <Filter>Engine Platform\GUI\Renderer\OpenGL</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="EnginePCH.cpp" />
@@ -1582,6 +1585,9 @@
       <Filter>Engine Platform\GUI\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="OpenGLGUIPlatform.cpp">
+      <Filter>Engine Platform\GUI\Renderer\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui_impl_opengl3.cpp">
       <Filter>Engine Platform\GUI\Renderer\OpenGL</Filter>
     </ClCompile>
   </ItemGroup>

@@ -10,7 +10,7 @@ namespace GameEngine
 	class GUI : public Layer<GUIPlatform>
 	{
 	private:
-		static GUI _gui;
+		static GUI* _gui;
 
 	public:
 		GUI();
@@ -18,7 +18,7 @@ namespace GameEngine
 		virtual void SetPlatform(PLATFORM platform) {};
 
 		static GUI& GetGUI() {
-			return _gui;
+			return *_gui;
 		}
 
 		static inline GUIPlatform& Get() { return *GetGUI()._instance; }

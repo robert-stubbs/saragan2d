@@ -35,6 +35,8 @@ namespace GameEngine {
 
 	bool Engine::PreInit()
 	{
+		current_dt = 0;
+
 		ctx.SetPlatform(_platform);
 		if (ctx.InitWindow(WindowWidth, WindowHeight, WindowName, fullscreen))
 		{
@@ -53,7 +55,7 @@ namespace GameEngine {
 			//System = new SystemManager();
 			//EntityMgr = new EntityManager();
 
-
+			_gui = new GUI(RenderEngines::OpenGL);
 
 			//System->Init();
 
@@ -80,6 +82,8 @@ namespace GameEngine {
 			def->SetupShader();
 		}
 
+		_gui->Get().Init();
+
 		return true;
 	}
 
@@ -92,6 +96,7 @@ namespace GameEngine {
 
 	bool Engine::Update(float DeltaTime)
 	{
+		current_dt = DeltaTime;
 		Update3D(DeltaTime);
 		UpdateOrth(DeltaTime);
 		return true;
@@ -121,6 +126,8 @@ namespace GameEngine {
 
 		GameFSM.Render();
 		GameFSM.RenderOrth();
+
+		GUI::Get().DemoTest(current_dt > 0 ? current_dt : 1.0f/60.0f);
 
 		getContext().SwapContextBuffers();
 	}
