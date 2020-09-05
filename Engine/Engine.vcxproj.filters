@@ -157,6 +157,9 @@
     <Filter Include="Engine Platform\GUI\Renderer\OpenGL">
       <UniqueIdentifier>{16d9aae2-55a9-42e2-b0d5-50ea31b36007}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ThirdParty\ImGUI">
+      <UniqueIdentifier>{d214ac3d-99f8-4a09-b724-f8ce04656d34}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\ThirdParty\glew\include\GL\eglew.h">
@@ -1406,12 +1409,6 @@
     <ClInclude Include="Map.h">
       <Filter>World</Filter>
     </ClInclude>
-    <ClInclude Include="..\ThirdParty\ImGui\imconfig.h" />
-    <ClInclude Include="..\ThirdParty\ImGui\imgui.h" />
-    <ClInclude Include="..\ThirdParty\ImGui\imgui_internal.h" />
-    <ClInclude Include="..\ThirdParty\ImGui\imstb_rectpack.h" />
-    <ClInclude Include="..\ThirdParty\ImGui\imstb_textedit.h" />
-    <ClInclude Include="..\ThirdParty\ImGui\imstb_truetype.h" />
     <ClInclude Include="GUI.h">
       <Filter>Engine Platform\GUI</Filter>
     </ClInclude>
@@ -1420,6 +1417,24 @@
     </ClInclude>
     <ClInclude Include="OpenGLGUIPlatform.h">
       <Filter>Engine Platform\GUI\Renderer\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\ImGui\imconfig.h">
+      <Filter>ThirdParty\ImGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\ImGui\imgui.h">
+      <Filter>ThirdParty\ImGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\ImGui\imgui_internal.h">
+      <Filter>ThirdParty\ImGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\ImGui\imstb_rectpack.h">
+      <Filter>ThirdParty\ImGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\ImGui\imstb_textedit.h">
+      <Filter>ThirdParty\ImGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\ImGui\imstb_truetype.h">
+      <Filter>ThirdParty\ImGUI</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

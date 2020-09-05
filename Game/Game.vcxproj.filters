@@ -55,6 +55,9 @@
     <Filter Include="States\Minesweeper">
       <UniqueIdentifier>{297f5b1b-7c89-4ab7-9cf7-3ced52107cf4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ThirdParty\ImGUI">
+      <UniqueIdentifier>{0693962d-4d9a-4716-840d-0cc809a5886d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\ThirdParty\glew\include\GL\eglew.h">
@@ -1174,6 +1177,24 @@
     <ClInclude Include="GameLibrary.h" />
     <ClInclude Include="MinesweeperState.h">
       <Filter>States\Minesweeper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\ImGui\imconfig.h">
+      <Filter>ThirdParty\ImGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\ImGui\imgui.h">
+      <Filter>ThirdParty\ImGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\ImGui\imgui_internal.h">
+      <Filter>ThirdParty\ImGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\ImGui\imstb_rectpack.h">
+      <Filter>ThirdParty\ImGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\ImGui\imstb_textedit.h">
+      <Filter>ThirdParty\ImGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\ImGui\imstb_truetype.h">
+      <Filter>ThirdParty\ImGUI</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

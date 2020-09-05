@@ -182,7 +182,7 @@ namespace GameEngine {
 		SpriteAnimDef* def = &_anim.anims[name];
 
 		// set the start of the buffers index
-		def->start_buffer_index = _anim.vert_indices.size();
+		def->start_buffer_index = (int)_anim.vert_indices.size();
 
 		if (def->frames.size() == 0) {
 			PopulateSpriteFrames(name, def->frame_width, def->frame_height);
@@ -197,7 +197,7 @@ namespace GameEngine {
 		def->number_of_frames = (int)def->frames.size();
 
 		// set the end of the buffer and increment by 1 for next buffer
-		def->end_buffer_index = _anim.vert_indices.size() - 1;// _anim.index_counter;
+		def->end_buffer_index = (int)_anim.vert_indices.size() - 1;// _anim.index_counter;
 		//_anim.index_counter++;
 	}
 
