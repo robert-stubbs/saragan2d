@@ -148,6 +148,15 @@
     <Filter Include="World">
       <UniqueIdentifier>{8dedd00a-d831-4e6b-9e09-dd77bef3ea2c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine Platform\GUI">
+      <UniqueIdentifier>{7e3bf603-bb0f-4879-9ffb-864e19cab3af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine Platform\GUI\Renderer">
+      <UniqueIdentifier>{4eaa592d-a3dc-4c16-b089-64499b64ff2a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine Platform\GUI\Renderer\OpenGL">
+      <UniqueIdentifier>{16d9aae2-55a9-42e2-b0d5-50ea31b36007}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\ThirdParty\glew\include\GL\eglew.h">
@@ -1397,6 +1406,21 @@
     <ClInclude Include="Map.h">
       <Filter>World</Filter>
     </ClInclude>
+    <ClInclude Include="..\ThirdParty\ImGui\imconfig.h" />
+    <ClInclude Include="..\ThirdParty\ImGui\imgui.h" />
+    <ClInclude Include="..\ThirdParty\ImGui\imgui_internal.h" />
+    <ClInclude Include="..\ThirdParty\ImGui\imstb_rectpack.h" />
+    <ClInclude Include="..\ThirdParty\ImGui\imstb_textedit.h" />
+    <ClInclude Include="..\ThirdParty\ImGui\imstb_truetype.h" />
+    <ClInclude Include="GUI.h">
+      <Filter>Engine Platform\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="GUIPlatform.h">
+      <Filter>Engine Platform\GUI\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenGLGUIPlatform.h">
+      <Filter>Engine Platform\GUI\Renderer\OpenGL</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="EnginePCH.cpp" />
@@ -1535,6 +1559,15 @@
     </ClCompile>
     <ClCompile Include="Map.cpp">
       <Filter>World</Filter>
+    </ClCompile>
+    <ClCompile Include="GUI.cpp">
+      <Filter>Engine Platform\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="GUIPlatform.cpp">
+      <Filter>Engine Platform\GUI\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="OpenGLGUIPlatform.cpp">
+      <Filter>Engine Platform\GUI\Renderer\OpenGL</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
