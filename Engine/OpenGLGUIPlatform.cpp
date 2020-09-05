@@ -62,17 +62,36 @@ namespace GameEngine
     void OpenGLGUIPlatform::DemoTest(float dt)
     {
         static bool show_demo_window = true;
+
+        NewScene(dt);
+
+        ImGui::ShowDemoWindow(&show_demo_window);
+
+        EndAndRender();
+    }
+
+
+    void OpenGLGUIPlatform::NewScene(float dt)
+    {
         ImGuiIO& io = ImGui::GetIO();
 
         io.DeltaTime = dt;
 
         ImGui_ImplOpenGL3_NewFrame();
         ImGui::NewFrame();
+        //ImGui::SetNextWindowPos(ImVec2(0, 0));
+        ImGui::SetNextWindowSize(io.DisplaySize);
+    }
 
-        ImGui::ShowDemoWindow(&show_demo_window);
-
+    void OpenGLGUIPlatform::EndAndRender()
+    {
         ImGui::Render();
         ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+    }
 
+    void OpenGLGUIPlatform::ResizeWindow(int width, int height)
+    {
+        ImGuiIO& io = ImGui::GetIO(); (void)io;
+        io.DisplaySize = ImVec2((float)Engine::get().WindowWidth, (float)Engine::get().WindowHeight);
     }
 }

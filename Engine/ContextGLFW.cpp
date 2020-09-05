@@ -82,6 +82,8 @@ namespace GameEngine
 		    deltaTime += (nowTime - lastTime) / limitFPS;
 		    lastTime = nowTime;
 
+			glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
+
 		    // - Only update at 60 frames / s
 		    while (deltaTime >= 1.0) {
 		        Engine::get().Update((float)deltaTime);
@@ -114,6 +116,11 @@ namespace GameEngine
 	double ContextGLFW::GetTime()
 	{
 		return glfwGetTime();
+	}
+
+	void ContextGLFW::framebuffer_size_callback(GLFWwindow* window, int width, int height)
+	{
+		Engine::getRenderer().ResizeWindow(width, height);
 	}
 
 	void ContextGLFW::static_key_callback(GLFWwindow* window, int key, int scancode, int action, int mods)

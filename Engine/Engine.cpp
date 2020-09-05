@@ -84,6 +84,8 @@ namespace GameEngine {
 
 		_gui->Get().Init();
 
+		loaded = true;
+
 		return true;
 	}
 

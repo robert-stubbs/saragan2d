@@ -1,5 +1,6 @@
 #include "EnginePCH.h"
 #include "OpenGLRenderEngine.h"
+#include "Engine.h"
 
 
 namespace GameEngine {
@@ -174,6 +175,11 @@ namespace GameEngine {
 
 		glViewport(0, 0, Width, Height);
 
+		// resize GUI
+		if (Engine::get().loaded) {
+			Engine::get().SetWindowSize(Width, Height);
+			Engine::getGUI().ResizeWindow(Width, Height);
+		}
 		return true;
 	}
 

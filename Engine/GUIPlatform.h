@@ -14,6 +14,11 @@ namespace GameEngine
 
 		virtual void DemoTest(float dt) = 0;
 
+		virtual void NewScene(float dt) = 0;
+		virtual void EndAndRender() = 0;
+
+		virtual void ResizeWindow(int width, int height) = 0;
+
 	};
 }
 

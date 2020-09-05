@@ -294,7 +294,7 @@ namespace GameEngine
 				//Resize The OpenGL Window
 				if (wglGetCurrentDC() && wglGetCurrentContext())
 				{
-					//Engine::getEngine().ResizeWindow(LOWORD(lParam), HIWORD(lParam));
+					Engine::getRenderer().ResizeWindow(LOWORD(lParam), HIWORD(lParam));
 				}
 			} break;
 			case WM_CLOSE:

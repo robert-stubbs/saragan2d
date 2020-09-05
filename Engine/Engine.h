@@ -59,6 +59,7 @@ namespace GameEngine {
 			std::string WindowName = "";
 			int WindowWidth = 0;
 			int WindowHeight = 0;
+			bool loaded = false;
 
 			inline void SetPlatform(PLATFORM platform) { 
 				_platform = platform; 
