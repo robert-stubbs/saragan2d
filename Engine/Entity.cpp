@@ -1,6 +1,8 @@
 #include "EnginePCH.h"
 #include "Entity.h"
 #include "Component.h"
+#include "Engine.h"
+#include "SystemManager.h"
 
 namespace GameEngine
 {
@@ -42,5 +44,8 @@ namespace GameEngine
 		comp->SetEntity(this);
 		EntityComponentPtr newComp = EntityComponentPtr(comp);
 		m_components.push_back(newComp);
+
+		Engine::get().System->AddComponentClass(comp->m_type,newComp.get());
+
 	}
 }

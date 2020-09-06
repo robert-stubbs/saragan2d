@@ -11,6 +11,7 @@
 #include "EventManager.h"
 
 #include "StateMachine.h"
+#include "EntityManager.h"
 #include "SystemManager.h"
 #include "Font.h"
 #include "Input.h"
@@ -41,7 +42,7 @@ namespace GameEngine {
 		public:
 			//
 			SystemManager* System;
-			//EntityManager* EntityMgr;
+			EntityManager* _entity_mgr;
 
 			//Font* font;
 
@@ -91,6 +92,11 @@ namespace GameEngine {
 			void TestFunction();
 
 			void AddShaderDef(std::shared_ptr<ShaderDef> _def);
+
+			static EntityManager* EntityMgr()
+			{
+				return get()._entity_mgr;
+			}
 
 			static StateMachine& state() {
 				return get().GameFSM;

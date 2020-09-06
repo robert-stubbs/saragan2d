@@ -7,7 +7,6 @@ namespace GameEngine
 	class Component;
 
 	typedef std::shared_ptr<System> SharedSystemPtr;
-	typedef std::map< std::string, SharedSystemPtr > SystemBank;
 
 	class SystemManager
 	{
@@ -36,8 +35,7 @@ namespace GameEngine
 
 	private:
 		//map<string, cSystem> m_systems;
-		SystemBank sysBank;
-		SystemBank::iterator iter;
+		std::map<std::string, SharedSystemPtr> sysBank;
 	};
 }
 

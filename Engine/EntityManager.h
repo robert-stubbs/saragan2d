@@ -1,25 +1,24 @@
 #ifndef _ENTITY_MANAGER_H_
 #define _ENTITY_MANAGER_H_
 
-#include "Entity.h"
-
 namespace GameEngine {
 
+	class Entity;
 
-	typedef std::shared_ptr<Entity> SharedEntityPtr;
+	typedef std::shared_ptr<Entity> EntityPtr;
 
 	class EntityManager
 	{
-	public:
-		std::vector<SharedEntityPtr> m_entities;
+		public:
+			std::vector<EntityPtr> m_entities;
 
-		EntityManager();
-		~EntityManager();
+			EntityManager();
+			~EntityManager();
 
-		std::string RegisterEntity(Entity* Ent);
+			std::string RegisterEntity(Entity* Ent);
 
-		Entity* getEntity(std::string EntName);
-		void RemoveEntity(std::string Name);
+			Entity* getEntity(std::string EntName);
+			void RemoveEntity(std::string Name);
 	};
 }
 

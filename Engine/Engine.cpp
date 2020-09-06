@@ -52,12 +52,12 @@ namespace GameEngine {
 			std::string ft = asset_dir + "Font/Vera.ttf";
 			Font::Get().LoadFont(ft, 30);
 
-			//System = new SystemManager();
-			//EntityMgr = new EntityManager();
+			System = new SystemManager();
+			_entity_mgr = new EntityManager();
 
 			_gui = new GUI(RenderEngines::OpenGL);
 
-			//System->Init();
+			System->Init();
 
 			GameFSM = StateMachine();
 			return true;
@@ -113,7 +113,7 @@ namespace GameEngine {
 	{
 		cam->Update(DeltaTime);
 
-		//System->Update(DeltaTime);
+		System->Update(DeltaTime);
 		
 
 		GameFSM.Update(DeltaTime);
@@ -126,7 +126,12 @@ namespace GameEngine {
 	{
 		getRenderer().RenderStart();
 
+		System->Render();
 		GameFSM.Render();
+
+		System->RenderAnim();
+
+		System->RenderUI();
 		GameFSM.RenderOrth();
 
 		//GUI::Get().DemoTest(current_dt > 0 ? current_dt : 1.0f/60.0f);
@@ -136,6 +141,7 @@ namespace GameEngine {
 
 	bool Engine::Cleanup()
 	{
+		System->CleanUp();
 		getRenderer().Cleanup();
 
 		return true;

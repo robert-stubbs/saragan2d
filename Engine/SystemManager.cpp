@@ -1,7 +1,7 @@
 #include "EnginePCH.h"
 #include "SystemManager.h"
 
-//#include "Entity.h"
+#include "Entity.h"
 #include "Engine.h"
 //#include "EntityManager.h"
 
@@ -51,9 +51,8 @@ namespace GameEngine
 
 	void SystemManager::Update(float dt)
 	{
-		for (iter = sysBank.begin(); iter != sysBank.end(); iter++)
-		{
-			(*iter).second->Update(dt);
+		for (std::pair<std::string, SharedSystemPtr> ptr: sysBank) {
+			ptr.second->Update(dt);
 		}
 
 		//boost::thread positionSystem = boost::thread(&cPositionSystem::Update, (cPositionSystem*)SysMgr->getSystem("position"), dt);
@@ -64,34 +63,30 @@ namespace GameEngine
 
 	void SystemManager::Render()
 	{
-
-		for (iter = sysBank.begin(); iter != sysBank.end(); iter++)
-		{
-			if (!(*iter).second->isAnim && !(*iter).second->isUI)
+		for (std::pair<std::string, SharedSystemPtr> ptr : sysBank) {
+			if (!ptr.second->isAnim && !ptr.second->isUI)
 			{
-				(*iter).second->Render();
+				ptr.second->Render();
 			}
 		}
 	}
 
 	void SystemManager::RenderAnim()
 	{
-		for (iter = sysBank.begin(); iter != sysBank.end(); iter++)
-		{
-			if ((*iter).second->isAnim && !(*iter).second->isUI)
+		for (std::pair<std::string, SharedSystemPtr> ptr : sysBank) {
+			if (ptr.second->isAnim && !ptr.second->isUI)
 			{
-				(*iter).second->RenderAnim();
+				ptr.second->RenderAnim();
 			}
 		}
 	}
 
 	void SystemManager::RenderUI()
 	{
-		for (iter = sysBank.begin(); iter != sysBank.end(); iter++)
-		{
-			if (!(*iter).second->isAnim && (*iter).second->isUI)
+		for (std::pair<std::string, SharedSystemPtr> ptr : sysBank) {
+			if (!ptr.second->isAnim && ptr.second->isUI)
 			{
-				(*iter).second->RenderUI();
+				ptr.second->RenderUI();
 			}
 		}
 	}
@@ -100,22 +95,17 @@ namespace GameEngine
 	bool SystemManager::AddSystem(System* system)
 	{
 		//add check to see if system already exists
-		//cErrorLogger::Log().WriteToConsole("> Add System: ");
-		//cErrorLogger::Log().WriteToConsole(system->SystemName);
 		std::shared_ptr<System> newSystem(system);
 		sysBank[system->SystemName] = newSystem;
-
-		//cErrorLogger::Log().WriteToConsole("..Done\n");
 		return true;
 	}
 
 	System* SystemManager::getSystem(std::string Name)
 	{
-		for (iter = sysBank.begin(); iter != sysBank.end(); iter++)
-		{
-			if ((*iter).first == Name)
+		for (std::pair<std::string, SharedSystemPtr> ptr : sysBank) {
+			if (ptr.first == Name)
 			{
-				return iter->second.get();
+				return ptr.second.get();
 			}
 		}
 
@@ -124,9 +114,8 @@ namespace GameEngine
 
 	bool SystemManager::RemoveSystem(std::string Name)
 	{
-		for (iter = sysBank.begin(); iter != sysBank.end(); iter++)
-		{
-			if ((*iter).first == Name)
+		for (std::pair<std::string, SharedSystemPtr> ptr : sysBank) {
+			if (ptr.first == Name)
 			{
 				sysBank.erase(Name);
 			}
@@ -137,10 +126,11 @@ namespace GameEngine
 
 	void SystemManager::RemoveComponentsByHandle(std::string handle)
 	{
-		for (iter = sysBank.begin(); iter != sysBank.end(); iter++)
-		{
-			std::string name = (*iter).first;
-			sysBank[name]->RemoveComponent(handle);
+		for (std::pair<std::string, SharedSystemPtr> ptr : sysBank) {
+			if (ptr.first == handle)
+			{
+				ptr.second->RemoveComponent(handle);
+			}
 		}
 	}
 
@@ -149,20 +139,12 @@ namespace GameEngine
 		System* sys = getSystem(SystemName);
 
 		sys->AddComponentObject(comp);
-
-	/*	Entity* Ent = Engine::getEngine().EntityMgr->getEntity(comp->m_handle);
-		if (Ent != nullptr)
-		{
-			Ent->addComponent(comp);
-		}*/
 	}
 
 	void SystemManager::CleanUp()
 	{
-		// call clean up on all systems
-		for (iter = sysBank.begin(); iter != sysBank.end(); iter++)
-		{
-			iter->second->CleanUp();
+		for (std::pair<std::string, SharedSystemPtr> ptr : sysBank) {
+			ptr.second->CleanUp();
 		}
 
 		sysBank.clear();

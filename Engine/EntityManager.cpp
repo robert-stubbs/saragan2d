@@ -21,7 +21,7 @@ namespace GameEngine
 
 		if (!test)
 		{
-			SharedEntityPtr newEnt = SharedEntityPtr(Ent);
+			EntityPtr newEnt = EntityPtr(Ent);
 			m_entities.push_back(newEnt);
 
 			return Ent->m_handle;
@@ -31,7 +31,7 @@ namespace GameEngine
 
 	Entity* EntityManager::getEntity(std::string EntName)
 	{
-		for (std::shared_ptr<Entity> ptr : m_entities) {
+		for (EntityPtr ptr : m_entities) {
 			if (ptr->m_handle == EntName)
 			{
 				return ptr.get();
@@ -43,7 +43,7 @@ namespace GameEngine
 
 	void EntityManager::RemoveEntity(std::string Name)
 	{
-		for (std::vector<SharedEntityPtr>::iterator iter = m_entities.begin(); iter != m_entities.end(); iter++) {
+		for (std::vector<EntityPtr>::iterator iter = m_entities.begin(); iter != m_entities.end(); iter++) {
 			if ((*iter)->m_handle == Name)
 			{
 				//Engine::getEngine().System->RemoveComponentsByHandle(Name);
