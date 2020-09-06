@@ -144,13 +144,18 @@ namespace GameEngine {
 	void Engine::KeyDown(int Key)
 	{
 		getGUI().KeyDown(Key);
-		GameFSM.KeyDown(Key);
+
+		if (!ImGui::IsAnyWindowFocused() && !ImGui::IsAnyItemFocused()) {
+			GameFSM.KeyDown(Key);
+		}
 	}
 
 	void Engine::KeyUp(int Key)
 	{
 		getGUI().KeyUp(Key);
-		GameFSM.KeyUp(Key);
+		if (!ImGui::IsAnyWindowFocused() && !ImGui::IsAnyItemFocused()) {
+			GameFSM.KeyUp(Key);
+		}
 	}
 
 	void Engine::MouseDown(int button)

@@ -17,6 +17,12 @@ namespace GameEngine
 		virtual void NewScene(float dt) = 0;
 		virtual void EndAndRender() = 0;
 
+		virtual void Begin(std::string name) = 0;
+		virtual void End() = 0;
+
+		virtual void BeginChild(std::string name) = 0;
+		virtual void EndChild() = 0;
+
 		virtual void ResizeWindow(int width, int height) = 0;
 
 		virtual void KeyDown(int Key) = 0;

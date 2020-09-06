@@ -19,6 +19,12 @@ namespace GameEngine
 		virtual void NewScene(float dt) override;
 		virtual void EndAndRender() override;
 
+		virtual void Begin(std::string name) override;
+		virtual void End() override;
+
+		virtual void BeginChild(std::string name) override;
+		virtual void EndChild() override;
+
 		virtual void ResizeWindow(int width, int height) override;
 
 		virtual void KeyDown(int Key);

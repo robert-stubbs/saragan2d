@@ -88,6 +88,26 @@ namespace GameEngine
         ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
     }
 
+    void OpenGLGUIPlatform::Begin(std::string name)
+    {
+        ImGui::Begin(name.c_str());
+    }
+
+    void OpenGLGUIPlatform::End()
+    {
+        ImGui::End();
+    }
+
+    void OpenGLGUIPlatform::BeginChild(std::string name)
+    {
+        ImGui::BeginChild(name.c_str());
+    }
+
+    void OpenGLGUIPlatform::EndChild()
+    {
+        ImGui::EndChild();
+    }
+
     void OpenGLGUIPlatform::ResizeWindow(int width, int height)
     {
         ImGuiIO& io = ImGui::GetIO();
