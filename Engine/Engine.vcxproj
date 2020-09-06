@@ -488,6 +488,7 @@
     <ClInclude Include="FontPlatform.h" />
     <ClInclude Include="GUI.h" />
     <ClInclude Include="GUIPlatform.h" />
+    <ClInclude Include="Location.h" />
     <ClInclude Include="Sound.h" />
     <ClInclude Include="StaticBatchRenderer.h" />
     <ClInclude Include="imgui_impl_opengl3.h" />
@@ -554,6 +555,7 @@
     <ClCompile Include="InputWindows.cpp" />
     <ClCompile Include="Layer.cpp" />
     <ClCompile Include="Line.cpp" />
+    <ClCompile Include="Location.cpp" />
     <ClCompile Include="Map.cpp" />
     <ClCompile Include="Object.cpp" />
     <ClCompile Include="OpenGLFont.cpp" />

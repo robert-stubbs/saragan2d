@@ -1451,6 +1451,9 @@
     <ClInclude Include="Sound.h">
       <Filter>Components\Sound</Filter>
     </ClInclude>
+    <ClInclude Include="Location.h">
+      <Filter>Components\Location</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="EnginePCH.cpp" />
@@ -1607,6 +1610,9 @@
     </ClCompile>
     <ClCompile Include="Sound.cpp">
       <Filter>Components\Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="Location.cpp">
+      <Filter>Components\Location</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
