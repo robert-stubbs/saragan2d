@@ -1454,6 +1454,12 @@
     <ClInclude Include="Location.h">
       <Filter>Components\Location</Filter>
     </ClInclude>
+    <ClInclude Include="Brain.h">
+      <Filter>Components\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="Behaviour.h">
+      <Filter>Components\AI</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="EnginePCH.cpp" />
@@ -1613,6 +1619,12 @@
     </ClCompile>
     <ClCompile Include="Location.cpp">
       <Filter>Components\Location</Filter>
+    </ClCompile>
+    <ClCompile Include="Brain.cpp">
+      <Filter>Components\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="Behaviour.cpp">
+      <Filter>Components\AI</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
