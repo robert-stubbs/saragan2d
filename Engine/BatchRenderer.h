@@ -9,7 +9,7 @@ namespace GameEngine
 
 	class BatchRenderer
 	{
-		private:
+		protected:
 			int MaxQuadSize;
 			int CurrentQuadSize;
 			unsigned int VAO;

@@ -160,6 +160,9 @@
     <Filter Include="ThirdParty\ImGUI">
       <UniqueIdentifier>{d214ac3d-99f8-4a09-b724-f8ce04656d34}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Textures">
+      <UniqueIdentifier>{6c7e2375-757a-42e1-9ec8-ae258be5d044}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\ThirdParty\glew\include\GL\eglew.h">
@@ -1331,12 +1334,6 @@
     <ClInclude Include="cIni.h">
       <Filter>SORT</Filter>
     </ClInclude>
-    <ClInclude Include="lodepng.h">
-      <Filter>SORT</Filter>
-    </ClInclude>
-    <ClInclude Include="Texture.h">
-      <Filter>SORT</Filter>
-    </ClInclude>
     <ClInclude Include="System.h">
       <Filter>Systems\Base</Filter>
     </ClInclude>
@@ -1439,6 +1436,12 @@
     <ClInclude Include="imgui_impl_opengl3.h">
       <Filter>Engine Platform\GUI\Renderer\OpenGL</Filter>
     </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>Textures</Filter>
+    </ClInclude>
+    <ClInclude Include="lodepng.h">
+      <Filter>Textures</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="EnginePCH.cpp" />
@@ -1498,12 +1501,6 @@
       <Filter>States</Filter>
     </ClCompile>
     <ClCompile Include="cIni.cpp">
-      <Filter>SORT</Filter>
-    </ClCompile>
-    <ClCompile Include="lodepng.cpp">
-      <Filter>SORT</Filter>
-    </ClCompile>
-    <ClCompile Include="Texture.cpp">
       <Filter>SORT</Filter>
     </ClCompile>
     <ClCompile Include="System.cpp">
@@ -1589,6 +1586,12 @@
     </ClCompile>
     <ClCompile Include="imgui_impl_opengl3.cpp">
       <Filter>Engine Platform\GUI\Renderer\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="lodepng.cpp">
+      <Filter>Textures</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>Textures</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

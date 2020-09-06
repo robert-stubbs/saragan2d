@@ -129,7 +129,7 @@ namespace GameEngine {
 		GameFSM.Render();
 		GameFSM.RenderOrth();
 
-		GUI::Get().DemoTest(current_dt > 0 ? current_dt : 1.0f/60.0f);
+		//GUI::Get().DemoTest(current_dt > 0 ? current_dt : 1.0f/60.0f);
 
 		getContext().SwapContextBuffers();
 	}
@@ -161,19 +161,28 @@ namespace GameEngine {
 	void Engine::MouseDown(int button)
 	{
 		getGUI().MouseDown(button);
-		GameFSM.MouseDown(button);
+
+		if (!ImGui::IsAnyWindowFocused() && !ImGui::IsAnyItemFocused()) {
+			GameFSM.MouseDown(button);
+		}
 	}
 
 	void Engine::MouseUp(int button)
 	{
 		getGUI().MouseUp(button);
-		GameFSM.MouseUp(button);
+
+		if (!ImGui::IsAnyWindowFocused() && !ImGui::IsAnyItemFocused()) {
+			GameFSM.MouseUp(button);
+		}
 	}
 
 	void Engine::MouseMove(float x, float y)
 	{
 		getGUI().MouseMove(x,y);
-		GameFSM.MouseMove(x,y);
+
+		if (!ImGui::IsAnyWindowFocused() && !ImGui::IsAnyItemFocused()) {
+			GameFSM.MouseMove(x, y);
+		}
 	}
 
 	void Engine::AddChar(unsigned int c, bool UTF16)
