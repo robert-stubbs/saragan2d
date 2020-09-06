@@ -7,7 +7,7 @@ namespace GameEngine
 
 	Sound::Sound()
 	{
-		m_type = "sound";
+		m_type = "SOUND";
 		m_soundHandle = "";
 		isLoaded = false;
 	}

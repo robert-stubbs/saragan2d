@@ -7,6 +7,7 @@ namespace GameEngine
 	Text::Text() : Component()
 	{
 
+		m_type = "TEXT";
 	}
 
 	Text::~Text()

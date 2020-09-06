@@ -17,6 +17,7 @@ namespace GameEngine {
 
 
 		*/
+		m_type = "SPRITE";
 		AnimTime = 0.0f;
 		last_frame = 0;
 		current_frame = 0;

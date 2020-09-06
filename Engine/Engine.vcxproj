@@ -469,6 +469,7 @@
     <ClInclude Include="..\ThirdParty\glm\include\glm\vec3.hpp" />
     <ClInclude Include="..\ThirdParty\glm\include\glm\vec4.hpp" />
     <ClInclude Include="..\ThirdParty\glm\include\glm\vector_relational.hpp" />
+    <ClInclude Include="AISystem.h" />
     <ClInclude Include="BatchRenderer.h" />
     <ClInclude Include="Behaviour.h" />
     <ClInclude Include="Brain.h" />
@@ -493,7 +494,10 @@
     <ClInclude Include="GUI.h" />
     <ClInclude Include="GUIPlatform.h" />
     <ClInclude Include="Location.h" />
+    <ClInclude Include="PositionSystem.h" />
     <ClInclude Include="Sound.h" />
+    <ClInclude Include="SoundSystem.h" />
+    <ClInclude Include="SpriteSystem.h" />
     <ClInclude Include="StaticBatchRenderer.h" />
     <ClInclude Include="imgui_impl_opengl3.h" />
     <ClInclude Include="Input.h" />
@@ -531,6 +535,7 @@
     <ClInclude Include="standards.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AISystem.cpp" />
     <ClCompile Include="BatchRenderer.cpp" />
     <ClCompile Include="Behaviour.cpp" />
     <ClCompile Include="Brain.cpp" />
@@ -570,13 +575,16 @@
     <ClCompile Include="OpenGLGUIPlatform.cpp" />
     <ClCompile Include="OpenGLRenderEngine.cpp" />
     <ClCompile Include="OpenGLShader.cpp" />
+    <ClCompile Include="PositionSystem.cpp" />
     <ClCompile Include="RenderEngineBase.cpp" />
     <ClCompile Include="Renderer.cpp" />
     <ClCompile Include="Shader.cpp" />
     <ClCompile Include="ShaderDef.cpp" />
     <ClCompile Include="ShaderManager.cpp" />
     <ClCompile Include="Sound.cpp" />
+    <ClCompile Include="SoundSystem.cpp" />
     <ClCompile Include="Sprite.cpp" />
+    <ClCompile Include="SpriteSystem.cpp" />
     <ClCompile Include="Square.cpp" />
     <ClCompile Include="State.cpp" />
     <ClCompile Include="StateMachine.cpp" />

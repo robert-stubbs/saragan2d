@@ -7,7 +7,7 @@ namespace GameEngine {
 
 	Location::Location()
 	{
-		m_type = "Location";
+		m_type = "LOCATION";
 		x = 0.0f;
 		y = 0.0f;
 		z = 0.0f;

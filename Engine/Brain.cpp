@@ -9,7 +9,7 @@ namespace GameEngine
 	{
 		States.clear();
 		Passives.clear();
-		m_type = "brain";
+		m_type = "AI";
 	}
 
 

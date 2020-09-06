@@ -10,9 +10,10 @@
 //#include "cErrorLogger.h"
 
 //#include "ModelSystem.h"
-//#include "PositionSystem.h"
-//#include "AISystem.h"
-//#include "SoundSystem.h"
+#include "PositionSystem.h"
+#include "AISystem.h"
+#include "SpriteSystem.h"
+#include "SoundSystem.h"
 
 namespace GameEngine
 {
@@ -39,25 +40,22 @@ namespace GameEngine
 		//SysMgr->AddSystem("render");
 		//SysMgr->AddSystem("collision");
 		//SysMgr->AddSystem("camera");
-		//SysMgr->AddSystem("sprite");
 
 
 		//AddSystem(new GUISystem(true));
-		//AddSystem(new SoundSystem());
-		//AddSystem(new AISystem());
+		AddSystem(new SoundSystem());
+		AddSystem(new AISystem());
+		AddSystem(new SpriteSystem());
 		//AddSystem(new ModelSystem(false, true));
-		//AddSystem(new PositionSystem());
+		AddSystem(new PositionSystem());
 	}
 
 	void SystemManager::Update(float dt)
 	{
 		for (std::pair<std::string, SharedSystemPtr> ptr: sysBank) {
-			ptr.second->Update(dt);
+			//ptr.second->Update(dt);
+			std::future<void> _fut = std::async(std::launch::async, std::bind(&System::Update, ptr.second, dt));
 		}
-
-		//boost::thread positionSystem = boost::thread(&cPositionSystem::Update, (cPositionSystem*)SysMgr->getSystem("position"), dt);
-
-		//positionSystem.join();
 	}
 
 
