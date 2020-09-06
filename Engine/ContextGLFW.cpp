@@ -57,6 +57,7 @@ namespace GameEngine
 		glfwSetCursorPosCallback(window, cursor_position_callback);
 
 		glfwSetMouseButtonCallback(window, mouse_button_callback);
+		glfwSetCharCallback(window, char_callback);
 		// do mouse callback as well
 		//glfwSetCursorPosCallback && glfwSetMouseCallback
 
@@ -170,5 +171,17 @@ namespace GameEngine
 
 			return Engine::get().MouseUp(button);
 		}
+	}
+
+	void ContextGLFW::char_callback(GLFWwindow* window, unsigned int c)
+	{
+		ContextGLFW* windowManager = static_cast<ContextGLFW*>(glfwGetWindowUserPointer(window));
+		return windowManager->CharCallback(window, c);
+	}
+
+	void ContextGLFW::CharCallback(GLFWwindow* window, unsigned int c)
+	{
+		ImGuiIO& io = ImGui::GetIO();
+		io.AddInputCharacter(c);
 	}
 }

@@ -143,27 +143,37 @@ namespace GameEngine {
 
 	void Engine::KeyDown(int Key)
 	{
+		getGUI().KeyDown(Key);
 		GameFSM.KeyDown(Key);
 	}
 
 	void Engine::KeyUp(int Key)
 	{
+		getGUI().KeyUp(Key);
 		GameFSM.KeyUp(Key);
 	}
 
 	void Engine::MouseDown(int button)
 	{
+		getGUI().MouseDown(button);
 		GameFSM.MouseDown(button);
 	}
 
 	void Engine::MouseUp(int button)
 	{
+		getGUI().MouseUp(button);
 		GameFSM.MouseUp(button);
 	}
 
 	void Engine::MouseMove(float x, float y)
 	{
+		getGUI().MouseMove(x,y);
 		GameFSM.MouseMove(x,y);
+	}
+
+	void Engine::AddChar(unsigned int c, bool UTF16)
+	{
+		getGUI().AddChar(c, UTF16);
 	}
 
 	void Engine::AddShaderDef(std::shared_ptr<ShaderDef> _def)

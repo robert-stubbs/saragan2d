@@ -86,6 +86,7 @@ namespace GameEngine {
 			void MouseDown(int button);
 			void MouseUp(int button);
 			void MouseMove(float x, float y);
+			void AddChar(unsigned int c, bool UTF16 = false);
 
 			void TestFunction();
 

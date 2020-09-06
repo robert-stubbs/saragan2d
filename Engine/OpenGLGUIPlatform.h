@@ -20,6 +20,13 @@ namespace GameEngine
 		virtual void EndAndRender() override;
 
 		virtual void ResizeWindow(int width, int height) override;
+
+		virtual void KeyDown(int Key);
+		virtual void KeyUp(int Key);
+		virtual void MouseDown(int button);
+		virtual void MouseUp(int button);
+		virtual void MouseMove(float x, float y);
+		virtual void AddChar(unsigned int c, bool UTF16 = false);
 	};
 }
 

@@ -19,6 +19,12 @@ namespace GameEngine
 
 		virtual void ResizeWindow(int width, int height) = 0;
 
+		virtual void KeyDown(int Key) = 0;
+		virtual void KeyUp(int Key) = 0;
+		virtual void MouseDown(int button) = 0;
+		virtual void MouseUp(int button) = 0;
+		virtual void MouseMove(float x, float y) = 0;
+		virtual void AddChar(unsigned int c, bool UTF16) = 0;
 	};
 }
 

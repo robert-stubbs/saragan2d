@@ -289,6 +289,15 @@ namespace GameEngine
 				ScreenToClient(hWnd, &mouse);
 				Engine::get().MouseMove((float)mouse.x, (float)mouse.y);
 			} break;
+			case WM_CHAR:
+			{
+				ImGuiIO& io = ImGui::GetIO();
+				// You can also use ToAscii()+GetKeyboardState() to retrieve characters.
+				if (wParam > 0 && wParam < 0x10000)
+				{
+					Engine::get().AddChar((unsigned short)wParam, true);
+				}
+			} break;
 			case WM_SIZE:
 			{
 				//Resize The OpenGL Window

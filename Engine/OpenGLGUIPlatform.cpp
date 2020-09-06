@@ -79,7 +79,6 @@ namespace GameEngine
 
         ImGui_ImplOpenGL3_NewFrame();
         ImGui::NewFrame();
-        //ImGui::SetNextWindowPos(ImVec2(0, 0));
         ImGui::SetNextWindowSize(io.DisplaySize);
     }
 
@@ -91,7 +90,49 @@ namespace GameEngine
 
     void OpenGLGUIPlatform::ResizeWindow(int width, int height)
     {
-        ImGuiIO& io = ImGui::GetIO(); (void)io;
+        ImGuiIO& io = ImGui::GetIO();
         io.DisplaySize = ImVec2((float)Engine::get().WindowWidth, (float)Engine::get().WindowHeight);
+    }
+
+    void OpenGLGUIPlatform::KeyDown(int Key)
+    {
+        ImGuiIO& io = ImGui::GetIO();
+        io.KeysDown[Key] = true;
+    }
+
+    void OpenGLGUIPlatform::KeyUp(int Key)
+    {
+        ImGuiIO& io = ImGui::GetIO();
+        io.KeysDown[Key] = false;
+    }
+
+    void OpenGLGUIPlatform::MouseDown(int button)
+    {
+        ImGuiIO& io = ImGui::GetIO();
+        io.MouseDown[button] = true;
+    }
+
+    void OpenGLGUIPlatform::MouseUp(int button)
+    {
+        ImGuiIO& io = ImGui::GetIO();
+        io.MouseDown[button] = false;
+    }
+
+    void OpenGLGUIPlatform::MouseMove(float x, float y)
+    {
+        ImGuiIO& io = ImGui::GetIO();
+        io.MousePos = ImVec2(x, y);
+    }
+
+    void OpenGLGUIPlatform::AddChar(unsigned int c, bool UTF16)
+    {
+        ImGuiIO& io = ImGui::GetIO();
+
+        if (UTF16) {
+            io.AddInputCharacterUTF16((unsigned short)c);
+        }
+        else {
+            io.AddInputCharacter(c);
+        }
     }
 }
