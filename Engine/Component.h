@@ -7,6 +7,7 @@ namespace GameEngine
 	class Component
 	{
 		public:
+			std::string m_type;
 			std::string m_handle;
 			std::string m_shader;
 			bool loaded = false;

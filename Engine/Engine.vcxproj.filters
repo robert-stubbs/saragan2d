@@ -163,6 +163,9 @@
     <Filter Include="Textures">
       <UniqueIdentifier>{6c7e2375-757a-42e1-9ec8-ae258be5d044}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Sound">
+      <UniqueIdentifier>{2129bb13-7ce2-4c77-85ce-1666480a14c4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\ThirdParty\glew\include\GL\eglew.h">
@@ -1442,6 +1445,12 @@
     <ClInclude Include="lodepng.h">
       <Filter>Textures</Filter>
     </ClInclude>
+    <ClInclude Include="StaticBatchRenderer.h">
+      <Filter>Batch</Filter>
+    </ClInclude>
+    <ClInclude Include="Sound.h">
+      <Filter>Components\Sound</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="EnginePCH.cpp" />
@@ -1592,6 +1601,12 @@
     </ClCompile>
     <ClCompile Include="Texture.cpp">
       <Filter>Textures</Filter>
+    </ClCompile>
+    <ClCompile Include="StaticBatchRenderer.cpp">
+      <Filter>Batch</Filter>
+    </ClCompile>
+    <ClCompile Include="Sound.cpp">
+      <Filter>Components\Sound</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
