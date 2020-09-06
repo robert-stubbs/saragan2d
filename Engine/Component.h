@@ -1,9 +1,10 @@
 #ifndef _COMPONENT_H_
 #define _COMPONENT_H_
 
-
 namespace GameEngine
 {
+	class Entity;
+
 	class Component
 	{
 		public:
@@ -12,16 +13,21 @@ namespace GameEngine
 			std::string m_shader;
 			bool loaded = false;
 
+			Entity* e;
+
 			Component();
 			virtual ~Component();
 
-			virtual bool Init() = 0;
+			virtual bool Init() { return true; };
 
-			virtual void Update(float dt) = 0;
+			virtual void Update(float dt) {};
 
-			virtual void Render() = 0;
+			virtual void Render() {};
 
-			virtual void CleanUp() = 0;
+			virtual void CleanUp() {};
+
+			inline Entity* GetEntity() { return e; }
+			inline void SetEntity(Entity* ent) { e = ent; }
 	};
 }
 

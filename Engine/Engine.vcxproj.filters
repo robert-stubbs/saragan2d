@@ -166,6 +166,9 @@
     <Filter Include="Sound">
       <UniqueIdentifier>{2129bb13-7ce2-4c77-85ce-1666480a14c4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Entity">
+      <UniqueIdentifier>{4507434a-b728-4fc5-a18e-e564796e518d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\ThirdParty\glew\include\GL\eglew.h">
@@ -1460,6 +1463,12 @@
     <ClInclude Include="Behaviour.h">
       <Filter>Components\AI</Filter>
     </ClInclude>
+    <ClInclude Include="Entity.h">
+      <Filter>Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityManager.h">
+      <Filter>Entity</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="EnginePCH.cpp" />
@@ -1625,6 +1634,12 @@
     </ClCompile>
     <ClCompile Include="Behaviour.cpp">
       <Filter>Components\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity.cpp">
+      <Filter>Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityManager.cpp">
+      <Filter>Entity</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
