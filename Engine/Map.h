@@ -25,6 +25,13 @@ namespace GameEngine
 
 			bool _loaded;
 
+			int distance_load;
+
+			int min_x;
+			int min_y;
+			int max_x;
+			int max_y;
+
 		public:
 			Map();
 			~Map();

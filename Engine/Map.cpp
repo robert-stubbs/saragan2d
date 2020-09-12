@@ -8,6 +8,11 @@ namespace GameEngine
 	Map::Map()
 	{
 		_batch = BatchRenderer("DEFAULT2D");
+		distance_load = 5;
+		min_x = 0;
+		min_y = 0;
+		max_x = 0;
+		max_y = 0;
 	}
 
 	Map::~Map()
@@ -155,6 +160,32 @@ namespace GameEngine
 
 		// for example when a player is moving you want to update
 		// render a different part of the map
+
+		glm::vec3 look = Engine::getRenderer().GetWorldPos2D((Engine::get().WindowWidth / 2), (Engine::get().WindowHeight / 2), Engine::get().cam->ProjectionMatrix, Engine::get().cam->ViewMatrix);
+
+		int mod_x = (int)look.x % _definition.quad_width;
+		int mod_y = (int)look.y % _definition.quad_height;
+
+		int loc_x = (int)(look.x - mod_x) / _definition.quad_width;
+		int loc_y = (int)(look.y - mod_y) / _definition.quad_height;
+
+		loc_x = loc_x < 0 ? 0 : loc_x;
+		loc_x = loc_x > _definition.map_width ? _definition.map_width : loc_x;
+
+		loc_y = loc_y < 0 ? 0 : loc_y;
+		loc_y = loc_y > _definition.map_height ? _definition.map_height : loc_y;
+
+		min_x = loc_x - distance_load;
+		max_x = loc_x + distance_load;
+
+		min_y = loc_y - distance_load;
+		max_y = loc_y + distance_load;
+
+		min_y = min_y < 0 ? 0 : min_y;
+		min_x = min_x < 0 ? 0 : min_x;
+
+		max_x = max_x > _definition.map_height ? _definition.map_height : max_x;
+		max_y = max_y > _definition.map_height ? _definition.map_height : max_y;
 	}
 
 	void Map::Render()
@@ -180,13 +211,12 @@ namespace GameEngine
 			Engine::getRenderer().BindTextureBuffer(_textures[0].TextureID);
 		}
 
-		//	
 		for (int i = 0; i < _definition.number_of_layers; i++)
 		{
 			_batch.BeginBatch();
-			for (int x = 0; x < _definition.map_width; x++)
+			for (int x = min_x; x < max_x; x++)
 			{
-				for (int y = 0; y < _definition.map_height; y++)
+				for (int y = min_y; y < max_y; y++)
 				{
 					_batch.AddQuad(_quads[i][x][y]);
 				}
