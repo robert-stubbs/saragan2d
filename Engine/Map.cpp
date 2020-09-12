@@ -8,7 +8,7 @@ namespace GameEngine
 	Map::Map()
 	{
 		_batch = BatchRenderer("DEFAULT2D");
-		distance_load = 5;
+		distance_load = 10;
 		min_x = 0;
 		min_y = 0;
 		max_x = 0;
