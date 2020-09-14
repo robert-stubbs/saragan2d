@@ -29,6 +29,8 @@ namespace GameEngine
 
 		virtual void bind() = 0; // Bind our shader program
 		virtual void unbind() = 0; // Unbind our shader program
+
+		virtual void BindShaderStructure();
 	};
 
 }

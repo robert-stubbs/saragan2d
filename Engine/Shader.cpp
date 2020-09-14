@@ -1,5 +1,6 @@
 #include "EnginePCH.h"
 #include "Shader.h"
+#include "Engine.h"
 
 namespace GameEngine
 {
@@ -23,6 +24,16 @@ namespace GameEngine
 		for (ShaderBinding p : bindings)
 		{
 			locations[p.name] =  SortLocation(p);
+		}
+	}
+
+	void Shader::BindShaderStructure()
+	{
+		for (ShaderBinding p : bindings)
+		{
+			if (p.location_type == SHADER_TYPES::ATRIBLOCATION) {
+				Engine::getRenderer().VertexStructurePointerF(p.index, p.size, p.normalized, p.packagesize, p.offset);
+			}
 		}
 	}
 }

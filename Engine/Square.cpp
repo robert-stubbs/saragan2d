@@ -91,9 +91,7 @@ namespace GameEngine
 			Engine::getRenderer().GenerateVertexArrayBuffer(VAIO);
 			Engine::getRenderer().GenerateBuffer(VBO, verts);
 
-			Engine::getRenderer().VertexStructurePointerF(s["in_Position"], 4, GL_FALSE, sizeof(vert2D), 0);
-			Engine::getRenderer().VertexStructurePointerF(s["in_Texture"], 2, GL_TRUE, sizeof(vert2D), (GLvoid*)offsetof(vert2D, Text));
-			Engine::getRenderer().VertexStructurePointerF(s["in_Color"], 4, GL_TRUE, sizeof(vert2D), (GLvoid*)offsetof(vert2D, col));
+			s.BindShaderStructure();
 
 			Engine::getRenderer().UnbindBuffer();
 

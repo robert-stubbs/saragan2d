@@ -167,9 +167,7 @@ namespace GameEngine {
 		Engine::getRenderer().GenerateIndexBuffer(_anim.IBO, _anim.vert_indices);
 		Engine::getRenderer().GenerateBuffer(_anim.VBO, _anim.verts);
 
-		Engine::getRenderer().VertexStructurePointerF(s["in_Position"], 4, GL_FALSE, sizeof(vert2D), 0);
-		Engine::getRenderer().VertexStructurePointerF(s["in_Texture"], 2, GL_TRUE, sizeof(vert2D), (GLvoid*)offsetof(vert2D, Text));
-		Engine::getRenderer().VertexStructurePointerF(s["in_Color"], 4, GL_TRUE, sizeof(vert2D), (GLvoid*)offsetof(vert2D, col));
+		s.BindShaderStructure();
 
 		Engine::getRenderer().UnbindBuffer();
 		Engine::getRenderer().UnbindIndexBuffer();

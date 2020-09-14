@@ -26,6 +26,8 @@ namespace GameEngine {
 
 			Shader& BindNewShader(std::string name);
 
+			void BindShaderStructure();
+
 	};
 
 }

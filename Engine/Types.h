@@ -80,6 +80,10 @@ namespace GameEngine {
 		SHADER_TYPES location_type;
 		std::string name;
 		unsigned int index;
+		unsigned int size;
+		bool normalized;
+		unsigned int packagesize;
+		void* offset;
 	} ShaderBinding;
 
 	enum class DRAW_TYPE

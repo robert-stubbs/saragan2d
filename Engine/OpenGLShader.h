@@ -15,7 +15,7 @@ namespace GameEngine
 						
 			virtual void bind() override; // Bind our shader program
 			virtual void unbind() override; // Unbind our shader program
-			
+
 			virtual void LinkShader() override;
 			unsigned int SortLocation(ShaderBinding item) override;
 

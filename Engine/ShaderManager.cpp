@@ -61,4 +61,12 @@ namespace GameEngine {
 	{
 
 	}
+
+
+	void ShaderManager::BindShaderStructure()
+	{
+		if (_instance != nullptr) {
+			_instance->BindShaderStructure();
+		}
+	}
 }
