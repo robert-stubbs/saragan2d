@@ -25,7 +25,8 @@ namespace GameEngine {
 		WindowWidth = width;
 		WindowHeight = height;
 		fullscreen = isFullScreen;
-		cam = new Camera2D((float)width, (float)height);
+		default_cam = new Camera2D((float)width, (float)height);
+		current_cam = default_cam;
 	}
 
 	void Engine::TestFunction()
@@ -111,7 +112,7 @@ namespace GameEngine {
 
 	bool Engine::UpdateOrth(float DeltaTime)
 	{
-		cam->Update(DeltaTime);
+		default_cam->Update(DeltaTime);
 
 		System->Update(DeltaTime);
 		

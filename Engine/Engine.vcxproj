@@ -473,6 +473,7 @@
     <ClInclude Include="BatchRenderer.h" />
     <ClInclude Include="Behaviour.h" />
     <ClInclude Include="Brain.h" />
+    <ClInclude Include="Camera.h" />
     <ClInclude Include="Camera2D.h" />
     <ClInclude Include="Component.h" />
     <ClInclude Include="Context.h" />
@@ -539,6 +540,7 @@
     <ClCompile Include="BatchRenderer.cpp" />
     <ClCompile Include="Behaviour.cpp" />
     <ClCompile Include="Brain.cpp" />
+    <ClCompile Include="Camera.cpp" />
     <ClCompile Include="Camera2D.cpp" />
     <ClCompile Include="Component.cpp" />
     <ClCompile Include="Context.cpp" />

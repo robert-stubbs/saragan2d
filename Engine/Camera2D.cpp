@@ -3,6 +3,25 @@
 
 namespace GameEngine
 {
+	Camera2D::Camera2D()
+	{
+		toggleMouseLock = false;
+
+		speed = 0.20f;
+
+		dx = 0;
+		dz = 0;
+
+		LookAt = glm::vec3(0.0f, 0.0f, 0.0f);
+
+		aspect = (float)(800 / 600);
+		ProjectionMatrix = glm::ortho(0.0f, 800.0f, 600.0f, 0.0f, -10.0f, 10.0f);
+
+
+		ViewMatrix = glm::mat4(1.0f);
+		Pos = glm::mat4(1.0f);
+	}
+
 	Camera2D::Camera2D(float width, float height)
 	{
 		toggleMouseLock = false;
@@ -31,8 +50,6 @@ namespace GameEngine
 	{
 		//get current view matrix
 		glm::mat4 mat = ViewMatrix;
-
-		glm::vec3 strafe(mat[0][0], mat[1][0], mat[2][0]);
 
 		LookAt.x += (dx) * speed;
 		LookAt.y += (dy) * speed;

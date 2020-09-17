@@ -103,8 +103,8 @@ void MinesweeperState::RenderOrth() {
 	Engine::getShader().BindNewShader("DEFAULT2D");
 
 	Engine::getRenderer().UniformInt(Engine::getCurrentShader()["is_Text"], 0);
-	Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["projectionMatrix"], Engine::get().cam->ProjectionMatrix, 1, false);
-	Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["viewMatrix"], Engine::get().cam->ViewMatrix, 1, false);
+	Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["projectionMatrix"], Engine::get().default_cam->ProjectionMatrix, 1, false);
+	Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["viewMatrix"], Engine::get().default_cam->ViewMatrix, 1, false);
 	Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["modelMatrix"], glm::mat4(1.0f), 1, false);
 	for (int x = 0; x < xsize; x++)
 	{
@@ -167,7 +167,7 @@ void MinesweeperState::MouseUp(int button) {
 void MinesweeperState::MouseMove(float x, float y) {
 
 
-	glm::vec3 pt = Engine::getRenderer().GetWorldPos2D((int)x, (int)y, Engine::get().cam->ProjectionMatrix, Engine::get().cam->ViewMatrix);
+	glm::vec3 pt = Engine::getRenderer().GetWorldPos2D((int)x, (int)y, Engine::get().default_cam->ProjectionMatrix, Engine::get().default_cam->ViewMatrix);
 
 	mousex = (float)pt.x;
 	mousey = (float)pt.y;

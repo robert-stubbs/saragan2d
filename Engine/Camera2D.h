@@ -27,7 +27,7 @@ namespace GameEngine
 		glm::mat4 ProjectionMatrix;
 		glm::mat4 ViewMatrix;
 
-
+		Camera2D();
 		Camera2D(float width, float height);
 		~Camera2D(void);
 

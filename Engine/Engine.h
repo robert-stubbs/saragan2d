@@ -44,9 +44,11 @@ namespace GameEngine {
 			SystemManager* System;
 			EntityManager* _entity_mgr;
 
-			//Font* font;
 
-			Camera2D* cam;
+			Camera2D* default_cam;
+			Camera2D* current_cam;
+
+
 			~Engine();
 
 			float current_dt;
@@ -93,38 +95,25 @@ namespace GameEngine {
 
 			void AddShaderDef(std::shared_ptr<ShaderDef> _def);
 
-			static EntityManager* EntityMgr()
-			{
-				return get()._entity_mgr;
-			}
 
-			static StateMachine& state() {
-				return get().GameFSM;
-			}
+			static Camera2D* Cam() { return get().current_cam; }
+			static void SetCam(Camera2D* new_cam) { get().current_cam = new_cam; }
 
-			static GUIPlatform& getGUI() {
-				return get()._gui->Get();
-			}
+			static EntityManager* EntityMgr() {	return get()._entity_mgr; }
 
-			static ShaderManager& getShader() {
-				return get().shader_mgr;
-			}
+			static StateMachine& state() { return get().GameFSM; }
 
-			static Shader& getCurrentShader() {
-				return get().shader_mgr.Get();
-			}
+			static GUIPlatform& getGUI() { return get()._gui->Get(); }
 
-			static RenderEngineBase& getRenderer() {
-				return get().renderer.Get();
-			}
+			static ShaderManager& getShader() {	return get().shader_mgr; }
 
-			static Context& getContext() {
-				return get().ctx;
-			}
+			static Shader& getCurrentShader() { return get().shader_mgr.Get(); }
 
-			static EventManager& Events() {
-				return EventManager::Instance();
-			}
+			static RenderEngineBase& getRenderer() { return get().renderer.Get(); }
+
+			static Context& getContext() { return get().ctx; }
+
+			static EventManager& Events() {	return EventManager::Instance(); }
 
 			static Engine& get() {
 				//instantiate the engine

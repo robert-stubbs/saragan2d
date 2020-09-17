@@ -1,5 +1,5 @@
-#ifndef _SOUND_H_
-#define _SOUND_H_
+#ifndef _LOCATION_H_
+#define _LOCATION_H_
 
 #include "Types.h"
 #include "Component.h"

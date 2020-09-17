@@ -161,7 +161,7 @@ namespace GameEngine
 		// for example when a player is moving you want to update
 		// render a different part of the map
 
-		glm::vec3 look = Engine::getRenderer().GetWorldPos2D((Engine::get().WindowWidth / 2), (Engine::get().WindowHeight / 2), Engine::get().cam->ProjectionMatrix, Engine::get().cam->ViewMatrix);
+		glm::vec3 look = Engine::getRenderer().GetWorldPos2D((Engine::get().WindowWidth / 2), (Engine::get().WindowHeight / 2), Engine::get().default_cam->ProjectionMatrix, Engine::get().default_cam->ViewMatrix);
 
 		int mod_x = (int)look.x % _definition.quad_width;
 		int mod_y = (int)look.y % _definition.quad_height;
@@ -197,8 +197,8 @@ namespace GameEngine
 	    Engine::getShader().BindNewShader("DEFAULT2D");
 
 	    Engine::getRenderer().UniformInt(Engine::getCurrentShader()["is_Text"], 0);
-	    Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["projectionMatrix"], Engine::get().cam->ProjectionMatrix, 1, false);
-	    Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["viewMatrix"], Engine::get().cam->ViewMatrix, 1, false);
+	    Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["projectionMatrix"], Engine::get().default_cam->ProjectionMatrix, 1, false);
+	    Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["viewMatrix"], Engine::get().default_cam->ViewMatrix, 1, false);
 	    Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["modelMatrix"], glm::mat4(1.0f), 1, false);
 
 		if (Engine::getRenderer().CurrentTextureID != _textures[0].TextureID)

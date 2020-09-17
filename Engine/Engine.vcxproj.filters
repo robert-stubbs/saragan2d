@@ -187,6 +187,9 @@
     <Filter Include="Systems\Sprite">
       <UniqueIdentifier>{643a4105-7d61-4943-b635-1d370f20b9da}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Components\Camera">
+      <UniqueIdentifier>{4ce63986-7d78-43f2-a25a-ac5ca840049e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\ThirdParty\glew\include\GL\eglew.h">
@@ -1499,6 +1502,9 @@
     <ClInclude Include="PositionSystem.h">
       <Filter>Systems\Position</Filter>
     </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>Components\Camera</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="EnginePCH.cpp" />
@@ -1682,6 +1688,9 @@
     </ClCompile>
     <ClCompile Include="PositionSystem.cpp">
       <Filter>Systems\Position</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>Components\Camera</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
