@@ -1,21 +1,21 @@
 #ifndef _TEST_STATE_H_
 #define _TEST_STATE_H_
 
-#include "Texture.h"
 #include "State.h"
 #include "Types.h"
-#include "Sprite.h"
 #include "BatchRenderer.h"
 #include "TextureQuad.h"
 #include "Map.h"
+#include "PlayerEnt.h"
 
 class TestState : public GameEngine::State
 {
     public:
-        GameEngine::Texture t;
 
-        GameEngine::Sprite spriteTest;
         glm::mat4 model;
+
+        PlayerEnt* p;
+
         //GameEngine::BatchRenderer b;
         //GameEngine::TextureQuad q;
 

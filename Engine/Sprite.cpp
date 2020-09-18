@@ -97,6 +97,7 @@ namespace GameEngine {
 		if (loaded && current_anim.length() > 0) {
 			Engine::getShader().BindNewShader(m_shader);
 
+			Engine::getRenderer().EnableDepthTest(false);
 			Engine::getRenderer().EnableBlend(true, BLEND_TYPE::SRC_ALPHA, BLEND_TYPE::ONE_MINUS_SRC_ALPHA);
 
 			if (Engine::getRenderer().CurrentTextureID != _anim.anims[current_anim].texture_id)
@@ -105,6 +106,8 @@ namespace GameEngine {
 
 				Engine::getRenderer().BindTextureBuffer(Engine::getRenderer().CurrentTextureID);
 			}
+
+			Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["modelMatrix"], glm::mat4(1.0f), 1, false);
 
 			Engine::getRenderer().BindVertexBuffer(_anim.VAIO);
 			Engine::getRenderer().BindIndexBuffer(_anim.IBO);
@@ -121,6 +124,7 @@ namespace GameEngine {
 			Engine::getRenderer().UnbindVertexBuffer();
 
 			Engine::getRenderer().EnableBlend(false);
+			Engine::getRenderer().EnableDepthTest(true);
 		}
 	}
 

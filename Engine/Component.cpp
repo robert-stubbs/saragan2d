@@ -9,5 +9,6 @@ namespace GameEngine
 
 	Component::~Component()
 	{
+		
 	}
 }

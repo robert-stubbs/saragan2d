@@ -14,6 +14,7 @@
 #include "AISystem.h"
 #include "SpriteSystem.h"
 #include "SoundSystem.h"
+#include "CameraSystem.h"
 
 namespace GameEngine
 {
@@ -45,9 +46,10 @@ namespace GameEngine
 		//AddSystem(new GUISystem(true));
 		AddSystem(new SoundSystem());
 		AddSystem(new AISystem());
-		AddSystem(new SpriteSystem());
+		AddSystem(new SpriteSystem(true));
 		//AddSystem(new ModelSystem(false, true));
 		AddSystem(new PositionSystem());
+		AddSystem(new CameraSystem());
 	}
 
 	void SystemManager::Update(float dt)

@@ -16,6 +16,8 @@ namespace GameEngine
 			Entity();
 			virtual ~Entity();
 
+			virtual void Load() {};
+
 			std::vector<EntityComponentPtr> m_components;
 
 			Entity* Parent;

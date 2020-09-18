@@ -8,7 +8,7 @@ namespace GameEngine {
 
 	PositionSystem::PositionSystem(bool isui, bool isanim) : System(isui, isanim)
 	{
-		SystemName = "POSITION";
+		SystemName = "LOCATION";
 	}
 
 

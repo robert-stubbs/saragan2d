@@ -58,6 +58,9 @@
     <Filter Include="ThirdParty\ImGUI">
       <UniqueIdentifier>{0693962d-4d9a-4716-840d-0cc809a5886d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Player">
+      <UniqueIdentifier>{65e8c45c-aff5-4853-a424-9bab01e3450a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\ThirdParty\glew\include\GL\eglew.h">
@@ -1196,6 +1199,9 @@
     <ClInclude Include="..\ThirdParty\ImGui\imstb_truetype.h">
       <Filter>ThirdParty\ImGUI</Filter>
     </ClInclude>
+    <ClInclude Include="PlayerEnt.h">
+      <Filter>Player</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GamePCH.cpp" />
@@ -1211,6 +1217,9 @@
     </ClCompile>
     <ClCompile Include="MinesweeperState.cpp">
       <Filter>States\Minesweeper</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerEnt.cpp">
+      <Filter>Player</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

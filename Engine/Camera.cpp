@@ -9,6 +9,7 @@ namespace GameEngine {
 
 	Camera::Camera() : Component()
 	{
+		m_type = "CAMERA";
 
 	}
 
@@ -25,7 +26,7 @@ namespace GameEngine {
 
 	void Camera::Update(float dt)
 	{
-		if(e->hasComponent("LOCATION")) {
+		if(e != nullptr && e->hasComponent("LOCATION")) {
 			// get entity position from the position component
 			Location* loc = (Location *)e->getComponent("LOCATION");
 			if (loc != nullptr) {

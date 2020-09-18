@@ -190,6 +190,9 @@
     <Filter Include="Components\Camera">
       <UniqueIdentifier>{4ce63986-7d78-43f2-a25a-ac5ca840049e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Systems\Camera">
+      <UniqueIdentifier>{22285923-6451-45d9-b7c5-2ce9bbd22a2b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\ThirdParty\glew\include\GL\eglew.h">
@@ -1505,6 +1508,9 @@
     <ClInclude Include="Camera.h">
       <Filter>Components\Camera</Filter>
     </ClInclude>
+    <ClInclude Include="CameraSystem.h">
+      <Filter>Systems\Camera</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="EnginePCH.cpp" />
@@ -1691,6 +1697,9 @@
     </ClCompile>
     <ClCompile Include="Camera.cpp">
       <Filter>Components\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="CameraSystem.cpp">
+      <Filter>Systems\Camera</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

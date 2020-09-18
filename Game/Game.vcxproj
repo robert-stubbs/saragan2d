@@ -464,6 +464,7 @@
     <ClInclude Include="GameLibrary.h" />
     <ClInclude Include="GamePCH.h" />
     <ClInclude Include="MinesweeperState.h" />
+    <ClInclude Include="PlayerEnt.h" />
     <ClInclude Include="RayState.h" />
     <ClInclude Include="TestState.h" />
     <ClInclude Include="cTile.h" />
@@ -473,6 +474,7 @@
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="MinesweeperState.cpp" />
+    <ClCompile Include="PlayerEnt.cpp" />
     <ClCompile Include="RayState.cpp" />
     <ClCompile Include="TestState.cpp" />
     <ClCompile Include="cTile.cpp" />
