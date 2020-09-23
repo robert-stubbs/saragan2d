@@ -26,6 +26,8 @@ namespace GameEngine {
 		virtual void CleanUp() override;
 
 		virtual void SetUpCamera(float width, float height);
+
+		inline Camera2D* getCam2D() { return cam; }
 	};
 
 }

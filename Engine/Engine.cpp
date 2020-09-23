@@ -126,6 +126,9 @@ namespace GameEngine {
 	void Engine::Render()
 	{
 		getRenderer().RenderStart();
+		Engine::getRenderer().UniformInt(Engine::getCurrentShader()["is_Text"], 0);
+		Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["projectionMatrix"], Engine::get().default_cam->ProjectionMatrix, 1, false);
+		Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["viewMatrix"], Engine::get().default_cam->ViewMatrix, 1, false);
 
 		System->Render();
 		GameFSM.Render();

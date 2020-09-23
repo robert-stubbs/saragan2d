@@ -26,7 +26,7 @@ class PlayerEnt : public Entity
 
 
 		virtual void Load() override;
-
+		inline Camera* getCam() { return cam; };
 
 };
 

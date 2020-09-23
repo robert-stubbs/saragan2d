@@ -29,6 +29,8 @@ void TestState::Init()
 
 	p = new PlayerEnt();
 	p->Load();
+
+	Engine::get().current_cam = p->getCam()->getCam2D();
 }
 
 void TestState::UpdateOrth(const float& dt)
@@ -41,13 +43,13 @@ void TestState::UpdateOrth(const float& dt)
 
 void TestState::RenderOrth()
 {
-	//Engine::getRenderer().EnableDepthTest(false);
-	//Engine::getRenderer().EnableBlend(true, GameEngine::BLEND_TYPE::SRC_ALPHA, GameEngine::BLEND_TYPE::ONE_MINUS_SRC_ALPHA);
+	Engine::getRenderer().EnableDepthTest(false);
+	Engine::getRenderer().EnableBlend(true, GameEngine::BLEND_TYPE::SRC_ALPHA, GameEngine::BLEND_TYPE::ONE_MINUS_SRC_ALPHA);
 
-	//m->Render();
+	m->Render();
 
-	//Engine::getRenderer().EnableBlend(false);
-	//Engine::getRenderer().EnableDepthTest(true);
+	Engine::getRenderer().EnableBlend(false);
+	Engine::getRenderer().EnableDepthTest(true);
 }
 
 void TestState::DoENTER()
