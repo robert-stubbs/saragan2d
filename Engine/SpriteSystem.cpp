@@ -1,6 +1,7 @@
 #include "EnginePCH.h"
 #include "SpriteSystem.h"
 #include "Sprite.h"
+#include "Engine.h"
 
 #include "Component.h"
 
@@ -31,9 +32,16 @@ namespace GameEngine {
 
 	void SpriteSystem::RenderUI()
 	{
+
+		Engine::getRenderer().EnableDepthTest(false);
+		Engine::getRenderer().EnableBlend(true, BLEND_TYPE::SRC_ALPHA, BLEND_TYPE::ONE_MINUS_SRC_ALPHA);
+
 		for (ComponentPtr ptr : m_components) {
 			ptr->Render();
 		}
+
+		Engine::getRenderer().EnableBlend(false);
+		Engine::getRenderer().EnableDepthTest(true);
 	}
 
 	void SpriteSystem::CleanUp()

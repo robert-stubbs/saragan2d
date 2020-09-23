@@ -13,7 +13,7 @@ namespace GameEngine
 			std::string m_shader;
 			bool loaded = false;
 
-			std::shared_ptr<Entity> e;
+			Entity* e;
 
 			Component();
 			virtual ~Component();
@@ -26,8 +26,8 @@ namespace GameEngine
 
 			virtual void CleanUp() {};
 
-			inline Entity* GetEntity() { return e.get(); }
-			inline void SetEntity(Entity* ent) { e = std::shared_ptr<Entity>(ent); }
+			inline Entity* GetEntity() { return e; }
+			inline void SetEntity(Entity* ent) { e = ent; }
 	};
 }
 

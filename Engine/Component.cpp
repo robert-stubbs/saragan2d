@@ -9,6 +9,8 @@ namespace GameEngine
 
 	Component::~Component()
 	{
-		
+		if (e) {
+			e = nullptr;
+		}
 	}
 }

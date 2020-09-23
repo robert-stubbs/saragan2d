@@ -97,9 +97,6 @@ namespace GameEngine {
 		if (loaded && current_anim.length() > 0) {
 			Engine::getShader().BindNewShader(m_shader);
 
-			Engine::getRenderer().EnableDepthTest(false);
-			Engine::getRenderer().EnableBlend(true, BLEND_TYPE::SRC_ALPHA, BLEND_TYPE::ONE_MINUS_SRC_ALPHA);
-
 			if (Engine::getRenderer().CurrentTextureID != _anim.anims[current_anim].texture_id)
 			{
 				Engine::getRenderer().CurrentTextureID = _anim.anims[current_anim].texture_id;
@@ -123,8 +120,6 @@ namespace GameEngine {
 			Engine::getRenderer().UnbindIndexBuffer();
 			Engine::getRenderer().UnbindVertexBuffer();
 
-			Engine::getRenderer().EnableBlend(false);
-			Engine::getRenderer().EnableDepthTest(true);
 		}
 	}
 
@@ -156,8 +151,6 @@ namespace GameEngine {
 	void Sprite::LoadAnimSprite(AnimSprite& sprite)
 	{
 		_anim = sprite;
-
-		// TODO this loading will move to the resource manager i think
 
 		Engine::getRenderer().GenerateVertexArrayBuffer(_anim.VAIO);
 		

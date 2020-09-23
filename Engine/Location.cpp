@@ -15,7 +15,9 @@ namespace GameEngine {
 
 	Location::~Location()
 	{
-
+		if (e) {
+			e = nullptr;
+		}
 	}
 
 	bool Location::Init()
