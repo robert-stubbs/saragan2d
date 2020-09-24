@@ -197,8 +197,8 @@ namespace GameEngine
 	    Engine::getShader().BindNewShader("DEFAULT2D");
 
 	    Engine::getRenderer().UniformInt(Engine::getCurrentShader()["is_Text"], 0);
-	    Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["projectionMatrix"], Engine::get().default_cam->ProjectionMatrix, 1, false);
-	    Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["viewMatrix"], Engine::get().default_cam->ViewMatrix, 1, false);
+	    Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["projectionMatrix"], Engine::get().current_cam->ProjectionMatrix, 1, false);
+	    Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["viewMatrix"], Engine::get().current_cam->ViewMatrix, 1, false);
 	    Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["modelMatrix"], glm::mat4(1.0f), 1, false);
 
 		if (Engine::getRenderer().CurrentTextureID != _textures[0].TextureID)

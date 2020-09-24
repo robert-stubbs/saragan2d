@@ -181,6 +181,8 @@ namespace GameEngine {
 		def->start_buffer_index = (int)_anim.vert_indices.size();
 
 		if (def->frames.size() == 0) {
+			width = def->frame_width;
+			height = def->frame_height;
 			PopulateSpriteFrames(name, def->frame_width, def->frame_height);
 		}
 

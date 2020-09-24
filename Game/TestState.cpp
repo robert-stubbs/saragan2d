@@ -30,7 +30,7 @@ void TestState::Init()
 	p = new PlayerEnt();
 	p->Load();
 
-	Engine::get().current_cam = p->getCam()->getCam2D();
+	Engine::SetCam(p->getCam()->getCam2D());
 }
 
 void TestState::UpdateOrth(const float& dt)
@@ -38,10 +38,10 @@ void TestState::UpdateOrth(const float& dt)
 	m->Update(dt);
 
 
-	model = glm::translate(glm::inverse(Engine::get().default_cam->ViewMatrix), glm::vec3((float)Engine::get().WindowWidth/2.0f, (float)Engine::get().WindowHeight/2.0f, 0.0f));
+	//model = glm::translate(glm::inverse(Engine::get().default_cam->ViewMatrix), glm::vec3((float)Engine::get().WindowWidth/2.0f, (float)Engine::get().WindowHeight/2.0f, 0.0f));
 }
 
-void TestState::RenderOrth()
+void TestState::Render()
 {
 	Engine::getRenderer().EnableDepthTest(false);
 	Engine::getRenderer().EnableBlend(true, GameEngine::BLEND_TYPE::SRC_ALPHA, GameEngine::BLEND_TYPE::ONE_MINUS_SRC_ALPHA);
@@ -50,6 +50,10 @@ void TestState::RenderOrth()
 
 	Engine::getRenderer().EnableBlend(false);
 	Engine::getRenderer().EnableDepthTest(true);
+}
+
+void TestState::RenderOrth()
+{
 }
 
 void TestState::DoENTER()

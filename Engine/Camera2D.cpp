@@ -14,9 +14,7 @@ namespace GameEngine
 
 		LookAt = glm::vec3(0.0f, 0.0f, 0.0f);
 
-		aspect = (float)(800 / 600);
-		ProjectionMatrix = glm::ortho(0.0f, 800.0f, 600.0f, 0.0f, -10.0f, 10.0f);
-
+		resize(800.0f, 600.0f);
 
 		ViewMatrix = glm::mat4(1.0f);
 		Pos = glm::mat4(1.0f);
@@ -33,14 +31,19 @@ namespace GameEngine
 
 		LookAt = glm::vec3(0.0f, 0.0f, 0.0f);
 
-		aspect = (float)(width / height);
-		ProjectionMatrix = glm::ortho(0.0f, width, height, 0.0f, -10.0f, 10.0f);
-
+		resize(width, height);
 
 		ViewMatrix = glm::mat4(1.0f);
 		Pos = glm::mat4(1.0f);
 	}
 
+	void Camera2D::resize(float width, float height)
+	{
+		res_width = width;
+		res_height = height;
+		aspect = (float)(width / height);
+		ProjectionMatrix = glm::ortho(0.0f, width, height, 0.0f, -10.0f, 10.0f);
+	}
 
 	Camera2D::~Camera2D(void)
 	{
@@ -48,9 +51,6 @@ namespace GameEngine
 
 	void Camera2D::Update(float DeltaTime)
 	{
-		//get current view matrix
-		glm::mat4 mat = ViewMatrix;
-
 		LookAt.x += (dx) * speed;
 		LookAt.y += (dy) * speed;
 

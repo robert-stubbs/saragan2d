@@ -3,7 +3,8 @@
 #include "SafeDelete.h"
 #include "Entity.h"
 #include "Location.h"
-
+#include "Engine.h"
+#include "Sprite.h"
 
 namespace GameEngine {
 
@@ -31,8 +32,15 @@ namespace GameEngine {
 			Location* loc = (Location *)e->getComponent("LOCATION");
 			if (loc != nullptr) {
 				// set look at on camera to position x,y,z
-				// update view matrix
 				cam->LookAt = loc->getPosition();
+				cam->LookAt.x -= (cam->res_width / 2);
+				cam->LookAt.y -= (cam->res_height / 2);
+			}
+
+			Sprite* sp = (Sprite*)e->getComponent("SPRITE");
+			if (sp != nullptr) {
+				cam->LookAt.x += (sp->width / 2);
+				cam->LookAt.y += (sp->height / 2);
 			}
 		}
 		cam->Update(dt);

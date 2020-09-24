@@ -25,8 +25,18 @@ namespace GameEngine {
 		WindowWidth = width;
 		WindowHeight = height;
 		fullscreen = isFullScreen;
-		default_cam = new Camera2D((float)width, (float)height);
-		current_cam = default_cam;
+		
+		if (default_cam == nullptr) {
+			default_cam = new Camera2D((float)width, (float)height);
+			current_cam = default_cam;
+		}
+
+		if (default_cam == current_cam) {
+			default_cam->resize((float)width, (float)height);
+		}
+		else {
+			current_cam->resize((float)width, (float)height);
+		}
 	}
 
 	void Engine::TestFunction()
@@ -42,6 +52,9 @@ namespace GameEngine {
 		if (ctx.InitWindow(WindowWidth, WindowHeight, WindowName, fullscreen))
 		{
 			renderer = Renderer(_engine);
+
+			RenderWidth = (float)WindowWidth;
+			RenderHeight = (float)WindowHeight;
 
 			ctx.InitContext();
 
@@ -112,7 +125,9 @@ namespace GameEngine {
 
 	bool Engine::UpdateOrth(float DeltaTime)
 	{
-		default_cam->Update(DeltaTime);
+		if (current_cam == default_cam) {
+			default_cam->Update(DeltaTime);
+		}
 
 		System->Update(DeltaTime);
 		
@@ -127,8 +142,8 @@ namespace GameEngine {
 	{
 		getRenderer().RenderStart();
 		Engine::getRenderer().UniformInt(Engine::getCurrentShader()["is_Text"], 0);
-		Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["projectionMatrix"], Engine::get().default_cam->ProjectionMatrix, 1, false);
-		Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["viewMatrix"], Engine::get().default_cam->ViewMatrix, 1, false);
+		Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["projectionMatrix"], Engine::get().current_cam->ProjectionMatrix, 1, false);
+		Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["viewMatrix"], Engine::get().current_cam->ViewMatrix, 1, false);
 
 		System->Render();
 		GameFSM.Render();

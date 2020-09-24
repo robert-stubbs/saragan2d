@@ -26,7 +26,7 @@ void PlayerEnt::Load() {
 	addComponent(loc);
 
 
-	cam->SetUpCamera((float)Engine::get().WindowWidth, (float)Engine::get().WindowHeight);
+	cam->SetUpCamera((float)Engine::get().RenderWidth, (float)Engine::get().RenderHeight);
 
 	addComponent(cam);
 

@@ -62,6 +62,8 @@ namespace GameEngine {
 			std::string WindowName = "";
 			int WindowWidth = 0;
 			int WindowHeight = 0;
+			float RenderWidth = 0;
+			float RenderHeight = 0;
 			bool loaded = false;
 
 			inline void SetPlatform(PLATFORM platform) { 
@@ -97,7 +99,9 @@ namespace GameEngine {
 
 
 			static Camera2D* Cam() { return get().current_cam; }
-			static void SetCam(Camera2D* new_cam) { get().current_cam = new_cam; }
+			static void SetCam(Camera2D* new_cam) { 
+				get().current_cam = new_cam; 
+			}
 
 			static EntityManager* EntityMgr() {	return get()._entity_mgr; }
 

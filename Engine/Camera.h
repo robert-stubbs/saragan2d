@@ -11,7 +11,7 @@ namespace GameEngine {
 	private:
 		Camera2D* cam;
 
-
+		glm::mat4 pos;
 
 	public:
 		Camera();

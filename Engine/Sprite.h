@@ -18,6 +18,9 @@ namespace GameEngine {
 			float AnimTime;
 
 		public:
+			float width;
+			float height;
+
 			Sprite();
 			virtual ~Sprite();
 

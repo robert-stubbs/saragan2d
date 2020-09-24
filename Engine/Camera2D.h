@@ -17,6 +17,9 @@ namespace GameEngine
 
 		float aspect;
 
+		float res_width;
+		float res_height;
+
 		float dx; //how much we strafe on x
 		float dy; //how much we walk on z
 		float dz; //how much we walk on z
@@ -34,6 +37,8 @@ namespace GameEngine
 		POINT getMouseWindowPoint(HWND hWnd);
 
 		void Update(float DeltaTime);
+
+		void resize(float width, float height);
 	};
 }
 

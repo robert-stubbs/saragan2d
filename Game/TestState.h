@@ -26,7 +26,7 @@ class TestState : public GameEngine::State
         virtual ~TestState();
         virtual void Init();
         virtual void Update(const float& dt) {}
-        virtual void Render() {}
+        virtual void Render();
         virtual void UpdateOrth(const float& dt);
         virtual void RenderOrth();
         virtual void DoENTER();
