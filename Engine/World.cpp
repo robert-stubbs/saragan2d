@@ -7,6 +7,7 @@ namespace GameEngine
 	World::World()
 	{
 		_maps = std::map<std::string, Map*>();
+		current_map = nullptr;
 	}
 
 	World::~World()
@@ -14,7 +15,7 @@ namespace GameEngine
 
 	}
 
-	void World::LoadMap(std::string name, std::string map_path)
+	void World::LoadMap(std::string name, std::string map_path, bool set_map)
 	{
 
 		//std::map<std::string, Map> _maps;
@@ -25,7 +26,16 @@ namespace GameEngine
 			_maps[name]->ThreadLoad();
 		}
 
-		current_map = _maps[name];
+		if (set_map) {
+			SetMap(name);
+		}
+	}
+
+	void World::SetMap(std::string name)
+	{
+		if (_maps.find(name) != _maps.end()) {
+			current_map = _maps[name];
+		}
 	}
 
 	void World::Init()
@@ -35,8 +45,10 @@ namespace GameEngine
 
 	void World::Update(float dt)
 	{
-		current_map->Update(dt);
-
+		if (current_map != nullptr)
+		{
+			current_map->Update(dt);
+		}
 	}
 
 	void World::Render()
@@ -44,7 +56,10 @@ namespace GameEngine
 		Engine::getRenderer().EnableDepthTest(false);
 		Engine::getRenderer().EnableBlend(true, GameEngine::BLEND_TYPE::SRC_ALPHA, GameEngine::BLEND_TYPE::ONE_MINUS_SRC_ALPHA);
 
-		current_map->Render();
+		if (current_map != nullptr)
+		{
+			current_map->Render();
+		}
 
 		Engine::getRenderer().EnableBlend(false);
 		Engine::getRenderer().EnableDepthTest(true);

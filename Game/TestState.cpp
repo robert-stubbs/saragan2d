@@ -24,7 +24,9 @@ void TestState::Init()
 {
 	w = GameEngine::World();
 	w.Init();
-	w.LoadMap("Test Map", "");
+	w.LoadMap("Test Map", "", true);
+	w.LoadMap("Test2 Map", "");
+
 
 	p = new PlayerEnt();
 	p->Load();
@@ -90,6 +92,14 @@ void TestState::KeyDown(int Key)
 		{
 			p->SetState(states::SPELL);
 		}break;
+		case ENGINE_KEY_2:
+		{
+			w.SetMap("Test2 Map");
+		} break;
+		case ENGINE_KEY_3:
+		{
+			w.SetMap("Test Map");
+		} break;
 	}
 }
 
