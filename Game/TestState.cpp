@@ -17,15 +17,13 @@ TestState::TestState() : State()
 
 TestState::~TestState()
 {
-	w.Cleanup();
 }
 
 void TestState::Init()
 {
-	w = GameEngine::World();
-	w.Init();
-	w.LoadMap("Test Map", "", true);
-	w.LoadMap("Test2 Map", "");
+	World* w = Engine::getWorld();
+	w->LoadMap("Test Map", "", true);
+	w->LoadMap("Test2 Map", "");
 
 
 	p = new PlayerEnt();
@@ -36,7 +34,7 @@ void TestState::Init()
 
 void TestState::UpdateOrth(const float& dt)
 { 
-	w.Update(dt);
+
 	p->Update(dt);
 
 
@@ -45,7 +43,6 @@ void TestState::UpdateOrth(const float& dt)
 
 void TestState::Render()
 {
-	w.Render();
 
 
 }
@@ -94,11 +91,13 @@ void TestState::KeyDown(int Key)
 		}break;
 		case ENGINE_KEY_2:
 		{
-			w.SetMap("Test2 Map");
+			World* w = Engine::getWorld();
+			w->SetMap("Test2 Map");
 		} break;
 		case ENGINE_KEY_3:
 		{
-			w.SetMap("Test Map");
+			World* w = Engine::getWorld();
+			w->SetMap("Test Map");
 		} break;
 	}
 }

@@ -16,6 +16,8 @@
 #include "Font.h"
 #include "Input.h"
 
+#include "World.h"
+
 
 #define PI  3.141592654
 #define TWO_PI 6.283185307179586476925286766559
@@ -48,6 +50,7 @@ namespace GameEngine {
 			Camera2D* default_cam;
 			Camera2D* current_cam;
 
+			World w;
 
 			~Engine();
 
@@ -102,6 +105,8 @@ namespace GameEngine {
 			static void SetCam(Camera2D* new_cam) { 
 				get().current_cam = new_cam; 
 			}
+
+			static World* getWorld() { return &(get().w); }
 
 			static EntityManager* EntityMgr() {	return get()._entity_mgr; }
 

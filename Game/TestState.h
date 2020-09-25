@@ -15,8 +15,6 @@ class TestState : public GameEngine::State
 
         glm::mat4 model;
 
-        GameEngine::World w;
-
         PlayerEnt* p;
 
 

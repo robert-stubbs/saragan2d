@@ -98,6 +98,9 @@ namespace GameEngine {
 
 		_gui->Get().Init();
 
+		w = World();
+		w.Init();
+
 		loaded = true;
 
 		return true;
@@ -113,6 +116,9 @@ namespace GameEngine {
 	bool Engine::Update(float DeltaTime)
 	{
 		current_dt = DeltaTime;
+
+		w.Update(DeltaTime);
+
 		Update3D(DeltaTime);
 		UpdateOrth(DeltaTime);
 		return true;
@@ -145,6 +151,8 @@ namespace GameEngine {
 		Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["projectionMatrix"], Engine::get().current_cam->ProjectionMatrix, 1, false);
 		Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["viewMatrix"], Engine::get().current_cam->ViewMatrix, 1, false);
 
+		w.Render();
+
 		System->Render();
 		GameFSM.Render();
 
@@ -161,6 +169,9 @@ namespace GameEngine {
 	bool Engine::Cleanup()
 	{
 		System->CleanUp();
+
+		w.Cleanup();
+
 		getRenderer().Cleanup();
 
 		return true;
