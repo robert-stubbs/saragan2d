@@ -161,7 +161,8 @@ namespace GameEngine
 		// for example when a player is moving you want to update
 		// render a different part of the map
 
-		glm::vec3 look = Engine::getRenderer().GetWorldPos2D((Engine::get().WindowWidth / 2), (Engine::get().WindowHeight / 2), Engine::get().default_cam->ProjectionMatrix, Engine::get().default_cam->ViewMatrix);
+
+		glm::vec3 look = Engine::getRenderer().GetWorldPos2D((Engine::get().WindowWidth / 2), (Engine::get().WindowHeight / 2), Engine::get().current_cam->ProjectionMatrix, Engine::get().current_cam->ViewMatrix);
 
 		int mod_x = (int)look.x % _definition.quad_width;
 		int mod_y = (int)look.y % _definition.quad_height;

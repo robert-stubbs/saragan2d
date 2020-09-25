@@ -17,15 +17,14 @@ TestState::TestState() : State()
 
 TestState::~TestState()
 {
-	m->Cleanup();
-	SAFE_DELETE(m);
+	w.Cleanup();
 }
 
 void TestState::Init()
 {
-	m = new Map();
-	m->Init("Test Map", "");
-	m->ThreadLoad();    
+	w = GameEngine::World();
+	w.Init();
+	w.LoadMap("Test Map", "");
 
 	p = new PlayerEnt();
 	p->Load();
@@ -35,7 +34,7 @@ void TestState::Init()
 
 void TestState::UpdateOrth(const float& dt)
 { 
-	m->Update(dt);
+	w.Update(dt);
 	p->Update(dt);
 
 
@@ -44,13 +43,9 @@ void TestState::UpdateOrth(const float& dt)
 
 void TestState::Render()
 {
-	Engine::getRenderer().EnableDepthTest(false);
-	Engine::getRenderer().EnableBlend(true, GameEngine::BLEND_TYPE::SRC_ALPHA, GameEngine::BLEND_TYPE::ONE_MINUS_SRC_ALPHA);
+	w.Render();
 
-	m->Render();
 
-	Engine::getRenderer().EnableBlend(false);
-	Engine::getRenderer().EnableDepthTest(true);
 }
 
 void TestState::RenderOrth()

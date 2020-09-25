@@ -535,6 +535,7 @@
     <ClInclude Include="cIni.h" />
     <ClInclude Include="lodepng.h" />
     <ClInclude Include="standards.h" />
+    <ClInclude Include="World.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AISystem.cpp" />
@@ -603,6 +604,7 @@
     <ClCompile Include="cIni.cpp" />
     <ClCompile Include="lodepng.cpp" />
     <ClCompile Include="standards.cpp" />
+    <ClCompile Include="World.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

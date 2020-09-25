@@ -1511,6 +1511,9 @@
     <ClInclude Include="CameraSystem.h">
       <Filter>Systems\Camera</Filter>
     </ClInclude>
+    <ClInclude Include="World.h">
+      <Filter>World</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="EnginePCH.cpp" />
@@ -1700,6 +1703,9 @@
     </ClCompile>
     <ClCompile Include="CameraSystem.cpp">
       <Filter>Systems\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="World.cpp">
+      <Filter>World</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

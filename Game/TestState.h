@@ -7,6 +7,7 @@
 #include "TextureQuad.h"
 #include "Map.h"
 #include "PlayerEnt.h"
+#include "World.h"
 
 class TestState : public GameEngine::State
 {
@@ -14,13 +15,10 @@ class TestState : public GameEngine::State
 
         glm::mat4 model;
 
+        GameEngine::World w;
+
         PlayerEnt* p;
 
-        //GameEngine::BatchRenderer b;
-        //GameEngine::TextureQuad q;
-
-        //GameEngine::TextureQuad quads[100][100];
-        GameEngine::Map* m;
 
         TestState();
         virtual ~TestState();
