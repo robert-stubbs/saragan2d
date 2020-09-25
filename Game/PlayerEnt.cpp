@@ -10,6 +10,12 @@ PlayerEnt::PlayerEnt() : GameEngine::Entity() {
 	m_entityname = "PlayerEntity";
 	Parent = nullptr;
 
+	speed = 0.20f;
+
+	dx = 0;
+	dy = 0;
+	dz = 0;
+
 	loc = new Location();
 	cam = new Camera();
 	sprite = new Sprite();
@@ -116,7 +122,7 @@ void PlayerEnt::Load() {
 	sp.sheet_rows = 21;
 	sp.idle_anim = "Idle";
 	sp.anims[sp.idle_anim] = idle;
-	sp.anims["Walk"] = walk;
+	sp.anims["WalkDown"] = walk;
 	sp.anims["WalkLeft"] = walkleft;
 	sp.anims["WalkRight"] = walkright;
 	sp.anims["WalkUp"] = walkup;
@@ -127,4 +133,52 @@ void PlayerEnt::Load() {
 	sprite->SetAnim("Idle");
 
 	addComponent(sprite);
+}
+
+void PlayerEnt::Update(float dt)
+{
+
+	Location* loc = (Location*)getComponent("LOCATION");
+	if (loc != nullptr) {
+		// set look at on camera to position x,y,z
+		glm::vec3& pos = loc->getPosition();
+		pos.x += (dx)*speed;
+		pos.y += (dy)*speed;
+	}
+
+}
+
+void PlayerEnt::SetState(states st)
+{
+	switch (st)
+	{	
+		case states::IDLE:
+		{
+			sprite->SetAnim("Idle");
+		} break;
+		case states::WALK_LEFT:
+		{
+			sprite->SetAnim("WalkLeft");
+		} break;
+		case states::WALK_RIGHT:
+		{
+			sprite->SetAnim("WalkRight");
+		} break;
+		case states::WALK_UP:
+		{
+			sprite->SetAnim("WalkUp");
+		} break;
+		case states::WALK_DOWN:
+		{
+			sprite->SetAnim("WalkDown");
+		} break;
+		case states::SPELL:
+		{
+			sprite->SetAnim("Spell");
+		} break;
+
+	default:
+		sprite->SetAnim("Idle");
+		break;
+	}
 }

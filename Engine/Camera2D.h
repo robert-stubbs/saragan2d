@@ -21,7 +21,7 @@ namespace GameEngine
 		float res_height;
 
 		float dx; //how much we strafe on x
-		float dy; //how much we walk on z
+		float dy; //how much we walk on y
 		float dz; //how much we walk on z
 
 		glm::vec3 LookAt;

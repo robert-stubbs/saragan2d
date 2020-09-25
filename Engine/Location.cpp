@@ -8,9 +8,9 @@ namespace GameEngine {
 	Location::Location()
 	{
 		m_type = "LOCATION";
-		x = 0.0f;
-		y = 0.0f;
-		z = 0.0f;
+		pos.x = 0.0f;
+		pos.y = 0.0f;
+		pos.z = 0.0f;
 	}
 
 	Location::~Location()
@@ -30,21 +30,21 @@ namespace GameEngine {
 
 	}
 
-	glm::vec3 Location::getPosition()
+	glm::vec3& Location::getPosition()
 	{
-		return glm::vec3({ x, y, x });
+		return pos;
 	}
 
 	glm::mat4 Location::getPositionMat()
 	{
-		return glm::translate(glm::mat4(1.0f), glm::vec3(x, y, z));
+		return glm::translate(glm::mat4(1.0f), pos);
 	}
 
 	void Location::setPosition(float m_x, float m_y, float m_z)
 	{
-		x = m_x;
-		y = m_y;
-		z = m_z;
+		pos.x = m_x;
+		pos.y = m_y;
+		pos.z = m_z;
 	}
 
 	void Location::CleanUp()

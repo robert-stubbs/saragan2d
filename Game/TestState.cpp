@@ -36,6 +36,7 @@ void TestState::Init()
 void TestState::UpdateOrth(const float& dt)
 { 
 	m->Update(dt);
+	p->Update(dt);
 
 
 	//model = glm::translate(glm::inverse(Engine::get().default_cam->ViewMatrix), glm::vec3((float)Engine::get().WindowWidth/2.0f, (float)Engine::get().WindowHeight/2.0f, 0.0f));
@@ -71,29 +72,28 @@ void TestState::KeyDown(int Key)
 	switch (Input::Get().GetKey(Key))
 	{
 		case ENGINE_KEY_A:
-		{
-			Engine::get().default_cam->dx = -10;
-			//spriteTest.SetAnim("WalkLeft");
+		{					
+			p->dx = -10;
+			p->SetState(states::WALK_LEFT);
 		}break;
 		case ENGINE_KEY_D:
 		{
-			//std::cout << "Setting Anim Walk Right" << std::endl;
-			Engine::get().default_cam->dx = 10;
-			//spriteTest.SetAnim("WalkRight");
+			p->dx = 10;
+			p->SetState(states::WALK_RIGHT);
 		}break;
 		case ENGINE_KEY_W:
 		{
-			Engine::get().default_cam->dy = -10;
-			//spriteTest.SetAnim("WalkUp");
+			p->dy = -10;
+			p->SetState(states::WALK_UP);
 		}break;
 		case ENGINE_KEY_S:
 		{
-			Engine::get().default_cam->dy = 10;
-			//spriteTest.SetAnim("Walk");
+			p->dy = 10;
+			p->SetState(states::WALK_DOWN);
 		}break;
 		case ENGINE_KEY_1:
 		{
-			//spriteTest.SetAnim("Spell");
+			p->SetState(states::SPELL);
 		}break;
 	}
 }
@@ -106,10 +106,10 @@ void TestState::KeyUp(int Key)
 		{
 			if (Input::Get().IsKeyReleased(ENGINE_KEY_D))
 			{
-				Engine::get().default_cam->dx = 0;
-				if (Engine::get().default_cam->dx == 0 && Engine::get().default_cam->dy == 0)
+				p->dx = 0;
+				if (p->dx == 0 && p->dy == 0)
 				{
-					//spriteTest.SetAnim("Idle");
+					p->SetState(states::IDLE);
 				}
 			}
 		}break;
@@ -117,10 +117,10 @@ void TestState::KeyUp(int Key)
 		{
 			if (Input::Get().IsKeyReleased(ENGINE_KEY_A))
 			{
-				Engine::get().default_cam->dx = 0;
-				if (Engine::get().default_cam->dx == 0 && Engine::get().default_cam->dy == 0)
+				p->dx = 0;
+				if (p->dx == 0 && p->dy == 0)
 				{
-					//spriteTest.SetAnim("Idle");
+					p->SetState(states::IDLE);
 				}
 			}
 		}break;
@@ -128,10 +128,10 @@ void TestState::KeyUp(int Key)
 		{
 			if (Input::Get().IsKeyReleased(ENGINE_KEY_S))
 			{
-				Engine::get().default_cam->dy = 0;
-				if (Engine::get().default_cam->dx == 0 && Engine::get().default_cam->dy == 0)
+				p->dy = 0;
+				if (p->dx == 0 && p->dy == 0)
 				{
-					//spriteTest.SetAnim("Idle");
+					p->SetState(states::IDLE);
 				}
 			}
 		}break;
@@ -139,10 +139,10 @@ void TestState::KeyUp(int Key)
 		{
 			if (Input::Get().IsKeyReleased(ENGINE_KEY_W))
 			{
-				Engine::get().default_cam->dy = 0;
-				if (Engine::get().default_cam->dx == 0 && Engine::get().default_cam->dy == 0)
+				p->dy = 0;
+				if (p->dx == 0 && p->dy == 0)
 				{
-					//spriteTest.SetAnim("Idle");
+					p->SetState(states::IDLE);
 				}
 			}
 		}break;

@@ -2,6 +2,7 @@
 #include "Sprite.h"
 #include "Engine.h"
 #include "RenderEngineBase.h"
+#include "Location.h"
 
 
 namespace GameEngine {
@@ -104,7 +105,13 @@ namespace GameEngine {
 				Engine::getRenderer().BindTextureBuffer(Engine::getRenderer().CurrentTextureID);
 			}
 
-			Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["modelMatrix"], glm::mat4(1.0f), 1, false);
+			Location* loc = (Location*)e->getComponent("LOCATION");
+			if (loc != nullptr) {
+				Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["modelMatrix"], loc->getPositionMat(), 1, false);
+			}
+			else {
+				Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["modelMatrix"], glm::mat4(1.0f), 1, false);
+			}
 
 			Engine::getRenderer().BindVertexBuffer(_anim.VAIO);
 			Engine::getRenderer().BindIndexBuffer(_anim.IBO);

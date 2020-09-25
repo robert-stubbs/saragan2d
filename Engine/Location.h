@@ -8,12 +8,7 @@ namespace GameEngine {
 
 	class Location : public Component {
 	private:
-		float x;
-		float y;
-		float z;
-
-
-
+		glm::vec3 pos;
 	public:
 		Location();
 		virtual ~Location();
@@ -26,7 +21,7 @@ namespace GameEngine {
 
 		virtual void CleanUp() override;
 
-		virtual glm::vec3 getPosition();
+		virtual glm::vec3& getPosition();
 		virtual glm::mat4 getPositionMat();
 		virtual void setPosition(float m_x, float m_y, float m_z);
 
