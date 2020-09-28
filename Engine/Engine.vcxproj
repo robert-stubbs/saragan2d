@@ -471,6 +471,7 @@
     <ClInclude Include="..\ThirdParty\glm\include\glm\vector_relational.hpp" />
     <ClInclude Include="Actor.h" />
     <ClInclude Include="AISystem.h" />
+    <ClInclude Include="ANPC.h" />
     <ClInclude Include="BatchRenderer.h" />
     <ClInclude Include="Behaviour.h" />
     <ClInclude Include="Brain.h" />
@@ -541,6 +542,7 @@
   <ItemGroup>
     <ClCompile Include="Actor.cpp" />
     <ClCompile Include="AISystem.cpp" />
+    <ClCompile Include="ANPC.cpp" />
     <ClCompile Include="BatchRenderer.cpp" />
     <ClCompile Include="Behaviour.cpp" />
     <ClCompile Include="Brain.cpp" />

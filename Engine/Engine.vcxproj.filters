@@ -190,6 +190,15 @@
     <Filter Include="Systems\Camera">
       <UniqueIdentifier>{22285923-6451-45d9-b7c5-2ce9bbd22a2b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Entity\Base">
+      <UniqueIdentifier>{c77e0b94-3128-4ded-aa38-3fd0e005fad6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entity\Actor">
+      <UniqueIdentifier>{bbe10fe3-dd7c-4a0b-9aa0-e5129d4dddc2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entity\NPC">
+      <UniqueIdentifier>{55d44213-b39a-4626-af1a-14da70b51d55}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\ThirdParty\glew\include\GL\eglew.h">
@@ -1478,9 +1487,6 @@
     <ClInclude Include="Behaviour.h">
       <Filter>Components\AI</Filter>
     </ClInclude>
-    <ClInclude Include="Entity.h">
-      <Filter>Entity</Filter>
-    </ClInclude>
     <ClInclude Include="EntityManager.h">
       <Filter>Entity</Filter>
     </ClInclude>
@@ -1511,8 +1517,14 @@
     <ClInclude Include="cErrorLogger.h">
       <Filter>File</Filter>
     </ClInclude>
+    <ClInclude Include="Entity.h">
+      <Filter>Entity\Base</Filter>
+    </ClInclude>
     <ClInclude Include="Actor.h">
-      <Filter>Entity</Filter>
+      <Filter>Entity\Actor</Filter>
+    </ClInclude>
+    <ClInclude Include="ANPC.h">
+      <Filter>Entity\NPC</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -1674,9 +1686,6 @@
     <ClCompile Include="Behaviour.cpp">
       <Filter>Components\AI</Filter>
     </ClCompile>
-    <ClCompile Include="Entity.cpp">
-      <Filter>Entity</Filter>
-    </ClCompile>
     <ClCompile Include="EntityManager.cpp">
       <Filter>Entity</Filter>
     </ClCompile>
@@ -1707,8 +1716,14 @@
     <ClCompile Include="cErrorLogger.cpp">
       <Filter>File</Filter>
     </ClCompile>
+    <ClCompile Include="Entity.cpp">
+      <Filter>Entity\Base</Filter>
+    </ClCompile>
     <ClCompile Include="Actor.cpp">
-      <Filter>Entity</Filter>
+      <Filter>Entity\Actor</Filter>
+    </ClCompile>
+    <ClCompile Include="ANPC.cpp">
+      <Filter>Entity\NPC</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -1,5 +1,7 @@
 #include "EnginePCH.h"
 #include "Brain.h"
+#include "AISystem.h"
+#include "Engine.h"
 
 namespace GameEngine
 {
@@ -23,18 +25,18 @@ namespace GameEngine
 
 	void Brain::AddBehaviour(std::string behaviour)
 	{
-		//AISystem* sysAI = (AISystem*)Engine::getEngine().System->getSystem("AI");
-		//Behaviour* state = sysAI->getBehaviour(behaviour);
+		AISystem* sysAI = (AISystem*)Engine::get().System->getSystem("AI");
+		Behaviour* state = sysAI->getBehaviour(behaviour);
 
-		//if (state->isDummy)
-		//{
-		//	return;
-		//}
+		if (state->isDummy)
+		{
+			return;
+		}
 
-		//if (state->isPassive)
-		//{
-		//	return AddPassive(behaviour);
-		//}
+		if (state->isPassive)
+		{
+			return AddPassive(behaviour);
+		}
 
 		return AddState(behaviour);
 	}
@@ -70,28 +72,26 @@ namespace GameEngine
 
 	Behaviour* Brain::getPassive(std::string name)
 	{
-
-
-		//AISystem* sysAI = (AISystem*)Engine::getEngine().System->getSystem("AI");
-		//for (PassiveIter = Passives.begin(); PassiveIter != Passives.end(); PassiveIter++) {
-		//	if ((*PassiveIter) == name)
-		//	{
-		//		return sysAI->getBehaviour(name);
-		//	}
-		//}
+		AISystem* sysAI = (AISystem*)Engine::get().System->getSystem("AI");
+		for (PassiveIter = Passives.begin(); PassiveIter != Passives.end(); PassiveIter++) {
+			if ((*PassiveIter) == name)
+			{
+				return sysAI->getBehaviour(name);
+			}
+		}
 
 		return nullptr;
 	}
 
 	Behaviour* Brain::getState(std::string name)
 	{
-		//std::string behave = States[name];
+		std::string behave = States[name];
 
-		//if (!behave.empty() || behave != "")
-		//{
-		//	AISystem* sysAI = (AISystem*)Engine::getEngine().System->getSystem("AI");
-		//	return sysAI->getBehaviour(behave);
-		//}
+		if (!behave.empty() || behave != "")
+		{
+			AISystem* sysAI = (AISystem*)Engine::get().System->getSystem("AI");
+			return sysAI->getBehaviour(behave);
+		}
 		return nullptr;
 	}
 
@@ -130,11 +130,9 @@ namespace GameEngine
 		}
 	}
 
-
 	bool Brain::Init()
 	{
-
-		//cErrorLogger::Er->WriteToConsole("> Initialized Brain\n");
+		LOG("Initializing Brain");
 		return true;
 	}
 
