@@ -3,6 +3,7 @@
 
 #include "Types.h"
 #include "Map.h"
+#include "EntityManager.h"
 
 namespace GameEngine
 {
@@ -12,6 +13,7 @@ namespace GameEngine
 		private:
 			Map* current_map;
 			std::map<std::string, Map*> _maps;
+			EntityManager* _entity_mgr;
 
 		public:
 			World();
@@ -26,6 +28,7 @@ namespace GameEngine
 			void Cleanup();
 
 
+			EntityManager* EntityMgr() { return _entity_mgr; }
 	};
 
 }

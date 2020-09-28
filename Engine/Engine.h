@@ -51,7 +51,6 @@ namespace GameEngine {
 		public:
 			//
 			SystemManager* System;
-			EntityManager* _entity_mgr;
 
 
 			Camera2D* default_cam;
@@ -147,7 +146,7 @@ namespace GameEngine {
 
 			static World* getWorld() { return &(get().w); }
 
-			static EntityManager* EntityMgr() {	return get()._entity_mgr; }
+			static EntityManager* EntityMgr() {	return getWorld()->EntityMgr(); }
 
 			static StateMachine& state() { return get().GameFSM; }
 

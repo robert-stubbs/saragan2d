@@ -6,6 +6,7 @@ namespace GameEngine
 {
 	World::World()
 	{
+		_entity_mgr = new EntityManager();
 		_maps = std::map<std::string, Map*>();
 		current_map = nullptr;
 	}

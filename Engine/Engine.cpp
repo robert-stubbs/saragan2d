@@ -67,7 +67,6 @@ namespace GameEngine {
 			Font::Get().LoadFont(ft, 30);
 
 			System = new SystemManager();
-			_entity_mgr = new EntityManager();
 
 			_gui = new GUI(RenderEngines::OpenGL);
 
