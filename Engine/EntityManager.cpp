@@ -13,15 +13,20 @@ namespace GameEngine
 	{
 	}
 
-	std::string EntityManager::RegisterEntity(Entity* Ent)
+	std::string EntityManager::RegisterEntity(Entity* Ent, bool load)
 	{
 		std::string resp = "";
 
 		Entity* test = getEntity(Ent->m_handle);
 
-		if (!test)
+		if (test == nullptr)
 		{
 			EntityPtr newEnt = EntityPtr(Ent);
+
+			if (load) {
+				newEnt->Load();
+			}
+
 			m_entities.push_back(newEnt);
 
 			return Ent->m_handle;
@@ -32,7 +37,7 @@ namespace GameEngine
 	Entity* EntityManager::getEntity(std::string EntName)
 	{
 		for (EntityPtr ptr : m_entities) {
-			if (ptr->m_handle == EntName)
+			if (ptr->m_entityname == EntName)
 			{
 				return ptr.get();
 			}
@@ -44,7 +49,7 @@ namespace GameEngine
 	void EntityManager::RemoveEntity(std::string Name)
 	{
 		for (std::vector<EntityPtr>::iterator iter = m_entities.begin(); iter != m_entities.end(); iter++) {
-			if ((*iter)->m_handle == Name)
+			if ((*iter)->m_entityname == Name)
 			{
 				//Engine::getEngine().System->RemoveComponentsByHandle(Name);
 				m_entities.erase(iter);

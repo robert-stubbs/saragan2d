@@ -26,6 +26,13 @@ namespace GameEngine
 		Engine::getRenderer().DeleteVertexBuffer(VAO);
 	}
 
+	void BatchRenderer::UnloadBuffers()
+	{
+		Engine::getRenderer().DeleteBuffer(VBO);
+		Engine::getRenderer().DeleteVertexBuffer(VAO);
+		Engine::getRenderer().DeleteBuffer(IBO);
+	}
+
 	void BatchRenderer::Init(int max_quads)
 	{
 		// set size of our verts

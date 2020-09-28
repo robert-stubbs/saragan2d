@@ -52,9 +52,6 @@
     <Filter Include="States">
       <UniqueIdentifier>{c0581840-8cdb-4636-9d48-2ec53735c6d1}</UniqueIdentifier>
     </Filter>
-    <Filter Include="SORT">
-      <UniqueIdentifier>{effeac0a-7645-4908-b5b6-413033c28b20}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Systems">
       <UniqueIdentifier>{7d5bc699-8150-4dbf-aa46-45d4b31810a3}</UniqueIdentifier>
     </Filter>
@@ -1361,17 +1358,11 @@
     <ClInclude Include="StateMachine.h">
       <Filter>States</Filter>
     </ClInclude>
-    <ClInclude Include="cIni.h">
-      <Filter>SORT</Filter>
-    </ClInclude>
     <ClInclude Include="System.h">
       <Filter>Systems\Base</Filter>
     </ClInclude>
     <ClInclude Include="SystemManager.h">
       <Filter>Systems\Base</Filter>
-    </ClInclude>
-    <ClInclude Include="cErrorLogger.h">
-      <Filter>SORT</Filter>
     </ClInclude>
     <ClInclude Include="EventManager.h">
       <Filter>Events</Filter>
@@ -1514,6 +1505,15 @@
     <ClInclude Include="World.h">
       <Filter>World</Filter>
     </ClInclude>
+    <ClInclude Include="cIni.h">
+      <Filter>File</Filter>
+    </ClInclude>
+    <ClInclude Include="cErrorLogger.h">
+      <Filter>File</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor.h">
+      <Filter>Entity</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="EnginePCH.cpp" />
@@ -1572,17 +1572,11 @@
     <ClCompile Include="StateMachine.cpp">
       <Filter>States</Filter>
     </ClCompile>
-    <ClCompile Include="cIni.cpp">
-      <Filter>SORT</Filter>
-    </ClCompile>
     <ClCompile Include="System.cpp">
       <Filter>Systems\Base</Filter>
     </ClCompile>
     <ClCompile Include="SystemManager.cpp">
       <Filter>Systems\Base</Filter>
-    </ClCompile>
-    <ClCompile Include="cErrorLogger.cpp">
-      <Filter>SORT</Filter>
     </ClCompile>
     <ClCompile Include="EventManager.cpp">
       <Filter>Events</Filter>
@@ -1706,6 +1700,15 @@
     </ClCompile>
     <ClCompile Include="World.cpp">
       <Filter>World</Filter>
+    </ClCompile>
+    <ClCompile Include="cIni.cpp">
+      <Filter>File</Filter>
+    </ClCompile>
+    <ClCompile Include="cErrorLogger.cpp">
+      <Filter>File</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor.cpp">
+      <Filter>Entity</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

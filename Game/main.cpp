@@ -3,6 +3,8 @@
 #include "Engine.h"
 #include "Types.h"
 
+#include "cIni.h"
+
 #include "TestState.h"
 #include "RayState.h"
 #include "MinesweeperState.h"
@@ -13,11 +15,24 @@ bool PreLoad()
 {
     Engine& e = Engine::get();
 
-    e.SetPlatform(PLATFORM::WINDOWS);
-    e.SetRenderEngine(RenderEngines::OpenGL);
-    e.SetAssetDir("C:/Assets/");
-    e.SetWindowName("Saragan");
-    e.SetWindowSize(800, 600);
+    LOG("Loading Ini File");
+
+    cIni* ini = new cIni("C:/Assets/Engine.ini");
+    
+
+    LOG("Setting Platform: " + ini->GetstringOption("Startup", "Platform", "WINDOWS"));
+    e.SetPlatform(ini->GetstringOption("Startup", "Platform", "WINDOWS"));
+
+    LOG("Setting Renderer:" + ini->GetstringOption("Startup", "Renderer", "OpenGL"));
+    e.SetRenderEngine(ini->GetstringOption("Startup", "Renderer", "OpenGL"));
+
+    LOG("Setting Asset Directory: " + ini->GetstringOption("Startup", "AssetDir", "C:/Assets/"));
+    e.SetAssetDir(ini->GetstringOption("Startup", "AssetDir", "C:/Assets/"));
+
+    e.SetWindowName(ini->GetstringOption("Window", "WindowName", "Default"));
+    e.SetWindowSize(ini->GetIntOption("Window","WindowSizeX", 800), ini->GetIntOption("Window", "WindowSizeY", 600));
+
+    LOG("Pre-Initializing Engine");
     if (!e.PreInit()) {
         return false;
     }
@@ -38,9 +53,14 @@ int main(void)
         return false;
     }
 
+    LOG("Initializing Engine");
     Engine::get().Init();
     Engine::get().PostInit();
+
+    LOG("Post Load");
     PostLoad();
+
+    LOG("Starting Render Loop");
     Engine::getContext().Get().RenderLoop();
     Engine::get().Cleanup();
 

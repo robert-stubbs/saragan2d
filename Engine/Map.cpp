@@ -20,17 +20,28 @@ namespace GameEngine
 
 	}
 
+	void Map::unloadMap()
+	{
+		if (_loaded) {
+			_loaded = false;
+			_batch.UnloadBuffers();
+			ZeroMemory(&_definition, sizeof(TileMap));
+			_textures.clear();
+			_quads.clear();
+		}
+	}
+
 	void Map::Init(std::string name, std::string map_path)
 	{
 		_loaded = false;
 		_name = name;
 		_path = map_path;
-		_batch.Init(1000);
 	}
 
 	void Map::ThreadLoad()
 	{
 		_loaded = false;
+		_batch.Init(1000);
 		_fut = std::async(std::launch::async, std::bind(&Map::LoadMapDefinition, this));
 	}
 
@@ -154,7 +165,9 @@ namespace GameEngine
 
 	void Map::Update(float dt)
 	{
-
+		if (!_loaded) {
+			return;
+		}
 
 		//any updates
 

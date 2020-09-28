@@ -7,23 +7,37 @@ namespace GameEngine
 
 	void cErrorLogger::CreateConsole()
 	{
-		//FreeConsole();
-		if (!AllocConsole())
+		HWND consoleWnd = GetConsoleWindow();
+		DWORD dwProcessId;
+		GetWindowThreadProcessId(consoleWnd, &dwProcessId);
+		if (GetCurrentProcessId() == dwProcessId)
 		{
-
-			MessageBox(NULL, TEXT("Error With ErrorLogger"), TEXT("Error 0x00000001"), MB_OK);
-
-		}
-		else {
-
 			hIn = GetStdHandle(STD_INPUT_HANDLE);
 			hOut = GetStdHandle(STD_OUTPUT_HANDLE);
 			hError = GetStdHandle(STD_ERROR_HANDLE);
 
 
 			myfile.open("ErrorLogger.txt", std::ios::out | std::ios::app);
-
 			Er = this;
+		}
+		else {
+			if (!AllocConsole())
+			{
+
+				MessageBox(NULL, TEXT("Error With ErrorLogger"), TEXT("Error 0x00000001"), MB_OK);
+
+			}
+			else {
+
+				hIn = GetStdHandle(STD_INPUT_HANDLE);
+				hOut = GetStdHandle(STD_OUTPUT_HANDLE);
+				hError = GetStdHandle(STD_ERROR_HANDLE);
+
+
+				myfile.open("ErrorLogger.txt", std::ios::out | std::ios::app);
+
+				Er = this;
+			}
 		}
 	}
 

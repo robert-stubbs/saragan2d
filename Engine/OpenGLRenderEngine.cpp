@@ -19,11 +19,12 @@ namespace GameEngine {
 	{
 		glewExperimental = TRUE;
 		if (glewInit() != GLEW_OK)
-		{
-			std::cout << "Error Loading Glew" << std::endl;
+		{			
+			LOG("Error Loading Glew");
 		}
 
-		std::cout << glGetString(GL_VERSION) << std::endl;
+		std::string* s = (std::string*)glGetString(GL_VERSION);
+		LOG(s->c_str());
 
 		return true;
 	}
@@ -61,14 +62,14 @@ namespace GameEngine {
 
 		if (!(tempOpenGLContext = wglCreateContext(hDC)))
 		{
-			std::cout << "#### Can't Create A GL Rendering Context ####" << std::endl;
+			LOG("#### Can't Create A GL Rendering Context ####");
 			return;
 		}
 
 
 		if (!wglMakeCurrent(hDC, tempOpenGLContext))
 		{
-			std::cout << "#### Can't Activate The GL Rendering Context ####" << std::endl;
+			LOG("#### Can't Activate The GL Rendering Context ####");
 			return;
 		}
 
@@ -82,10 +83,11 @@ namespace GameEngine {
 		glewExperimental = TRUE;
 		if (glewInit() != GLEW_OK)
 		{
-			std::cout << "Error Loading Glew" << std::endl;
+			LOG("#### Error Loading Glew ####");
 		}
 
-		std::cout << glGetString(GL_VERSION) << std::endl;
+		std::string* s = (std::string*)glGetString(GL_VERSION);
+		LOG(s->c_str());
 
 		if (wglewIsSupported("WGL_ARB_create_context") == 1) { // If the OpenGL 3.x context creation extension is available
 
@@ -94,7 +96,7 @@ namespace GameEngine {
 			wglDeleteContext(tempOpenGLContext); // Delete the temporary OpenGL 2.1 context			
 			if (!wglMakeCurrent(hDC, hRC))
 			{
-				std::cout << "#### Can't Activate The GL Rendering Context ####" << std::endl;
+				LOG("#### Can't Activate The GL Rendering Context ####");
 				return;
 			}
 		}
@@ -109,7 +111,7 @@ namespace GameEngine {
 		glGetIntegerv(GL_MAJOR_VERSION, &Major); // major = 3
 		glGetIntegerv(GL_MINOR_VERSION, &Minor); // minor = 2
 
-		std::cout << "OpenGL Version " << Major << " " << Minor << std::endl;
+		LOG("OpenGL Version " + std::to_string(Major) + " " + std::to_string(Minor));
 	}
 
 	bool OpenGLRenderEngine::Cleanup()
@@ -138,7 +140,7 @@ namespace GameEngine {
 
 			err = glGetError();
 
-			std::cout << error << std::endl;
+			LOG(error);
 		}
 	}
 

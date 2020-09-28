@@ -99,7 +99,7 @@ namespace GameEngine
 		    // - Reset after one second
 		    if (glfwGetTime() - timer > 1.0) {
 		        timer++;
-		        std::cout << "FPS: " << frames << " Updates:" << updates << std::endl;
+				LOG("FPS: " + std::to_string(frames) + " Updates: " + std::to_string(updates));
 		        updates = 0, frames = 0;
 		    }
 		}

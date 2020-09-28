@@ -5,7 +5,7 @@
 #include "System.h"
 #include "SystemManager.h"
 
-PlayerEnt::PlayerEnt() : GameEngine::Entity() {
+PlayerEnt::PlayerEnt() : GameEngine::Actor() {
 
 	m_entityname = "PlayerEntity";
 	Parent = nullptr;
@@ -16,7 +16,6 @@ PlayerEnt::PlayerEnt() : GameEngine::Entity() {
 	dy = 0;
 	dz = 0;
 
-	loc = new Location();
 	cam = new Camera();
 	sprite = new Sprite();
 	t = Texture();
@@ -29,8 +28,7 @@ PlayerEnt::~PlayerEnt() {
 
 void PlayerEnt::Load() {
 
-	addComponent(loc);
-
+	Actor::Load();
 
 	cam->SetUpCamera((float)Engine::get().RenderWidth, (float)Engine::get().RenderHeight);
 

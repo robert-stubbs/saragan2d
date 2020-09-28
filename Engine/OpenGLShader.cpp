@@ -3,6 +3,7 @@
 #include "FileManager.h"
 #include "Shader.h"
 #include "Types.h"
+#include "Engine.h"
 
 namespace GameEngine 
 {
@@ -83,7 +84,7 @@ namespace GameEngine
 			if (length > 0 && compareBuffer == 1)
 			{
 				// If we have any information to display
-				std::cout << (buffed).c_str() << std::endl;
+				LOG((buffed).c_str());
 			}
 		}
 	}
@@ -115,7 +116,7 @@ namespace GameEngine
 			if (status == GL_FALSE)
 			{
 				// If there was a problem validating
-				std::cout << "There was an error validating Program" << std::endl;
+				LOG("There was an error validating Program");
 			}
 		}
 	}

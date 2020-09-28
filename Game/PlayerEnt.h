@@ -1,7 +1,7 @@
 #ifndef _PLAYER_ENT_H_
 #define _PLAYER_ENT_H_
 
-#include "Entity.h"
+#include "Actor.h"
 #include "Location.h"
 #include "Camera.h"
 #include "Sprite.h"
@@ -18,10 +18,9 @@ enum class states {
 	SPELL
 };
 
-class PlayerEnt : public Entity
+class PlayerEnt : public Actor
 {
 	private:
-		Location* loc;
 		Camera* cam;
 		Sprite* sprite;
 

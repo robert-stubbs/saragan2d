@@ -22,12 +22,13 @@ TestState::~TestState()
 void TestState::Init()
 {
 	World* w = Engine::getWorld();
-	w->LoadMap("Test Map", "", true);
+	w->LoadMap("Test Map", "");
 	w->LoadMap("Test2 Map", "");
 
+	w->SetMap("Test Map");
 
 	p = new PlayerEnt();
-	p->Load();
+	Engine::EntityMgr()->RegisterEntity(p, true);
 
 	Engine::SetCam(p->getCam()->getCam2D());
 }
@@ -36,9 +37,6 @@ void TestState::UpdateOrth(const float& dt)
 { 
 
 	p->Update(dt);
-
-
-	//model = glm::translate(glm::inverse(Engine::get().default_cam->ViewMatrix), glm::vec3((float)Engine::get().WindowWidth/2.0f, (float)Engine::get().WindowHeight/2.0f, 0.0f));
 }
 
 void TestState::Render()

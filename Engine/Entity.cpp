@@ -3,6 +3,7 @@
 #include "Component.h"
 #include "Engine.h"
 #include "SystemManager.h"
+#include "standards.h"
 
 namespace GameEngine
 {
@@ -10,6 +11,8 @@ namespace GameEngine
 	{
 		Parent = nullptr;
 		m_components.clear();
+
+		m_handle = Engine::EntityMgr()->getNextID();
 	}
 
 	Entity::~Entity()

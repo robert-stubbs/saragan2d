@@ -469,6 +469,7 @@
     <ClInclude Include="..\ThirdParty\glm\include\glm\vec3.hpp" />
     <ClInclude Include="..\ThirdParty\glm\include\glm\vec4.hpp" />
     <ClInclude Include="..\ThirdParty\glm\include\glm\vector_relational.hpp" />
+    <ClInclude Include="Actor.h" />
     <ClInclude Include="AISystem.h" />
     <ClInclude Include="BatchRenderer.h" />
     <ClInclude Include="Behaviour.h" />
@@ -538,6 +539,7 @@
     <ClInclude Include="World.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Actor.cpp" />
     <ClCompile Include="AISystem.cpp" />
     <ClCompile Include="BatchRenderer.cpp" />
     <ClCompile Include="Behaviour.cpp" />

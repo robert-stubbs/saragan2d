@@ -82,7 +82,7 @@ namespace GameEngine
 
 		if (hWnd == NULL)
 		{
-			std::cout << GetLastError() << std::endl;
+			LOG(std::to_string(GetLastError()));
 			MessageBox(NULL, TEXT("Create Window Failed!"), TEXT("Error"), MB_ICONEXCLAMATION | MB_OK);
 			return false;
 		}
@@ -118,7 +118,7 @@ namespace GameEngine
 		// generate new context, sore in map
 		if (!(hDC = GetDC(hWnd)))                         // Did We Get A Device Context?
 		{		
-			std::cout << "#### Can't Create A GL Device Context ####" << std::endl;
+			LOG("#### Can't Create A GL Device Context ####");
 			return false;								 // Return FALSE
 		}
 
@@ -126,7 +126,7 @@ namespace GameEngine
 		{
 			if (!(PixelFormat = ChoosePixelFormat(hDC, &pfd)))
 			{
-				std::cout << "#### Can't Find A Suitable PixelFormat ####" << std::endl;
+				LOG("#### Can't Find A Suitable PixelFormat ####");
 				return false;
 			}
 		}
@@ -134,7 +134,7 @@ namespace GameEngine
 
 		if (SetPixelFormat(hDC, PixelFormat, &pfd) == FALSE)
 		{
-			std::cout << "#### SetPixelFormat failed ####" << std::endl;
+			LOG("#### SetPixelFormat failed ####");
 			return false;
 		}
 
@@ -190,7 +190,7 @@ namespace GameEngine
 			// - Reset after one second
 			if (GetTime() - timer > 1.0) {
 				timer++;
-				std::cout << "FPS: " << frames << " Updates:" << updates << std::endl;
+				LOG("FPS: " + std::to_string(frames) + " Updates:" + std::to_string(updates));
 				updates = 0, frames = 0;
 			}
 		}

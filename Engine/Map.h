@@ -36,6 +36,9 @@ namespace GameEngine
 			Map();
 			~Map();
 
+			inline bool isLoaded() { return _loaded; }
+			void unloadMap();
+
 			void Init(std::string name, std::string map_path);
 			void ThreadLoad();
 			bool LoadMapDefinition();

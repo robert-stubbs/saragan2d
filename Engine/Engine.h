@@ -15,6 +15,7 @@
 #include "SystemManager.h"
 #include "Font.h"
 #include "Input.h"
+#include "cErrorLogger.h"
 
 #include "World.h"
 
@@ -26,18 +27,24 @@
 #define DEG2RAD(a)	(PI/180*(a))
 #define RAD2DEG(a)	(180/PI*(a))
 
+#define LOG(a) Engine::Log()->WriteToConsole(a);
+
 namespace GameEngine {
 
 	class Engine
 	{
 		private:
-			Engine() {};
+			Engine() {
+				log->CreateConsole();
+			};
 
 			Context ctx;
 			Renderer renderer;
 			GUI* _gui;
 			ShaderManager shader_mgr;
 			StateMachine GameFSM;
+
+			cErrorLogger* log = new cErrorLogger();
 
 			std::vector<std::shared_ptr<ShaderDef>> _shader_definitions;
 
@@ -74,7 +81,37 @@ namespace GameEngine {
 				Input::GetInput().SetPlatform(platform);
 			};
 
+			inline void SetPlatform(std::string platform) {
+
+
+				if (platform == "WINDOWS") {
+					_platform = PLATFORM::WINDOWS;
+				}
+				else if (platform == "GLFW") {
+					_platform = PLATFORM::GLFW;
+				}
+				else if (platform == "LINUX") {
+					_platform = PLATFORM::LINUX;
+				}
+				else if (platform == "MAC") {
+					_platform = PLATFORM::MAC;
+				}
+
+				Input::GetInput().SetPlatform(_platform);
+			};
+
 			inline void SetRenderEngine(RenderEngines engine) { _engine = engine; };
+
+			inline void SetRenderEngine(std::string engine) { 
+
+				if (engine == "OpenGL") {
+					_engine = RenderEngines::OpenGL;
+				}
+				else if (engine == "DirectX") {
+					_engine = RenderEngines::DirectX;
+				}
+			};
+
 			void SetAssetDir(std::string directory);
 			void SetWindowName(std::string name);
 			void SetWindowSize(int width, int height, bool isFullScreen = false);
@@ -105,6 +142,8 @@ namespace GameEngine {
 			static void SetCam(Camera2D* new_cam) { 
 				get().current_cam = new_cam; 
 			}
+
+			static cErrorLogger* Log() { return get().log; }
 
 			static World* getWorld() { return &(get().w); }
 

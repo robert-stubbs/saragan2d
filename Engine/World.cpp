@@ -15,7 +15,7 @@ namespace GameEngine
 
 	}
 
-	void World::LoadMap(std::string name, std::string map_path, bool set_map)
+	void World::LoadMap(std::string name, std::string map_path)
 	{
 
 		//std::map<std::string, Map> _maps;
@@ -23,18 +23,28 @@ namespace GameEngine
 		{
 			_maps[name] = new Map();
 			_maps[name]->Init("Test Map", "");
-			_maps[name]->ThreadLoad();
-		}
-
-		if (set_map) {
-			SetMap(name);
 		}
 	}
 
 	void World::SetMap(std::string name)
 	{
 		if (_maps.find(name) != _maps.end()) {
+			// TODO set loading overlay
+
+			// clear current_map
+			if (current_map != nullptr) {
+				current_map->unloadMap();
+			}
+
+			// set new current map
 			current_map = _maps[name];
+
+			//lazy load if not loaded
+			if (!current_map->isLoaded())
+			{
+				_maps[name]->ThreadLoad();
+			}
+			// hide loading overlay
 		}
 	}
 
@@ -72,6 +82,6 @@ namespace GameEngine
 		}
 
 		current_map = nullptr;
-		_maps.empty();
+		_maps.clear();
 	}
 }
