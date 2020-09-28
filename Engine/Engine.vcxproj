@@ -478,6 +478,7 @@
     <ClInclude Include="Camera.h" />
     <ClInclude Include="Camera2D.h" />
     <ClInclude Include="CameraSystem.h" />
+    <ClInclude Include="Collision.h" />
     <ClInclude Include="Component.h" />
     <ClInclude Include="Context.h" />
     <ClInclude Include="ContextGLFW.h" />
@@ -549,6 +550,7 @@
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="Camera2D.cpp" />
     <ClCompile Include="CameraSystem.cpp" />
+    <ClCompile Include="Collision.cpp" />
     <ClCompile Include="Component.cpp" />
     <ClCompile Include="Context.cpp" />
     <ClCompile Include="ContextGLFW.cpp" />

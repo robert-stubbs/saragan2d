@@ -199,6 +199,9 @@
     <Filter Include="Entity\NPC">
       <UniqueIdentifier>{55d44213-b39a-4626-af1a-14da70b51d55}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Components\Collision">
+      <UniqueIdentifier>{2d466481-b460-4917-be98-8f13b41a9128}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\ThirdParty\glew\include\GL\eglew.h">
@@ -1526,6 +1529,9 @@
     <ClInclude Include="ANPC.h">
       <Filter>Entity\NPC</Filter>
     </ClInclude>
+    <ClInclude Include="Collision.h">
+      <Filter>Components\Collision</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="EnginePCH.cpp" />
@@ -1724,6 +1730,9 @@
     </ClCompile>
     <ClCompile Include="ANPC.cpp">
       <Filter>Entity\NPC</Filter>
+    </ClCompile>
+    <ClCompile Include="Collision.cpp">
+      <Filter>Components\Collision</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

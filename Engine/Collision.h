@@ -26,6 +26,8 @@ namespace GameEngine
 			virtual void Render() {};
 
 			virtual void CleanUp() override;
+
+			bool doesCollide(Collision* col);
 	};
 }
 
