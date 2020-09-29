@@ -15,6 +15,7 @@
 #include "SpriteSystem.h"
 #include "SoundSystem.h"
 #include "CameraSystem.h"
+#include "CollisionSystem.h"
 
 namespace GameEngine
 {
@@ -47,6 +48,7 @@ namespace GameEngine
 		AddSystem(new SoundSystem());
 		AddSystem(new AISystem());
 		AddSystem(new SpriteSystem(true));
+		AddSystem(new CollisionSystem(true)); // only true for debug
 		//AddSystem(new ModelSystem(false, true));
 		AddSystem(new PositionSystem());
 		AddSystem(new CameraSystem());

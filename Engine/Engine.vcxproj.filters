@@ -202,6 +202,9 @@
     <Filter Include="Components\Collision">
       <UniqueIdentifier>{2d466481-b460-4917-be98-8f13b41a9128}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Systems\Collision">
+      <UniqueIdentifier>{f66d345f-5d70-447d-8d36-ee29f779baae}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\ThirdParty\glew\include\GL\eglew.h">
@@ -1532,6 +1535,9 @@
     <ClInclude Include="Collision.h">
       <Filter>Components\Collision</Filter>
     </ClInclude>
+    <ClInclude Include="CollisionSystem.h">
+      <Filter>Systems\Collision</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="EnginePCH.cpp" />
@@ -1733,6 +1739,9 @@
     </ClCompile>
     <ClCompile Include="Collision.cpp">
       <Filter>Components\Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="CollisionSystem.cpp">
+      <Filter>Systems\Collision</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
