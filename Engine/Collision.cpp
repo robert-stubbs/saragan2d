@@ -57,8 +57,6 @@ namespace GameEngine {
 			} else {
 				Engine::getShader().BindNewShader(_shader_name);
 
-				Engine::getRenderer().EnableBlend(true, BLEND_TYPE::SRC_ALPHA, BLEND_TYPE::ONE_MINUS_SRC_ALPHA);
-
 				Location* loc = (Location*)e->getComponent("LOCATION");
 				if (loc != nullptr) {
 					Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["modelMatrix"], loc->getPositionMat(), 1, false);
@@ -69,11 +67,9 @@ namespace GameEngine {
 
 				Engine::getRenderer().BindVertexBuffer(VAO);
 
-				Engine::getRenderer().DrawArrays(DRAW_TYPE::TRIANGLE_FAN, (GLsizei)_verts.size());
+				Engine::getRenderer().DrawArrays(DRAW_TYPE::TRIANGLES, (GLsizei)_verts.size());
 
 				Engine::getRenderer().UnbindVertexBuffer();
-
-				Engine::getRenderer().EnableBlend(false);
 			}
 		}
 	}
@@ -113,7 +109,6 @@ namespace GameEngine {
 			s.BindShaderStructure();
 
 			Engine::getRenderer().UnbindBuffer();
-
 			Engine::getRenderer().UnbindVertexBuffer();
 
 			_loaded = true;
