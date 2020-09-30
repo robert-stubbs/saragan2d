@@ -85,12 +85,14 @@ namespace GameEngine
 
 	void SystemManager::RenderUI()
 	{
-		for (std::pair<std::string, SharedSystemPtr> ptr : sysBank) {
-			if (!ptr.second->isAnim && ptr.second->isUI)
-			{
-				ptr.second->RenderUI();
-			}
-		}
+		//for (std::pair<std::string, SharedSystemPtr> ptr : sysBank) {
+		//	if (!ptr.second->isAnim && ptr.second->isUI)
+		//	{
+		//		ptr.second->RenderUI();
+		//	}
+		//}
+		sysBank["SPRITE"]->RenderUI();
+		sysBank["COLLISION"]->RenderUI();
 	}
 
 

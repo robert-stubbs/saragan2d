@@ -20,8 +20,8 @@ namespace GameEngine {
 		_radius = 0;
 
 		_verts = std::vector<vert2D>();
-		_color = glm::vec4(1.0f, 0.0f, 0.0f, 1.0f);
-		_color_collide = glm::vec4(0.0f, 1.0f, 0.0f, 1.0f);
+		_color = glm::vec4(1.0f, 0.0f, 0.0f, 0.5f);
+		_color_collide = glm::vec4(0.0f, 1.0f, 0.0f, 0.5f);
 
 		_loaded = false;
 		_render_collision = false;
@@ -67,7 +67,7 @@ namespace GameEngine {
 
 				Engine::getRenderer().BindVertexBuffer(VAO);
 
-				Engine::getRenderer().DrawArrays(DRAW_TYPE::TRIANGLES, (GLsizei)_verts.size());
+				Engine::getRenderer().DrawArrays(DRAW_TYPE::TRIANGLE_FAN, (int)_verts.size());
 
 				Engine::getRenderer().UnbindVertexBuffer();
 			}
@@ -90,13 +90,13 @@ namespace GameEngine {
 	void Collision::GenerateSphereVerts()
 	{
 		_verts.clear();
-		_verts.push_back({ { _center.x, _center.y, _center.z }, { -99.0f, -99.0f }, {_color.r, _color.g, _color.b, _color.a } });
+		_verts.push_back({ { _center.x, _center.y, _center.z,1.0f }, { -99.0f, -99.0f }, {_color.r, _color.g, _color.b, _color.a } });
 
 		for (int i = 0; i <= 20; i++) {
 
 			float c = (float)cos((double)i * TWO_PI / 20.0f);
 			float s = (float)sin((double)i * TWO_PI / 20.0f);
-			_verts.push_back({ { _center.x + (_radius * c), _center.y + (_radius * s), _center.z }, { -99.0f, -99.0f }, {_color.r, _color.g, _color.b, _color.a } });
+			_verts.push_back({ { _center.x + (_radius * c), _center.y + (_radius * s), _center.z,1.0f }, { -99.0f, -99.0f }, {_color.r, _color.g, _color.b, _color.a } });
 		}
 
 		if (!VBO || VBO == 0)
@@ -123,13 +123,13 @@ namespace GameEngine {
 		}
 
 		_verts.clear();
-		_verts.push_back({ { _center.x, _center.y, _center.z }, { -99.0f, -99.0f }, {selected_color.r, selected_color.g, selected_color.b, selected_color.a } });
+		_verts.push_back({ { _center.x, _center.y, _center.z,1.0f }, { -99.0f, -99.0f }, {selected_color.r, selected_color.g, selected_color.b, selected_color.a } });
 
 		for (int i = 0; i <= 20; i++) {
 
 			float c = (float)cos((double)i * TWO_PI / 20.0f);
 			float s = (float)sin((double)i * TWO_PI / 20.0f);
-			_verts.push_back({ { _center.x + (_radius * c), _center.y + (_radius * s), _center.z }, { -99.0f, -99.0f }, {selected_color.r, selected_color.g, selected_color.b, selected_color.a } });
+			_verts.push_back({ { _center.x + (_radius * c), _center.y + (_radius * s), _center.z,1.0f }, { -99.0f, -99.0f }, {selected_color.r, selected_color.g, selected_color.b, selected_color.a } });
 		}
 
 		if (VBO != 0)
