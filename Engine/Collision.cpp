@@ -2,6 +2,7 @@
 #include "Collision.h"
 
 #include "Engine.h"
+#include "Location.h"
 
 namespace GameEngine {
 
@@ -19,7 +20,8 @@ namespace GameEngine {
 		_radius = 0;
 
 		_verts = std::vector<vert2D>();
-		_color = glm::vec4(1.0f, 0.0f, 0.0f, 0.5f);
+		_color = glm::vec4(1.0f, 0.0f, 0.0f, 1.0f);
+		_color_collide = glm::vec4(0.0f, 1.0f, 0.0f, 1.0f);
 
 		_loaded = false;
 		_render_collision = false;
@@ -48,25 +50,45 @@ namespace GameEngine {
 
 	void Collision::Render() 
 	{
-		if (_render_collision && _loaded)
+		if (_render_collision)
 		{
-			Engine::getShader().BindNewShader(_shader_name);
+			if (!_loaded) {
+				GenerateSphereVerts();
+			} else {
+				Engine::getShader().BindNewShader(_shader_name);
 
-			Engine::getRenderer().EnableBlend(true, BLEND_TYPE::SRC_ALPHA, BLEND_TYPE::ONE_MINUS_SRC_ALPHA);
+				Engine::getRenderer().EnableBlend(true, BLEND_TYPE::SRC_ALPHA, BLEND_TYPE::ONE_MINUS_SRC_ALPHA);
 
-			Engine::getRenderer().BindVertexBuffer(VAO);
+				Location* loc = (Location*)e->getComponent("LOCATION");
+				if (loc != nullptr) {
+					Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["modelMatrix"], loc->getPositionMat(), 1, false);
+				}
+				else {
+					Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["modelMatrix"], glm::mat4(1.0f), 1, false);
+				}
 
-			Engine::getRenderer().DrawArrays(DRAW_TYPE::TRIANGLE_FAN, (GLsizei)_verts.size());
+				Engine::getRenderer().BindVertexBuffer(VAO);
 
-			Engine::getRenderer().UnbindVertexBuffer();
+				Engine::getRenderer().DrawArrays(DRAW_TYPE::TRIANGLE_FAN, (GLsizei)_verts.size());
 
-			Engine::getRenderer().EnableBlend(false);
+				Engine::getRenderer().UnbindVertexBuffer();
+
+				Engine::getRenderer().EnableBlend(false);
+			}
 		}
 	}
 
 	void Collision::CleanUp()
 	{
+		Engine::getRenderer().DeleteBuffer(VBO);
+		Engine::getRenderer().DeleteVertexBuffer(VAO);
+		_verts.clear();
+	}
 
+	void Collision::setColors(glm::vec4 col, glm::vec4 collision_col)
+	{
+		_color = col;
+		_color_collide = collision_col;
 	}
 
 	void Collision::GenerateSphereVerts()
@@ -98,19 +120,48 @@ namespace GameEngine {
 		}
 	}
 
+	void Collision::UpdateSphereVerts(bool collide)
+	{
+		glm::vec4 selected_color = _color;
+		if (collide) {
+			selected_color = _color_collide;
+		}
+
+		_verts.clear();
+		_verts.push_back({ { _center.x, _center.y, _center.z }, { -99.0f, -99.0f }, {selected_color.r, selected_color.g, selected_color.b, selected_color.a } });
+
+		for (int i = 0; i <= 20; i++) {
+
+			float c = (float)cos((double)i * TWO_PI / 20.0f);
+			float s = (float)sin((double)i * TWO_PI / 20.0f);
+			_verts.push_back({ { _center.x + (_radius * c), _center.y + (_radius * s), _center.z }, { -99.0f, -99.0f }, {selected_color.r, selected_color.g, selected_color.b, selected_color.a } });
+		}
+
+		if (VBO != 0)
+		{
+			Shader& s = Engine::getShader()[_shader_name];
+
+			Engine::getRenderer().BindBuffer(VBO);
+
+			Engine::getRenderer().UpdateBuffer(VBO, _verts);
+
+			Engine::getRenderer().UnbindBuffer();
+		}
+	}
+
 	bool Collision::doesCollide(Collision* col)
 	{
 		if (_type == CollisionType::BOX) {
 			if (col->_type == CollisionType::BOX) {
-				return Collision::BoxToBoxCollision(_min, _max, col->_min, col->_max);
+				return BoxToBoxCollision(_min, _max, col->_min, col->_max);
 			} else if (col->_type == CollisionType::SPEHERE) {
-				return Collision::SphereToBoxCollision(col->_center, col->_radius, _min, _max);
+				return SphereToBoxCollision(col->_center, col->_radius, _min, _max);
 			}
 		} else if (_type == CollisionType::SPEHERE) {
 			if (col->_type == CollisionType::BOX) {
-				return Collision::SphereToBoxCollision(col->_center, col->_radius, _min, _max);
+				return SphereToBoxCollision(col->_center, col->_radius, _min, _max);
 			} else if (col->_type == CollisionType::SPEHERE) {
-				return Collision::SphereToSphereCollision(col->_center, col->_radius, _center, _radius);
+				return SphereToSphereCollision(col->_center, col->_radius, _center, _radius);
 			}
 		}
 		return false;
@@ -118,17 +169,27 @@ namespace GameEngine {
 
 	void Collision::setBoxCollision(glm::vec3 min, glm::vec3 max)
 	{
-
+		_min = min;
+		_max = max;
+		_type = CollisionType::BOX;
 	}
 
 	void Collision::setSphereCollision(glm::vec3 center, float radius)
 	{
-
+		_center = center;
+		_radius = radius;
+		_type = CollisionType::SPEHERE;
 	}
 
 	bool Collision::SphereToSphereCollision(glm::vec3 center, float radius, glm::vec3 center2, float radius2)
 	{
-		return (glm::distance(center2, center) < (radius + radius2));
+		bool collides = (glm::distance(center2, center) < (radius + radius2));
+
+		if (_render_collision) {
+			UpdateSphereVerts(collides);
+		}
+
+		return collides;
 	}
 
 	bool Collision::SphereToBoxCollision(glm::vec3 center, float radius, glm::vec3 min, glm::vec3 max)

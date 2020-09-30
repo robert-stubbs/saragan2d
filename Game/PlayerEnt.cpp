@@ -18,6 +18,7 @@ PlayerEnt::PlayerEnt() : GameEngine::Actor() {
 
 	cam = new Camera();
 	sprite = new Sprite();
+	c = new Collision();
 	t = Texture();
 }
 
@@ -31,7 +32,6 @@ void PlayerEnt::Load() {
 	Actor::Load();
 
 	cam->SetUpCamera((float)Engine::get().RenderWidth, (float)Engine::get().RenderHeight);
-
 	addComponent(cam);
 
 	// Add Texture
@@ -131,6 +131,12 @@ void PlayerEnt::Load() {
 	sprite->SetAnim("Idle");
 
 	addComponent(sprite);
+
+	c->setSphereCollision(glm::vec3(idle.frame_width / 2.0f, idle.frame_height / 2.0f, 0.5f), (idle.frame_width / 2.0f));
+	c->SetRenderCollision(true);
+
+	addComponent(c);
+
 }
 
 void PlayerEnt::Update(float dt)

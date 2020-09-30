@@ -3,6 +3,7 @@
 #include "Collision.h"
 
 #include "Component.h"
+#include "Engine.h"
 
 namespace GameEngine {
 
@@ -25,6 +26,19 @@ namespace GameEngine {
 	void CollisionSystem::Update(float dt)
 	{
 
+	}
+	
+	void CollisionSystem::RenderUI()
+	{
+		Engine::getRenderer().EnableDepthTest(false);
+		Engine::getRenderer().EnableBlend(true, BLEND_TYPE::SRC_ALPHA, BLEND_TYPE::ONE_MINUS_SRC_ALPHA);
+
+		for (ComponentPtr ptr : m_components) {
+			ptr->Render();
+		}
+
+		Engine::getRenderer().EnableBlend(false);
+		Engine::getRenderer().EnableDepthTest(true);
 	}
 
 	void CollisionSystem::CleanUp()

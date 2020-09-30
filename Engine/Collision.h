@@ -30,6 +30,7 @@ namespace GameEngine
 
 			std::vector<vert2D> _verts;
 			glm::vec4 _color;
+			glm::vec4 _color_collide;
 			unsigned int VAO;
 			unsigned int VBO;
 
@@ -45,15 +46,20 @@ namespace GameEngine
 
 			virtual void CleanUp() override;
 
+			inline void SetRenderCollision(bool render) { _render_collision = render; }
+
+			void setColors(glm::vec4 col = glm::vec4(1.0f, 0.0f, 0.0f, 0.5f), glm::vec4 collision_col = glm::vec4(0.0f, 1.0f, 0.0f, 0.5f));
+
 			void GenerateSphereVerts();
+			void UpdateSphereVerts(bool collide = false);
 
 			bool doesCollide(Collision* col);
 			void setBoxCollision(glm::vec3 min, glm::vec3 max);
 			void setSphereCollision(glm::vec3 center, float radius);
 
-			static bool SphereToSphereCollision(glm::vec3 center, float radius, glm::vec3 center2, float radius2);
-			static bool SphereToBoxCollision(glm::vec3 center, float radius, glm::vec3 min, glm::vec3 max);
-			static bool BoxToBoxCollision(glm::vec3 min, glm::vec3 max, glm::vec3 min2, glm::vec3 max2);
+			bool SphereToSphereCollision(glm::vec3 center, float radius, glm::vec3 center2, float radius2);
+			bool SphereToBoxCollision(glm::vec3 center, float radius, glm::vec3 min, glm::vec3 max);
+			bool BoxToBoxCollision(glm::vec3 min, glm::vec3 max, glm::vec3 min2, glm::vec3 max2);
 	};
 }
 

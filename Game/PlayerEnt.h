@@ -6,6 +6,7 @@
 #include "Camera.h"
 #include "Sprite.h"
 #include "Texture.h"
+#include "Collision.h"
 
 using namespace GameEngine;
 
@@ -23,8 +24,10 @@ class PlayerEnt : public Actor
 	private:
 		Camera* cam;
 		Sprite* sprite;
+		Collision* c;
 
 		Texture t;
+
 
 		float speed;
 	protected:
