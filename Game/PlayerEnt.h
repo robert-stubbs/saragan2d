@@ -28,6 +28,7 @@ class PlayerEnt : public Actor
 
 		Texture t;
 
+		glm::vec3 _lastpos;
 
 		float speed;
 	protected:
@@ -47,6 +48,8 @@ class PlayerEnt : public Actor
 		virtual void Update(float dt);
 
 		virtual void SetState(states st);
+
+		virtual void hasCollided(Component* comp) override;
 };
 
 #endif

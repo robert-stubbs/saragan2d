@@ -30,6 +30,9 @@ void TestState::Init()
 	p = new PlayerEnt();
 	Engine::EntityMgr()->RegisterEntity(p, true);
 
+	NPC = new ANPC();
+	Engine::EntityMgr()->RegisterEntity(NPC, true);
+
 	Engine::SetCam(p->getCam()->getCam2D());
 }
 

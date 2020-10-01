@@ -8,6 +8,7 @@
 #include "Map.h"
 #include "PlayerEnt.h"
 #include "World.h"
+#include "ANPC.h"
 
 class TestState : public GameEngine::State
 {
@@ -16,7 +17,7 @@ class TestState : public GameEngine::State
         glm::mat4 model;
 
         PlayerEnt* p;
-
+        ANPC* NPC;
 
         TestState();
         virtual ~TestState();

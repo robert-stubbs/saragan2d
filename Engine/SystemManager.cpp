@@ -38,27 +38,40 @@ namespace GameEngine
 	void SystemManager::Init()
 	{
 		//SysMgr->AddSystem("script");
-		//SysMgr->AddSystem("input");
-		//SysMgr->AddSystem("render");
-		//SysMgr->AddSystem("collision");
-		//SysMgr->AddSystem("camera");
-
 
 		//AddSystem(new GUISystem(true));
 		AddSystem(new SoundSystem());
 		AddSystem(new AISystem());
 		AddSystem(new SpriteSystem(true));
 		AddSystem(new CollisionSystem(true)); // only true for debug
-		//AddSystem(new ModelSystem(false, true));
 		AddSystem(new PositionSystem());
 		AddSystem(new CameraSystem());
 	}
 
 	void SystemManager::Update(float dt)
 	{
-		for (std::pair<std::string, SharedSystemPtr> ptr: sysBank) {
-			//ptr.second->Update(dt);
-			std::future<void> _fut = std::async(std::launch::async, std::bind(&System::Update, ptr.second, dt));
+		//for (std::pair<std::string, SharedSystemPtr> ptr: sysBank) {
+		//	//ptr.second->Update(dt);
+		//	std::future<void> _fut = std::async(std::launch::async, std::bind(&System::Update, ptr.second, dt));
+		//}
+
+		if (sysBank.find("SOUND") != sysBank.end()) {
+			std::future<void> _fut_sound = std::async(std::launch::async, std::bind(&System::Update, sysBank["SOUND"], dt));
+		}
+		if (sysBank.find("AI") != sysBank.end()) {
+			std::future<void> _fut_sound = std::async(std::launch::async, std::bind(&System::Update, sysBank["AI"], dt));
+		}
+		if (sysBank.find("LOCATION") != sysBank.end()) {
+			std::future<void> _fut_sound = std::async(std::launch::async, std::bind(&System::Update, sysBank["LOCATION"], dt));
+		}
+		if (sysBank.find("CAMERA") != sysBank.end()) {
+			std::future<void> _fut_sound = std::async(std::launch::async, std::bind(&System::Update, sysBank["CAMERA"], dt));
+		}
+		if (sysBank.find("SPRITE") != sysBank.end()) {
+			std::future<void> _fut_sound = std::async(std::launch::async, std::bind(&System::Update, sysBank["SPRITE"], dt));
+		}
+		if (sysBank.find("COLLISION") != sysBank.end()) {
+			std::future<void> _fut_sound = std::async(std::launch::async, std::bind(&System::Update, sysBank["COLLISION"], dt));
 		}
 	}
 

@@ -3,6 +3,7 @@
 
 #include "Actor.h"
 #include "Brain.h"
+#include "Collision.h"
 
 namespace GameEngine
 {
@@ -11,6 +12,7 @@ namespace GameEngine
 	{
 		public:
 			Brain* _brain;
+			Collision* _collision;
 
 			ANPC();
 			virtual ~ANPC();

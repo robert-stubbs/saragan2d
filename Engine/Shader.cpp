@@ -7,6 +7,7 @@ namespace GameEngine
 	Shader::Shader() {
 		bindings = std::vector<ShaderBinding>();
 		locations = std::map<std::string, unsigned int>();
+		_shadername = "";
 	}
 
 	Shader::~Shader() {}

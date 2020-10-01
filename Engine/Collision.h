@@ -46,6 +46,8 @@ namespace GameEngine
 
 			virtual void CleanUp() override;
 
+			glm::vec3 GetCollisionWorldPos();
+
 			inline void SetRenderCollision(bool render) { _render_collision = render; }
 
 			void setColors(glm::vec4 col = glm::vec4(1.0f, 0.0f, 0.0f, 0.5f), glm::vec4 collision_col = glm::vec4(0.0f, 1.0f, 0.0f, 0.5f));

@@ -16,6 +16,8 @@ PlayerEnt::PlayerEnt() : GameEngine::Actor() {
 	dy = 0;
 	dz = 0;
 
+	_lastpos = glm::vec3(1.0f, 1.0f, 1.0f);
+
 	cam = new Camera();
 	sprite = new Sprite();
 	c = new Collision();
@@ -144,8 +146,12 @@ void PlayerEnt::Update(float dt)
 
 	Location* loc = (Location*)getComponent("LOCATION");
 	if (loc != nullptr) {
-		// set look at on camera to position x,y,z
+		// set look at on camera to position x,y,z		
 		glm::vec3& pos = loc->getPosition();
+
+		// do not alter this
+		_lastpos = glm::vec3(pos.x, pos.y, pos.z);
+
 		pos.x += (dx)*speed;
 		pos.y += (dy)*speed;
 	}
@@ -184,5 +190,13 @@ void PlayerEnt::SetState(states st)
 	default:
 		sprite->SetAnim("Idle");
 		break;
+	}
+}
+
+void PlayerEnt::hasCollided(Component* comp)
+{
+	if (comp->m_type == "COLLISION") {
+		Location* loc = (Location*)getComponent("LOCATION");
+		loc->setPosition(_lastpos.x, _lastpos.y, _lastpos.z);
 	}
 }

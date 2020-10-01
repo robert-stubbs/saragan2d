@@ -25,7 +25,19 @@ namespace GameEngine {
 
 	void CollisionSystem::Update(float dt)
 	{
+		ComponentBank::iterator iter2;
+		for (iter = m_components.begin(); iter != m_components.end(); iter++)
+		{
+			Collision* c1 = (Collision *)iter->get();
 
+			for (iter2 = iter+1; iter2 != m_components.end(); iter2++)
+			{
+				Collision* c2 = (Collision*)iter2->get();
+				if (c1->doesCollide(c2)) {
+					c1->GetEntity()->hasCollided(c2);
+				}
+			}
+		}
 	}
 	
 	void CollisionSystem::RenderUI()

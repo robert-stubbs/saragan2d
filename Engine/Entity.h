@@ -26,6 +26,8 @@ namespace GameEngine
 			virtual bool hasComponent(std::string CompName);
 			virtual Component* getComponent(std::string CompName);
 			virtual void addComponent(Component* comp);
+
+			virtual void hasCollided(Component* comp) {}
 	};
 }
 

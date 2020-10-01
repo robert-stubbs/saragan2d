@@ -35,6 +35,7 @@ namespace GameEngine {
 		}
 		
 		_instance = _shaders[name];
+		_instance->SetName(name);
 
 		return *(_shaders[name]);
 	}
@@ -46,11 +47,14 @@ namespace GameEngine {
 
 	Shader& ShaderManager::BindNewShader(std::string name)
 	{
-		if (_instance != nullptr) {
-			_instance->unbind();
-			_instance = nullptr;
+		if (_instance == nullptr) {
+			_instance = _shaders[name];
+			_instance->bind();
+			return *_instance;
 		}
 
+		_instance->unbind();
+		_instance = nullptr;
 		_instance = _shaders[name];
 		_instance->bind();
 
