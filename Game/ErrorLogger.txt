@@ -1214,3 +1214,612 @@ FPS: 1 Updates:1
 FPS: 1 Updates:1
 FPS: 53 Updates:54
 FPS: 60 Updates:61
+Loading Ini File
+Setting Platform: WINDOWS
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+OpenGL Version 4 4
+Initializing Engine
+Post Load
+Starting Render Loop
+INVALID_OPERATION
+Loading Ini File
+Setting Platform: WINDOWS
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+OpenGL Version 4 4
+Initializing Engine
+Post Load
+Starting Render Loop
+INVALID_OPERATION
+Loading Ini File
+Setting Platform: WINDOWS
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+OpenGL Version 4 4
+Initializing Engine
+Post Load
+Starting Render Loop
+INVALID_OPERATION
+Loading Ini File
+Setting Platform: WINDOWS
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+OpenGL Version 4 4
+Initializing Engine
+Post Load
+Starting Render Loop
+FPS: 59 Updates:59
+FPS: 60 Updates:60
+Loading Ini File
+Setting Platform: WINDOWS
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+OpenGL Version 4 4
+Initializing Engine
+Post Load
+Starting Render Loop
+INVALID_OPERATION
+FPS: 58 Updates:59
+FPS: 60 Updates:60
+FPS: 59 Updates:60
+FPS: 57 Updates:60
+FPS: 59 Updates:60
+FPS: 60 Updates:60
+FPS: 57 Updates:60
+FPS: 60 Updates:60
+Loading Ini File
+Setting Platform: WINDOWS
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+OpenGL Version 4 4
+Initializing Engine
+Post Load
+Starting Render Loop
+INVALID_OPERATION
+FPS: 58 Updates:59
+FPS: 59 Updates:60
+FPS: 60 Updates:60
+FPS: 60 Updates:60
+FPS: 59 Updates:60
+FPS: 60 Updates:60
+FPS: 60 Updates:60
+FPS: 60 Updates:60
+FPS: 58 Updates:60
+FPS: 55 Updates:60
+FPS: 50 Updates:59
+FPS: 50 Updates:61
+FPS: 51 Updates:60
+FPS: 53 Updates:60
+FPS: 56 Updates:60
+FPS: 60 Updates:60
+Loading Ini File
+Setting Platform: WINDOWS
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+OpenGL Version 4 4
+Initializing Engine
+Post Load
+Starting Render Loop
+INVALID_OPERATION
+FPS: 55 Updates:59
+FPS: 60 Updates:60
+FPS: 59 Updates:60
+FPS: 60 Updates:60
+FPS: 60 Updates:60
+FPS: 60 Updates:60
+Loading Ini File
+Setting Platform: WINDOWS
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+OpenGL Version 4 4
+Initializing Engine
+Post Load
+Starting Render Loop
+INVALID_OPERATION
+FPS: 57 Updates:58
+FPS: 54 Updates:61
+FPS: 61 Updates:60
+FPS: 60 Updates:60
+FPS: 60 Updates:60
+FPS: 59 Updates:60
+FPS: 59 Updates:60
+FPS: 59 Updates:60
+FPS: 60 Updates:60
+FPS: 57 Updates:60
+FPS: 61 Updates:60
+FPS: 60 Updates:60
+FPS: 58 Updates:60
+FPS: 60 Updates:60
+FPS: 60 Updates:60
+FPS: 59 Updates:59
+FPS: 61 Updates:61
+FPS: 60 Updates:60
+FPS: 60 Updates:60
+FPS: 57 Updates:60
+FPS: 13 Updates:60
+FPS: 60 Updates:60
+FPS: 60 Updates:60
+FPS: 60 Updates:60
+FPS: 60 Updates:60
+FPS: 60 Updates:60
+FPS: 60 Updates:60
+FPS: 5 Updates:5
+FPS: 1 Updates:854
+FPS: 1 Updates:444
+FPS: 1 Updates:6
+FPS: 1 Updates:1
+FPS: 1 Updates:1
+FPS: 1 Updates:1
+FPS: 1 Updates:0
+FPS: 1 Updates:1
+FPS: 1 Updates:1
+FPS: 1 Updates:1
+FPS: 1 Updates:1
+FPS: 1 Updates:1
+FPS: 1 Updates:1
+FPS: 1 Updates:1
+FPS: 1 Updates:1
+FPS: 1 Updates:1
+FPS: 1 Updates:1
+FPS: 1 Updates:1
+FPS: 1 Updates:1
+FPS: 1 Updates:1
+FPS: 1 Updates:1
+FPS: 54 Updates:54
+FPS: 60 Updates:60
+FPS: 32 Updates:32
+FPS: 1 Updates:503
+FPS: 1 Updates:7
+FPS: 1 Updates:1
+FPS: 1 Updates:1
+FPS: 1 Updates:1
+FPS: 1 Updates:2
+FPS: 1 Updates:1
+FPS: 1 Updates:1
+FPS: 44 Updates:51
+FPS: 58 Updates:60
+FPS: 60 Updates:60
+FPS: 52 Updates:60
+FPS: 40 Updates:60
+FPS: 40 Updates:59
+FPS: 41 Updates:60
+FPS: 43 Updates:61
+FPS: 43 Updates:60
+FPS: 43 Updates:60
+FPS: 43 Updates:59
+FPS: 47 Updates:61
+FPS: 58 Updates:60
+Loading Ini File
+Setting Platform: WINDOWS
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+OpenGL Version 4 4
+Initializing Engine
+Post Load
+Starting Render Loop
+FPS: 60 Updates:59
+Loading Ini File
+Setting Platform: WINDOWS
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+OpenGL Version 4 4
+Initializing Engine
+Post Load
+Starting Render Loop
+INVALID_OPERATION
+INVALID_OPERATION
+INVALID_OPERATION
+Loading Ini File
+Setting Platform: WINDOWS
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+OpenGL Version 4 4
+Initializing Engine
+Post Load
+Starting Render Loop
+INVALID_OPERATION
+INVALID_OPERATION
+INVALID_OPERATION
+INVALID_VALUE
+INVALID_OPERATION
+INVALID_OPERATION
+Loading Ini File
+Setting Platform: WINDOWS
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+OpenGL Version 4 4
+Initializing Engine
+Post Load
+Starting Render Loop
+INVALID_OPERATION
+FPS: 58 Updates:59
+Loading Ini File
+Setting Platform: WINDOWS
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+OpenGL Version 4 4
+Initializing Engine
+Post Load
+Starting Render Loop
+INVALID_OPERATION
+Loading Ini File
+Setting Platform: WINDOWS
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+OpenGL Version 4 4
+Initializing Engine
+Post Load
+Starting Render Loop
+FPS: 60 Updates:59
+Loading Ini File
+Setting Platform: WINDOWS
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+OpenGL Version 4 4
+Initializing Engine
+Post Load
+Starting Render Loop
+INVALID_OPERATION
+Loading Ini File
+Setting Platform: WINDOWS
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+OpenGL Version 4 4
+Initializing Engine
+Post Load
+Starting Render Loop
+INVALID_OPERATION
+Loading Ini File
+Setting Platform: WINDOWS
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+OpenGL Version 4 4
+Initializing Engine
+Post Load
+Starting Render Loop
+INVALID_OPERATION
+Loading Ini File
+Setting Platform: WINDOWS
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+OpenGL Version 4 4
+Initializing Engine
+Post Load
+Starting Render Loop
+INVALID_OPERATION
+Loading Ini File
+Setting Platform: WINDOWS
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+OpenGL Version 4 4
+Initializing Engine
+Post Load
+Starting Render Loop
+FPS: 59 Updates:59
+FPS: 60 Updates:60
+FPS: 60 Updates:60
+FPS: 56 Updates:60
+Loading Ini File
+Setting Platform: WINDOWS
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+OpenGL Version 4 4
+Initializing Engine
+Post Load
+Starting Render Loop
+FPS: 59 Updates:65
+Loading Ini File
+Setting Platform: WINDOWS
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+OpenGL Version 4 4
+Initializing Engine
+Post Load
+Starting Render Loop
+INVALID_OPERATION
+Loading Ini File
+Setting Platform: WINDOWS
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+OpenGL Version 4 4
+Initializing Engine
+Post Load
+Starting Render Loop
+INVALID_OPERATION
+FPS: 59 Updates:59
+Loading Ini File
+Setting Platform: WINDOWS
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+OpenGL Version 4 4
+Initializing Engine
+Post Load
+Starting Render Loop
+INVALID_OPERATION
+FPS: 2 Updates:0
+FPS: 1 Updates:196
+FPS: 1 Updates:34
+Loading Ini File
+Setting Platform: WINDOWS
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+OpenGL Version 4 4
+Initializing Engine
+Post Load
+Starting Render Loop
+INVALID_OPERATION
+FPS: 2 Updates:0
+FPS: 1 Updates:148
+FPS: 30 Updates:31
+FPS: 59 Updates:60
+FPS: 61 Updates:60
+Loading Ini File
+Setting Platform: WINDOWS
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+OpenGL Version 4 4
+Initializing Engine
+Post Load
+Starting Render Loop
+INVALID_OPERATION
+FPS: 59 Updates:59
+Loading Ini File
+Setting Platform: WINDOWS
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+OpenGL Version 4 4
+Initializing Engine
+Post Load
+Starting Render Loop
+INVALID_OPERATION
+FPS: 58 Updates:59
+Loading Ini File
+Setting Platform: WINDOWS
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+OpenGL Version 4 4
+Initializing Engine
+Post Load
+Starting Render Loop
+INVALID_OPERATION
+FPS: 59 Updates:59
+Loading Ini File
+Setting Platform: WINDOWS
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+OpenGL Version 4 4
+Initializing Engine
+Post Load
+Starting Render Loop
+INVALID_OPERATION
+Loading Ini File
+Setting Platform: WINDOWS
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+OpenGL Version 4 4
+Initializing Engine
+Post Load
+Starting Render Loop
+FPS: 3 Updates:3
+FPS: 1 Updates:136
+FPS: 37 Updates:40
+FPS: 60 Updates:60
+Loading Ini File
+Setting Platform: WINDOWS
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+OpenGL Version 4 4
+Initializing Engine
+Post Load
+Starting Render Loop
+Loading Ini File
+Setting Platform: WINDOWS
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+OpenGL Version 4 4
+Initializing Engine
+Post Load
+Starting Render Loop
+INVALID_OPERATION
+Loading Ini File
+Setting Platform: WINDOWS
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+OpenGL Version 4 4
+Initializing Engine
+Post Load
+Starting Render Loop
+INVALID_OPERATION
+Loading Ini File
+Setting Platform: WINDOWS
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+OpenGL Version 4 4
+Initializing Engine
+Post Load
+Starting Render Loop
+Loading Ini File
+Setting Platform: WINDOWS
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+OpenGL Version 4 4
+Initializing Engine
+Post Load
+Starting Render Loop
+FPS: 60 Updates:59
+Loading Ini File
+Setting Platform: WINDOWS
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+OpenGL Version 4 4
+Initializing Engine
+Post Load
+Starting Render Loop
+INVALID_OPERATION
+INVALID_OPERATION
+INVALID_OPERATION
+INVALID_VALUE
+INVALID_OPERATION
+INVALID_OPERATION
+Loading Ini File
+Setting Platform: WINDOWS
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+OpenGL Version 4 4
+Initializing Engine
+Post Load
+Starting Render Loop
+INVALID_OPERATION
+INVALID_OPERATION
+INVALID_OPERATION
+INVALID_VALUE
+INVALID_OPERATION
+INVALID_OPERATION
+Loading Ini File
+Setting Platform: WINDOWS
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+OpenGL Version 4 4
+Initializing Engine
+Post Load
+Starting Render Loop
+INVALID_OPERATION
+INVALID_OPERATION
+INVALID_OPERATION
+Loading Ini File
+Setting Platform: WINDOWS
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+OpenGL Version 4 4
+Initializing Engine
+Post Load
+Starting Render Loop
+INVALID_OPERATION
+INVALID_OPERATION
+INVALID_OPERATION
+INVALID_VALUE
+INVALID_OPERATION
+INVALID_OPERATION
+Loading Ini File
+Setting Platform: WINDOWS
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+OpenGL Version 4 4
+Initializing Engine
+Post Load
+Starting Render Loop
+INVALID_OPERATION
+INVALID_OPERATION
+INVALID_OPERATION
+INVALID_VALUE
+INVALID_OPERATION
+INVALID_OPERATION
+Loading Ini File
+Setting Platform: WINDOWS
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+OpenGL Version 4 4
+Initializing Engine
+Post Load
+Starting Render Loop
+INVALID_OPERATION
+INVALID_OPERATION
+INVALID_OPERATION
+Loading Ini File
+Setting Platform: WINDOWS
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+OpenGL Version 4 4
+Initializing Engine
+Post Load
+Starting Render Loop
+INVALID_OPERATION
+INVALID_OPERATION
+INVALID_OPERATION
+INVALID_VALUE
+INVALID_OPERATION
+INVALID_OPERATION
+FPS: 1 Updates:0

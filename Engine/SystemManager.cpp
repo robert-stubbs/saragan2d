@@ -78,22 +78,26 @@ namespace GameEngine
 
 	void SystemManager::Render()
 	{
-		for (std::pair<std::string, SharedSystemPtr> ptr : sysBank) {
-			if (!ptr.second->isAnim && !ptr.second->isUI)
-			{
-				ptr.second->Render();
-			}
+		//for (std::pair<std::string, SharedSystemPtr> ptr : sysBank) {
+		//	if (!ptr.second->isAnim && !ptr.second->isUI)
+		//	{
+		//		ptr.second->Render();
+		//	}
+		//}
+
+		if (sysBank.find("AI") != sysBank.end()) {
+			sysBank["AI"]->Render();
 		}
 	}
 
 	void SystemManager::RenderAnim()
 	{
-		for (std::pair<std::string, SharedSystemPtr> ptr : sysBank) {
-			if (ptr.second->isAnim && !ptr.second->isUI)
-			{
-				ptr.second->RenderAnim();
-			}
-		}
+		//for (std::pair<std::string, SharedSystemPtr> ptr : sysBank) {
+		//	if (ptr.second->isAnim && !ptr.second->isUI)
+		//	{
+		//		ptr.second->RenderAnim();
+		//	}
+		//}
 	}
 
 	void SystemManager::RenderUI()

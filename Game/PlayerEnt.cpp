@@ -196,7 +196,7 @@ void PlayerEnt::SetState(states st)
 void PlayerEnt::hasCollided(Component* comp)
 {
 	if (comp->m_type == "COLLISION") {
-		Location* loc = (Location*)getComponent("LOCATION");
-		loc->setPosition(_lastpos.x, _lastpos.y, _lastpos.z);
+		//Location* loc = (Location*)getComponent("LOCATION");
+		//loc->setPosition(_lastpos.x, _lastpos.y, _lastpos.z);
 	}
 }

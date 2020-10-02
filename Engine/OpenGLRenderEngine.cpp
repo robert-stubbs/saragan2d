@@ -260,7 +260,7 @@ namespace GameEngine {
 		if (VBO != -1)
 		{
 			glBindBuffer(GL_ARRAY_BUFFER, VBO);
-			glBufferSubData(GL_ARRAY_BUFFER, 0, sizeof(vert2D) * (int)verts.size(), &verts[0]);
+			glBufferSubData(GL_ARRAY_BUFFER, NULL, sizeof(vert2D) * (int)verts.size(), &verts[0]);
 			glBindBuffer(GL_ARRAY_BUFFER, 0);
 
 			return true;

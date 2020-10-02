@@ -23,7 +23,9 @@ namespace GameEngine {
 		_color = glm::vec4(1.0f, 0.0f, 0.0f, 0.5f);
 		_color_collide = glm::vec4(0.0f, 1.0f, 0.0f, 0.5f);
 
+		_update = false;
 		_loaded = false;
+		_has_collided = false;
 		_render_collision = false;
 		_shader_name = "DEFAULT2D";
 	}
@@ -50,7 +52,7 @@ namespace GameEngine {
 
 	void Collision::Render() 
 	{
-		if (_render_collision)
+		if (_render_collision && !_update)
 		{
 			if (!_loaded) {
 				GenerateSphereVerts();
@@ -104,7 +106,9 @@ namespace GameEngine {
 			Shader& s = Engine::getShader()[_shader_name];
 
 			Engine::getRenderer().GenerateVertexArrayBuffer(VAO);
-			Engine::getRenderer().GenerateBuffer(VBO, _verts);
+			Engine::getRenderer().GenerateEmptyBuffer(VBO, sizeof(vert) * (int)_verts.size());
+
+			Engine::getRenderer().UpdateBuffer(VBO, _verts);
 
 			s.BindShaderStructure();
 
@@ -112,6 +116,7 @@ namespace GameEngine {
 			Engine::getRenderer().UnbindVertexBuffer();
 
 			_loaded = true;
+			_update = false;
 		}
 	}
 
@@ -119,31 +124,33 @@ namespace GameEngine {
 	{
 		if (_loaded) {
 			glm::vec4 selected_color = _color;
-			if (collide) {
+			if (collide && !_has_collided) {
 				selected_color = _color_collide;
+				_has_collided = true;
+				_update = true;
+			}
+			else if (!collide && _has_collided) {
+				_has_collided = false;
+				_update = true;
 			}
 
-			_verts.clear();
-			_verts.push_back({ { _center.x, _center.y, _center.z,1.0f }, { -99.0f, -99.0f }, {selected_color.r, selected_color.g, selected_color.b, selected_color.a } });
-
-			for (int i = 0; i <= 20; i++) {
-
-				float c = (float)cos((double)i * TWO_PI / 20.0f);
-				float s = (float)sin((double)i * TWO_PI / 20.0f);
-				_verts.push_back({ { _center.x + (_radius * c), _center.y + (_radius * s), _center.z,1.0f }, { -99.0f, -99.0f }, {selected_color.r, selected_color.g, selected_color.b, selected_color.a } });
-			}
-
-			if (VBO != 0)
+			if (_update)
 			{
-				Shader& s = Engine::getShader()[_shader_name];
+				_verts.clear();
+				_verts.push_back({ { _center.x, _center.y, _center.z,1.0f }, { -99.0f, -99.0f }, {selected_color.r, selected_color.g, selected_color.b, selected_color.a } });
 
-				Engine::getRenderer().BindVertexBuffer(VAO);
-				Engine::getRenderer().BindBuffer(VBO);
+				for (int i = 0; i <= 20; i++) {
 
-				Engine::getRenderer().UpdateBuffer(VBO, _verts);
+					float c = (float)cos((double)i * TWO_PI / 20.0f);
+					float s = (float)sin((double)i * TWO_PI / 20.0f);
+					_verts.push_back({ { _center.x + (_radius * c), _center.y + (_radius * s), _center.z,1.0f }, { -99.0f, -99.0f }, {selected_color.r, selected_color.g, selected_color.b, selected_color.a } });
+				}
 
-				Engine::getRenderer().UnbindBuffer();
-				Engine::getRenderer().UnbindVertexBuffer();
+				if (VBO != 0)
+				{
+					Engine::getRenderer().UpdateBuffer(VBO, _verts);
+				}
+				_update = false;
 			}
 		}
 	}
@@ -161,24 +168,29 @@ namespace GameEngine {
 
 	bool Collision::doesCollide(Collision* col)
 	{
-		if (_type == CollisionType::BOX) {
-			if (col->_type == CollisionType::BOX) {
-				return BoxToBoxCollision(_min, _max, col->_min, col->_max);
-			} else if (col->_type == CollisionType::SPEHERE) {
-				return SphereToBoxCollision(col->_center, col->_radius, _min, _max);
+		if (_loaded) {
+			if (_type == CollisionType::BOX) {
+				if (col->_type == CollisionType::BOX) {
+					return BoxToBoxCollision(_min, _max, col->_min, col->_max);
+				}
+				else if (col->_type == CollisionType::SPEHERE) {
+					return SphereToBoxCollision(col->_center, col->_radius, _min, _max);
+				}
 			}
-		} else if (_type == CollisionType::SPEHERE) {
-			if (col->_type == CollisionType::BOX) {
-				return SphereToBoxCollision(col->_center, col->_radius, _min, _max);
-			} else if (col->_type == CollisionType::SPEHERE) {
+			else if (_type == CollisionType::SPEHERE) {
+				if (col->_type == CollisionType::BOX) {
+					return SphereToBoxCollision(col->_center, col->_radius, _min, _max);
+				}
+				else if (col->_type == CollisionType::SPEHERE) {
 
-				glm::vec3 worldpos = GetCollisionWorldPos();
-				glm::vec3 c = worldpos + _center;
+					glm::vec3 worldpos = GetCollisionWorldPos();
+					glm::vec3 c = worldpos + _center;
 
-				glm::vec3 worldpos2 = col->GetCollisionWorldPos();
-				glm::vec3 c2 = worldpos2 + col->_center;
+					glm::vec3 worldpos2 = col->GetCollisionWorldPos();
+					glm::vec3 c2 = worldpos2 + col->_center;
 
-				return SphereToSphereCollision(c2, col->_radius, c, _radius);
+					return SphereToSphereCollision(c2, col->_radius, c, _radius);
+				}
 			}
 		}
 		return false;
@@ -204,7 +216,7 @@ namespace GameEngine {
 		float rad = radius + radius2;
 		bool collides = (dist < rad);
 
-		if (_render_collision) {
+		if (_loaded && _render_collision) {
 			UpdateSphereVerts(collides);
 		}
 

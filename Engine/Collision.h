@@ -25,7 +25,9 @@ namespace GameEngine
 			float _radius;
 			
 			bool _render_collision;
+			bool _update;
 			bool _loaded;
+			bool _has_collided;
 			std::string _shader_name;
 
 			std::vector<vert2D> _verts;
