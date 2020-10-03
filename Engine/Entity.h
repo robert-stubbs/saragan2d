@@ -28,6 +28,7 @@ namespace GameEngine
 			virtual void addComponent(Component* comp);
 
 			virtual void hasCollided(Component* comp) {}
+			virtual void hasBeenCollided(Component* comp) {}
 	};
 }
 

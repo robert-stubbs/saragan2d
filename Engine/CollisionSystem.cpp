@@ -43,6 +43,7 @@ namespace GameEngine {
 						}
 
 						c1->GetEntity()->hasCollided(c2);
+						c2->GetEntity()->hasBeenCollided(c1);
 					}
 				}
 			}
