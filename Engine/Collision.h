@@ -11,10 +11,16 @@ namespace GameEngine
 		SPEHERE
 	};
 
+	enum class CollisionEvent {
+		BLOCKING = 0,
+		OVERLAP
+	};
+
 	class Collision : public Component {
 
 		private:
 			CollisionType _type;
+			CollisionEvent _eventType;
 
 			// for box
 			glm::vec3 _min;
@@ -24,19 +30,25 @@ namespace GameEngine
 			glm::vec3 _center;
 			float _radius;
 			
-			bool _render_collision;
 			bool _update;
-			bool _loaded;
-			bool _has_collided;
+
 			std::string _shader_name;
 
 			std::vector<vert2D> _verts;
 			glm::vec4 _color;
 			glm::vec4 _color_collide;
+			glm::vec4 _current_color;
+			glm::vec4 _selected_color;
+
 			unsigned int VAO;
 			unsigned int VBO;
 
 		public:
+
+			bool _has_collided;
+			bool _render_collision;
+			bool _loaded;
+
 			Collision();
 			virtual ~Collision();
 
@@ -48,19 +60,20 @@ namespace GameEngine
 
 			virtual void CleanUp() override;
 
-			glm::vec3 GetCollisionWorldPos();
-
-			inline void SetRenderCollision(bool render) { _render_collision = render; }
-
 			void setColors(glm::vec4 col = glm::vec4(1.0f, 0.0f, 0.0f, 0.5f), glm::vec4 collision_col = glm::vec4(0.0f, 1.0f, 0.0f, 0.5f));
 
 			void GenerateSphereVerts();
-			void UpdateSphereVerts(bool collide = false);
+			void UpdateSphereVerts();
+
+			inline void SetRenderCollision(bool render) { _render_collision = render; }
+			inline CollisionEvent GetCollisionType() { return _eventType; }
+
+			void setBoxCollision(glm::vec3 min, glm::vec3 max, CollisionEvent eventType = CollisionEvent::BLOCKING);
+			void setSphereCollision(glm::vec3 center, float radius, CollisionEvent eventType = CollisionEvent::BLOCKING);
+
+			glm::vec3 GetCollisionWorldPos();
 
 			bool doesCollide(Collision* col);
-			void setBoxCollision(glm::vec3 min, glm::vec3 max);
-			void setSphereCollision(glm::vec3 center, float radius);
-
 			bool SphereToSphereCollision(glm::vec3 center, float radius, glm::vec3 center2, float radius2);
 			bool SphereToBoxCollision(glm::vec3 center, float radius, glm::vec3 min, glm::vec3 max);
 			bool BoxToBoxCollision(glm::vec3 min, glm::vec3 max, glm::vec3 min2, glm::vec3 max2);

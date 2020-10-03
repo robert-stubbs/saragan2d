@@ -136,6 +136,7 @@ void PlayerEnt::Load() {
 
 	c->setSphereCollision(glm::vec3(idle.frame_width / 2.0f, idle.frame_height / 2.0f, 1.0f), (idle.frame_width / 2.0f));
 	c->SetRenderCollision(true);
+	c->Init();
 
 	addComponent(c);
 
@@ -195,8 +196,8 @@ void PlayerEnt::SetState(states st)
 
 void PlayerEnt::hasCollided(Component* comp)
 {
-	if (comp->m_type == "COLLISION") {
-		//Location* loc = (Location*)getComponent("LOCATION");
-		//loc->setPosition(_lastpos.x, _lastpos.y, _lastpos.z);
+	if (comp->m_type == "COLLISION" && ((Collision*)comp)->GetCollisionType() == CollisionEvent::BLOCKING) {
+		Location* loc = (Location*)getComponent("LOCATION");
+		loc->setPosition(_lastpos.x, _lastpos.y, _lastpos.z);
 	}
 }

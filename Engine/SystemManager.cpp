@@ -71,7 +71,8 @@ namespace GameEngine
 			std::future<void> _fut_sound = std::async(std::launch::async, std::bind(&System::Update, sysBank["SPRITE"], dt));
 		}
 		if (sysBank.find("COLLISION") != sysBank.end()) {
-			std::future<void> _fut_sound = std::async(std::launch::async, std::bind(&System::Update, sysBank["COLLISION"], dt));
+			//std::future<void> _fut_sound = std::async(std::launch::async, std::bind(&System::Update, sysBank["COLLISION"], dt));
+			sysBank["COLLISION"]->Update(dt);
 		}
 	}
 

@@ -29,12 +29,21 @@ namespace GameEngine {
 		for (iter = m_components.begin(); iter != m_components.end(); iter++)
 		{
 			Collision* c1 = (Collision *)iter->get();
+			c1->Update(dt);
 
-			for (iter2 = iter+1; iter2 != m_components.end(); iter2++)
+			for (iter2 = m_components.begin(); iter2 != m_components.end(); iter2++)
 			{
-				Collision* c2 = (Collision*)iter2->get();
-				if (c1->doesCollide(c2)) {
-					c1->GetEntity()->hasCollided(c2);
+				if (iter != iter2) {
+					Collision* c2 = (Collision*)iter2->get();
+					if (c1->doesCollide(c2)) {
+
+						if (c2->_loaded && c2->_render_collision) {
+							c2->_has_collided = true;
+							c2->UpdateSphereVerts();
+						}
+
+						c1->GetEntity()->hasCollided(c2);
+					}
 				}
 			}
 		}
