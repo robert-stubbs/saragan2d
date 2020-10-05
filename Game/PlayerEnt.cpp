@@ -134,7 +134,8 @@ void PlayerEnt::Load() {
 
 	addComponent(sprite);
 
-	c->setSphereCollision(glm::vec3(idle.frame_width / 2.0f, idle.frame_height / 2.0f, 1.0f), (idle.frame_width / 2.0f));
+	//c->setSphereCollision(glm::vec3(idle.frame_width / 2.0f, idle.frame_height / 2.0f, 1.0f), (idle.frame_width / 2.0f));
+	c->setBoxCollision(glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(idle.frame_width, idle.frame_height, 0.0f));
 	c->SetRenderCollision(true);
 	c->Init();
 

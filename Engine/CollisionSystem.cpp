@@ -39,7 +39,7 @@ namespace GameEngine {
 
 						if (c2->_loaded && c2->_render_collision) {
 							c2->_has_collided = true;
-							c2->UpdateSphereVerts();
+							c2->UpdateVerts();
 						}
 
 						c1->GetEntity()->hasCollided(c2);

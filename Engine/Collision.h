@@ -63,7 +63,9 @@ namespace GameEngine
 			void setColors(glm::vec4 col = glm::vec4(1.0f, 0.0f, 0.0f, 0.5f), glm::vec4 collision_col = glm::vec4(0.0f, 1.0f, 0.0f, 0.5f));
 
 			void GenerateSphereVerts();
-			void UpdateSphereVerts();
+			void GenerateBoxVerts();
+
+			void UpdateVerts();
 
 			inline void SetRenderCollision(bool render) { _render_collision = render; }
 			inline CollisionEvent GetCollisionType() { return _eventType; }
@@ -77,6 +79,9 @@ namespace GameEngine
 			bool SphereToSphereCollision(glm::vec3 center, float radius, glm::vec3 center2, float radius2);
 			bool SphereToBoxCollision(glm::vec3 center, float radius, glm::vec3 min, glm::vec3 max);
 			bool BoxToBoxCollision(glm::vec3 min, glm::vec3 max, glm::vec3 min2, glm::vec3 max2);
+
+			// Returns the squared distance between a point p and an AABB b
+			float SqDistPointAABB(glm::vec3 p, glm::vec3 min, glm::vec3 max);
 	};
 }
 

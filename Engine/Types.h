@@ -10,6 +10,7 @@ namespace GameEngine {
 #pragma endregion Events
 
 #pragma region Positions
+
 	struct viewPos
 	{
 		float x;
