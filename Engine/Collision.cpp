@@ -198,7 +198,7 @@ namespace GameEngine {
 
 	bool Collision::doesCollide(Collision* col)
 	{
-		if (_loaded) {
+		if (!_render_collision || (_render_collision && _loaded)) {
 
 			glm::vec3 worldpos = GetCollisionWorldPos();
 			glm::vec3 worldpos2 = col->GetCollisionWorldPos();
@@ -268,9 +268,9 @@ namespace GameEngine {
 		_has_collided = false;
 
 		if (min.x < max2.x &&
-			max.x >= min2.x &&
+			max.x > min2.x &&
 			min.y < max2.y &&
-			max.y >= min2.y) {
+			max.y > min2.y) {
 			// collision detected!
 			_has_collided = true;
 		}
