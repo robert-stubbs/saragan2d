@@ -28,9 +28,6 @@ namespace GameEngine
 		virtual void Init() = 0;
 		virtual void Update(float dt) = 0;
 		virtual void Render() = 0;
-		virtual void RenderAnim() = 0;
-		virtual void RenderUI() = 0;
-
 		virtual void CleanUp() = 0;
 
 		virtual void RemoveComponent(std::string handle) = 0;

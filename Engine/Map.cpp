@@ -62,43 +62,59 @@ namespace GameEngine
 		std::string path = Engine::get().asset_dir + "Textures/map_atlas.png";
 		_definition._images.push_back({ 736, 928, path });
 
-		TileLayer Layer0 = TileLayer();
-		Layer0.Tiles = std::vector<std::vector<SingleTile>>();
+		TileLayer BGLayer = TileLayer();
+		BGLayer.Tiles = std::vector<std::vector<SingleTile>>();
 		for (int x = 0; x < _definition.map_width; x++)
 		{
-			Layer0.Tiles.push_back(std::vector<SingleTile>());
+			BGLayer.Tiles.push_back(std::vector<SingleTile>());
 			for (int y = 0; y < _definition.map_height; y++)
 			{
 				//23 x 29 - total for sheet
-				Layer0.Tiles[x].push_back({ 1, 2, 0 });
+				BGLayer.Tiles[x].push_back({ 1, 2, 0 });
 
 			}
 		}
-		_definition._layers.push_back(Layer0);
+		_definition._layers.push_back(BGLayer);
 		_definition.number_of_layers++;
 
-		TileLayer Layer1 = TileLayer();
-		Layer1.Tiles = std::vector<std::vector<SingleTile>>();
+
+		TileLayer main = TileLayer();
+		main.Tiles = std::vector<std::vector<SingleTile>>();
 		for (int x = 0; x < _definition.map_width; x++)
 		{
-			Layer1.Tiles.push_back(std::vector<SingleTile>());
+			main.Tiles.push_back(std::vector<SingleTile>());
+			for (int y = 0; y < _definition.map_height; y++)
+			{
+				//23 x 29 - total for sheet
+				main.Tiles[x].push_back({ 1, 2, -1 });
+			}
+		}
+
+		main.Tiles[GetRandomNumber(0, _definition.map_width - 1)][GetRandomNumber(0, _definition.map_height - 1)] = { 1, 7, 0 };
+		main.Tiles[GetRandomNumber(0, _definition.map_width - 1)][GetRandomNumber(0, _definition.map_height - 1)] = { 1, 7, 0 };
+		main.Tiles[GetRandomNumber(0, _definition.map_width - 1)][GetRandomNumber(0, _definition.map_height - 1)] = { 1, 7, 0 };
+		main.Tiles[GetRandomNumber(0, _definition.map_width - 1)][GetRandomNumber(0, _definition.map_height - 1)] = { 1, 7, 0 };
+		main.Tiles[GetRandomNumber(0, _definition.map_width - 1)][GetRandomNumber(0, _definition.map_height - 1)] = { 1, 7, 0 };
+		main.Tiles[GetRandomNumber(0, _definition.map_width - 1)][GetRandomNumber(0, _definition.map_height - 1)] = { 1, 7, 0 };
+		main.Tiles[GetRandomNumber(0, _definition.map_width - 1)][GetRandomNumber(0, _definition.map_height - 1)] = { 1, 7, 0 };
+
+		_definition._layers.push_back(main);
+		_definition.number_of_layers++;
+
+
+		TileLayer FGLayer = TileLayer();
+		FGLayer.Tiles = std::vector<std::vector<SingleTile>>();
+		for (int x = 0; x < _definition.map_width; x++)
+		{
+			FGLayer.Tiles.push_back(std::vector<SingleTile>());
 			for (int y = 0; y < _definition.map_height; y++)
 			{				
 				//23 x 29 - total for sheet
-				Layer1.Tiles[x].push_back({ 1, 2, -1 });
+				FGLayer.Tiles[x].push_back({ 1, 2, -1 });
 			}
 		}
 
-		Layer1.Tiles[GetRandomNumber(0, _definition.map_width - 1)][GetRandomNumber(0, _definition.map_height - 1)] = { 1, 7, 0 };
-		Layer1.Tiles[GetRandomNumber(0, _definition.map_width - 1)][GetRandomNumber(0, _definition.map_height - 1)] = { 1, 7, 0 };
-		Layer1.Tiles[GetRandomNumber(0, _definition.map_width - 1)][GetRandomNumber(0, _definition.map_height - 1)] = { 1, 7, 0 };
-		Layer1.Tiles[GetRandomNumber(0, _definition.map_width - 1)][GetRandomNumber(0, _definition.map_height - 1)] = { 1, 7, 0 };
-		Layer1.Tiles[GetRandomNumber(0, _definition.map_width - 1)][GetRandomNumber(0, _definition.map_height - 1)] = { 1, 7, 0 };
-		Layer1.Tiles[GetRandomNumber(0, _definition.map_width - 1)][GetRandomNumber(0, _definition.map_height - 1)] = { 1, 7, 0 };
-		Layer1.Tiles[GetRandomNumber(0, _definition.map_width - 1)][GetRandomNumber(0, _definition.map_height - 1)] = { 1, 7, 0 };
-
-
-		_definition._layers.push_back(Layer1);
+		_definition._layers.push_back(FGLayer);
 		_definition.number_of_layers++;
 
 
@@ -202,18 +218,33 @@ namespace GameEngine
 		max_y = max_y > _definition.map_height ? _definition.map_height : max_y;
 	}
 
+	void Map::RenderBackground()
+	{
+		RenderLayer(0);
+	}
+
 	void Map::Render()
+	{
+		RenderLayer(1);
+	}
+
+	void Map::RenderForeground()
+	{
+		RenderLayer(2);
+	}
+
+	void Map::RenderLayer(int layer)
 	{
 		if (!_loaded) {
 			return;
 		}
 
-	    Engine::getShader().BindNewShader("DEFAULT2D");
+		Engine::getShader().BindNewShader("DEFAULT2D");
 
-	    Engine::getRenderer().UniformInt(Engine::getCurrentShader()["is_Text"], 0);
-	    Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["projectionMatrix"], Engine::get().current_cam->ProjectionMatrix, 1, false);
-	    Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["viewMatrix"], Engine::get().current_cam->ViewMatrix, 1, false);
-	    Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["modelMatrix"], glm::mat4(1.0f), 1, false);
+		Engine::getRenderer().UniformInt(Engine::getCurrentShader()["is_Text"], 0);
+		Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["projectionMatrix"], Engine::get().current_cam->ProjectionMatrix, 1, false);
+		Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["viewMatrix"], Engine::get().current_cam->ViewMatrix, 1, false);
+		Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["modelMatrix"], glm::mat4(1.0f), 1, false);
 
 		if (Engine::getRenderer().CurrentTextureID != _textures[0].TextureID)
 		{
@@ -225,19 +256,17 @@ namespace GameEngine
 			Engine::getRenderer().BindTextureBuffer(_textures[0].TextureID);
 		}
 
-		for (int i = 0; i < _definition.number_of_layers; i++)
-		{
+		if (layer < _definition.number_of_layers) {
 			_batch.BeginBatch();
 			for (int x = min_x; x < max_x; x++)
 			{
 				for (int y = min_y; y < max_y; y++)
 				{
-					_batch.AddQuad(_quads[i][x][y]);
+					_batch.AddQuad(_quads[layer][x][y]);
 				}
 			}
 			_batch.EndBatch();
 		}
-
 	}
 
 	void Map::Cleanup()

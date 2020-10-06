@@ -89,28 +89,22 @@ namespace GameEngine
 		if (sysBank.find("AI") != sysBank.end()) {
 			sysBank["AI"]->Render();
 		}
+
+		if (sysBank.find("SPRITE") != sysBank.end()) {
+			sysBank["SPRITE"]->Render();
+		}
+
+		if (sysBank.find("COLLISION") != sysBank.end()) {
+			sysBank["COLLISION"]->Render();
+		}
 	}
 
 	void SystemManager::RenderAnim()
 	{
-		//for (std::pair<std::string, SharedSystemPtr> ptr : sysBank) {
-		//	if (ptr.second->isAnim && !ptr.second->isUI)
-		//	{
-		//		ptr.second->RenderAnim();
-		//	}
-		//}
 	}
 
 	void SystemManager::RenderUI()
 	{
-		//for (std::pair<std::string, SharedSystemPtr> ptr : sysBank) {
-		//	if (!ptr.second->isAnim && ptr.second->isUI)
-		//	{
-		//		ptr.second->RenderUI();
-		//	}
-		//}
-		sysBank["SPRITE"]->RenderUI();
-		sysBank["COLLISION"]->RenderUI();
 	}
 
 

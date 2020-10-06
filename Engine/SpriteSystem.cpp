@@ -30,7 +30,7 @@ namespace GameEngine {
 		}
 	}
 
-	void SpriteSystem::RenderUI()
+	void SpriteSystem::Render()
 	{
 
 		Engine::getRenderer().EnableDepthTest(false);

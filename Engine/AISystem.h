@@ -23,9 +23,6 @@ namespace GameEngine {
 		virtual void Update(float dt);
 
 		virtual void Render() {};
-		virtual void RenderAnim() {};
-		virtual void RenderUI() {};
-
 		virtual void CleanUp();
 
 		Component* getComponent(std::string handle);

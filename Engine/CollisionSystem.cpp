@@ -50,7 +50,7 @@ namespace GameEngine {
 		}
 	}
 	
-	void CollisionSystem::RenderUI()
+	void CollisionSystem::Render()
 	{
 		Engine::getRenderer().EnableDepthTest(false);
 		Engine::getRenderer().EnableBlend(true, BLEND_TYPE::SRC_ALPHA, BLEND_TYPE::ONE_MINUS_SRC_ALPHA);

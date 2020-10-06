@@ -30,7 +30,9 @@ namespace GameEngine
 	void World::SetMap(std::string name)
 	{
 		if (_maps.find(name) != _maps.end()) {
-			// TODO set loading overlay
+
+			// TODO need to render a fade here, once fade has completed
+			//      then do the map processing
 
 			// clear current_map
 			if (current_map != nullptr) {
@@ -45,7 +47,8 @@ namespace GameEngine
 			{
 				_maps[name]->ThreadLoad();
 			}
-			// hide loading overlay
+
+			// TODO hide fade overlay
 		}
 	}
 
@@ -62,6 +65,20 @@ namespace GameEngine
 		}
 	}
 
+	void World::RenderBackground()
+	{
+		Engine::getRenderer().EnableDepthTest(false);
+		Engine::getRenderer().EnableBlend(true, GameEngine::BLEND_TYPE::SRC_ALPHA, GameEngine::BLEND_TYPE::ONE_MINUS_SRC_ALPHA);
+
+		if (current_map != nullptr)
+		{
+			current_map->RenderBackground();
+		}
+
+		Engine::getRenderer().EnableBlend(false);
+		Engine::getRenderer().EnableDepthTest(true);
+	}
+
 	void World::Render()
 	{
 		Engine::getRenderer().EnableDepthTest(false);
@@ -74,6 +91,27 @@ namespace GameEngine
 
 		Engine::getRenderer().EnableBlend(false);
 		Engine::getRenderer().EnableDepthTest(true);
+	}
+
+	void World::RenderForeground()
+	{
+		Engine::getRenderer().EnableDepthTest(false);
+		Engine::getRenderer().EnableBlend(true, GameEngine::BLEND_TYPE::SRC_ALPHA, GameEngine::BLEND_TYPE::ONE_MINUS_SRC_ALPHA);
+
+		if (current_map != nullptr)
+		{
+			current_map->RenderForeground();
+		}
+
+		Engine::getRenderer().EnableBlend(false);
+		Engine::getRenderer().EnableDepthTest(true);
+	}
+
+	void World::RenderFade()
+	{
+
+		// here is where we will be rendering the fade between levels
+
 	}
 
 	void World::Cleanup()

@@ -45,6 +45,7 @@ void TestState::UpdateOrth(const float& dt)
 void TestState::Render()
 {
 
+	//GUI::Get().DemoTest(1.0f/60.0f);
 
 }
 

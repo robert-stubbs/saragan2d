@@ -18,8 +18,6 @@ namespace GameEngine {
 		virtual void Init();
 		virtual void Update(float dt);
 		virtual void Render() {};
-		virtual void RenderAnim() {};
-		virtual void RenderUI() {};
 
 		virtual void CleanUp();
 

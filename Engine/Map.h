@@ -44,7 +44,13 @@ namespace GameEngine
 			bool LoadMapDefinition();
 			void LoadTextureBuffers();
 			void Update(float dt);
+			
+			void RenderBackground();
 			void Render();
+			void RenderForeground();
+
+			void RenderLayer(int layer);
+
 			void Cleanup();
 	};
 

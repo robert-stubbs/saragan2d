@@ -150,15 +150,14 @@ namespace GameEngine {
 		Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["projectionMatrix"], Engine::get().current_cam->ProjectionMatrix, 1, false);
 		Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["viewMatrix"], Engine::get().current_cam->ViewMatrix, 1, false);
 
+		w.RenderBackground();
 		w.Render();
 
 		System->Render();
 		GameFSM.Render();
-
-		System->RenderAnim();
-
-		System->RenderUI();
 		GameFSM.RenderOrth();
+
+		w.RenderForeground();
 
 		//GUI::Get().DemoTest(current_dt > 0 ? current_dt : 1.0f/60.0f);
 

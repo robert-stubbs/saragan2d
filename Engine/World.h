@@ -24,7 +24,12 @@ namespace GameEngine
 
 			void Init();
 			void Update(float dt);
+			void RenderBackground();
 			void Render();
+			void RenderForeground();
+			void RenderFade();
+
+
 			void Cleanup();
 
 
