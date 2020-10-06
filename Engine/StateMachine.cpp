@@ -68,26 +68,36 @@ namespace GameEngine {
 
 	void StateMachine::KeyDown(int Key)
 	{
+		if (currentState == NULL) return;
+
 		currentState->KeyDown(Key);
 	}
 
 	void StateMachine::KeyUp(int Key)
 	{
+		if (currentState == NULL) return;
+
 		currentState->KeyUp(Key);
 	}
 
 	void StateMachine::MouseDown(int Button)
 	{
+		if (currentState == NULL) return;
+
 		currentState->MouseDown(Button);
 	}
 
 	void StateMachine::MouseUp(int Button)
 	{
+		if (currentState == NULL) return;
+
 		currentState->MouseUp(Button);
 	}
 
 	void StateMachine::MouseMove(float x, float y)
 	{
+		if (currentState == NULL) return;
+
 		currentState->MouseMove(x, y);
 	}
 

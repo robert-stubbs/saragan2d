@@ -66,6 +66,68 @@ project "Game"
 		defines { "SARAGAN_RELEASE" }
 		optimize "On"
 
+
+project "Editor"
+	location "%{prj.name}"
+	kind "ConsoleApp"
+	language "C++"
+	
+	pchheader "EditorPCH.h"
+	pchsource "%{prj.name}/EditorPCH.cpp"
+
+	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
+	objdir ("obj/" .. outputdir .. "/%{prj.name}")
+
+	files {
+		"%{prj.name}/**.h",
+		"%{prj.name}/**.cpp",
+		"ThirdParty/glm/include/**.hpp",
+		"ThirdParty/glm/include/**.inl",
+		"ThirdParty/glew/include/**.h",
+		"ThirdParty/glfw/include/**.h",
+		"ThirdParty/freetype-gl/include/**.h",
+		"ThirdParty/ImGui/*.h"
+	}
+
+	includedirs
+	{
+		"Engine",
+		"ThirdParty/glm/include",
+		"ThirdParty/glfw/include",
+		"ThirdParty/glew/include",
+		"ThirdParty/freetype2",
+		"ThirdParty/freetype-gl",
+		"ThirdParty/OpenAL/include",
+		"ThirdParty/ImGui"
+	}
+
+	links
+	{
+		"Engine"
+	}
+
+	libdirs  
+	{
+		"ThirdParty/glew/lib/**",
+		"ThirdParty/freetype2/lib",
+		"ThirdParty/freetype-gl/lib",
+		"ThirdParty/OpenAL/lib"
+	}
+
+	filter "system:windows"
+		systemversion "latest"
+		cppdialect "C++17"
+		staticruntime "on"
+		links { "Engine", "OpenGL32", "glfw", "glew32", "OpenAL32", "freetype", "freetype-gl", "winmm", "ImGui" }
+
+	filter "configurations.Debug"
+		defines { "SARAGAN_DEBUG" }
+		symbols "On"
+
+	filter "configurations.Release"
+		defines { "SARAGAN_RELEASE" }
+		optimize "On"
+
 project "Engine"
 	location "%{prj.name}"
 	kind "StaticLib"
