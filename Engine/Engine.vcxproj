@@ -537,7 +537,6 @@
     <ClInclude Include="World.h" />
     <ClInclude Include="cErrorLogger.h" />
     <ClInclude Include="cIni.h" />
-    <ClInclude Include="imgui_impl_opengl3.h" />
     <ClInclude Include="lodepng.h" />
     <ClInclude Include="standards.h" />
   </ItemGroup>
@@ -610,7 +609,6 @@
     <ClCompile Include="World.cpp" />
     <ClCompile Include="cErrorLogger.cpp" />
     <ClCompile Include="cIni.cpp" />
-    <ClCompile Include="imgui_impl_opengl3.cpp" />
     <ClCompile Include="lodepng.cpp" />
     <ClCompile Include="standards.cpp" />
   </ItemGroup>
