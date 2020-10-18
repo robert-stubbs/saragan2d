@@ -14,7 +14,7 @@ namespace GameEngine
 
 		virtual void Init() override;
 
-		virtual void DemoTest(float dt) override;
+		virtual void DemoTest() override;
 
 		virtual void NewScene(float dt) override;
 		virtual void EndAndRender() override;

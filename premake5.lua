@@ -337,12 +337,15 @@ project "ImGui"
 		"ThirdParty/%{prj.name}/imstb_textedit.h",
 		"ThirdParty/%{prj.name}/imstb_truetype.h",
 		"ThirdParty/%{prj.name}/imgui_demo.cpp",
+		"ThirdParty/%{prj.name}/backends/imgui_impl_glfw.h",
+		"ThirdParty/%{prj.name}/backends/imgui_impl_glfw.cpp",
 		"ThirdParty/%{prj.name}/backends/imgui_impl_opengl3.h",
 		"ThirdParty/%{prj.name}/backends/imgui_impl_opengl3.cpp"
 	}
 	
 	includedirs
 	{
+		"ThirdParty/glfw/include",
 		"ThirdParty/glew/include"
 	}
 

@@ -163,7 +163,11 @@ namespace GameEngine {
 		w.RenderForeground();
 
 		if (_gui->HasInstance()) {
-			GUI::Get().DemoTest(current_dt > 0 ? current_dt : 1.0f / 60.0f);
+			GUI::Get().NewScene(current_dt > 0 ? current_dt : 1.0f / 60.0f);
+
+			GUI::Get().DemoTest();
+
+			GUI::Get().EndAndRender();
 		}
 
 		getContext().SwapContextBuffers();

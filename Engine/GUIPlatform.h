@@ -12,7 +12,7 @@ namespace GameEngine
 
 		virtual void Init() = 0;
 
-		virtual void DemoTest(float dt) = 0;
+		virtual void DemoTest() = 0;
 
 		virtual void NewScene(float dt) = 0;
 		virtual void EndAndRender() = 0;

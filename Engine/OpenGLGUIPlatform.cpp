@@ -3,15 +3,16 @@
 #include "Types.h"
 #include "Engine.h"
 
-#include "backends/imgui_impl_opengl3.h"
-
-
+#define IMGUI_IMPL_OPENGL_LOADER_GLEW
+#include "backends/imgui_impl_opengl3.cpp"
+#include "examples/imgui_impl_glfw.cpp"
 
 namespace GameEngine
 {
     OpenGLGUIPlatform::~OpenGLGUIPlatform()
     {
         ImGui_ImplOpenGL3_Shutdown();
+        ImGui_ImplGlfw_Shutdown();
         ImGui::DestroyContext();
     }
 
@@ -19,17 +20,12 @@ namespace GameEngine
 	{
         ImGui::CreateContext();
 
-        // Setup Dear ImGui style
-        ImGui::StyleColorsDark();
-
         ImGuiIO& io = ImGui::GetIO(); (void)io;
         io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;       // Enable Keyboard Controls
-        //io.ConfigFlags |= ImGuiConfigFlags_NavEnableGamepad;      // Enable Gamepad Controls
         io.ConfigFlags |= ImGuiConfigFlags_DockingEnable;           // Enable Docking
         io.ConfigFlags |= ImGuiConfigFlags_ViewportsEnable;         // Enable Multi-Viewport / Platform Windows
-        io.BackendFlags |= ImGuiBackendFlags_HasMouseCursors;         // We can honor GetMouseCursor() values (optional)
-        io.BackendFlags |= ImGuiBackendFlags_HasSetMousePos;          // We can honor io.WantSetMousePos requests (optional, rarely used)       
 
+        ImGui::StyleColorsDark();
 
         ImGuiStyle& style = ImGui::GetStyle();
         if (io.ConfigFlags & ImGuiConfigFlags_ViewportsEnable)
@@ -38,49 +34,17 @@ namespace GameEngine
             style.Colors[ImGuiCol_WindowBg].w = 1.0f;
         }
 
-        io.KeyMap[ImGuiKey_Tab] = ENGINE_KEY_TAB;
-        io.KeyMap[ImGuiKey_LeftArrow] = ENGINE_KEY_LEFT;
-        io.KeyMap[ImGuiKey_RightArrow] = ENGINE_KEY_RIGHT;
-        io.KeyMap[ImGuiKey_UpArrow] = ENGINE_KEY_UP;
-        io.KeyMap[ImGuiKey_DownArrow] = ENGINE_KEY_DOWN;
-        io.KeyMap[ImGuiKey_PageUp] = ENGINE_KEY_PAGE_UP;
-        io.KeyMap[ImGuiKey_PageDown] = ENGINE_KEY_PAGE_DOWN;
-        io.KeyMap[ImGuiKey_Home] = ENGINE_KEY_HOME;
-        io.KeyMap[ImGuiKey_End] = ENGINE_KEY_END;
-        io.KeyMap[ImGuiKey_Insert] = ENGINE_KEY_INSERT;
-        io.KeyMap[ImGuiKey_Delete] = ENGINE_KEY_DELETE;
-        io.KeyMap[ImGuiKey_Backspace] = ENGINE_KEY_BACKSPACE;
-        io.KeyMap[ImGuiKey_Space] = ENGINE_KEY_SPACE;
-        io.KeyMap[ImGuiKey_Enter] = ENGINE_KEY_ENTER;
-        io.KeyMap[ImGuiKey_Escape] = ENGINE_KEY_ESCAPE;
-        io.KeyMap[ImGuiKey_KeyPadEnter] = ENGINE_KEY_KP_ENTER;
-        io.KeyMap[ImGuiKey_A] = ENGINE_KEY_A;
-        io.KeyMap[ImGuiKey_C] = ENGINE_KEY_C;
-        io.KeyMap[ImGuiKey_V] = ENGINE_KEY_V;
-        io.KeyMap[ImGuiKey_X] = ENGINE_KEY_X;
-        io.KeyMap[ImGuiKey_Y] = ENGINE_KEY_Y;
-        io.KeyMap[ImGuiKey_Z] = ENGINE_KEY_Z;
-
-
-        ImGui_ImplOpenGL3_Init("#version 440");
-
-        ImFont* f = io.Fonts->AddFontDefault();
-        ImGui_ImplOpenGL3_CreateFontsTexture();
-
-        io.DisplaySize = ImVec2((float)Engine::get().WindowWidth, (float)Engine::get().WindowHeight);
         
 
+        GLFWwindow* window = (GLFWwindow*)Engine::get().getContext().Get().GetWindowHandle();
+        ImGui_ImplGlfw_InitForOpenGL(window, true);
+        ImGui_ImplOpenGL3_Init("#version 440");
 	}
 
-    void OpenGLGUIPlatform::DemoTest(float dt)
+    void OpenGLGUIPlatform::DemoTest()
     {
         static bool show_demo_window = true;
-
-        NewScene(dt);
-
         ImGui::ShowDemoWindow(&show_demo_window);
-
-        EndAndRender();
     }
 
 
@@ -91,14 +55,26 @@ namespace GameEngine
         io.DeltaTime = dt;
 
         ImGui_ImplOpenGL3_NewFrame();
+        ImGui_ImplGlfw_NewFrame();
         ImGui::NewFrame();
         ImGui::SetNextWindowSize(io.DisplaySize);
     }
 
     void OpenGLGUIPlatform::EndAndRender()
     {
+        ImGuiIO& io = ImGui::GetIO();
+        io.DisplaySize = ImVec2((float)Engine::get().WindowWidth, (float)Engine::get().WindowHeight);
+
         ImGui::Render();
         ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+
+        if (io.ConfigFlags & ImGuiConfigFlags_ViewportsEnable)
+        {
+            GLFWwindow* backup_current_context = glfwGetCurrentContext();
+            ImGui::UpdatePlatformWindows();
+            ImGui::RenderPlatformWindowsDefault();
+            glfwMakeContextCurrent(backup_current_context);
+        }
     }
 
     void OpenGLGUIPlatform::Begin(std::string name)
