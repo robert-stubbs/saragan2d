@@ -3,6 +3,8 @@
 #include "Engine.h"
 #include "Types.h"
 
+#include "EditorState.h"
+
 #include "cIni.h"
 
 using namespace GameEngine;
@@ -37,6 +39,7 @@ bool PreLoad()
 
 void PostLoad()
 {
+    Engine::state().AddState(new EditorState(), true);
 
 
 }

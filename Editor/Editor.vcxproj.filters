@@ -46,6 +46,21 @@
     <Filter Include="ThirdParty\glew\include\GL">
       <UniqueIdentifier>{E97AA97C-5506-1741-5E17-9A35CA217341}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Tools">
+      <UniqueIdentifier>{27429825-6fa1-4d00-8ec7-d6605650a23a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="State">
+      <UniqueIdentifier>{e66a1045-ed12-425b-93ad-95bb4795af5c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tools\Base">
+      <UniqueIdentifier>{23d37b68-96cb-4b49-9c7b-f44fae6ae17d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tools\DemoTool">
+      <UniqueIdentifier>{37aa72ec-d004-4b1e-826c-293c360be697}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tools\TestTool">
+      <UniqueIdentifier>{a5a19ea5-39de-4467-9bf8-1963010179aa}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\ThirdParty\ImGui\imconfig.h">
@@ -1171,9 +1186,33 @@
       <Filter>ThirdParty\glm\include\glm</Filter>
     </ClInclude>
     <ClInclude Include="EditorPCH.h" />
+    <ClInclude Include="EditorState.h">
+      <Filter>State</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseTool.h">
+      <Filter>Tools\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="DemoTool.h">
+      <Filter>Tools\DemoTool</Filter>
+    </ClInclude>
+    <ClInclude Include="TestTool.h">
+      <Filter>Tools\TestTool</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="EditorPCH.cpp" />
+    <ClCompile Include="EditorState.cpp">
+      <Filter>State</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseTool.cpp">
+      <Filter>Tools\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="DemoTool.cpp">
+      <Filter>Tools\DemoTool</Filter>
+    </ClCompile>
+    <ClCompile Include="TestTool.cpp">
+      <Filter>Tools\TestTool</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -461,13 +461,21 @@
     <ClInclude Include="..\ThirdParty\glm\include\glm\vec3.hpp" />
     <ClInclude Include="..\ThirdParty\glm\include\glm\vec4.hpp" />
     <ClInclude Include="..\ThirdParty\glm\include\glm\vector_relational.hpp" />
+    <ClInclude Include="BaseTool.h" />
+    <ClInclude Include="DemoTool.h" />
     <ClInclude Include="EditorPCH.h" />
+    <ClInclude Include="EditorState.h" />
+    <ClInclude Include="TestTool.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BaseTool.cpp" />
+    <ClCompile Include="DemoTool.cpp" />
     <ClCompile Include="EditorPCH.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="EditorState.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="TestTool.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Engine\Engine.vcxproj">
@@ -486,4 +494,4 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
-</Project> 
+</Project>
