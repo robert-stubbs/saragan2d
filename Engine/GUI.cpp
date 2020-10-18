@@ -17,21 +17,19 @@ namespace GameEngine
 	{
 		engine_type = EngineType;
 		_instance = nullptr;
-
-		switch (engine_type)
-		{
-		case GameEngine::None:
-			_instance = nullptr;
-			return;
-			break;
-		case GameEngine::OpenGL:
-			_instance = std::make_shared<OpenGLGUIPlatform>();
-			break;
-		case GameEngine::DirectX:
-			break;
-		default:
-			break;
-		}
 		_gui = this;
+	}
+
+	void GUI::SetPlatformAndRenderer(PLATFORM platform, RenderEngines engine) {
+
+		engine_type = engine;
+		_instance = nullptr;
+
+		if (platform == PLATFORM::GLFW && engine_type == RenderEngines::OpenGL) {
+			_instance = std::make_shared<OpenGLGUIPlatform>();
+		}
+		else {
+			_instance = nullptr;
+		}
 	}
 }

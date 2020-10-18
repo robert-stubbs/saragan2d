@@ -68,7 +68,8 @@ namespace GameEngine {
 
 			System = new SystemManager();
 
-			_gui = new GUI(RenderEngines::OpenGL);
+			_gui = new GUI(_engine);
+			_gui->SetPlatformAndRenderer(_platform, _engine);
 
 			System->Init();
 
@@ -95,7 +96,9 @@ namespace GameEngine {
 			def->SetupShader();
 		}
 
-		_gui->Get().Init();
+		if (_gui->HasInstance()) {
+			_gui->Get().Init();
+		}
 
 		w = World();
 		w.Init();
@@ -159,7 +162,9 @@ namespace GameEngine {
 
 		w.RenderForeground();
 
-		GUI::Get().DemoTest(current_dt > 0 ? current_dt : 1.0f/60.0f);
+		if (_gui->HasInstance()) {
+			GUI::Get().DemoTest(current_dt > 0 ? current_dt : 1.0f / 60.0f);
+		}
 
 		getContext().SwapContextBuffers();
 	}
@@ -177,7 +182,9 @@ namespace GameEngine {
 
 	void Engine::KeyDown(int Key)
 	{
-		getGUI().KeyDown(Key);
+		if (_gui->HasInstance()) {
+			getGUI().KeyDown(Key);
+		}
 
 
 		if (!ImGui::IsWindowFocused(ImGuiFocusedFlags_AnyWindow) && !ImGui::IsAnyItemFocused()) {
@@ -187,7 +194,9 @@ namespace GameEngine {
 
 	void Engine::KeyUp(int Key)
 	{
-		getGUI().KeyUp(Key);
+		if (_gui->HasInstance()) {
+			getGUI().KeyUp(Key);
+		}
 		if (!ImGui::IsWindowFocused(ImGuiFocusedFlags_AnyWindow) && !ImGui::IsAnyItemFocused()) {
 			GameFSM.KeyUp(Key);
 		}
@@ -195,7 +204,9 @@ namespace GameEngine {
 
 	void Engine::MouseDown(int button)
 	{
-		getGUI().MouseDown(button);
+		if (_gui->HasInstance()) {
+			getGUI().MouseDown(button);
+		}
 
 		if (!ImGui::IsWindowFocused(ImGuiFocusedFlags_AnyWindow) && !ImGui::IsAnyItemFocused()) {
 			GameFSM.MouseDown(button);
@@ -204,7 +215,9 @@ namespace GameEngine {
 
 	void Engine::MouseUp(int button)
 	{
-		getGUI().MouseUp(button);
+		if (_gui->HasInstance()) {
+			getGUI().MouseUp(button);
+		}
 
 		if (!ImGui::IsWindowFocused(ImGuiFocusedFlags_AnyWindow) && !ImGui::IsAnyItemFocused()) {
 			GameFSM.MouseUp(button);
@@ -213,7 +226,9 @@ namespace GameEngine {
 
 	void Engine::MouseMove(float x, float y)
 	{
-		getGUI().MouseMove(x,y);
+		if (_gui->HasInstance()) {
+			getGUI().MouseMove(x, y);
+		}
 
 		if (!ImGui::IsWindowFocused(ImGuiFocusedFlags_AnyWindow) && !ImGui::IsAnyItemFocused()) {
 			GameFSM.MouseMove(x, y);
@@ -222,7 +237,9 @@ namespace GameEngine {
 
 	void Engine::AddChar(unsigned int c, bool UTF16)
 	{
-		getGUI().AddChar(c, UTF16);
+		if (_gui->HasInstance()) {
+			getGUI().AddChar(c, UTF16);
+		}
 	}
 
 	void Engine::AddShaderDef(std::shared_ptr<ShaderDef> _def)

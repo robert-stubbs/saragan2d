@@ -340,6 +340,16 @@ project "ImGui"
 		"ThirdParty/%{prj.name}/backends/imgui_impl_opengl3.h",
 		"ThirdParty/%{prj.name}/backends/imgui_impl_opengl3.cpp"
 	}
+	
+	includedirs
+	{
+		"ThirdParty/glew/include"
+	}
+
+	libdirs  
+	{
+		"ThirdParty/glew/lib/**"
+	}
 
 	filter "system:windows"
 		systemversion "latest"
