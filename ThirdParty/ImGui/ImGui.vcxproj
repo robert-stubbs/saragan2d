@@ -99,8 +99,8 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="backends\imgui_impl_glfw.h" />
     <ClInclude Include="backends\imgui_impl_opengl3.h" />
-    <ClInclude Include="examples\imgui_impl_glfw.h" />
     <ClInclude Include="imconfig.h" />
     <ClInclude Include="imgui.h" />
     <ClInclude Include="imgui_internal.h" />
@@ -109,8 +109,8 @@
     <ClInclude Include="imstb_truetype.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="backends\imgui_impl_glfw.cpp" />
     <ClCompile Include="backends\imgui_impl_opengl3.cpp" />
-    <ClCompile Include="examples\imgui_impl_glfw.cpp" />
     <ClCompile Include="imgui.cpp" />
     <ClCompile Include="imgui_demo.cpp" />
     <ClCompile Include="imgui_draw.cpp" />
@@ -119,4 +119,4 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
-</Project>
+</Project> 
