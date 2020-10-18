@@ -1,6 +1,7 @@
 #include "EditorPCH.h"
 #include "EditorState.h"
 
+#include "GUI.h"
 
 #include "DemoTool.h"
 #include "TestTool.h"
@@ -30,9 +31,12 @@ void EditorState::UpdateOrth(const float& dt)
 
 void EditorState::Render()
 {
-
-	if (_current_tool != nullptr) {
-		_current_tool->RenderUI();
+	if (GUI::GetGUI().HasInstance()) {
+		if (_current_tool != nullptr) {
+			GUI::Get().NewScene(1.0f / 60.0f);
+			_current_tool->RenderUI();
+			GUI::Get().EndAndRender();
+		}
 	}
 }
 
