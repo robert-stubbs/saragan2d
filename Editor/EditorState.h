@@ -3,10 +3,14 @@
 
 #include "State.h"
 #include "BaseTool.h"
+#include "MainMenu.h"
+#include "EntityManagerTool.h"
 
 class EditorState : public GameEngine::State
 {
 public:
+    Editor::MainMenu _menu;
+    Editor::EntityManagerTool _entity_manager_panel;
     Editor::BaseTool* _current_tool;
 
     EditorState();

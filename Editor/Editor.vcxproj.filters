@@ -61,6 +61,18 @@
     <Filter Include="Tools\TestTool">
       <UniqueIdentifier>{a5a19ea5-39de-4467-9bf8-1963010179aa}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Tools\Menu">
+      <UniqueIdentifier>{63a4188b-72de-4827-8de6-e8a7a714d9e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tools\EntityManager">
+      <UniqueIdentifier>{71b7e5e3-d18a-42a9-9588-ef586bbedfe7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tools\Resources">
+      <UniqueIdentifier>{fa66e206-f40a-41d9-86d3-980756bf593c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tools\Debug">
+      <UniqueIdentifier>{f18fa5d8-5673-4e55-bedb-180fe3605c64}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\ThirdParty\ImGui\imconfig.h">
@@ -1198,6 +1210,18 @@
     <ClInclude Include="TestTool.h">
       <Filter>Tools\TestTool</Filter>
     </ClInclude>
+    <ClInclude Include="MainMenu.h">
+      <Filter>Tools\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityManagerTool.h">
+      <Filter>Tools\EntityManager</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourcesTool.h">
+      <Filter>Tools\Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="DebugTool.h">
+      <Filter>Tools\Debug</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -1213,6 +1237,18 @@
     </ClCompile>
     <ClCompile Include="TestTool.cpp">
       <Filter>Tools\TestTool</Filter>
+    </ClCompile>
+    <ClCompile Include="MainMenu.cpp">
+      <Filter>Tools\Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityManagerTool.cpp">
+      <Filter>Tools\EntityManager</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourcesTool.cpp">
+      <Filter>Tools\Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="DebugTool.cpp">
+      <Filter>Tools\Debug</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

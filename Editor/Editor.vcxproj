@@ -462,19 +462,27 @@
     <ClInclude Include="..\ThirdParty\glm\include\glm\vec4.hpp" />
     <ClInclude Include="..\ThirdParty\glm\include\glm\vector_relational.hpp" />
     <ClInclude Include="BaseTool.h" />
+    <ClInclude Include="DebugTool.h" />
     <ClInclude Include="DemoTool.h" />
     <ClInclude Include="EditorPCH.h" />
     <ClInclude Include="EditorState.h" />
+    <ClInclude Include="EntityManagerTool.h" />
+    <ClInclude Include="MainMenu.h" />
+    <ClInclude Include="ResourcesTool.h" />
     <ClInclude Include="TestTool.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BaseTool.cpp" />
+    <ClCompile Include="DebugTool.cpp" />
     <ClCompile Include="DemoTool.cpp" />
     <ClCompile Include="EditorPCH.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="EditorState.cpp" />
+    <ClCompile Include="EntityManagerTool.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MainMenu.cpp" />
+    <ClCompile Include="ResourcesTool.cpp" />
     <ClCompile Include="TestTool.cpp" />
   </ItemGroup>
   <ItemGroup>

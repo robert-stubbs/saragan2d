@@ -1,5 +1,5 @@
 #include "EditorPCH.h"
-#include "TestTool.h"
+#include "ResourcesTool.h"
 
 #include "GUI.h"
 #include "Engine.h"
@@ -8,11 +8,11 @@ using namespace GameEngine;
 
 namespace Editor {
 
-	void TestTool::RenderUI()
+	void ResourcesTool::RenderUI()
 	{
 		if (GUI::GetGUI().HasInstance()) {
 
-
+			// TODO Tool to manage Assets Folder
 
 		}
 	}
