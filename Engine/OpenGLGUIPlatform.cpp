@@ -78,9 +78,9 @@ namespace GameEngine
         }
     }
 
-    void OpenGLGUIPlatform::Begin(std::string name)
+    bool OpenGLGUIPlatform::Begin(std::string name, bool p_open)
     {
-        ImGui::Begin(name.c_str());
+        return ImGui::Begin(name.c_str(), &p_open);
     }
 
     void OpenGLGUIPlatform::End()

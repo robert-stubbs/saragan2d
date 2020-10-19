@@ -12,6 +12,9 @@ EditorState::EditorState() : State()
 {
 	_menu = Editor::MainMenu();
 	_entity_manager_panel = Editor::EntityManagerTool();
+
+	_debug_window = Editor::DebugTool();
+	_resources_window = Editor::ResourcesTool();
 }
 
 EditorState::~EditorState()
@@ -36,6 +39,8 @@ void EditorState::Render()
 		GUI::Get().NewScene(1.0f / 60.0f);
 		_menu.RenderUI();
 		_entity_manager_panel.RenderUI();
+		_debug_window.RenderUI();
+		_resources_window.RenderUI();
 
 		if (_current_tool != nullptr) {
 			_current_tool->RenderUI();

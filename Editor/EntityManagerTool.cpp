@@ -16,19 +16,11 @@ namespace Editor {
 
 			// TODO Tool to manage Entities in World Map (empty until World Map is Loaded)
 
-			GUI::Get().Begin("Test Window");
+			GUI::Get().Begin("Entity Manager");
 
 			// Set defined Window Size
 			ImGui::SetNextWindowSize(ImVec2(500, 100), ImGuiCond_FirstUseEver);
 
-			// Set the Text for the window
-			ImGui::Text("Hello, world!");
-			if (ImGui::Button("Save")) {
-				LOG("Save")
-			}
-				
-			ImGui::InputText("string", buf, IM_ARRAYSIZE(buf));
-			ImGui::SliderFloat("float", &f, 0.0f, 1.0f);
 
 			GUI::Get().End();
 

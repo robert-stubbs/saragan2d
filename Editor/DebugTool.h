@@ -8,6 +8,8 @@ namespace Editor {
 	class DebugTool : public BaseTool
 	{
 	public:
+		bool p_open;
+
 		DebugTool() {};
 		~DebugTool() {};
 

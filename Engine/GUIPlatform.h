@@ -17,7 +17,7 @@ namespace GameEngine
 		virtual void NewScene(float dt) = 0;
 		virtual void EndAndRender() = 0;
 
-		virtual void Begin(std::string name) = 0;
+		virtual bool Begin(std::string name, bool p_open = true) = 0;
 		virtual void End() = 0;
 
 		virtual void BeginChild(std::string name) = 0;

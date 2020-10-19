@@ -9,8 +9,6 @@ namespace Editor {
 	{
 	private:
 
-		char buf[255] = { 0 };
-		float f = 0;
 
 	public:
 		EntityManagerTool() {};

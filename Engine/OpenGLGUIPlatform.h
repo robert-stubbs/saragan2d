@@ -19,7 +19,7 @@ namespace GameEngine
 		virtual void NewScene(float dt) override;
 		virtual void EndAndRender() override;
 
-		virtual void Begin(std::string name) override;
+		virtual bool Begin(std::string name, bool p_open = true) override;
 		virtual void End() override;
 
 		virtual void BeginChild(std::string name) override;

@@ -14,6 +14,13 @@ namespace Editor {
 
 			// TODO Tool to manage Assets Folder
 
+			GUI::Get().Begin("Resources");
+
+			// Set defined Window Size
+			ImGui::SetNextWindowSize(ImVec2(500, 100), ImGuiCond_FirstUseEver);
+
+
+			GUI::Get().End();
 		}
 	}
 
