@@ -9,6 +9,7 @@ namespace Editor {
 			BaseTool() {};
 			~BaseTool() {};
 
+			virtual void Init() {}
 			virtual void RenderUI() = 0;
 	};
 }

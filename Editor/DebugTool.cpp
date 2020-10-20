@@ -38,20 +38,6 @@ namespace Editor {
 
 			ImGui::Separator();
 
-			// Options menu
-			if (ImGui::BeginPopup("Options"))
-			{
-				//ImGui::Checkbox("Auto-scroll", &AutoScroll);
-				ImGui::EndPopup();
-			}
-
-			// Options, Filter
-			if (ImGui::Button("Options"))
-				ImGui::OpenPopup("Options");
-			ImGui::SameLine();
-			//Filter.Draw("Filter (\"incl,-excl\") (\"error\")", 180);
-			ImGui::Separator();
-
 			// Reserve enough left-over height for 1 separator + 1 input text
 			const float footer_height_to_reserve = ImGui::GetStyle().ItemSpacing.y + ImGui::GetFrameHeightWithSpacing();
 			ImGui::BeginChild("ScrollingRegion", ImVec2(0, -footer_height_to_reserve), false, ImGuiWindowFlags_HorizontalScrollbar);

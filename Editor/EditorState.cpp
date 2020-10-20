@@ -5,16 +5,14 @@
 
 #include "DemoTool.h"
 #include "TestTool.h"
+#include <imgui_internal.h>
 
 using namespace GameEngine;
 
 EditorState::EditorState() : State()
 {
 	_menu = Editor::MainMenu();
-	_entity_manager_panel = Editor::EntityManagerTool();
-
-	_debug_window = Editor::DebugTool();
-	_resources_window = Editor::ResourcesTool();
+	_dock = Editor::EditorDockTool();
 }
 
 EditorState::~EditorState()
@@ -25,6 +23,12 @@ void EditorState::Init()
 {
 	_current_tool = new Editor::TestTool();
 
+	if (GUI::GetGUI().HasInstance()) {
+
+		GUI::Get().NewScene(1.0f / 60.0f);
+
+		GUI::Get().EndAndRender();
+	}
 }
 
 void EditorState::UpdateOrth(const float& dt)
@@ -37,10 +41,10 @@ void EditorState::Render()
 	if (GUI::GetGUI().HasInstance()) {
 
 		GUI::Get().NewScene(1.0f / 60.0f);
+
 		_menu.RenderUI();
-		_entity_manager_panel.RenderUI();
-		_debug_window.RenderUI();
-		_resources_window.RenderUI();
+		_dock.RenderUI();
+
 
 		if (_current_tool != nullptr) {
 			_current_tool->RenderUI();

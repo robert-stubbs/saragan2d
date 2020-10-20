@@ -73,6 +73,12 @@
     <Filter Include="Tools\Debug">
       <UniqueIdentifier>{f18fa5d8-5673-4e55-bedb-180fe3605c64}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Tools\EditorDockTool">
+      <UniqueIdentifier>{f90be8fe-eb01-44d6-adbe-12c448cccab2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tools\Context">
+      <UniqueIdentifier>{85a6bea8-76ae-4d35-a534-cb0fb295cae5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\ThirdParty\ImGui\imconfig.h">
@@ -1222,6 +1228,12 @@
     <ClInclude Include="DebugTool.h">
       <Filter>Tools\Debug</Filter>
     </ClInclude>
+    <ClInclude Include="EditorDockTool.h">
+      <Filter>Tools\EditorDockTool</Filter>
+    </ClInclude>
+    <ClInclude Include="ContextTool.h">
+      <Filter>Tools\Context</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -1249,6 +1261,12 @@
     </ClCompile>
     <ClCompile Include="DebugTool.cpp">
       <Filter>Tools\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="EditorDockTool.cpp">
+      <Filter>Tools\EditorDockTool</Filter>
+    </ClCompile>
+    <ClCompile Include="ContextTool.cpp">
+      <Filter>Tools\Context</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

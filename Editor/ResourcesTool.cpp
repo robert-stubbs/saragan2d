@@ -16,8 +16,7 @@ namespace Editor {
 
 			GUI::Get().Begin("Resources");
 
-			// Set defined Window Size
-			ImGui::SetNextWindowSize(ImVec2(500, 100), ImGuiCond_FirstUseEver);
+				ImGui::TextUnformatted("Resources Area Test");
 
 
 			GUI::Get().End();

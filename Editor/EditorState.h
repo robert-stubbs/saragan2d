@@ -4,17 +4,13 @@
 #include "State.h"
 #include "BaseTool.h"
 #include "MainMenu.h"
-#include "EntityManagerTool.h"
-#include "DebugTool.h"
-#include "ResourcesTool.h"
+#include "EditorDockTool.h"
 
 class EditorState : public GameEngine::State
 {
 public:
     Editor::MainMenu _menu;
-    Editor::EntityManagerTool _entity_manager_panel;
-    Editor::DebugTool _debug_window;
-    Editor::ResourcesTool _resources_window;
+    Editor::EditorDockTool _dock;
 
     Editor::BaseTool* _current_tool;
 
