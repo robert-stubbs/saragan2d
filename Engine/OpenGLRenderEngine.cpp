@@ -475,7 +475,13 @@ namespace GameEngine {
 
 	bool OpenGLRenderEngine::FrameBufferComplete()
 	{
-		return (glCheckFramebufferStatus(GL_FRAMEBUFFER) == GL_FRAMEBUFFER_COMPLETE);
+		bool is_complete = (glCheckFramebufferStatus(GL_FRAMEBUFFER) == GL_FRAMEBUFFER_COMPLETE);
+
+		if (!is_complete) {
+			LOG("Frame Buffer is not complete");
+		}
+
+		return is_complete;
 	}
 
 	void OpenGLRenderEngine::GenerateFrameBufferTexture(unsigned int& TextureID)

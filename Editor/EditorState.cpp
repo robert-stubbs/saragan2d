@@ -2,6 +2,8 @@
 #include "EditorState.h"
 
 #include "GUI.h"
+#include "World.h"
+#include "Engine.h"
 
 #include "DemoTool.h"
 #include "TestTool.h"
@@ -23,12 +25,17 @@ void EditorState::Init()
 {
 	_current_tool = new Editor::TestTool();
 
-	if (GUI::GetGUI().HasInstance()) {
+	//if (GUI::GetGUI().HasInstance()) {
 
-		GUI::Get().NewScene(1.0f / 60.0f);
+	//	GUI::Get().NewScene(1.0f / 60.0f);
 
-		GUI::Get().EndAndRender();
-	}
+	//	GUI::Get().EndAndRender();
+	//}
+
+	World* w = Engine::getWorld();
+	w->LoadMap("Test Map", "");
+
+	w->SetMap("Test Map");
 }
 
 void EditorState::UpdateOrth(const float& dt)
