@@ -21,6 +21,7 @@ public:
     virtual void Render();
     virtual void UpdateOrth(const float& dt);
     virtual void RenderOrth();
+    virtual void RenderEditorUI();
     virtual void DoENTER();
     virtual void DoEXIT();
     virtual void KeyDown(int Key);

@@ -15,6 +15,7 @@ namespace GameEngine {
             virtual void Render() = 0;
             virtual void UpdateOrth(const float& dt) = 0;
             virtual void RenderOrth() = 0;
+            virtual void RenderEditorUI() {};
             virtual void DoENTER() = 0;
             virtual void DoEXIT() = 0;
             virtual void KeyDown(int Key) = 0;

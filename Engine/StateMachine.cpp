@@ -66,6 +66,14 @@ namespace GameEngine {
 		currentState->RenderOrth();
 	}
 
+	void StateMachine::RenderEditorUI()
+	{
+		//Make sure a current state is loaded
+		if (currentState == NULL) return;
+
+		currentState->RenderEditorUI();
+	}
+
 	void StateMachine::KeyDown(int Key)
 	{
 		if (currentState == NULL) return;

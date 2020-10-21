@@ -450,6 +450,56 @@ namespace GameEngine {
 		glBindTexture(GL_TEXTURE_2D, 0);
 	}
 
+
+	// Frame buffer
+	void OpenGLRenderEngine::GenerateFrameBuffer(unsigned int& FBO)
+	{
+		glGenFramebuffers(1, &FBO);
+		BindFrameBuffer(FBO);
+	}
+
+	void OpenGLRenderEngine::BindFrameBuffer(unsigned int& FBO)
+	{
+		glBindFramebuffer(GL_FRAMEBUFFER, FBO);
+	}
+
+	void OpenGLRenderEngine::UnbindFrameBuffer()
+	{
+		glBindFramebuffer(GL_FRAMEBUFFER, 0);
+	}
+
+	void OpenGLRenderEngine::DeleteFrameBuffer(unsigned int& FBO)
+	{
+		glDeleteFramebuffers(1, &FBO);
+	}
+
+	bool OpenGLRenderEngine::FrameBufferComplete()
+	{
+		return (glCheckFramebufferStatus(GL_FRAMEBUFFER) == GL_FRAMEBUFFER_COMPLETE);
+	}
+
+	void OpenGLRenderEngine::GenerateFrameBufferTexture(unsigned int& TextureID)
+	{
+		glGenTextures(1, &TextureID);
+		glBindTexture(GL_TEXTURE_2D, TextureID);
+
+		float width = Engine::get().RenderWidth;
+		float height = Engine::get().RenderHeight;
+
+		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, (GLsizei)width, (GLsizei)height, 0, GL_RGB, GL_UNSIGNED_BYTE, NULL);
+
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+	}
+
+	void OpenGLRenderEngine::BindTextureToFrameBuffer(unsigned int& TextureID)
+	{
+		glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, TextureID, 0);
+
+		GLenum DrawBuffers[1] = { GL_COLOR_ATTACHMENT0 };
+		glDrawBuffers(1, DrawBuffers); // "1" is the size of DrawBuffers
+	}
+
 	void OpenGLRenderEngine::VertexStructurePointerF(int location, int size, bool normalized, int stride, const void* pointer)
 	{
 		glVertexAttribPointer(location, size, GL_FLOAT, normalized, stride, pointer);

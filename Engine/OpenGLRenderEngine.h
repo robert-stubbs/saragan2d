@@ -59,6 +59,16 @@ namespace GameEngine {
 			virtual void GenerateTextureMipmap() override;
 			virtual void UnbindTextureBuffer() override;
 
+			// Frame buffer
+			virtual void GenerateFrameBuffer(unsigned int& FBO) override;
+			virtual void BindFrameBuffer(unsigned int& FBO) override;
+			virtual void UnbindFrameBuffer() override;
+			virtual void DeleteFrameBuffer(unsigned int& FBO) override;
+			virtual bool FrameBufferComplete() override;
+			virtual void GenerateFrameBufferTexture(unsigned int& TextureID) override;
+			virtual void BindTextureToFrameBuffer(unsigned int& TextureID) override;
+
+
 
 			// Buffer Structure Functions
 			virtual void VertexStructurePointerF(int location, int size, bool normalized, int stride, const void* pointer = 0);

@@ -19,6 +19,7 @@ namespace GameEngine {
         void UpdateOrth(const float& dt);
         void RenderOrth();
 
+        void RenderEditorUI();
 
         void TransitionTo(std::string stateName);
         void DelayTransitionTo(std::string stateName);

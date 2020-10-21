@@ -13,6 +13,8 @@ bool PreLoad()
 {
     Engine& e = Engine::get();
 
+    e.RenderToFrameBuffer = true;
+
     LOG("Loading Ini File");
 
     cIni* ini = new cIni("C:/Assets/Engine.ini");

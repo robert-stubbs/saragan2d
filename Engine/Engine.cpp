@@ -74,6 +74,15 @@ namespace GameEngine {
 			System->Init();
 
 			GameFSM = StateMachine();
+
+			if (RenderToFrameBuffer) {
+
+				renderer.Get().GenerateFrameBuffer(FBO);
+				renderer.Get().GenerateFrameBufferTexture(FBOTexture);
+				renderer.Get().BindTextureToFrameBuffer(FBOTexture);
+				renderer.Get().UnbindFrameBuffer();
+			}
+
 			return true;
 		}
 
@@ -148,6 +157,10 @@ namespace GameEngine {
 
 	void Engine::Render()
 	{
+		if (RenderToFrameBuffer) {
+			renderer.Get().BindFrameBuffer(FBO);
+		}
+
 		getRenderer().RenderStart();
 		Engine::getRenderer().UniformInt(Engine::getCurrentShader()["is_Text"], 0);
 		Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["projectionMatrix"], Engine::get().current_cam->ProjectionMatrix, 1, false);
@@ -161,6 +174,12 @@ namespace GameEngine {
 		GameFSM.RenderOrth();
 
 		w.RenderForeground();
+
+		if (RenderToFrameBuffer && renderer.Get().FrameBufferComplete()) {
+			renderer.Get().UnbindFrameBuffer();
+		}
+
+		GameFSM.RenderEditorUI();
 
 		getContext().SwapContextBuffers();
 	}

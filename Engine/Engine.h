@@ -36,6 +36,7 @@ namespace GameEngine {
 		private:
 			Engine() {
 				log->CreateConsole();
+				RenderToFrameBuffer = false;
 			};
 
 			Context ctx;
@@ -52,6 +53,9 @@ namespace GameEngine {
 			//
 			SystemManager* System;
 
+			bool RenderToFrameBuffer;
+			unsigned int FBO;
+			unsigned int FBOTexture;
 
 			Camera2D* default_cam;
 			Camera2D* current_cam;

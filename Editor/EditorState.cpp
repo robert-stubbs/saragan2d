@@ -38,6 +38,10 @@ void EditorState::UpdateOrth(const float& dt)
 
 void EditorState::Render()
 {
+}
+
+void EditorState::RenderEditorUI() 
+{
 	if (GUI::GetGUI().HasInstance()) {
 
 		GUI::Get().NewScene(1.0f / 60.0f);
@@ -52,6 +56,7 @@ void EditorState::Render()
 
 		GUI::Get().EndAndRender();
 	}
+
 }
 
 void EditorState::RenderOrth()
