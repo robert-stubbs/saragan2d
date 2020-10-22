@@ -23,17 +23,6 @@ namespace Editor {
 	{
 		if (GUI::GetGUI().HasInstance()) {
 
-			// TODO Tool to manage Entities in World Map (empty until World Map is Loaded)
-
-			//GUI::Get().Begin("Entity Manager");
-
-			//// Set defined Window Size
-			//ImGui::SetNextWindowSize(ImVec2(500, 100), ImGuiCond_FirstUseEver);
-
-
-			//GUI::Get().End();
-			//
-
 			static int initialized = 1;
 			static int new_window = 0;
 			ImGuiWindowFlags flags = ImGuiWindowFlags_MenuBar;

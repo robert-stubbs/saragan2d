@@ -37,6 +37,11 @@ namespace GameEngine {
 		else {
 			current_cam->resize((float)width, (float)height);
 		}
+		if (RenderToFrameBuffer && FBO != 0) {
+
+			glBindFramebuffer(GL_FRAMEBUFFER, FBO);
+			glViewport(0, 0, (GLsizei)width, (GLsizei)height);
+		}
 	}
 
 	void Engine::TestFunction()
@@ -80,6 +85,7 @@ namespace GameEngine {
 				renderer.Get().GenerateFrameBuffer(FBO);
 				renderer.Get().GenerateFrameBufferTexture(FBOTexture);
 				renderer.Get().BindTextureToFrameBuffer(FBOTexture);
+				renderer.Get().GenerateRenderBuffer(RBO);
 				renderer.Get().UnbindFrameBuffer();
 			}
 

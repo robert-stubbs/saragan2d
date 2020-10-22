@@ -1536,3 +1536,969 @@ FPS: 60 Updates: 60
 FPS: 60 Updates: 60
 FPS: 60 Updates: 60
 FPS: 60 Updates: 60
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Post Load
+Starting Render Loop
+FPS: 56 Updates: 59
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Post Load
+Starting Render Loop
+FPS: 55 Updates: 59
+FPS: 60 Updates: 60
+FPS: 55 Updates: 60
+FPS: 60 Updates: 60
+FPS: 56 Updates: 60
+FPS: 60 Updates: 60
+FPS: 22 Updates: 60
+FPS: 45 Updates: 45
+FPS: 35 Updates: 62
+FPS: 48 Updates: 73
+FPS: 60 Updates: 60
+FPS: 28 Updates: 60
+FPS: 59 Updates: 59
+FPS: 61 Updates: 61
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Post Load
+Starting Render Loop
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Post Load
+Starting Render Loop
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Post Load
+Starting Render Loop
+FPS: 58 Updates: 59
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Post Load
+Starting Render Loop
+FPS: 58 Updates: 59
+FPS: 57 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 56 Updates: 60
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Post Load
+Starting Render Loop
+FPS: 57 Updates: 59
+FPS: 60 Updates: 60
+FPS: 33 Updates: 60
+FPS: 59 Updates: 59
+FPS: 58 Updates: 61
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 56 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 45 Updates: 45
+FPS: 49 Updates: 75
+FPS: 60 Updates: 60
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Post Load
+Starting Render Loop
+FPS: 58 Updates: 59
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Post Load
+Starting Render Loop
+FPS: 59 Updates: 59
+FPS: 60 Updates: 60
+FPS: 33 Updates: 33
+FPS: 47 Updates: 87
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 57 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 36 Updates: 36
+FPS: 30 Updates: 84
+FPS: 60 Updates: 60
+FPS: 36 Updates: 60
+FPS: 57 Updates: 57
+FPS: 41 Updates: 63
+FPS: 60 Updates: 60
+FPS: 37 Updates: 60
+FPS: 60 Updates: 60
+FPS: 56 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 57 Updates: 60
+FPS: 60 Updates: 60
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Post Load
+Starting Render Loop
+FPS: 57 Updates: 59
+FPS: 59 Updates: 59
+FPS: 33 Updates: 61
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 56 Updates: 60
+FPS: 60 Updates: 60
+FPS: 26 Updates: 26
+FPS: 22 Updates: 85
+FPS: 47 Updates: 69
+FPS: 37 Updates: 60
+FPS: 60 Updates: 60
+FPS: 36 Updates: 60
+FPS: 45 Updates: 45
+FPS: 52 Updates: 75
+FPS: 38 Updates: 60
+FPS: 39 Updates: 60
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Post Load
+Starting Render Loop
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+FPS: 58 Updates: 59
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+FPS: 60 Updates: 60
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Post Load
+Starting Render Loop
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+FPS: 60 Updates: 59
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+FPS: 33 Updates: 33
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+FPS: 61 Updates: 87
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Post Load
+Starting Render Loop
+FPS: 57 Updates: 59
+FPS: 34 Updates: 60
+FPS: 60 Updates: 60
+FPS: 42 Updates: 42
+FPS: 56 Updates: 78
+FPS: 58 Updates: 60
+FPS: 60 Updates: 60
+FPS: 58 Updates: 60
+FPS: 60 Updates: 60
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Frame Buffer is not complete
+Initializing Engine
+Post Load
+Starting Render Loop
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+FPS: 58 Updates: 59
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Frame Buffer is not complete
+Initializing Engine
+Post Load
+Starting Render Loop
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+FPS: 57 Updates: 58
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Post Load
+Starting Render Loop
+FPS: 57 Updates: 59
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Post Load
+Starting Render Loop
+FPS: 57 Updates: 59
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 37 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 53 Updates: 53
+FPS: 36 Updates: 67
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Post Load
+Starting Render Loop
+FPS: 59 Updates: 59
+FPS: 57 Updates: 60
+FPS: 60 Updates: 60
+FPS: 56 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 40 Updates: 56
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Post Load
+Starting Render Loop
+FPS: 58 Updates: 59
+FPS: 49 Updates: 60
+FPS: 60 Updates: 60
+FPS: 44 Updates: 60
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Post Load
+Starting Render Loop
+FPS: 57 Updates: 59
+FPS: 60 Updates: 60
+FPS: 28 Updates: 28
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+FPS: 51 Updates: 92
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+FPS: 58 Updates: 58
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+FPS: 35 Updates: 62
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Frame Buffer is not complete
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Post Load
+Starting Render Loop
+FPS: 59 Updates: 59
+FPS: 35 Updates: 60
+FPS: 59 Updates: 60
+FPS: 30 Updates: 60
+FPS: 60 Updates: 60
+FPS: 56 Updates: 60
+FPS: 61 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 59 Updates: 60
+FPS: 61 Updates: 60
+FPS: 60 Updates: 60
+FPS: 17 Updates: 17
+FPS: 1 Updates: 218
+FPS: 1 Updates: 2
+FPS: 5 Updates: 3
+FPS: 60 Updates: 60
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Post Load
+Starting Render Loop
+FPS: 58 Updates: 59
+FPS: 61 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 56 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60

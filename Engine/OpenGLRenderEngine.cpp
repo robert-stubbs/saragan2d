@@ -505,6 +505,16 @@ namespace GameEngine {
 		GLenum DrawBuffers[1] = { GL_COLOR_ATTACHMENT0 };
 		glDrawBuffers(1, DrawBuffers); // "1" is the size of DrawBuffers
 	}
+	void OpenGLRenderEngine::GenerateRenderBuffer(unsigned int& RBO)
+	{
+		float width = Engine::get().RenderWidth;
+		float height = Engine::get().RenderHeight;
+		glGenRenderbuffers(1, &RBO);
+		glBindRenderbuffer(GL_RENDERBUFFER, RBO);
+		glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH24_STENCIL8, (GLsizei)width, (GLsizei)height);
+		glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_STENCIL_ATTACHMENT, GL_RENDERBUFFER, RBO);
+
+	}
 
 	void OpenGLRenderEngine::VertexStructurePointerF(int location, int size, bool normalized, int stride, const void* pointer)
 	{

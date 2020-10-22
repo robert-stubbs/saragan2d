@@ -67,7 +67,7 @@ namespace GameEngine {
 			virtual bool FrameBufferComplete() override;
 			virtual void GenerateFrameBufferTexture(unsigned int& TextureID) override;
 			virtual void BindTextureToFrameBuffer(unsigned int& TextureID) override;
-
+			virtual void GenerateRenderBuffer(unsigned int& RBO) override;
 
 
 			// Buffer Structure Functions

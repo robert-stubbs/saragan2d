@@ -68,6 +68,7 @@ namespace GameEngine {
 			virtual bool FrameBufferComplete() = 0;
 			virtual void GenerateFrameBufferTexture(unsigned int& TextureID) = 0;
 			virtual void BindTextureToFrameBuffer(unsigned int& TextureID) = 0;
+			virtual void GenerateRenderBuffer(unsigned int& RBO) = 0;
 
 			// Buffer Structure Functions
 			virtual void VertexStructurePointerF(int location, int size, bool normalized, int stride, const void* pointer) = 0;
