@@ -54,6 +54,7 @@ namespace GameEngine {
 			//
 			SystemManager* System;
 
+			bool EditorFocusViewport;
 			bool RenderToFrameBuffer;
 			unsigned int FBO;
 			unsigned int FBOTexture;

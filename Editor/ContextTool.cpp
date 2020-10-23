@@ -19,6 +19,13 @@ namespace Editor {
 
 				ImGui::Image(reinterpret_cast<void*>(Engine::get().FBOTexture), ImVec2(viewportPanelSize.x, viewportPanelSize.y), ImVec2{ 0, 1 }, ImVec2{ 1, 0 });
 
+				if (ImGui::IsWindowFocused()) {
+					Engine::get().EditorFocusViewport = true;
+				}
+				else {
+					Engine::get().EditorFocusViewport = false;
+				}
+
 			GUI::Get().End();
 		}
 	}

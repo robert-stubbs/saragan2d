@@ -18,6 +18,21 @@ namespace Editor {
 
 				ImGui::TextUnformatted("Resources Area Test");
 
+				ImGui::Separator();
+
+				ImGuiTreeNodeFlags flags = ImGuiTreeNodeFlags_Selected | ImGuiTreeNodeFlags_OpenOnArrow | ImGuiTreeNodeFlags_OpenOnDoubleClick | ImGuiTreeNodeFlags_SpanAvailWidth;
+
+				ImGui::PushStyleVar(ImGuiStyleVar_FramePadding, ImVec2(4, 4));
+
+				if (ImGui::TreeNodeEx("Resources", flags)) {
+
+					ImGui::Indent();
+					ImGui::Text("Test");
+					ImGui::Unindent();
+					ImGui::TreePop();
+				}
+				ImGui::PopStyleVar();
+
 
 			GUI::Get().End();
 		}

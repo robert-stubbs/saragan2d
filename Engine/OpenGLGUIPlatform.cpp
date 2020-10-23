@@ -7,6 +7,7 @@
 
 #include "backends/imgui_impl_opengl3.cpp"
 #include "backends/imgui_impl_glfw.cpp"
+#include "Engine.h"
 
 namespace GameEngine
 {
@@ -27,6 +28,14 @@ namespace GameEngine
         io.ConfigFlags |= ImGuiConfigFlags_ViewportsEnable;         // Enable Multi-Viewport / Platform Windows
 
         ImGui::StyleColorsDark();
+
+        std::string f = Engine::get().asset_dir + "Font/VeraMono.ttf";
+        std::string fbd = Engine::get().asset_dir + "Font/VeraMoBd.ttf";
+        std::string fbi = Engine::get().asset_dir + "Font/VeraMoBI.ttf";
+
+        io.Fonts->AddFontFromFileTTF(fbd.c_str(), 16);
+        io.Fonts->AddFontFromFileTTF(fbi.c_str(), 16);
+        io.FontDefault = io.Fonts->AddFontFromFileTTF(f.c_str(), 16);
 
         ImGuiStyle& style = ImGui::GetStyle();
         if (io.ConfigFlags & ImGuiConfigFlags_ViewportsEnable)

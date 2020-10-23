@@ -5,6 +5,7 @@
 #include "BaseTool.h"
 #include "MainMenu.h"
 #include "EditorDockTool.h"
+#include "ANPC.h"
 
 class EditorState : public GameEngine::State
 {
@@ -13,6 +14,8 @@ public:
     Editor::EditorDockTool _dock;
 
     Editor::BaseTool* _current_tool;
+
+    GameEngine::ANPC* NPC;
 
     EditorState();
     virtual ~EditorState();

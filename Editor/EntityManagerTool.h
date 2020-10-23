@@ -2,6 +2,7 @@
 #define _ENTITY_MANAGER_TOOL_H_
 
 #include "BaseTool.h"
+#include "Entity.h"
 
 namespace Editor {
 
@@ -15,6 +16,7 @@ namespace Editor {
 		~EntityManagerTool() {};
 
 		virtual void RenderUI() override;
+		virtual void CreateEntityOption(GameEngine::Entity& ent);
 	};
 }
 

@@ -208,7 +208,7 @@ namespace GameEngine {
 		}
 
 
-		if (!ImGui::IsWindowFocused(ImGuiFocusedFlags_AnyWindow) && !ImGui::IsAnyItemFocused()) {
+		if ((!ImGui::IsWindowFocused(ImGuiFocusedFlags_AnyWindow) && !ImGui::IsAnyItemFocused()) || EditorFocusViewport) {
 			GameFSM.KeyDown(Key);
 		}
 	}
@@ -218,7 +218,7 @@ namespace GameEngine {
 		if (_gui->HasInstance()) {
 			getGUI().KeyUp(Key);
 		}
-		if (!ImGui::IsWindowFocused(ImGuiFocusedFlags_AnyWindow) && !ImGui::IsAnyItemFocused()) {
+		if ((!ImGui::IsWindowFocused(ImGuiFocusedFlags_AnyWindow) && !ImGui::IsAnyItemFocused())|| EditorFocusViewport) {
 			GameFSM.KeyUp(Key);
 		}
 	}
@@ -229,7 +229,7 @@ namespace GameEngine {
 			getGUI().MouseDown(button);
 		}
 
-		if (!ImGui::IsWindowFocused(ImGuiFocusedFlags_AnyWindow) && !ImGui::IsAnyItemFocused()) {
+		if ((!ImGui::IsWindowFocused(ImGuiFocusedFlags_AnyWindow) && !ImGui::IsAnyItemFocused()) || EditorFocusViewport) {
 			GameFSM.MouseDown(button);
 		}
 	}
@@ -240,7 +240,7 @@ namespace GameEngine {
 			getGUI().MouseUp(button);
 		}
 
-		if (!ImGui::IsWindowFocused(ImGuiFocusedFlags_AnyWindow) && !ImGui::IsAnyItemFocused()) {
+		if ((!ImGui::IsWindowFocused(ImGuiFocusedFlags_AnyWindow) && !ImGui::IsAnyItemFocused()) || EditorFocusViewport) {
 			GameFSM.MouseUp(button);
 		}
 	}
@@ -251,7 +251,7 @@ namespace GameEngine {
 			getGUI().MouseMove(x, y);
 		}
 
-		if (!ImGui::IsWindowFocused(ImGuiFocusedFlags_AnyWindow) && !ImGui::IsAnyItemFocused()) {
+		if ((!ImGui::IsWindowFocused(ImGuiFocusedFlags_AnyWindow) && !ImGui::IsAnyItemFocused()) || EditorFocusViewport) {
 			GameFSM.MouseMove(x, y);
 		}
 	}
