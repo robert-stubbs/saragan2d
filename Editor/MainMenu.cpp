@@ -17,13 +17,11 @@ namespace Editor {
 				{
 					if (ImGui::MenuItem("New Map"))
 					{
-						//Do something
-						LOG("I CLICKED NEW");
+						NewMapModal = true;
 					}
 					else if (ImGui::MenuItem("Open Map")) {
 
-						//Do something
-						LOG("I CLICKED Open");
+						OpenMapModal = true;
 
 					}
 					else if (ImGui::MenuItem("Save Map")) {
@@ -34,8 +32,7 @@ namespace Editor {
 					}
 					else if (ImGui::MenuItem("Save Map As")) {
 
-						//Do something
-						LOG("I CLICKED Save As");
+						SaveAsMapModal = true;
 
 					}
 					else if (ImGui::MenuItem("Exit")) {
@@ -55,6 +52,59 @@ namespace Editor {
 				}
 
 				ImGui::EndMainMenuBar();
+
+				//################################################################################################
+				// Menu Click Items
+				//################################################################################################
+				if (NewMapModal) {
+					ImGui::OpenPopup("New Map");
+				}
+
+				if (OpenMapModal) {
+					ImGui::OpenPopup("Open Map");
+				}
+
+				if (SaveAsMapModal) {
+					ImGui::OpenPopup("SaveAs Map");
+				}
+
+				//################################################################################################
+				// Modals
+				//################################################################################################
+
+				if (ImGui::BeginPopupModal("New Map"))
+				{
+					ImGui::Text("Lorem ipsum");
+
+					if (ImGui::Button("Close")) {
+						NewMapModal = false;
+						ImGui::CloseCurrentPopup();
+					}
+					ImGui::EndPopup();
+				}
+
+				if (ImGui::BeginPopupModal("Open Map"))
+				{
+					ImGui::Text("Lorem ipsum");
+
+					if (ImGui::Button("Close")) {
+						OpenMapModal = false;
+						ImGui::CloseCurrentPopup();
+					}
+					ImGui::EndPopup();
+				}
+
+				if (ImGui::BeginPopupModal("SaveAs Map"))
+				{
+					ImGui::Text("Lorem ipsum");
+
+					if (ImGui::Button("Close")) {
+						SaveAsMapModal = false;
+						ImGui::CloseCurrentPopup();
+					}
+					ImGui::EndPopup();
+				}
+				//################################################################################################
 			}
 
 		}

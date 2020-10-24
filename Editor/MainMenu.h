@@ -11,6 +11,11 @@ namespace Editor {
 		MainMenu() {};
 		~MainMenu() {};
 
+		bool NewMapModal = false;
+		bool OpenMapModal = false;
+		bool SaveAsMapModal = false;
+		
+
 		virtual void RenderUI() override;
 	};
 }

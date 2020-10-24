@@ -59,27 +59,28 @@ namespace Editor {
 				if (ImGui::Button("Remove")) {
 
 				}
-				ImGui::ListBoxHeader("",ImVec2(viewportPanelSize.x-20,150));
-
-				std::string layername = "";
-				for (int i = 0; i < def->_layers.size(); i++)
+				if (ImGui::ListBoxHeader("", ImVec2(viewportPanelSize.x - 20, 150)))
 				{
-					layername = "Layer " + std::to_string(i);
-
-					if (selected_layer == i) {
-						layername += " - Selected";
-					}
-
-					if (ImGui::Selectable(layername.c_str(), (selected_layer == i)))
+					std::string layername = "";
+					for (int i = 0; i < def->_layers.size(); i++)
 					{
-						// handle selection
-						selected_layer = i;
+						layername = "Layer " + std::to_string(i);
+
+						if (selected_layer == i) {
+							layername += " - Selected";
+						}
+						ImGui::PushID((int)i);
+						if (ImGui::Selectable(layername.c_str(), (selected_layer == i)))
+						{
+							// handle selection
+							selected_layer = i;
+						}
+						ImGui::PopID();
 					}
 
+					ImGui::ListBoxFooter();
 				}
-
-				ImGui::ListBoxFooter();
-
+				
 			ImGui::EndChild();
 
 			ImGui::PopFont();
