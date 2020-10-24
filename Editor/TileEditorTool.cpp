@@ -2,9 +2,6 @@
 #include "TileEditorTool.h"
 
 #include "GUI.h"
-#include "Engine.h"
-#include "World.h"
-#include "Map.h"
 
 using namespace GameEngine;
 
@@ -14,7 +11,7 @@ namespace Editor {
 	{
 		World* w = Engine::getWorld();
 		Map* m = w->GetMap();
-		TileMap* def = m->GetDefinition();
+		def = m->GetDefinition();
 
 		std::vector<Texture>* textures = m->GetTextures();
 		_t = &textures->at(0);
@@ -51,37 +48,64 @@ namespace Editor {
 
 			ImGui::PushFont(f);
 
-			ImGui::BeginChild("Tile Map Layers", ImVec2(viewportPanelSize.x, 100), true, flags);
-			ImGui::Text("Layers:");
+			ImGui::BeginChild("Tile Map Layers", ImVec2(viewportPanelSize.x, 200), true, flags);
+				ImGui::Text("Layers:");
 
+				ImGui::SameLine();
+				if (ImGui::Button("Add")) {
 
-			ImGui::EndChild();
+				}
+				ImGui::SameLine();
+				if (ImGui::Button("Remove")) {
 
-			ImGui::BeginChild("Tile Selection Details", ImVec2(viewportPanelSize.x-123, 120), true, flags);
+				}
+				ImGui::ListBoxHeader("",ImVec2(viewportPanelSize.x-20,150));
 
-			ImGui::Text("X:");
-			ImGui::SameLine();
-			ImGui::Text(std::to_string((int)selected_x).c_str());
+				std::string layername = "";
+				for (int i = 0; i < def->_layers.size(); i++)
+				{
+					layername = "Layer " + std::to_string(i);
 
-			ImGui::Text("Y:");
-			ImGui::SameLine();
-			ImGui::Text(std::to_string((int)selected_y).c_str());
+					if (selected_layer == i) {
+						layername += " - Selected";
+					}
 
-			ImGui::Text("Texture Min:");
-			std::string min = "(" + std::to_string(selected_start_pos.x) + "," + std::to_string(selected_start_pos.y) + ")";
-			ImGui::Text(min.c_str());
+					if (ImGui::Selectable(layername.c_str(), (selected_layer == i)))
+					{
+						// handle selection
+						selected_layer = i;
+					}
 
-			ImGui::Text("Texture Max:");
-			std::string max = "(" + std::to_string(selected_end_pos.x) + "," + std::to_string(selected_end_pos.y) + ")";
-			ImGui::Text(max.c_str());
+				}
+
+				ImGui::ListBoxFooter();
 
 			ImGui::EndChild();
 
 			ImGui::PopFont();
-			
-			ImGui::SameLine();
 
 			if (_t->TextureID) {
+
+				ImGui::PushFont(f);
+
+				ImGui::BeginChild("Tile Selection Details", ImVec2(viewportPanelSize.x-123, 120), true, flags);
+
+				std::string loc = "Location: " + std::to_string((int)selected_x) + "," + std::to_string((int)selected_y);
+				ImGui::Text(loc.c_str());
+
+				ImGui::Text("Texture Min:");
+				std::string min = "(" + std::to_string(selected_start_pos.x) + "," + std::to_string(selected_start_pos.y) + ")";
+				ImGui::Text(min.c_str());
+
+				ImGui::Text("Texture Max:");
+				std::string max = "(" + std::to_string(selected_end_pos.x) + "," + std::to_string(selected_end_pos.y) + ")";
+				ImGui::Text(max.c_str());
+
+				ImGui::EndChild();
+
+				ImGui::PopFont();
+			
+				ImGui::SameLine();
 
 				ImGui::PushStyleVar(ImGuiStyleVar_WindowPadding, ImVec2(5.0f, 5.0f));
 				ImGui::BeginChild("Tile Map Image", ImVec2(115, 120), true, flags);
@@ -91,7 +115,7 @@ namespace Editor {
 				ImGui::EndChild();
 				ImGui::PopStyleVar();
 
-				ImGui::BeginChild("colors", ImVec2(viewportPanelSize.x, viewportPanelSize.y - 230), true, flags);
+				ImGui::BeginChild("colors", ImVec2(viewportPanelSize.x, viewportPanelSize.y - 330), true, flags);
 				ImGui::PushStyleVar(ImGuiStyleVar_ItemSpacing, ImVec2(0.0f, 0.0f));
 
 				button_id = 0;

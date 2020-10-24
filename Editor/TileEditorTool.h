@@ -3,6 +3,9 @@
 
 #include "BaseTool.h"
 #include "Texture.h"
+#include "Engine.h"
+#include "World.h"
+#include "Map.h"
 
 namespace Editor {
 
@@ -12,6 +15,10 @@ namespace Editor {
 		GameEngine::Texture* _t;
 		std::string _path;
 		bool _hasTexture = false;
+
+		int selected_layer = 0;
+
+		GameEngine::TileMap* def;
 
 		ImGuiTreeNodeFlags flags;
 
