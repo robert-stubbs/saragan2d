@@ -45,13 +45,19 @@ namespace Editor {
 			ImGuiIO& io = ImGui::GetIO();
 			auto f = io.Fonts->Fonts[5];
 
-			GUI::Get().Begin("Tile Editor");
+			GUI::Get().Begin("Tile Editor");		
 
 			ImVec2 viewportPanelSize = ImGui::GetContentRegionAvail();
 
 			ImGui::PushFont(f);
 
-			ImGui::BeginChild("Tile Map Settings", ImVec2(viewportPanelSize.x-125, 120), true, flags);
+			ImGui::BeginChild("Tile Map Layers", ImVec2(viewportPanelSize.x, 100), true, flags);
+			ImGui::Text("Layers:");
+
+
+			ImGui::EndChild();
+
+			ImGui::BeginChild("Tile Selection Details", ImVec2(viewportPanelSize.x-123, 120), true, flags);
 
 			ImGui::Text("X:");
 			ImGui::SameLine();
@@ -85,7 +91,7 @@ namespace Editor {
 				ImGui::EndChild();
 				ImGui::PopStyleVar();
 
-				ImGui::BeginChild("colors", ImVec2(viewportPanelSize.x, viewportPanelSize.y - 125), true, flags);
+				ImGui::BeginChild("colors", ImVec2(viewportPanelSize.x, viewportPanelSize.y - 230), true, flags);
 				ImGui::PushStyleVar(ImGuiStyleVar_ItemSpacing, ImVec2(0.0f, 0.0f));
 
 				button_id = 0;
