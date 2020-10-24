@@ -6,6 +6,8 @@
 #include "DebugTool.h"
 #include "ResourcesTool.h"
 #include "ContextTool.h"
+#include "TileEditorTool.h"
+#include "PropertiesTool.h"
 
 namespace Editor {
 
@@ -16,6 +18,9 @@ namespace Editor {
 		Editor::DebugTool _debug_window;
 		Editor::ResourcesTool _resources_window;
 		Editor::ContextTool _context_window;
+
+		TileEditorTool _tile_editor_tool;
+		PropertiesTool _properties_tool;
 
 		ImGuiID left_dock_id;
 		ImGuiID right_dock_id;

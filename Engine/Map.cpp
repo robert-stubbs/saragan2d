@@ -252,9 +252,9 @@ namespace GameEngine
 				LoadTextureBuffers();
 			}
 			Engine::getRenderer().CurrentTextureID = _textures[0].TextureID;
-
-			Engine::getRenderer().BindTextureBuffer(_textures[0].TextureID);
 		}
+
+		Engine::getRenderer().BindTextureBuffer(_textures[0].TextureID);
 
 		if (layer < _definition.number_of_layers) {
 			_batch.BeginBatch();

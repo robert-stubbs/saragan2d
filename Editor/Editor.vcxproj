@@ -470,8 +470,10 @@
     <ClInclude Include="EditorState.h" />
     <ClInclude Include="EntityManagerTool.h" />
     <ClInclude Include="MainMenu.h" />
+    <ClInclude Include="PropertiesTool.h" />
     <ClInclude Include="ResourcesTool.h" />
     <ClInclude Include="TestTool.h" />
+    <ClInclude Include="TileEditorTool.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BaseTool.cpp" />
@@ -486,8 +488,10 @@
     <ClCompile Include="EntityManagerTool.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MainMenu.cpp" />
+    <ClCompile Include="PropertiesTool.cpp" />
     <ClCompile Include="ResourcesTool.cpp" />
     <ClCompile Include="TestTool.cpp" />
+    <ClCompile Include="TileEditorTool.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Engine\Engine.vcxproj">

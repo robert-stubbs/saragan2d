@@ -17,6 +17,10 @@ namespace Editor {
 		_resources_window = Editor::ResourcesTool();
 
 		_context_window = Editor::ContextTool();
+
+		_tile_editor_tool = Editor::TileEditorTool();
+
+		_properties_tool = Editor::PropertiesTool();
 	}
 
 	void EditorDockTool::RenderUI()
@@ -61,6 +65,7 @@ namespace Editor {
 				ImGui::DockBuilderDockWindow("Main", main_dock_id);
 
 				ImGui::DockBuilderDockWindow("Entity Manager", left_dock_id);
+
 				ImGui::DockBuilderDockWindow("Resources", right_dock_id);
 				ImGui::DockBuilderFinish(dockspace_id);
 			}
@@ -70,11 +75,23 @@ namespace Editor {
 			{
 				_entity_manager_panel.RenderUI();
 
+				if (!_tile_editor_tool._hasTexture) {
+					_tile_editor_tool.LoadTexture(Engine::get().asset_dir + "Textures/map_atlas.png");
+				}
+				ImGui::SetNextWindowDockID(left_dock_id, ImGuiCond_Once);
+				_tile_editor_tool.RenderUI();
+
+				ImGui::SetNextWindowDockID(main_dock_id, bottom_dock_id);
 				_debug_window.RenderUI();
 
+				ImGui::SetNextWindowDockID(main_dock_id, ImGuiCond_Once);
 				_context_window.RenderUI();
 
+				ImGui::SetNextWindowDockID(right_dock_id, ImGuiCond_Once);
 				_resources_window.RenderUI();
+
+				ImGui::SetNextWindowDockID(right_dock_id, ImGuiCond_Once);
+				_properties_tool.RenderUI();
 			}
 
 

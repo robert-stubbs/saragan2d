@@ -79,6 +79,12 @@
     <Filter Include="Tools\Context">
       <UniqueIdentifier>{85a6bea8-76ae-4d35-a534-cb0fb295cae5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Tools\TileEditor">
+      <UniqueIdentifier>{9d58dc2f-9d2f-49dc-9b95-c3603fac4e6d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tools\Properties">
+      <UniqueIdentifier>{6b0bf84c-7874-4bf5-822a-8e3f27a79db4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\ThirdParty\ImGui\imconfig.h">
@@ -1234,6 +1240,12 @@
     <ClInclude Include="ContextTool.h">
       <Filter>Tools\Context</Filter>
     </ClInclude>
+    <ClInclude Include="TileEditorTool.h">
+      <Filter>Tools\TileEditor</Filter>
+    </ClInclude>
+    <ClInclude Include="PropertiesTool.h">
+      <Filter>Tools\Properties</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -1267,6 +1279,12 @@
     </ClCompile>
     <ClCompile Include="ContextTool.cpp">
       <Filter>Tools\Context</Filter>
+    </ClCompile>
+    <ClCompile Include="TileEditorTool.cpp">
+      <Filter>Tools\TileEditor</Filter>
+    </ClCompile>
+    <ClCompile Include="PropertiesTool.cpp">
+      <Filter>Tools\Properties</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
