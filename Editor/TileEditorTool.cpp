@@ -75,52 +75,55 @@ namespace Editor {
 			
 			ImGui::SameLine();
 
-			ImGui::PushStyleVar(ImGuiStyleVar_WindowPadding, ImVec2(5.0f, 5.0f));
+			if (_t->TextureID) {
+
+				ImGui::PushStyleVar(ImGuiStyleVar_WindowPadding, ImVec2(5.0f, 5.0f));
 				ImGui::BeginChild("Tile Map Image", ImVec2(115, 120), true, flags);
 
 				ImGui::Image((ImTextureID)_t->TextureID, ImVec2(100, 100), selected_start_pos, selected_end_pos, bg_color, selected_tint_color);
 
 				ImGui::EndChild();
-			ImGui::PopStyleVar();
+				ImGui::PopStyleVar();
 
-			ImGui::BeginChild("colors", ImVec2(viewportPanelSize.x, viewportPanelSize.y - 125), true, flags);
+				ImGui::BeginChild("colors", ImVec2(viewportPanelSize.x, viewportPanelSize.y - 125), true, flags);
 				ImGui::PushStyleVar(ImGuiStyleVar_ItemSpacing, ImVec2(0.0f, 0.0f));
 
-					button_id  = 0;
+				button_id = 0;
 
-					for (int h = 0; h < number_of_tiles_height; h++)
+				for (int h = 0; h < number_of_tiles_height; h++)
+				{
+					ImGui::NewLine();
+					for (int w = 0; w < number_of_tiles_width; w++)
 					{
-						ImGui::NewLine();
-						for (int w = 0; w < number_of_tiles_width; w++)
-						{
-							ImGui::SameLine();
+						ImGui::SameLine();
 
-							start_pos.x = delta_w * (float)w;
-							start_pos.y = delta_h * (float)h;
-							end_pos.x = delta_w * (float)(w + 1);
-							end_pos.y = delta_h * (float)(h + 1);
+						start_pos.x = delta_w * (float)w;
+						start_pos.y = delta_h * (float)h;
+						end_pos.x = delta_w * (float)(w + 1);
+						end_pos.y = delta_h * (float)(h + 1);
 
-							ImVec4* temp = &bg_color;
-							if (h == selected_y && w == selected_x) {
-								temp = &selected_tint_color;
-							}
-
-							ImGui::PushID(button_id);
-
-							if (ImGui::ImageButton((ImTextureID)_t->TextureID, ImVec2(tile_width, tile_height), start_pos, end_pos, 1, bg_color, *temp)) {
-								selected_x = (float)w;
-								selected_y = (float)h;
-								selected_start_pos = start_pos;
-								selected_end_pos = end_pos;
-							}
-
-							ImGui::PopID();
-							button_id++;
+						ImVec4* temp = &bg_color;
+						if (h == selected_y && w == selected_x) {
+							temp = &selected_tint_color;
 						}
+
+						ImGui::PushID(button_id);
+
+						if (ImGui::ImageButton((ImTextureID)_t->TextureID, ImVec2(tile_width, tile_height), start_pos, end_pos, 1, bg_color, *temp)) {
+							selected_x = (float)w;
+							selected_y = (float)h;
+							selected_start_pos = start_pos;
+							selected_end_pos = end_pos;
+						}
+
+						ImGui::PopID();
+						button_id++;
 					}
+				}
 
 				ImGui::PopStyleVar();
-			ImGui::EndChild();
+				ImGui::EndChild();
+			}
 
 			GUI::Get().End();
 		}
