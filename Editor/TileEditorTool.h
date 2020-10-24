@@ -9,7 +9,7 @@ namespace Editor {
 	class TileEditorTool : public BaseTool
 	{
 	public:
-		GameEngine::Texture _t;
+		GameEngine::Texture* _t;
 		std::string _path;
 		bool _hasTexture = false;
 

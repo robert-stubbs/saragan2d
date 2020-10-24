@@ -52,6 +52,9 @@ namespace GameEngine
 			void RenderLayer(int layer);
 
 			void Cleanup();
+
+			std::vector<Texture>* GetTextures() { return &_textures; }
+			TileMap* GetDefinition() { return &_definition;  }
 	};
 
 }

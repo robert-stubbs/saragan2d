@@ -3,6 +3,8 @@
 
 #include "GUI.h"
 #include "Engine.h"
+#include "World.h"
+#include "Map.h"
 
 using namespace GameEngine;
 
@@ -10,19 +12,22 @@ namespace Editor {
 
 	void TileEditorTool::LoadTexture(std::string path)
 	{
-		
-		_t = Texture();
-		_t.LoadFile(path, GameEngine::TEXTURETYPES::SARAGAN_PNG);
-		_t.GenerateAlphaBuffer();
-		_hasTexture = _t.loaded;
+		World* w = Engine::getWorld();
+		Map* m = w->GetMap();
+		TileMap* def = m->GetDefinition();
 
-		tile_width = 32.0f;
-		tile_height = 32.0f;
-		number_of_tiles_width = _t.width / (int)tile_width;
-		number_of_tiles_height = _t.height / (int)tile_height;
+		std::vector<Texture>* textures = m->GetTextures();
+		_t = &textures->at(0);
 
-		delta_w = (float)tile_width / (float)_t.width;
-		delta_h = (float)tile_height / (float)_t.height;
+		_hasTexture = _t->loaded;
+
+		tile_width = (float)def->tile_width;
+		tile_height = (float)def->tile_height;
+		number_of_tiles_width = _t->width / (int)tile_width;
+		number_of_tiles_height = _t->height / (int)tile_height;
+
+		delta_w = (float)tile_width / (float)_t->width;
+		delta_h = (float)tile_height / (float)_t->height;
 
 		selected_start_pos = start_pos;
 		end_pos.x = delta_w * (float)(1);
@@ -37,17 +42,48 @@ namespace Editor {
 	{
 		if (GUI::GetGUI().HasInstance()) {
 
+			ImGuiIO& io = ImGui::GetIO();
+			auto f = io.Fonts->Fonts[5];
+
 			GUI::Get().Begin("Tile Editor");
 
 			ImVec2 viewportPanelSize = ImGui::GetContentRegionAvail();
 
-			ImGui::BeginChild("Tile Map Settings", ImVec2(viewportPanelSize.x, 200), true, flags);
+			ImGui::PushFont(f);
 
-			ImGui::Image((ImTextureID)_t.TextureID, ImVec2(100, 100), selected_start_pos, selected_end_pos, bg_color, selected_tint_color);
+			ImGui::BeginChild("Tile Map Settings", ImVec2(viewportPanelSize.x-125, 120), true, flags);
+
+			ImGui::Text("X:");
+			ImGui::SameLine();
+			ImGui::Text(std::to_string((int)selected_x).c_str());
+
+			ImGui::Text("Y:");
+			ImGui::SameLine();
+			ImGui::Text(std::to_string((int)selected_y).c_str());
+
+			ImGui::Text("Texture Min:");
+			std::string min = "(" + std::to_string(selected_start_pos.x) + "," + std::to_string(selected_start_pos.y) + ")";
+			ImGui::Text(min.c_str());
+
+			ImGui::Text("Texture Max:");
+			std::string max = "(" + std::to_string(selected_end_pos.x) + "," + std::to_string(selected_end_pos.y) + ")";
+			ImGui::Text(max.c_str());
 
 			ImGui::EndChild();
 
-			ImGui::BeginChild("colors", ImVec2(viewportPanelSize.x, viewportPanelSize.y - 200), true, flags);
+			ImGui::PopFont();
+			
+			ImGui::SameLine();
+
+			ImGui::PushStyleVar(ImGuiStyleVar_WindowPadding, ImVec2(5.0f, 5.0f));
+				ImGui::BeginChild("Tile Map Image", ImVec2(115, 120), true, flags);
+
+				ImGui::Image((ImTextureID)_t->TextureID, ImVec2(100, 100), selected_start_pos, selected_end_pos, bg_color, selected_tint_color);
+
+				ImGui::EndChild();
+			ImGui::PopStyleVar();
+
+			ImGui::BeginChild("colors", ImVec2(viewportPanelSize.x, viewportPanelSize.y - 125), true, flags);
 				ImGui::PushStyleVar(ImGuiStyleVar_ItemSpacing, ImVec2(0.0f, 0.0f));
 
 					button_id  = 0;
@@ -71,7 +107,7 @@ namespace Editor {
 
 							ImGui::PushID(button_id);
 
-							if (ImGui::ImageButton((ImTextureID)_t.TextureID, ImVec2(tile_width, tile_height), start_pos, end_pos, 1, bg_color, *temp)) {
+							if (ImGui::ImageButton((ImTextureID)_t->TextureID, ImVec2(tile_width, tile_height), start_pos, end_pos, 1, bg_color, *temp)) {
 								selected_x = (float)w;
 								selected_y = (float)h;
 								selected_start_pos = start_pos;

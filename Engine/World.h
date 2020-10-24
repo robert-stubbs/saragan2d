@@ -34,6 +34,7 @@ namespace GameEngine
 
 
 			EntityManager* EntityMgr() { return _entity_mgr; }
+			Map* GetMap() { return current_map; }
 	};
 
 }

@@ -37,6 +37,10 @@ namespace GameEngine
         io.Fonts->AddFontFromFileTTF(fbi.c_str(), 16);
         io.FontDefault = io.Fonts->AddFontFromFileTTF(f.c_str(), 16);
 
+        io.Fonts->AddFontFromFileTTF(fbd.c_str(), 14);
+        io.Fonts->AddFontFromFileTTF(fbi.c_str(), 14);
+        io.Fonts->AddFontFromFileTTF(f.c_str(), 14);
+
         ImGuiStyle& style = ImGui::GetStyle();
         if (io.ConfigFlags & ImGuiConfigFlags_ViewportsEnable)
         {
