@@ -2,6 +2,7 @@
 #include "Map.h"
 #include "Engine.h"
 #include "standards.h"
+#include "FileManager.h"
 
 namespace GameEngine
 {
@@ -272,5 +273,27 @@ namespace GameEngine
 	void Map::Cleanup()
 	{
 		// any cleanup
+	}
+	
+	void Map::LoadMapFromFile(std::string file_path)
+	{
+		FileManager* f = Engine::FileMgr();
+
+		std::vector<std::string> file = f->ReadFile(file_path.c_str());
+
+		/*
+			// start with these
+
+			_definition.map_width = 20;
+			_definition.map_height = 20;
+			_definition.quad_width = 50;
+			_definition.quad_height = 50;
+			_definition.tile_width = 32;
+			_definition.tile_height = 32;
+			_definition.number_of_layers = 0;
+		*/
+
+
+
 	}
 }

@@ -10,6 +10,7 @@ namespace GameEngine
 			virtual ~FileManager();
 
 			static std::string textFileRead(const char* fileName);
+			static std::vector<std::string> ReadFile(const char* fileName);
 	};
 }
 

@@ -63,6 +63,8 @@ namespace GameEngine {
 
 			ctx.InitContext();
 
+			_file_manager = FileManager();
+
 			shader_mgr = ShaderManager(_engine);
 
 			// Load the font engine

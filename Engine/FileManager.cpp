@@ -31,4 +31,19 @@ namespace GameEngine
 		return fileString; // Return our string
 	}
 
+	std::vector<std::string> FileManager::ReadFile(const char* fileName)
+	{
+		std::vector<std::string> result = std::vector<std::string>();
+		std::string line = std::string(); // A string for holding the current line
+
+		std::ifstream file(fileName); // Open an input stream with the selected file
+		if (file.is_open()) { // If the file opened successfully
+			while (!file.eof()) { // While we are not at the end of the file
+				getline(file, line); // Get the current line
+				result.push_back(line); // Append the line to our file string
+			}
+			file.close(); // Close the file
+		}
+		return result;
+	}
 }

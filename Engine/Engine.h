@@ -16,6 +16,7 @@
 #include "Font.h"
 #include "Input.h"
 #include "cErrorLogger.h"
+#include "FileManager.h"
 
 #include "World.h"
 
@@ -45,6 +46,8 @@ namespace GameEngine {
 			GUI* _gui;
 			ShaderManager shader_mgr;
 			StateMachine GameFSM;
+
+			FileManager _file_manager;
 
 			cErrorLogger* log = new cErrorLogger();
 
@@ -148,6 +151,8 @@ namespace GameEngine {
 			static void SetCam(Camera2D* new_cam) { 
 				get().current_cam = new_cam; 
 			}
+
+			static FileManager* FileMgr() { return &get()._file_manager; }
 
 			static cErrorLogger* Log() { return get().log; }
 
