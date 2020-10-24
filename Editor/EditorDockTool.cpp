@@ -77,11 +77,14 @@ namespace Editor {
 
 				if (!_tile_editor_tool._hasTexture) {
 					_tile_editor_tool.LoadTexture(Engine::get().asset_dir + "Textures/map_atlas.png");
+					_tile_editor_tool._hasTexture = true;
 				}
-				ImGui::SetNextWindowDockID(left_dock_id, ImGuiCond_Once);
-				_tile_editor_tool.RenderUI();
+				else {
+					ImGui::SetNextWindowDockID(left_dock_id, ImGuiCond_Once);
+					_tile_editor_tool.RenderUI();
+				}
 
-				ImGui::SetNextWindowDockID(main_dock_id, bottom_dock_id);
+				ImGui::SetNextWindowDockID(bottom_dock_id, ImGuiCond_Once);
 				_debug_window.RenderUI();
 
 				ImGui::SetNextWindowDockID(main_dock_id, ImGuiCond_Once);

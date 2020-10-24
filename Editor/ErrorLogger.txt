@@ -3640,3 +3640,979 @@ FPS: 21 Updates: 60
 FPS: 22 Updates: 59
 FPS: 23 Updates: 61
 FPS: 21 Updates: 59
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Post Load
+Starting Render Loop
+INVALID_OPERATION
+FPS: 20 Updates: 59
+FPS: 23 Updates: 59
+FPS: 24 Updates: 60
+FPS: 25 Updates: 61
+FPS: 24 Updates: 60
+FPS: 23 Updates: 59
+FPS: 24 Updates: 60
+FPS: 24 Updates: 61
+FPS: 24 Updates: 60
+FPS: 24 Updates: 60
+FPS: 22 Updates: 60
+FPS: 23 Updates: 60
+FPS: 23 Updates: 59
+FPS: 24 Updates: 60
+FPS: 24 Updates: 61
+FPS: 23 Updates: 58
+FPS: 23 Updates: 61
+FPS: 24 Updates: 59
+FPS: 23 Updates: 62
+FPS: 19 Updates: 58
+FPS: 23 Updates: 62
+FPS: 22 Updates: 60
+FPS: 18 Updates: 58
+FPS: 17 Updates: 60
+FPS: 18 Updates: 62
+FPS: 18 Updates: 60
+FPS: 18 Updates: 59
+FPS: 19 Updates: 61
+FPS: 17 Updates: 59
+FPS: 18 Updates: 61
+FPS: 17 Updates: 58
+FPS: 19 Updates: 61
+FPS: 19 Updates: 60
+FPS: 19 Updates: 60
+FPS: 19 Updates: 60
+FPS: 19 Updates: 60
+FPS: 19 Updates: 58
+FPS: 19 Updates: 60
+FPS: 20 Updates: 63
+FPS: 19 Updates: 58
+FPS: 20 Updates: 61
+FPS: 19 Updates: 59
+FPS: 19 Updates: 60
+FPS: 19 Updates: 61
+FPS: 19 Updates: 61
+FPS: 18 Updates: 59
+FPS: 19 Updates: 61
+FPS: 18 Updates: 58
+FPS: 20 Updates: 62
+FPS: 18 Updates: 59
+FPS: 18 Updates: 59
+FPS: 18 Updates: 60
+FPS: 19 Updates: 62
+FPS: 18 Updates: 58
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Post Load
+Starting Render Loop
+INVALID_OPERATION
+FPS: 20 Updates: 58
+FPS: 19 Updates: 49
+FPS: 23 Updates: 72
+FPS: 24 Updates: 60
+FPS: 24 Updates: 60
+FPS: 23 Updates: 60
+FPS: 23 Updates: 59
+FPS: 23 Updates: 59
+FPS: 24 Updates: 62
+FPS: 23 Updates: 59
+FPS: 23 Updates: 61
+FPS: 22 Updates: 58
+FPS: 23 Updates: 62
+FPS: 22 Updates: 60
+FPS: 23 Updates: 59
+FPS: 24 Updates: 61
+FPS: 23 Updates: 58
+FPS: 22 Updates: 60
+FPS: 23 Updates: 60
+FPS: 23 Updates: 62
+FPS: 22 Updates: 59
+FPS: 23 Updates: 60
+FPS: 18 Updates: 58
+FPS: 18 Updates: 61
+FPS: 18 Updates: 61
+FPS: 18 Updates: 61
+FPS: 17 Updates: 58
+FPS: 18 Updates: 60
+FPS: 18 Updates: 62
+FPS: 16 Updates: 60
+FPS: 17 Updates: 60
+FPS: 17 Updates: 59
+FPS: 18 Updates: 59
+FPS: 18 Updates: 61
+FPS: 18 Updates: 59
+FPS: 18 Updates: 61
+FPS: 18 Updates: 59
+FPS: 18 Updates: 61
+FPS: 18 Updates: 60
+FPS: 18 Updates: 60
+FPS: 18 Updates: 60
+FPS: 19 Updates: 61
+FPS: 19 Updates: 59
+FPS: 19 Updates: 60
+FPS: 18 Updates: 58
+FPS: 18 Updates: 62
+FPS: 18 Updates: 60
+FPS: 18 Updates: 58
+FPS: 19 Updates: 63
+FPS: 19 Updates: 60
+FPS: 18 Updates: 58
+FPS: 19 Updates: 60
+FPS: 18 Updates: 61
+FPS: 18 Updates: 60
+FPS: 19 Updates: 60
+FPS: 18 Updates: 59
+FPS: 20 Updates: 61
+FPS: 19 Updates: 61
+FPS: 19 Updates: 59
+FPS: 19 Updates: 59
+FPS: 19 Updates: 61
+FPS: 19 Updates: 60
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Post Load
+Starting Render Loop
+INVALID_OPERATION
+FPS: 21 Updates: 59
+FPS: 24 Updates: 59
+FPS: 23 Updates: 60
+FPS: 19 Updates: 48
+FPS: 18 Updates: 72
+FPS: 22 Updates: 59
+FPS: 24 Updates: 62
+FPS: 23 Updates: 59
+FPS: 22 Updates: 59
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Post Load
+Starting Render Loop
+INVALID_OPERATION
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Post Load
+Starting Render Loop
+INVALID_OPERATION
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Post Load
+Starting Render Loop
+INVALID_OPERATION
+FPS: 58 Updates: 59
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 24 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 57 Updates: 57
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Post Load
+Starting Render Loop
+INVALID_OPERATION
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Post Load
+Starting Render Loop
+INVALID_OPERATION
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Post Load
+Starting Render Loop
+INVALID_OPERATION
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Post Load
+Starting Render Loop
+INVALID_OPERATION
+FPS: 1 Updates: 0
+FPS: 1 Updates: 193
+FPS: 1 Updates: 58
+FPS: 1 Updates: 2
+FPS: 48 Updates: 46
+FPS: 60 Updates: 60
+FPS: 36 Updates: 36
+FPS: 56 Updates: 84
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 57 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 58 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Post Load
+Starting Render Loop
+INVALID_OPERATION
+FPS: 56 Updates: 59
+FPS: 42 Updates: 42
+FPS: 20 Updates: 78
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Post Load
+Starting Render Loop
+INVALID_OPERATION
+FPS: 55 Updates: 59
+FPS: 27 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 52 Updates: 52
+FPS: 18 Updates: 68
+FPS: 56 Updates: 60
+FPS: 61 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 58 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 59 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 59 Updates: 60
+FPS: 60 Updates: 60
+FPS: 59 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 59 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 59 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 59 Updates: 60
+FPS: 59 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 59 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 59 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 59 Updates: 59
+FPS: 60 Updates: 61
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 59 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Post Load
+Starting Render Loop
+INVALID_OPERATION
+FPS: 53 Updates: 59
+FPS: 41 Updates: 41
+FPS: 44 Updates: 79
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 58 Updates: 60
+FPS: 60 Updates: 60
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Post Load
+Starting Render Loop
+INVALID_OPERATION
+FPS: 55 Updates: 59
+FPS: 57 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 59 Updates: 59
+FPS: 61 Updates: 61
+FPS: 57 Updates: 57
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Post Load
+Starting Render Loop
+INVALID_OPERATION
+FPS: 55 Updates: 59
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Post Load
+Starting Render Loop
+INVALID_OPERATION
+FPS: 24 Updates: 29
+FPS: 62 Updates: 90
+FPS: 60 Updates: 60
+Button Clicked
+Button Clicked
+FPS: 60 Updates: 60
+Button Clicked
+Button Clicked
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Post Load
+Starting Render Loop
+INVALID_OPERATION
+FPS: 54 Updates: 59
+FPS: 60 Updates: 60
+FPS: 45 Updates: 45
+FPS: 57 Updates: 75
+Button Clicked
+FPS: 60 Updates: 59
+FPS: 60 Updates: 61
+Button Clicked
+FPS: 60 Updates: 60
+Button Clicked
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+Button Clicked
+FPS: 60 Updates: 60
+Button Clicked
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+Button Clicked
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+Button Clicked
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+Button Clicked
+FPS: 60 Updates: 60
+Button Clicked
+FPS: 60 Updates: 60
+Button Clicked
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 56 Updates: 59
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Post Load
+Starting Render Loop
+INVALID_OPERATION
+FPS: 52 Updates: 59
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Post Load
+Starting Render Loop
+INVALID_OPERATION
+FPS: 55 Updates: 59
+FPS: 57 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Post Load
+Starting Render Loop
+INVALID_OPERATION
+FPS: 55 Updates: 59
+FPS: 60 Updates: 59
+FPS: 60 Updates: 61
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Post Load
+Starting Render Loop
+INVALID_OPERATION
+FPS: 55 Updates: 59
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Post Load
+Starting Render Loop
+INVALID_OPERATION
+FPS: 54 Updates: 59
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Post Load
+Starting Render Loop
+INVALID_OPERATION
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Post Load
+Starting Render Loop
+INVALID_OPERATION
+FPS: 2 Updates: 4
+FPS: 1 Updates: 371
+FPS: 1 Updates: 6
+FPS: 1 Updates: 0
+FPS: 1 Updates: 1
+FPS: 1 Updates: 1
+FPS: 37 Updates: 36
+FPS: 58 Updates: 60
+FPS: 61 Updates: 60
+FPS: 59 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 59
+FPS: 60 Updates: 61
+FPS: 60 Updates: 60
+FPS: 60 Updates: 59
+FPS: 61 Updates: 61
+FPS: 59 Updates: 60
+FPS: 61 Updates: 60
+FPS: 59 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 59
+FPS: 60 Updates: 61
+FPS: 60 Updates: 60
+FPS: 60 Updates: 59
+FPS: 61 Updates: 61
+FPS: 59 Updates: 60
+FPS: 60 Updates: 60
+FPS: 58 Updates: 60
+FPS: 60 Updates: 60
+FPS: 61 Updates: 60
+FPS: 60 Updates: 60
+FPS: 59 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 56 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 33 Updates: 33
+FPS: 38 Updates: 69
+FPS: 19 Updates: 77
+FPS: 60 Updates: 61
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Post Load
+Starting Render Loop
+INVALID_OPERATION
+FPS: 53 Updates: 59
+FPS: 23 Updates: 60
+FPS: 59 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 58 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Post Load
+Starting Render Loop
+INVALID_OPERATION
+FPS: 54 Updates: 58
+FPS: 59 Updates: 61
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 58 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60

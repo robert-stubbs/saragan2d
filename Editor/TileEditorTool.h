@@ -11,7 +11,29 @@ namespace Editor {
 	public:
 		GameEngine::Texture _t;
 		std::string _path;
-		bool _hasTexture;
+		bool _hasTexture = false;
+
+		ImGuiTreeNodeFlags flags;
+
+		int button_id = 0;
+		float tile_width;
+		float tile_height;
+		int number_of_tiles_width;
+		int number_of_tiles_height;
+
+		ImVec2 start_pos = ImVec2(0.0, 0.0);
+		ImVec2 end_pos = ImVec2(1.0, 1.0);
+
+		ImVec4 bg_color = ImVec4(255.0f, 255.0f, 255.0f, 255.0f);
+		ImVec4 selected_tint_color = ImVec4(255.0f, 0.0f, 0.0f, 150.0f);
+
+		float selected_x = 0;
+		float selected_y = 0;
+		ImVec2 selected_start_pos;
+		ImVec2 selected_end_pos;
+
+		float delta_w;
+		float delta_h;
 
 		TileEditorTool() {};
 		~TileEditorTool() {};
