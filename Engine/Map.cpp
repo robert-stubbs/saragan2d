@@ -281,6 +281,16 @@ namespace GameEngine
 
 		std::vector<std::string> file = f->ReadFile(file_path.c_str());
 
+		if (file.size() > 0) {
+			if (file.at(0) == "#version 1.0") {
+				LoadVersionOne(file);
+			}
+
+		}
+	}
+
+	void Map::LoadVersionOne(std::vector<std::string>& data)
+	{
 		/*
 			// start with these
 
@@ -292,8 +302,6 @@ namespace GameEngine
 			_definition.tile_height = 32;
 			_definition.number_of_layers = 0;
 		*/
-
-
 
 	}
 }

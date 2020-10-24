@@ -55,6 +55,8 @@ namespace GameEngine
 
 			virtual void LoadMapFromFile(std::string file);
 
+			virtual void LoadVersionOne(std::vector<std::string>& data);
+
 			std::vector<Texture>* GetTextures() { return &_textures; }
 			TileMap* GetDefinition() { return &_definition;  }
 	};
