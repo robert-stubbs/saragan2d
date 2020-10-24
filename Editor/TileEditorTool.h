@@ -45,7 +45,7 @@ namespace Editor {
 		TileEditorTool() {};
 		~TileEditorTool() {};
 
-		virtual void LoadTexture(std::string path);
+		virtual void LoadTexture();
 		virtual void RenderUI() override;
 	};
 }

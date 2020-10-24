@@ -76,8 +76,7 @@ namespace Editor {
 				_entity_manager_panel.RenderUI();
 
 				if (!_tile_editor_tool._hasTexture) {
-					_tile_editor_tool.LoadTexture(Engine::get().asset_dir + "Textures/map_atlas.png");
-					_tile_editor_tool._hasTexture = true;
+					_tile_editor_tool.LoadTexture();
 				}
 				else {
 					ImGui::SetNextWindowDockID(left_dock_id, ImGuiCond_Once);

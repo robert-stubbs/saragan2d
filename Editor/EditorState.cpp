@@ -27,13 +27,14 @@ void EditorState::Init()
 	_current_tool = new Editor::TestTool();
 
 	World* w = Engine::getWorld();
-	w->LoadMap("Test Map", "");
 
-	w->SetMap("Test Map");
+	//w->LoadMap("Test Map", "");
 
-	NPC = new GameEngine::ANPC();
+	//w->SetMap("Test Map");
+
+	/*NPC = new GameEngine::ANPC();
 	NPC->m_handle = "NPC_1";
-	Engine::EntityMgr()->RegisterEntity(NPC, true);
+	Engine::EntityMgr()->RegisterEntity(NPC, true);*/
 }
 
 void EditorState::UpdateOrth(const float& dt)

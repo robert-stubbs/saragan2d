@@ -86,8 +86,12 @@ namespace Editor {
 				if (ImGui::BeginPopupModal("Open Map"))
 				{
 					ImGui::Text("Lorem ipsum");
+					World* w = Engine::getWorld();
+					w->LoadMap("Test Map", "");
 
 					if (ImGui::Button("Close")) {
+
+						w->SetMap("Test Map");
 						OpenMapModal = false;
 						ImGui::CloseCurrentPopup();
 					}

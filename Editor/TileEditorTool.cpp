@@ -7,32 +7,37 @@ using namespace GameEngine;
 
 namespace Editor {
 
-	void TileEditorTool::LoadTexture(std::string path)
+	void TileEditorTool::LoadTexture()
 	{
 		World* w = Engine::getWorld();
 		Map* m = w->GetMap();
-		def = m->GetDefinition();
 
-		std::vector<Texture>* textures = m->GetTextures();
-		_t = &textures->at(0);
+		if (m != nullptr) {
+			def = m->GetDefinition();
 
-		_hasTexture = _t->loaded;
+			std::vector<Texture>* textures = m->GetTextures();
 
-		tile_width = (float)def->tile_width;
-		tile_height = (float)def->tile_height;
-		number_of_tiles_width = _t->width / (int)tile_width;
-		number_of_tiles_height = _t->height / (int)tile_height;
+			if (textures->size()) {
+				_t = &textures->at(0);
 
-		delta_w = (float)tile_width / (float)_t->width;
-		delta_h = (float)tile_height / (float)_t->height;
+				_hasTexture = (_t->TextureID > 0);
 
-		selected_start_pos = start_pos;
-		end_pos.x = delta_w * (float)(1);
-		end_pos.y = delta_h * (float)(1);
-		selected_end_pos.x = delta_w * (float)(1);
-		selected_end_pos.y = delta_h * (float)(1);
-		flags = ImGuiWindowFlags_HorizontalScrollbar;
+				tile_width = (float)def->tile_width;
+				tile_height = (float)def->tile_height;
+				number_of_tiles_width = _t->width / (int)tile_width;
+				number_of_tiles_height = _t->height / (int)tile_height;
 
+				delta_w = (float)tile_width / (float)_t->width;
+				delta_h = (float)tile_height / (float)_t->height;
+
+				selected_start_pos = start_pos;
+				end_pos.x = delta_w * (float)(1);
+				end_pos.y = delta_h * (float)(1);
+				selected_end_pos.x = delta_w * (float)(1);
+				selected_end_pos.y = delta_h * (float)(1);
+				flags = ImGuiWindowFlags_HorizontalScrollbar;
+			}
+		}
 	}
 
 	void TileEditorTool::RenderUI()
