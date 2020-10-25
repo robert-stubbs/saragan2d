@@ -17,6 +17,12 @@ namespace GameEngine
 			std::string _path;
 			TileMap _definition;
 
+			bool render_grid;
+			bool grid_loaded;
+			std::vector<vert2D> _grid_verts;
+			unsigned int GridVAIO;
+			unsigned int GridVBO;
+
 			std::vector<Texture> _textures;
 
 			std::vector<std::vector<std::vector<TextureQuad>>> _quads;
@@ -39,6 +45,8 @@ namespace GameEngine
 			inline bool isLoaded() { return _loaded; }
 			void unloadMap();
 
+			void SetRenderGrid(bool render = false) { render_grid = render; }
+
 			void Init(std::string name, std::string map_path);
 			void ThreadLoad();
 			bool LoadMapDefinition();
@@ -51,10 +59,14 @@ namespace GameEngine
 
 			void RenderLayer(int layer);
 
+			void GenerateGrid();
+			void RenderGrid();
+
 			void Cleanup();
 
 			virtual void LoadMapFromFile(std::string file_path, std::string name);
 
+			virtual std::vector<std::string> split(std::string& str, std::string& delim);
 
 			std::vector<Texture>* GetTextures() { return &_textures; }
 			TileMap* GetDefinition() { return &_definition;  }

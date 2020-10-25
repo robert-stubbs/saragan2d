@@ -369,21 +369,31 @@ typedef struct
 
 	typedef struct
 	{
+		int id; // id of the world tile
+		int tile_id; // id of the spritesheet tile
 		int tile_index_x;
 		int tile_index_y;
-		int texture_index;
 
 	} SingleTile;
 
 	typedef struct
 	{
 		int layer_index; // should match position in layers array
+		std::string name;
+		int width;
+		int height;
+		int sheet_id; // id of the atlas to use
 		//Includes indices showing what type of tile should be placed on each position in the grid.
 		std::vector<std::vector<GameEngine::SingleTile>> Tiles;
 	} TileLayer;
 
 	typedef struct
 	{
+		int id;
+		std::string name;
+		std::string type;
+		int tile_width;
+		int tile_height;
 		int image_width;
 		int image_height;
 		std::string image_path;
@@ -403,7 +413,7 @@ typedef struct
 		int map_width; // The dimensions of the map, either in tiles across / tiles down, or pixels across / pixels down.
 		int map_height;
 		int number_of_layers;
-
+		float version;
 
 	} TileMap;
 

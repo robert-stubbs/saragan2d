@@ -16,15 +16,16 @@ namespace GameEngine
 
 	}
 
-	void World::LoadMap(std::string name, std::string map_path)
+	void World::LoadMap(std::string name, std::string map_path, bool render_grid)
 	{
 
 		//std::map<std::string, Map> _maps;
 		if (_maps.find(name) == _maps.end())
 		{
 			_maps[name] = new Map();
+			_maps[name]->SetRenderGrid(true);
+			_maps[name]->Init(name, map_path);
 			_maps[name]->LoadMapFromFile(map_path, name);
-			//_maps[name]->Init("Test Map", "");
 		}
 	}
 

@@ -11,11 +11,13 @@ namespace GameEngine
 	Map::Map()
 	{
 		_batch = BatchRenderer("DEFAULT2D");
-		distance_load = 10;
+		distance_load = 50;
 		min_x = 0;
 		min_y = 0;
 		max_x = 0;
 		max_y = 0;
+		render_grid = false;
+		grid_loaded = false;
 	}
 
 	Map::~Map()
@@ -50,121 +52,70 @@ namespace GameEngine
 
 	bool Map::LoadMapDefinition()
 	{
-		// load the quads/definition for the map
-		// as we dont have a resource manager we are loading the definition first by hand
-		// then we will populate the class
-
-		_definition.map_width = 20;
-		_definition.map_height = 20;
-		_definition.quad_width = 50;
-		_definition.quad_height = 50;
-		_definition.tile_width = 32;
-		_definition.tile_height = 32;
-		_definition.number_of_layers = 0;
-
-		std::string path = Engine::get().asset_dir + "Textures/map_atlas.png";
-		_definition._images.push_back({ 736, 928, path });
-
-		TileLayer BGLayer = TileLayer();
-		BGLayer.Tiles = std::vector<std::vector<SingleTile>>();
-		for (int x = 0; x < _definition.map_width; x++)
-		{
-			BGLayer.Tiles.push_back(std::vector<SingleTile>());
-			for (int y = 0; y < _definition.map_height; y++)
-			{
-				//23 x 29 - total for sheet
-				BGLayer.Tiles[x].push_back({ 1, 2, 0 });
-
-			}
-		}
-		_definition._layers.push_back(BGLayer);
-		_definition.number_of_layers++;
-
-
-		TileLayer main = TileLayer();
-		main.Tiles = std::vector<std::vector<SingleTile>>();
-		for (int x = 0; x < _definition.map_width; x++)
-		{
-			main.Tiles.push_back(std::vector<SingleTile>());
-			for (int y = 0; y < _definition.map_height; y++)
-			{
-				//23 x 29 - total for sheet
-				main.Tiles[x].push_back({ 1, 2, -1 });
-			}
-		}
-
-		main.Tiles[GetRandomNumber(0, _definition.map_width - 1)][GetRandomNumber(0, _definition.map_height - 1)] = { 1, 7, 0 };
-		main.Tiles[GetRandomNumber(0, _definition.map_width - 1)][GetRandomNumber(0, _definition.map_height - 1)] = { 1, 7, 0 };
-		main.Tiles[GetRandomNumber(0, _definition.map_width - 1)][GetRandomNumber(0, _definition.map_height - 1)] = { 1, 7, 0 };
-		main.Tiles[GetRandomNumber(0, _definition.map_width - 1)][GetRandomNumber(0, _definition.map_height - 1)] = { 1, 7, 0 };
-		main.Tiles[GetRandomNumber(0, _definition.map_width - 1)][GetRandomNumber(0, _definition.map_height - 1)] = { 1, 7, 0 };
-		main.Tiles[GetRandomNumber(0, _definition.map_width - 1)][GetRandomNumber(0, _definition.map_height - 1)] = { 1, 7, 0 };
-		main.Tiles[GetRandomNumber(0, _definition.map_width - 1)][GetRandomNumber(0, _definition.map_height - 1)] = { 1, 7, 0 };
-
-		_definition._layers.push_back(main);
-		_definition.number_of_layers++;
-
-
-		TileLayer FGLayer = TileLayer();
-		FGLayer.Tiles = std::vector<std::vector<SingleTile>>();
-		for (int x = 0; x < _definition.map_width; x++)
-		{
-			FGLayer.Tiles.push_back(std::vector<SingleTile>());
-			for (int y = 0; y < _definition.map_height; y++)
-			{				
-				//23 x 29 - total for sheet
-				FGLayer.Tiles[x].push_back({ 1, 2, -1 });
-			}
-		}
-
-		_definition._layers.push_back(FGLayer);
-		_definition.number_of_layers++;
-
+		std::string asset_dir = Engine::get().asset_dir;
 
 		for (TileAtlas atlas : _definition._images) {
 			_textures.push_back(Texture());
-			_textures.back().LoadFile(atlas.image_path, TEXTURETYPES::SARAGAN_PNG);
-		}
-			
+			_textures.back().LoadFile(asset_dir + atlas.image_path + atlas.name, TEXTURETYPES::SARAGAN_PNG);		
+		}	
+		
 		_quads = std::vector <std::vector<std::vector<TextureQuad>>>();
 
 		int x_pos = 0;
 		int y_pos = 0;
+
+		glm::vec4 color = glm::vec4(0.0f, 0.0f, 0.0f, 0.0f);
+		glm::vec2 min_text = { -99.0f,-99.0f };
+		glm::vec2 max_text = { -99.0f,-99.0f };
+
 		for (int i = 0; i < _definition.number_of_layers; i++)
 		{
 			_quads.push_back(std::vector<std::vector<TextureQuad>>());
+			int texture_index = _definition._layers[i].sheet_id;
+			float image_width = (float)_definition._images[texture_index].image_width;
+			float image_height = (float)_definition._images[texture_index].image_height;
+			float image_tile_width = (float)_definition._images[texture_index].tile_width;
+			float image_tile_height = (float)_definition._images[texture_index].tile_height;
+			int number_of_cols = (int)((float)image_width / float(image_tile_width));
+			int number_of_rows = (int)((float)image_height / float(image_tile_height));
 
-			for (int x = 0; x < _definition.map_width; x++)
+			for (int y = 0; y < _definition.map_height; y++)
 			{
 				_quads[i].push_back(std::vector<TextureQuad>());
 
-				for (int y = 0; y < _definition.map_height; y++)
+				std::vector<SingleTile>& row = _definition._layers[i].Tiles[y];
+
+				for (int x = 0; x < _definition.map_width; x++)
 				{
-					SingleTile& tile = _definition._layers[i].Tiles[x][y];
-					int texture_index = tile.texture_index;
+					SingleTile& tile = row[x];
 
-					glm::vec4 color = glm::vec4(0.0f, 0.0f, 0.0f, 0.0f);
-					glm::vec2 min_text = { -99.0f,-99.0f };
-					glm::vec2 max_text = { -99.0f,-99.0f };
+					color = glm::vec4(0.5f, 0.5f, 0.5f, 0.5f);
+					min_text = { -99.0f,-99.0f };
+					max_text = { -99.0f,-99.0f };
 
-					if (texture_index > -1) {
+					if (texture_index > -1 && tile.tile_id > 0) {
+
+						tile.tile_index_x = (tile.tile_id % number_of_cols);
+						tile.tile_index_y = (tile.tile_id / number_of_rows);
 
 						color = glm::vec4(1.0f, 1.0f, 1.0f, 1.0f);
-						min_text.x = ((float)_definition.tile_width / (float)_definition._images[texture_index].image_width) * (float)tile.tile_index_x;
-						min_text.y = ((float)_definition.tile_height / (float)_definition._images[texture_index].image_height) * (float)tile.tile_index_y;
+						min_text.x = (image_tile_width / image_width) * (float)tile.tile_index_x;
+						min_text.y = (image_tile_height / image_height) * (float)tile.tile_index_y;
 
-						max_text.x = ((float)_definition.tile_width / (float)_definition._images[texture_index].image_width) * (float)(tile.tile_index_x + 1);
-						max_text.y = ((float)_definition.tile_height / (float)_definition._images[texture_index].image_height) * (float)(tile.tile_index_y + 1);
+						max_text.x = (image_tile_width / image_width) * (float)(tile.tile_index_x + 1);
+						max_text.y = (image_tile_height / image_height) * (float)(tile.tile_index_y + 1);
 					}
 
-					_quads[i][x].push_back(TextureQuad());
-					_quads[i][x][y].Init((float)x_pos, (float)y_pos, (float)_definition.quad_width, (float)_definition.quad_height, (float)i, min_text, max_text, color);
+					_quads[i][y].push_back(TextureQuad());
+					_quads[i][y][x].Init((float)x_pos, (float)y_pos, (float)_definition.quad_width, (float)_definition.quad_height, (float)i, min_text, max_text, color);
 
-					y_pos += _definition.quad_height;
+					x_pos += _definition.quad_width;
+
 				}
-				x_pos += _definition.quad_width;
-				y_pos = 0;
+				y_pos += _definition.quad_height;
+				x_pos = 0;
 			}
+
 			x_pos = 0;
 			y_pos = 0;
 		}
@@ -223,17 +174,19 @@ namespace GameEngine
 
 	void Map::RenderBackground()
 	{
-		RenderLayer(0);
+		//RenderLayer(0);
 	}
 
 	void Map::Render()
 	{
-		RenderLayer(1);
+		//RenderLayer(1);
 	}
 
 	void Map::RenderForeground()
 	{
-		RenderLayer(2);
+		//RenderLayer(2);
+		GenerateGrid();
+		RenderGrid();
 	}
 
 	void Map::RenderLayer(int layer)
@@ -261,14 +214,85 @@ namespace GameEngine
 
 		if (layer < _definition.number_of_layers) {
 			_batch.BeginBatch();
-			for (int x = min_x; x < max_x; x++)
+			for (int y = min_y; y < max_y; y++)
 			{
-				for (int y = min_y; y < max_y; y++)
+				for (int x = min_x; x < max_x; x++)
 				{
-					_batch.AddQuad(_quads[layer][x][y]);
+					_batch.AddQuad(_quads[layer][y][x]);
 				}
 			}
 			_batch.EndBatch();
+		}
+	}
+
+	void Map::GenerateGrid()
+	{
+		if (!_loaded) {
+			return;
+		}
+
+		if (render_grid && !grid_loaded) {
+
+			_grid_verts = std::vector<vert2D>();
+
+			float end_row = (float)(_definition.map_height * _definition.quad_height);
+			float end_column = (float)(_definition.map_width * _definition.quad_width);
+			glm::vec4 col = glm::vec4(1.0f, 1.0f, 1.0f, 1.0f);
+
+			for (int y = 0; y < (int)end_row; y += _definition.quad_height)
+			{
+				vert2D start = { {0,(float)y,1.0f,1.0f},{-99.9f, -99.9f}, {col.r, col.g, col.b, col.a } };
+				vert2D end = { {end_column,(float)y,1.0f,1.0f},{-99.9f, -99.9f}, {col.r, col.g, col.b, col.a } };
+
+				_grid_verts.push_back(start);
+				_grid_verts.push_back(end);
+			}
+
+			for (int x = 0; x < (int)end_column; x += _definition.quad_width)
+			{
+				vert2D start = { {(float)x,0,1.0f,1.0f},{-99.9f, -99.9f}, {col.r, col.g, col.b, col.a } };
+				vert2D end = { {(float)x,end_row,1.0f,1.0f},{-99.9f, -99.9f}, {col.r, col.g, col.b, col.a } };
+
+				_grid_verts.push_back(start);
+				_grid_verts.push_back(end);
+			}
+
+
+			Shader& s = Engine::getShader()["DEFAULT2D"];
+
+			Engine::getRenderer().GenerateVertexArrayBuffer(GridVAIO);
+
+			Engine::getRenderer().GenerateBuffer(GridVBO, _grid_verts);
+
+			s.BindShaderStructure();
+
+			Engine::getRenderer().UnbindBuffer();
+			Engine::getRenderer().UnbindVertexBuffer();
+		
+			grid_loaded = true;
+		}
+	}
+
+	void Map::RenderGrid()
+	{
+		if (render_grid && grid_loaded) {
+
+			Engine::getShader().BindNewShader("DEFAULT2D");
+
+			Engine::getRenderer().UniformInt(Engine::getCurrentShader()["is_Text"], 0);
+			Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["projectionMatrix"], Engine::get().current_cam->ProjectionMatrix, 1, false);
+			Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["viewMatrix"], Engine::get().current_cam->ViewMatrix, 1, false);
+			Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["modelMatrix"], glm::mat4(1.0f), 1, false);
+
+			Engine::getRenderer().EnableBlend(true, BLEND_TYPE::SRC_ALPHA, BLEND_TYPE::ONE_MINUS_SRC_ALPHA);
+
+			Engine::getRenderer().BindVertexBuffer(GridVBO);
+
+			Engine::getRenderer().DrawArrays(DRAW_TYPE::LINES, (GLsizei)_grid_verts.size());
+
+			Engine::getRenderer().UnbindVertexBuffer();
+
+			Engine::getRenderer().EnableBlend(false);
 		}
 	}
 
@@ -279,19 +303,12 @@ namespace GameEngine
 	
 	void Map::LoadMapFromFile(std::string file_path, std::string name)
 	{
-		/*
-			// start with these
-
-			_definition.map_width = 20;
-			_definition.map_height = 20;
-			_definition.quad_width = 50;
-			_definition.quad_height = 50;
-			_definition.tile_width = 32;
-			_definition.tile_height = 32;
-			_definition.number_of_layers = 0;
-		*/
+		_loaded = false;
+		_name = name;
 
 		std::string map_path = Engine::get().asset_dir + file_path + name + ".s_map";
+
+		_path = map_path;
 
 		tinyxml2::XMLDocument doc;
 		doc.LoadFile(map_path.c_str());
@@ -300,21 +317,103 @@ namespace GameEngine
 
 		tinyxml2::XMLElement* map = doc.FirstChildElement("map");
 
-		std::string version = map->Attribute("version");
-		std::string width = map->Attribute("width");
-		std::string height = map->Attribute("height");
-		std::string tile_width = map->Attribute("tilewidth");
-		std::string tile_height = map->Attribute("tileheight");
+		_definition = TileMap();
+		_definition._images = std::vector<TileAtlas>();
+
+		// General settings
+		_definition.version = (float)atof(map->Attribute("version"));
+		_definition.map_width = atoi(map->Attribute("width"));
+		_definition.map_height = atoi(map->Attribute("height"));
+		_definition.tile_width = atoi(map->Attribute("tilewidth"));
+		_definition.tile_height = atoi(map->Attribute("tileheight"));
+		_definition.quad_width = atoi(map->Attribute("quad_width"));
+		_definition.quad_height = atoi(map->Attribute("quad_height"));
+		_definition.number_of_layers = 0;
+
+		for (tinyxml2::XMLElement* e = map->FirstChildElement("sheets"); e != NULL; e = e->NextSiblingElement("sheets"))
+		{
+			tinyxml2::XMLElement* sheet = e->FirstChildElement("image");
+			if (sheet != nullptr)
+			{
+				TileAtlas t = TileAtlas();
+				t.id = atoi(sheet->Attribute("id"));
+				t.name = sheet->Attribute("name");
+				t.image_path = sheet->Attribute("path");
+				t.type = sheet->Attribute("type");
+				t.tile_width = atoi(sheet->Attribute("tilewidth"));
+				t.tile_height = atoi(sheet->Attribute("tileheight"));
+				t.image_width = atoi(sheet->Attribute("width"));
+				t.image_height = atoi(sheet->Attribute("height"));
+				_definition._images.push_back(t);
+			}
+		}
 
 		for (tinyxml2::XMLElement* e = map->FirstChildElement("layer"); e != NULL; e = e->NextSiblingElement("layer"))
 		{
-			std::string layer_id = e->Attribute("id");
-			std::string layer_name = e->Attribute("name");
-			std::string layer_width = e->Attribute("width");
-			std::string layer_height = e->Attribute("height");
+			TileLayer l = TileLayer();
+			l.layer_index = atoi(e->Attribute("id"));
+			l.name = e->Attribute("name");
+			l.width = atoi(e->Attribute("width"));
+			l.height = atoi(e->Attribute("height"));
+			l.sheet_id = atoi(e->Attribute("sheet_id"));
 
+			int index = 0;
+			l.Tiles = std::vector<std::vector<GameEngine::SingleTile>>();
 
-		}
+			// grab all the layer data
+			std::string layer_data = e->FirstChildElement("data")->GetText();
+
+			std::vector<std::string> vstrings = split(layer_data, std::string("\n"));
+
+			for (std::string& s : vstrings)
+			{
+				std::vector<GameEngine::SingleTile> row = std::vector<GameEngine::SingleTile>();
+
+				std::vector<std::string> row_strings = split(s, std::string(","));
+					
+				for (std::string& t : row_strings)
+				{
+					SingleTile tile = SingleTile();
+					tile.id = index;
+					tile.tile_id = atoi(t.c_str());
+
+					row.push_back(tile);
+					index++;
+				}
+
+				if (row.size() == l.width) {
+					l.Tiles.push_back(row);
+				}
+			}
+
+			_definition._layers.push_back(l);
+			_definition.number_of_layers++;
+		}		
 	}
 
+	std::vector<std::string> Map::split(std::string& str, std::string& delim)
+	{
+		std::vector<std::string> tokens;
+		size_t prev = 0;
+		size_t pos = 0;
+
+		do
+		{
+			pos = str.find(delim, prev);
+			if (pos == std::string::npos) { 
+				pos = str.length(); 
+			}
+
+			std::string token = str.substr(prev, pos - prev);
+			
+			if (!token.empty()) {
+				tokens.push_back(token);
+			}
+
+			prev = pos + delim.length();
+
+		} while (pos < str.length() && prev < str.length());
+
+		return tokens;
+	}
 }
