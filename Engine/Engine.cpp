@@ -262,6 +262,18 @@ namespace GameEngine {
 		}
 	}
 
+	void Engine::MouseScroll(float xoffset, float yoffset)
+	{
+
+		if (_gui->HasInstance()) {
+			getGUI().MouseScroll(xoffset, yoffset);
+		}
+
+		if ((!ImGui::IsWindowFocused(ImGuiFocusedFlags_AnyWindow) && !ImGui::IsAnyItemFocused()) || EditorFocusViewport) {
+			GameFSM.MouseScroll(xoffset, yoffset);
+		}
+	}
+
 	void Engine::AddChar(unsigned int c, bool UTF16)
 	{
 		if (_gui->HasInstance()) {

@@ -153,3 +153,9 @@ void EditorState::MouseMove(float x, float y)
 {
 
 }
+
+void EditorState::MouseScroll(float xoffset, float yoffset)
+{
+	Camera2D* cam = Engine::get().current_cam;
+	cam->AdjustZoom(yoffset);
+}

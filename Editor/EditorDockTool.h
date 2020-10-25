@@ -40,6 +40,7 @@ namespace Editor {
 		virtual void MouseDown(int button) override;
 		virtual void MouseUp(int button) override;
 		virtual void MouseMove(float x, float y) override;
+		virtual void MouseScroll(float xoffset, float yoffset) override;
 	};
 }
 

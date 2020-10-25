@@ -147,6 +147,11 @@ namespace GameEngine
         io.MousePos = ImVec2(x, y);
     }
 
+    void OpenGLGUIPlatform::MouseScroll(float xoffset, float yoffset)
+    {
+
+    }
+
     void OpenGLGUIPlatform::AddChar(unsigned int c, bool UTF16)
     {
         ImGuiIO& io = ImGui::GetIO();

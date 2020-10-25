@@ -34,6 +34,9 @@ namespace GameEngine
 			static void mouse_button_callback(GLFWwindow* window, int button, int action, int mods);
 			void button_callback(GLFWwindow* window, int button, int action, int mods);
 
+			static void mouse_scroll_callback(GLFWwindow* window, double xoffset, double yoffset);
+			void scroll_callback(GLFWwindow* window, double xoffset, double yoffset);
+
 			static void char_callback(GLFWwindow* window, unsigned int c);
 			void CharCallback(GLFWwindow* window, unsigned int c);
 	};

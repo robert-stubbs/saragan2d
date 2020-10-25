@@ -24,6 +24,7 @@ namespace Editor {
 			virtual void MouseDown(int button) {};
 			virtual void MouseUp(int button) {};
 			virtual void MouseMove(float x, float y) {};
+			virtual void MouseScroll(float xoffset, float yoffset) {};
 	};
 }
 

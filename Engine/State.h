@@ -23,6 +23,7 @@ namespace GameEngine {
             virtual void MouseDown(int button) = 0;
             virtual void MouseUp(int button) = 0;
             virtual void MouseMove(float x, float y) = 0;
+            virtual void MouseScroll(float xoffset, float yoffset) {};
 
             std::string stateName;  //used to switch between states
             StateMachine* fsm;

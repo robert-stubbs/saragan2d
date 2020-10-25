@@ -17,6 +17,8 @@ namespace GameEngine
 
 		float aspect;
 
+		float zoom_level;
+
 		float res_width;
 		float res_height;
 
@@ -39,6 +41,8 @@ namespace GameEngine
 		void Update(float DeltaTime);
 
 		void resize(float width, float height);
+
+		void AdjustZoom(float val);
 	};
 }
 

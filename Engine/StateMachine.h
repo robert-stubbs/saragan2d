@@ -29,6 +29,7 @@ namespace GameEngine {
         void MouseDown(int button);
         void MouseUp(int button);
         void MouseMove(float x, float y);
+        void MouseScroll(float xoffset, float yoffset);
 
 
         std::string GetState();

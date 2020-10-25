@@ -7,6 +7,8 @@ namespace GameEngine
 	{
 		toggleMouseLock = false;
 
+		zoom_level = 1.0f;
+
 		speed = 0.20f;
 
 		dx = 0;
@@ -23,6 +25,8 @@ namespace GameEngine
 	Camera2D::Camera2D(float width, float height)
 	{
 		toggleMouseLock = false;
+
+		zoom_level = 1.0f;
 
 		speed = 0.20f;
 
@@ -42,7 +46,7 @@ namespace GameEngine
 		res_width = width;
 		res_height = height;
 		aspect = (float)(width / height);
-		ProjectionMatrix = glm::ortho(0.0f, width, height, 0.0f, -10.0f, 10.0f);
+		ProjectionMatrix = glm::ortho(0.0f*zoom_level, width * zoom_level, height * zoom_level, 0.0f * zoom_level, -10.0f, 10.0f);
 	}
 
 	Camera2D::~Camera2D(void)
@@ -51,8 +55,8 @@ namespace GameEngine
 
 	void Camera2D::Update(float DeltaTime)
 	{
-		LookAt.x += (dx) * speed;
-		LookAt.y += (dy) * speed;
+		LookAt.x += (dx) * speed * zoom_level;
+		LookAt.y += (dy) * speed * zoom_level;
 
 		glm::mat4 translate = glm::mat4(1.0f);
 		translate = glm::translate(translate, -LookAt);
@@ -70,5 +74,17 @@ namespace GameEngine
 		}
 
 		return POINT();
+	}
+
+	void Camera2D::AdjustZoom(float val)
+	{
+		zoom_level -= val;
+
+		if (zoom_level < 1.0f)
+		{
+			zoom_level = 1.0f;
+		}
+
+		ProjectionMatrix = glm::ortho(0.0f * zoom_level, res_width * zoom_level, res_height * zoom_level, 0.0f * zoom_level, -10.0f, 10.0f);
 	}
 }

@@ -140,6 +140,7 @@ namespace GameEngine {
 			void MouseDown(int button);
 			void MouseUp(int button);
 			void MouseMove(float x, float y);
+			void MouseScroll(float xoffset, float yoffset);
 			void AddChar(unsigned int c, bool UTF16 = false);
 
 			void TestFunction();

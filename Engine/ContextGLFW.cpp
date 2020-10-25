@@ -58,6 +58,7 @@ namespace GameEngine
 
 		glfwSetMouseButtonCallback(window, mouse_button_callback);
 		glfwSetCharCallback(window, char_callback);
+		glfwSetScrollCallback(window, mouse_scroll_callback);
 		// do mouse callback as well
 		//glfwSetCursorPosCallback && glfwSetMouseCallback
 
@@ -154,6 +155,16 @@ namespace GameEngine
 		Engine::get().MouseMove((float)xpos, (float)ypos);
 	}
 
+	void ContextGLFW::mouse_scroll_callback(GLFWwindow* window, double xoffset, double yoffset)
+	{
+		ContextGLFW* windowManager = static_cast<ContextGLFW*>(glfwGetWindowUserPointer(window));
+		return windowManager->scroll_callback(window, xoffset, yoffset);
+	}
+
+	void ContextGLFW::scroll_callback(GLFWwindow* window, double xoffset, double yoffset)
+	{
+		Engine::get().MouseScroll(xoffset, yoffset);
+	}
 
 	void ContextGLFW::mouse_button_callback(GLFWwindow* window, int button, int action, int mods)
 	{

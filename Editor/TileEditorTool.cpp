@@ -185,5 +185,9 @@ namespace Editor {
 	{
 
 	}
+
+	void TileEditorTool::MouseScroll(float xoffset, float yoffset)
+	{
+	}
 }
 

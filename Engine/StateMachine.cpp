@@ -108,6 +108,13 @@ namespace GameEngine {
 
 		currentState->MouseMove(x, y);
 	}
+	
+	void StateMachine::MouseScroll(float xoffset, float yoffset)
+	{
+		if (currentState == NULL) return;
+
+		currentState->MouseScroll(xoffset, yoffset);
+	}
 
 	//Called to transition to another state
 	//@param stateName the name of the state to transition to

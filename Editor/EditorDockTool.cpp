@@ -129,5 +129,12 @@ namespace Editor {
 			_current_tool->MouseMove(x,y);
 		}
 	}
+
+	void EditorDockTool::MouseScroll(float xoffset, float yoffset)
+	{
+		if (_current_tool != nullptr && has_current_tool) {
+			_current_tool->MouseScroll(xoffset, yoffset);
+		}
+	}
 }
 
