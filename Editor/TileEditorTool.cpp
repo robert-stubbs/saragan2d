@@ -2,6 +2,7 @@
 #include "TileEditorTool.h"
 
 #include "GUI.h"
+#include "EditorDockTool.h"
 
 using namespace GameEngine;
 
@@ -48,6 +49,11 @@ namespace Editor {
 			auto f = io.Fonts->Fonts[5];
 
 			GUI::Get().Begin("Tile Editor");		
+
+			if (ImGui::IsWindowFocused() && _parent != nullptr) {
+				((EditorDockTool*)_parent)->_current_tool = this;
+				((EditorDockTool*)_parent)->has_current_tool = true;
+			}
 
 			ImVec2 viewportPanelSize = ImGui::GetContentRegionAvail();
 
@@ -165,5 +171,19 @@ namespace Editor {
 		}
 	}
 
+	void TileEditorTool::MouseDown(int button)
+	{
+		LOG("Mouse Down");
+	}
+
+	void TileEditorTool::MouseUp(int button)
+	{
+		LOG("Mouse Up");
+	}
+
+	void TileEditorTool::MouseMove(float x, float y)
+	{
+
+	}
 }
 

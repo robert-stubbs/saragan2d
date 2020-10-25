@@ -16,6 +16,7 @@ EditorState::EditorState() : State()
 {
 	_menu = Editor::MainMenu();
 	_dock = Editor::EditorDockTool();
+	_dock.Init();
 }
 
 EditorState::~EditorState()
@@ -55,10 +56,6 @@ void EditorState::RenderEditorUI()
 		_menu.RenderUI();
 		_dock.RenderUI();
 
-
-		if (_current_tool != nullptr) {
-			_current_tool->RenderUI();
-		}
 
 		GUI::Get().EndAndRender();
 	}
@@ -144,12 +141,12 @@ void EditorState::KeyUp(int Key)
 
 void EditorState::MouseDown(int button)
 {
-
+	_dock.MouseDown(button);
 }
 
 void EditorState::MouseUp(int button)
 {
-
+	_dock.MouseUp(button);
 }
 
 void EditorState::MouseMove(float x, float y)

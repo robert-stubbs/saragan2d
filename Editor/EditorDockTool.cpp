@@ -19,8 +19,11 @@ namespace Editor {
 		_context_window = Editor::ContextTool();
 
 		_tile_editor_tool = Editor::TileEditorTool();
+		_tile_editor_tool.SetParent(this);
 
 		_properties_tool = Editor::PropertiesTool();
+
+		_current_tool = nullptr;
 	}
 
 	void EditorDockTool::RenderUI()
@@ -106,5 +109,25 @@ namespace Editor {
 		}
 	}
 
+	void EditorDockTool::MouseDown(int button)
+	{		
+		if (_current_tool != nullptr && has_current_tool) {
+			_current_tool->MouseDown(button);
+		}
+	}
+
+	void EditorDockTool::MouseUp(int button)
+	{
+		if (_current_tool != nullptr && has_current_tool) {
+			_current_tool->MouseUp(button);
+		}
+	}
+
+	void EditorDockTool::MouseMove(float x, float y)
+	{
+		if (_current_tool != nullptr && has_current_tool) {
+			_current_tool->MouseMove(x,y);
+		}
+	}
 }
 
