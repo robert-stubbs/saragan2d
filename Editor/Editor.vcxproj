@@ -486,12 +486,12 @@
     </ClCompile>
     <ClCompile Include="EditorState.cpp" />
     <ClCompile Include="EntityManagerTool.cpp" />
-    <ClCompile Include="main.cpp" />
     <ClCompile Include="MainMenu.cpp" />
     <ClCompile Include="PropertiesTool.cpp" />
     <ClCompile Include="ResourcesTool.cpp" />
     <ClCompile Include="TestTool.cpp" />
     <ClCompile Include="TileEditorTool.cpp" />
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Engine\Engine.vcxproj">

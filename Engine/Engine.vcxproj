@@ -469,6 +469,7 @@
     <ClInclude Include="..\ThirdParty\glm\include\glm\vec3.hpp" />
     <ClInclude Include="..\ThirdParty\glm\include\glm\vec4.hpp" />
     <ClInclude Include="..\ThirdParty\glm\include\glm\vector_relational.hpp" />
+    <ClInclude Include="..\ThirdParty\tinyxml2\tinyxml2.h" />
     <ClInclude Include="AISystem.h" />
     <ClInclude Include="ANPC.h" />
     <ClInclude Include="Actor.h" />
@@ -541,6 +542,7 @@
     <ClInclude Include="standards.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\ThirdParty\tinyxml2\tinyxml2.cpp" />
     <ClCompile Include="AISystem.cpp" />
     <ClCompile Include="ANPC.cpp" />
     <ClCompile Include="Actor.cpp" />

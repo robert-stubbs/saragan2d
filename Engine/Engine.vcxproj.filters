@@ -205,6 +205,9 @@
     <Filter Include="Systems\Collision">
       <UniqueIdentifier>{f66d345f-5d70-447d-8d36-ee29f779baae}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ThirdParty\TinyXml2">
+      <UniqueIdentifier>{b2af4f04-4948-41d2-a788-2c16f213e312}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\ThirdParty\glew\include\GL\eglew.h">
@@ -1535,6 +1538,9 @@
     <ClInclude Include="CollisionSystem.h">
       <Filter>Systems\Collision</Filter>
     </ClInclude>
+    <ClInclude Include="..\ThirdParty\tinyxml2\tinyxml2.h">
+      <Filter>ThirdParty\TinyXml2</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="EnginePCH.cpp" />
@@ -1736,6 +1742,9 @@
     </ClCompile>
     <ClCompile Include="CollisionSystem.cpp">
       <Filter>Systems\Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ThirdParty\tinyxml2\tinyxml2.cpp">
+      <Filter>ThirdParty\TinyXml2</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
