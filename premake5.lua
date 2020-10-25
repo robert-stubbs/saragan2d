@@ -56,7 +56,7 @@ project "Game"
 		systemversion "latest"
 		cppdialect "C++17"
 		staticruntime "on"
-		links { "Engine", "OpenGL32", "glfw", "glew32", "OpenAL32", "freetype", "freetype-gl", "winmm", "ImGui", "tinyxml2" }
+		links { "Engine", "OpenGL32", "glfw", "glew32", "OpenAL32", "freetype", "freetype-gl", "winmm", "ImGui"}
 
 	filter "configurations.Debug"
 		defines { "SARAGAN_DEBUG" }
@@ -118,7 +118,7 @@ project "Editor"
 		systemversion "latest"
 		cppdialect "C++17"
 		staticruntime "on"
-		links { "Engine", "OpenGL32", "glfw", "glew32", "OpenAL32", "freetype", "freetype-gl", "winmm", "ImGui", "tinyxml2" }
+		links { "Engine", "OpenGL32", "glfw", "glew32", "OpenAL32", "freetype", "freetype-gl", "winmm", "ImGui"}
 
 	filter "configurations.Debug"
 		defines { "SARAGAN_DEBUG" }

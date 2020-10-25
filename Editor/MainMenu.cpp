@@ -87,11 +87,11 @@ namespace Editor {
 				{
 					ImGui::Text("Lorem ipsum");
 					World* w = Engine::getWorld();
-					w->LoadMap("Test Map", "");
+					w->LoadMap("Test Level", "Maps/Test Level/");
 
 					if (ImGui::Button("Close")) {
 
-						w->SetMap("Test Map");
+						w->SetMap("Test Level");
 						OpenMapModal = false;
 						ImGui::CloseCurrentPopup();
 					}

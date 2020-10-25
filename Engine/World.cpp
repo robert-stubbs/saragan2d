@@ -23,7 +23,8 @@ namespace GameEngine
 		if (_maps.find(name) == _maps.end())
 		{
 			_maps[name] = new Map();
-			_maps[name]->Init("Test Map", "");
+			_maps[name]->LoadMapFromFile(map_path, name);
+			//_maps[name]->Init("Test Map", "");
 		}
 	}
 

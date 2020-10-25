@@ -277,21 +277,7 @@ namespace GameEngine
 		// any cleanup
 	}
 	
-	void Map::LoadMapFromFile(std::string file_path)
-	{
-		FileManager* f = Engine::FileMgr();
-
-		std::vector<std::string> file = f->ReadFile(file_path.c_str());
-
-		if (file.size() > 0) {
-			if (file.at(0) == "#version 1.0") {
-				LoadVersionOne(file);
-			}
-
-		}
-	}
-
-	void Map::LoadVersionOne(std::vector<std::string>& data)
+	void Map::LoadMapFromFile(std::string file_path, std::string name)
 	{
 		/*
 			// start with these
@@ -304,7 +290,23 @@ namespace GameEngine
 			_definition.tile_height = 32;
 			_definition.number_of_layers = 0;
 		*/
-		tinyxml2::XMLDocument doc;
 
+		std::string map_path = Engine::get().asset_dir + file_path + name + ".s_map";
+
+		tinyxml2::XMLDocument doc;
+		doc.LoadFile(map_path.c_str());
+			
+		int error = doc.ErrorID();
+
+		tinyxml2::XMLElement* map = doc.FirstChildElement("map");
+
+		std::string version = map->FindAttribute("version")->Value();
+		std::string width = map->FindAttribute("width")->Value();
+		std::string height = map->FindAttribute("height")->Value();
+		std::string tile_width = map->FindAttribute("tilewidth")->Value();
+		std::string tile_height = map->FindAttribute("tileheight")->Value();
+
+	
 	}
+
 }
