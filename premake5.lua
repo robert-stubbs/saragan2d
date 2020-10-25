@@ -151,7 +151,9 @@ project "Engine"
 		"ThirdParty/glm/include/**.inl",
 		"ThirdParty/glfw/include/**.h",
 		"ThirdParty/glew/include/**.h",
-		"ThirdParty/ImGui/*.h"
+		"ThirdParty/ImGui/*.h",
+		"ThirdParty/tinyxml2/tinyxml2.h",
+		"ThirdParty/tinyxml2/tinyxml2.cpp"
 	}
 
 	includedirs
