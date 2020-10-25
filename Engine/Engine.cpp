@@ -165,14 +165,18 @@ namespace GameEngine {
 
 	void Engine::Render()
 	{
+
 		if (RenderToFrameBuffer) {
 			renderer.Get().BindFrameBuffer(FBO);
 		}
+		Engine::getShader().BindNewShader("DEFAULT2D");
+
+		Shader& s = Engine::getCurrentShader();
 
 		getRenderer().RenderStart();
-		Engine::getRenderer().UniformInt(Engine::getCurrentShader()["is_Text"], 0);
-		Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["projectionMatrix"], Engine::get().current_cam->ProjectionMatrix, 1, false);
-		Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["viewMatrix"], Engine::get().current_cam->ViewMatrix, 1, false);
+		Engine::getRenderer().UniformMat4(s["projectionMatrix"], Engine::get().current_cam->ProjectionMatrix, 1, false);
+		Engine::getRenderer().UniformMat4(s["viewMatrix"], Engine::get().current_cam->ViewMatrix, 1, false);
+		Engine::getRenderer().UniformInt(s["is_Text"], 0);
 
 		w.RenderBackground();
 		w.Render();

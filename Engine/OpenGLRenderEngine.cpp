@@ -211,9 +211,13 @@ namespace GameEngine {
 
 	void OpenGLRenderEngine::GenerateBuffer(unsigned int& VBO, std::vector<vert2D>& verts)
 	{
+		CheckError();
 		glGenBuffers(1, &VBO);
+		CheckError();
 		glBindBuffer(GL_ARRAY_BUFFER, VBO);
+		CheckError();
 		glBufferData(GL_ARRAY_BUFFER, sizeof(vert2D) * verts.size(), &verts[0], GL_STATIC_DRAW);
+		CheckError();
 	}
 
 	void OpenGLRenderEngine::GenerateEmptyBuffer(unsigned int& VBO, int size)
@@ -518,6 +522,7 @@ namespace GameEngine {
 
 	void OpenGLRenderEngine::VertexStructurePointerF(int location, int size, bool normalized, int stride, const void* pointer)
 	{
+		CheckError();
 		glVertexAttribPointer(location, size, GL_FLOAT, normalized, stride, pointer);
 		glEnableVertexAttribArray(location);
 		CheckError();

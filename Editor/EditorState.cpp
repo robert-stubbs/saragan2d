@@ -86,19 +86,19 @@ void EditorState::KeyDown(int Key)
 	{
 		case ENGINE_KEY_A:
 		{
-			cam->dx = -10;
+			cam->dx = -30;
 		}break;
 		case ENGINE_KEY_D:
 		{
-			cam->dx = 10;
+			cam->dx = 30;
 		}break;
 		case ENGINE_KEY_W:
 		{
-			cam->dy = -10;
+			cam->dy = -30;
 		}break;
 		case ENGINE_KEY_S:
 		{
-			cam->dy = 10;
+			cam->dy = 30;
 		}break;
 		case ENGINE_KEY_1:
 		{

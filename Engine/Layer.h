@@ -17,6 +17,9 @@ namespace GameEngine
 			virtual void SetPlatformAndRenderer(PLATFORM platform, RenderEngines engine) {};
 
 			virtual inline T& Get() { return *_instance; }
+			virtual inline bool isSet() { 
+				return _instance != nullptr; 
+			}
 	};
 
 }

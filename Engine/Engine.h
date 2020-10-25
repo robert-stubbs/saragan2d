@@ -167,6 +167,7 @@ namespace GameEngine {
 			static ShaderManager& getShader() {	return get().shader_mgr; }
 
 			static Shader& getCurrentShader() { return get().shader_mgr.Get(); }
+			static bool hasCurrentShader() { return get().shader_mgr.isSet(); }
 
 			static RenderEngineBase& getRenderer() { return get().renderer.Get(); }
 

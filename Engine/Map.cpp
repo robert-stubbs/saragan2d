@@ -18,6 +18,8 @@ namespace GameEngine
 		max_y = 0;
 		render_grid = false;
 		grid_loaded = false;
+		GridVAIO = 0;
+		GridVBO = 0;
 	}
 
 	Map::~Map()
@@ -141,6 +143,8 @@ namespace GameEngine
 
 		//any updates
 
+		GenerateGrid();
+
 		// for example when a player is moving you want to update
 		// render a different part of the map
 
@@ -174,18 +178,17 @@ namespace GameEngine
 
 	void Map::RenderBackground()
 	{
-		//RenderLayer(0);
+		RenderLayer(0);
 	}
 
 	void Map::Render()
 	{
-		//RenderLayer(1);
+		RenderLayer(1);
 	}
 
 	void Map::RenderForeground()
 	{
-		//RenderLayer(2);
-		GenerateGrid();
+		RenderLayer(2);
 		RenderGrid();
 	}
 
@@ -231,42 +234,42 @@ namespace GameEngine
 			return;
 		}
 
-		if (render_grid && !grid_loaded) {
+		if (render_grid && !grid_loaded && GridVAIO == 0) {
 
 			_grid_verts = std::vector<vert2D>();
 
 			float end_row = (float)(_definition.map_height * _definition.quad_height);
 			float end_column = (float)(_definition.map_width * _definition.quad_width);
-			glm::vec4 col = glm::vec4(1.0f, 1.0f, 1.0f, 1.0f);
+			glm::vec4 col = glm::vec4(0.3f, 0.3f, 0.3f, 1.0f);
 
-			for (int y = 0; y < (int)end_row; y += _definition.quad_height)
+			for (int y = 0; y < (int)_definition.map_height; y ++)
 			{
-				vert2D start = { {0,(float)y,1.0f,1.0f},{-99.9f, -99.9f}, {col.r, col.g, col.b, col.a } };
-				vert2D end = { {end_column,(float)y,1.0f,1.0f},{-99.9f, -99.9f}, {col.r, col.g, col.b, col.a } };
+				vert2D start = { {0,(float)_definition.quad_height*y,0.0f,1.0f},{-99.0f,-99.0f}, {col.r, col.g, col.b, col.a } };
+				vert2D end = { {end_column,(float)_definition.quad_height*y,0.0f,1.0f},{-99.0f,-99.0f}, {col.r, col.g, col.b, col.a } };
 
 				_grid_verts.push_back(start);
 				_grid_verts.push_back(end);
 			}
 
-			for (int x = 0; x < (int)end_column; x += _definition.quad_width)
+			for (int x = 0; x < (int)_definition.map_width; x ++)
 			{
-				vert2D start = { {(float)x,0,1.0f,1.0f},{-99.9f, -99.9f}, {col.r, col.g, col.b, col.a } };
-				vert2D end = { {(float)x,end_row,1.0f,1.0f},{-99.9f, -99.9f}, {col.r, col.g, col.b, col.a } };
+				vert2D start = { {(float)_definition.quad_width*x,0.0f,0.0f,1.0f},{-99.0f,-99.0f}, {col.r, col.g, col.b, col.a } };
+				vert2D end = { {(float)_definition.quad_width * x,end_row,0.0f,1.0f},{-99.0f,-99.0f}, {col.r, col.g, col.b, col.a } };
 
 				_grid_verts.push_back(start);
 				_grid_verts.push_back(end);
 			}
 
-
+			Engine::getShader().BindNewShader("DEFAULT2D");
 			Shader& s = Engine::getShader()["DEFAULT2D"];
 
 			Engine::getRenderer().GenerateVertexArrayBuffer(GridVAIO);
-
 			Engine::getRenderer().GenerateBuffer(GridVBO, _grid_verts);
 
 			s.BindShaderStructure();
 
 			Engine::getRenderer().UnbindBuffer();
+
 			Engine::getRenderer().UnbindVertexBuffer();
 		
 			grid_loaded = true;
@@ -286,7 +289,7 @@ namespace GameEngine
 
 			Engine::getRenderer().EnableBlend(true, BLEND_TYPE::SRC_ALPHA, BLEND_TYPE::ONE_MINUS_SRC_ALPHA);
 
-			Engine::getRenderer().BindVertexBuffer(GridVBO);
+			Engine::getRenderer().BindVertexBuffer(GridVAIO);
 
 			Engine::getRenderer().DrawArrays(DRAW_TYPE::LINES, (GLsizei)_grid_verts.size());
 
