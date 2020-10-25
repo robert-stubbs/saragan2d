@@ -302,7 +302,7 @@ namespace GameEngine
 			_definition.tile_height = 32;
 			_definition.number_of_layers = 0;
 		*/
-
+		XMLDocument doc;
 
 	}
 }

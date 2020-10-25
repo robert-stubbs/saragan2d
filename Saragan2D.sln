@@ -13,6 +13,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ImGui", "ThirdParty\ImGui\I
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "freetype-gl", "ThirdParty\freetype-gl\freetype-gl.vcxproj", "{09D6E609-758B-5FFF-FE7F-59D66A345603}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tinyxml2", "ThirdParty\tinyxml2\tinyxml2.vcxproj", "{8C609325-782D-EE30-A146-DCD88D7223BF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -43,6 +45,10 @@ Global
 		{09D6E609-758B-5FFF-FE7F-59D66A345603}.Debug|x64.Build.0 = Debug|x64
 		{09D6E609-758B-5FFF-FE7F-59D66A345603}.Release|x64.ActiveCfg = Release|x64
 		{09D6E609-758B-5FFF-FE7F-59D66A345603}.Release|x64.Build.0 = Release|x64
+		{8C609325-782D-EE30-A146-DCD88D7223BF}.Debug|x64.ActiveCfg = Debug|x64
+		{8C609325-782D-EE30-A146-DCD88D7223BF}.Debug|x64.Build.0 = Debug|x64
+		{8C609325-782D-EE30-A146-DCD88D7223BF}.Release|x64.ActiveCfg = Release|x64
+		{8C609325-782D-EE30-A146-DCD88D7223BF}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

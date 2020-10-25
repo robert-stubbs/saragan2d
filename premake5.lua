@@ -175,6 +175,7 @@ project "Engine"
 		systemversion "latest"
 		cppdialect "C++17"
 		staticruntime "on"
+		links { "tinyxml2" }
 
 		postbuildcommands
 		{

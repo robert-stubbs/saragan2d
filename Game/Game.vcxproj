@@ -493,6 +493,9 @@
     <ProjectReference Include="..\ThirdParty\ImGui\ImGui.vcxproj">
       <Project>{C0FF640D-2C14-8DBE-F595-301E616989EF}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\ThirdParty\tinyxml2\tinyxml2.vcxproj">
+      <Project>{8C609325-782D-EE30-A146-DCD88D7223BF}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
