@@ -300,13 +300,21 @@ namespace GameEngine
 
 		tinyxml2::XMLElement* map = doc.FirstChildElement("map");
 
-		std::string version = map->FindAttribute("version")->Value();
-		std::string width = map->FindAttribute("width")->Value();
-		std::string height = map->FindAttribute("height")->Value();
-		std::string tile_width = map->FindAttribute("tilewidth")->Value();
-		std::string tile_height = map->FindAttribute("tileheight")->Value();
+		std::string version = map->Attribute("version");
+		std::string width = map->Attribute("width");
+		std::string height = map->Attribute("height");
+		std::string tile_width = map->Attribute("tilewidth");
+		std::string tile_height = map->Attribute("tileheight");
 
-	
+		for (tinyxml2::XMLElement* e = map->FirstChildElement("layer"); e != NULL; e = e->NextSiblingElement("layer"))
+		{
+			std::string layer_id = e->Attribute("id");
+			std::string layer_name = e->Attribute("name");
+			std::string layer_width = e->Attribute("width");
+			std::string layer_height = e->Attribute("height");
+
+
+		}
 	}
 
 }
