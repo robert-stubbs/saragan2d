@@ -56,7 +56,7 @@ project "Game"
 		systemversion "latest"
 		cppdialect "C++17"
 		staticruntime "on"
-		links { "Engine", "OpenGL32", "glfw", "glew32", "OpenAL32", "freetype", "freetype-gl", "winmm", "ImGui" }
+		links { "Engine", "OpenGL32", "glfw", "glew32", "OpenAL32", "freetype", "freetype-gl", "winmm", "ImGui", "tinyxml2" }
 
 	filter "configurations.Debug"
 		defines { "SARAGAN_DEBUG" }
@@ -118,7 +118,7 @@ project "Editor"
 		systemversion "latest"
 		cppdialect "C++17"
 		staticruntime "on"
-		links { "Engine", "OpenGL32", "glfw", "glew32", "OpenAL32", "freetype", "freetype-gl", "winmm", "ImGui" }
+		links { "Engine", "OpenGL32", "glfw", "glew32", "OpenAL32", "freetype", "freetype-gl", "winmm", "ImGui", "tinyxml2" }
 
 	filter "configurations.Debug"
 		defines { "SARAGAN_DEBUG" }
@@ -352,6 +352,45 @@ project "ImGui"
 	libdirs  
 	{
 		"ThirdParty/glew/lib/**"
+	}
+
+	filter "system:windows"
+		systemversion "latest"
+		cppdialect "C++17"
+		staticruntime "On"
+		
+		postbuildcommands
+		{
+			("{COPY} ../../bin/" .. outputdir .. "/%{prj.name} ../../bin/" .. outputdir .. "/SaraganGame")
+		}
+
+	filter "system:linux"
+		pic "On"
+		systemversion "latest"
+		cppdialect "C++17"
+		staticruntime "On"
+
+	filter "configurations:Debug"
+		runtime "Debug"
+		symbols "on"
+
+	filter "configurations:Release"
+		runtime "Release"
+		optimize "on"
+
+
+project "tinyxml2"
+	location "ThirdParty/%{prj.name}"
+	kind "StaticLib"
+	language "C++"
+
+	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
+	objdir ("obj/" .. outputdir .. "/%{prj.name}")
+
+	files
+	{
+		"ThirdParty/%{prj.name}/tinyxml2.h",
+		"ThirdParty/%{prj.name}/tinyxml2.cpp"
 	}
 
 	filter "system:windows"
