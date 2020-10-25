@@ -17,11 +17,19 @@ namespace GameEngine
 			std::string _path;
 			TileMap _definition;
 
+			glm::vec4 hover_color;
+
 			bool render_grid;
 			bool grid_loaded;
 			std::vector<vert2D> _grid_verts;
 			unsigned int GridVAIO;
 			unsigned int GridVBO;
+
+			bool hover_loaded;
+			std::vector<vert2D> _hover_verts;
+			unsigned int HoverVAIO;
+			unsigned int HoverVBO;
+			glm::mat4 _hoverPos;
 
 			std::vector<Texture> _textures;
 
@@ -42,6 +50,10 @@ namespace GameEngine
 			Map();
 			~Map();
 
+			int current_x_hover;
+			int current_y_hover;
+
+
 			inline bool isLoaded() { return _loaded; }
 			void unloadMap();
 
@@ -61,6 +73,10 @@ namespace GameEngine
 
 			void GenerateGrid();
 			void RenderGrid();
+
+			void GenerateHoverQuad();
+			void UpdateHoverPosition(float x, float y);
+			void RenderHoverQuad();
 
 			void Cleanup();
 

@@ -151,7 +151,7 @@ void EditorState::MouseUp(int button)
 
 void EditorState::MouseMove(float x, float y)
 {
-
+	_dock.MouseMove(x, y);
 }
 
 void EditorState::MouseScroll(float xoffset, float yoffset)

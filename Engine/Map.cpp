@@ -18,6 +18,7 @@ namespace GameEngine
 		max_y = 0;
 		render_grid = false;
 		grid_loaded = false;
+		hover_loaded = false;
 		GridVAIO = 0;
 		GridVBO = 0;
 	}
@@ -67,6 +68,7 @@ namespace GameEngine
 		int y_pos = 0;
 
 		glm::vec4 color = glm::vec4(0.0f, 0.0f, 0.0f, 0.0f);
+		hover_color = glm::vec4(1.0f, 0.0f, 0.0f, 0.5f);
 		glm::vec2 min_text = { -99.0f,-99.0f };
 		glm::vec2 max_text = { -99.0f,-99.0f };
 
@@ -144,6 +146,7 @@ namespace GameEngine
 		//any updates
 
 		GenerateGrid();
+		GenerateHoverQuad();
 
 		// for example when a player is moving you want to update
 		// render a different part of the map
@@ -190,6 +193,7 @@ namespace GameEngine
 	{
 		RenderLayer(2);
 		RenderGrid();
+		RenderHoverQuad();
 	}
 
 	void Map::RenderLayer(int layer)
@@ -296,6 +300,69 @@ namespace GameEngine
 			Engine::getRenderer().UnbindVertexBuffer();
 
 			Engine::getRenderer().EnableBlend(false);
+		}
+	}
+
+	void Map::GenerateHoverQuad()
+	{
+		if (render_grid && !hover_loaded && HoverVAIO != 0) {
+
+			vert2D tleft = { {0.0f,0.0f,0.0f,1.0f},{-99.0f,-99.0f}, {hover_color.r, hover_color.g, hover_color.b, hover_color.a } };
+
+			vert2D tright = { {(float)_definition.quad_width,0.0f,0.0f,1.0f},{-99.0f,-99.0f}, {hover_color.r, hover_color.g, hover_color.b, hover_color.a } };
+
+			vert2D bright = { {(float)_definition.quad_width,(float)_definition.quad_height,0.0f,1.0f},{-99.0f,-99.0f}, {hover_color.r, hover_color.g, hover_color.b, hover_color.a } };
+
+			vert2D bleft = { {0.0f,(float)_definition.quad_height,0.0f,1.0f},{-99.0f,-99.0f}, {hover_color.r, hover_color.g, hover_color.b, hover_color.a } };
+
+			_hover_verts.push_back(tleft);
+			_hover_verts.push_back(tright);
+			_hover_verts.push_back(bright);
+			_hover_verts.push_back(bleft);
+
+			Shader& s = Engine::getShader()["DEFAULT2D"];
+
+			Engine::getRenderer().GenerateVertexArrayBuffer(HoverVAIO);
+			Engine::getRenderer().GenerateBuffer(HoverVBO, _hover_verts);
+
+			s.BindShaderStructure();
+
+			Engine::getRenderer().UnbindBuffer();
+
+			Engine::getRenderer().UnbindVertexBuffer();
+
+			_hoverPos = glm::mat4(1.0f);
+			hover_loaded = true;
+		}
+	}
+
+	void Map::UpdateHoverPosition(float x, float y)
+	{
+		_hoverPos = glm::translate(glm::mat4(1.0f), glm::vec3(x, y, 0.0f));
+	}
+
+	void Map::RenderHoverQuad()
+	{
+		if (!_loaded) {
+			return;
+		}
+
+		if (render_grid && hover_loaded) {
+
+			Engine::getShader().BindNewShader("DEFAULT2D");
+			Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["modelMatrix"], _hoverPos, 1, false);
+
+			Engine::getRenderer().EnableBlend(true, BLEND_TYPE::SRC_ALPHA, BLEND_TYPE::ONE_MINUS_SRC_ALPHA);
+
+			Engine::getRenderer().BindVertexBuffer(HoverVAIO);
+
+			Engine::getRenderer().DrawArrays(DRAW_TYPE::TRIANGLE_FAN, (GLsizei)_hover_verts.size());
+
+			Engine::getRenderer().UnbindVertexBuffer();
+
+			Engine::getRenderer().EnableBlend(false);
+
+			Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["modelMatrix"], glm::mat4(1.0f), 1, false);
 		}
 	}
 
