@@ -151,7 +151,9 @@ project "Engine"
 		"ThirdParty/glm/include/**.inl",
 		"ThirdParty/glfw/include/**.h",
 		"ThirdParty/glew/include/**.h",
-		"ThirdParty/ImGui/*.h"
+		"ThirdParty/ImGui/*.h",
+		"ThirdParty/tinyxml2/tinyxml2.h"
+
 	}
 
 	includedirs
@@ -162,7 +164,8 @@ project "Engine"
 		"ThirdParty/freetype2",
 		"ThirdParty/freetype-gl",
 		"ThirdParty/OpenAL/include",
-		"ThirdParty/ImGui"
+		"ThirdParty/ImGui",
+		"ThirdParty/tinyxml2"		
 	}
 
 	libdirs  

@@ -58,7 +58,7 @@
       <PrecompiledHeaderFile>EnginePCH.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>GLFW_INCLUDE_NONE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\ThirdParty\glm\include;..\ThirdParty\glfw\include;..\ThirdParty\glew\include;..\ThirdParty\freetype2;..\ThirdParty\freetype-gl;..\ThirdParty\OpenAL\include;..\ThirdParty\ImGui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\ThirdParty\glm\include;..\ThirdParty\glfw\include;..\ThirdParty\glew\include;..\ThirdParty\freetype2;..\ThirdParty\freetype-gl;..\ThirdParty\OpenAL\include;..\ThirdParty\ImGui;..\ThirdParty\tinyxml2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <LanguageStandard>stdcpp17</LanguageStandard>
@@ -79,7 +79,7 @@
       <PrecompiledHeaderFile>EnginePCH.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>GLFW_INCLUDE_NONE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\ThirdParty\glm\include;..\ThirdParty\glfw\include;..\ThirdParty\glew\include;..\ThirdParty\freetype2;..\ThirdParty\freetype-gl;..\ThirdParty\OpenAL\include;..\ThirdParty\ImGui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\ThirdParty\glm\include;..\ThirdParty\glfw\include;..\ThirdParty\glew\include;..\ThirdParty\freetype2;..\ThirdParty\freetype-gl;..\ThirdParty\OpenAL\include;..\ThirdParty\ImGui;..\ThirdParty\tinyxml2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <LanguageStandard>stdcpp17</LanguageStandard>
@@ -469,6 +469,7 @@
     <ClInclude Include="..\ThirdParty\glm\include\glm\vec3.hpp" />
     <ClInclude Include="..\ThirdParty\glm\include\glm\vec4.hpp" />
     <ClInclude Include="..\ThirdParty\glm\include\glm\vector_relational.hpp" />
+    <ClInclude Include="..\ThirdParty\tinyxml2\tinyxml2.h" />
     <ClInclude Include="AISystem.h" />
     <ClInclude Include="ANPC.h" />
     <ClInclude Include="Actor.h" />
@@ -612,7 +613,12 @@
     <ClCompile Include="lodepng.cpp" />
     <ClCompile Include="standards.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ThirdParty\tinyxml2\tinyxml2.vcxproj">
+      <Project>{8C609325-782D-EE30-A146-DCD88D7223BF}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
-</Project>
+</Project> 

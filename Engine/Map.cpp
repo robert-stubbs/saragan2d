@@ -4,6 +4,8 @@
 #include "standards.h"
 #include "FileManager.h"
 
+#include "tinyxml2.h"
+
 namespace GameEngine
 {
 	Map::Map()
@@ -302,7 +304,7 @@ namespace GameEngine
 			_definition.tile_height = 32;
 			_definition.number_of_layers = 0;
 		*/
-		XMLDocument doc;
+		tinyxml2::XMLDocument doc;
 
 	}
 }
