@@ -465,6 +465,9 @@ namespace GameEngine {
 	void OpenGLRenderEngine::BindFrameBuffer(unsigned int& FBO)
 	{
 		glBindFramebuffer(GL_FRAMEBUFFER, FBO);
+
+		// TODO - check this needs doing given that im pretty sure we do this on resize anyway
+		glViewport(0, 0, (GLsizei)frame_buffer_width, (GLsizei)frame_buffer_height);
 	}
 
 	void OpenGLRenderEngine::ResizeFrameBuffer(unsigned int& FBO, unsigned int&FBOTexture, float width, float height)
@@ -506,7 +509,10 @@ namespace GameEngine {
 		glGenTextures(1, &TextureID);
 		glBindTexture(GL_TEXTURE_2D, TextureID);
 
-		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, (GLsizei)width, (GLsizei)height, 0, GL_RGB, GL_UNSIGNED_BYTE, NULL);
+		frame_buffer_width = width;
+		frame_buffer_height = height;
+
+		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, (GLsizei)frame_buffer_width, (GLsizei)frame_buffer_height, 0, GL_RGB, GL_UNSIGNED_BYTE, NULL);
 
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);

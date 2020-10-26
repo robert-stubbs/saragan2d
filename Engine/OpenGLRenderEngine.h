@@ -9,6 +9,9 @@ namespace GameEngine {
 	{
 		public:
 
+			float frame_buffer_width = 0.0f;
+			float frame_buffer_height = 0.0f;
+
 			OpenGLRenderEngine();
 			virtual ~OpenGLRenderEngine();
 

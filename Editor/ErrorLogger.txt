@@ -10429,3 +10429,110 @@ FPS: 32 Updates: 32
 FPS: 46 Updates: 88
 FPS: 21 Updates: 60
 FPS: 60 Updates: 60
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Post Load
+Starting Render Loop
+FPS: 57 Updates: 59
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+Mouse Up
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 59 Updates: 59
+FPS: 61 Updates: 61
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+Mouse Down
+Mouse Up
+FPS: 59 Updates: 60
+FPS: 60 Updates: 60
+Mouse Down
+Mouse Up
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Post Load
+Starting Render Loop
+FPS: 58 Updates: 59
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 23 Updates: 60
+Mouse Up
+FPS: 59 Updates: 59
+FPS: 60 Updates: 61
+FPS: 60 Updates: 59
+FPS: 60 Updates: 61
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 61 Updates: 60
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Post Load
+Starting Render Loop
+FPS: 59 Updates: 59
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 27 Updates: 60
+Mouse Up
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 59 Updates: 60
+FPS: 61 Updates: 60
+FPS: 59 Updates: 60
+FPS: 61 Updates: 60
+FPS: 30 Updates: 30
+FPS: 50 Updates: 90
+FPS: 28 Updates: 60
+FPS: 61 Updates: 60
+FPS: 40 Updates: 40
+FPS: 47 Updates: 80
+FPS: 25 Updates: 60
+FPS: 60 Updates: 60
+FPS: 59 Updates: 59
+FPS: 59 Updates: 59
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Post Load
+Starting Render Loop
+FPS: 57 Updates: 59
+FPS: 59 Updates: 60
+FPS: 60 Updates: 60
+FPS: 53 Updates: 53
+FPS: 37 Updates: 67
+FPS: 60 Updates: 60
+Mouse Up
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
