@@ -11,6 +11,9 @@ namespace Editor {
 		ContextTool() {};
 		~ContextTool() {};
 
+		float vp_width = 0.0f;
+		float vp_height = 0.0f;
+
 		virtual void RenderUI() override;
 	};
 }

@@ -83,11 +83,9 @@ namespace GameEngine {
 			GameFSM = StateMachine();
 
 			if (RenderToFrameBuffer) {
-
 				renderer.Get().GenerateFrameBuffer(FBO);
-				renderer.Get().GenerateFrameBufferTexture(FBOTexture);
+				renderer.Get().GenerateFrameBufferTexture(FBOTexture, RenderWidth, RenderHeight);
 				renderer.Get().BindTextureToFrameBuffer(FBOTexture);
-				renderer.Get().GenerateRenderBuffer(RBO);
 				renderer.Get().UnbindFrameBuffer();
 			}
 

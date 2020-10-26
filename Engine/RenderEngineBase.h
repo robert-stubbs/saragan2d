@@ -63,10 +63,11 @@ namespace GameEngine {
 			// Frame buffer
 			virtual void GenerateFrameBuffer(unsigned int& FBO) = 0;
 			virtual void BindFrameBuffer(unsigned int& FBO) = 0;
+			virtual void ResizeFrameBuffer(unsigned int& FBO, unsigned int& FBOTexture, float width, float height) = 0;
 			virtual void UnbindFrameBuffer() = 0;
 			virtual void DeleteFrameBuffer(unsigned int& FBO) = 0;
 			virtual bool FrameBufferComplete() = 0;
-			virtual void GenerateFrameBufferTexture(unsigned int& TextureID) = 0;
+			virtual void GenerateFrameBufferTexture(unsigned int& TextureID, float width, float height) = 0;
 			virtual void BindTextureToFrameBuffer(unsigned int& TextureID) = 0;
 			virtual void GenerateRenderBuffer(unsigned int& RBO) = 0;
 

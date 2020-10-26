@@ -10380,3 +10380,52 @@ FPS: 60 Updates: 60
 FPS: 60 Updates: 60
 FPS: 60 Updates: 60
 FPS: 59 Updates: 59
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Post Load
+Starting Render Loop
+FPS: 56 Updates: 59
+FPS: 35 Updates: 35
+FPS: 56 Updates: 85
+FPS: 42 Updates: 42
+FPS: 18 Updates: 78
+FPS: 31 Updates: 31
+FPS: 55 Updates: 89
+FPS: 20 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+Mouse Up
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 49 Updates: 49
+FPS: 14 Updates: 71
+FPS: 49 Updates: 49
+FPS: 36 Updates: 71
+FPS: 18 Updates: 60
+FPS: 60 Updates: 60
+FPS: 26 Updates: 26
+FPS: 40 Updates: 94
+FPS: 45 Updates: 45
+FPS: 32 Updates: 75
+FPS: 38 Updates: 38
+FPS: 55 Updates: 82
+FPS: 31 Updates: 31
+FPS: 29 Updates: 62
+FPS: 53 Updates: 87
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 23 Updates: 23
+FPS: 32 Updates: 71
+FPS: 58 Updates: 86
+FPS: 32 Updates: 32
+FPS: 46 Updates: 88
+FPS: 21 Updates: 60
+FPS: 60 Updates: 60

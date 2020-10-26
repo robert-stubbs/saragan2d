@@ -467,6 +467,19 @@ namespace GameEngine {
 		glBindFramebuffer(GL_FRAMEBUFFER, FBO);
 	}
 
+	void OpenGLRenderEngine::ResizeFrameBuffer(unsigned int& FBO, unsigned int&FBOTexture, float width, float height)
+	{
+		if(FBO) {
+			DeleteFrameBuffer(FBO);
+			glDeleteTextures(1, &FBOTexture);
+
+			GenerateFrameBuffer(FBO);
+			GenerateFrameBufferTexture(FBOTexture, width, height);
+			BindTextureToFrameBuffer(FBOTexture);
+			UnbindFrameBuffer();
+		}
+	}
+
 	void OpenGLRenderEngine::UnbindFrameBuffer()
 	{
 		glBindFramebuffer(GL_FRAMEBUFFER, 0);
@@ -488,13 +501,10 @@ namespace GameEngine {
 		return is_complete;
 	}
 
-	void OpenGLRenderEngine::GenerateFrameBufferTexture(unsigned int& TextureID)
+	void OpenGLRenderEngine::GenerateFrameBufferTexture(unsigned int& TextureID, float width, float height)
 	{
 		glGenTextures(1, &TextureID);
 		glBindTexture(GL_TEXTURE_2D, TextureID);
-
-		float width = Engine::get().RenderWidth;
-		float height = Engine::get().RenderHeight;
 
 		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, (GLsizei)width, (GLsizei)height, 0, GL_RGB, GL_UNSIGNED_BYTE, NULL);
 

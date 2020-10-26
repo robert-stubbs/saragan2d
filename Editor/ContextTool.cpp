@@ -17,7 +17,14 @@ namespace Editor {
 				ImVec2 pos = ImGui::GetCursorScreenPos();
 				ImVec2 viewportPanelSize = ImGui::GetContentRegionAvail();
 
-				ImGui::Image(reinterpret_cast<void*>(Engine::get().FBOTexture), ImVec2(viewportPanelSize.x, viewportPanelSize.y), ImVec2{ 0, 1 }, ImVec2{ 1, 0 });
+				if (viewportPanelSize.x != vp_width || viewportPanelSize.y != vp_height) {
+					vp_width = viewportPanelSize.x;
+					vp_height = viewportPanelSize.y;
+
+					Engine::getRenderer().ResizeFrameBuffer(Engine::get().FBO, Engine::get().FBOTexture, vp_width, vp_height);
+				}
+
+				ImGui::Image(reinterpret_cast<void*>(Engine::get().FBOTexture), ImVec2(vp_width, vp_height), ImVec2{ 0, 1 }, ImVec2{ 1, 0 });
 
 				if (ImGui::IsWindowFocused()) {
 					Engine::get().EditorFocusViewport = true;
