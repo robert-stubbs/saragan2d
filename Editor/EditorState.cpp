@@ -153,24 +153,6 @@ void EditorState::MouseMove(float x, float y)
 {
 	_dock.MouseMove(x, y);
 
-	// This needs moved to the map when over the context window
-	Map* m = Engine::getWorld()->GetMap();
-	if (m != nullptr) {
-		// we are in the editor window
-		glm::vec3 pt = Engine::getRenderer().GetWorldPos2D((int)x, (int)y, Engine::get().default_cam->ProjectionMatrix, Engine::get().default_cam->ViewMatrix);
-
-		TileMap* d = m->GetDefinition();
-
-		int x_quad = (int)pt.x % d->map_width;
-		int y_quad = (int)pt.y / d->map_height;
-
-		if (x_quad < d->map_width && y_quad < d->map_height) {
-
-			m->UpdateHoverPosition(x_quad * d->quad_width, y_quad * d->quad_height);
-
-		}
-	}
-
 }
 
 void EditorState::MouseScroll(float xoffset, float yoffset)

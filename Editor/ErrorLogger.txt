@@ -10637,3 +10637,114 @@ FPS: 60 Updates: 60
 FPS: 60 Updates: 60
 FPS: 60 Updates: 60
 FPS: 55 Updates: 55
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Post Load
+Starting Render Loop
+FPS: 57 Updates: 59
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+Mouse Up
+FPS: 60 Updates: 60
+FPS: 59 Updates: 60
+FPS: 60 Updates: 60
+Mouse Down
+FPS: 61 Updates: 60
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Post Load
+Starting Render Loop
+FPS: 59 Updates: 59
+FPS: 35 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+Mouse Up
+FPS: 60 Updates: 60
+FPS: 59 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 59
+FPS: 60 Updates: 60
+FPS: 61 Updates: 61
+FPS: 59 Updates: 60
+FPS: 57 Updates: 60
+Mouse Up
+FPS: 59 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 61 Updates: 60
+FPS: 59 Updates: 60
+FPS: 60 Updates: 60
+FPS: 61 Updates: 60
+FPS: 60 Updates: 60
+FPS: 59 Updates: 60
+FPS: 61 Updates: 60
+FPS: 60 Updates: 60
+FPS: 59 Updates: 60
+FPS: 59 Updates: 60
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Post Load
+Starting Render Loop
+FPS: 58 Updates: 59
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Post Load
+Starting Render Loop
+FPS: 59 Updates: 59
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 59 Updates: 60
+FPS: 60 Updates: 60
+FPS: 61 Updates: 60
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Post Load
+Starting Render Loop
+FPS: 58 Updates: 59
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 59 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 59
+FPS: 60 Updates: 61
+FPS: 61 Updates: 60
+FPS: 59 Updates: 60

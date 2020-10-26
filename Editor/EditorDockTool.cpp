@@ -111,21 +111,33 @@ namespace Editor {
 
 	void EditorDockTool::MouseDown(int button)
 	{		
-		if (_current_tool != nullptr && has_current_tool) {
+		if (Engine::get().EditorFocusViewport)
+		{
+			_context_window.MouseDown(button);
+
+		} else if (_current_tool != nullptr && has_current_tool) {
 			_current_tool->MouseDown(button);
 		}
 	}
 
 	void EditorDockTool::MouseUp(int button)
 	{
-		if (_current_tool != nullptr && has_current_tool) {
+		if (Engine::get().EditorFocusViewport)
+		{
+			_context_window.MouseUp(button);
+
+		} else if (_current_tool != nullptr && has_current_tool) {
 			_current_tool->MouseUp(button);
 		}
 	}
 
 	void EditorDockTool::MouseMove(float x, float y)
 	{
-		if (_current_tool != nullptr && has_current_tool) {
+		if (Engine::get().EditorFocusViewport)
+		{
+			_context_window.MouseMove(x, y);
+
+		} else if (_current_tool != nullptr && has_current_tool) {
 			_current_tool->MouseMove(x,y);
 		}
 	}

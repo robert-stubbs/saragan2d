@@ -18,8 +18,13 @@ namespace Editor {
 			GUI::Get().Begin("Main");
 
 				ImVec2 pos = ImGui::GetCursorScreenPos();
-				ImVec2 viewportPanelSize = ImGui::GetContentRegionAvail();
+				ImVec2 window_pos =  ImGui::GetWindowPos();
+				if (window_pos.x != window_x || window_pos.y != window_y) {
+					window_x = window_pos.x;
+					window_y = window_pos.y;
+				}
 
+				ImVec2 viewportPanelSize = ImGui::GetContentRegionAvail();
 				if (viewportPanelSize.x != vp_width || viewportPanelSize.y != vp_height) {
 					vp_width = viewportPanelSize.x;
 					vp_height = viewportPanelSize.y;
@@ -39,6 +44,34 @@ namespace Editor {
 			GUI::Get().End();
 
 			ImGui::PopStyleVar();
+		}
+	}
+
+	void ContextTool::MouseMove(float x, float y)
+	{
+
+		// This needs moved to the map when over the context window
+		Map* m = Engine::getWorld()->GetMap();
+		if (m != nullptr) {
+
+			float test_x = x - window_x;
+			float test_y = y - window_y;
+
+			// we are in the editor window
+			glm::vec3 pt = Engine::getRenderer().GetWorldPos2D((int)test_x, (int)test_y, Engine::get().default_cam->ProjectionMatrix, Engine::get().default_cam->ViewMatrix);
+
+			TileMap* d = m->GetDefinition();
+
+			m->UpdateHoverPosition(pt.x, pt.y);
+
+			//int x_quad = (int)pt.x % d->map_width;
+			//int y_quad = (int)pt.y / d->map_height;
+
+			//if (x_quad < d->map_width && y_quad < d->map_height) {
+
+			//	m->UpdateHoverPosition(x_quad * d->quad_width, y_quad * d->quad_height);
+
+			//}
 		}
 	}
 
