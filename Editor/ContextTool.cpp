@@ -18,6 +18,9 @@ namespace Editor {
 			GUI::Get().Begin("Main");
 
 				ImVec2 pos = ImGui::GetCursorScreenPos();
+				gui_mouse_x = pos.x;
+				gui_mouse_y = pos.y;
+
 				ImVec2 window_pos =  ImGui::GetWindowPos();
 				if (window_pos.x != window_x || window_pos.y != window_y) {
 					window_x = window_pos.x;
@@ -54,24 +57,43 @@ namespace Editor {
 		Map* m = Engine::getWorld()->GetMap();
 		if (m != nullptr) {
 
-			float test_x = x - window_x;
-			float test_y = y - window_y;
+			float x_to_window = x - window_x;
+			float y_to_window = y - window_y;
 
-			// we are in the editor window
-			glm::vec3 pt = Engine::getRenderer().GetWorldPos2D((int)test_x, (int)test_y, Engine::get().default_cam->ProjectionMatrix, Engine::get().default_cam->ViewMatrix);
+			float vp_end_x = window_x + vp_width;
+			float vp_end_y = window_y + vp_height;
 
-			TileMap* d = m->GetDefinition();
+			if ((x >= window_x && x <= vp_end_x) && (y >= window_y && y <= vp_end_y)) {
 
-			m->UpdateHoverPosition(pt.x, pt.y);
+				float size_x = (x - window_x) / vp_width;
+				float size_y = (y - window_y) / vp_height;
 
-			//int x_quad = (int)pt.x % d->map_width;
-			//int y_quad = (int)pt.y / d->map_height;
 
-			//if (x_quad < d->map_width && y_quad < d->map_height) {
 
-			//	m->UpdateHoverPosition(x_quad * d->quad_width, y_quad * d->quad_height);
+				float new_x = x * size_x;
+				float new_y = y * size_y;
 
-			//}
+		/*		
+
+				float new_x = vp_width * test_x;
+				float new_y = vp_height * test_y;*/
+
+				// we are in the editor window
+				glm::vec3 pt = Engine::getRenderer().GetWorldPos2D((int)new_x, (int)new_y, Engine::get().default_cam->ProjectionMatrix, Engine::get().default_cam->ViewMatrix);
+
+				TileMap* d = m->GetDefinition();
+
+				m->UpdateHoverPosition(pt.x, pt.y);
+
+				//int x_quad = (int)pt.x % d->map_width;
+				//int y_quad = (int)pt.y / d->map_height;
+
+				//if (x_quad < d->map_width && y_quad < d->map_height) {
+
+				//	m->UpdateHoverPosition(x_quad * d->quad_width, y_quad * d->quad_height);
+
+				//}
+			}
 		}
 	}
 
