@@ -22,6 +22,7 @@ namespace Editor {
 				gui_mouse_y = pos.y;
 
 				ImVec2 window_pos =  ImGui::GetWindowPos();
+				
 				if (window_pos.x != window_x || window_pos.y != window_y) {
 					window_x = window_pos.x;
 					window_y = window_pos.y;
@@ -56,20 +57,26 @@ namespace Editor {
 		// This needs moved to the map when over the context window
 		Map* m = Engine::getWorld()->GetMap();
 		if (m != nullptr) {
-
+			
 			float x_to_window = x - window_x;
 			float y_to_window = y - window_y;
 
 			float vp_end_x = window_x + vp_width;
 			float vp_end_y = window_y + vp_height;
 
-			if ((x >= window_x && x <= vp_end_x) && (y >= window_y && y <= vp_end_y)) {
+			//if ((x >= window_x && x <= vp_end_x) && (y >= window_y && y <= vp_end_y)) {
 
 
 				float new_x = x_to_window;// *size_x;
 				float new_y = y_to_window;// *size_y;
 
+				LOG("X: " + std::to_string(x)  +" | WindowX: " + std::to_string(window_x) + " | XToWindow: " + std::to_string(x_to_window));
+
+				// window X keeps moving window_x
+
 		/*		
+
+		return glm::unProject(glm::vec3((double)x, (double)winY, 0.0f), view, projection, glm::vec4(vpx, vpy, vpx2, vpy2));
 
 				float new_x = vp_width * test_x;
 				float new_y = vp_height * test_y;*/
@@ -78,19 +85,23 @@ namespace Editor {
 				//glm::vec3 pt = Engine::getRenderer().GetWorldPos2D((int)new_x, (int)new_y, Engine::get().default_cam->ProjectionMatrix, Engine::get().default_cam->ViewMatrix);
 
 				glm::vec3 pt = Engine::getRenderer().GetWorldPos2D(
-								(int)x_to_window,
-								(int)y_to_window,
+								(int)x,
+								(int)y,
 								Engine::get().default_cam->ProjectionMatrix, 
 								Engine::get().default_cam->ViewMatrix, 
-								0, 
-								0, 
-								Engine::get().getRenderer().frame_buffer_width,
-								Engine::get().getRenderer().frame_buffer_height
+								window_x,
+								window_y,
+								vp_width,
+								vp_height
 							);
 				TileMap* d = m->GetDefinition();
 				m->UpdateHoverPosition(pt.x, pt.y);
 		/*		
 
+								0,
+								0,
+								Engine::get().getRenderer().frame_buffer_width,
+								Engine::get().getRenderer().frame_buffer_height
 				
 
 				int x_quad = (int)pt.x / d->map_width;
@@ -102,7 +113,7 @@ namespace Editor {
 
 				}
 				*/
-			}
+			//}
 		}
 	}
 
