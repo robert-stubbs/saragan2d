@@ -17,7 +17,8 @@ namespace Editor {
 
 			GUI::Get().Begin("Main");
 
-				ImVec2 pos = ImGui::GetCursorScreenPos();
+				ImVec2 pos = ImGui::GetMousePos();
+				
 				gui_mouse_x = pos.x;
 				gui_mouse_y = pos.y;
 
@@ -58,21 +59,11 @@ namespace Editor {
 		Map* m = Engine::getWorld()->GetMap();
 		if (m != nullptr) {
 			
-			float x_to_window = x - window_x;
-			float y_to_window = y - window_y;
 
-			float vp_end_x = window_x + vp_width;
-			float vp_end_y = window_y + vp_height;
-
-			//if ((x >= window_x && x <= vp_end_x) && (y >= window_y && y <= vp_end_y)) {
-
-
-				float new_x = x_to_window;// *size_x;
-				float new_y = y_to_window;// *size_y;
-
-				LOG("X: " + std::to_string(x)  +" | WindowX: " + std::to_string(window_x) + " | XToWindow: " + std::to_string(x_to_window));
+				LOG("TEST" + std::to_string(gui_mouse_y) + " Y: " + std::to_string(y)  +" | WindowY: " + std::to_string(window_y));
 
 				// window X keeps moving window_x
+
 
 		/*		
 
@@ -85,14 +76,14 @@ namespace Editor {
 				//glm::vec3 pt = Engine::getRenderer().GetWorldPos2D((int)new_x, (int)new_y, Engine::get().default_cam->ProjectionMatrix, Engine::get().default_cam->ViewMatrix);
 
 				glm::vec3 pt = Engine::getRenderer().GetWorldPos2D(
-								(int)x,
-								(int)y,
+								(int)gui_mouse_x,
+								(int)gui_mouse_y,
 								Engine::get().default_cam->ProjectionMatrix, 
 								Engine::get().default_cam->ViewMatrix, 
 								window_x,
 								window_y,
-								vp_width,
-								vp_height
+								Engine::get().getRenderer().frame_buffer_width,
+								Engine::get().getRenderer().frame_buffer_height
 							);
 				TileMap* d = m->GetDefinition();
 				m->UpdateHoverPosition(pt.x, pt.y);
