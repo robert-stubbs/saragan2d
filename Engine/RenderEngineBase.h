@@ -9,6 +9,9 @@ namespace GameEngine {
 		public:
 			unsigned int CurrentTextureID = -1;
 
+			float frame_buffer_width = 0.0f;
+			float frame_buffer_height = 0.0f;
+
 			RenderEngineBase();
 			virtual ~RenderEngineBase();
 
@@ -25,6 +28,7 @@ namespace GameEngine {
 
 			virtual glm::vec3 GetWorldPos(int x, int y, glm::mat4 projection, glm::mat4 view) = 0;
 			virtual glm::vec3 GetWorldPos2D(int x, int y, glm::mat4 projection, glm::mat4 view) = 0;
+			virtual glm::vec3 GetWorldPos2D(int x, int y, glm::mat4 projection, glm::mat4 view, float vpx, float vpy, float vpx2, float vpy2) = 0;
 
 			virtual bool ResizeWindow(int Width, int Height) = 0;
 

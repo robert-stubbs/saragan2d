@@ -9,9 +9,6 @@ namespace GameEngine {
 	{
 		public:
 
-			float frame_buffer_width = 0.0f;
-			float frame_buffer_height = 0.0f;
-
 			OpenGLRenderEngine();
 			virtual ~OpenGLRenderEngine();
 
@@ -27,6 +24,7 @@ namespace GameEngine {
 
 			virtual glm::vec3 GetWorldPos(int x, int y, glm::mat4 projection, glm::mat4 view);
 			virtual glm::vec3 GetWorldPos2D(int x, int y, glm::mat4 projection, glm::mat4 view);
+			virtual glm::vec3 GetWorldPos2D(int x, int y, glm::mat4 projection, glm::mat4 view, float vpx, float vpy, float vpx2, float vpy2);
 
 			virtual bool ResizeWindow(int Width, int Height);
 			

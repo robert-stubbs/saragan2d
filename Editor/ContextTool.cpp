@@ -65,13 +65,9 @@ namespace Editor {
 
 			if ((x >= window_x && x <= vp_end_x) && (y >= window_y && y <= vp_end_y)) {
 
-				float size_x = (x - window_x) / vp_width;
-				float size_y = (y - window_y) / vp_height;
 
-
-
-				float new_x = x * size_x;
-				float new_y = y * size_y;
+				float new_x = x_to_window;// *size_x;
+				float new_y = y_to_window;// *size_y;
 
 		/*		
 
@@ -79,20 +75,33 @@ namespace Editor {
 				float new_y = vp_height * test_y;*/
 
 				// we are in the editor window
-				glm::vec3 pt = Engine::getRenderer().GetWorldPos2D((int)new_x, (int)new_y, Engine::get().default_cam->ProjectionMatrix, Engine::get().default_cam->ViewMatrix);
+				//glm::vec3 pt = Engine::getRenderer().GetWorldPos2D((int)new_x, (int)new_y, Engine::get().default_cam->ProjectionMatrix, Engine::get().default_cam->ViewMatrix);
 
+				glm::vec3 pt = Engine::getRenderer().GetWorldPos2D(
+								(int)x_to_window,
+								(int)y_to_window,
+								Engine::get().default_cam->ProjectionMatrix, 
+								Engine::get().default_cam->ViewMatrix, 
+								0, 
+								0, 
+								Engine::get().getRenderer().frame_buffer_width,
+								Engine::get().getRenderer().frame_buffer_height
+							);
 				TileMap* d = m->GetDefinition();
-
 				m->UpdateHoverPosition(pt.x, pt.y);
+		/*		
 
-				//int x_quad = (int)pt.x % d->map_width;
-				//int y_quad = (int)pt.y / d->map_height;
+				
 
-				//if (x_quad < d->map_width && y_quad < d->map_height) {
+				int x_quad = (int)pt.x / d->map_width;
+				int y_quad = (int)pt.y % d->map_height;
 
-				//	m->UpdateHoverPosition(x_quad * d->quad_width, y_quad * d->quad_height);
+				if (x_quad < d->map_width && y_quad < d->map_height) {
 
-				//}
+					m->UpdateHoverPosition(x_quad * d->quad_width, y_quad * d->quad_height);
+
+				}
+				*/
 			}
 		}
 	}

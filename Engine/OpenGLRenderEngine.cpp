@@ -168,6 +168,13 @@ namespace GameEngine {
 		return glm::unProject(glm::vec3((double)x, (double)winY, 0.0f), view, projection, glm::vec4(viewport[0], viewport[1], viewport[2], viewport[3]));
 	}
 
+	glm::vec3 OpenGLRenderEngine::GetWorldPos2D(int x, int y, glm::mat4 projection, glm::mat4 view, float vpx, float vpy, float vpx2, float vpy2)
+	{
+		float winY = (GLfloat)((vpy + vpy2) - y);
+
+		return glm::unProject(glm::vec3((double)x, (double)winY, 0.0f), view, projection, glm::vec4(vpx, vpy, vpx2, vpy2));
+	}
+
 	bool OpenGLRenderEngine::ResizeWindow(int Width, int Height)
 	{
 		if (Height == 0)
