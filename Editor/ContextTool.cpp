@@ -35,6 +35,7 @@ namespace Editor {
 					vp_height = viewportPanelSize.y;
 
 					Engine::getRenderer().ResizeFrameBuffer(Engine::get().FBO, Engine::get().FBOTexture, vp_width, vp_height);
+					Engine::get().current_cam->resize(vp_width, vp_height);
 				}
 
 				ImGui::Image(reinterpret_cast<void*>(Engine::get().FBOTexture), ImVec2(vp_width, vp_height), ImVec2{ 0, 1 }, ImVec2{ 1, 0 });
@@ -60,39 +61,25 @@ namespace Editor {
 		if (m != nullptr) {
 			
 
-				LOG("TEST" + std::to_string(gui_mouse_y) + " Y: " + std::to_string(y)  +" | WindowY: " + std::to_string(window_y));
+				LOG("TEST Y" + std::to_string(gui_mouse_y) + " Y: " + std::to_string(y)  +" | WindowY: " + std::to_string(window_y));
 
-				// window X keeps moving window_x
-
-
-		/*		
-
-		return glm::unProject(glm::vec3((double)x, (double)winY, 0.0f), view, projection, glm::vec4(vpx, vpy, vpx2, vpy2));
-
-				float new_x = vp_width * test_x;
-				float new_y = vp_height * test_y;*/
-
-				// we are in the editor window
-				//glm::vec3 pt = Engine::getRenderer().GetWorldPos2D((int)new_x, (int)new_y, Engine::get().default_cam->ProjectionMatrix, Engine::get().default_cam->ViewMatrix);
+				Engine& e = Engine::get();
+				Camera2D* c = Engine::get().current_cam;
 
 				glm::vec3 pt = Engine::getRenderer().GetWorldPos2D(
-								(int)gui_mouse_x,
-								(int)gui_mouse_y,
-								Engine::get().default_cam->ProjectionMatrix, 
-								Engine::get().default_cam->ViewMatrix, 
-								window_x,
-								window_y,
-								Engine::get().getRenderer().frame_buffer_width,
-								Engine::get().getRenderer().frame_buffer_height
-							);
+					(int)gui_mouse_x,
+					(int)gui_mouse_y,
+					Engine::get().current_cam->ProjectionMatrix, 
+					Engine::get().current_cam->ViewMatrix,
+					window_x,
+					window_y,
+					vp_width,
+					vp_height
+				);
 				TileMap* d = m->GetDefinition();
 				m->UpdateHoverPosition(pt.x, pt.y);
-		/*		
 
-								0,
-								0,
-								Engine::get().getRenderer().frame_buffer_width,
-								Engine::get().getRenderer().frame_buffer_height
+				/*
 				
 
 				int x_quad = (int)pt.x / d->map_width;

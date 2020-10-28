@@ -37,6 +37,7 @@ namespace GameEngine {
 		else {
 			current_cam->resize((float)width, (float)height);
 		}
+
 		if (RenderToFrameBuffer && FBO != 0) {
 
 			glBindFramebuffer(GL_FRAMEBUFFER, FBO);
