@@ -70,36 +70,34 @@ namespace Editor {
 			_parent->system_mouse_x = x;
 			_parent->system_mouse_y = y;
 
-			LOG("TEST Y" + std::to_string(_parent->gui_mouse_y) + " Y: " + std::to_string(y)  +" | WindowY: " + std::to_string(_parent->window_y));
-
 			Engine& e = Engine::get();
 			Camera2D* c = Engine::get().current_cam;
 
 			glm::vec3 pt = Engine::getRenderer().GetWorldPos2D(
-				(int)_parent->gui_mouse_x,
-				(int)_parent->gui_mouse_y,
+				(int)_parent->gui_mouse_x - _parent->window_x,
+				(int)_parent->gui_mouse_y - _parent->window_y,
 				Engine::get().current_cam->ProjectionMatrix, 
 				Engine::get().current_cam->ViewMatrix,
-				_parent->window_x,
-				_parent->window_y,
+				0,
+				0,
 				_parent->vp_width,
 				_parent->vp_height
 			);
 			TileMap* d = m->GetDefinition();
-			m->UpdateHoverPosition(pt.x, pt.y);
+			//m->UpdateHoverPosition(pt.x, pt.y);
 
-			/*
+			
 				
 
-			int x_quad = (int)pt.x / d->map_width;
-			int y_quad = (int)pt.y % d->map_height;
+			int x_quad = (int)pt.x / d->quad_width;
+			int y_quad = (int)pt.y / d->quad_height;
 
 			if (x_quad < d->map_width && y_quad < d->map_height) {
 
 				m->UpdateHoverPosition(x_quad * d->quad_width, y_quad * d->quad_height);
 
 			}
-			*/
+			
 		}
 	}
 
