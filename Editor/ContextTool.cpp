@@ -15,30 +15,37 @@ namespace Editor {
 
 			ImGui::PushStyleVar(ImGuiStyleVar_WindowPadding, ImVec2(0.0f, 0.0f));
 
-			GUI::Get().Begin("Main");
+			ImGuiWindowFlags window_flags = ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_NoMove;
+			window_flags |= ImGuiWindowFlags_NoBringToFrontOnFocus | ImGuiWindowFlags_NoNavFocus;
+
+			ImGuiWindowClass window_class;
+			window_class.DockNodeFlagsOverrideSet = ImGuiDockNodeFlags_NoTabBar | ImGuiDockNodeFlags_NoDocking;
+			ImGui::SetNextWindowClass(&window_class)
+				;
+			GUI::Get().Begin("Main", true, window_flags);
 
 				ImVec2 pos = ImGui::GetMousePos();
 				
-				gui_mouse_x = pos.x;
-				gui_mouse_y = pos.y;
+				_parent->gui_mouse_x = pos.x;
+				_parent->gui_mouse_y = pos.y;
 
 				ImVec2 window_pos =  ImGui::GetWindowPos();
 				
-				if (window_pos.x != window_x || window_pos.y != window_y) {
-					window_x = window_pos.x;
-					window_y = window_pos.y;
+				if (window_pos.x != _parent->window_x || window_pos.y != _parent->window_y) {
+					_parent->window_x = window_pos.x;
+					_parent->window_y = window_pos.y;
 				}
 
 				ImVec2 viewportPanelSize = ImGui::GetContentRegionAvail();
-				if (viewportPanelSize.x != vp_width || viewportPanelSize.y != vp_height) {
-					vp_width = viewportPanelSize.x;
-					vp_height = viewportPanelSize.y;
+				if (viewportPanelSize.x != _parent->vp_width || viewportPanelSize.y != _parent->vp_height) {
+					_parent->vp_width = viewportPanelSize.x;
+					_parent->vp_height = viewportPanelSize.y;
 
-					Engine::getRenderer().ResizeFrameBuffer(Engine::get().FBO, Engine::get().FBOTexture, vp_width, vp_height);
-					Engine::get().current_cam->resize(vp_width, vp_height);
+					Engine::getRenderer().ResizeFrameBuffer(Engine::get().FBO, Engine::get().FBOTexture, _parent->vp_width, _parent->vp_height);
+					Engine::get().current_cam->resize(_parent->vp_width, _parent->vp_height);
 				}
 
-				ImGui::Image(reinterpret_cast<void*>(Engine::get().FBOTexture), ImVec2(vp_width, vp_height), ImVec2{ 0, 1 }, ImVec2{ 1, 0 });
+				ImGui::Image(reinterpret_cast<void*>(Engine::get().FBOTexture), ImVec2(_parent->vp_width, _parent->vp_height), ImVec2{ 0, 1 }, ImVec2{ 1, 0 });
 
 				if (ImGui::IsWindowFocused()) {
 					Engine::get().EditorFocusViewport = true;
@@ -59,39 +66,40 @@ namespace Editor {
 		// This needs moved to the map when over the context window
 		Map* m = Engine::getWorld()->GetMap();
 		if (m != nullptr) {
-			
 
-				LOG("TEST Y" + std::to_string(gui_mouse_y) + " Y: " + std::to_string(y)  +" | WindowY: " + std::to_string(window_y));
+			_parent->system_mouse_x = x;
+			_parent->system_mouse_y = y;
 
-				Engine& e = Engine::get();
-				Camera2D* c = Engine::get().current_cam;
+			LOG("TEST Y" + std::to_string(_parent->gui_mouse_y) + " Y: " + std::to_string(y)  +" | WindowY: " + std::to_string(_parent->window_y));
 
-				glm::vec3 pt = Engine::getRenderer().GetWorldPos2D(
-					(int)gui_mouse_x,
-					(int)gui_mouse_y,
-					Engine::get().current_cam->ProjectionMatrix, 
-					Engine::get().current_cam->ViewMatrix,
-					window_x,
-					window_y,
-					vp_width,
-					vp_height
-				);
-				TileMap* d = m->GetDefinition();
-				m->UpdateHoverPosition(pt.x, pt.y);
+			Engine& e = Engine::get();
+			Camera2D* c = Engine::get().current_cam;
 
-				/*
+			glm::vec3 pt = Engine::getRenderer().GetWorldPos2D(
+				(int)_parent->gui_mouse_x,
+				(int)_parent->gui_mouse_y,
+				Engine::get().current_cam->ProjectionMatrix, 
+				Engine::get().current_cam->ViewMatrix,
+				_parent->window_x,
+				_parent->window_y,
+				_parent->vp_width,
+				_parent->vp_height
+			);
+			TileMap* d = m->GetDefinition();
+			m->UpdateHoverPosition(pt.x, pt.y);
+
+			/*
 				
 
-				int x_quad = (int)pt.x / d->map_width;
-				int y_quad = (int)pt.y % d->map_height;
+			int x_quad = (int)pt.x / d->map_width;
+			int y_quad = (int)pt.y % d->map_height;
 
-				if (x_quad < d->map_width && y_quad < d->map_height) {
+			if (x_quad < d->map_width && y_quad < d->map_height) {
 
-					m->UpdateHoverPosition(x_quad * d->quad_width, y_quad * d->quad_height);
+				m->UpdateHoverPosition(x_quad * d->quad_width, y_quad * d->quad_height);
 
-				}
-				*/
-			//}
+			}
+			*/
 		}
 	}
 

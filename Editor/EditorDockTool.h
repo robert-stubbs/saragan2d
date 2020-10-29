@@ -28,7 +28,6 @@ namespace Editor {
 
 		ImGuiID main_dock_id;
 
-
 	public:
 
 		EditorDockTool() {};

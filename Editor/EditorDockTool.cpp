@@ -3,7 +3,6 @@
 
 #include "GUI.h"
 #include "Engine.h"
-#include <imgui_internal.h>
 
 using namespace GameEngine;
 
@@ -14,14 +13,19 @@ namespace Editor {
 		_entity_manager_panel = Editor::EntityManagerTool();
 
 		_debug_window = Editor::DebugTool();
+		_debug_window.SetParent(this);
+
 		_resources_window = Editor::ResourcesTool();
+		_resources_window.SetParent(this);
 
 		_context_window = Editor::ContextTool();
+		_context_window.SetParent(this);
 
 		_tile_editor_tool = Editor::TileEditorTool();
 		_tile_editor_tool.SetParent(this);
 
 		_properties_tool = Editor::PropertiesTool();
+		_properties_tool.SetParent(this);
 
 		_current_tool = nullptr;
 	}
