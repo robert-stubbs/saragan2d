@@ -34,6 +34,11 @@ namespace Editor {
 	{
 		if (GUI::GetGUI().HasInstance()) {
 
+
+			ImVec2 pos = ImGui::GetMousePos();
+			gui_mouse_x = pos.x;
+			gui_mouse_y = pos.y;
+
 			static int initialized = 1;
 			static int new_window = 0;
 			ImGuiWindowFlags flags = ImGuiWindowFlags_MenuBar;

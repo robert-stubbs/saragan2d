@@ -66503,3 +66503,1492 @@ FPS: 60 Updates: 60
 FPS: 60 Updates: 60
 FPS: 60 Updates: 60
 FPS: 60 Updates: 60
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Post Load
+Starting Render Loop
+FPS: 32 Updates: 36
+FPS: 56 Updates: 83
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 56 Updates: 60
+FPS: 59 Updates: 60
+FPS: 56 Updates: 60
+FPS: 59 Updates: 59
+FPS: 58 Updates: 61
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 58 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 59 Updates: 60
+FPS: 59 Updates: 60
+FPS: 59 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 59 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 28 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 59 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 58 Updates: 60
+FPS: 59 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 59 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 59 Updates: 60
+FPS: 58 Updates: 59
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Post Load
+Starting Render Loop
+FPS: 57 Updates: 59
+FPS: 38 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Post Load
+Starting Render Loop
+FPS: 56 Updates: 57
+FPS: 47 Updates: 62
+FPS: 60 Updates: 60
+FPS: 59 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Post Load
+Starting Render Loop
+FPS: 56 Updates: 59
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+Mouse Up: 0
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Post Load
+Starting Render Loop
+FPS: 57 Updates: 59
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 40 Updates: 40
+Mouse Up: 0
+FPS: 52 Updates: 80
+Mouse Down: 0
+Mouse Up: 0
+FPS: 60 Updates: 60
+Mouse Down: 1
+Mouse Up: 1
+Mouse Down: 0
+FPS: 59 Updates: 60
+Mouse Up: 0
+Mouse Down: 0
+Mouse Up: 0
+FPS: 60 Updates: 60
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Post Load
+Starting Render Loop
+FPS: 49 Updates: 51
+FPS: 41 Updates: 68
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Post Load
+Starting Render Loop
+FPS: 36 Updates: 38
+FPS: 46 Updates: 81
+FPS: 59 Updates: 60
+Mouse Up: 0
+Mouse Down: 0
+FPS: 61 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+Mouse Up: 0
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+Mouse Down: 0
+FPS: 60 Updates: 60
+Mouse Up: 0
+FPS: 59 Updates: 60
+Mouse Down: 0
+FPS: 59 Updates: 60
+Mouse Up: 0
+Mouse Down: 1
+FPS: 59 Updates: 60
+Mouse Up: 1
+FPS: 57 Updates: 59
+FPS: 59 Updates: 61
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 59 Updates: 60
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Post Load
+Starting Render Loop
+FPS: 58 Updates: 59
+FPS: 37 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+LEFT Selected X: 2 Selected Y: 4
+LEFT Selected X: 2 Selected Y: 3
+FPS: 60 Updates: 60
+LEFT Selected X: 2 Selected Y: 3
+LEFT Selected X: 2 Selected Y: 3
+LEFT Selected X: 2 Selected Y: 3
+LEFT Selected X: 2 Selected Y: 3
+LEFT Selected X: 2 Selected Y: 3
+LEFT Selected X: 2 Selected Y: 3
+LEFT Selected X: 2 Selected Y: 3
+LEFT Selected X: 2 Selected Y: 3
+LEFT Selected X: 3 Selected Y: 3
+LEFT Selected X: 3 Selected Y: 3
+LEFT Selected X: 3 Selected Y: 3
+LEFT Selected X: 4 Selected Y: 3
+LEFT Selected X: 4 Selected Y: 3
+LEFT Selected X: 5 Selected Y: 3
+LEFT Selected X: 5 Selected Y: 3
+LEFT Selected X: 5 Selected Y: 3
+LEFT Selected X: 5 Selected Y: 3
+LEFT Selected X: 5 Selected Y: 3
+LEFT Selected X: 5 Selected Y: 3
+LEFT Selected X: 5 Selected Y: 3
+LEFT Selected X: 5 Selected Y: 3
+LEFT Selected X: 5 Selected Y: 3
+LEFT Selected X: 5 Selected Y: 3
+LEFT Selected X: 5 Selected Y: 3
+LEFT Selected X: 5 Selected Y: 3
+FPS: 60 Updates: 60
+LEFT Selected X: 5 Selected Y: 3
+LEFT Selected X: 5 Selected Y: 3
+LEFT Selected X: 5 Selected Y: 3
+LEFT Selected X: 5 Selected Y: 3
+LEFT Selected X: 5 Selected Y: 3
+LEFT Selected X: 5 Selected Y: 3
+LEFT Selected X: 5 Selected Y: 3
+LEFT Selected X: 5 Selected Y: 3
+LEFT Selected X: 5 Selected Y: 3
+LEFT Selected X: 5 Selected Y: 2
+LEFT Selected X: 5 Selected Y: 2
+LEFT Selected X: 5 Selected Y: 2
+LEFT Selected X: 5 Selected Y: 2
+LEFT Selected X: 5 Selected Y: 1
+LEFT Selected X: 5 Selected Y: 1
+LEFT Selected X: 5 Selected Y: 1
+LEFT Selected X: 5 Selected Y: 1
+FPS: 60 Updates: 60
+LEFT Selected X: 5 Selected Y: 1
+LEFT Selected X: 5 Selected Y: 1
+LEFT Selected X: 5 Selected Y: 1
+LEFT Selected X: 5 Selected Y: 1
+LEFT Selected X: 5 Selected Y: 1
+LEFT Selected X: 5 Selected Y: 0
+LEFT Selected X: 5 Selected Y: 0
+LEFT Selected X: 5 Selected Y: 0
+LEFT Selected X: 5 Selected Y: 0
+LEFT Selected X: 5 Selected Y: 0
+LEFT Selected X: 5 Selected Y: 0
+LEFT Selected X: 5 Selected Y: 0
+LEFT Selected X: 5 Selected Y: 0
+LEFT Selected X: 5 Selected Y: 0
+LEFT Selected X: 4 Selected Y: 0
+LEFT Selected X: 4 Selected Y: 0
+LEFT Selected X: 4 Selected Y: 0
+LEFT Selected X: 4 Selected Y: 0
+LEFT Selected X: 3 Selected Y: 0
+LEFT Selected X: 3 Selected Y: 0
+LEFT Selected X: 2 Selected Y: 0
+LEFT Selected X: 2 Selected Y: 0
+LEFT Selected X: 2 Selected Y: 0
+LEFT Selected X: 2 Selected Y: 0
+LEFT Selected X: 2 Selected Y: 0
+FPS: 60 Updates: 60
+LEFT Selected X: 2 Selected Y: 0
+LEFT Selected X: 2 Selected Y: 0
+LEFT Selected X: 1 Selected Y: 0
+LEFT Selected X: 1 Selected Y: 0
+LEFT Selected X: 1 Selected Y: 0
+LEFT Selected X: 1 Selected Y: 0
+LEFT Selected X: 1 Selected Y: 0
+LEFT Selected X: 1 Selected Y: 0
+LEFT Selected X: 0 Selected Y: 0
+LEFT Selected X: 0 Selected Y: 0
+LEFT Selected X: 0 Selected Y: 0
+LEFT Selected X: 0 Selected Y: 0
+FPS: 60 Updates: 60
+LEFT Selected X: 0 Selected Y: 0
+LEFT Selected X: 0 Selected Y: 0
+LEFT Selected X: 0 Selected Y: 0
+LEFT Selected X: 0 Selected Y: 0
+LEFT Selected X: 0 Selected Y: 0
+LEFT Selected X: 0 Selected Y: 1
+LEFT Selected X: 0 Selected Y: 1
+LEFT Selected X: 0 Selected Y: 1
+FPS: 60 Updates: 60
+LEFT Selected X: 0 Selected Y: 1
+LEFT Selected X: 0 Selected Y: 1
+FPS: 60 Updates: 60
+LEFT Selected X: 0 Selected Y: 1
+LEFT Selected X: 0 Selected Y: 1
+LEFT Selected X: 0 Selected Y: 1
+LEFT Selected X: 0 Selected Y: 1
+LEFT Selected X: 0 Selected Y: 1
+LEFT Selected X: 0 Selected Y: 1
+LEFT Selected X: 0 Selected Y: 1
+LEFT Selected X: 0 Selected Y: 1
+LEFT Selected X: 0 Selected Y: 1
+LEFT Selected X: 1 Selected Y: 1
+LEFT Selected X: 1 Selected Y: 1
+LEFT Selected X: 1 Selected Y: 1
+LEFT Selected X: 1 Selected Y: 1
+LEFT Selected X: 1 Selected Y: 2
+LEFT Selected X: 1 Selected Y: 2
+LEFT Selected X: 1 Selected Y: 2
+LEFT Selected X: 1 Selected Y: 2
+LEFT Selected X: 1 Selected Y: 2
+LEFT Selected X: 1 Selected Y: 2
+LEFT Selected X: 1 Selected Y: 2
+LEFT Selected X: 1 Selected Y: 2
+LEFT Selected X: 1 Selected Y: 2
+LEFT Selected X: 1 Selected Y: 2
+LEFT Selected X: 1 Selected Y: 2
+LEFT Selected X: 1 Selected Y: 2
+LEFT Selected X: 1 Selected Y: 2
+LEFT Selected X: 1 Selected Y: 2
+LEFT Selected X: 1 Selected Y: 2
+LEFT Selected X: 1 Selected Y: 2
+LEFT Selected X: 1 Selected Y: 2
+LEFT Selected X: 1 Selected Y: 2
+LEFT Selected X: 1 Selected Y: 2
+LEFT Selected X: 1 Selected Y: 2
+LEFT Selected X: 1 Selected Y: 2
+LEFT Selected X: 1 Selected Y: 2
+FPS: 60 Updates: 60
+LEFT Selected X: 1 Selected Y: 2
+LEFT Selected X: 2 Selected Y: 2
+LEFT Selected X: 2 Selected Y: 2
+LEFT Selected X: 2 Selected Y: 2
+LEFT Selected X: 2 Selected Y: 2
+LEFT Selected X: 2 Selected Y: 2
+LEFT Selected X: 2 Selected Y: 2
+LEFT Selected X: 2 Selected Y: 2
+LEFT Selected X: 2 Selected Y: 2
+LEFT Selected X: 2 Selected Y: 2
+LEFT Selected X: 2 Selected Y: 2
+LEFT Selected X: 2 Selected Y: 2
+LEFT Selected X: 3 Selected Y: 2
+LEFT Selected X: 3 Selected Y: 2
+LEFT Selected X: 3 Selected Y: 2
+LEFT Selected X: 3 Selected Y: 2
+LEFT Selected X: 3 Selected Y: 2
+LEFT Selected X: 3 Selected Y: 2
+LEFT Selected X: 3 Selected Y: 2
+LEFT Selected X: 3 Selected Y: 2
+LEFT Selected X: 3 Selected Y: 2
+LEFT Selected X: 3 Selected Y: 2
+LEFT Selected X: 3 Selected Y: 2
+FPS: 60 Updates: 60
+LEFT Selected X: 3 Selected Y: 2
+LEFT Selected X: 4 Selected Y: 2
+LEFT Selected X: 4 Selected Y: 2
+LEFT Selected X: 5 Selected Y: 2
+FPS: 60 Updates: 60
+LEFT Selected X: 5 Selected Y: 3
+LEFT Selected X: 6 Selected Y: 3
+LEFT Selected X: 6 Selected Y: 3
+LEFT Selected X: 7 Selected Y: 4
+LEFT Selected X: 7 Selected Y: 4
+LEFT Selected X: 7 Selected Y: 5
+LEFT Selected X: 7 Selected Y: 5
+LEFT Selected X: 7 Selected Y: 5
+LEFT Selected X: 7 Selected Y: 5
+LEFT Selected X: 7 Selected Y: 5
+LEFT Selected X: 7 Selected Y: 5
+LEFT Selected X: 6 Selected Y: 5
+LEFT Selected X: 6 Selected Y: 5
+LEFT Selected X: 6 Selected Y: 5
+LEFT Selected X: 6 Selected Y: 5
+LEFT Selected X: 5 Selected Y: 5
+LEFT Selected X: 5 Selected Y: 5
+LEFT Selected X: 5 Selected Y: 5
+LEFT Selected X: 5 Selected Y: 5
+LEFT Selected X: 5 Selected Y: 5
+LEFT Selected X: 5 Selected Y: 4
+LEFT Selected X: 4 Selected Y: 4
+LEFT Selected X: 4 Selected Y: 4
+LEFT Selected X: 5 Selected Y: 4
+LEFT Selected X: 5 Selected Y: 4
+LEFT Selected X: 5 Selected Y: 4
+LEFT Selected X: 5 Selected Y: 4
+LEFT Selected X: 5 Selected Y: 4
+LEFT Selected X: 5 Selected Y: 4
+LEFT Selected X: 5 Selected Y: 4
+LEFT Selected X: 5 Selected Y: 4
+LEFT Selected X: 5 Selected Y: 4
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+LEFT Selected X: 5 Selected Y: 4
+LEFT Selected X: 5 Selected Y: 4
+LEFT Selected X: 5 Selected Y: 4
+LEFT Selected X: 5 Selected Y: 4
+FPS: 60 Updates: 60
+LEFT Selected X: 5 Selected Y: 4
+LEFT Selected X: 5 Selected Y: 4
+LEFT Selected X: 4 Selected Y: 4
+LEFT Selected X: 4 Selected Y: 4
+LEFT Selected X: 3 Selected Y: 4
+LEFT Selected X: 2 Selected Y: 4
+LEFT Selected X: 2 Selected Y: 4
+LEFT Selected X: 1 Selected Y: 3
+LEFT Selected X: 1 Selected Y: 3
+LEFT Selected X: 1 Selected Y: 3
+LEFT Selected X: 1 Selected Y: 3
+LEFT Selected X: 1 Selected Y: 3
+LEFT Selected X: 1 Selected Y: 2
+LEFT Selected X: 1 Selected Y: 2
+LEFT Selected X: 1 Selected Y: 2
+LEFT Selected X: 2 Selected Y: 2
+LEFT Selected X: 3 Selected Y: 1
+LEFT Selected X: 4 Selected Y: 1
+LEFT Selected X: 4 Selected Y: 1
+LEFT Selected X: 4 Selected Y: 1
+LEFT Selected X: 5 Selected Y: 1
+LEFT Selected X: 5 Selected Y: 2
+LEFT Selected X: 5 Selected Y: 2
+LEFT Selected X: 5 Selected Y: 2
+LEFT Selected X: 6 Selected Y: 3
+LEFT Selected X: 7 Selected Y: 4
+LEFT Selected X: 7 Selected Y: 4
+LEFT Selected X: 7 Selected Y: 5
+LEFT Selected X: 7 Selected Y: 6
+LEFT Selected X: 7 Selected Y: 7
+LEFT Selected X: 7 Selected Y: 7
+LEFT Selected X: 7 Selected Y: 7
+LEFT Selected X: 7 Selected Y: 7
+LEFT Selected X: 6 Selected Y: 7
+LEFT Selected X: 6 Selected Y: 7
+LEFT Selected X: 5 Selected Y: 6
+LEFT Selected X: 5 Selected Y: 6
+LEFT Selected X: 5 Selected Y: 6
+LEFT Selected X: 4 Selected Y: 5
+LEFT Selected X: 4 Selected Y: 5
+LEFT Selected X: 4 Selected Y: 4
+LEFT Selected X: 4 Selected Y: 4
+LEFT Selected X: 4 Selected Y: 3
+LEFT Selected X: 5 Selected Y: 3
+LEFT Selected X: 5 Selected Y: 3
+LEFT Selected X: 5 Selected Y: 3
+LEFT Selected X: 5 Selected Y: 3
+LEFT Selected X: 6 Selected Y: 3
+LEFT Selected X: 6 Selected Y: 3
+LEFT Selected X: 6 Selected Y: 3
+LEFT Selected X: 6 Selected Y: 4
+LEFT Selected X: 6 Selected Y: 4
+LEFT Selected X: 6 Selected Y: 4
+LEFT Selected X: 6 Selected Y: 5
+LEFT Selected X: 6 Selected Y: 5
+FPS: 60 Updates: 60
+LEFT Selected X: 6 Selected Y: 5
+LEFT Selected X: 6 Selected Y: 5
+LEFT Selected X: 6 Selected Y: 5
+LEFT Selected X: 6 Selected Y: 5
+LEFT Selected X: 6 Selected Y: 5
+LEFT Selected X: 6 Selected Y: 5
+LEFT Selected X: 6 Selected Y: 5
+LEFT Selected X: 7 Selected Y: 6
+LEFT Selected X: 7 Selected Y: 6
+LEFT Selected X: 7 Selected Y: 6
+LEFT Selected X: 7 Selected Y: 6
+LEFT Selected X: 7 Selected Y: 6
+LEFT Selected X: 7 Selected Y: 6
+LEFT Selected X: 7 Selected Y: 6
+LEFT Selected X: 7 Selected Y: 6
+LEFT Selected X: 7 Selected Y: 6
+LEFT Selected X: 7 Selected Y: 6
+LEFT Selected X: 7 Selected Y: 6
+LEFT Selected X: 7 Selected Y: 6
+LEFT Selected X: 7 Selected Y: 6
+FPS: 60 Updates: 60
+LEFT Selected X: 7 Selected Y: 6
+LEFT Selected X: 7 Selected Y: 6
+LEFT Selected X: 6 Selected Y: 6
+LEFT Selected X: 6 Selected Y: 6
+LEFT Selected X: 6 Selected Y: 5
+LEFT Selected X: 6 Selected Y: 5
+LEFT Selected X: 6 Selected Y: 5
+LEFT Selected X: 6 Selected Y: 5
+LEFT Selected X: 6 Selected Y: 5
+LEFT Selected X: 6 Selected Y: 5
+LEFT Selected X: 6 Selected Y: 5
+LEFT Selected X: 6 Selected Y: 5
+LEFT Selected X: 6 Selected Y: 4
+LEFT Selected X: 6 Selected Y: 4
+LEFT Selected X: 6 Selected Y: 4
+LEFT Selected X: 6 Selected Y: 4
+LEFT Selected X: 6 Selected Y: 4
+LEFT Selected X: 6 Selected Y: 4
+LEFT Selected X: 6 Selected Y: 4
+LEFT Selected X: 6 Selected Y: 4
+LEFT Selected X: 6 Selected Y: 4
+LEFT Selected X: 7 Selected Y: 4
+LEFT Selected X: 7 Selected Y: 4
+LEFT Selected X: 7 Selected Y: 4
+LEFT Selected X: 7 Selected Y: 4
+FPS: 60 Updates: 60
+LEFT Selected X: 7 Selected Y: 4
+LEFT Selected X: 7 Selected Y: 4
+LEFT Selected X: 7 Selected Y: 5
+LEFT Selected X: 6 Selected Y: 5
+LEFT Selected X: 7 Selected Y: 5
+LEFT Selected X: 7 Selected Y: 5
+LEFT Selected X: 7 Selected Y: 5
+LEFT Selected X: 6 Selected Y: 5
+LEFT Selected X: 6 Selected Y: 6
+LEFT Selected X: 6 Selected Y: 6
+LEFT Selected X: 6 Selected Y: 6
+LEFT Selected X: 6 Selected Y: 6
+LEFT Selected X: 6 Selected Y: 5
+LEFT Selected X: 6 Selected Y: 5
+LEFT Selected X: 6 Selected Y: 5
+LEFT Selected X: 5 Selected Y: 5
+LEFT Selected X: 5 Selected Y: 4
+LEFT Selected X: 5 Selected Y: 4
+LEFT Selected X: 5 Selected Y: 4
+LEFT Selected X: 5 Selected Y: 4
+LEFT Selected X: 5 Selected Y: 4
+LEFT Selected X: 5 Selected Y: 4
+LEFT Selected X: 5 Selected Y: 4
+LEFT Selected X: 5 Selected Y: 4
+LEFT Selected X: 5 Selected Y: 4
+LEFT Selected X: 5 Selected Y: 4
+FPS: 60 Updates: 60
+LEFT Selected X: 5 Selected Y: 4
+LEFT Selected X: 5 Selected Y: 4
+LEFT Selected X: 5 Selected Y: 4
+LEFT Selected X: 5 Selected Y: 4
+LEFT Selected X: 5 Selected Y: 4
+LEFT Selected X: 5 Selected Y: 4
+LEFT Selected X: 5 Selected Y: 4
+LEFT Selected X: 5 Selected Y: 4
+LEFT Selected X: 5 Selected Y: 4
+LEFT Selected X: 5 Selected Y: 4
+LEFT Selected X: 6 Selected Y: 4
+LEFT Selected X: 6 Selected Y: 4
+LEFT Selected X: 6 Selected Y: 5
+LEFT Selected X: 6 Selected Y: 5
+LEFT Selected X: 7 Selected Y: 5
+LEFT Selected X: 7 Selected Y: 5
+LEFT Selected X: 7 Selected Y: 6
+LEFT Selected X: 8 Selected Y: 6
+LEFT Selected X: 8 Selected Y: 6
+LEFT Selected X: 8 Selected Y: 6
+LEFT Selected X: 8 Selected Y: 6
+LEFT Selected X: 8 Selected Y: 6
+LEFT Selected X: 8 Selected Y: 6
+LEFT Selected X: 8 Selected Y: 6
+LEFT Selected X: 8 Selected Y: 6
+LEFT Selected X: 8 Selected Y: 6
+LEFT Selected X: 8 Selected Y: 6
+LEFT Selected X: 9 Selected Y: 7
+LEFT Selected X: 9 Selected Y: 7
+LEFT Selected X: 9 Selected Y: 7
+LEFT Selected X: 9 Selected Y: 7
+LEFT Selected X: 9 Selected Y: 7
+LEFT Selected X: 9 Selected Y: 7
+LEFT Selected X: 9 Selected Y: 7
+LEFT Selected X: 9 Selected Y: 7
+LEFT Selected X: 9 Selected Y: 7
+LEFT Selected X: 9 Selected Y: 7
+LEFT Selected X: 9 Selected Y: 8
+LEFT Selected X: 9 Selected Y: 8
+LEFT Selected X: 8 Selected Y: 8
+LEFT Selected X: 8 Selected Y: 8
+LEFT Selected X: 8 Selected Y: 8
+LEFT Selected X: 8 Selected Y: 8
+LEFT Selected X: 7 Selected Y: 9
+LEFT Selected X: 7 Selected Y: 9
+LEFT Selected X: 7 Selected Y: 9
+LEFT Selected X: 7 Selected Y: 9
+LEFT Selected X: 7 Selected Y: 9
+LEFT Selected X: 6 Selected Y: 9
+FPS: 60 Updates: 60
+LEFT Selected X: 6 Selected Y: 9
+LEFT Selected X: 6 Selected Y: 9
+LEFT Selected X: 6 Selected Y: 9
+LEFT Selected X: 6 Selected Y: 9
+LEFT Selected X: 6 Selected Y: 9
+LEFT Selected X: 5 Selected Y: 9
+LEFT Selected X: 5 Selected Y: 9
+LEFT Selected X: 5 Selected Y: 9
+LEFT Selected X: 5 Selected Y: 9
+LEFT Selected X: 4 Selected Y: 9
+LEFT Selected X: 4 Selected Y: 9
+LEFT Selected X: 4 Selected Y: 9
+LEFT Selected X: 4 Selected Y: 9
+LEFT Selected X: 4 Selected Y: 9
+LEFT Selected X: 4 Selected Y: 9
+LEFT Selected X: 4 Selected Y: 9
+LEFT Selected X: 4 Selected Y: 9
+LEFT Selected X: 4 Selected Y: 9
+LEFT Selected X: 4 Selected Y: 9
+LEFT Selected X: 4 Selected Y: 9
+LEFT Selected X: 4 Selected Y: 8
+LEFT Selected X: 4 Selected Y: 8
+LEFT Selected X: 4 Selected Y: 8
+LEFT Selected X: 4 Selected Y: 7
+LEFT Selected X: 4 Selected Y: 7
+LEFT Selected X: 4 Selected Y: 7
+LEFT Selected X: 4 Selected Y: 7
+LEFT Selected X: 4 Selected Y: 7
+LEFT Selected X: 4 Selected Y: 6
+LEFT Selected X: 4 Selected Y: 6
+LEFT Selected X: 4 Selected Y: 6
+LEFT Selected X: 4 Selected Y: 6
+LEFT Selected X: 4 Selected Y: 6
+LEFT Selected X: 4 Selected Y: 6
+LEFT Selected X: 5 Selected Y: 6
+LEFT Selected X: 5 Selected Y: 6
+LEFT Selected X: 5 Selected Y: 6
+LEFT Selected X: 5 Selected Y: 6
+LEFT Selected X: 5 Selected Y: 6
+LEFT Selected X: 5 Selected Y: 6
+LEFT Selected X: 5 Selected Y: 6
+LEFT Selected X: 6 Selected Y: 7
+LEFT Selected X: 7 Selected Y: 7
+LEFT Selected X: 7 Selected Y: 7
+LEFT Selected X: 7 Selected Y: 7
+LEFT Selected X: 8 Selected Y: 7
+LEFT Selected X: 8 Selected Y: 7
+LEFT Selected X: 8 Selected Y: 7
+FPS: 60 Updates: 60
+LEFT Selected X: 9 Selected Y: 7
+LEFT Selected X: 9 Selected Y: 7
+LEFT Selected X: 9 Selected Y: 7
+LEFT Selected X: 9 Selected Y: 7
+LEFT Selected X: 9 Selected Y: 7
+LEFT Selected X: 9 Selected Y: 7
+LEFT Selected X: 9 Selected Y: 7
+LEFT Selected X: 9 Selected Y: 7
+LEFT Selected X: 9 Selected Y: 7
+LEFT Selected X: 10 Selected Y: 7
+LEFT Selected X: 10 Selected Y: 7
+LEFT Selected X: 10 Selected Y: 7
+LEFT Selected X: 10 Selected Y: 7
+LEFT Selected X: 10 Selected Y: 7
+LEFT Selected X: 10 Selected Y: 7
+LEFT Selected X: 10 Selected Y: 7
+LEFT Selected X: 10 Selected Y: 7
+LEFT Selected X: 10 Selected Y: 7
+LEFT Selected X: 10 Selected Y: 7
+LEFT Selected X: 10 Selected Y: 7
+LEFT Selected X: 10 Selected Y: 7
+LEFT Selected X: 10 Selected Y: 7
+LEFT Selected X: 10 Selected Y: 7
+LEFT Selected X: 10 Selected Y: 7
+LEFT Selected X: 10 Selected Y: 7
+LEFT Selected X: 10 Selected Y: 7
+LEFT Selected X: 9 Selected Y: 7
+LEFT Selected X: 9 Selected Y: 7
+LEFT Selected X: 8 Selected Y: 7
+LEFT Selected X: 8 Selected Y: 7
+LEFT Selected X: 7 Selected Y: 7
+LEFT Selected X: 7 Selected Y: 7
+LEFT Selected X: 6 Selected Y: 6
+LEFT Selected X: 5 Selected Y: 6
+LEFT Selected X: 5 Selected Y: 6
+LEFT Selected X: 4 Selected Y: 6
+LEFT Selected X: 4 Selected Y: 6
+LEFT Selected X: 4 Selected Y: 6
+LEFT Selected X: 4 Selected Y: 6
+LEFT Selected X: 4 Selected Y: 6
+LEFT Selected X: 4 Selected Y: 6
+LEFT Selected X: 4 Selected Y: 6
+LEFT Selected X: 4 Selected Y: 6
+LEFT Selected X: 4 Selected Y: 6
+LEFT Selected X: 4 Selected Y: 6
+LEFT Selected X: 5 Selected Y: 6
+LEFT Selected X: 5 Selected Y: 6
+LEFT Selected X: 5 Selected Y: 6
+LEFT Selected X: 6 Selected Y: 6
+LEFT Selected X: 7 Selected Y: 6
+LEFT Selected X: 8 Selected Y: 6
+FPS: 60 Updates: 60
+LEFT Selected X: 8 Selected Y: 6
+LEFT Selected X: 9 Selected Y: 6
+LEFT Selected X: 9 Selected Y: 6
+LEFT Selected X: 9 Selected Y: 6
+LEFT Selected X: 9 Selected Y: 6
+LEFT Selected X: 9 Selected Y: 6
+LEFT Selected X: 9 Selected Y: 6
+LEFT Selected X: 9 Selected Y: 6
+LEFT Selected X: 9 Selected Y: 6
+LEFT Selected X: 9 Selected Y: 6
+LEFT Selected X: 9 Selected Y: 6
+LEFT Selected X: 9 Selected Y: 6
+LEFT Selected X: 9 Selected Y: 6
+LEFT Selected X: 9 Selected Y: 6
+LEFT Selected X: 9 Selected Y: 6
+LEFT Selected X: 9 Selected Y: 6
+LEFT Selected X: 10 Selected Y: 6
+LEFT Selected X: 10 Selected Y: 6
+LEFT Selected X: 10 Selected Y: 6
+LEFT Selected X: 10 Selected Y: 6
+LEFT Selected X: 10 Selected Y: 6
+LEFT Selected X: 10 Selected Y: 6
+FPS: 60 Updates: 60
+LEFT Selected X: 10 Selected Y: 6
+LEFT Selected X: 10 Selected Y: 6
+LEFT Selected X: 10 Selected Y: 6
+LEFT Selected X: 10 Selected Y: 6
+LEFT Selected X: 10 Selected Y: 6
+LEFT Selected X: 10 Selected Y: 6
+LEFT Selected X: 10 Selected Y: 6
+FPS: 58 Updates: 60
+LEFT Selected X: 10 Selected Y: 6
+LEFT Selected X: 9 Selected Y: 6
+LEFT Selected X: 9 Selected Y: 6
+LEFT Selected X: 8 Selected Y: 7
+LEFT Selected X: 7 Selected Y: 7
+LEFT Selected X: 7 Selected Y: 7
+LEFT Selected X: 7 Selected Y: 7
+LEFT Selected X: 7 Selected Y: 7
+LEFT Selected X: 7 Selected Y: 7
+LEFT Selected X: 7 Selected Y: 7
+LEFT Selected X: 7 Selected Y: 6
+LEFT Selected X: 8 Selected Y: 6
+FPS: 60 Updates: 60
+LEFT Selected X: 8 Selected Y: 6
+LEFT Selected X: 8 Selected Y: 6
+LEFT Selected X: 8 Selected Y: 7
+LEFT Selected X: 9 Selected Y: 7
+LEFT Selected X: 9 Selected Y: 7
+LEFT Selected X: 9 Selected Y: 8
+LEFT Selected X: 9 Selected Y: 8
+LEFT Selected X: 9 Selected Y: 8
+LEFT Selected X: 9 Selected Y: 8
+LEFT Selected X: 8 Selected Y: 8
+LEFT Selected X: 8 Selected Y: 9
+LEFT Selected X: 8 Selected Y: 8
+LEFT Selected X: 8 Selected Y: 8
+LEFT Selected X: 7 Selected Y: 8
+LEFT Selected X: 7 Selected Y: 8
+LEFT Selected X: 7 Selected Y: 7
+LEFT Selected X: 7 Selected Y: 7
+LEFT Selected X: 7 Selected Y: 7
+LEFT Selected X: 7 Selected Y: 7
+LEFT Selected X: 7 Selected Y: 6
+LEFT Selected X: 7 Selected Y: 6
+LEFT Selected X: 8 Selected Y: 6
+LEFT Selected X: 8 Selected Y: 6
+LEFT Selected X: 8 Selected Y: 6
+LEFT Selected X: 8 Selected Y: 6
+LEFT Selected X: 8 Selected Y: 6
+LEFT Selected X: 8 Selected Y: 6
+LEFT Selected X: 8 Selected Y: 6
+LEFT Selected X: 9 Selected Y: 6
+LEFT Selected X: 11 Selected Y: 5
+LEFT Selected X: 11 Selected Y: 5
+LEFT Selected X: 12 Selected Y: 5
+LEFT Selected X: 12 Selected Y: 5
+LEFT Selected X: 14 Selected Y: 4
+LEFT Selected X: 16 Selected Y: 3
+FPS: 60 Updates: 60
+LEFT Selected X: 18 Selected Y: 3
+LEFT Selected X: 19 Selected Y: 2
+LEFT Selected X: 20 Selected Y: 2
+LEFT Selected X: 20 Selected Y: 2
+LEFT Selected X: 20 Selected Y: 1
+LEFT Selected X: 20 Selected Y: 1
+LEFT Selected X: 21 Selected Y: 1
+LEFT Selected X: 21 Selected Y: 1
+LEFT Selected X: 21 Selected Y: 1
+LEFT Selected X: 21 Selected Y: 0
+LEFT Selected X: 21 Selected Y: 0
+LEFT Selected X: 21 Selected Y: 0
+LEFT Selected X: 21 Selected Y: 0
+LEFT Selected X: 22 Selected Y: 0
+LEFT Selected X: 22 Selected Y: 0
+LEFT Selected X: 22 Selected Y: 0
+LEFT Selected X: 22 Selected Y: 0
+LEFT Selected X: 22 Selected Y: 0
+LEFT Selected X: 22 Selected Y: 0
+LEFT Selected X: 22 Selected Y: 0
+LEFT Selected X: 22 Selected Y: 0
+LEFT Selected X: 22 Selected Y: 0
+LEFT Selected X: 22 Selected Y: 0
+LEFT Selected X: 22 Selected Y: 0
+LEFT Selected X: 22 Selected Y: 0
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Post Load
+Starting Render Loop
+FPS: 28 Updates: 30
+FPS: 56 Updates: 89
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 59 Updates: 60
+LEFT Selected X: 3 Selected Y: 2
+LEFT Selected X: 3 Selected Y: 2
+LEFT Selected X: 3 Selected Y: 2
+LEFT Selected X: 3 Selected Y: 3
+LEFT Selected X: 3 Selected Y: 3
+LEFT Selected X: 3 Selected Y: 3
+LEFT Selected X: 3 Selected Y: 3
+LEFT Selected X: 3 Selected Y: 3
+LEFT Selected X: 3 Selected Y: 3
+LEFT Selected X: 3 Selected Y: 3
+LEFT Selected X: 3 Selected Y: 3
+LEFT Selected X: 3 Selected Y: 3
+LEFT Selected X: 3 Selected Y: 3
+LEFT Selected X: 4 Selected Y: 3
+LEFT Selected X: 4 Selected Y: 3
+LEFT Selected X: 4 Selected Y: 3
+LEFT Selected X: 4 Selected Y: 3
+FPS: 60 Updates: 60
+LEFT Selected X: 4 Selected Y: 3
+LEFT Selected X: 5 Selected Y: 4
+LEFT Selected X: 5 Selected Y: 4
+LEFT Selected X: 5 Selected Y: 4
+LEFT Selected X: 5 Selected Y: 4
+LEFT Selected X: 5 Selected Y: 4
+LEFT Selected X: 5 Selected Y: 4
+LEFT Selected X: 5 Selected Y: 4
+LEFT Selected X: 5 Selected Y: 4
+LEFT Selected X: 5 Selected Y: 4
+LEFT Selected X: 5 Selected Y: 4
+LEFT Selected X: 6 Selected Y: 4
+LEFT Selected X: 6 Selected Y: 4
+LEFT Selected X: 6 Selected Y: 4
+LEFT Selected X: 6 Selected Y: 4
+LEFT Selected X: 7 Selected Y: 4
+LEFT Selected X: 7 Selected Y: 4
+LEFT Selected X: 7 Selected Y: 4
+LEFT Selected X: 7 Selected Y: 4
+LEFT Selected X: 7 Selected Y: 4
+LEFT Selected X: 8 Selected Y: 4
+LEFT Selected X: 8 Selected Y: 4
+LEFT Selected X: 8 Selected Y: 4
+LEFT Selected X: 8 Selected Y: 4
+LEFT Selected X: 8 Selected Y: 4
+LEFT Selected X: 8 Selected Y: 4
+LEFT Selected X: 9 Selected Y: 4
+LEFT Selected X: 9 Selected Y: 4
+LEFT Selected X: 9 Selected Y: 4
+FPS: 60 Updates: 60
+Right Selected X: 9 Selected Y: 3
+Right Selected X: 9 Selected Y: 3
+Right Selected X: 9 Selected Y: 3
+Right Selected X: 9 Selected Y: 3
+Right Selected X: 8 Selected Y: 3
+Right Selected X: 8 Selected Y: 3
+Right Selected X: 8 Selected Y: 3
+Right Selected X: 8 Selected Y: 4
+Right Selected X: 8 Selected Y: 4
+Right Selected X: 8 Selected Y: 4
+Right Selected X: 7 Selected Y: 4
+Right Selected X: 7 Selected Y: 4
+Right Selected X: 7 Selected Y: 4
+Right Selected X: 6 Selected Y: 5
+Right Selected X: 6 Selected Y: 5
+Right Selected X: 6 Selected Y: 5
+Right Selected X: 6 Selected Y: 5
+Right Selected X: 6 Selected Y: 5
+Right Selected X: 6 Selected Y: 5
+Right Selected X: 5 Selected Y: 5
+FPS: 60 Updates: 60
+Right Selected X: 5 Selected Y: 5
+Right Selected X: 5 Selected Y: 5
+Right Selected X: 5 Selected Y: 5
+Right Selected X: 5 Selected Y: 5
+Right Selected X: 5 Selected Y: 5
+Right Selected X: 5 Selected Y: 5
+Right Selected X: 5 Selected Y: 5
+Right Selected X: 4 Selected Y: 5
+Right Selected X: 4 Selected Y: 6
+Right Selected X: 4 Selected Y: 6
+Right Selected X: 4 Selected Y: 6
+Right Selected X: 4 Selected Y: 6
+Right Selected X: 4 Selected Y: 6
+Right Selected X: 4 Selected Y: 7
+Right Selected X: 4 Selected Y: 7
+Right Selected X: 4 Selected Y: 7
+Right Selected X: 4 Selected Y: 7
+Right Selected X: 4 Selected Y: 8
+Right Selected X: 4 Selected Y: 8
+Right Selected X: 4 Selected Y: 8
+Right Selected X: 4 Selected Y: 8
+Right Selected X: 4 Selected Y: 8
+Right Selected X: 5 Selected Y: 8
+Right Selected X: 5 Selected Y: 8
+Right Selected X: 5 Selected Y: 9
+Right Selected X: 5 Selected Y: 9
+Right Selected X: 5 Selected Y: 9
+Right Selected X: 5 Selected Y: 9
+Right Selected X: 5 Selected Y: 9
+LEFT Selected X: 5 Selected Y: 10
+LEFT Selected X: 5 Selected Y: 10
+LEFT Selected X: 5 Selected Y: 10
+LEFT Selected X: 6 Selected Y: 10
+LEFT Selected X: 6 Selected Y: 10
+LEFT Selected X: 7 Selected Y: 10
+LEFT Selected X: 7 Selected Y: 10
+FPS: 60 Updates: 60
+LEFT Selected X: 7 Selected Y: 10
+LEFT Selected X: 8 Selected Y: 11
+LEFT Selected X: 8 Selected Y: 11
+LEFT Selected X: 9 Selected Y: 11
+LEFT Selected X: 9 Selected Y: 11
+LEFT Selected X: 10 Selected Y: 11
+LEFT Selected X: 10 Selected Y: 11
+LEFT Selected X: 11 Selected Y: 11
+LEFT Selected X: 11 Selected Y: 10
+LEFT Selected X: 11 Selected Y: 10
+LEFT Selected X: 12 Selected Y: 10
+LEFT Selected X: 12 Selected Y: 10
+LEFT Selected X: 12 Selected Y: 10
+LEFT Selected X: 12 Selected Y: 10
+LEFT Selected X: 12 Selected Y: 10
+LEFT Selected X: 13 Selected Y: 9
+LEFT Selected X: 13 Selected Y: 9
+LEFT Selected X: 13 Selected Y: 8
+LEFT Selected X: 13 Selected Y: 7
+LEFT Selected X: 13 Selected Y: 7
+LEFT Selected X: 13 Selected Y: 6
+LEFT Selected X: 13 Selected Y: 6
+LEFT Selected X: 12 Selected Y: 5
+LEFT Selected X: 12 Selected Y: 5
+LEFT Selected X: 11 Selected Y: 5
+LEFT Selected X: 11 Selected Y: 4
+LEFT Selected X: 10 Selected Y: 4
+LEFT Selected X: 9 Selected Y: 4
+LEFT Selected X: 9 Selected Y: 4
+LEFT Selected X: 8 Selected Y: 4
+LEFT Selected X: 8 Selected Y: 4
+LEFT Selected X: 8 Selected Y: 4
+LEFT Selected X: 8 Selected Y: 4
+LEFT Selected X: 8 Selected Y: 4
+LEFT Selected X: 7 Selected Y: 5
+LEFT Selected X: 7 Selected Y: 5
+LEFT Selected X: 6 Selected Y: 5
+LEFT Selected X: 6 Selected Y: 5
+LEFT Selected X: 6 Selected Y: 6
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Post Load
+Starting Render Loop
+FPS: 38 Updates: 40
+FPS: 46 Updates: 78
+FPS: 60 Updates: 60
+FPS: 61 Updates: 61
+FPS: 59 Updates: 60
+FPS: 61 Updates: 60
+FPS: 59 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+LEFT Selected X: 4 Selected Y: 4
+LEFT Selected X: 4 Selected Y: 4
+LEFT Selected X: 4 Selected Y: 4
+LEFT Selected X: 4 Selected Y: 4
+LEFT Selected X: 5 Selected Y: 5
+LEFT Selected X: 5 Selected Y: 5
+LEFT Selected X: 5 Selected Y: 5
+LEFT Selected X: 5 Selected Y: 5
+LEFT Selected X: 6 Selected Y: 5
+LEFT Selected X: 6 Selected Y: 5
+LEFT Selected X: 6 Selected Y: 5
+LEFT Selected X: 7 Selected Y: 5
+LEFT Selected X: 7 Selected Y: 5
+LEFT Selected X: 7 Selected Y: 6
+LEFT Selected X: 8 Selected Y: 6
+LEFT Selected X: 8 Selected Y: 6
+LEFT Selected X: 8 Selected Y: 6
+LEFT Selected X: 8 Selected Y: 6
+FPS: 60 Updates: 60
+Right Selected X: 8 Selected Y: 3
+Right Selected X: 8 Selected Y: 3
+Right Selected X: 8 Selected Y: 4
+Right Selected X: 8 Selected Y: 4
+Right Selected X: 7 Selected Y: 4
+Right Selected X: 7 Selected Y: 4
+Right Selected X: 7 Selected Y: 4
+Right Selected X: 6 Selected Y: 5
+Right Selected X: 5 Selected Y: 5
+Right Selected X: 5 Selected Y: 6
+Right Selected X: 4 Selected Y: 6
+Right Selected X: 3 Selected Y: 6
+Right Selected X: 3 Selected Y: 7
+Right Selected X: 2 Selected Y: 7
+Right Selected X: 2 Selected Y: 7
+Right Selected X: 2 Selected Y: 7
+FPS: 60 Updates: 60
+LEFT Selected X: 4 Selected Y: 3
+LEFT Selected X: 4 Selected Y: 3
+LEFT Selected X: 4 Selected Y: 3
+LEFT Selected X: 5 Selected Y: 3
+LEFT Selected X: 5 Selected Y: 4
+LEFT Selected X: 6 Selected Y: 4
+LEFT Selected X: 7 Selected Y: 5
+LEFT Selected X: 7 Selected Y: 5
+LEFT Selected X: 8 Selected Y: 6
+LEFT Selected X: 8 Selected Y: 6
+LEFT Selected X: 9 Selected Y: 7
+LEFT Selected X: 10 Selected Y: 7
+LEFT Selected X: 10 Selected Y: 7
+LEFT Selected X: 10 Selected Y: 7
+LEFT Selected X: 10 Selected Y: 8
+LEFT Selected X: 10 Selected Y: 8
+LEFT Selected X: 10 Selected Y: 8
+LEFT Selected X: 10 Selected Y: 8
+LEFT Selected X: 10 Selected Y: 8
+LEFT Selected X: 10 Selected Y: 8
+LEFT Selected X: 10 Selected Y: 8
+LEFT Selected X: 10 Selected Y: 8
+LEFT Selected X: 10 Selected Y: 7
+LEFT Selected X: 11 Selected Y: 7
+LEFT Selected X: 11 Selected Y: 6
+LEFT Selected X: 12 Selected Y: 5
+LEFT Selected X: 13 Selected Y: 4
+LEFT Selected X: 13 Selected Y: 4
+LEFT Selected X: 13 Selected Y: 3
+LEFT Selected X: 13 Selected Y: 3
+LEFT Selected X: 12 Selected Y: 3
+LEFT Selected X: 11 Selected Y: 3
+LEFT Selected X: 11 Selected Y: 3
+LEFT Selected X: 10 Selected Y: 3
+LEFT Selected X: 9 Selected Y: 3
+LEFT Selected X: 8 Selected Y: 4
+LEFT Selected X: 7 Selected Y: 5
+LEFT Selected X: 7 Selected Y: 6
+LEFT Selected X: 7 Selected Y: 7
+LEFT Selected X: 7 Selected Y: 7
+LEFT Selected X: 8 Selected Y: 7
+LEFT Selected X: 9 Selected Y: 8
+LEFT Selected X: 9 Selected Y: 8
+LEFT Selected X: 10 Selected Y: 7
+FPS: 60 Updates: 60
+LEFT Selected X: 10 Selected Y: 7
+LEFT Selected X: 11 Selected Y: 6
+LEFT Selected X: 11 Selected Y: 5
+LEFT Selected X: 10 Selected Y: 5
+LEFT Selected X: 10 Selected Y: 4
+LEFT Selected X: 10 Selected Y: 4
+LEFT Selected X: 9 Selected Y: 4
+LEFT Selected X: 8 Selected Y: 4
+LEFT Selected X: 7 Selected Y: 4
+LEFT Selected X: 7 Selected Y: 4
+LEFT Selected X: 6 Selected Y: 5
+LEFT Selected X: 6 Selected Y: 5
+LEFT Selected X: 6 Selected Y: 6
+LEFT Selected X: 6 Selected Y: 6
+LEFT Selected X: 6 Selected Y: 7
+LEFT Selected X: 6 Selected Y: 7
+LEFT Selected X: 5 Selected Y: 7
+LEFT Selected X: 5 Selected Y: 7
+LEFT Selected X: 5 Selected Y: 7
+LEFT Selected X: 5 Selected Y: 7
+LEFT Selected X: 5 Selected Y: 7
+LEFT Selected X: 5 Selected Y: 6
+LEFT Selected X: 5 Selected Y: 5
+LEFT Selected X: 4 Selected Y: 4
+LEFT Selected X: 5 Selected Y: 4
+LEFT Selected X: 5 Selected Y: 4
+LEFT Selected X: 5 Selected Y: 3
+LEFT Selected X: 6 Selected Y: 3
+LEFT Selected X: 7 Selected Y: 3
+LEFT Selected X: 7 Selected Y: 3
+LEFT Selected X: 8 Selected Y: 3
+LEFT Selected X: 9 Selected Y: 3
+LEFT Selected X: 9 Selected Y: 3
+LEFT Selected X: 10 Selected Y: 3
+LEFT Selected X: 10 Selected Y: 3
+LEFT Selected X: 10 Selected Y: 3
+LEFT Selected X: 11 Selected Y: 4
+LEFT Selected X: 11 Selected Y: 4
+LEFT Selected X: 11 Selected Y: 5
+LEFT Selected X: 11 Selected Y: 5
+LEFT Selected X: 11 Selected Y: 6
+LEFT Selected X: 10 Selected Y: 7
+LEFT Selected X: 10 Selected Y: 7
+LEFT Selected X: 9 Selected Y: 7
+LEFT Selected X: 8 Selected Y: 7
+LEFT Selected X: 7 Selected Y: 7
+LEFT Selected X: 7 Selected Y: 7
+LEFT Selected X: 7 Selected Y: 7
+LEFT Selected X: 7 Selected Y: 6
+LEFT Selected X: 7 Selected Y: 5
+LEFT Selected X: 7 Selected Y: 5
+LEFT Selected X: 7 Selected Y: 5
+LEFT Selected X: 7 Selected Y: 4
+Right Selected X: 7 Selected Y: 4
+FPS: 60 Updates: 60
+Right Selected X: 7 Selected Y: 4
+Right Selected X: 7 Selected Y: 4
+Right Selected X: 7 Selected Y: 4
+Right Selected X: 7 Selected Y: 4
+Right Selected X: 8 Selected Y: 4
+Right Selected X: 8 Selected Y: 4
+Right Selected X: 9 Selected Y: 4
+Right Selected X: 10 Selected Y: 4
+Right Selected X: 10 Selected Y: 5
+Right Selected X: 11 Selected Y: 5
+Right Selected X: 11 Selected Y: 5
+Right Selected X: 11 Selected Y: 6
+Right Selected X: 11 Selected Y: 7
+Right Selected X: 11 Selected Y: 8
+Right Selected X: 11 Selected Y: 8
+Right Selected X: 10 Selected Y: 9
+Right Selected X: 9 Selected Y: 10
+Right Selected X: 8 Selected Y: 10
+Right Selected X: 7 Selected Y: 11
+Right Selected X: 6 Selected Y: 11
+Right Selected X: 5 Selected Y: 10
+Right Selected X: 5 Selected Y: 10
+Right Selected X: 5 Selected Y: 10
+Right Selected X: 4 Selected Y: 9
+Right Selected X: 4 Selected Y: 9
+Right Selected X: 4 Selected Y: 8
+Right Selected X: 5 Selected Y: 8
+Right Selected X: 5 Selected Y: 8
+Right Selected X: 5 Selected Y: 7
+Right Selected X: 5 Selected Y: 7
+Right Selected X: 6 Selected Y: 7
+Right Selected X: 7 Selected Y: 7
+Right Selected X: 8 Selected Y: 7
+Right Selected X: 8 Selected Y: 7
+Right Selected X: 8 Selected Y: 7
+Right Selected X: 9 Selected Y: 8
+Right Selected X: 9 Selected Y: 8
+Right Selected X: 9 Selected Y: 9
+Right Selected X: 8 Selected Y: 10
+Right Selected X: 7 Selected Y: 10
+Right Selected X: 6 Selected Y: 10
+Right Selected X: 5 Selected Y: 10
+Right Selected X: 3 Selected Y: 10
+Right Selected X: 2 Selected Y: 10
+Right Selected X: 2 Selected Y: 9
+Right Selected X: 2 Selected Y: 9
+Right Selected X: 3 Selected Y: 8
+Right Selected X: 3 Selected Y: 8
+Right Selected X: 4 Selected Y: 7
+Right Selected X: 5 Selected Y: 7
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Post Load
+Starting Render Loop
+FPS: 58 Updates: 59
+FPS: 26 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 58 Updates: 60
+FPS: 60 Updates: 60
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Post Load
+Starting Render Loop
+FPS: 33 Updates: 34
+FPS: 50 Updates: 85
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 4 Updates: 4
+FPS: 60 Updates: 116
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Post Load
+Starting Render Loop
+FPS: 48 Updates: 59
+FPS: 27 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+LEFT Selected X: 2 Selected Y: 0
+LEFT Selected X: 2 Selected Y: 0
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 56 Updates: 56
+FPS: 26 Updates: 64
+FPS: 60 Updates: 60
+LEFT Selected X: 0 Selected Y: 1
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+LEFT Selected X: 1 Selected Y: 1
+LEFT Selected X: 1 Selected Y: 1
+LEFT Selected X: 1 Selected Y: 1
+LEFT Selected X: 1 Selected Y: 1
+FPS: 60 Updates: 60
+LEFT Selected X: 1 Selected Y: 1
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Post Load
+Starting Render Loop
+FPS: 48 Updates: 50
+FPS: 42 Updates: 69
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+LEFT Selected: 4337 X: 0 Selected Y: 0
+LEFT Selected: 4338 X: 0 Selected Y: 0
+LEFT Selected: 4338 X: 0 Selected Y: 0
+LEFT Selected: 4340 X: 0 Selected Y: 0
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+LEFT Selected: 9044 X: 0 Selected Y: 1
+LEFT Selected: 9042 X: 0 Selected Y: 1
+LEFT Selected: 9041 X: 0 Selected Y: 1
+LEFT Selected: 9040 X: 0 Selected Y: 1
+LEFT Selected: 9041 X: 0 Selected Y: 1
+LEFT Selected: 9040 X: 0 Selected Y: 1
+LEFT Selected: 9040 X: 0 Selected Y: 1
+LEFT Selected: 9038 X: 0 Selected Y: 1
+LEFT Selected: 9036 X: 0 Selected Y: 1
+FPS: 60 Updates: 60
+LEFT Selected: 7084 X: 3 Selected Y: 1
+LEFT Selected: 7285 X: 3 Selected Y: 1
+LEFT Selected: 7488 X: 3 Selected Y: 1
+LEFT Selected: 7988 X: 3 Selected Y: 1
+FPS: 60 Updates: 60
+LEFT Selected: 8289 X: 3 Selected Y: 1
+LEFT Selected: 8491 X: 3 Selected Y: 1
+LEFT Selected: 8492 X: 3 Selected Y: 1
+FPS: 60 Updates: 60
+LEFT Selected: 7814 X: 4 Selected Y: 1
+FPS: 60 Updates: 60
+LEFT Selected: 7816 X: 4 Selected Y: 1
+LEFT Selected: 7817 X: 4 Selected Y: 1
+LEFT Selected: 7819 X: 4 Selected Y: 1
+LEFT Selected: 7920 X: 4 Selected Y: 1
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Post Load
+Starting Render Loop
+FPS: 44 Updates: 46
+FPS: 46 Updates: 73
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 59 Updates: 60
+FPS: 60 Updates: 60
+LEFT Selected: 2 X: 2 Selected Y: 0
+FPS: 19 Updates: 19
+FPS: 1 Updates: 248
+FPS: 1 Updates: 6
+FPS: 1 Updates: 0
+FPS: 27 Updates: 27
+FPS: 60 Updates: 60
+LEFT Selected: 0 X: 0 Selected Y: 0
+LEFT Selected: 0 X: 0 Selected Y: 0
+FPS: 60 Updates: 60
+LEFT Selected: 0 X: 0 Selected Y: 0
+LEFT Selected: 0 X: 0 Selected Y: 0
+LEFT Selected: 0 X: 0 Selected Y: 0
+LEFT Selected: 0 X: 0 Selected Y: 0
+LEFT Selected: 100 X: 0 Selected Y: 1
+LEFT Selected: 100 X: 0 Selected Y: 1
+LEFT Selected: 100 X: 0 Selected Y: 1
+LEFT Selected: 100 X: 0 Selected Y: 1
+LEFT Selected: 100 X: 0 Selected Y: 1
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 58 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+LEFT Selected: 201 X: 1 Selected Y: 2
+FPS: 60 Updates: 60
+LEFT Selected: 201 X: 1 Selected Y: 2
+LEFT Selected: 201 X: 1 Selected Y: 2
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Post Load
+Starting Render Loop
+FPS: 39 Updates: 43
+FPS: 47 Updates: 76
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 456.38
+Initializing Engine
+Post Load
+Starting Render Loop
+FPS: 57 Updates: 59
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+FPS: 60 Updates: 60
+LEFT Selected: 504 X: 4 Selected Y: 5
+LEFT Selected: 504 X: 4 Selected Y: 5
+FPS: 60 Updates: 60
+LEFT Selected: 704 X: 4 Selected Y: 7
+LEFT Selected: 704 X: 4 Selected Y: 7
+LEFT Selected: 704 X: 4 Selected Y: 7
+LEFT Selected: 704 X: 4 Selected Y: 7
+LEFT Selected: 705 X: 5 Selected Y: 7
+LEFT Selected: 705 X: 5 Selected Y: 7
+LEFT Selected: 705 X: 5 Selected Y: 7
+LEFT Selected: 705 X: 5 Selected Y: 7
+LEFT Selected: 705 X: 5 Selected Y: 7
+LEFT Selected: 705 X: 5 Selected Y: 7
+LEFT Selected: 705 X: 5 Selected Y: 7
+LEFT Selected: 705 X: 5 Selected Y: 7
+LEFT Selected: 706 X: 6 Selected Y: 7
+LEFT Selected: 706 X: 6 Selected Y: 7
+LEFT Selected: 706 X: 6 Selected Y: 7
+LEFT Selected: 707 X: 7 Selected Y: 7
+LEFT Selected: 707 X: 7 Selected Y: 7
+LEFT Selected: 707 X: 7 Selected Y: 7
+LEFT Selected: 708 X: 8 Selected Y: 7
+LEFT Selected: 708 X: 8 Selected Y: 7
+LEFT Selected: 708 X: 8 Selected Y: 7
+LEFT Selected: 708 X: 8 Selected Y: 7
+LEFT Selected: 708 X: 8 Selected Y: 7
+LEFT Selected: 708 X: 8 Selected Y: 7
+LEFT Selected: 708 X: 8 Selected Y: 7
+LEFT Selected: 708 X: 8 Selected Y: 7
+LEFT Selected: 708 X: 8 Selected Y: 7
+LEFT Selected: 709 X: 9 Selected Y: 7
+LEFT Selected: 709 X: 9 Selected Y: 7
+LEFT Selected: 709 X: 9 Selected Y: 7
+LEFT Selected: 709 X: 9 Selected Y: 7
+LEFT Selected: 709 X: 9 Selected Y: 7
+LEFT Selected: 709 X: 9 Selected Y: 7
+LEFT Selected: 709 X: 9 Selected Y: 7
+FPS: 60 Updates: 60
+FPS: 57 Updates: 57

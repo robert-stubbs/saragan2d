@@ -12,6 +12,10 @@ namespace Editor {
 		~ContextTool() {};
 
 		virtual void RenderUI() override;
+
+		virtual void MouseDown(int button) override;
+		virtual void MouseUp(int button) override;
+
 		virtual void MouseMove(float x, float y) override;
 	};
 }

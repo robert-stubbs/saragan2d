@@ -78,6 +78,8 @@ namespace GameEngine
 			void UpdateHoverPosition(float x, float y);
 			void RenderHoverQuad();
 
+			void UpdateTileTexture(int x, int y, int layer, int texture_selection);
+
 			void Cleanup();
 
 			virtual void LoadMapFromFile(std::string file_path, std::string name);

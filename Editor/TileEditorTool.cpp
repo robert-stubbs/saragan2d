@@ -173,35 +173,77 @@ namespace Editor {
 
 	void TileEditorTool::MouseDown(int button)
 	{
-		LOG("Mouse Down");
+		if (button == 0) {
+			LeftClickDown = true;
+		}
+
+		if (button == 1) {
+			RightClickDown = true;
+		}
 	}
 
 	void TileEditorTool::MouseUp(int button)
 	{
-		LOG("Mouse Up");
+		if (button == 0) {
+			LeftClickDown = false;
+		}
+
+		if (button == 1) {
+			RightClickDown = false;
+		}
+	}
+
+	void TileEditorTool::MouseMoveContext(float x, float y)
+	{
+		_parent->system_mouse_x = x;
+		_parent->system_mouse_y = y;
+
+		Engine& e = Engine::get();
+		Camera2D* c = Engine::get().current_cam;
+
+		glm::vec3 pt = Engine::getRenderer().GetWorldPos2D(
+			(int)_parent->gui_mouse_x - (int)_parent->window_x,
+			(int)_parent->gui_mouse_y - (int)_parent->window_y,
+			Engine::get().current_cam->ProjectionMatrix,
+			Engine::get().current_cam->ViewMatrix,
+			0,
+			0,
+			_parent->vp_width,
+			_parent->vp_height
+		);
+
+		_parent->world_x = pt.x;
+		_parent->world_y = pt.y;
+
+		MouseMove(pt.x, pt.y);
 	}
 
 	void TileEditorTool::MouseMove(float x, float y)
 	{
-
-		// This needs moved to the map when over the context window
+		// information for this should come from the Context Tool
+		// (additional information is stored on the parent e.g. window_x of context etc
 		Map* m = Engine::getWorld()->GetMap();
-		if (m != nullptr) {
-			// we are in the editor window
-			glm::vec3 pt = Engine::getRenderer().GetWorldPos2D((int)x, (int)y, Engine::get().default_cam->ProjectionMatrix, Engine::get().default_cam->ViewMatrix);
+		TileMap* d = m->GetDefinition();
 
-			TileMap* d = m->GetDefinition();
+		WorldSelectedX = (int)x / d->quad_width;
+		WorldSelectedY = (int)y / d->quad_height;
 
-			m->UpdateHoverPosition(pt.x, pt.y);
+		if (WorldSelectedX < d->map_width && WorldSelectedY < d->map_height) {
+			m->UpdateHoverPosition((float)WorldSelectedX * d->quad_width, (float)WorldSelectedY * d->quad_height);
+		}
 
-			//int x_quad = (int)pt.x % d->map_width;
-			//int y_quad = (int)pt.y / d->map_height;
+		if (Engine::get().EditorFocusViewport)
+		{
+			int selected_tile = WorldSelectedX + (WorldSelectedY * d->map_width);
 
-			//if (x_quad < d->map_width && y_quad < d->map_height) {
+			if (LeftClickDown) {
+				LOG("LEFT Selected: "+std::to_string(selected_tile)+" X: " + std::to_string(WorldSelectedX) + " Selected Y: " + std::to_string(WorldSelectedY));
+				m->UpdateTileTexture(WorldSelectedX, WorldSelectedY, 0, selected_tile);
 
-			//	m->UpdateHoverPosition(x_quad * d->quad_width, y_quad * d->quad_height);
-
-			//}
+			}
+			else if (RightClickDown) {
+				LOG("Right Selected X: " + std::to_string(WorldSelectedX) + " Selected Y: " + std::to_string(WorldSelectedY));
+			}
 		}
 	}
 

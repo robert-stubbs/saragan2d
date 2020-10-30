@@ -14,6 +14,11 @@ namespace Editor {
 
 			GUI::Get().Begin("Properties");
 
+			ImGui::Text("World X"); ImGui::SameLine(); ImGui::InputFloat("", &_parent->world_x);
+			ImGui::Text("World Y"); ImGui::SameLine(); ImGui::InputFloat("", &_parent->world_y);
+
+			ImGui::Separator();
+
 			ImGui::Text("ImGui Mouse X"); ImGui::SameLine(); ImGui::InputFloat("", &_parent->gui_mouse_x);
 			ImGui::Text("ImGui Mouse Y"); ImGui::SameLine(); ImGui::InputFloat("", &_parent->gui_mouse_y);
 

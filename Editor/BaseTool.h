@@ -19,6 +19,9 @@ namespace Editor {
 			float vp_width = 0.0f;
 			float vp_height = 0.0f;
 
+			float world_x = 0.0f;
+			float world_y = 0.0f;
+
 			float gui_mouse_x = 0.0f;
 			float gui_mouse_y = 0.0f;
 			float system_mouse_x = 0.0f;
@@ -34,6 +37,7 @@ namespace Editor {
 			virtual void MouseDown(int button) {};
 			virtual void MouseUp(int button) {};
 			virtual void MouseMove(float x, float y) {};
+			virtual void MouseMoveContext(float x, float y) {};
 			virtual void MouseScroll(float xoffset, float yoffset) {};
 	};
 }

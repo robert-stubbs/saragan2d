@@ -366,6 +366,34 @@ namespace GameEngine
 		}
 	}
 
+	void Map::UpdateTileTexture(int x, int y, int layer, int texture_selection)
+	{
+		glm::vec4 color = glm::vec4(0.0f, 0.0f, 0.0f, 0.0f);
+		glm::vec2 min_text = { -99.0f,-99.0f };
+		glm::vec2 max_text = { -99.0f,-99.0f };
+		int texture_index = _definition._layers[layer].sheet_id;
+		float image_width = (float)_definition._images[texture_index].image_width;
+		float image_height = (float)_definition._images[texture_index].image_height;
+		float image_tile_width = (float)_definition._images[texture_index].tile_width;
+		float image_tile_height = (float)_definition._images[texture_index].tile_height;
+
+		TextureQuad& tile = _quads[layer][y][x];
+
+		color = glm::vec4(0.5f, 0.5f, 0.5f, 0.5f);
+		min_text = { -99.0f,-99.0f };
+		max_text = { -99.0f,-99.0f };
+
+		if (texture_index > -1 && texture_selection > 0) {
+
+			color = glm::vec4(1.0f, 1.0f, 1.0f, 1.0f);
+			min_text.x = (image_tile_width / image_width) * (float)x;
+			min_text.y = (image_tile_height / image_height) * (float)y;
+
+			max_text.x = (image_tile_width / image_width) * (float)(x + 1);
+			max_text.y = (image_tile_height / image_height) * (float)(y + 1);
+		}
+	}
+
 	void Map::Cleanup()
 	{
 		// any cleanup
