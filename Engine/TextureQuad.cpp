@@ -55,6 +55,8 @@ namespace GameEngine
 
 	void TextureQuad::GenerateVerts()
 	{
+		verts.clear();
+
 		vert2D tleft = { {this->origin.x,this->origin.y,this->origin.z,1.0f},{texture_min.x, texture_min.y}, {colour.r, colour.g, colour.b, colour.a } };
 		vert2D tright = { {this->origin.x + this->width,this->origin.y,this->origin.z,1.0f},{texture_max.x, texture_min.y}, {colour.r, colour.g, colour.b, colour.a } };
 		vert2D bright = { {this->origin.x + this->width,this->origin.y + this->height,this->origin.z,1.0f},{texture_max.x, texture_max.y}, {colour.r, colour.g, colour.b, colour.a } };

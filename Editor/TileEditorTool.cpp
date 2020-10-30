@@ -186,10 +186,12 @@ namespace Editor {
 	{
 		if (button == 0) {
 			LeftClickDown = false;
+			update_current_tile = true;
 		}
 
 		if (button == 1) {
 			RightClickDown = false;
+			update_current_tile = true;
 		}
 	}
 
@@ -234,15 +236,17 @@ namespace Editor {
 
 		if (Engine::get().EditorFocusViewport)
 		{
-			int selected_tile = WorldSelectedX + (WorldSelectedY * d->map_width);
+			int selected_tile = selected_x + (selected_y * d->map_width);
 
-			if (LeftClickDown) {
+			if (LeftClickDown|| update_current_tile) {
 				LOG("LEFT Selected: "+std::to_string(selected_tile)+" X: " + std::to_string(WorldSelectedX) + " Selected Y: " + std::to_string(WorldSelectedY));
-				m->UpdateTileTexture(WorldSelectedX, WorldSelectedY, 0, selected_tile);
+				m->UpdateTileTexture(WorldSelectedX, WorldSelectedY, selected_layer, selected_tile);
+				update_current_tile = false;
 
 			}
-			else if (RightClickDown) {
+			else if (RightClickDown|| update_current_tile) {
 				LOG("Right Selected X: " + std::to_string(WorldSelectedX) + " Selected Y: " + std::to_string(WorldSelectedY));
+				update_current_tile = false;
 			}
 		}
 	}

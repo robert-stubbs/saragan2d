@@ -391,6 +391,10 @@ namespace GameEngine
 
 			max_text.x = (image_tile_width / image_width) * (float)(x + 1);
 			max_text.y = (image_tile_height / image_height) * (float)(y + 1);
+
+			if (tile.texture_min != min_text || tile.texture_max != max_text) {
+				tile.Init(tile.origin.x, tile.origin.y, tile.width, tile.height, tile.origin.z, min_text, max_text, tile.colour);
+			}
 		}
 	}
 
