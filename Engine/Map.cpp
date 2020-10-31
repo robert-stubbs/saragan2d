@@ -103,7 +103,7 @@ namespace GameEngine
 					if (texture_index > -1 && tile.tile_id > 0) {
 
 						tile.tile_index_x = (tile.tile_id % number_of_cols);
-						tile.tile_index_y = (tile.tile_id / number_of_rows);
+						tile.tile_index_y = floor(((float)tile.tile_id / (float)number_of_cols));
 
 						color = glm::vec4(1.0f, 1.0f, 1.0f, 1.0f);
 						min_text.x = (image_tile_width / image_width) * (float)tile.tile_index_x;

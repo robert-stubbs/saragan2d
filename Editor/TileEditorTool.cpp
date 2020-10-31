@@ -242,8 +242,9 @@ namespace Editor {
 			}
 
 			if (Engine::get().EditorFocusViewport)
-			{
-				int selected_tile = selected_x + (selected_y * d->map_width);
+			{		
+				int number_of_cols = (int)((float)d->_images.at(0).image_width / float(d->tile_width));
+				int selected_tile = (selected_x) + ((selected_y) * number_of_cols);
 
 				if (LeftClickDown && Input::Get().IsMouseButtonReleased(0)) {
 					LeftClickDown = false;
