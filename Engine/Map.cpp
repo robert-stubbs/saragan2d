@@ -94,6 +94,9 @@ namespace GameEngine
 					SingleTile& tile = row[x];
 
 					color = glm::vec4(0.5f, 0.5f, 0.5f, 0.5f);
+					if (i > 0) {
+						color = glm::vec4(1.0f, 1.0f, 1.0f, 0.0f);
+					}
 					min_text = { -99.0f,-99.0f };
 					max_text = { -99.0f,-99.0f };
 
