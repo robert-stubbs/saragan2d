@@ -80919,3 +80919,110 @@ FPS: 214 Updates: 60
 FPS: 228 Updates: 60
 FPS: 228 Updates: 60
 FPS: 213 Updates: 60
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 457.09
+Initializing Engine
+Post Load
+Starting Render Loop
+FPS: 160 Updates: 42
+FPS: 160 Updates: 77
+FPS: 285 Updates: 60
+FPS: 287 Updates: 60
+FPS: 250 Updates: 60
+FPS: 235 Updates: 60
+FPS: 229 Updates: 60
+FPS: 229 Updates: 60
+FPS: 1 Updates: 1379
+FPS: 1 Updates: 12
+FPS: 1 Updates: 1
+FPS: 1 Updates: 0
+FPS: 1 Updates: 0
+FPS: 1 Updates: 1
+FPS: 1 Updates: 0
+FPS: 1 Updates: 1
+FPS: 1 Updates: 1
+FPS: 1 Updates: 5
+FPS: 1 Updates: 0
+FPS: 1 Updates: 0
+FPS: 1 Updates: 0
+FPS: 1 Updates: 1
+FPS: 1 Updates: 1
+FPS: 1 Updates: 0
+FPS: 1 Updates: 1
+FPS: 1 Updates: 1
+FPS: 1 Updates: 0
+FPS: 1 Updates: 1
+FPS: 1 Updates: 0
+FPS: 1 Updates: 1
+FPS: 1 Updates: 1
+FPS: 125 Updates: 33
+FPS: 224 Updates: 60
+FPS: 228 Updates: 60
+FPS: 238 Updates: 60
+FPS: 240 Updates: 60
+FPS: 244 Updates: 60
+FPS: 241 Updates: 60
+FPS: 9 Updates: 3
+FPS: 1 Updates: 1808
+FPS: 1 Updates: 17
+FPS: 1 Updates: 0
+FPS: 1 Updates: 1
+FPS: 1 Updates: 0
+FPS: 1 Updates: 1
+FPS: 1 Updates: 0
+FPS: 1 Updates: 1
+FPS: 1 Updates: 0
+FPS: 1 Updates: 1
+FPS: 1 Updates: 1
+FPS: 1 Updates: 0
+FPS: 1 Updates: 1
+FPS: 1 Updates: 0
+FPS: 1 Updates: 1
+FPS: 1 Updates: 1
+FPS: 1 Updates: 0
+FPS: 1 Updates: 1
+FPS: 1 Updates: 1
+FPS: 1 Updates: 0
+FPS: 1 Updates: 0
+FPS: 1 Updates: 1
+FPS: 1 Updates: 0
+FPS: 1 Updates: 0
+FPS: 1 Updates: 0
+FPS: 1 Updates: 1
+FPS: 1 Updates: 0
+FPS: 1 Updates: 0
+FPS: 1 Updates: 1
+FPS: 78 Updates: 19
+FPS: 234 Updates: 60
+FPS: 238 Updates: 60
+FPS: 239 Updates: 60
+FPS: 238 Updates: 60
+FPS: 239 Updates: 60
+FPS: 240 Updates: 60
+FPS: 239 Updates: 60
+FPS: 240 Updates: 60
+FPS: 237 Updates: 60
+FPS: 237 Updates: 60
+FPS: 235 Updates: 60
+FPS: 234 Updates: 60
+FPS: 239 Updates: 60
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 457.09
+Initializing Engine
+Post Load
+Starting Render Loop
+FPS: 85 Updates: 59
+FPS: 278 Updates: 60
+FPS: 278 Updates: 60
+FPS: 233 Updates: 60
+FPS: 234 Updates: 60
+FPS: 227 Updates: 60
+FPS: 227 Updates: 60
