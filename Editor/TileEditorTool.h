@@ -45,7 +45,8 @@ namespace Editor {
 		//###########################################
 		// Selection in viewport
 		//###########################################
-		bool update_current_tile = false;
+		bool update_current_tile_x = false;
+		bool update_current_tile_y = false;
 		bool LeftClickDown = false;
 		bool RightClickDown = false;
 

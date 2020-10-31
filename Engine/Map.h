@@ -18,6 +18,7 @@ namespace GameEngine
 			TileMap _definition;
 
 			glm::vec4 hover_color;
+			glm::vec4 temp_color;
 
 			bool render_grid;
 			bool grid_loaded;

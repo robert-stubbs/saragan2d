@@ -484,7 +484,18 @@ namespace GameEngine
 			t.tile_index_y = y;
 
 			TextureQuad& tile = _quads[layer][y][x];
-			tile.Init(tile.origin.x, tile.origin.y, tile.width, tile.height, tile.origin.z, min, max, glm::vec4(1.0f, 1.0f, 1.0f, 1.0f));
+
+			temp_color = glm::vec4(0.5f, 0.5f, 0.5f, 0.5f);
+			if (layer > 0) {
+				temp_color = glm::vec4(1.0f, 1.0f, 1.0f, 0.0f);
+			}
+
+			if (texture_selection == 0) {
+				tile.Init(tile.origin.x, tile.origin.y, tile.width, tile.height, tile.origin.z, glm::vec2(-99.0f, -99.0f), glm::vec2(-99.0f, -99.0f), temp_color);
+			}
+			else {
+				tile.Init(tile.origin.x, tile.origin.y, tile.width, tile.height, tile.origin.z, min, max, glm::vec4(1.0f, 1.0f, 1.0f, 1.0f));
+			}
 		}
 	}
 

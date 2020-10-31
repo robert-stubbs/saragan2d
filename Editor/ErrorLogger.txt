@@ -80811,3 +80811,111 @@ LEFT Selected: 201 X: 3 Selected Y: 4
 FPS: 209 Updates: 60
 FPS: 226 Updates: 60
 FPS: 223 Updates: 60
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 457.09
+Initializing Engine
+Post Load
+Starting Render Loop
+FPS: 104 Updates: 30
+FPS: 279 Updates: 89
+FPS: 281 Updates: 60
+FPS: 236 Updates: 60
+FPS: 237 Updates: 60
+FPS: 209 Updates: 60
+FPS: 232 Updates: 60
+FPS: 228 Updates: 60
+FPS: 231 Updates: 60
+FPS: 230 Updates: 60
+FPS: 229 Updates: 60
+FPS: 215 Updates: 60
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 457.09
+Initializing Engine
+Post Load
+Starting Render Loop
+FPS: 73 Updates: 59
+FPS: 279 Updates: 60
+FPS: 279 Updates: 60
+FPS: 263 Updates: 60
+FPS: 236 Updates: 60
+FPS: 211 Updates: 60
+FPS: 233 Updates: 60
+FPS: 230 Updates: 60
+FPS: 228 Updates: 60
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 457.09
+Initializing Engine
+Post Load
+Starting Render Loop
+FPS: 82 Updates: 59
+FPS: 280 Updates: 60
+FPS: 282 Updates: 60
+FPS: 252 Updates: 60
+FPS: 234 Updates: 60
+FPS: 209 Updates: 60
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 457.09
+Initializing Engine
+Post Load
+Starting Render Loop
+FPS: 67 Updates: 59
+FPS: 269 Updates: 60
+FPS: 264 Updates: 60
+FPS: 266 Updates: 60
+FPS: 246 Updates: 60
+FPS: 214 Updates: 60
+FPS: 232 Updates: 60
+FPS: 232 Updates: 60
+FPS: 234 Updates: 60
+FPS: 230 Updates: 60
+FPS: 232 Updates: 60
+FPS: 231 Updates: 60
+FPS: 230 Updates: 60
+FPS: 230 Updates: 60
+FPS: 227 Updates: 60
+FPS: 233 Updates: 60
+FPS: 229 Updates: 60
+FPS: 229 Updates: 60
+FPS: 225 Updates: 60
+FPS: 228 Updates: 60
+FPS: 229 Updates: 60
+FPS: 211 Updates: 60
+FPS: 225 Updates: 60
+FPS: 225 Updates: 60
+FPS: 232 Updates: 60
+FPS: 229 Updates: 60
+FPS: 217 Updates: 60
+FPS: 229 Updates: 60
+FPS: 230 Updates: 60
+FPS: 234 Updates: 60
+FPS: 231 Updates: 60
+FPS: 233 Updates: 60
+FPS: 212 Updates: 60
+FPS: 231 Updates: 60
+FPS: 231 Updates: 60
+FPS: 231 Updates: 60
+FPS: 231 Updates: 60
+FPS: 233 Updates: 60
+FPS: 219 Updates: 60
+FPS: 231 Updates: 60
+FPS: 225 Updates: 60
+FPS: 214 Updates: 60
+FPS: 228 Updates: 60
+FPS: 228 Updates: 60
+FPS: 213 Updates: 60

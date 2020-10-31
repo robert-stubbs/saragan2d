@@ -188,12 +188,12 @@ namespace Editor {
 	{
 		if (button == 0) {
 			LeftClickDown = false;
-			update_current_tile = true;
+			update_current_tile_x = true;
 		}
 
 		if (button == 1) {
 			RightClickDown = false;
-			update_current_tile = true;
+			update_current_tile_y = true;
 		}
 	}
 
@@ -240,8 +240,7 @@ namespace Editor {
 		{
 			int selected_tile = selected_x + (selected_y * d->map_width);
 
-			if (LeftClickDown|| update_current_tile) {
-				LOG("LEFT Selected: "+std::to_string(selected_tile)+" X: " + std::to_string(WorldSelectedX) + " Selected Y: " + std::to_string(WorldSelectedY));
+			if (LeftClickDown|| update_current_tile_x) {
 				m->UpdateTileTexture(
 					WorldSelectedX, 
 					WorldSelectedY, 
@@ -250,12 +249,19 @@ namespace Editor {
 					glm::vec2(selected_start_pos.x, selected_start_pos.y), 
 					glm::vec2(selected_end_pos.x, selected_end_pos.y)
 				);
-				update_current_tile = false;
+				update_current_tile_x = false;
 
 			}
-			else if (RightClickDown|| update_current_tile) {
-				LOG("Right Selected X: " + std::to_string(WorldSelectedX) + " Selected Y: " + std::to_string(WorldSelectedY));
-				update_current_tile = false;
+			else if (RightClickDown|| update_current_tile_y) {
+				m->UpdateTileTexture(
+					WorldSelectedX,
+					WorldSelectedY,
+					selected_layer,
+					0,
+					glm::vec2(selected_start_pos.x, selected_start_pos.y),
+					glm::vec2(selected_end_pos.x, selected_end_pos.y)
+				);
+				update_current_tile_y = false;
 			}
 		}
 	}
