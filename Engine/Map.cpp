@@ -371,8 +371,8 @@ namespace GameEngine
 
 			for (int y = 0; y < (int)_definition.map_height; y ++)
 			{
-				vert2D start = { {0,(float)_definition.quad_height*y,0.0f,1.0f},{-99.0f,-99.0f}, {col.r, col.g, col.b, col.a } };
-				vert2D end = { {end_column,(float)_definition.quad_height*y,0.0f,1.0f},{-99.0f,-99.0f}, {col.r, col.g, col.b, col.a } };
+				vert2D start = { {0,(float)_definition.quad_height*y,1.0f,1.0f},{-99.0f,-99.0f}, {col.r, col.g, col.b, col.a } };
+				vert2D end = { {end_column,(float)_definition.quad_height*y,1.0f,1.0f},{-99.0f,-99.0f}, {col.r, col.g, col.b, col.a } };
 
 				_grid_verts.push_back(start);
 				_grid_verts.push_back(end);
@@ -380,8 +380,8 @@ namespace GameEngine
 
 			for (int x = 0; x < (int)_definition.map_width; x ++)
 			{
-				vert2D start = { {(float)_definition.quad_width*x,0.0f,0.0f,1.0f},{-99.0f,-99.0f}, {col.r, col.g, col.b, col.a } };
-				vert2D end = { {(float)_definition.quad_width * x,end_row,0.0f,1.0f},{-99.0f,-99.0f}, {col.r, col.g, col.b, col.a } };
+				vert2D start = { {(float)_definition.quad_width*x,0.0f,1.0f,1.0f},{-99.0f,-99.0f}, {col.r, col.g, col.b, col.a } };
+				vert2D end = { {(float)_definition.quad_width * x,end_row,1.0f,1.0f},{-99.0f,-99.0f}, {col.r, col.g, col.b, col.a } };
 
 				_grid_verts.push_back(start);
 				_grid_verts.push_back(end);
@@ -430,13 +430,13 @@ namespace GameEngine
 	{
 		if (render_grid && !hover_loaded && HoverVAIO != 0) {
 
-			vert2D tleft = { {0.0f,0.0f,-1.0f,1.0f},{-99.0f,-99.0f}, {hover_color.r, hover_color.g, hover_color.b, hover_color.a } };
+			vert2D tleft = { {0.0f,0.0f,1.0f,1.0f},{-99.0f,-99.0f}, {hover_color.r, hover_color.g, hover_color.b, hover_color.a } };
 
-			vert2D tright = { {(float)_definition.quad_width,0.0f,-1.0f,1.0f},{-99.0f,-99.0f}, {hover_color.r, hover_color.g, hover_color.b, hover_color.a } };
+			vert2D tright = { {(float)_definition.quad_width,0.0f,1.0f,1.0f},{-99.0f,-99.0f}, {hover_color.r, hover_color.g, hover_color.b, hover_color.a } };
 
-			vert2D bright = { {(float)_definition.quad_width,(float)_definition.quad_height,-1.0f,1.0f},{-99.0f,-99.0f}, {hover_color.r, hover_color.g, hover_color.b, hover_color.a } };
+			vert2D bright = { {(float)_definition.quad_width,(float)_definition.quad_height,1.0f,1.0f},{-99.0f,-99.0f}, {hover_color.r, hover_color.g, hover_color.b, hover_color.a } };
 
-			vert2D bleft = { {0.0f,(float)_definition.quad_height,-1.0f,1.0f},{-99.0f,-99.0f}, {hover_color.r, hover_color.g, hover_color.b, hover_color.a } };
+			vert2D bleft = { {0.0f,(float)_definition.quad_height,1.0f,1.0f},{-99.0f,-99.0f}, {hover_color.r, hover_color.g, hover_color.b, hover_color.a } };
 
 			_hover_verts.push_back(tleft);
 			_hover_verts.push_back(tright);

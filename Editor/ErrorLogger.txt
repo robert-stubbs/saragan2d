@@ -81315,3 +81315,233 @@ FPS: 162 Updates: 60
 FPS: 162 Updates: 60
 FPS: 159 Updates: 60
 FPS: 162 Updates: 60
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 457.09
+Initializing Engine
+Post Load
+Starting Render Loop
+FPS: 156 Updates: 43
+FPS: 216 Updates: 76
+FPS: 278 Updates: 60
+FPS: 276 Updates: 60
+FPS: 277 Updates: 60
+FPS: 273 Updates: 60
+FPS: 265 Updates: 60
+FPS: 266 Updates: 60
+FPS: 265 Updates: 60
+FPS: 273 Updates: 60
+FPS: 270 Updates: 60
+FPS: 278 Updates: 60
+FPS: 266 Updates: 60
+FPS: 266 Updates: 60
+FPS: 275 Updates: 60
+FPS: 272 Updates: 60
+FPS: 270 Updates: 60
+FPS: 267 Updates: 60
+FPS: 264 Updates: 60
+FPS: 272 Updates: 60
+FPS: 253 Updates: 60
+FPS: 270 Updates: 60
+FPS: 264 Updates: 60
+FPS: 271 Updates: 60
+FPS: 281 Updates: 60
+FPS: 269 Updates: 60
+FPS: 277 Updates: 60
+FPS: 278 Updates: 60
+FPS: 275 Updates: 60
+FPS: 273 Updates: 60
+FPS: 245 Updates: 60
+FPS: 218 Updates: 60
+FPS: 203 Updates: 60
+FPS: 224 Updates: 60
+FPS: 220 Updates: 60
+FPS: 226 Updates: 60
+FPS: 220 Updates: 60
+FPS: 211 Updates: 60
+FPS: 231 Updates: 60
+FPS: 225 Updates: 60
+FPS: 224 Updates: 60
+FPS: 229 Updates: 60
+FPS: 229 Updates: 60
+FPS: 228 Updates: 60
+FPS: 226 Updates: 60
+FPS: 229 Updates: 60
+FPS: 232 Updates: 60
+FPS: 228 Updates: 60
+FPS: 230 Updates: 60
+FPS: 228 Updates: 60
+FPS: 233 Updates: 60
+FPS: 225 Updates: 60
+FPS: 233 Updates: 60
+FPS: 230 Updates: 60
+FPS: 229 Updates: 60
+FPS: 178 Updates: 60
+FPS: 156 Updates: 60
+FPS: 160 Updates: 60
+FPS: 158 Updates: 60
+FPS: 161 Updates: 60
+FPS: 160 Updates: 60
+FPS: 160 Updates: 60
+FPS: 146 Updates: 60
+FPS: 145 Updates: 60
+FPS: 154 Updates: 60
+FPS: 127 Updates: 60
+FPS: 120 Updates: 60
+FPS: 121 Updates: 60
+FPS: 121 Updates: 60
+FPS: 122 Updates: 60
+FPS: 126 Updates: 60
+FPS: 157 Updates: 60
+FPS: 158 Updates: 60
+FPS: 158 Updates: 60
+FPS: 157 Updates: 60
+FPS: 182 Updates: 60
+FPS: 226 Updates: 60
+FPS: 227 Updates: 60
+FPS: 258 Updates: 60
+FPS: 276 Updates: 60
+FPS: 266 Updates: 60
+FPS: 208 Updates: 60
+FPS: 227 Updates: 60
+FPS: 231 Updates: 60
+FPS: 227 Updates: 60
+FPS: 217 Updates: 60
+FPS: 220 Updates: 60
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 457.09
+Initializing Engine
+Post Load
+Starting Render Loop
+FPS: 87 Updates: 49
+FPS: 146 Updates: 70
+FPS: 159 Updates: 60
+FPS: 160 Updates: 60
+FPS: 161 Updates: 60
+FPS: 160 Updates: 60
+FPS: 159 Updates: 60
+FPS: 160 Updates: 60
+FPS: 158 Updates: 60
+FPS: 153 Updates: 60
+FPS: 159 Updates: 60
+FPS: 162 Updates: 60
+FPS: 158 Updates: 60
+FPS: 160 Updates: 60
+FPS: 142 Updates: 60
+FPS: 148 Updates: 60
+FPS: 143 Updates: 60
+FPS: 145 Updates: 60
+FPS: 147 Updates: 60
+FPS: 153 Updates: 60
+FPS: 158 Updates: 60
+FPS: 160 Updates: 60
+FPS: 161 Updates: 60
+FPS: 157 Updates: 60
+FPS: 163 Updates: 60
+FPS: 163 Updates: 60
+FPS: 162 Updates: 60
+FPS: 160 Updates: 60
+FPS: 165 Updates: 60
+FPS: 154 Updates: 60
+FPS: 152 Updates: 60
+FPS: 150 Updates: 60
+FPS: 148 Updates: 60
+FPS: 122 Updates: 60
+FPS: 112 Updates: 60
+FPS: 110 Updates: 60
+FPS: 111 Updates: 60
+FPS: 121 Updates: 60
+FPS: 156 Updates: 60
+FPS: 163 Updates: 60
+FPS: 159 Updates: 60
+FPS: 158 Updates: 60
+FPS: 156 Updates: 60
+FPS: 160 Updates: 60
+FPS: 161 Updates: 60
+FPS: 163 Updates: 60
+FPS: 159 Updates: 60
+FPS: 165 Updates: 60
+FPS: 160 Updates: 60
+FPS: 162 Updates: 60
+FPS: 162 Updates: 60
+FPS: 162 Updates: 60
+FPS: 162 Updates: 60
+FPS: 163 Updates: 60
+FPS: 163 Updates: 60
+FPS: 162 Updates: 60
+FPS: 162 Updates: 60
+FPS: 160 Updates: 60
+FPS: 165 Updates: 60
+FPS: 162 Updates: 60
+FPS: 159 Updates: 60
+FPS: 159 Updates: 60
+FPS: 162 Updates: 60
+FPS: 137 Updates: 60
+FPS: 142 Updates: 60
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 457.09
+Initializing Engine
+Post Load
+Starting Render Loop
+FPS: 223 Updates: 56
+FPS: 126 Updates: 63
+FPS: 277 Updates: 60
+FPS: 281 Updates: 60
+FPS: 234 Updates: 60
+FPS: 216 Updates: 60
+FPS: 231 Updates: 60
+FPS: 276 Updates: 60
+FPS: 283 Updates: 60
+FPS: 255 Updates: 60
+FPS: 226 Updates: 60
+FPS: 227 Updates: 60
+FPS: 229 Updates: 60
+FPS: 234 Updates: 60
+FPS: 232 Updates: 60
+FPS: 233 Updates: 60
+FPS: 175 Updates: 60
+FPS: 121 Updates: 60
+FPS: 123 Updates: 60
+FPS: 123 Updates: 60
+FPS: 121 Updates: 60
+FPS: 122 Updates: 60
+FPS: 122 Updates: 60
+FPS: 124 Updates: 60
+FPS: 121 Updates: 60
+FPS: 124 Updates: 60
+FPS: 122 Updates: 60
+FPS: 124 Updates: 60
+FPS: 123 Updates: 60
+FPS: 121 Updates: 60
+FPS: 122 Updates: 60
+FPS: 123 Updates: 60
+FPS: 121 Updates: 60
+FPS: 120 Updates: 60
+FPS: 115 Updates: 60
+FPS: 125 Updates: 60
+FPS: 122 Updates: 60
+FPS: 150 Updates: 60
+FPS: 162 Updates: 60
+FPS: 155 Updates: 60
+FPS: 157 Updates: 60
+FPS: 158 Updates: 60
+FPS: 158 Updates: 60
+FPS: 161 Updates: 60
+FPS: 159 Updates: 60
+FPS: 147 Updates: 60
+FPS: 132 Updates: 60
+FPS: 117 Updates: 60
+FPS: 112 Updates: 60
+FPS: 122 Updates: 60
+FPS: 156 Updates: 60

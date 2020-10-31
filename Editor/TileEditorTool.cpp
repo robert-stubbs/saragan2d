@@ -65,7 +65,7 @@ namespace Editor {
 				ImGui::SameLine();
 				if (ImGui::Button("Add")) {
 					Map* m = Engine::getWorld()->GetMap();
-					m->AddLayer();
+					selected_layer = m->AddLayer();
 				}
 				ImGui::SameLine();
 				if (ImGui::Button("Remove")) {
@@ -232,46 +232,49 @@ namespace Editor {
 		Map* m = Engine::getWorld()->GetMap();
 		TileMap* d = m->GetDefinition();
 
-		WorldSelectedX = (int)x / d->quad_width;
-		WorldSelectedY = (int)y / d->quad_height;
+		if (d->number_of_layers > 0) {
 
-		if (WorldSelectedX < d->map_width && WorldSelectedY < d->map_height) {
-			m->UpdateHoverPosition((float)WorldSelectedX * d->quad_width, (float)WorldSelectedY * d->quad_height);
-		}
+			WorldSelectedX = (int)x / d->quad_width;
+			WorldSelectedY = (int)y / d->quad_height;
 
-		if (Engine::get().EditorFocusViewport)
-		{
-			int selected_tile = selected_x + (selected_y * d->map_width);
-
-			if (LeftClickDown && Input::Get().IsMouseButtonReleased(0)) {
-				LeftClickDown = false;
-			}
-			if (RightClickDown && Input::Get().IsMouseButtonReleased(1)) {
-				RightClickDown = false;
+			if (WorldSelectedX < d->map_width && WorldSelectedY < d->map_height) {
+				m->UpdateHoverPosition((float)WorldSelectedX * d->quad_width, (float)WorldSelectedY * d->quad_height);
 			}
 
-			if (LeftClickDown|| update_current_tile_x) {
-				m->UpdateTileTexture(
-					WorldSelectedX, 
-					WorldSelectedY, 
-					selected_layer, 
-					selected_tile, 
-					glm::vec2(selected_start_pos.x, selected_start_pos.y), 
-					glm::vec2(selected_end_pos.x, selected_end_pos.y)
-				);
-				update_current_tile_x = false;
+			if (Engine::get().EditorFocusViewport)
+			{
+				int selected_tile = selected_x + (selected_y * d->map_width);
 
-			}
-			else if (RightClickDown|| update_current_tile_y) {
-				m->UpdateTileTexture(
-					WorldSelectedX,
-					WorldSelectedY,
-					selected_layer,
-					0,
-					glm::vec2(selected_start_pos.x, selected_start_pos.y),
-					glm::vec2(selected_end_pos.x, selected_end_pos.y)
-				);
-				update_current_tile_y = false;
+				if (LeftClickDown && Input::Get().IsMouseButtonReleased(0)) {
+					LeftClickDown = false;
+				}
+				if (RightClickDown && Input::Get().IsMouseButtonReleased(1)) {
+					RightClickDown = false;
+				}
+
+				if (LeftClickDown || update_current_tile_x) {
+					m->UpdateTileTexture(
+						WorldSelectedX,
+						WorldSelectedY,
+						selected_layer,
+						selected_tile,
+						glm::vec2(selected_start_pos.x, selected_start_pos.y),
+						glm::vec2(selected_end_pos.x, selected_end_pos.y)
+					);
+					update_current_tile_x = false;
+
+				}
+				else if (RightClickDown || update_current_tile_y) {
+					m->UpdateTileTexture(
+						WorldSelectedX,
+						WorldSelectedY,
+						selected_layer,
+						0,
+						glm::vec2(selected_start_pos.x, selected_start_pos.y),
+						glm::vec2(selected_end_pos.x, selected_end_pos.y)
+					);
+					update_current_tile_y = false;
+				}
 			}
 		}
 	}
