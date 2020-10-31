@@ -28,6 +28,11 @@ namespace Editor {
 
 						//Do something
 						LOG("I CLICKED Save");
+						World* w = Engine::getWorld();
+						Map* m = w->GetMap();
+						if (m != nullptr) {
+							m->SaveMapToFile();
+						}
 
 					}
 					else if (ImGui::MenuItem("Save Map As")) {

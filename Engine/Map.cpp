@@ -608,6 +608,77 @@ namespace GameEngine
 		}		
 	}
 
+	void Map::SaveMapToFile() {
+
+		tinyxml2::XMLDocument doc;
+		
+		tinyxml2::XMLElement* map = doc.NewElement("map");
+		doc.InsertFirstChild(map);
+		
+		map->SetAttribute("version", std::to_string(_definition.version).c_str());
+		map->SetAttribute("width", std::to_string(_definition.map_width).c_str());
+		map->SetAttribute("height", std::to_string(_definition.map_height).c_str());
+		map->SetAttribute("tilewidth", std::to_string(_definition.tile_width).c_str());
+		map->SetAttribute("tileheight", std::to_string(_definition.tile_height).c_str());
+		map->SetAttribute("quad_width", std::to_string(_definition.quad_width).c_str());
+		map->SetAttribute("quad_height", std::to_string(_definition.quad_height).c_str());
+
+		tinyxml2::XMLElement* sheets = map->InsertNewChildElement("sheets");
+		// Images
+		for (int i = 0; i < _definition._images.size(); i++)
+		{
+			TileAtlas& t = _definition._images.at(i);
+			tinyxml2::XMLElement* sheet = sheets->InsertNewChildElement("image");
+			sheet->SetAttribute("id", std::to_string(t.id).c_str());
+			sheet->SetAttribute("name", t.name.c_str());
+			sheet->SetAttribute("path", t.image_path.c_str());
+			sheet->SetAttribute("type", t.type.c_str());
+			sheet->SetAttribute("tilewidth", std::to_string(t.tile_width).c_str());
+			sheet->SetAttribute("tileheight", std::to_string(t.tile_height).c_str());
+			sheet->SetAttribute("width", std::to_string(t.image_width).c_str());
+			sheet->SetAttribute("height", std::to_string(t.image_height).c_str());
+
+		}
+
+		for (int i = 0; i < _definition._layers.size(); i++)
+		{
+			TileLayer& l = _definition._layers.at(i);
+			tinyxml2::XMLElement* layer = map->InsertNewChildElement("layer");
+
+			layer->SetAttribute("id", std::to_string(l.layer_index).c_str());
+			layer->SetAttribute("name", l.name.c_str());
+			layer->SetAttribute("width", std::to_string(l.width).c_str());
+			layer->SetAttribute("height", std::to_string(l.height).c_str());
+			layer->SetAttribute("sheet_id", std::to_string(l.sheet_id).c_str());
+
+			tinyxml2::XMLElement* data = layer->InsertNewChildElement("data");
+
+			std::string data_line = "";
+
+			for (int y = 0; y < _definition.map_height; y++)
+			{
+				std::vector<GameEngine::SingleTile>& row = l.Tiles.at(y);
+
+				for (int x = 0; x < _definition.map_width; x++)
+				{
+					SingleTile& t = row.at(x);
+					data_line += std::to_string(t.tile_id) + ",";
+				}
+
+				data_line += "\n";
+			}
+
+			data->SetText(data_line.c_str());
+		}
+
+		doc.SaveFile(_path.c_str(), false);
+	}
+
+	void Map::SaveMapAsToFile(std::string file_path, std::string name)
+	{
+
+	}
+
 	std::vector<std::string> Map::split(std::string& str, std::string& delim)
 	{
 		std::vector<std::string> tokens;

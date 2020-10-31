@@ -88,6 +88,8 @@ namespace GameEngine
 			void Cleanup();
 
 			virtual void LoadMapFromFile(std::string file_path, std::string name);
+			virtual void SaveMapToFile();
+			virtual void SaveMapAsToFile(std::string file_path, std::string name);
 
 			virtual std::vector<std::string> split(std::string& str, std::string& delim);
 
