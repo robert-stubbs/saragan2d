@@ -376,18 +376,19 @@ namespace GameEngine
 		float image_height = (float)_definition._images[texture_index].image_height;
 		float image_tile_width = (float)_definition._images[texture_index].tile_width;
 		float image_tile_height = (float)_definition._images[texture_index].tile_height;
+		int number_of_cols = (int)((float)image_width / float(image_tile_width));
+		int number_of_rows = (int)((float)image_height / float(image_tile_height));
 
 		TextureQuad& tile = _quads[layer][y][x];
 
-		color = glm::vec4(0.5f, 0.5f, 0.5f, 0.5f);
+		color = glm::vec4(1.0f, 1.0f, 1.0f, 1.0f);
 		min_text = { -99.0f,-99.0f };
 		max_text = { -99.0f,-99.0f };
 
 		if (texture_index > -1 && texture_selection > 0) {
 
-			color = glm::vec4(1.0f, 1.0f, 1.0f, 1.0f);
-			min_text.x = (image_tile_width / image_width) * (float)x;
-			min_text.y = (image_tile_height / image_height) * (float)y;
+			min_text.x = (image_tile_width / image_width) * (float)(texture_selection % number_of_cols);
+			min_text.y = (image_tile_height / image_height) * (float)(texture_selection / number_of_rows);
 
 			max_text.x = (image_tile_width / image_width) * (float)(x + 1);
 			max_text.y = (image_tile_height / image_height) * (float)(y + 1);

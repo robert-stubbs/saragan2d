@@ -152,6 +152,7 @@ namespace Editor {
 						ImGui::PushID(button_id);
 
 						if (ImGui::ImageButton((ImTextureID)_t->TextureID, ImVec2(tile_width, tile_height), start_pos, end_pos, 1, bg_color, *temp)) {
+
 							selected_x = (float)w;
 							selected_y = (float)h;
 							selected_start_pos = start_pos;
