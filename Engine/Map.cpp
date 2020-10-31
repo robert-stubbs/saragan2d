@@ -477,7 +477,7 @@ namespace GameEngine
 
 	void Map::UpdateTileTexture(int x, int y, int layer, int texture_selection, glm::vec2 min, glm::vec2 max)
 	{
-		if (x >= 0 && y >= 0) {
+		if (x >= 0 && y >= 0 && x < _definition.map_width && y < _definition.map_height) {
 			SingleTile& t = _definition._layers[layer].Tiles[y][x];
 			t.tile_id = texture_selection;
 			t.tile_index_x = x;

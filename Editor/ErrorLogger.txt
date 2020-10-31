@@ -81026,3 +81026,60 @@ FPS: 233 Updates: 60
 FPS: 234 Updates: 60
 FPS: 227 Updates: 60
 FPS: 227 Updates: 60
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 457.09
+Initializing Engine
+Post Load
+Starting Render Loop
+FPS: 143 Updates: 59
+FPS: 277 Updates: 60
+FPS: 277 Updates: 60
+FPS: 264 Updates: 60
+FPS: 238 Updates: 60
+FPS: 229 Updates: 60
+FPS: 206 Updates: 60
+FPS: 214 Updates: 60
+FPS: 232 Updates: 60
+FPS: 248 Updates: 60
+FPS: 255 Updates: 60
+FPS: 257 Updates: 60
+FPS: 251 Updates: 60
+FPS: 252 Updates: 60
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 457.09
+Initializing Engine
+Post Load
+Starting Render Loop
+FPS: 93 Updates: 59
+FPS: 275 Updates: 60
+FPS: 277 Updates: 60
+FPS: 240 Updates: 60
+FPS: 236 Updates: 60
+FPS: 193 Updates: 60
+FPS: 209 Updates: 60
+FPS: 233 Updates: 60
+FPS: 245 Updates: 60
+FPS: 252 Updates: 60
+FPS: 252 Updates: 60
+FPS: 254 Updates: 60
+FPS: 255 Updates: 60
+FPS: 253 Updates: 60
+FPS: 248 Updates: 60
+FPS: 257 Updates: 60
+FPS: 250 Updates: 60
+FPS: 254 Updates: 60
+FPS: 254 Updates: 60
+FPS: 250 Updates: 60
+FPS: 256 Updates: 60
+FPS: 257 Updates: 60
+FPS: 257 Updates: 60
+FPS: 256 Updates: 60
+FPS: 256 Updates: 60
