@@ -73576,3 +73576,4391 @@ FPS: 60 Updates: 60
 FPS: 60 Updates: 60
 FPS: 60 Updates: 60
 FPS: 60 Updates: 60
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 457.09
+Initializing Engine
+Post Load
+Starting Render Loop
+FPS: 89 Updates: 28
+FPS: 242 Updates: 91
+FPS: 270 Updates: 60
+FPS: 275 Updates: 60
+FPS: 253 Updates: 60
+FPS: 230 Updates: 60
+FPS: 235 Updates: 60
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 457.09
+Initializing Engine
+Post Load
+Starting Render Loop
+FPS: 66 Updates: 59
+FPS: 281 Updates: 60
+FPS: 279 Updates: 60
+FPS: 255 Updates: 60
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 457.09
+Initializing Engine
+Post Load
+Starting Render Loop
+FPS: 107 Updates: 31
+FPS: 226 Updates: 88
+FPS: 279 Updates: 60
+FPS: 274 Updates: 60
+FPS: 230 Updates: 60
+FPS: 231 Updates: 60
+FPS: 237 Updates: 60
+LEFT Selected: 0 X: 4 Selected Y: 5
+FPS: 229 Updates: 60
+FPS: 229 Updates: 60
+FPS: 234 Updates: 60
+LEFT Selected: 201 X: 4 Selected Y: 5
+FPS: 231 Updates: 60
+FPS: 225 Updates: 60
+FPS: 161 Updates: 60
+FPS: 166 Updates: 60
+FPS: 168 Updates: 60
+FPS: 163 Updates: 60
+LEFT Selected: 201 X: 5 Selected Y: 5
+FPS: 165 Updates: 60
+LEFT Selected: 201 X: 7 Selected Y: 5
+LEFT Selected: 201 X: 7 Selected Y: 5
+LEFT Selected: 201 X: 7 Selected Y: 5
+LEFT Selected: 201 X: 6 Selected Y: 5
+FPS: 162 Updates: 60
+LEFT Selected: 201 X: 6 Selected Y: 5
+LEFT Selected: 201 X: 6 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+FPS: 159 Updates: 60
+FPS: 160 Updates: 60
+FPS: 162 Updates: 60
+FPS: 167 Updates: 60
+FPS: 166 Updates: 60
+FPS: 166 Updates: 60
+FPS: 166 Updates: 60
+FPS: 166 Updates: 60
+FPS: 165 Updates: 60
+LEFT Selected: 201 X: 4 Selected Y: 4
+LEFT Selected: 201 X: 4 Selected Y: 4
+LEFT Selected: 201 X: 4 Selected Y: 4
+LEFT Selected: 201 X: 4 Selected Y: 4
+LEFT Selected: 201 X: 4 Selected Y: 4
+LEFT Selected: 201 X: 4 Selected Y: 4
+LEFT Selected: 201 X: 4 Selected Y: 4
+FPS: 164 Updates: 60
+LEFT Selected: 201 X: 5 Selected Y: 3
+LEFT Selected: 201 X: 3 Selected Y: 3
+FPS: 163 Updates: 60
+LEFT Selected: 201 X: 2 Selected Y: 2
+LEFT Selected: 201 X: 2 Selected Y: 2
+LEFT Selected: 201 X: 2 Selected Y: 2
+LEFT Selected: 201 X: 2 Selected Y: 2
+LEFT Selected: 201 X: 2 Selected Y: 2
+LEFT Selected: 201 X: 3 Selected Y: 2
+LEFT Selected: 201 X: 3 Selected Y: 2
+LEFT Selected: 201 X: 3 Selected Y: 2
+LEFT Selected: 201 X: 3 Selected Y: 2
+LEFT Selected: 201 X: 4 Selected Y: 2
+LEFT Selected: 201 X: 4 Selected Y: 2
+LEFT Selected: 201 X: 4 Selected Y: 2
+LEFT Selected: 201 X: 5 Selected Y: 2
+LEFT Selected: 201 X: 5 Selected Y: 3
+LEFT Selected: 201 X: 5 Selected Y: 3
+LEFT Selected: 201 X: 5 Selected Y: 3
+LEFT Selected: 201 X: 5 Selected Y: 3
+LEFT Selected: 201 X: 5 Selected Y: 3
+LEFT Selected: 201 X: 5 Selected Y: 3
+LEFT Selected: 201 X: 5 Selected Y: 3
+LEFT Selected: 201 X: 6 Selected Y: 3
+LEFT Selected: 201 X: 6 Selected Y: 3
+LEFT Selected: 201 X: 6 Selected Y: 3
+LEFT Selected: 201 X: 6 Selected Y: 3
+LEFT Selected: 201 X: 6 Selected Y: 4
+LEFT Selected: 201 X: 6 Selected Y: 4
+LEFT Selected: 201 X: 6 Selected Y: 4
+LEFT Selected: 201 X: 6 Selected Y: 4
+LEFT Selected: 201 X: 6 Selected Y: 4
+LEFT Selected: 201 X: 6 Selected Y: 4
+LEFT Selected: 201 X: 6 Selected Y: 4
+LEFT Selected: 201 X: 6 Selected Y: 4
+LEFT Selected: 201 X: 6 Selected Y: 4
+LEFT Selected: 201 X: 5 Selected Y: 4
+LEFT Selected: 201 X: 5 Selected Y: 4
+LEFT Selected: 201 X: 5 Selected Y: 4
+LEFT Selected: 201 X: 5 Selected Y: 4
+LEFT Selected: 201 X: 5 Selected Y: 4
+LEFT Selected: 201 X: 4 Selected Y: 4
+LEFT Selected: 201 X: 4 Selected Y: 4
+LEFT Selected: 201 X: 4 Selected Y: 4
+LEFT Selected: 201 X: 4 Selected Y: 4
+LEFT Selected: 201 X: 4 Selected Y: 4
+LEFT Selected: 201 X: 4 Selected Y: 4
+LEFT Selected: 201 X: 4 Selected Y: 4
+LEFT Selected: 201 X: 3 Selected Y: 4
+LEFT Selected: 201 X: 3 Selected Y: 4
+LEFT Selected: 201 X: 3 Selected Y: 4
+LEFT Selected: 201 X: 3 Selected Y: 4
+LEFT Selected: 201 X: 3 Selected Y: 4
+LEFT Selected: 201 X: 3 Selected Y: 4
+LEFT Selected: 201 X: 3 Selected Y: 3
+LEFT Selected: 201 X: 3 Selected Y: 3
+LEFT Selected: 201 X: 3 Selected Y: 3
+LEFT Selected: 201 X: 3 Selected Y: 3
+LEFT Selected: 201 X: 3 Selected Y: 3
+LEFT Selected: 201 X: 3 Selected Y: 3
+LEFT Selected: 201 X: 4 Selected Y: 3
+LEFT Selected: 201 X: 4 Selected Y: 3
+LEFT Selected: 201 X: 4 Selected Y: 3
+LEFT Selected: 201 X: 4 Selected Y: 3
+LEFT Selected: 201 X: 4 Selected Y: 3
+LEFT Selected: 201 X: 4 Selected Y: 3
+LEFT Selected: 201 X: 5 Selected Y: 3
+LEFT Selected: 201 X: 5 Selected Y: 3
+LEFT Selected: 201 X: 5 Selected Y: 3
+LEFT Selected: 201 X: 5 Selected Y: 3
+LEFT Selected: 201 X: 5 Selected Y: 2
+LEFT Selected: 201 X: 6 Selected Y: 2
+LEFT Selected: 201 X: 6 Selected Y: 2
+LEFT Selected: 201 X: 6 Selected Y: 2
+LEFT Selected: 201 X: 6 Selected Y: 3
+LEFT Selected: 201 X: 6 Selected Y: 3
+LEFT Selected: 201 X: 6 Selected Y: 3
+LEFT Selected: 201 X: 6 Selected Y: 3
+LEFT Selected: 201 X: 6 Selected Y: 3
+LEFT Selected: 201 X: 6 Selected Y: 3
+LEFT Selected: 201 X: 6 Selected Y: 3
+LEFT Selected: 201 X: 6 Selected Y: 3
+FPS: 129 Updates: 60
+LEFT Selected: 201 X: 6 Selected Y: 3
+LEFT Selected: 201 X: 5 Selected Y: 3
+LEFT Selected: 201 X: 5 Selected Y: 4
+LEFT Selected: 201 X: 5 Selected Y: 4
+LEFT Selected: 201 X: 5 Selected Y: 4
+LEFT Selected: 201 X: 5 Selected Y: 4
+LEFT Selected: 201 X: 5 Selected Y: 4
+LEFT Selected: 201 X: 5 Selected Y: 4
+LEFT Selected: 201 X: 4 Selected Y: 4
+LEFT Selected: 201 X: 4 Selected Y: 4
+LEFT Selected: 201 X: 4 Selected Y: 4
+LEFT Selected: 201 X: 4 Selected Y: 4
+LEFT Selected: 201 X: 4 Selected Y: 4
+LEFT Selected: 201 X: 4 Selected Y: 4
+LEFT Selected: 201 X: 4 Selected Y: 4
+LEFT Selected: 201 X: 4 Selected Y: 4
+LEFT Selected: 201 X: 4 Selected Y: 4
+LEFT Selected: 201 X: 4 Selected Y: 3
+LEFT Selected: 201 X: 4 Selected Y: 3
+LEFT Selected: 201 X: 4 Selected Y: 3
+LEFT Selected: 201 X: 4 Selected Y: 3
+LEFT Selected: 201 X: 4 Selected Y: 3
+LEFT Selected: 201 X: 4 Selected Y: 3
+LEFT Selected: 201 X: 4 Selected Y: 3
+LEFT Selected: 201 X: 5 Selected Y: 3
+LEFT Selected: 201 X: 5 Selected Y: 3
+LEFT Selected: 201 X: 5 Selected Y: 3
+LEFT Selected: 201 X: 5 Selected Y: 3
+LEFT Selected: 201 X: 5 Selected Y: 3
+LEFT Selected: 201 X: 6 Selected Y: 3
+LEFT Selected: 201 X: 6 Selected Y: 3
+LEFT Selected: 201 X: 6 Selected Y: 3
+LEFT Selected: 201 X: 6 Selected Y: 3
+LEFT Selected: 201 X: 6 Selected Y: 3
+LEFT Selected: 201 X: 6 Selected Y: 3
+LEFT Selected: 201 X: 6 Selected Y: 3
+LEFT Selected: 201 X: 6 Selected Y: 3
+LEFT Selected: 201 X: 6 Selected Y: 3
+LEFT Selected: 201 X: 7 Selected Y: 4
+LEFT Selected: 201 X: 7 Selected Y: 4
+LEFT Selected: 201 X: 7 Selected Y: 4
+LEFT Selected: 201 X: 7 Selected Y: 4
+LEFT Selected: 201 X: 6 Selected Y: 4
+LEFT Selected: 201 X: 6 Selected Y: 4
+LEFT Selected: 201 X: 6 Selected Y: 4
+LEFT Selected: 201 X: 6 Selected Y: 4
+LEFT Selected: 201 X: 6 Selected Y: 4
+LEFT Selected: 201 X: 6 Selected Y: 4
+LEFT Selected: 201 X: 5 Selected Y: 4
+LEFT Selected: 201 X: 5 Selected Y: 4
+LEFT Selected: 201 X: 5 Selected Y: 4
+LEFT Selected: 201 X: 5 Selected Y: 4
+LEFT Selected: 201 X: 5 Selected Y: 4
+LEFT Selected: 201 X: 5 Selected Y: 4
+LEFT Selected: 201 X: 5 Selected Y: 4
+LEFT Selected: 201 X: 5 Selected Y: 4
+LEFT Selected: 201 X: 5 Selected Y: 4
+LEFT Selected: 201 X: 5 Selected Y: 3
+LEFT Selected: 201 X: 5 Selected Y: 3
+LEFT Selected: 201 X: 5 Selected Y: 3
+LEFT Selected: 201 X: 5 Selected Y: 3
+LEFT Selected: 201 X: 5 Selected Y: 3
+LEFT Selected: 201 X: 5 Selected Y: 3
+LEFT Selected: 201 X: 5 Selected Y: 3
+LEFT Selected: 201 X: 6 Selected Y: 3
+LEFT Selected: 201 X: 6 Selected Y: 3
+LEFT Selected: 201 X: 6 Selected Y: 3
+LEFT Selected: 201 X: 6 Selected Y: 3
+LEFT Selected: 201 X: 6 Selected Y: 3
+LEFT Selected: 201 X: 6 Selected Y: 3
+LEFT Selected: 201 X: 7 Selected Y: 3
+LEFT Selected: 201 X: 7 Selected Y: 3
+LEFT Selected: 201 X: 7 Selected Y: 3
+LEFT Selected: 201 X: 7 Selected Y: 3
+LEFT Selected: 201 X: 7 Selected Y: 3
+LEFT Selected: 201 X: 7 Selected Y: 3
+LEFT Selected: 201 X: 7 Selected Y: 3
+LEFT Selected: 201 X: 7 Selected Y: 3
+LEFT Selected: 201 X: 8 Selected Y: 3
+LEFT Selected: 201 X: 8 Selected Y: 4
+LEFT Selected: 201 X: 8 Selected Y: 4
+LEFT Selected: 201 X: 8 Selected Y: 4
+LEFT Selected: 201 X: 8 Selected Y: 4
+LEFT Selected: 201 X: 8 Selected Y: 4
+LEFT Selected: 201 X: 8 Selected Y: 5
+LEFT Selected: 201 X: 8 Selected Y: 5
+LEFT Selected: 201 X: 8 Selected Y: 5
+LEFT Selected: 201 X: 8 Selected Y: 5
+LEFT Selected: 201 X: 8 Selected Y: 5
+LEFT Selected: 201 X: 8 Selected Y: 6
+LEFT Selected: 201 X: 8 Selected Y: 6
+LEFT Selected: 201 X: 8 Selected Y: 6
+LEFT Selected: 201 X: 7 Selected Y: 6
+LEFT Selected: 201 X: 7 Selected Y: 6
+LEFT Selected: 201 X: 7 Selected Y: 6
+LEFT Selected: 201 X: 7 Selected Y: 7
+LEFT Selected: 201 X: 7 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 5 Selected Y: 7
+LEFT Selected: 201 X: 5 Selected Y: 7
+LEFT Selected: 201 X: 5 Selected Y: 7
+LEFT Selected: 201 X: 5 Selected Y: 7
+LEFT Selected: 201 X: 5 Selected Y: 7
+LEFT Selected: 201 X: 5 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 6
+LEFT Selected: 201 X: 3 Selected Y: 6
+LEFT Selected: 201 X: 3 Selected Y: 6
+LEFT Selected: 201 X: 3 Selected Y: 6
+LEFT Selected: 201 X: 3 Selected Y: 5
+LEFT Selected: 201 X: 4 Selected Y: 5
+LEFT Selected: 201 X: 4 Selected Y: 5
+LEFT Selected: 201 X: 4 Selected Y: 4
+LEFT Selected: 201 X: 4 Selected Y: 4
+LEFT Selected: 201 X: 4 Selected Y: 4
+LEFT Selected: 201 X: 5 Selected Y: 4
+LEFT Selected: 201 X: 5 Selected Y: 4
+LEFT Selected: 201 X: 5 Selected Y: 4
+LEFT Selected: 201 X: 6 Selected Y: 4
+LEFT Selected: 201 X: 6 Selected Y: 4
+LEFT Selected: 201 X: 7 Selected Y: 4
+LEFT Selected: 201 X: 7 Selected Y: 4
+LEFT Selected: 201 X: 7 Selected Y: 4
+LEFT Selected: 201 X: 7 Selected Y: 4
+LEFT Selected: 201 X: 8 Selected Y: 4
+LEFT Selected: 201 X: 8 Selected Y: 4
+LEFT Selected: 201 X: 8 Selected Y: 4
+LEFT Selected: 201 X: 8 Selected Y: 4
+LEFT Selected: 201 X: 8 Selected Y: 4
+LEFT Selected: 201 X: 8 Selected Y: 4
+LEFT Selected: 201 X: 8 Selected Y: 5
+LEFT Selected: 201 X: 8 Selected Y: 5
+LEFT Selected: 201 X: 8 Selected Y: 5
+LEFT Selected: 201 X: 8 Selected Y: 5
+LEFT Selected: 201 X: 8 Selected Y: 5
+LEFT Selected: 201 X: 8 Selected Y: 6
+LEFT Selected: 201 X: 8 Selected Y: 6
+LEFT Selected: 201 X: 8 Selected Y: 6
+LEFT Selected: 201 X: 8 Selected Y: 7
+LEFT Selected: 201 X: 8 Selected Y: 7
+LEFT Selected: 201 X: 8 Selected Y: 7
+LEFT Selected: 201 X: 8 Selected Y: 7
+LEFT Selected: 201 X: 8 Selected Y: 8
+LEFT Selected: 201 X: 8 Selected Y: 8
+LEFT Selected: 201 X: 8 Selected Y: 8
+LEFT Selected: 201 X: 8 Selected Y: 8
+LEFT Selected: 201 X: 8 Selected Y: 8
+LEFT Selected: 201 X: 8 Selected Y: 9
+LEFT Selected: 201 X: 8 Selected Y: 9
+LEFT Selected: 201 X: 7 Selected Y: 9
+LEFT Selected: 201 X: 7 Selected Y: 9
+LEFT Selected: 201 X: 7 Selected Y: 9
+LEFT Selected: 201 X: 6 Selected Y: 9
+LEFT Selected: 201 X: 6 Selected Y: 9
+LEFT Selected: 201 X: 6 Selected Y: 9
+LEFT Selected: 201 X: 6 Selected Y: 9
+LEFT Selected: 201 X: 5 Selected Y: 8
+LEFT Selected: 201 X: 5 Selected Y: 8
+LEFT Selected: 201 X: 5 Selected Y: 8
+FPS: 143 Updates: 60
+LEFT Selected: 201 X: 5 Selected Y: 8
+LEFT Selected: 201 X: 5 Selected Y: 8
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 5
+LEFT Selected: 201 X: 5 Selected Y: 5
+LEFT Selected: 201 X: 5 Selected Y: 5
+LEFT Selected: 201 X: 5 Selected Y: 5
+LEFT Selected: 201 X: 6 Selected Y: 4
+LEFT Selected: 201 X: 6 Selected Y: 4
+LEFT Selected: 201 X: 6 Selected Y: 4
+LEFT Selected: 201 X: 6 Selected Y: 4
+LEFT Selected: 201 X: 7 Selected Y: 4
+LEFT Selected: 201 X: 7 Selected Y: 4
+LEFT Selected: 201 X: 7 Selected Y: 4
+LEFT Selected: 201 X: 8 Selected Y: 4
+LEFT Selected: 201 X: 8 Selected Y: 4
+LEFT Selected: 201 X: 8 Selected Y: 4
+LEFT Selected: 201 X: 8 Selected Y: 5
+LEFT Selected: 201 X: 8 Selected Y: 5
+LEFT Selected: 201 X: 8 Selected Y: 5
+LEFT Selected: 201 X: 8 Selected Y: 5
+LEFT Selected: 201 X: 8 Selected Y: 5
+LEFT Selected: 201 X: 8 Selected Y: 6
+LEFT Selected: 201 X: 8 Selected Y: 6
+LEFT Selected: 201 X: 8 Selected Y: 6
+LEFT Selected: 201 X: 8 Selected Y: 6
+LEFT Selected: 201 X: 8 Selected Y: 7
+LEFT Selected: 201 X: 8 Selected Y: 7
+LEFT Selected: 201 X: 8 Selected Y: 7
+LEFT Selected: 201 X: 8 Selected Y: 7
+LEFT Selected: 201 X: 8 Selected Y: 7
+LEFT Selected: 201 X: 7 Selected Y: 7
+LEFT Selected: 201 X: 7 Selected Y: 7
+LEFT Selected: 201 X: 7 Selected Y: 7
+LEFT Selected: 201 X: 7 Selected Y: 7
+LEFT Selected: 201 X: 7 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 5 Selected Y: 7
+LEFT Selected: 201 X: 5 Selected Y: 7
+LEFT Selected: 201 X: 5 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 5
+LEFT Selected: 201 X: 4 Selected Y: 5
+LEFT Selected: 201 X: 4 Selected Y: 5
+LEFT Selected: 201 X: 4 Selected Y: 5
+LEFT Selected: 201 X: 4 Selected Y: 5
+LEFT Selected: 201 X: 5 Selected Y: 4
+LEFT Selected: 201 X: 5 Selected Y: 4
+LEFT Selected: 201 X: 5 Selected Y: 4
+LEFT Selected: 201 X: 6 Selected Y: 4
+LEFT Selected: 201 X: 6 Selected Y: 5
+LEFT Selected: 201 X: 7 Selected Y: 5
+LEFT Selected: 201 X: 7 Selected Y: 5
+LEFT Selected: 201 X: 7 Selected Y: 6
+LEFT Selected: 201 X: 7 Selected Y: 6
+LEFT Selected: 201 X: 8 Selected Y: 6
+LEFT Selected: 201 X: 8 Selected Y: 6
+LEFT Selected: 201 X: 8 Selected Y: 7
+LEFT Selected: 201 X: 8 Selected Y: 7
+LEFT Selected: 201 X: 8 Selected Y: 7
+LEFT Selected: 201 X: 7 Selected Y: 7
+LEFT Selected: 201 X: 7 Selected Y: 7
+LEFT Selected: 201 X: 7 Selected Y: 7
+LEFT Selected: 201 X: 7 Selected Y: 8
+LEFT Selected: 201 X: 7 Selected Y: 8
+LEFT Selected: 201 X: 7 Selected Y: 8
+LEFT Selected: 201 X: 7 Selected Y: 8
+LEFT Selected: 201 X: 6 Selected Y: 8
+LEFT Selected: 201 X: 6 Selected Y: 8
+LEFT Selected: 201 X: 6 Selected Y: 8
+LEFT Selected: 201 X: 6 Selected Y: 8
+LEFT Selected: 201 X: 5 Selected Y: 8
+LEFT Selected: 201 X: 5 Selected Y: 8
+LEFT Selected: 201 X: 5 Selected Y: 8
+LEFT Selected: 201 X: 5 Selected Y: 8
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 5 Selected Y: 6
+LEFT Selected: 201 X: 5 Selected Y: 6
+LEFT Selected: 201 X: 5 Selected Y: 6
+LEFT Selected: 201 X: 5 Selected Y: 6
+LEFT Selected: 201 X: 5 Selected Y: 6
+LEFT Selected: 201 X: 6 Selected Y: 6
+LEFT Selected: 201 X: 6 Selected Y: 6
+LEFT Selected: 201 X: 6 Selected Y: 6
+LEFT Selected: 201 X: 6 Selected Y: 6
+LEFT Selected: 201 X: 6 Selected Y: 6
+LEFT Selected: 201 X: 6 Selected Y: 6
+LEFT Selected: 201 X: 7 Selected Y: 6
+LEFT Selected: 201 X: 7 Selected Y: 7
+LEFT Selected: 201 X: 7 Selected Y: 7
+LEFT Selected: 201 X: 7 Selected Y: 7
+LEFT Selected: 201 X: 7 Selected Y: 7
+LEFT Selected: 201 X: 7 Selected Y: 7
+LEFT Selected: 201 X: 7 Selected Y: 7
+LEFT Selected: 201 X: 7 Selected Y: 8
+LEFT Selected: 201 X: 6 Selected Y: 8
+LEFT Selected: 201 X: 6 Selected Y: 8
+LEFT Selected: 201 X: 6 Selected Y: 8
+LEFT Selected: 201 X: 6 Selected Y: 8
+LEFT Selected: 201 X: 6 Selected Y: 8
+LEFT Selected: 201 X: 5 Selected Y: 8
+LEFT Selected: 201 X: 5 Selected Y: 8
+LEFT Selected: 201 X: 5 Selected Y: 8
+LEFT Selected: 201 X: 4 Selected Y: 8
+LEFT Selected: 201 X: 4 Selected Y: 8
+LEFT Selected: 201 X: 4 Selected Y: 8
+LEFT Selected: 201 X: 4 Selected Y: 8
+LEFT Selected: 201 X: 4 Selected Y: 8
+LEFT Selected: 201 X: 4 Selected Y: 8
+LEFT Selected: 201 X: 3 Selected Y: 8
+LEFT Selected: 201 X: 3 Selected Y: 8
+LEFT Selected: 201 X: 3 Selected Y: 8
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 6
+LEFT Selected: 201 X: 3 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 5 Selected Y: 6
+LEFT Selected: 201 X: 5 Selected Y: 6
+LEFT Selected: 201 X: 5 Selected Y: 6
+LEFT Selected: 201 X: 5 Selected Y: 6
+LEFT Selected: 201 X: 6 Selected Y: 6
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+FPS: 142 Updates: 60
+LEFT Selected: 201 X: 6 Selected Y: 8
+LEFT Selected: 201 X: 6 Selected Y: 8
+LEFT Selected: 201 X: 6 Selected Y: 8
+LEFT Selected: 201 X: 6 Selected Y: 8
+LEFT Selected: 201 X: 6 Selected Y: 8
+LEFT Selected: 201 X: 6 Selected Y: 8
+LEFT Selected: 201 X: 5 Selected Y: 9
+LEFT Selected: 201 X: 5 Selected Y: 9
+LEFT Selected: 201 X: 5 Selected Y: 9
+LEFT Selected: 201 X: 5 Selected Y: 9
+LEFT Selected: 201 X: 4 Selected Y: 9
+LEFT Selected: 201 X: 4 Selected Y: 9
+LEFT Selected: 201 X: 4 Selected Y: 9
+LEFT Selected: 201 X: 4 Selected Y: 9
+LEFT Selected: 201 X: 4 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 8
+LEFT Selected: 201 X: 3 Selected Y: 8
+LEFT Selected: 201 X: 3 Selected Y: 8
+LEFT Selected: 201 X: 3 Selected Y: 8
+LEFT Selected: 201 X: 3 Selected Y: 8
+LEFT Selected: 201 X: 2 Selected Y: 8
+LEFT Selected: 201 X: 2 Selected Y: 8
+LEFT Selected: 201 X: 2 Selected Y: 8
+LEFT Selected: 201 X: 2 Selected Y: 8
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 5 Selected Y: 7
+LEFT Selected: 201 X: 5 Selected Y: 7
+LEFT Selected: 201 X: 5 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 8
+LEFT Selected: 201 X: 6 Selected Y: 8
+LEFT Selected: 201 X: 6 Selected Y: 8
+LEFT Selected: 201 X: 6 Selected Y: 8
+LEFT Selected: 201 X: 6 Selected Y: 8
+LEFT Selected: 201 X: 6 Selected Y: 8
+LEFT Selected: 201 X: 6 Selected Y: 8
+LEFT Selected: 201 X: 6 Selected Y: 9
+LEFT Selected: 201 X: 6 Selected Y: 9
+LEFT Selected: 201 X: 6 Selected Y: 9
+LEFT Selected: 201 X: 6 Selected Y: 9
+LEFT Selected: 201 X: 6 Selected Y: 9
+LEFT Selected: 201 X: 5 Selected Y: 9
+LEFT Selected: 201 X: 5 Selected Y: 9
+LEFT Selected: 201 X: 5 Selected Y: 9
+LEFT Selected: 201 X: 4 Selected Y: 9
+LEFT Selected: 201 X: 4 Selected Y: 9
+LEFT Selected: 201 X: 4 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 8
+LEFT Selected: 201 X: 3 Selected Y: 8
+LEFT Selected: 201 X: 2 Selected Y: 8
+LEFT Selected: 201 X: 2 Selected Y: 8
+LEFT Selected: 201 X: 2 Selected Y: 8
+LEFT Selected: 201 X: 2 Selected Y: 8
+LEFT Selected: 201 X: 2 Selected Y: 7
+LEFT Selected: 201 X: 2 Selected Y: 7
+LEFT Selected: 201 X: 2 Selected Y: 7
+LEFT Selected: 201 X: 2 Selected Y: 7
+LEFT Selected: 201 X: 2 Selected Y: 6
+LEFT Selected: 201 X: 2 Selected Y: 6
+LEFT Selected: 201 X: 2 Selected Y: 6
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 3 Selected Y: 5
+LEFT Selected: 201 X: 3 Selected Y: 5
+LEFT Selected: 201 X: 3 Selected Y: 4
+LEFT Selected: 201 X: 3 Selected Y: 4
+LEFT Selected: 201 X: 4 Selected Y: 4
+LEFT Selected: 201 X: 4 Selected Y: 4
+LEFT Selected: 201 X: 4 Selected Y: 4
+LEFT Selected: 201 X: 5 Selected Y: 4
+LEFT Selected: 201 X: 5 Selected Y: 4
+LEFT Selected: 201 X: 5 Selected Y: 4
+LEFT Selected: 201 X: 5 Selected Y: 4
+LEFT Selected: 201 X: 5 Selected Y: 4
+LEFT Selected: 201 X: 5 Selected Y: 5
+LEFT Selected: 201 X: 5 Selected Y: 5
+LEFT Selected: 201 X: 5 Selected Y: 5
+LEFT Selected: 201 X: 6 Selected Y: 5
+LEFT Selected: 201 X: 6 Selected Y: 6
+LEFT Selected: 201 X: 6 Selected Y: 6
+LEFT Selected: 201 X: 6 Selected Y: 6
+LEFT Selected: 201 X: 6 Selected Y: 6
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 5 Selected Y: 7
+LEFT Selected: 201 X: 5 Selected Y: 7
+LEFT Selected: 201 X: 5 Selected Y: 7
+LEFT Selected: 201 X: 5 Selected Y: 8
+LEFT Selected: 201 X: 5 Selected Y: 8
+LEFT Selected: 201 X: 5 Selected Y: 8
+LEFT Selected: 201 X: 5 Selected Y: 8
+LEFT Selected: 201 X: 5 Selected Y: 8
+LEFT Selected: 201 X: 5 Selected Y: 8
+LEFT Selected: 201 X: 4 Selected Y: 8
+LEFT Selected: 201 X: 4 Selected Y: 8
+LEFT Selected: 201 X: 4 Selected Y: 8
+LEFT Selected: 201 X: 4 Selected Y: 8
+LEFT Selected: 201 X: 4 Selected Y: 8
+LEFT Selected: 201 X: 3 Selected Y: 8
+LEFT Selected: 201 X: 3 Selected Y: 8
+LEFT Selected: 201 X: 3 Selected Y: 8
+LEFT Selected: 201 X: 3 Selected Y: 8
+LEFT Selected: 201 X: 3 Selected Y: 8
+LEFT Selected: 201 X: 3 Selected Y: 8
+LEFT Selected: 201 X: 2 Selected Y: 7
+LEFT Selected: 201 X: 2 Selected Y: 7
+LEFT Selected: 201 X: 2 Selected Y: 7
+LEFT Selected: 201 X: 2 Selected Y: 7
+LEFT Selected: 201 X: 2 Selected Y: 7
+LEFT Selected: 201 X: 2 Selected Y: 7
+LEFT Selected: 201 X: 2 Selected Y: 7
+LEFT Selected: 201 X: 2 Selected Y: 7
+LEFT Selected: 201 X: 2 Selected Y: 7
+LEFT Selected: 201 X: 2 Selected Y: 6
+LEFT Selected: 201 X: 2 Selected Y: 6
+LEFT Selected: 201 X: 2 Selected Y: 6
+LEFT Selected: 201 X: 2 Selected Y: 6
+LEFT Selected: 201 X: 2 Selected Y: 6
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 4
+LEFT Selected: 201 X: 3 Selected Y: 4
+LEFT Selected: 201 X: 3 Selected Y: 4
+LEFT Selected: 201 X: 3 Selected Y: 4
+LEFT Selected: 201 X: 3 Selected Y: 4
+LEFT Selected: 201 X: 3 Selected Y: 4
+LEFT Selected: 201 X: 3 Selected Y: 4
+LEFT Selected: 201 X: 3 Selected Y: 4
+LEFT Selected: 201 X: 3 Selected Y: 4
+LEFT Selected: 201 X: 3 Selected Y: 4
+LEFT Selected: 201 X: 3 Selected Y: 4
+LEFT Selected: 201 X: 3 Selected Y: 4
+LEFT Selected: 201 X: 3 Selected Y: 3
+LEFT Selected: 201 X: 3 Selected Y: 3
+LEFT Selected: 201 X: 3 Selected Y: 3
+LEFT Selected: 201 X: 3 Selected Y: 3
+LEFT Selected: 201 X: 3 Selected Y: 3
+LEFT Selected: 201 X: 3 Selected Y: 3
+LEFT Selected: 201 X: 3 Selected Y: 3
+LEFT Selected: 201 X: 3 Selected Y: 3
+LEFT Selected: 201 X: 3 Selected Y: 3
+FPS: 143 Updates: 61
+LEFT Selected: 201 X: 3 Selected Y: 3
+LEFT Selected: 201 X: 3 Selected Y: 3
+LEFT Selected: 201 X: 3 Selected Y: 3
+LEFT Selected: 201 X: 3 Selected Y: 3
+LEFT Selected: 201 X: 3 Selected Y: 3
+LEFT Selected: 201 X: 3 Selected Y: 3
+LEFT Selected: 201 X: 3 Selected Y: 3
+LEFT Selected: 201 X: 3 Selected Y: 3
+LEFT Selected: 201 X: 3 Selected Y: 3
+LEFT Selected: 201 X: 3 Selected Y: 3
+LEFT Selected: 201 X: 3 Selected Y: 3
+LEFT Selected: 201 X: 3 Selected Y: 3
+LEFT Selected: 201 X: 3 Selected Y: 3
+LEFT Selected: 201 X: 3 Selected Y: 3
+LEFT Selected: 201 X: 3 Selected Y: 2
+LEFT Selected: 201 X: 3 Selected Y: 2
+LEFT Selected: 201 X: 3 Selected Y: 2
+LEFT Selected: 201 X: 2 Selected Y: 2
+LEFT Selected: 201 X: 2 Selected Y: 2
+LEFT Selected: 201 X: 2 Selected Y: 2
+LEFT Selected: 201 X: 2 Selected Y: 2
+LEFT Selected: 201 X: 2 Selected Y: 2
+LEFT Selected: 201 X: 2 Selected Y: 2
+LEFT Selected: 201 X: 2 Selected Y: 2
+LEFT Selected: 201 X: 2 Selected Y: 3
+LEFT Selected: 201 X: 2 Selected Y: 3
+LEFT Selected: 201 X: 2 Selected Y: 3
+LEFT Selected: 201 X: 2 Selected Y: 3
+LEFT Selected: 201 X: 2 Selected Y: 3
+LEFT Selected: 201 X: 2 Selected Y: 3
+LEFT Selected: 201 X: 2 Selected Y: 4
+LEFT Selected: 201 X: 2 Selected Y: 4
+LEFT Selected: 201 X: 2 Selected Y: 4
+LEFT Selected: 201 X: 2 Selected Y: 4
+LEFT Selected: 201 X: 2 Selected Y: 4
+LEFT Selected: 201 X: 2 Selected Y: 4
+LEFT Selected: 201 X: 2 Selected Y: 4
+LEFT Selected: 201 X: 2 Selected Y: 4
+LEFT Selected: 201 X: 2 Selected Y: 4
+LEFT Selected: 201 X: 2 Selected Y: 4
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 6
+LEFT Selected: 201 X: 2 Selected Y: 6
+LEFT Selected: 201 X: 2 Selected Y: 6
+LEFT Selected: 201 X: 2 Selected Y: 6
+LEFT Selected: 201 X: 2 Selected Y: 6
+LEFT Selected: 201 X: 2 Selected Y: 6
+LEFT Selected: 201 X: 2 Selected Y: 6
+LEFT Selected: 201 X: 2 Selected Y: 6
+LEFT Selected: 201 X: 2 Selected Y: 7
+LEFT Selected: 201 X: 2 Selected Y: 7
+LEFT Selected: 201 X: 2 Selected Y: 7
+LEFT Selected: 201 X: 2 Selected Y: 7
+LEFT Selected: 201 X: 2 Selected Y: 7
+LEFT Selected: 201 X: 2 Selected Y: 7
+LEFT Selected: 201 X: 2 Selected Y: 7
+LEFT Selected: 201 X: 2 Selected Y: 7
+LEFT Selected: 201 X: 2 Selected Y: 7
+LEFT Selected: 201 X: 2 Selected Y: 7
+LEFT Selected: 201 X: 2 Selected Y: 8
+LEFT Selected: 201 X: 2 Selected Y: 8
+LEFT Selected: 201 X: 2 Selected Y: 8
+LEFT Selected: 201 X: 3 Selected Y: 8
+LEFT Selected: 201 X: 3 Selected Y: 8
+LEFT Selected: 201 X: 3 Selected Y: 8
+LEFT Selected: 201 X: 3 Selected Y: 8
+LEFT Selected: 201 X: 3 Selected Y: 8
+LEFT Selected: 201 X: 3 Selected Y: 8
+LEFT Selected: 201 X: 3 Selected Y: 8
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 4 Selected Y: 9
+LEFT Selected: 201 X: 4 Selected Y: 9
+LEFT Selected: 201 X: 4 Selected Y: 9
+LEFT Selected: 201 X: 4 Selected Y: 9
+LEFT Selected: 201 X: 4 Selected Y: 9
+LEFT Selected: 201 X: 4 Selected Y: 9
+LEFT Selected: 201 X: 4 Selected Y: 9
+LEFT Selected: 201 X: 4 Selected Y: 9
+LEFT Selected: 201 X: 4 Selected Y: 9
+LEFT Selected: 201 X: 4 Selected Y: 9
+LEFT Selected: 201 X: 4 Selected Y: 9
+LEFT Selected: 201 X: 5 Selected Y: 9
+LEFT Selected: 201 X: 5 Selected Y: 9
+LEFT Selected: 201 X: 4 Selected Y: 9
+LEFT Selected: 201 X: 4 Selected Y: 9
+LEFT Selected: 201 X: 4 Selected Y: 9
+LEFT Selected: 201 X: 4 Selected Y: 9
+LEFT Selected: 201 X: 4 Selected Y: 9
+LEFT Selected: 201 X: 4 Selected Y: 9
+LEFT Selected: 201 X: 4 Selected Y: 9
+LEFT Selected: 201 X: 4 Selected Y: 9
+LEFT Selected: 201 X: 4 Selected Y: 9
+LEFT Selected: 201 X: 4 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 2 Selected Y: 9
+LEFT Selected: 201 X: 2 Selected Y: 9
+LEFT Selected: 201 X: 2 Selected Y: 9
+LEFT Selected: 201 X: 2 Selected Y: 9
+LEFT Selected: 201 X: 2 Selected Y: 9
+FPS: 142 Updates: 59
+LEFT Selected: 201 X: 2 Selected Y: 9
+LEFT Selected: 201 X: 2 Selected Y: 9
+LEFT Selected: 201 X: 2 Selected Y: 9
+LEFT Selected: 201 X: 2 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 4 Selected Y: 9
+LEFT Selected: 201 X: 4 Selected Y: 9
+LEFT Selected: 201 X: 4 Selected Y: 9
+LEFT Selected: 201 X: 4 Selected Y: 9
+LEFT Selected: 201 X: 5 Selected Y: 9
+LEFT Selected: 201 X: 5 Selected Y: 9
+LEFT Selected: 201 X: 5 Selected Y: 9
+LEFT Selected: 201 X: 6 Selected Y: 9
+LEFT Selected: 201 X: 6 Selected Y: 9
+LEFT Selected: 201 X: 7 Selected Y: 9
+LEFT Selected: 201 X: 7 Selected Y: 9
+LEFT Selected: 201 X: 7 Selected Y: 9
+LEFT Selected: 201 X: 8 Selected Y: 9
+LEFT Selected: 201 X: 8 Selected Y: 9
+LEFT Selected: 201 X: 8 Selected Y: 9
+LEFT Selected: 201 X: 8 Selected Y: 9
+LEFT Selected: 201 X: 8 Selected Y: 9
+LEFT Selected: 201 X: 8 Selected Y: 9
+LEFT Selected: 201 X: 8 Selected Y: 9
+LEFT Selected: 201 X: 8 Selected Y: 9
+LEFT Selected: 201 X: 8 Selected Y: 9
+LEFT Selected: 201 X: 8 Selected Y: 9
+LEFT Selected: 201 X: 9 Selected Y: 9
+LEFT Selected: 201 X: 9 Selected Y: 9
+LEFT Selected: 201 X: 9 Selected Y: 9
+LEFT Selected: 201 X: 9 Selected Y: 9
+LEFT Selected: 201 X: 9 Selected Y: 9
+LEFT Selected: 201 X: 9 Selected Y: 9
+LEFT Selected: 201 X: 9 Selected Y: 9
+LEFT Selected: 201 X: 9 Selected Y: 9
+LEFT Selected: 201 X: 9 Selected Y: 9
+LEFT Selected: 201 X: 9 Selected Y: 9
+LEFT Selected: 201 X: 9 Selected Y: 8
+LEFT Selected: 201 X: 9 Selected Y: 8
+LEFT Selected: 201 X: 9 Selected Y: 8
+LEFT Selected: 201 X: 9 Selected Y: 8
+LEFT Selected: 201 X: 9 Selected Y: 8
+LEFT Selected: 201 X: 9 Selected Y: 8
+LEFT Selected: 201 X: 9 Selected Y: 8
+LEFT Selected: 201 X: 9 Selected Y: 8
+LEFT Selected: 201 X: 9 Selected Y: 8
+LEFT Selected: 201 X: 9 Selected Y: 8
+LEFT Selected: 201 X: 9 Selected Y: 8
+LEFT Selected: 201 X: 9 Selected Y: 8
+LEFT Selected: 201 X: 9 Selected Y: 7
+LEFT Selected: 201 X: 9 Selected Y: 7
+LEFT Selected: 201 X: 9 Selected Y: 7
+LEFT Selected: 201 X: 9 Selected Y: 7
+LEFT Selected: 201 X: 9 Selected Y: 7
+LEFT Selected: 201 X: 9 Selected Y: 7
+LEFT Selected: 201 X: 9 Selected Y: 7
+LEFT Selected: 201 X: 9 Selected Y: 7
+LEFT Selected: 201 X: 9 Selected Y: 7
+LEFT Selected: 201 X: 9 Selected Y: 7
+LEFT Selected: 201 X: 9 Selected Y: 7
+LEFT Selected: 201 X: 9 Selected Y: 6
+LEFT Selected: 201 X: 9 Selected Y: 6
+LEFT Selected: 201 X: 9 Selected Y: 6
+LEFT Selected: 201 X: 9 Selected Y: 6
+LEFT Selected: 201 X: 9 Selected Y: 6
+LEFT Selected: 201 X: 9 Selected Y: 6
+LEFT Selected: 201 X: 9 Selected Y: 6
+LEFT Selected: 201 X: 9 Selected Y: 6
+LEFT Selected: 201 X: 9 Selected Y: 6
+LEFT Selected: 201 X: 9 Selected Y: 5
+LEFT Selected: 201 X: 9 Selected Y: 5
+LEFT Selected: 201 X: 9 Selected Y: 5
+LEFT Selected: 201 X: 9 Selected Y: 5
+LEFT Selected: 201 X: 9 Selected Y: 5
+LEFT Selected: 201 X: 9 Selected Y: 5
+LEFT Selected: 201 X: 9 Selected Y: 5
+LEFT Selected: 201 X: 9 Selected Y: 5
+LEFT Selected: 201 X: 9 Selected Y: 5
+LEFT Selected: 201 X: 9 Selected Y: 5
+LEFT Selected: 201 X: 9 Selected Y: 5
+LEFT Selected: 201 X: 9 Selected Y: 5
+LEFT Selected: 201 X: 9 Selected Y: 5
+LEFT Selected: 201 X: 9 Selected Y: 5
+LEFT Selected: 201 X: 9 Selected Y: 4
+LEFT Selected: 201 X: 9 Selected Y: 4
+LEFT Selected: 201 X: 9 Selected Y: 4
+LEFT Selected: 201 X: 9 Selected Y: 4
+LEFT Selected: 201 X: 9 Selected Y: 4
+LEFT Selected: 201 X: 9 Selected Y: 4
+LEFT Selected: 201 X: 9 Selected Y: 4
+LEFT Selected: 201 X: 9 Selected Y: 4
+LEFT Selected: 201 X: 9 Selected Y: 4
+LEFT Selected: 201 X: 9 Selected Y: 4
+LEFT Selected: 201 X: 9 Selected Y: 4
+LEFT Selected: 201 X: 9 Selected Y: 4
+LEFT Selected: 201 X: 9 Selected Y: 4
+LEFT Selected: 201 X: 9 Selected Y: 4
+LEFT Selected: 201 X: 9 Selected Y: 4
+LEFT Selected: 201 X: 9 Selected Y: 4
+LEFT Selected: 201 X: 9 Selected Y: 4
+LEFT Selected: 201 X: 8 Selected Y: 4
+LEFT Selected: 201 X: 8 Selected Y: 4
+LEFT Selected: 201 X: 8 Selected Y: 4
+LEFT Selected: 201 X: 8 Selected Y: 4
+LEFT Selected: 201 X: 8 Selected Y: 3
+LEFT Selected: 201 X: 8 Selected Y: 3
+FPS: 149 Updates: 60
+LEFT Selected: 201 X: 8 Selected Y: 3
+LEFT Selected: 201 X: 8 Selected Y: 3
+LEFT Selected: 201 X: 8 Selected Y: 3
+LEFT Selected: 201 X: 8 Selected Y: 3
+LEFT Selected: 201 X: 8 Selected Y: 3
+LEFT Selected: 201 X: 8 Selected Y: 3
+LEFT Selected: 201 X: 8 Selected Y: 3
+LEFT Selected: 201 X: 8 Selected Y: 3
+LEFT Selected: 201 X: 8 Selected Y: 3
+LEFT Selected: 201 X: 8 Selected Y: 3
+LEFT Selected: 201 X: 8 Selected Y: 3
+LEFT Selected: 201 X: 8 Selected Y: 3
+LEFT Selected: 201 X: 8 Selected Y: 3
+LEFT Selected: 201 X: 8 Selected Y: 3
+LEFT Selected: 201 X: 8 Selected Y: 3
+LEFT Selected: 201 X: 8 Selected Y: 3
+LEFT Selected: 201 X: 8 Selected Y: 3
+LEFT Selected: 201 X: 8 Selected Y: 3
+LEFT Selected: 201 X: 8 Selected Y: 3
+LEFT Selected: 201 X: 8 Selected Y: 3
+LEFT Selected: 201 X: 8 Selected Y: 3
+LEFT Selected: 201 X: 8 Selected Y: 3
+LEFT Selected: 201 X: 8 Selected Y: 3
+LEFT Selected: 201 X: 8 Selected Y: 2
+LEFT Selected: 201 X: 8 Selected Y: 2
+LEFT Selected: 201 X: 8 Selected Y: 2
+LEFT Selected: 201 X: 8 Selected Y: 2
+LEFT Selected: 201 X: 8 Selected Y: 2
+LEFT Selected: 201 X: 8 Selected Y: 2
+LEFT Selected: 201 X: 8 Selected Y: 2
+LEFT Selected: 201 X: 8 Selected Y: 2
+LEFT Selected: 201 X: 8 Selected Y: 2
+LEFT Selected: 201 X: 8 Selected Y: 2
+LEFT Selected: 201 X: 8 Selected Y: 2
+LEFT Selected: 201 X: 8 Selected Y: 2
+LEFT Selected: 201 X: 8 Selected Y: 2
+LEFT Selected: 201 X: 8 Selected Y: 2
+LEFT Selected: 201 X: 8 Selected Y: 2
+LEFT Selected: 201 X: 8 Selected Y: 2
+LEFT Selected: 201 X: 8 Selected Y: 2
+LEFT Selected: 201 X: 8 Selected Y: 2
+LEFT Selected: 201 X: 8 Selected Y: 2
+LEFT Selected: 201 X: 7 Selected Y: 2
+LEFT Selected: 201 X: 7 Selected Y: 2
+LEFT Selected: 201 X: 7 Selected Y: 2
+LEFT Selected: 201 X: 7 Selected Y: 2
+LEFT Selected: 201 X: 7 Selected Y: 2
+LEFT Selected: 201 X: 7 Selected Y: 2
+LEFT Selected: 201 X: 7 Selected Y: 2
+LEFT Selected: 201 X: 7 Selected Y: 2
+LEFT Selected: 201 X: 7 Selected Y: 2
+LEFT Selected: 201 X: 7 Selected Y: 2
+LEFT Selected: 201 X: 7 Selected Y: 2
+LEFT Selected: 201 X: 7 Selected Y: 2
+LEFT Selected: 201 X: 7 Selected Y: 2
+LEFT Selected: 201 X: 7 Selected Y: 2
+LEFT Selected: 201 X: 7 Selected Y: 2
+LEFT Selected: 201 X: 7 Selected Y: 2
+LEFT Selected: 201 X: 7 Selected Y: 2
+LEFT Selected: 201 X: 8 Selected Y: 2
+LEFT Selected: 201 X: 8 Selected Y: 2
+LEFT Selected: 201 X: 8 Selected Y: 2
+LEFT Selected: 201 X: 8 Selected Y: 2
+LEFT Selected: 201 X: 8 Selected Y: 2
+LEFT Selected: 201 X: 8 Selected Y: 2
+LEFT Selected: 201 X: 8 Selected Y: 2
+LEFT Selected: 201 X: 8 Selected Y: 2
+LEFT Selected: 201 X: 8 Selected Y: 2
+LEFT Selected: 201 X: 8 Selected Y: 2
+LEFT Selected: 201 X: 8 Selected Y: 2
+LEFT Selected: 201 X: 8 Selected Y: 2
+LEFT Selected: 201 X: 8 Selected Y: 2
+LEFT Selected: 201 X: 8 Selected Y: 2
+LEFT Selected: 201 X: 8 Selected Y: 2
+LEFT Selected: 201 X: 8 Selected Y: 2
+LEFT Selected: 201 X: 8 Selected Y: 2
+LEFT Selected: 201 X: 8 Selected Y: 2
+LEFT Selected: 201 X: 8 Selected Y: 2
+LEFT Selected: 201 X: 8 Selected Y: 2
+LEFT Selected: 201 X: 8 Selected Y: 2
+LEFT Selected: 201 X: 9 Selected Y: 2
+LEFT Selected: 201 X: 9 Selected Y: 2
+LEFT Selected: 201 X: 9 Selected Y: 2
+LEFT Selected: 201 X: 9 Selected Y: 2
+LEFT Selected: 201 X: 9 Selected Y: 2
+LEFT Selected: 201 X: 9 Selected Y: 2
+LEFT Selected: 201 X: 9 Selected Y: 2
+LEFT Selected: 201 X: 9 Selected Y: 2
+LEFT Selected: 201 X: 9 Selected Y: 2
+LEFT Selected: 201 X: 9 Selected Y: 2
+LEFT Selected: 201 X: 9 Selected Y: 2
+FPS: 146 Updates: 60
+LEFT Selected: 201 X: 9 Selected Y: 2
+LEFT Selected: 201 X: 9 Selected Y: 2
+LEFT Selected: 201 X: 9 Selected Y: 2
+LEFT Selected: 201 X: 9 Selected Y: 2
+LEFT Selected: 201 X: 9 Selected Y: 2
+LEFT Selected: 201 X: 9 Selected Y: 2
+LEFT Selected: 201 X: 9 Selected Y: 2
+LEFT Selected: 201 X: 9 Selected Y: 2
+LEFT Selected: 201 X: 9 Selected Y: 2
+LEFT Selected: 201 X: 9 Selected Y: 3
+LEFT Selected: 201 X: 9 Selected Y: 3
+LEFT Selected: 201 X: 9 Selected Y: 3
+LEFT Selected: 201 X: 9 Selected Y: 3
+LEFT Selected: 201 X: 9 Selected Y: 3
+LEFT Selected: 201 X: 9 Selected Y: 3
+LEFT Selected: 201 X: 9 Selected Y: 3
+LEFT Selected: 201 X: 9 Selected Y: 3
+LEFT Selected: 201 X: 9 Selected Y: 3
+LEFT Selected: 201 X: 9 Selected Y: 3
+LEFT Selected: 201 X: 9 Selected Y: 3
+LEFT Selected: 201 X: 9 Selected Y: 3
+LEFT Selected: 201 X: 9 Selected Y: 3
+LEFT Selected: 201 X: 9 Selected Y: 3
+LEFT Selected: 201 X: 9 Selected Y: 3
+LEFT Selected: 201 X: 9 Selected Y: 3
+LEFT Selected: 201 X: 9 Selected Y: 3
+LEFT Selected: 201 X: 9 Selected Y: 3
+FPS: 155 Updates: 60
+FPS: 165 Updates: 60
+FPS: 161 Updates: 60
+FPS: 159 Updates: 60
+FPS: 159 Updates: 60
+LEFT Selected: 1300 X: 5 Selected Y: 7
+FPS: 165 Updates: 60
+FPS: 159 Updates: 60
+FPS: 160 Updates: 60
+LEFT Selected: 1301 X: 6 Selected Y: 7
+FPS: 159 Updates: 60
+FPS: 163 Updates: 60
+LEFT Selected: 1200 X: 5 Selected Y: 6
+FPS: 159 Updates: 60
+FPS: 159 Updates: 60
+LEFT Selected: 1201 X: 6 Selected Y: 6
+LEFT Selected: 1201 X: 6 Selected Y: 6
+FPS: 163 Updates: 60
+FPS: 160 Updates: 60
+FPS: 160 Updates: 60
+FPS: 140 Updates: 60
+FPS: 124 Updates: 60
+FPS: 123 Updates: 60
+FPS: 122 Updates: 60
+LEFT Selected: 1201 X: 5 Selected Y: 5
+FPS: 118 Updates: 60
+FPS: 123 Updates: 60
+LEFT Selected: 1302 X: 5 Selected Y: 5
+LEFT Selected: 1302 X: 5 Selected Y: 5
+FPS: 122 Updates: 60
+FPS: 120 Updates: 60
+LEFT Selected: 1303 X: 6 Selected Y: 5
+FPS: 121 Updates: 60
+FPS: 122 Updates: 60
+LEFT Selected: 1202 X: 5 Selected Y: 4
+FPS: 121 Updates: 60
+FPS: 124 Updates: 60
+LEFT Selected: 1203 X: 6 Selected Y: 4
+FPS: 121 Updates: 60
+FPS: 123 Updates: 60
+FPS: 125 Updates: 60
+FPS: 125 Updates: 60
+FPS: 125 Updates: 60
+FPS: 125 Updates: 60
+FPS: 127 Updates: 60
+FPS: 126 Updates: 60
+FPS: 122 Updates: 60
+FPS: 120 Updates: 60
+LEFT Selected: 1203 X: -4 Selected Y: 0
+FPS: 122 Updates: 60
+FPS: 126 Updates: 60
+FPS: 126 Updates: 60
+FPS: 125 Updates: 60
+FPS: 126 Updates: 60
+FPS: 125 Updates: 60
+FPS: 125 Updates: 60
+FPS: 126 Updates: 60
+FPS: 123 Updates: 60
+FPS: 125 Updates: 60
+FPS: 127 Updates: 60
+FPS: 122 Updates: 60
+FPS: 121 Updates: 60
+FPS: 125 Updates: 60
+FPS: 122 Updates: 60
+FPS: 123 Updates: 60
+FPS: 124 Updates: 60
+FPS: 125 Updates: 60
+FPS: 123 Updates: 60
+FPS: 124 Updates: 60
+FPS: 123 Updates: 60
+FPS: 124 Updates: 60
+FPS: 126 Updates: 60
+FPS: 125 Updates: 60
+FPS: 124 Updates: 60
+FPS: 123 Updates: 60
+FPS: 125 Updates: 60
+FPS: 126 Updates: 60
+FPS: 122 Updates: 60
+FPS: 123 Updates: 60
+FPS: 125 Updates: 60
+FPS: 124 Updates: 60
+FPS: 126 Updates: 60
+FPS: 117 Updates: 60
+FPS: 124 Updates: 60
+FPS: 118 Updates: 60
+FPS: 120 Updates: 60
+FPS: 119 Updates: 60
+FPS: 114 Updates: 60
+FPS: 123 Updates: 60
+FPS: 125 Updates: 60
+FPS: 125 Updates: 60
+FPS: 125 Updates: 60
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 457.09
+Initializing Engine
+Post Load
+Starting Render Loop
+FPS: 120 Updates: 35
+FPS: 197 Updates: 84
+FPS: 280 Updates: 60
+FPS: 276 Updates: 60
+FPS: 241 Updates: 60
+FPS: 217 Updates: 60
+FPS: 172 Updates: 60
+FPS: 135 Updates: 60
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 457.09
+Initializing Engine
+Post Load
+Starting Render Loop
+FPS: 80 Updates: 25
+FPS: 120 Updates: 94
+FPS: 278 Updates: 60
+FPS: 255 Updates: 60
+FPS: 233 Updates: 60
+FPS: 220 Updates: 60
+FPS: 226 Updates: 60
+LEFT Selected: 201 X: 6 Selected Y: 6
+LEFT Selected: 201 X: 6 Selected Y: 6
+LEFT Selected: 201 X: 6 Selected Y: 6
+LEFT Selected: 201 X: 6 Selected Y: 6
+LEFT Selected: 201 X: 6 Selected Y: 6
+LEFT Selected: 201 X: 6 Selected Y: 6
+LEFT Selected: 201 X: 6 Selected Y: 6
+LEFT Selected: 201 X: 6 Selected Y: 6
+LEFT Selected: 201 X: 5 Selected Y: 6
+LEFT Selected: 201 X: 5 Selected Y: 6
+LEFT Selected: 201 X: 5 Selected Y: 6
+LEFT Selected: 201 X: 5 Selected Y: 6
+LEFT Selected: 201 X: 5 Selected Y: 6
+LEFT Selected: 201 X: 5 Selected Y: 6
+LEFT Selected: 201 X: 5 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 5
+LEFT Selected: 201 X: 4 Selected Y: 5
+LEFT Selected: 201 X: 4 Selected Y: 5
+LEFT Selected: 201 X: 4 Selected Y: 5
+LEFT Selected: 201 X: 4 Selected Y: 5
+LEFT Selected: 201 X: 4 Selected Y: 5
+LEFT Selected: 201 X: 4 Selected Y: 5
+LEFT Selected: 201 X: 4 Selected Y: 5
+LEFT Selected: 201 X: 5 Selected Y: 5
+LEFT Selected: 201 X: 5 Selected Y: 5
+LEFT Selected: 201 X: 5 Selected Y: 5
+LEFT Selected: 201 X: 5 Selected Y: 5
+LEFT Selected: 201 X: 6 Selected Y: 5
+LEFT Selected: 201 X: 6 Selected Y: 5
+LEFT Selected: 201 X: 6 Selected Y: 5
+LEFT Selected: 201 X: 6 Selected Y: 5
+LEFT Selected: 201 X: 6 Selected Y: 5
+LEFT Selected: 201 X: 6 Selected Y: 5
+LEFT Selected: 201 X: 7 Selected Y: 5
+LEFT Selected: 201 X: 7 Selected Y: 5
+LEFT Selected: 201 X: 8 Selected Y: 5
+LEFT Selected: 201 X: 8 Selected Y: 5
+LEFT Selected: 201 X: 8 Selected Y: 5
+LEFT Selected: 201 X: 8 Selected Y: 5
+LEFT Selected: 201 X: 8 Selected Y: 5
+LEFT Selected: 201 X: 8 Selected Y: 5
+LEFT Selected: 201 X: 8 Selected Y: 5
+LEFT Selected: 201 X: 8 Selected Y: 5
+LEFT Selected: 201 X: 9 Selected Y: 6
+LEFT Selected: 201 X: 9 Selected Y: 6
+LEFT Selected: 201 X: 9 Selected Y: 6
+LEFT Selected: 201 X: 9 Selected Y: 6
+LEFT Selected: 201 X: 9 Selected Y: 6
+LEFT Selected: 201 X: 9 Selected Y: 6
+LEFT Selected: 201 X: 9 Selected Y: 6
+LEFT Selected: 201 X: 9 Selected Y: 6
+LEFT Selected: 201 X: 9 Selected Y: 6
+LEFT Selected: 201 X: 9 Selected Y: 7
+LEFT Selected: 201 X: 9 Selected Y: 7
+LEFT Selected: 201 X: 9 Selected Y: 7
+LEFT Selected: 201 X: 9 Selected Y: 7
+LEFT Selected: 201 X: 9 Selected Y: 7
+LEFT Selected: 201 X: 9 Selected Y: 7
+LEFT Selected: 201 X: 9 Selected Y: 7
+LEFT Selected: 201 X: 9 Selected Y: 7
+LEFT Selected: 201 X: 9 Selected Y: 7
+LEFT Selected: 201 X: 8 Selected Y: 7
+LEFT Selected: 201 X: 8 Selected Y: 7
+LEFT Selected: 201 X: 8 Selected Y: 7
+LEFT Selected: 201 X: 8 Selected Y: 7
+LEFT Selected: 201 X: 8 Selected Y: 7
+LEFT Selected: 201 X: 8 Selected Y: 7
+LEFT Selected: 201 X: 7 Selected Y: 7
+LEFT Selected: 201 X: 7 Selected Y: 7
+LEFT Selected: 201 X: 7 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 5 Selected Y: 7
+LEFT Selected: 201 X: 5 Selected Y: 7
+LEFT Selected: 201 X: 5 Selected Y: 7
+LEFT Selected: 201 X: 5 Selected Y: 6
+LEFT Selected: 201 X: 5 Selected Y: 6
+LEFT Selected: 201 X: 5 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 5 Selected Y: 5
+LEFT Selected: 201 X: 5 Selected Y: 5
+LEFT Selected: 201 X: 5 Selected Y: 5
+LEFT Selected: 201 X: 5 Selected Y: 5
+LEFT Selected: 201 X: 5 Selected Y: 5
+LEFT Selected: 201 X: 5 Selected Y: 5
+LEFT Selected: 201 X: 5 Selected Y: 5
+LEFT Selected: 201 X: 5 Selected Y: 5
+LEFT Selected: 201 X: 6 Selected Y: 5
+LEFT Selected: 201 X: 6 Selected Y: 5
+LEFT Selected: 201 X: 6 Selected Y: 5
+LEFT Selected: 201 X: 6 Selected Y: 5
+LEFT Selected: 201 X: 7 Selected Y: 5
+LEFT Selected: 201 X: 7 Selected Y: 5
+LEFT Selected: 201 X: 7 Selected Y: 5
+LEFT Selected: 201 X: 7 Selected Y: 5
+LEFT Selected: 201 X: 7 Selected Y: 5
+LEFT Selected: 201 X: 7 Selected Y: 5
+LEFT Selected: 201 X: 7 Selected Y: 5
+LEFT Selected: 201 X: 7 Selected Y: 5
+LEFT Selected: 201 X: 8 Selected Y: 5
+LEFT Selected: 201 X: 8 Selected Y: 5
+LEFT Selected: 201 X: 8 Selected Y: 5
+LEFT Selected: 201 X: 8 Selected Y: 5
+LEFT Selected: 201 X: 8 Selected Y: 6
+LEFT Selected: 201 X: 8 Selected Y: 6
+LEFT Selected: 201 X: 8 Selected Y: 6
+LEFT Selected: 201 X: 8 Selected Y: 6
+LEFT Selected: 201 X: 8 Selected Y: 6
+LEFT Selected: 201 X: 8 Selected Y: 6
+LEFT Selected: 201 X: 8 Selected Y: 6
+LEFT Selected: 201 X: 7 Selected Y: 7
+LEFT Selected: 201 X: 7 Selected Y: 7
+LEFT Selected: 201 X: 7 Selected Y: 7
+LEFT Selected: 201 X: 7 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 5 Selected Y: 7
+LEFT Selected: 201 X: 5 Selected Y: 7
+LEFT Selected: 201 X: 5 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 6
+LEFT Selected: 201 X: 3 Selected Y: 6
+LEFT Selected: 201 X: 3 Selected Y: 6
+LEFT Selected: 201 X: 3 Selected Y: 6
+LEFT Selected: 201 X: 3 Selected Y: 6
+LEFT Selected: 201 X: 3 Selected Y: 6
+LEFT Selected: 201 X: 3 Selected Y: 6
+LEFT Selected: 201 X: 3 Selected Y: 6
+LEFT Selected: 201 X: 3 Selected Y: 6
+LEFT Selected: 201 X: 3 Selected Y: 6
+LEFT Selected: 201 X: 3 Selected Y: 6
+LEFT Selected: 201 X: 3 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 5 Selected Y: 6
+FPS: 206 Updates: 60
+LEFT Selected: 201 X: 5 Selected Y: 6
+LEFT Selected: 201 X: 5 Selected Y: 6
+LEFT Selected: 201 X: 6 Selected Y: 6
+LEFT Selected: 201 X: 6 Selected Y: 6
+LEFT Selected: 201 X: 6 Selected Y: 6
+LEFT Selected: 201 X: 7 Selected Y: 6
+LEFT Selected: 201 X: 7 Selected Y: 6
+LEFT Selected: 201 X: 7 Selected Y: 6
+LEFT Selected: 201 X: 7 Selected Y: 6
+LEFT Selected: 201 X: 7 Selected Y: 6
+LEFT Selected: 201 X: 8 Selected Y: 6
+LEFT Selected: 201 X: 8 Selected Y: 6
+LEFT Selected: 201 X: 8 Selected Y: 6
+LEFT Selected: 201 X: 8 Selected Y: 6
+LEFT Selected: 201 X: 8 Selected Y: 6
+LEFT Selected: 201 X: 8 Selected Y: 6
+LEFT Selected: 201 X: 8 Selected Y: 6
+LEFT Selected: 201 X: 8 Selected Y: 7
+LEFT Selected: 201 X: 8 Selected Y: 7
+LEFT Selected: 201 X: 8 Selected Y: 7
+LEFT Selected: 201 X: 8 Selected Y: 7
+LEFT Selected: 201 X: 8 Selected Y: 7
+LEFT Selected: 201 X: 8 Selected Y: 7
+LEFT Selected: 201 X: 7 Selected Y: 7
+LEFT Selected: 201 X: 7 Selected Y: 7
+LEFT Selected: 201 X: 7 Selected Y: 7
+LEFT Selected: 201 X: 7 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 5 Selected Y: 7
+LEFT Selected: 201 X: 5 Selected Y: 7
+LEFT Selected: 201 X: 5 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 5 Selected Y: 7
+LEFT Selected: 201 X: 5 Selected Y: 7
+LEFT Selected: 201 X: 5 Selected Y: 7
+LEFT Selected: 201 X: 5 Selected Y: 7
+LEFT Selected: 201 X: 5 Selected Y: 7
+LEFT Selected: 201 X: 5 Selected Y: 8
+LEFT Selected: 201 X: 4 Selected Y: 8
+LEFT Selected: 201 X: 4 Selected Y: 8
+LEFT Selected: 201 X: 4 Selected Y: 8
+LEFT Selected: 201 X: 4 Selected Y: 8
+LEFT Selected: 201 X: 4 Selected Y: 8
+LEFT Selected: 201 X: 4 Selected Y: 8
+LEFT Selected: 201 X: 4 Selected Y: 8
+LEFT Selected: 201 X: 4 Selected Y: 8
+LEFT Selected: 201 X: 4 Selected Y: 8
+LEFT Selected: 201 X: 4 Selected Y: 8
+LEFT Selected: 201 X: 4 Selected Y: 8
+LEFT Selected: 201 X: 4 Selected Y: 8
+LEFT Selected: 201 X: 4 Selected Y: 8
+LEFT Selected: 201 X: 4 Selected Y: 8
+LEFT Selected: 201 X: 4 Selected Y: 8
+LEFT Selected: 201 X: 4 Selected Y: 9
+LEFT Selected: 201 X: 4 Selected Y: 9
+LEFT Selected: 201 X: 4 Selected Y: 9
+LEFT Selected: 201 X: 4 Selected Y: 9
+LEFT Selected: 201 X: 4 Selected Y: 9
+LEFT Selected: 201 X: 4 Selected Y: 9
+LEFT Selected: 201 X: 4 Selected Y: 9
+LEFT Selected: 201 X: 4 Selected Y: 9
+LEFT Selected: 201 X: 4 Selected Y: 9
+LEFT Selected: 201 X: 5 Selected Y: 9
+LEFT Selected: 201 X: 5 Selected Y: 9
+LEFT Selected: 201 X: 5 Selected Y: 9
+LEFT Selected: 201 X: 5 Selected Y: 9
+LEFT Selected: 201 X: 5 Selected Y: 9
+LEFT Selected: 201 X: 5 Selected Y: 9
+LEFT Selected: 201 X: 5 Selected Y: 9
+LEFT Selected: 201 X: 5 Selected Y: 9
+LEFT Selected: 201 X: 5 Selected Y: 9
+LEFT Selected: 201 X: 5 Selected Y: 9
+LEFT Selected: 201 X: 6 Selected Y: 9
+LEFT Selected: 201 X: 6 Selected Y: 9
+LEFT Selected: 201 X: 6 Selected Y: 9
+LEFT Selected: 201 X: 6 Selected Y: 9
+LEFT Selected: 201 X: 6 Selected Y: 9
+LEFT Selected: 201 X: 6 Selected Y: 9
+LEFT Selected: 201 X: 7 Selected Y: 9
+LEFT Selected: 201 X: 7 Selected Y: 9
+LEFT Selected: 201 X: 7 Selected Y: 9
+LEFT Selected: 201 X: 7 Selected Y: 9
+LEFT Selected: 201 X: 7 Selected Y: 9
+LEFT Selected: 201 X: 7 Selected Y: 9
+LEFT Selected: 201 X: 7 Selected Y: 9
+LEFT Selected: 201 X: 7 Selected Y: 9
+LEFT Selected: 201 X: 7 Selected Y: 9
+LEFT Selected: 201 X: 8 Selected Y: 9
+LEFT Selected: 201 X: 8 Selected Y: 9
+LEFT Selected: 201 X: 8 Selected Y: 9
+LEFT Selected: 201 X: 8 Selected Y: 9
+LEFT Selected: 201 X: 8 Selected Y: 9
+LEFT Selected: 201 X: 8 Selected Y: 9
+LEFT Selected: 201 X: 8 Selected Y: 9
+LEFT Selected: 201 X: 8 Selected Y: 9
+LEFT Selected: 201 X: 8 Selected Y: 9
+LEFT Selected: 201 X: 8 Selected Y: 9
+LEFT Selected: 201 X: 8 Selected Y: 9
+LEFT Selected: 201 X: 8 Selected Y: 9
+LEFT Selected: 201 X: 8 Selected Y: 9
+LEFT Selected: 201 X: 8 Selected Y: 9
+LEFT Selected: 201 X: 9 Selected Y: 9
+LEFT Selected: 201 X: 9 Selected Y: 9
+LEFT Selected: 201 X: 9 Selected Y: 9
+LEFT Selected: 201 X: 9 Selected Y: 9
+LEFT Selected: 201 X: 9 Selected Y: 9
+LEFT Selected: 201 X: 9 Selected Y: 9
+LEFT Selected: 201 X: 9 Selected Y: 9
+LEFT Selected: 201 X: 9 Selected Y: 9
+LEFT Selected: 201 X: 9 Selected Y: 8
+LEFT Selected: 201 X: 9 Selected Y: 8
+LEFT Selected: 201 X: 9 Selected Y: 8
+LEFT Selected: 201 X: 9 Selected Y: 8
+LEFT Selected: 201 X: 9 Selected Y: 8
+LEFT Selected: 201 X: 9 Selected Y: 8
+LEFT Selected: 201 X: 9 Selected Y: 8
+LEFT Selected: 201 X: 9 Selected Y: 8
+LEFT Selected: 201 X: 9 Selected Y: 8
+LEFT Selected: 201 X: 9 Selected Y: 8
+LEFT Selected: 201 X: 9 Selected Y: 8
+LEFT Selected: 201 X: 10 Selected Y: 8
+LEFT Selected: 201 X: 10 Selected Y: 8
+LEFT Selected: 201 X: 10 Selected Y: 8
+LEFT Selected: 201 X: 10 Selected Y: 8
+LEFT Selected: 201 X: 10 Selected Y: 8
+LEFT Selected: 201 X: 10 Selected Y: 8
+LEFT Selected: 201 X: 10 Selected Y: 8
+LEFT Selected: 201 X: 10 Selected Y: 8
+LEFT Selected: 201 X: 10 Selected Y: 8
+LEFT Selected: 201 X: 10 Selected Y: 8
+LEFT Selected: 201 X: 10 Selected Y: 8
+LEFT Selected: 201 X: 10 Selected Y: 8
+LEFT Selected: 201 X: 10 Selected Y: 8
+LEFT Selected: 201 X: 10 Selected Y: 8
+LEFT Selected: 201 X: 10 Selected Y: 7
+LEFT Selected: 201 X: 10 Selected Y: 7
+LEFT Selected: 201 X: 10 Selected Y: 7
+LEFT Selected: 201 X: 10 Selected Y: 7
+LEFT Selected: 201 X: 10 Selected Y: 7
+LEFT Selected: 201 X: 10 Selected Y: 7
+LEFT Selected: 201 X: 10 Selected Y: 7
+LEFT Selected: 201 X: 10 Selected Y: 7
+LEFT Selected: 201 X: 10 Selected Y: 7
+LEFT Selected: 201 X: 10 Selected Y: 7
+LEFT Selected: 201 X: 10 Selected Y: 7
+LEFT Selected: 201 X: 10 Selected Y: 7
+LEFT Selected: 201 X: 10 Selected Y: 7
+LEFT Selected: 201 X: 10 Selected Y: 6
+LEFT Selected: 201 X: 9 Selected Y: 6
+LEFT Selected: 201 X: 9 Selected Y: 6
+LEFT Selected: 201 X: 9 Selected Y: 6
+LEFT Selected: 201 X: 9 Selected Y: 6
+LEFT Selected: 201 X: 9 Selected Y: 6
+LEFT Selected: 201 X: 9 Selected Y: 6
+LEFT Selected: 201 X: 9 Selected Y: 6
+LEFT Selected: 201 X: 9 Selected Y: 6
+LEFT Selected: 201 X: 9 Selected Y: 6
+LEFT Selected: 201 X: 9 Selected Y: 6
+LEFT Selected: 201 X: 9 Selected Y: 6
+LEFT Selected: 201 X: 9 Selected Y: 5
+LEFT Selected: 201 X: 9 Selected Y: 5
+LEFT Selected: 201 X: 9 Selected Y: 5
+LEFT Selected: 201 X: 9 Selected Y: 5
+LEFT Selected: 201 X: 9 Selected Y: 5
+LEFT Selected: 201 X: 9 Selected Y: 5
+LEFT Selected: 201 X: 9 Selected Y: 5
+LEFT Selected: 201 X: 9 Selected Y: 5
+LEFT Selected: 201 X: 9 Selected Y: 5
+LEFT Selected: 201 X: 9 Selected Y: 5
+LEFT Selected: 201 X: 9 Selected Y: 5
+LEFT Selected: 201 X: 9 Selected Y: 5
+LEFT Selected: 201 X: 9 Selected Y: 5
+LEFT Selected: 201 X: 9 Selected Y: 5
+LEFT Selected: 201 X: 9 Selected Y: 5
+LEFT Selected: 201 X: 9 Selected Y: 5
+LEFT Selected: 201 X: 8 Selected Y: 5
+LEFT Selected: 201 X: 8 Selected Y: 4
+LEFT Selected: 201 X: 8 Selected Y: 4
+LEFT Selected: 201 X: 8 Selected Y: 4
+LEFT Selected: 201 X: 8 Selected Y: 4
+LEFT Selected: 201 X: 8 Selected Y: 4
+LEFT Selected: 201 X: 8 Selected Y: 4
+LEFT Selected: 201 X: 8 Selected Y: 4
+LEFT Selected: 201 X: 8 Selected Y: 4
+LEFT Selected: 201 X: 8 Selected Y: 4
+LEFT Selected: 201 X: 8 Selected Y: 4
+LEFT Selected: 201 X: 8 Selected Y: 4
+FPS: 189 Updates: 60
+LEFT Selected: 201 X: 8 Selected Y: 4
+LEFT Selected: 201 X: 8 Selected Y: 4
+LEFT Selected: 201 X: 8 Selected Y: 4
+LEFT Selected: 201 X: 7 Selected Y: 4
+LEFT Selected: 201 X: 7 Selected Y: 4
+LEFT Selected: 201 X: 7 Selected Y: 4
+LEFT Selected: 201 X: 7 Selected Y: 4
+LEFT Selected: 201 X: 7 Selected Y: 4
+LEFT Selected: 201 X: 7 Selected Y: 4
+LEFT Selected: 201 X: 7 Selected Y: 4
+LEFT Selected: 201 X: 7 Selected Y: 4
+LEFT Selected: 201 X: 7 Selected Y: 4
+LEFT Selected: 201 X: 7 Selected Y: 4
+LEFT Selected: 201 X: 7 Selected Y: 4
+LEFT Selected: 201 X: 7 Selected Y: 4
+LEFT Selected: 201 X: 7 Selected Y: 4
+LEFT Selected: 201 X: 7 Selected Y: 4
+LEFT Selected: 201 X: 7 Selected Y: 4
+LEFT Selected: 201 X: 7 Selected Y: 4
+LEFT Selected: 201 X: 6 Selected Y: 4
+LEFT Selected: 201 X: 6 Selected Y: 4
+LEFT Selected: 201 X: 6 Selected Y: 4
+LEFT Selected: 201 X: 6 Selected Y: 4
+LEFT Selected: 201 X: 6 Selected Y: 4
+LEFT Selected: 201 X: 6 Selected Y: 4
+LEFT Selected: 201 X: 6 Selected Y: 4
+LEFT Selected: 201 X: 6 Selected Y: 4
+LEFT Selected: 201 X: 6 Selected Y: 4
+LEFT Selected: 201 X: 6 Selected Y: 4
+LEFT Selected: 201 X: 5 Selected Y: 4
+LEFT Selected: 201 X: 5 Selected Y: 4
+LEFT Selected: 201 X: 5 Selected Y: 4
+LEFT Selected: 201 X: 5 Selected Y: 4
+LEFT Selected: 201 X: 5 Selected Y: 4
+LEFT Selected: 201 X: 5 Selected Y: 4
+LEFT Selected: 201 X: 5 Selected Y: 4
+LEFT Selected: 201 X: 5 Selected Y: 4
+LEFT Selected: 201 X: 4 Selected Y: 4
+LEFT Selected: 201 X: 4 Selected Y: 4
+LEFT Selected: 201 X: 4 Selected Y: 4
+LEFT Selected: 201 X: 4 Selected Y: 4
+LEFT Selected: 201 X: 4 Selected Y: 4
+LEFT Selected: 201 X: 4 Selected Y: 4
+LEFT Selected: 201 X: 4 Selected Y: 4
+LEFT Selected: 201 X: 4 Selected Y: 4
+LEFT Selected: 201 X: 4 Selected Y: 4
+LEFT Selected: 201 X: 4 Selected Y: 4
+LEFT Selected: 201 X: 3 Selected Y: 4
+LEFT Selected: 201 X: 3 Selected Y: 4
+LEFT Selected: 201 X: 3 Selected Y: 4
+LEFT Selected: 201 X: 3 Selected Y: 4
+LEFT Selected: 201 X: 3 Selected Y: 4
+LEFT Selected: 201 X: 3 Selected Y: 4
+LEFT Selected: 201 X: 3 Selected Y: 4
+LEFT Selected: 201 X: 3 Selected Y: 4
+LEFT Selected: 201 X: 3 Selected Y: 4
+LEFT Selected: 201 X: 3 Selected Y: 4
+LEFT Selected: 201 X: 3 Selected Y: 4
+LEFT Selected: 201 X: 3 Selected Y: 4
+LEFT Selected: 201 X: 3 Selected Y: 4
+LEFT Selected: 201 X: 3 Selected Y: 4
+LEFT Selected: 201 X: 3 Selected Y: 4
+LEFT Selected: 201 X: 3 Selected Y: 4
+LEFT Selected: 201 X: 3 Selected Y: 4
+LEFT Selected: 201 X: 3 Selected Y: 4
+LEFT Selected: 201 X: 3 Selected Y: 4
+LEFT Selected: 201 X: 3 Selected Y: 4
+LEFT Selected: 201 X: 3 Selected Y: 4
+LEFT Selected: 201 X: 3 Selected Y: 4
+LEFT Selected: 201 X: 3 Selected Y: 4
+LEFT Selected: 201 X: 3 Selected Y: 4
+LEFT Selected: 201 X: 3 Selected Y: 4
+LEFT Selected: 201 X: 3 Selected Y: 4
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 6
+LEFT Selected: 201 X: 2 Selected Y: 6
+LEFT Selected: 201 X: 2 Selected Y: 6
+LEFT Selected: 201 X: 2 Selected Y: 6
+LEFT Selected: 201 X: 2 Selected Y: 6
+LEFT Selected: 201 X: 2 Selected Y: 6
+LEFT Selected: 201 X: 2 Selected Y: 6
+LEFT Selected: 201 X: 2 Selected Y: 6
+LEFT Selected: 201 X: 2 Selected Y: 6
+LEFT Selected: 201 X: 2 Selected Y: 6
+LEFT Selected: 201 X: 2 Selected Y: 6
+LEFT Selected: 201 X: 2 Selected Y: 6
+LEFT Selected: 201 X: 2 Selected Y: 6
+LEFT Selected: 201 X: 3 Selected Y: 6
+LEFT Selected: 201 X: 3 Selected Y: 6
+LEFT Selected: 201 X: 3 Selected Y: 6
+LEFT Selected: 201 X: 3 Selected Y: 6
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 8
+LEFT Selected: 201 X: 3 Selected Y: 8
+LEFT Selected: 201 X: 3 Selected Y: 8
+LEFT Selected: 201 X: 3 Selected Y: 8
+LEFT Selected: 201 X: 3 Selected Y: 8
+LEFT Selected: 201 X: 3 Selected Y: 8
+LEFT Selected: 201 X: 3 Selected Y: 8
+LEFT Selected: 201 X: 3 Selected Y: 8
+LEFT Selected: 201 X: 3 Selected Y: 8
+LEFT Selected: 201 X: 3 Selected Y: 8
+LEFT Selected: 201 X: 3 Selected Y: 8
+LEFT Selected: 201 X: 3 Selected Y: 8
+LEFT Selected: 201 X: 3 Selected Y: 8
+LEFT Selected: 201 X: 3 Selected Y: 8
+LEFT Selected: 201 X: 3 Selected Y: 8
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 8
+LEFT Selected: 201 X: 2 Selected Y: 8
+LEFT Selected: 201 X: 2 Selected Y: 8
+LEFT Selected: 201 X: 2 Selected Y: 8
+LEFT Selected: 201 X: 2 Selected Y: 8
+LEFT Selected: 201 X: 2 Selected Y: 8
+LEFT Selected: 201 X: 2 Selected Y: 8
+LEFT Selected: 201 X: 2 Selected Y: 8
+LEFT Selected: 201 X: 2 Selected Y: 8
+LEFT Selected: 201 X: 2 Selected Y: 8
+FPS: 195 Updates: 60
+LEFT Selected: 201 X: 2 Selected Y: 8
+LEFT Selected: 201 X: 2 Selected Y: 8
+LEFT Selected: 201 X: 2 Selected Y: 8
+LEFT Selected: 201 X: 2 Selected Y: 8
+LEFT Selected: 201 X: 2 Selected Y: 8
+LEFT Selected: 201 X: 2 Selected Y: 8
+LEFT Selected: 201 X: 2 Selected Y: 8
+LEFT Selected: 201 X: 2 Selected Y: 8
+LEFT Selected: 201 X: 2 Selected Y: 8
+LEFT Selected: 201 X: 2 Selected Y: 7
+LEFT Selected: 201 X: 2 Selected Y: 7
+LEFT Selected: 201 X: 2 Selected Y: 7
+LEFT Selected: 201 X: 2 Selected Y: 7
+LEFT Selected: 201 X: 2 Selected Y: 7
+LEFT Selected: 201 X: 2 Selected Y: 7
+LEFT Selected: 201 X: 2 Selected Y: 7
+LEFT Selected: 201 X: 2 Selected Y: 7
+LEFT Selected: 201 X: 2 Selected Y: 7
+LEFT Selected: 201 X: 2 Selected Y: 7
+LEFT Selected: 201 X: 2 Selected Y: 7
+LEFT Selected: 201 X: 2 Selected Y: 7
+LEFT Selected: 201 X: 2 Selected Y: 7
+LEFT Selected: 201 X: 2 Selected Y: 7
+LEFT Selected: 201 X: 2 Selected Y: 7
+LEFT Selected: 201 X: 2 Selected Y: 7
+LEFT Selected: 201 X: 2 Selected Y: 7
+LEFT Selected: 201 X: 2 Selected Y: 6
+LEFT Selected: 201 X: 2 Selected Y: 6
+LEFT Selected: 201 X: 2 Selected Y: 6
+LEFT Selected: 201 X: 2 Selected Y: 6
+LEFT Selected: 201 X: 2 Selected Y: 6
+LEFT Selected: 201 X: 2 Selected Y: 6
+LEFT Selected: 201 X: 2 Selected Y: 6
+LEFT Selected: 201 X: 2 Selected Y: 6
+LEFT Selected: 201 X: 2 Selected Y: 6
+LEFT Selected: 201 X: 2 Selected Y: 6
+LEFT Selected: 201 X: 2 Selected Y: 6
+LEFT Selected: 201 X: 2 Selected Y: 6
+LEFT Selected: 201 X: 2 Selected Y: 6
+LEFT Selected: 201 X: 2 Selected Y: 6
+LEFT Selected: 201 X: 2 Selected Y: 6
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 6
+LEFT Selected: 201 X: 2 Selected Y: 6
+LEFT Selected: 201 X: 2 Selected Y: 6
+LEFT Selected: 201 X: 2 Selected Y: 6
+LEFT Selected: 201 X: 2 Selected Y: 6
+LEFT Selected: 201 X: 2 Selected Y: 7
+LEFT Selected: 201 X: 2 Selected Y: 7
+LEFT Selected: 201 X: 2 Selected Y: 7
+LEFT Selected: 201 X: 2 Selected Y: 7
+LEFT Selected: 201 X: 2 Selected Y: 7
+LEFT Selected: 201 X: 2 Selected Y: 7
+LEFT Selected: 201 X: 2 Selected Y: 8
+LEFT Selected: 201 X: 2 Selected Y: 8
+LEFT Selected: 201 X: 2 Selected Y: 8
+LEFT Selected: 201 X: 2 Selected Y: 8
+LEFT Selected: 201 X: 2 Selected Y: 8
+LEFT Selected: 201 X: 2 Selected Y: 8
+LEFT Selected: 201 X: 2 Selected Y: 8
+LEFT Selected: 201 X: 2 Selected Y: 8
+LEFT Selected: 201 X: 2 Selected Y: 8
+LEFT Selected: 201 X: 2 Selected Y: 8
+LEFT Selected: 201 X: 2 Selected Y: 8
+LEFT Selected: 201 X: 2 Selected Y: 8
+LEFT Selected: 201 X: 2 Selected Y: 8
+LEFT Selected: 201 X: 2 Selected Y: 8
+LEFT Selected: 201 X: 2 Selected Y: 8
+LEFT Selected: 201 X: 2 Selected Y: 8
+LEFT Selected: 201 X: 2 Selected Y: 8
+LEFT Selected: 201 X: 2 Selected Y: 8
+LEFT Selected: 201 X: 2 Selected Y: 8
+LEFT Selected: 201 X: 2 Selected Y: 8
+LEFT Selected: 201 X: 2 Selected Y: 9
+LEFT Selected: 201 X: 2 Selected Y: 9
+LEFT Selected: 201 X: 2 Selected Y: 9
+LEFT Selected: 201 X: 2 Selected Y: 9
+LEFT Selected: 201 X: 2 Selected Y: 9
+LEFT Selected: 201 X: 2 Selected Y: 9
+LEFT Selected: 201 X: 2 Selected Y: 9
+LEFT Selected: 201 X: 2 Selected Y: 9
+LEFT Selected: 201 X: 2 Selected Y: 9
+LEFT Selected: 201 X: 2 Selected Y: 9
+LEFT Selected: 201 X: 2 Selected Y: 9
+LEFT Selected: 201 X: 2 Selected Y: 9
+LEFT Selected: 201 X: 2 Selected Y: 9
+LEFT Selected: 201 X: 2 Selected Y: 9
+LEFT Selected: 201 X: 2 Selected Y: 9
+LEFT Selected: 201 X: 2 Selected Y: 9
+LEFT Selected: 201 X: 2 Selected Y: 9
+LEFT Selected: 201 X: 2 Selected Y: 9
+LEFT Selected: 201 X: 2 Selected Y: 9
+LEFT Selected: 201 X: 2 Selected Y: 9
+FPS: 206 Updates: 60
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 3 Selected Y: 9
+LEFT Selected: 201 X: 4 Selected Y: 9
+LEFT Selected: 201 X: 4 Selected Y: 9
+LEFT Selected: 201 X: 4 Selected Y: 9
+LEFT Selected: 201 X: 4 Selected Y: 9
+LEFT Selected: 201 X: 5 Selected Y: 9
+LEFT Selected: 201 X: 5 Selected Y: 9
+LEFT Selected: 201 X: 5 Selected Y: 9
+LEFT Selected: 201 X: 5 Selected Y: 9
+LEFT Selected: 201 X: 5 Selected Y: 9
+LEFT Selected: 201 X: 6 Selected Y: 9
+LEFT Selected: 201 X: 6 Selected Y: 9
+LEFT Selected: 201 X: 6 Selected Y: 9
+LEFT Selected: 201 X: 6 Selected Y: 9
+LEFT Selected: 201 X: 6 Selected Y: 9
+LEFT Selected: 201 X: 6 Selected Y: 9
+LEFT Selected: 201 X: 6 Selected Y: 9
+LEFT Selected: 201 X: 6 Selected Y: 9
+LEFT Selected: 201 X: 6 Selected Y: 9
+LEFT Selected: 201 X: 7 Selected Y: 9
+LEFT Selected: 201 X: 7 Selected Y: 9
+LEFT Selected: 201 X: 7 Selected Y: 9
+LEFT Selected: 201 X: 7 Selected Y: 9
+LEFT Selected: 201 X: 7 Selected Y: 9
+LEFT Selected: 201 X: 7 Selected Y: 9
+LEFT Selected: 201 X: 7 Selected Y: 9
+LEFT Selected: 201 X: 7 Selected Y: 9
+LEFT Selected: 201 X: 7 Selected Y: 9
+LEFT Selected: 201 X: 7 Selected Y: 9
+LEFT Selected: 201 X: 7 Selected Y: 9
+LEFT Selected: 201 X: 8 Selected Y: 9
+LEFT Selected: 201 X: 8 Selected Y: 9
+LEFT Selected: 201 X: 8 Selected Y: 9
+LEFT Selected: 201 X: 8 Selected Y: 9
+LEFT Selected: 201 X: 8 Selected Y: 9
+LEFT Selected: 201 X: 8 Selected Y: 9
+LEFT Selected: 201 X: 8 Selected Y: 9
+LEFT Selected: 201 X: 8 Selected Y: 9
+LEFT Selected: 201 X: 8 Selected Y: 9
+LEFT Selected: 201 X: 8 Selected Y: 9
+LEFT Selected: 201 X: 8 Selected Y: 9
+LEFT Selected: 201 X: 8 Selected Y: 9
+LEFT Selected: 201 X: 9 Selected Y: 9
+LEFT Selected: 201 X: 9 Selected Y: 9
+LEFT Selected: 201 X: 9 Selected Y: 9
+LEFT Selected: 201 X: 9 Selected Y: 9
+LEFT Selected: 201 X: 9 Selected Y: 9
+LEFT Selected: 201 X: 9 Selected Y: 9
+LEFT Selected: 201 X: 9 Selected Y: 9
+LEFT Selected: 201 X: 9 Selected Y: 9
+LEFT Selected: 201 X: 9 Selected Y: 9
+LEFT Selected: 201 X: 9 Selected Y: 9
+LEFT Selected: 201 X: 9 Selected Y: 9
+LEFT Selected: 201 X: 9 Selected Y: 9
+LEFT Selected: 201 X: 9 Selected Y: 9
+LEFT Selected: 201 X: 9 Selected Y: 9
+LEFT Selected: 201 X: 9 Selected Y: 9
+LEFT Selected: 201 X: 10 Selected Y: 9
+LEFT Selected: 201 X: 10 Selected Y: 9
+LEFT Selected: 201 X: 10 Selected Y: 9
+LEFT Selected: 201 X: 10 Selected Y: 9
+LEFT Selected: 201 X: 10 Selected Y: 9
+LEFT Selected: 201 X: 10 Selected Y: 9
+LEFT Selected: 201 X: 10 Selected Y: 9
+LEFT Selected: 201 X: 10 Selected Y: 9
+LEFT Selected: 201 X: 10 Selected Y: 9
+LEFT Selected: 201 X: 10 Selected Y: 9
+LEFT Selected: 201 X: 10 Selected Y: 9
+LEFT Selected: 201 X: 10 Selected Y: 9
+LEFT Selected: 201 X: 10 Selected Y: 9
+LEFT Selected: 201 X: 10 Selected Y: 9
+LEFT Selected: 201 X: 10 Selected Y: 9
+LEFT Selected: 201 X: 10 Selected Y: 9
+LEFT Selected: 201 X: 10 Selected Y: 9
+LEFT Selected: 201 X: 10 Selected Y: 9
+LEFT Selected: 201 X: 10 Selected Y: 9
+LEFT Selected: 201 X: 10 Selected Y: 9
+LEFT Selected: 201 X: 10 Selected Y: 9
+LEFT Selected: 201 X: 10 Selected Y: 9
+LEFT Selected: 201 X: 10 Selected Y: 9
+LEFT Selected: 201 X: 10 Selected Y: 9
+LEFT Selected: 201 X: 10 Selected Y: 9
+LEFT Selected: 201 X: 10 Selected Y: 9
+LEFT Selected: 201 X: 10 Selected Y: 9
+LEFT Selected: 201 X: 10 Selected Y: 9
+LEFT Selected: 201 X: 10 Selected Y: 9
+LEFT Selected: 201 X: 10 Selected Y: 9
+LEFT Selected: 201 X: 10 Selected Y: 9
+LEFT Selected: 201 X: 10 Selected Y: 9
+LEFT Selected: 201 X: 10 Selected Y: 9
+LEFT Selected: 201 X: 10 Selected Y: 9
+LEFT Selected: 201 X: 10 Selected Y: 9
+LEFT Selected: 201 X: 10 Selected Y: 9
+LEFT Selected: 201 X: 10 Selected Y: 8
+LEFT Selected: 201 X: 10 Selected Y: 8
+LEFT Selected: 201 X: 10 Selected Y: 8
+LEFT Selected: 201 X: 10 Selected Y: 8
+LEFT Selected: 201 X: 10 Selected Y: 8
+LEFT Selected: 201 X: 10 Selected Y: 8
+LEFT Selected: 201 X: 10 Selected Y: 8
+LEFT Selected: 201 X: 10 Selected Y: 8
+LEFT Selected: 201 X: 10 Selected Y: 8
+LEFT Selected: 201 X: 10 Selected Y: 8
+LEFT Selected: 201 X: 10 Selected Y: 8
+LEFT Selected: 201 X: 10 Selected Y: 8
+LEFT Selected: 201 X: 10 Selected Y: 8
+LEFT Selected: 201 X: 10 Selected Y: 8
+LEFT Selected: 201 X: 10 Selected Y: 7
+LEFT Selected: 201 X: 10 Selected Y: 7
+LEFT Selected: 201 X: 10 Selected Y: 7
+LEFT Selected: 201 X: 10 Selected Y: 7
+LEFT Selected: 201 X: 10 Selected Y: 7
+LEFT Selected: 201 X: 10 Selected Y: 7
+LEFT Selected: 201 X: 10 Selected Y: 7
+LEFT Selected: 201 X: 10 Selected Y: 7
+LEFT Selected: 201 X: 10 Selected Y: 7
+LEFT Selected: 201 X: 10 Selected Y: 7
+LEFT Selected: 201 X: 10 Selected Y: 7
+LEFT Selected: 201 X: 10 Selected Y: 7
+LEFT Selected: 201 X: 10 Selected Y: 7
+LEFT Selected: 201 X: 10 Selected Y: 7
+LEFT Selected: 201 X: 10 Selected Y: 7
+LEFT Selected: 201 X: 10 Selected Y: 7
+LEFT Selected: 201 X: 10 Selected Y: 6
+LEFT Selected: 201 X: 10 Selected Y: 6
+LEFT Selected: 201 X: 10 Selected Y: 6
+LEFT Selected: 201 X: 10 Selected Y: 6
+LEFT Selected: 201 X: 10 Selected Y: 6
+LEFT Selected: 201 X: 10 Selected Y: 6
+LEFT Selected: 201 X: 10 Selected Y: 6
+LEFT Selected: 201 X: 10 Selected Y: 6
+LEFT Selected: 201 X: 10 Selected Y: 6
+LEFT Selected: 201 X: 10 Selected Y: 6
+LEFT Selected: 201 X: 10 Selected Y: 6
+LEFT Selected: 201 X: 10 Selected Y: 6
+LEFT Selected: 201 X: 10 Selected Y: 6
+LEFT Selected: 201 X: 10 Selected Y: 6
+LEFT Selected: 201 X: 10 Selected Y: 6
+LEFT Selected: 201 X: 10 Selected Y: 6
+LEFT Selected: 201 X: 10 Selected Y: 6
+LEFT Selected: 201 X: 10 Selected Y: 6
+LEFT Selected: 201 X: 10 Selected Y: 6
+LEFT Selected: 201 X: 10 Selected Y: 6
+LEFT Selected: 201 X: 10 Selected Y: 5
+LEFT Selected: 201 X: 10 Selected Y: 5
+LEFT Selected: 201 X: 10 Selected Y: 5
+LEFT Selected: 201 X: 10 Selected Y: 5
+LEFT Selected: 201 X: 10 Selected Y: 5
+LEFT Selected: 201 X: 10 Selected Y: 5
+LEFT Selected: 201 X: 10 Selected Y: 5
+LEFT Selected: 201 X: 10 Selected Y: 5
+LEFT Selected: 201 X: 10 Selected Y: 5
+LEFT Selected: 201 X: 10 Selected Y: 5
+LEFT Selected: 201 X: 10 Selected Y: 5
+LEFT Selected: 201 X: 10 Selected Y: 5
+LEFT Selected: 201 X: 10 Selected Y: 5
+LEFT Selected: 201 X: 10 Selected Y: 5
+LEFT Selected: 201 X: 10 Selected Y: 5
+LEFT Selected: 201 X: 10 Selected Y: 5
+LEFT Selected: 201 X: 10 Selected Y: 5
+LEFT Selected: 201 X: 10 Selected Y: 5
+LEFT Selected: 201 X: 10 Selected Y: 5
+LEFT Selected: 201 X: 10 Selected Y: 5
+LEFT Selected: 201 X: 10 Selected Y: 5
+FPS: 199 Updates: 60
+LEFT Selected: 201 X: 10 Selected Y: 5
+LEFT Selected: 201 X: 10 Selected Y: 5
+LEFT Selected: 201 X: 10 Selected Y: 5
+LEFT Selected: 201 X: 10 Selected Y: 5
+LEFT Selected: 201 X: 10 Selected Y: 5
+LEFT Selected: 201 X: 10 Selected Y: 5
+LEFT Selected: 201 X: 10 Selected Y: 5
+LEFT Selected: 201 X: 10 Selected Y: 5
+LEFT Selected: 201 X: 10 Selected Y: 5
+LEFT Selected: 201 X: 10 Selected Y: 5
+LEFT Selected: 201 X: 10 Selected Y: 5
+LEFT Selected: 201 X: 10 Selected Y: 5
+LEFT Selected: 201 X: 10 Selected Y: 5
+LEFT Selected: 201 X: 10 Selected Y: 5
+LEFT Selected: 201 X: 10 Selected Y: 4
+LEFT Selected: 201 X: 10 Selected Y: 4
+LEFT Selected: 201 X: 10 Selected Y: 4
+LEFT Selected: 201 X: 10 Selected Y: 4
+LEFT Selected: 201 X: 10 Selected Y: 4
+LEFT Selected: 201 X: 10 Selected Y: 4
+LEFT Selected: 201 X: 10 Selected Y: 4
+LEFT Selected: 201 X: 10 Selected Y: 4
+LEFT Selected: 201 X: 10 Selected Y: 4
+LEFT Selected: 201 X: 9 Selected Y: 4
+LEFT Selected: 201 X: 9 Selected Y: 4
+LEFT Selected: 201 X: 9 Selected Y: 4
+LEFT Selected: 201 X: 9 Selected Y: 4
+LEFT Selected: 201 X: 9 Selected Y: 4
+LEFT Selected: 201 X: 9 Selected Y: 4
+LEFT Selected: 201 X: 9 Selected Y: 4
+LEFT Selected: 201 X: 9 Selected Y: 4
+LEFT Selected: 201 X: 9 Selected Y: 4
+LEFT Selected: 201 X: 9 Selected Y: 4
+LEFT Selected: 201 X: 9 Selected Y: 4
+LEFT Selected: 201 X: 9 Selected Y: 4
+LEFT Selected: 201 X: 9 Selected Y: 4
+LEFT Selected: 201 X: 9 Selected Y: 4
+LEFT Selected: 201 X: 9 Selected Y: 4
+LEFT Selected: 201 X: 9 Selected Y: 4
+LEFT Selected: 201 X: 8 Selected Y: 4
+LEFT Selected: 201 X: 8 Selected Y: 4
+LEFT Selected: 201 X: 8 Selected Y: 4
+LEFT Selected: 201 X: 8 Selected Y: 4
+LEFT Selected: 201 X: 8 Selected Y: 4
+LEFT Selected: 201 X: 8 Selected Y: 4
+LEFT Selected: 201 X: 8 Selected Y: 4
+LEFT Selected: 201 X: 8 Selected Y: 4
+LEFT Selected: 201 X: 8 Selected Y: 4
+LEFT Selected: 201 X: 8 Selected Y: 4
+LEFT Selected: 201 X: 7 Selected Y: 4
+LEFT Selected: 201 X: 7 Selected Y: 4
+LEFT Selected: 201 X: 7 Selected Y: 4
+LEFT Selected: 201 X: 7 Selected Y: 4
+LEFT Selected: 201 X: 7 Selected Y: 4
+LEFT Selected: 201 X: 7 Selected Y: 4
+LEFT Selected: 201 X: 7 Selected Y: 4
+LEFT Selected: 201 X: 7 Selected Y: 4
+LEFT Selected: 201 X: 7 Selected Y: 4
+LEFT Selected: 201 X: 7 Selected Y: 4
+LEFT Selected: 201 X: 7 Selected Y: 4
+LEFT Selected: 201 X: 7 Selected Y: 4
+LEFT Selected: 201 X: 7 Selected Y: 4
+LEFT Selected: 201 X: 7 Selected Y: 4
+LEFT Selected: 201 X: 6 Selected Y: 4
+LEFT Selected: 201 X: 6 Selected Y: 4
+LEFT Selected: 201 X: 6 Selected Y: 4
+LEFT Selected: 201 X: 6 Selected Y: 4
+LEFT Selected: 201 X: 6 Selected Y: 4
+LEFT Selected: 201 X: 6 Selected Y: 4
+LEFT Selected: 201 X: 6 Selected Y: 4
+LEFT Selected: 201 X: 6 Selected Y: 4
+LEFT Selected: 201 X: 6 Selected Y: 4
+LEFT Selected: 201 X: 6 Selected Y: 4
+LEFT Selected: 201 X: 5 Selected Y: 4
+LEFT Selected: 201 X: 5 Selected Y: 4
+LEFT Selected: 201 X: 5 Selected Y: 4
+LEFT Selected: 201 X: 5 Selected Y: 4
+LEFT Selected: 201 X: 5 Selected Y: 4
+LEFT Selected: 201 X: 5 Selected Y: 4
+LEFT Selected: 201 X: 5 Selected Y: 4
+LEFT Selected: 201 X: 5 Selected Y: 4
+LEFT Selected: 201 X: 4 Selected Y: 4
+LEFT Selected: 201 X: 4 Selected Y: 4
+LEFT Selected: 201 X: 4 Selected Y: 4
+LEFT Selected: 201 X: 4 Selected Y: 4
+LEFT Selected: 201 X: 4 Selected Y: 4
+LEFT Selected: 201 X: 4 Selected Y: 4
+LEFT Selected: 201 X: 4 Selected Y: 4
+LEFT Selected: 201 X: 4 Selected Y: 4
+LEFT Selected: 201 X: 4 Selected Y: 4
+LEFT Selected: 201 X: 4 Selected Y: 4
+LEFT Selected: 201 X: 4 Selected Y: 4
+LEFT Selected: 201 X: 4 Selected Y: 4
+LEFT Selected: 201 X: 4 Selected Y: 4
+LEFT Selected: 201 X: 4 Selected Y: 4
+LEFT Selected: 201 X: 4 Selected Y: 4
+LEFT Selected: 201 X: 4 Selected Y: 4
+LEFT Selected: 201 X: 4 Selected Y: 4
+LEFT Selected: 201 X: 4 Selected Y: 4
+LEFT Selected: 201 X: 4 Selected Y: 4
+LEFT Selected: 201 X: 4 Selected Y: 4
+LEFT Selected: 201 X: 4 Selected Y: 4
+LEFT Selected: 201 X: 4 Selected Y: 4
+LEFT Selected: 201 X: 4 Selected Y: 4
+LEFT Selected: 201 X: 4 Selected Y: 4
+LEFT Selected: 201 X: 3 Selected Y: 4
+LEFT Selected: 201 X: 3 Selected Y: 4
+LEFT Selected: 201 X: 3 Selected Y: 4
+LEFT Selected: 201 X: 3 Selected Y: 4
+LEFT Selected: 201 X: 3 Selected Y: 4
+LEFT Selected: 201 X: 3 Selected Y: 4
+LEFT Selected: 201 X: 3 Selected Y: 5
+LEFT Selected: 201 X: 3 Selected Y: 5
+LEFT Selected: 201 X: 3 Selected Y: 5
+LEFT Selected: 201 X: 3 Selected Y: 5
+LEFT Selected: 201 X: 3 Selected Y: 5
+LEFT Selected: 201 X: 3 Selected Y: 5
+LEFT Selected: 201 X: 3 Selected Y: 5
+LEFT Selected: 201 X: 3 Selected Y: 5
+LEFT Selected: 201 X: 3 Selected Y: 5
+LEFT Selected: 201 X: 3 Selected Y: 5
+LEFT Selected: 201 X: 3 Selected Y: 5
+LEFT Selected: 201 X: 3 Selected Y: 5
+LEFT Selected: 201 X: 3 Selected Y: 5
+LEFT Selected: 201 X: 3 Selected Y: 5
+LEFT Selected: 201 X: 3 Selected Y: 5
+LEFT Selected: 201 X: 3 Selected Y: 5
+LEFT Selected: 201 X: 3 Selected Y: 5
+LEFT Selected: 201 X: 3 Selected Y: 5
+LEFT Selected: 201 X: 3 Selected Y: 5
+LEFT Selected: 201 X: 3 Selected Y: 5
+LEFT Selected: 201 X: 3 Selected Y: 5
+LEFT Selected: 201 X: 4 Selected Y: 5
+LEFT Selected: 201 X: 4 Selected Y: 5
+LEFT Selected: 201 X: 4 Selected Y: 5
+LEFT Selected: 201 X: 4 Selected Y: 5
+LEFT Selected: 201 X: 4 Selected Y: 5
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 5 Selected Y: 6
+LEFT Selected: 201 X: 5 Selected Y: 6
+LEFT Selected: 201 X: 5 Selected Y: 6
+LEFT Selected: 201 X: 5 Selected Y: 6
+LEFT Selected: 201 X: 5 Selected Y: 6
+FPS: 207 Updates: 60
+LEFT Selected: 201 X: 5 Selected Y: 6
+LEFT Selected: 201 X: 5 Selected Y: 6
+LEFT Selected: 201 X: 5 Selected Y: 6
+LEFT Selected: 201 X: 5 Selected Y: 6
+LEFT Selected: 201 X: 5 Selected Y: 6
+LEFT Selected: 201 X: 5 Selected Y: 6
+LEFT Selected: 201 X: 5 Selected Y: 6
+LEFT Selected: 201 X: 6 Selected Y: 6
+LEFT Selected: 201 X: 6 Selected Y: 6
+LEFT Selected: 201 X: 6 Selected Y: 6
+LEFT Selected: 201 X: 6 Selected Y: 6
+LEFT Selected: 201 X: 6 Selected Y: 6
+LEFT Selected: 201 X: 6 Selected Y: 6
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 8
+LEFT Selected: 201 X: 6 Selected Y: 8
+LEFT Selected: 201 X: 6 Selected Y: 8
+LEFT Selected: 201 X: 6 Selected Y: 8
+LEFT Selected: 201 X: 6 Selected Y: 8
+LEFT Selected: 201 X: 6 Selected Y: 8
+LEFT Selected: 201 X: 6 Selected Y: 8
+LEFT Selected: 201 X: 6 Selected Y: 8
+LEFT Selected: 201 X: 6 Selected Y: 8
+LEFT Selected: 201 X: 6 Selected Y: 8
+LEFT Selected: 201 X: 6 Selected Y: 8
+LEFT Selected: 201 X: 6 Selected Y: 8
+LEFT Selected: 201 X: 6 Selected Y: 8
+LEFT Selected: 201 X: 7 Selected Y: 8
+LEFT Selected: 201 X: 7 Selected Y: 8
+LEFT Selected: 201 X: 7 Selected Y: 8
+LEFT Selected: 201 X: 7 Selected Y: 8
+LEFT Selected: 201 X: 7 Selected Y: 8
+LEFT Selected: 201 X: 7 Selected Y: 8
+LEFT Selected: 201 X: 7 Selected Y: 8
+LEFT Selected: 201 X: 7 Selected Y: 8
+LEFT Selected: 201 X: 7 Selected Y: 8
+LEFT Selected: 201 X: 7 Selected Y: 8
+LEFT Selected: 201 X: 7 Selected Y: 8
+LEFT Selected: 201 X: 7 Selected Y: 8
+LEFT Selected: 201 X: 7 Selected Y: 8
+LEFT Selected: 201 X: 7 Selected Y: 8
+LEFT Selected: 201 X: 7 Selected Y: 8
+LEFT Selected: 201 X: 7 Selected Y: 8
+LEFT Selected: 201 X: 7 Selected Y: 8
+LEFT Selected: 201 X: 7 Selected Y: 8
+LEFT Selected: 201 X: 7 Selected Y: 8
+LEFT Selected: 201 X: 7 Selected Y: 8
+LEFT Selected: 201 X: 7 Selected Y: 8
+LEFT Selected: 201 X: 7 Selected Y: 8
+LEFT Selected: 201 X: 7 Selected Y: 8
+LEFT Selected: 201 X: 7 Selected Y: 8
+LEFT Selected: 201 X: 7 Selected Y: 8
+LEFT Selected: 201 X: 8 Selected Y: 8
+LEFT Selected: 201 X: 8 Selected Y: 8
+LEFT Selected: 201 X: 8 Selected Y: 8
+LEFT Selected: 201 X: 8 Selected Y: 8
+LEFT Selected: 201 X: 8 Selected Y: 8
+LEFT Selected: 201 X: 8 Selected Y: 8
+LEFT Selected: 201 X: 8 Selected Y: 8
+LEFT Selected: 201 X: 8 Selected Y: 8
+LEFT Selected: 201 X: 8 Selected Y: 8
+LEFT Selected: 201 X: 8 Selected Y: 8
+LEFT Selected: 201 X: 8 Selected Y: 8
+LEFT Selected: 201 X: 8 Selected Y: 8
+LEFT Selected: 201 X: 8 Selected Y: 8
+LEFT Selected: 201 X: 8 Selected Y: 8
+LEFT Selected: 201 X: 8 Selected Y: 8
+LEFT Selected: 201 X: 8 Selected Y: 8
+LEFT Selected: 201 X: 8 Selected Y: 8
+LEFT Selected: 201 X: 8 Selected Y: 8
+LEFT Selected: 201 X: 8 Selected Y: 8
+LEFT Selected: 201 X: 8 Selected Y: 8
+LEFT Selected: 201 X: 8 Selected Y: 8
+LEFT Selected: 201 X: 8 Selected Y: 8
+LEFT Selected: 201 X: 8 Selected Y: 8
+FPS: 213 Updates: 60
+FPS: 228 Updates: 60
+LEFT Selected: 201 X: 2 Selected Y: 4
+FPS: 234 Updates: 60
+FPS: 221 Updates: 60
+FPS: 230 Updates: 60
+FPS: 227 Updates: 60
+LEFT Selected: 202 X: 11 Selected Y: 4
+LEFT Selected: 202 X: 11 Selected Y: 4
+LEFT Selected: 202 X: 11 Selected Y: 4
+LEFT Selected: 202 X: 11 Selected Y: 5
+LEFT Selected: 202 X: 11 Selected Y: 5
+LEFT Selected: 202 X: 11 Selected Y: 5
+LEFT Selected: 202 X: 11 Selected Y: 5
+LEFT Selected: 202 X: 11 Selected Y: 5
+LEFT Selected: 202 X: 11 Selected Y: 5
+LEFT Selected: 202 X: 11 Selected Y: 5
+LEFT Selected: 202 X: 11 Selected Y: 5
+LEFT Selected: 202 X: 11 Selected Y: 5
+LEFT Selected: 202 X: 11 Selected Y: 6
+LEFT Selected: 202 X: 11 Selected Y: 6
+LEFT Selected: 202 X: 11 Selected Y: 6
+LEFT Selected: 202 X: 11 Selected Y: 6
+LEFT Selected: 202 X: 11 Selected Y: 6
+LEFT Selected: 202 X: 11 Selected Y: 6
+LEFT Selected: 202 X: 11 Selected Y: 6
+LEFT Selected: 202 X: 11 Selected Y: 6
+LEFT Selected: 202 X: 11 Selected Y: 6
+LEFT Selected: 202 X: 11 Selected Y: 6
+LEFT Selected: 202 X: 11 Selected Y: 6
+LEFT Selected: 202 X: 11 Selected Y: 6
+LEFT Selected: 202 X: 11 Selected Y: 6
+LEFT Selected: 202 X: 11 Selected Y: 6
+LEFT Selected: 202 X: 11 Selected Y: 6
+LEFT Selected: 202 X: 11 Selected Y: 6
+LEFT Selected: 202 X: 11 Selected Y: 6
+LEFT Selected: 202 X: 11 Selected Y: 6
+LEFT Selected: 202 X: 11 Selected Y: 6
+LEFT Selected: 202 X: 11 Selected Y: 6
+LEFT Selected: 202 X: 11 Selected Y: 6
+LEFT Selected: 202 X: 11 Selected Y: 7
+LEFT Selected: 202 X: 11 Selected Y: 7
+LEFT Selected: 202 X: 11 Selected Y: 7
+LEFT Selected: 202 X: 11 Selected Y: 7
+LEFT Selected: 202 X: 11 Selected Y: 7
+LEFT Selected: 202 X: 11 Selected Y: 7
+LEFT Selected: 202 X: 11 Selected Y: 7
+LEFT Selected: 202 X: 11 Selected Y: 7
+LEFT Selected: 202 X: 11 Selected Y: 7
+LEFT Selected: 202 X: 11 Selected Y: 7
+LEFT Selected: 202 X: 11 Selected Y: 7
+LEFT Selected: 202 X: 11 Selected Y: 7
+LEFT Selected: 202 X: 11 Selected Y: 7
+LEFT Selected: 202 X: 11 Selected Y: 7
+LEFT Selected: 202 X: 11 Selected Y: 7
+LEFT Selected: 202 X: 11 Selected Y: 7
+LEFT Selected: 202 X: 11 Selected Y: 7
+LEFT Selected: 202 X: 11 Selected Y: 7
+LEFT Selected: 202 X: 11 Selected Y: 7
+LEFT Selected: 202 X: 11 Selected Y: 7
+LEFT Selected: 202 X: 11 Selected Y: 7
+LEFT Selected: 202 X: 11 Selected Y: 7
+LEFT Selected: 202 X: 11 Selected Y: 7
+LEFT Selected: 202 X: 11 Selected Y: 7
+LEFT Selected: 202 X: 11 Selected Y: 7
+LEFT Selected: 202 X: 11 Selected Y: 7
+LEFT Selected: 202 X: 11 Selected Y: 7
+LEFT Selected: 202 X: 11 Selected Y: 7
+LEFT Selected: 202 X: 11 Selected Y: 7
+LEFT Selected: 202 X: 11 Selected Y: 7
+LEFT Selected: 202 X: 11 Selected Y: 7
+LEFT Selected: 202 X: 11 Selected Y: 7
+LEFT Selected: 202 X: 11 Selected Y: 7
+LEFT Selected: 202 X: 11 Selected Y: 7
+LEFT Selected: 202 X: 11 Selected Y: 8
+LEFT Selected: 202 X: 11 Selected Y: 8
+LEFT Selected: 202 X: 11 Selected Y: 8
+LEFT Selected: 202 X: 11 Selected Y: 8
+LEFT Selected: 202 X: 11 Selected Y: 8
+LEFT Selected: 202 X: 11 Selected Y: 8
+LEFT Selected: 202 X: 11 Selected Y: 8
+LEFT Selected: 202 X: 11 Selected Y: 8
+LEFT Selected: 202 X: 11 Selected Y: 8
+LEFT Selected: 202 X: 11 Selected Y: 8
+LEFT Selected: 202 X: 11 Selected Y: 8
+LEFT Selected: 202 X: 11 Selected Y: 8
+LEFT Selected: 202 X: 11 Selected Y: 8
+LEFT Selected: 202 X: 11 Selected Y: 8
+LEFT Selected: 202 X: 11 Selected Y: 8
+LEFT Selected: 202 X: 11 Selected Y: 8
+LEFT Selected: 202 X: 11 Selected Y: 8
+LEFT Selected: 202 X: 11 Selected Y: 8
+LEFT Selected: 202 X: 11 Selected Y: 8
+LEFT Selected: 202 X: 11 Selected Y: 8
+LEFT Selected: 202 X: 11 Selected Y: 8
+LEFT Selected: 202 X: 11 Selected Y: 8
+LEFT Selected: 202 X: 11 Selected Y: 8
+LEFT Selected: 202 X: 11 Selected Y: 8
+LEFT Selected: 202 X: 11 Selected Y: 8
+LEFT Selected: 202 X: 11 Selected Y: 8
+LEFT Selected: 202 X: 11 Selected Y: 8
+LEFT Selected: 202 X: 11 Selected Y: 8
+LEFT Selected: 202 X: 11 Selected Y: 8
+LEFT Selected: 202 X: 11 Selected Y: 8
+LEFT Selected: 202 X: 11 Selected Y: 8
+LEFT Selected: 202 X: 11 Selected Y: 9
+LEFT Selected: 202 X: 11 Selected Y: 9
+LEFT Selected: 202 X: 11 Selected Y: 9
+LEFT Selected: 202 X: 11 Selected Y: 9
+LEFT Selected: 202 X: 11 Selected Y: 9
+LEFT Selected: 202 X: 11 Selected Y: 9
+LEFT Selected: 202 X: 11 Selected Y: 9
+LEFT Selected: 202 X: 11 Selected Y: 9
+LEFT Selected: 202 X: 11 Selected Y: 9
+LEFT Selected: 202 X: 11 Selected Y: 9
+LEFT Selected: 202 X: 11 Selected Y: 9
+LEFT Selected: 202 X: 11 Selected Y: 9
+LEFT Selected: 202 X: 11 Selected Y: 9
+LEFT Selected: 202 X: 11 Selected Y: 9
+LEFT Selected: 202 X: 11 Selected Y: 9
+LEFT Selected: 202 X: 11 Selected Y: 9
+LEFT Selected: 202 X: 11 Selected Y: 9
+LEFT Selected: 202 X: 11 Selected Y: 9
+LEFT Selected: 202 X: 11 Selected Y: 9
+LEFT Selected: 202 X: 11 Selected Y: 9
+LEFT Selected: 202 X: 11 Selected Y: 9
+LEFT Selected: 202 X: 11 Selected Y: 9
+FPS: 206 Updates: 60
+LEFT Selected: 202 X: 11 Selected Y: 9
+FPS: 225 Updates: 60
+LEFT Selected: 302 X: 11 Selected Y: 10
+FPS: 207 Updates: 60
+LEFT Selected: 302 X: 11 Selected Y: 10
+FPS: 229 Updates: 60
+FPS: 215 Updates: 60
+LEFT Selected: 400 X: 2 Selected Y: 10
+FPS: 210 Updates: 60
+FPS: 218 Updates: 60
+FPS: 224 Updates: 60
+FPS: 217 Updates: 60
+LEFT Selected: 100 X: 1 Selected Y: 3
+FPS: 187 Updates: 60
+FPS: 216 Updates: 60
+FPS: 225 Updates: 60
+LEFT Selected: 300 X: 1 Selected Y: 10
+FPS: 225 Updates: 60
+FPS: 226 Updates: 60
+LEFT Selected: 301 X: 2 Selected Y: 10
+LEFT Selected: 301 X: 2 Selected Y: 10
+LEFT Selected: 301 X: 2 Selected Y: 10
+LEFT Selected: 301 X: 2 Selected Y: 10
+LEFT Selected: 301 X: 3 Selected Y: 10
+LEFT Selected: 301 X: 3 Selected Y: 10
+LEFT Selected: 301 X: 3 Selected Y: 10
+LEFT Selected: 301 X: 3 Selected Y: 10
+LEFT Selected: 301 X: 3 Selected Y: 10
+LEFT Selected: 301 X: 4 Selected Y: 10
+LEFT Selected: 301 X: 4 Selected Y: 10
+LEFT Selected: 301 X: 4 Selected Y: 10
+LEFT Selected: 301 X: 4 Selected Y: 10
+LEFT Selected: 301 X: 5 Selected Y: 10
+LEFT Selected: 301 X: 5 Selected Y: 10
+LEFT Selected: 301 X: 5 Selected Y: 10
+LEFT Selected: 301 X: 5 Selected Y: 10
+LEFT Selected: 301 X: 6 Selected Y: 10
+LEFT Selected: 301 X: 6 Selected Y: 10
+LEFT Selected: 301 X: 7 Selected Y: 10
+LEFT Selected: 301 X: 7 Selected Y: 10
+LEFT Selected: 301 X: 7 Selected Y: 10
+LEFT Selected: 301 X: 7 Selected Y: 10
+LEFT Selected: 301 X: 7 Selected Y: 10
+LEFT Selected: 301 X: 8 Selected Y: 10
+LEFT Selected: 301 X: 8 Selected Y: 10
+LEFT Selected: 301 X: 8 Selected Y: 10
+LEFT Selected: 301 X: 8 Selected Y: 10
+LEFT Selected: 301 X: 8 Selected Y: 10
+LEFT Selected: 301 X: 8 Selected Y: 10
+LEFT Selected: 301 X: 8 Selected Y: 10
+LEFT Selected: 301 X: 8 Selected Y: 10
+LEFT Selected: 301 X: 8 Selected Y: 10
+LEFT Selected: 301 X: 8 Selected Y: 10
+LEFT Selected: 301 X: 8 Selected Y: 10
+LEFT Selected: 301 X: 8 Selected Y: 10
+LEFT Selected: 301 X: 9 Selected Y: 10
+LEFT Selected: 301 X: 9 Selected Y: 10
+LEFT Selected: 301 X: 9 Selected Y: 10
+LEFT Selected: 301 X: 9 Selected Y: 10
+LEFT Selected: 301 X: 9 Selected Y: 10
+LEFT Selected: 301 X: 9 Selected Y: 10
+LEFT Selected: 301 X: 9 Selected Y: 10
+LEFT Selected: 301 X: 9 Selected Y: 10
+LEFT Selected: 301 X: 9 Selected Y: 10
+LEFT Selected: 301 X: 9 Selected Y: 10
+LEFT Selected: 301 X: 9 Selected Y: 10
+LEFT Selected: 301 X: 9 Selected Y: 10
+LEFT Selected: 301 X: 10 Selected Y: 10
+LEFT Selected: 301 X: 10 Selected Y: 10
+LEFT Selected: 301 X: 10 Selected Y: 10
+LEFT Selected: 301 X: 10 Selected Y: 10
+LEFT Selected: 301 X: 10 Selected Y: 10
+LEFT Selected: 301 X: 10 Selected Y: 10
+LEFT Selected: 301 X: 10 Selected Y: 10
+LEFT Selected: 301 X: 10 Selected Y: 10
+LEFT Selected: 301 X: 10 Selected Y: 10
+LEFT Selected: 301 X: 10 Selected Y: 10
+FPS: 218 Updates: 60
+LEFT Selected: 301 X: 10 Selected Y: 10
+FPS: 230 Updates: 60
+FPS: 228 Updates: 60
+FPS: 228 Updates: 60
+LEFT Selected: 102 X: 11 Selected Y: 3
+FPS: 233 Updates: 60
+FPS: 227 Updates: 60
+LEFT Selected: 101 X: 2 Selected Y: 3
+LEFT Selected: 101 X: 2 Selected Y: 3
+LEFT Selected: 101 X: 2 Selected Y: 3
+LEFT Selected: 101 X: 2 Selected Y: 3
+LEFT Selected: 101 X: 2 Selected Y: 3
+LEFT Selected: 101 X: 3 Selected Y: 3
+LEFT Selected: 101 X: 3 Selected Y: 3
+LEFT Selected: 101 X: 3 Selected Y: 3
+LEFT Selected: 101 X: 3 Selected Y: 3
+LEFT Selected: 101 X: 4 Selected Y: 3
+LEFT Selected: 101 X: 4 Selected Y: 3
+LEFT Selected: 101 X: 4 Selected Y: 3
+LEFT Selected: 101 X: 4 Selected Y: 3
+LEFT Selected: 101 X: 5 Selected Y: 3
+LEFT Selected: 101 X: 5 Selected Y: 3
+LEFT Selected: 101 X: 5 Selected Y: 3
+LEFT Selected: 101 X: 5 Selected Y: 3
+LEFT Selected: 101 X: 5 Selected Y: 3
+LEFT Selected: 101 X: 5 Selected Y: 3
+LEFT Selected: 101 X: 6 Selected Y: 3
+LEFT Selected: 101 X: 6 Selected Y: 3
+LEFT Selected: 101 X: 6 Selected Y: 3
+LEFT Selected: 101 X: 6 Selected Y: 3
+LEFT Selected: 101 X: 6 Selected Y: 3
+LEFT Selected: 101 X: 6 Selected Y: 3
+LEFT Selected: 101 X: 6 Selected Y: 3
+LEFT Selected: 101 X: 6 Selected Y: 3
+LEFT Selected: 101 X: 6 Selected Y: 3
+LEFT Selected: 101 X: 6 Selected Y: 3
+LEFT Selected: 101 X: 6 Selected Y: 3
+LEFT Selected: 101 X: 6 Selected Y: 3
+LEFT Selected: 101 X: 6 Selected Y: 3
+LEFT Selected: 101 X: 6 Selected Y: 3
+FPS: 221 Updates: 60
+LEFT Selected: 101 X: 7 Selected Y: 3
+LEFT Selected: 101 X: 7 Selected Y: 3
+LEFT Selected: 101 X: 7 Selected Y: 3
+LEFT Selected: 101 X: 7 Selected Y: 3
+LEFT Selected: 101 X: 7 Selected Y: 3
+LEFT Selected: 101 X: 7 Selected Y: 3
+LEFT Selected: 101 X: 7 Selected Y: 3
+LEFT Selected: 101 X: 7 Selected Y: 3
+LEFT Selected: 101 X: 8 Selected Y: 3
+LEFT Selected: 101 X: 8 Selected Y: 3
+LEFT Selected: 101 X: 8 Selected Y: 3
+LEFT Selected: 101 X: 8 Selected Y: 3
+LEFT Selected: 101 X: 8 Selected Y: 3
+LEFT Selected: 101 X: 8 Selected Y: 3
+LEFT Selected: 101 X: 8 Selected Y: 3
+LEFT Selected: 101 X: 8 Selected Y: 3
+LEFT Selected: 101 X: 8 Selected Y: 3
+LEFT Selected: 101 X: 8 Selected Y: 3
+LEFT Selected: 101 X: 8 Selected Y: 3
+LEFT Selected: 101 X: 8 Selected Y: 3
+LEFT Selected: 101 X: 8 Selected Y: 3
+LEFT Selected: 101 X: 8 Selected Y: 3
+LEFT Selected: 101 X: 8 Selected Y: 3
+LEFT Selected: 101 X: 8 Selected Y: 3
+LEFT Selected: 101 X: 8 Selected Y: 3
+LEFT Selected: 101 X: 9 Selected Y: 3
+LEFT Selected: 101 X: 9 Selected Y: 3
+LEFT Selected: 101 X: 9 Selected Y: 3
+LEFT Selected: 101 X: 9 Selected Y: 3
+LEFT Selected: 101 X: 9 Selected Y: 3
+LEFT Selected: 101 X: 9 Selected Y: 3
+LEFT Selected: 101 X: 9 Selected Y: 3
+LEFT Selected: 101 X: 9 Selected Y: 3
+LEFT Selected: 101 X: 9 Selected Y: 3
+LEFT Selected: 101 X: 9 Selected Y: 3
+LEFT Selected: 101 X: 9 Selected Y: 3
+LEFT Selected: 101 X: 9 Selected Y: 3
+LEFT Selected: 101 X: 9 Selected Y: 3
+LEFT Selected: 101 X: 9 Selected Y: 3
+LEFT Selected: 101 X: 9 Selected Y: 3
+LEFT Selected: 101 X: 9 Selected Y: 3
+LEFT Selected: 101 X: 9 Selected Y: 3
+LEFT Selected: 101 X: 9 Selected Y: 3
+LEFT Selected: 101 X: 10 Selected Y: 3
+LEFT Selected: 101 X: 10 Selected Y: 3
+LEFT Selected: 101 X: 10 Selected Y: 3
+LEFT Selected: 101 X: 10 Selected Y: 3
+LEFT Selected: 101 X: 10 Selected Y: 3
+LEFT Selected: 101 X: 10 Selected Y: 3
+LEFT Selected: 101 X: 10 Selected Y: 3
+LEFT Selected: 101 X: 10 Selected Y: 3
+LEFT Selected: 101 X: 10 Selected Y: 3
+LEFT Selected: 101 X: 10 Selected Y: 3
+LEFT Selected: 101 X: 10 Selected Y: 3
+LEFT Selected: 101 X: 10 Selected Y: 3
+LEFT Selected: 101 X: 10 Selected Y: 3
+LEFT Selected: 101 X: 10 Selected Y: 3
+LEFT Selected: 101 X: 10 Selected Y: 3
+LEFT Selected: 101 X: 10 Selected Y: 3
+LEFT Selected: 101 X: 10 Selected Y: 3
+LEFT Selected: 101 X: 10 Selected Y: 3
+LEFT Selected: 101 X: 10 Selected Y: 3
+LEFT Selected: 101 X: 10 Selected Y: 3
+LEFT Selected: 101 X: 10 Selected Y: 3
+LEFT Selected: 101 X: 10 Selected Y: 3
+LEFT Selected: 101 X: 10 Selected Y: 3
+LEFT Selected: 101 X: 10 Selected Y: 3
+FPS: 216 Updates: 60
+FPS: 226 Updates: 60
+LEFT Selected: 200 X: 1 Selected Y: 4
+LEFT Selected: 200 X: 1 Selected Y: 4
+LEFT Selected: 200 X: 1 Selected Y: 4
+LEFT Selected: 200 X: 1 Selected Y: 4
+LEFT Selected: 200 X: 1 Selected Y: 4
+LEFT Selected: 200 X: 1 Selected Y: 4
+LEFT Selected: 200 X: 1 Selected Y: 5
+LEFT Selected: 200 X: 1 Selected Y: 5
+LEFT Selected: 200 X: 1 Selected Y: 5
+LEFT Selected: 200 X: 1 Selected Y: 5
+LEFT Selected: 200 X: 1 Selected Y: 5
+LEFT Selected: 200 X: 1 Selected Y: 5
+LEFT Selected: 200 X: 1 Selected Y: 5
+LEFT Selected: 200 X: 1 Selected Y: 5
+LEFT Selected: 200 X: 1 Selected Y: 6
+LEFT Selected: 200 X: 1 Selected Y: 6
+LEFT Selected: 200 X: 1 Selected Y: 6
+LEFT Selected: 200 X: 1 Selected Y: 6
+LEFT Selected: 200 X: 1 Selected Y: 6
+LEFT Selected: 200 X: 1 Selected Y: 6
+LEFT Selected: 200 X: 1 Selected Y: 6
+LEFT Selected: 200 X: 1 Selected Y: 6
+LEFT Selected: 200 X: 1 Selected Y: 6
+LEFT Selected: 200 X: 1 Selected Y: 6
+LEFT Selected: 200 X: 1 Selected Y: 6
+LEFT Selected: 200 X: 1 Selected Y: 6
+LEFT Selected: 200 X: 1 Selected Y: 6
+LEFT Selected: 200 X: 1 Selected Y: 6
+LEFT Selected: 200 X: 1 Selected Y: 6
+LEFT Selected: 200 X: 1 Selected Y: 7
+LEFT Selected: 200 X: 1 Selected Y: 7
+LEFT Selected: 200 X: 1 Selected Y: 7
+LEFT Selected: 200 X: 1 Selected Y: 7
+LEFT Selected: 200 X: 1 Selected Y: 7
+LEFT Selected: 200 X: 1 Selected Y: 7
+LEFT Selected: 200 X: 1 Selected Y: 7
+LEFT Selected: 200 X: 1 Selected Y: 7
+LEFT Selected: 200 X: 1 Selected Y: 7
+LEFT Selected: 200 X: 1 Selected Y: 7
+LEFT Selected: 200 X: 1 Selected Y: 7
+LEFT Selected: 200 X: 1 Selected Y: 7
+LEFT Selected: 200 X: 1 Selected Y: 7
+LEFT Selected: 200 X: 1 Selected Y: 7
+LEFT Selected: 200 X: 1 Selected Y: 7
+LEFT Selected: 200 X: 1 Selected Y: 7
+LEFT Selected: 200 X: 1 Selected Y: 7
+LEFT Selected: 200 X: 1 Selected Y: 7
+LEFT Selected: 200 X: 1 Selected Y: 7
+LEFT Selected: 200 X: 1 Selected Y: 7
+LEFT Selected: 200 X: 1 Selected Y: 7
+LEFT Selected: 200 X: 1 Selected Y: 7
+LEFT Selected: 200 X: 1 Selected Y: 7
+LEFT Selected: 200 X: 1 Selected Y: 7
+LEFT Selected: 200 X: 1 Selected Y: 7
+LEFT Selected: 200 X: 1 Selected Y: 7
+LEFT Selected: 200 X: 1 Selected Y: 8
+LEFT Selected: 200 X: 1 Selected Y: 8
+LEFT Selected: 200 X: 1 Selected Y: 8
+LEFT Selected: 200 X: 1 Selected Y: 8
+LEFT Selected: 200 X: 1 Selected Y: 8
+LEFT Selected: 200 X: 1 Selected Y: 8
+LEFT Selected: 200 X: 1 Selected Y: 8
+LEFT Selected: 200 X: 1 Selected Y: 8
+LEFT Selected: 200 X: 1 Selected Y: 8
+LEFT Selected: 200 X: 1 Selected Y: 8
+LEFT Selected: 200 X: 1 Selected Y: 8
+LEFT Selected: 200 X: 1 Selected Y: 8
+LEFT Selected: 200 X: 1 Selected Y: 8
+LEFT Selected: 200 X: 1 Selected Y: 8
+LEFT Selected: 200 X: 1 Selected Y: 8
+LEFT Selected: 200 X: 1 Selected Y: 8
+LEFT Selected: 200 X: 1 Selected Y: 8
+LEFT Selected: 200 X: 1 Selected Y: 8
+LEFT Selected: 200 X: 1 Selected Y: 8
+LEFT Selected: 200 X: 1 Selected Y: 8
+LEFT Selected: 200 X: 1 Selected Y: 8
+LEFT Selected: 200 X: 1 Selected Y: 8
+LEFT Selected: 200 X: 1 Selected Y: 8
+LEFT Selected: 200 X: 1 Selected Y: 8
+LEFT Selected: 200 X: 1 Selected Y: 8
+LEFT Selected: 200 X: 1 Selected Y: 8
+LEFT Selected: 200 X: 1 Selected Y: 8
+LEFT Selected: 200 X: 1 Selected Y: 8
+LEFT Selected: 200 X: 1 Selected Y: 8
+LEFT Selected: 200 X: 1 Selected Y: 8
+LEFT Selected: 200 X: 1 Selected Y: 8
+LEFT Selected: 200 X: 1 Selected Y: 8
+LEFT Selected: 200 X: 1 Selected Y: 8
+LEFT Selected: 200 X: 1 Selected Y: 9
+LEFT Selected: 200 X: 1 Selected Y: 9
+LEFT Selected: 200 X: 1 Selected Y: 9
+LEFT Selected: 200 X: 1 Selected Y: 9
+LEFT Selected: 200 X: 1 Selected Y: 9
+LEFT Selected: 200 X: 1 Selected Y: 9
+LEFT Selected: 200 X: 1 Selected Y: 9
+LEFT Selected: 200 X: 1 Selected Y: 9
+LEFT Selected: 200 X: 1 Selected Y: 9
+LEFT Selected: 200 X: 1 Selected Y: 9
+LEFT Selected: 200 X: 1 Selected Y: 9
+LEFT Selected: 200 X: 1 Selected Y: 9
+LEFT Selected: 200 X: 1 Selected Y: 9
+LEFT Selected: 200 X: 1 Selected Y: 9
+LEFT Selected: 200 X: 1 Selected Y: 9
+FPS: 210 Updates: 60
+LEFT Selected: 200 X: 1 Selected Y: 9
+LEFT Selected: 200 X: 1 Selected Y: 9
+LEFT Selected: 200 X: 1 Selected Y: 9
+FPS: 230 Updates: 60
+FPS: 226 Updates: 60
+FPS: 228 Updates: 60
+FPS: 231 Updates: 60
+FPS: 226 Updates: 60
+FPS: 162 Updates: 60
+FPS: 221 Updates: 60
+FPS: 229 Updates: 60
+LEFT Selected: 200 X: 0 Selected Y: 9
+FPS: 226 Updates: 60
+FPS: 232 Updates: 60
+FPS: 213 Updates: 60
+FPS: 235 Updates: 60
+FPS: 227 Updates: 60
+FPS: 229 Updates: 60
+FPS: 219 Updates: 60
+FPS: 222 Updates: 60
+FPS: 227 Updates: 60
+FPS: 230 Updates: 60
+FPS: 222 Updates: 60
+FPS: 224 Updates: 60
+FPS: 224 Updates: 60
+FPS: 226 Updates: 60
+LEFT Selected: 2407 X: 1 Selected Y: 11
+LEFT Selected: 2407 X: 1 Selected Y: 11
+LEFT Selected: 2407 X: 1 Selected Y: 11
+LEFT Selected: 2407 X: 1 Selected Y: 11
+LEFT Selected: 2407 X: 1 Selected Y: 11
+LEFT Selected: 2407 X: 2 Selected Y: 11
+LEFT Selected: 2407 X: 2 Selected Y: 11
+LEFT Selected: 2407 X: 2 Selected Y: 11
+LEFT Selected: 2407 X: 2 Selected Y: 11
+LEFT Selected: 2407 X: 2 Selected Y: 11
+LEFT Selected: 2407 X: 2 Selected Y: 11
+LEFT Selected: 2407 X: 2 Selected Y: 11
+LEFT Selected: 2407 X: 2 Selected Y: 11
+LEFT Selected: 2407 X: 2 Selected Y: 11
+LEFT Selected: 2407 X: 2 Selected Y: 11
+LEFT Selected: 2407 X: 2 Selected Y: 11
+LEFT Selected: 2407 X: 2 Selected Y: 11
+LEFT Selected: 2407 X: 2 Selected Y: 11
+LEFT Selected: 2407 X: 2 Selected Y: 11
+LEFT Selected: 2407 X: 2 Selected Y: 11
+LEFT Selected: 2407 X: 2 Selected Y: 11
+LEFT Selected: 2407 X: 2 Selected Y: 11
+LEFT Selected: 2407 X: 2 Selected Y: 11
+LEFT Selected: 2407 X: 2 Selected Y: 11
+LEFT Selected: 2407 X: 2 Selected Y: 11
+LEFT Selected: 2407 X: 2 Selected Y: 11
+LEFT Selected: 2407 X: 3 Selected Y: 11
+LEFT Selected: 2407 X: 3 Selected Y: 11
+LEFT Selected: 2407 X: 3 Selected Y: 11
+LEFT Selected: 2407 X: 3 Selected Y: 11
+LEFT Selected: 2407 X: 3 Selected Y: 11
+LEFT Selected: 2407 X: 3 Selected Y: 11
+LEFT Selected: 2407 X: 3 Selected Y: 11
+LEFT Selected: 2407 X: 3 Selected Y: 11
+LEFT Selected: 2407 X: 3 Selected Y: 11
+LEFT Selected: 2407 X: 3 Selected Y: 11
+LEFT Selected: 2407 X: 3 Selected Y: 11
+LEFT Selected: 2407 X: 3 Selected Y: 11
+LEFT Selected: 2407 X: 3 Selected Y: 11
+LEFT Selected: 2407 X: 3 Selected Y: 11
+LEFT Selected: 2407 X: 3 Selected Y: 11
+LEFT Selected: 2407 X: 3 Selected Y: 11
+LEFT Selected: 2407 X: 3 Selected Y: 11
+LEFT Selected: 2407 X: 3 Selected Y: 11
+LEFT Selected: 2407 X: 3 Selected Y: 11
+LEFT Selected: 2407 X: 3 Selected Y: 11
+LEFT Selected: 2407 X: 3 Selected Y: 11
+LEFT Selected: 2407 X: 3 Selected Y: 11
+LEFT Selected: 2407 X: 3 Selected Y: 11
+LEFT Selected: 2407 X: 3 Selected Y: 11
+LEFT Selected: 2407 X: 3 Selected Y: 11
+LEFT Selected: 2407 X: 4 Selected Y: 11
+LEFT Selected: 2407 X: 4 Selected Y: 11
+LEFT Selected: 2407 X: 4 Selected Y: 11
+LEFT Selected: 2407 X: 4 Selected Y: 11
+LEFT Selected: 2407 X: 4 Selected Y: 11
+LEFT Selected: 2407 X: 4 Selected Y: 11
+LEFT Selected: 2407 X: 4 Selected Y: 11
+LEFT Selected: 2407 X: 4 Selected Y: 11
+LEFT Selected: 2407 X: 4 Selected Y: 11
+LEFT Selected: 2407 X: 4 Selected Y: 11
+LEFT Selected: 2407 X: 4 Selected Y: 11
+LEFT Selected: 2407 X: 4 Selected Y: 11
+LEFT Selected: 2407 X: 4 Selected Y: 11
+LEFT Selected: 2407 X: 4 Selected Y: 11
+FPS: 207 Updates: 60
+LEFT Selected: 2407 X: 5 Selected Y: 11
+LEFT Selected: 2407 X: 5 Selected Y: 11
+LEFT Selected: 2407 X: 5 Selected Y: 11
+LEFT Selected: 2407 X: 5 Selected Y: 11
+LEFT Selected: 2407 X: 5 Selected Y: 11
+LEFT Selected: 2407 X: 5 Selected Y: 11
+LEFT Selected: 2407 X: 5 Selected Y: 11
+LEFT Selected: 2407 X: 5 Selected Y: 11
+LEFT Selected: 2407 X: 5 Selected Y: 11
+LEFT Selected: 2407 X: 5 Selected Y: 11
+LEFT Selected: 2407 X: 5 Selected Y: 11
+LEFT Selected: 2407 X: 5 Selected Y: 11
+LEFT Selected: 2407 X: 5 Selected Y: 11
+LEFT Selected: 2407 X: 5 Selected Y: 11
+LEFT Selected: 2407 X: 5 Selected Y: 11
+LEFT Selected: 2407 X: 5 Selected Y: 11
+LEFT Selected: 2407 X: 5 Selected Y: 11
+LEFT Selected: 2407 X: 5 Selected Y: 11
+LEFT Selected: 2407 X: 5 Selected Y: 11
+LEFT Selected: 2407 X: 5 Selected Y: 11
+LEFT Selected: 2407 X: 5 Selected Y: 11
+LEFT Selected: 2407 X: 5 Selected Y: 11
+LEFT Selected: 2407 X: 5 Selected Y: 11
+LEFT Selected: 2407 X: 5 Selected Y: 11
+LEFT Selected: 2407 X: 5 Selected Y: 11
+LEFT Selected: 2407 X: 5 Selected Y: 11
+LEFT Selected: 2407 X: 5 Selected Y: 11
+LEFT Selected: 2407 X: 5 Selected Y: 11
+LEFT Selected: 2407 X: 5 Selected Y: 11
+LEFT Selected: 2407 X: 5 Selected Y: 11
+LEFT Selected: 2407 X: 6 Selected Y: 11
+LEFT Selected: 2407 X: 6 Selected Y: 11
+LEFT Selected: 2407 X: 6 Selected Y: 11
+LEFT Selected: 2407 X: 6 Selected Y: 11
+LEFT Selected: 2407 X: 6 Selected Y: 11
+LEFT Selected: 2407 X: 6 Selected Y: 11
+LEFT Selected: 2407 X: 6 Selected Y: 11
+LEFT Selected: 2407 X: 6 Selected Y: 11
+LEFT Selected: 2407 X: 6 Selected Y: 11
+LEFT Selected: 2407 X: 6 Selected Y: 11
+LEFT Selected: 2407 X: 6 Selected Y: 11
+LEFT Selected: 2407 X: 6 Selected Y: 11
+LEFT Selected: 2407 X: 6 Selected Y: 11
+LEFT Selected: 2407 X: 6 Selected Y: 11
+LEFT Selected: 2407 X: 6 Selected Y: 11
+LEFT Selected: 2407 X: 6 Selected Y: 11
+LEFT Selected: 2407 X: 6 Selected Y: 11
+LEFT Selected: 2407 X: 6 Selected Y: 11
+LEFT Selected: 2407 X: 6 Selected Y: 11
+LEFT Selected: 2407 X: 6 Selected Y: 11
+LEFT Selected: 2407 X: 6 Selected Y: 11
+LEFT Selected: 2407 X: 7 Selected Y: 11
+LEFT Selected: 2407 X: 7 Selected Y: 11
+LEFT Selected: 2407 X: 7 Selected Y: 11
+LEFT Selected: 2407 X: 7 Selected Y: 11
+LEFT Selected: 2407 X: 7 Selected Y: 11
+LEFT Selected: 2407 X: 7 Selected Y: 11
+LEFT Selected: 2407 X: 7 Selected Y: 11
+LEFT Selected: 2407 X: 7 Selected Y: 11
+LEFT Selected: 2407 X: 7 Selected Y: 11
+LEFT Selected: 2407 X: 7 Selected Y: 11
+LEFT Selected: 2407 X: 7 Selected Y: 11
+LEFT Selected: 2407 X: 7 Selected Y: 11
+LEFT Selected: 2407 X: 7 Selected Y: 11
+LEFT Selected: 2407 X: 7 Selected Y: 11
+LEFT Selected: 2407 X: 7 Selected Y: 11
+LEFT Selected: 2407 X: 7 Selected Y: 11
+LEFT Selected: 2407 X: 7 Selected Y: 11
+LEFT Selected: 2407 X: 7 Selected Y: 11
+LEFT Selected: 2407 X: 7 Selected Y: 11
+LEFT Selected: 2407 X: 7 Selected Y: 11
+LEFT Selected: 2407 X: 7 Selected Y: 11
+LEFT Selected: 2407 X: 7 Selected Y: 11
+LEFT Selected: 2407 X: 7 Selected Y: 11
+LEFT Selected: 2407 X: 7 Selected Y: 11
+LEFT Selected: 2407 X: 7 Selected Y: 11
+LEFT Selected: 2407 X: 7 Selected Y: 11
+LEFT Selected: 2407 X: 7 Selected Y: 11
+LEFT Selected: 2407 X: 7 Selected Y: 11
+LEFT Selected: 2407 X: 8 Selected Y: 11
+LEFT Selected: 2407 X: 8 Selected Y: 11
+LEFT Selected: 2407 X: 8 Selected Y: 11
+LEFT Selected: 2407 X: 8 Selected Y: 11
+LEFT Selected: 2407 X: 8 Selected Y: 11
+LEFT Selected: 2407 X: 8 Selected Y: 11
+LEFT Selected: 2407 X: 8 Selected Y: 11
+LEFT Selected: 2407 X: 8 Selected Y: 11
+LEFT Selected: 2407 X: 8 Selected Y: 11
+LEFT Selected: 2407 X: 8 Selected Y: 11
+LEFT Selected: 2407 X: 8 Selected Y: 11
+LEFT Selected: 2407 X: 8 Selected Y: 11
+LEFT Selected: 2407 X: 8 Selected Y: 11
+LEFT Selected: 2407 X: 8 Selected Y: 11
+LEFT Selected: 2407 X: 8 Selected Y: 11
+LEFT Selected: 2407 X: 8 Selected Y: 11
+LEFT Selected: 2407 X: 8 Selected Y: 11
+LEFT Selected: 2407 X: 9 Selected Y: 11
+LEFT Selected: 2407 X: 9 Selected Y: 11
+LEFT Selected: 2407 X: 9 Selected Y: 11
+LEFT Selected: 2407 X: 9 Selected Y: 11
+LEFT Selected: 2407 X: 9 Selected Y: 11
+LEFT Selected: 2407 X: 9 Selected Y: 11
+LEFT Selected: 2407 X: 9 Selected Y: 11
+LEFT Selected: 2407 X: 9 Selected Y: 11
+LEFT Selected: 2407 X: 9 Selected Y: 11
+LEFT Selected: 2407 X: 9 Selected Y: 11
+LEFT Selected: 2407 X: 9 Selected Y: 11
+LEFT Selected: 2407 X: 9 Selected Y: 11
+LEFT Selected: 2407 X: 9 Selected Y: 11
+LEFT Selected: 2407 X: 9 Selected Y: 11
+LEFT Selected: 2407 X: 9 Selected Y: 11
+LEFT Selected: 2407 X: 9 Selected Y: 11
+LEFT Selected: 2407 X: 9 Selected Y: 11
+LEFT Selected: 2407 X: 9 Selected Y: 11
+LEFT Selected: 2407 X: 9 Selected Y: 11
+LEFT Selected: 2407 X: 9 Selected Y: 11
+LEFT Selected: 2407 X: 10 Selected Y: 11
+LEFT Selected: 2407 X: 10 Selected Y: 11
+LEFT Selected: 2407 X: 10 Selected Y: 11
+LEFT Selected: 2407 X: 10 Selected Y: 11
+LEFT Selected: 2407 X: 10 Selected Y: 11
+LEFT Selected: 2407 X: 10 Selected Y: 11
+LEFT Selected: 2407 X: 10 Selected Y: 11
+LEFT Selected: 2407 X: 10 Selected Y: 11
+LEFT Selected: 2407 X: 10 Selected Y: 11
+LEFT Selected: 2407 X: 10 Selected Y: 11
+LEFT Selected: 2407 X: 10 Selected Y: 11
+LEFT Selected: 2407 X: 10 Selected Y: 11
+LEFT Selected: 2407 X: 10 Selected Y: 11
+LEFT Selected: 2407 X: 10 Selected Y: 11
+LEFT Selected: 2407 X: 10 Selected Y: 11
+LEFT Selected: 2407 X: 10 Selected Y: 11
+LEFT Selected: 2407 X: 10 Selected Y: 11
+LEFT Selected: 2407 X: 10 Selected Y: 11
+LEFT Selected: 2407 X: 10 Selected Y: 11
+LEFT Selected: 2407 X: 10 Selected Y: 11
+LEFT Selected: 2407 X: 10 Selected Y: 11
+LEFT Selected: 2407 X: 10 Selected Y: 11
+LEFT Selected: 2407 X: 10 Selected Y: 11
+LEFT Selected: 2407 X: 10 Selected Y: 11
+LEFT Selected: 2407 X: 10 Selected Y: 11
+LEFT Selected: 2407 X: 10 Selected Y: 11
+LEFT Selected: 2407 X: 10 Selected Y: 11
+LEFT Selected: 2407 X: 10 Selected Y: 11
+LEFT Selected: 2407 X: 10 Selected Y: 11
+LEFT Selected: 2407 X: 10 Selected Y: 11
+LEFT Selected: 2407 X: 10 Selected Y: 11
+LEFT Selected: 2407 X: 10 Selected Y: 11
+LEFT Selected: 2407 X: 10 Selected Y: 11
+LEFT Selected: 2407 X: 10 Selected Y: 11
+FPS: 193 Updates: 60
+LEFT Selected: 2407 X: 10 Selected Y: 11
+LEFT Selected: 2407 X: 10 Selected Y: 11
+LEFT Selected: 2407 X: 11 Selected Y: 11
+LEFT Selected: 2407 X: 11 Selected Y: 11
+LEFT Selected: 2407 X: 11 Selected Y: 11
+LEFT Selected: 2407 X: 11 Selected Y: 11
+LEFT Selected: 2407 X: 11 Selected Y: 11
+LEFT Selected: 2407 X: 11 Selected Y: 11
+LEFT Selected: 2407 X: 11 Selected Y: 11
+LEFT Selected: 2407 X: 11 Selected Y: 11
+FPS: 219 Updates: 60
+FPS: 222 Updates: 60
+FPS: 232 Updates: 60
+FPS: 224 Updates: 60
+FPS: 233 Updates: 60
+FPS: 227 Updates: 60
+FPS: 229 Updates: 60
+FPS: 221 Updates: 60
+LEFT Selected: 201 X: 2 Selected Y: 10
+LEFT Selected: 201 X: 2 Selected Y: 10
+LEFT Selected: 201 X: 2 Selected Y: 10
+LEFT Selected: 201 X: 2 Selected Y: 10
+LEFT Selected: 201 X: 2 Selected Y: 10
+LEFT Selected: 201 X: 3 Selected Y: 10
+LEFT Selected: 201 X: 3 Selected Y: 10
+LEFT Selected: 201 X: 3 Selected Y: 10
+LEFT Selected: 201 X: 3 Selected Y: 10
+LEFT Selected: 201 X: 3 Selected Y: 10
+LEFT Selected: 201 X: 4 Selected Y: 10
+LEFT Selected: 201 X: 4 Selected Y: 10
+LEFT Selected: 201 X: 4 Selected Y: 10
+LEFT Selected: 201 X: 5 Selected Y: 10
+LEFT Selected: 201 X: 5 Selected Y: 10
+LEFT Selected: 201 X: 5 Selected Y: 10
+LEFT Selected: 201 X: 5 Selected Y: 10
+LEFT Selected: 201 X: 6 Selected Y: 10
+LEFT Selected: 201 X: 6 Selected Y: 10
+LEFT Selected: 201 X: 6 Selected Y: 10
+LEFT Selected: 201 X: 6 Selected Y: 10
+LEFT Selected: 201 X: 6 Selected Y: 10
+LEFT Selected: 201 X: 6 Selected Y: 10
+LEFT Selected: 201 X: 6 Selected Y: 10
+LEFT Selected: 201 X: 6 Selected Y: 10
+LEFT Selected: 201 X: 6 Selected Y: 10
+LEFT Selected: 201 X: 6 Selected Y: 10
+LEFT Selected: 201 X: 6 Selected Y: 10
+LEFT Selected: 201 X: 6 Selected Y: 10
+LEFT Selected: 201 X: 6 Selected Y: 10
+LEFT Selected: 201 X: 6 Selected Y: 10
+LEFT Selected: 201 X: 6 Selected Y: 10
+LEFT Selected: 201 X: 6 Selected Y: 10
+LEFT Selected: 201 X: 6 Selected Y: 10
+LEFT Selected: 201 X: 6 Selected Y: 10
+LEFT Selected: 201 X: 6 Selected Y: 10
+LEFT Selected: 201 X: 6 Selected Y: 10
+LEFT Selected: 201 X: 7 Selected Y: 10
+LEFT Selected: 201 X: 7 Selected Y: 10
+LEFT Selected: 201 X: 7 Selected Y: 10
+LEFT Selected: 201 X: 7 Selected Y: 10
+LEFT Selected: 201 X: 7 Selected Y: 10
+LEFT Selected: 201 X: 7 Selected Y: 10
+LEFT Selected: 201 X: 7 Selected Y: 10
+LEFT Selected: 201 X: 7 Selected Y: 10
+LEFT Selected: 201 X: 7 Selected Y: 10
+LEFT Selected: 201 X: 7 Selected Y: 10
+LEFT Selected: 201 X: 7 Selected Y: 10
+LEFT Selected: 201 X: 7 Selected Y: 10
+LEFT Selected: 201 X: 7 Selected Y: 10
+LEFT Selected: 201 X: 7 Selected Y: 10
+LEFT Selected: 201 X: 7 Selected Y: 10
+LEFT Selected: 201 X: 8 Selected Y: 10
+LEFT Selected: 201 X: 8 Selected Y: 10
+LEFT Selected: 201 X: 8 Selected Y: 10
+LEFT Selected: 201 X: 8 Selected Y: 10
+LEFT Selected: 201 X: 8 Selected Y: 10
+LEFT Selected: 201 X: 8 Selected Y: 10
+LEFT Selected: 201 X: 8 Selected Y: 10
+LEFT Selected: 201 X: 8 Selected Y: 10
+LEFT Selected: 201 X: 8 Selected Y: 10
+LEFT Selected: 201 X: 8 Selected Y: 10
+LEFT Selected: 201 X: 8 Selected Y: 10
+LEFT Selected: 201 X: 8 Selected Y: 10
+LEFT Selected: 201 X: 8 Selected Y: 10
+LEFT Selected: 201 X: 8 Selected Y: 10
+LEFT Selected: 201 X: 8 Selected Y: 10
+LEFT Selected: 201 X: 8 Selected Y: 10
+LEFT Selected: 201 X: 8 Selected Y: 10
+LEFT Selected: 201 X: 8 Selected Y: 10
+LEFT Selected: 201 X: 8 Selected Y: 10
+LEFT Selected: 201 X: 8 Selected Y: 10
+LEFT Selected: 201 X: 8 Selected Y: 10
+LEFT Selected: 201 X: 8 Selected Y: 10
+LEFT Selected: 201 X: 8 Selected Y: 10
+LEFT Selected: 201 X: 8 Selected Y: 10
+LEFT Selected: 201 X: 8 Selected Y: 10
+LEFT Selected: 201 X: 8 Selected Y: 10
+LEFT Selected: 201 X: 9 Selected Y: 10
+LEFT Selected: 201 X: 9 Selected Y: 10
+LEFT Selected: 201 X: 9 Selected Y: 10
+LEFT Selected: 201 X: 9 Selected Y: 10
+LEFT Selected: 201 X: 9 Selected Y: 10
+LEFT Selected: 201 X: 9 Selected Y: 10
+LEFT Selected: 201 X: 9 Selected Y: 10
+LEFT Selected: 201 X: 9 Selected Y: 10
+LEFT Selected: 201 X: 9 Selected Y: 10
+LEFT Selected: 201 X: 9 Selected Y: 10
+LEFT Selected: 201 X: 9 Selected Y: 10
+LEFT Selected: 201 X: 9 Selected Y: 10
+LEFT Selected: 201 X: 9 Selected Y: 10
+LEFT Selected: 201 X: 9 Selected Y: 10
+LEFT Selected: 201 X: 9 Selected Y: 10
+LEFT Selected: 201 X: 9 Selected Y: 10
+LEFT Selected: 201 X: 9 Selected Y: 10
+LEFT Selected: 201 X: 9 Selected Y: 10
+LEFT Selected: 201 X: 9 Selected Y: 10
+LEFT Selected: 201 X: 9 Selected Y: 10
+LEFT Selected: 201 X: 9 Selected Y: 10
+LEFT Selected: 201 X: 9 Selected Y: 10
+LEFT Selected: 201 X: 9 Selected Y: 10
+LEFT Selected: 201 X: 9 Selected Y: 10
+LEFT Selected: 201 X: 9 Selected Y: 10
+LEFT Selected: 201 X: 9 Selected Y: 10
+LEFT Selected: 201 X: 9 Selected Y: 10
+LEFT Selected: 201 X: 9 Selected Y: 10
+LEFT Selected: 201 X: 9 Selected Y: 10
+LEFT Selected: 201 X: 10 Selected Y: 10
+LEFT Selected: 201 X: 10 Selected Y: 10
+LEFT Selected: 201 X: 10 Selected Y: 10
+LEFT Selected: 201 X: 10 Selected Y: 10
+LEFT Selected: 201 X: 10 Selected Y: 10
+LEFT Selected: 201 X: 10 Selected Y: 10
+LEFT Selected: 201 X: 10 Selected Y: 10
+FPS: 199 Updates: 60
+LEFT Selected: 201 X: 10 Selected Y: 10
+LEFT Selected: 201 X: 10 Selected Y: 10
+FPS: 226 Updates: 60
+LEFT Selected: 201 X: 1 Selected Y: 10
+FPS: 220 Updates: 60
+LEFT Selected: 201 X: 11 Selected Y: 10
+FPS: 230 Updates: 60
+FPS: 221 Updates: 60
+FPS: 225 Updates: 60
+FPS: 224 Updates: 60
+FPS: 229 Updates: 60
+FPS: 226 Updates: 60
+FPS: 229 Updates: 60
+FPS: 221 Updates: 60
+FPS: 227 Updates: 60
+FPS: 222 Updates: 60
+FPS: 221 Updates: 60
+FPS: 229 Updates: 60
+FPS: 226 Updates: 60
+LEFT Selected: 503 X: 1 Selected Y: 10
+LEFT Selected: 503 X: 1 Selected Y: 10
+FPS: 229 Updates: 60
+FPS: 228 Updates: 60
+FPS: 230 Updates: 60
+LEFT Selected: 201 X: 1 Selected Y: 10
+FPS: 225 Updates: 60
+FPS: 226 Updates: 60
+FPS: 228 Updates: 60
+FPS: 224 Updates: 60
+FPS: 169 Updates: 60
+FPS: 155 Updates: 60
+FPS: 154 Updates: 60
+FPS: 156 Updates: 60
+LEFT Selected: 1300 X: 6 Selected Y: 8
+FPS: 154 Updates: 60
+FPS: 154 Updates: 60
+LEFT Selected: 1301 X: 7 Selected Y: 8
+FPS: 156 Updates: 60
+FPS: 154 Updates: 60
+LEFT Selected: 1200 X: 6 Selected Y: 7
+FPS: 157 Updates: 60
+FPS: 156 Updates: 60
+LEFT Selected: 1201 X: 7 Selected Y: 7
+FPS: 151 Updates: 60
+FPS: 139 Updates: 60
+FPS: 119 Updates: 60
+FPS: 119 Updates: 60
+FPS: 118 Updates: 60
+LEFT Selected: 1201 X: 6 Selected Y: 6
+FPS: 118 Updates: 60
+FPS: 120 Updates: 60
+LEFT Selected: 1302 X: 6 Selected Y: 6
+FPS: 117 Updates: 60
+FPS: 118 Updates: 60
+LEFT Selected: 1302 X: 7 Selected Y: 6
+FPS: 120 Updates: 60
+FPS: 119 Updates: 60
+LEFT Selected: 1302 X: 6 Selected Y: 5
+FPS: 120 Updates: 60
+FPS: 120 Updates: 60
+FPS: 119 Updates: 60
+LEFT Selected: 1202 X: 6 Selected Y: 5
+FPS: 118 Updates: 60
+FPS: 119 Updates: 60
+FPS: 120 Updates: 60
+LEFT Selected: 1302 X: 6 Selected Y: 6
+LEFT Selected: 1302 X: 6 Selected Y: 6
+FPS: 119 Updates: 60
+FPS: 121 Updates: 60
+FPS: 121 Updates: 60
+LEFT Selected: 1303 X: 7 Selected Y: 6
+FPS: 120 Updates: 60
+FPS: 122 Updates: 60
+LEFT Selected: 1203 X: 7 Selected Y: 5
+FPS: 120 Updates: 60
+FPS: 121 Updates: 60
+FPS: 124 Updates: 60
+FPS: 122 Updates: 60
+FPS: 123 Updates: 60
+FPS: 124 Updates: 60
+FPS: 104 Updates: 60
+FPS: 76 Updates: 60
+FPS: 73 Updates: 60
+FPS: 82 Updates: 60
+FPS: 121 Updates: 60
+FPS: 147 Updates: 60
+FPS: 131 Updates: 60
+FPS: 119 Updates: 60
+FPS: 120 Updates: 60
+FPS: 119 Updates: 60
+FPS: 120 Updates: 60
+FPS: 118 Updates: 60
+FPS: 118 Updates: 60
+FPS: 122 Updates: 60
+FPS: 124 Updates: 60
+FPS: 126 Updates: 60
+FPS: 126 Updates: 60
+FPS: 123 Updates: 60
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 457.09
+Initializing Engine
+Post Load
+Starting Render Loop
+FPS: 129 Updates: 37
+FPS: 1 Updates: 118
+FPS: 86 Updates: 24
+FPS: 280 Updates: 60
+FPS: 279 Updates: 60
+FPS: 273 Updates: 60
+FPS: 275 Updates: 60
+FPS: 251 Updates: 60
+FPS: 244 Updates: 60
+FPS: 249 Updates: 60
+FPS: 246 Updates: 60
+FPS: 247 Updates: 60
+FPS: 242 Updates: 60
+FPS: 241 Updates: 60
+FPS: 240 Updates: 60
+FPS: 241 Updates: 60
+FPS: 255 Updates: 60
+FPS: 239 Updates: 60
+FPS: 239 Updates: 60
+FPS: 240 Updates: 60
+FPS: 269 Updates: 60
+FPS: 269 Updates: 60
+FPS: 269 Updates: 60
+FPS: 273 Updates: 60
+FPS: 232 Updates: 60
+FPS: 219 Updates: 60
+FPS: 217 Updates: 60
+LEFT Selected: 0 X: 2 Selected Y: 2
+FPS: 201 Updates: 60
+FPS: 209 Updates: 60
+LEFT Selected: 201 X: 2 Selected Y: 2
+FPS: 211 Updates: 60
+LEFT Selected: 201 X: 3 Selected Y: 2
+LEFT Selected: 201 X: 3 Selected Y: 2
+LEFT Selected: 201 X: 3 Selected Y: 2
+LEFT Selected: 201 X: 3 Selected Y: 2
+LEFT Selected: 201 X: 3 Selected Y: 2
+LEFT Selected: 201 X: 3 Selected Y: 2
+LEFT Selected: 201 X: 4 Selected Y: 2
+LEFT Selected: 201 X: 4 Selected Y: 2
+LEFT Selected: 201 X: 4 Selected Y: 2
+LEFT Selected: 201 X: 4 Selected Y: 2
+LEFT Selected: 201 X: 4 Selected Y: 2
+LEFT Selected: 201 X: 5 Selected Y: 2
+LEFT Selected: 201 X: 5 Selected Y: 2
+LEFT Selected: 201 X: 5 Selected Y: 2
+LEFT Selected: 201 X: 5 Selected Y: 2
+LEFT Selected: 201 X: 5 Selected Y: 2
+LEFT Selected: 201 X: 6 Selected Y: 2
+LEFT Selected: 201 X: 6 Selected Y: 2
+LEFT Selected: 201 X: 6 Selected Y: 2
+LEFT Selected: 201 X: 6 Selected Y: 2
+LEFT Selected: 201 X: 6 Selected Y: 2
+LEFT Selected: 201 X: 6 Selected Y: 2
+LEFT Selected: 201 X: 7 Selected Y: 2
+LEFT Selected: 201 X: 7 Selected Y: 2
+LEFT Selected: 201 X: 7 Selected Y: 2
+LEFT Selected: 201 X: 7 Selected Y: 2
+LEFT Selected: 201 X: 7 Selected Y: 2
+LEFT Selected: 201 X: 7 Selected Y: 2
+LEFT Selected: 201 X: 7 Selected Y: 2
+LEFT Selected: 201 X: 7 Selected Y: 2
+LEFT Selected: 201 X: 7 Selected Y: 2
+LEFT Selected: 201 X: 7 Selected Y: 2
+LEFT Selected: 201 X: 7 Selected Y: 2
+LEFT Selected: 201 X: 8 Selected Y: 2
+LEFT Selected: 201 X: 8 Selected Y: 2
+LEFT Selected: 201 X: 8 Selected Y: 2
+LEFT Selected: 201 X: 8 Selected Y: 2
+LEFT Selected: 201 X: 8 Selected Y: 2
+LEFT Selected: 201 X: 8 Selected Y: 2
+FPS: 208 Updates: 60
+LEFT Selected: 201 X: 8 Selected Y: 2
+LEFT Selected: 201 X: 8 Selected Y: 3
+LEFT Selected: 201 X: 8 Selected Y: 3
+LEFT Selected: 201 X: 8 Selected Y: 3
+LEFT Selected: 201 X: 7 Selected Y: 3
+LEFT Selected: 201 X: 7 Selected Y: 3
+LEFT Selected: 201 X: 7 Selected Y: 3
+LEFT Selected: 201 X: 7 Selected Y: 3
+LEFT Selected: 201 X: 7 Selected Y: 3
+LEFT Selected: 201 X: 7 Selected Y: 3
+FPS: 217 Updates: 60
+LEFT Selected: 201 X: 6 Selected Y: 3
+LEFT Selected: 201 X: 6 Selected Y: 3
+LEFT Selected: 201 X: 6 Selected Y: 3
+LEFT Selected: 201 X: 6 Selected Y: 3
+LEFT Selected: 201 X: 6 Selected Y: 3
+LEFT Selected: 201 X: 5 Selected Y: 3
+LEFT Selected: 201 X: 5 Selected Y: 3
+LEFT Selected: 201 X: 5 Selected Y: 3
+LEFT Selected: 201 X: 4 Selected Y: 3
+LEFT Selected: 201 X: 4 Selected Y: 3
+LEFT Selected: 201 X: 4 Selected Y: 3
+LEFT Selected: 201 X: 4 Selected Y: 3
+LEFT Selected: 201 X: 4 Selected Y: 3
+LEFT Selected: 201 X: 3 Selected Y: 3
+LEFT Selected: 201 X: 3 Selected Y: 3
+LEFT Selected: 201 X: 3 Selected Y: 3
+LEFT Selected: 201 X: 3 Selected Y: 3
+LEFT Selected: 201 X: 3 Selected Y: 3
+LEFT Selected: 201 X: 3 Selected Y: 3
+LEFT Selected: 201 X: 2 Selected Y: 3
+LEFT Selected: 201 X: 2 Selected Y: 3
+LEFT Selected: 201 X: 2 Selected Y: 3
+LEFT Selected: 201 X: 2 Selected Y: 3
+LEFT Selected: 201 X: 2 Selected Y: 3
+LEFT Selected: 201 X: 2 Selected Y: 3
+LEFT Selected: 201 X: 2 Selected Y: 3
+LEFT Selected: 201 X: 2 Selected Y: 3
+LEFT Selected: 201 X: 2 Selected Y: 3
+LEFT Selected: 201 X: 2 Selected Y: 3
+LEFT Selected: 201 X: 2 Selected Y: 3
+LEFT Selected: 201 X: 2 Selected Y: 4
+LEFT Selected: 201 X: 2 Selected Y: 4
+LEFT Selected: 201 X: 2 Selected Y: 4
+LEFT Selected: 201 X: 2 Selected Y: 4
+LEFT Selected: 201 X: 2 Selected Y: 4
+LEFT Selected: 201 X: 2 Selected Y: 4
+LEFT Selected: 201 X: 2 Selected Y: 4
+LEFT Selected: 201 X: 2 Selected Y: 4
+LEFT Selected: 201 X: 2 Selected Y: 4
+LEFT Selected: 201 X: 2 Selected Y: 4
+LEFT Selected: 201 X: 2 Selected Y: 4
+LEFT Selected: 201 X: 2 Selected Y: 4
+LEFT Selected: 201 X: 2 Selected Y: 4
+LEFT Selected: 201 X: 2 Selected Y: 4
+LEFT Selected: 201 X: 2 Selected Y: 4
+LEFT Selected: 201 X: 3 Selected Y: 5
+LEFT Selected: 201 X: 3 Selected Y: 5
+LEFT Selected: 201 X: 3 Selected Y: 5
+LEFT Selected: 201 X: 3 Selected Y: 5
+LEFT Selected: 201 X: 3 Selected Y: 5
+LEFT Selected: 201 X: 3 Selected Y: 5
+LEFT Selected: 201 X: 3 Selected Y: 5
+LEFT Selected: 201 X: 3 Selected Y: 5
+LEFT Selected: 201 X: 3 Selected Y: 5
+LEFT Selected: 201 X: 3 Selected Y: 5
+LEFT Selected: 201 X: 3 Selected Y: 5
+LEFT Selected: 201 X: 3 Selected Y: 5
+LEFT Selected: 201 X: 3 Selected Y: 5
+LEFT Selected: 201 X: 3 Selected Y: 5
+LEFT Selected: 201 X: 3 Selected Y: 5
+LEFT Selected: 201 X: 3 Selected Y: 5
+LEFT Selected: 201 X: 3 Selected Y: 5
+LEFT Selected: 201 X: 3 Selected Y: 5
+LEFT Selected: 201 X: 3 Selected Y: 5
+LEFT Selected: 201 X: 3 Selected Y: 5
+LEFT Selected: 201 X: 3 Selected Y: 5
+LEFT Selected: 201 X: 3 Selected Y: 5
+LEFT Selected: 201 X: 3 Selected Y: 5
+LEFT Selected: 201 X: 3 Selected Y: 5
+LEFT Selected: 201 X: 3 Selected Y: 5
+LEFT Selected: 201 X: 3 Selected Y: 5
+LEFT Selected: 201 X: 3 Selected Y: 5
+LEFT Selected: 201 X: 3 Selected Y: 6
+LEFT Selected: 201 X: 3 Selected Y: 6
+LEFT Selected: 201 X: 3 Selected Y: 6
+LEFT Selected: 201 X: 3 Selected Y: 6
+LEFT Selected: 201 X: 3 Selected Y: 6
+LEFT Selected: 201 X: 3 Selected Y: 6
+LEFT Selected: 201 X: 3 Selected Y: 6
+LEFT Selected: 201 X: 3 Selected Y: 6
+LEFT Selected: 201 X: 3 Selected Y: 6
+LEFT Selected: 201 X: 3 Selected Y: 6
+LEFT Selected: 201 X: 3 Selected Y: 6
+LEFT Selected: 201 X: 3 Selected Y: 6
+LEFT Selected: 201 X: 3 Selected Y: 6
+LEFT Selected: 201 X: 3 Selected Y: 6
+LEFT Selected: 201 X: 3 Selected Y: 6
+LEFT Selected: 201 X: 3 Selected Y: 6
+LEFT Selected: 201 X: 3 Selected Y: 6
+LEFT Selected: 201 X: 3 Selected Y: 6
+LEFT Selected: 201 X: 3 Selected Y: 6
+LEFT Selected: 201 X: 3 Selected Y: 6
+LEFT Selected: 201 X: 3 Selected Y: 6
+LEFT Selected: 201 X: 3 Selected Y: 6
+LEFT Selected: 201 X: 3 Selected Y: 6
+LEFT Selected: 201 X: 3 Selected Y: 6
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+FPS: 191 Updates: 60
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 2 Selected Y: 7
+LEFT Selected: 201 X: 2 Selected Y: 7
+LEFT Selected: 201 X: 2 Selected Y: 7
+LEFT Selected: 201 X: 2 Selected Y: 7
+LEFT Selected: 201 X: 2 Selected Y: 7
+LEFT Selected: 201 X: 2 Selected Y: 7
+LEFT Selected: 201 X: 2 Selected Y: 7
+LEFT Selected: 201 X: 2 Selected Y: 7
+LEFT Selected: 201 X: 2 Selected Y: 7
+LEFT Selected: 201 X: 2 Selected Y: 7
+LEFT Selected: 201 X: 2 Selected Y: 7
+LEFT Selected: 201 X: 2 Selected Y: 7
+LEFT Selected: 201 X: 2 Selected Y: 7
+LEFT Selected: 201 X: 2 Selected Y: 7
+LEFT Selected: 201 X: 2 Selected Y: 7
+LEFT Selected: 201 X: 2 Selected Y: 6
+LEFT Selected: 201 X: 2 Selected Y: 6
+LEFT Selected: 201 X: 2 Selected Y: 6
+LEFT Selected: 201 X: 2 Selected Y: 6
+LEFT Selected: 201 X: 2 Selected Y: 6
+LEFT Selected: 201 X: 2 Selected Y: 6
+LEFT Selected: 201 X: 2 Selected Y: 6
+LEFT Selected: 201 X: 2 Selected Y: 6
+LEFT Selected: 201 X: 2 Selected Y: 6
+LEFT Selected: 201 X: 2 Selected Y: 6
+LEFT Selected: 201 X: 2 Selected Y: 6
+LEFT Selected: 201 X: 2 Selected Y: 6
+LEFT Selected: 201 X: 2 Selected Y: 6
+LEFT Selected: 201 X: 2 Selected Y: 6
+LEFT Selected: 201 X: 2 Selected Y: 6
+LEFT Selected: 201 X: 2 Selected Y: 6
+LEFT Selected: 201 X: 2 Selected Y: 6
+LEFT Selected: 201 X: 2 Selected Y: 6
+LEFT Selected: 201 X: 2 Selected Y: 6
+LEFT Selected: 201 X: 2 Selected Y: 6
+LEFT Selected: 201 X: 2 Selected Y: 6
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 4
+LEFT Selected: 201 X: 2 Selected Y: 4
+LEFT Selected: 201 X: 2 Selected Y: 4
+LEFT Selected: 201 X: 2 Selected Y: 4
+LEFT Selected: 201 X: 2 Selected Y: 4
+LEFT Selected: 201 X: 2 Selected Y: 4
+LEFT Selected: 201 X: 2 Selected Y: 4
+LEFT Selected: 201 X: 2 Selected Y: 4
+LEFT Selected: 201 X: 2 Selected Y: 4
+LEFT Selected: 201 X: 2 Selected Y: 4
+LEFT Selected: 201 X: 2 Selected Y: 4
+LEFT Selected: 201 X: 2 Selected Y: 4
+LEFT Selected: 201 X: 2 Selected Y: 4
+LEFT Selected: 201 X: 2 Selected Y: 4
+LEFT Selected: 201 X: 2 Selected Y: 4
+LEFT Selected: 201 X: 2 Selected Y: 4
+LEFT Selected: 201 X: 3 Selected Y: 4
+LEFT Selected: 201 X: 3 Selected Y: 4
+LEFT Selected: 201 X: 3 Selected Y: 4
+LEFT Selected: 201 X: 3 Selected Y: 4
+LEFT Selected: 201 X: 4 Selected Y: 4
+LEFT Selected: 201 X: 4 Selected Y: 4
+LEFT Selected: 201 X: 4 Selected Y: 4
+LEFT Selected: 201 X: 4 Selected Y: 4
+LEFT Selected: 201 X: 4 Selected Y: 4
+LEFT Selected: 201 X: 4 Selected Y: 4
+LEFT Selected: 201 X: 4 Selected Y: 4
+LEFT Selected: 201 X: 4 Selected Y: 4
+LEFT Selected: 201 X: 5 Selected Y: 4
+LEFT Selected: 201 X: 5 Selected Y: 4
+LEFT Selected: 201 X: 5 Selected Y: 4
+LEFT Selected: 201 X: 5 Selected Y: 4
+LEFT Selected: 201 X: 5 Selected Y: 4
+LEFT Selected: 201 X: 5 Selected Y: 4
+LEFT Selected: 201 X: 5 Selected Y: 4
+LEFT Selected: 201 X: 5 Selected Y: 4
+LEFT Selected: 201 X: 5 Selected Y: 4
+LEFT Selected: 201 X: 5 Selected Y: 4
+LEFT Selected: 201 X: 5 Selected Y: 4
+LEFT Selected: 201 X: 5 Selected Y: 4
+LEFT Selected: 201 X: 5 Selected Y: 4
+LEFT Selected: 201 X: 5 Selected Y: 4
+LEFT Selected: 201 X: 5 Selected Y: 4
+LEFT Selected: 201 X: 5 Selected Y: 4
+LEFT Selected: 201 X: 5 Selected Y: 4
+LEFT Selected: 201 X: 6 Selected Y: 4
+LEFT Selected: 201 X: 6 Selected Y: 4
+LEFT Selected: 201 X: 6 Selected Y: 4
+LEFT Selected: 201 X: 6 Selected Y: 4
+LEFT Selected: 201 X: 6 Selected Y: 4
+LEFT Selected: 201 X: 6 Selected Y: 4
+LEFT Selected: 201 X: 6 Selected Y: 4
+LEFT Selected: 201 X: 6 Selected Y: 4
+LEFT Selected: 201 X: 6 Selected Y: 4
+LEFT Selected: 201 X: 6 Selected Y: 4
+LEFT Selected: 201 X: 6 Selected Y: 4
+LEFT Selected: 201 X: 6 Selected Y: 4
+LEFT Selected: 201 X: 6 Selected Y: 4
+LEFT Selected: 201 X: 6 Selected Y: 4
+LEFT Selected: 201 X: 6 Selected Y: 4
+LEFT Selected: 201 X: 7 Selected Y: 4
+LEFT Selected: 201 X: 7 Selected Y: 4
+LEFT Selected: 201 X: 7 Selected Y: 4
+LEFT Selected: 201 X: 7 Selected Y: 4
+LEFT Selected: 201 X: 7 Selected Y: 4
+LEFT Selected: 201 X: 7 Selected Y: 4
+LEFT Selected: 201 X: 7 Selected Y: 4
+LEFT Selected: 201 X: 7 Selected Y: 4
+LEFT Selected: 201 X: 7 Selected Y: 4
+LEFT Selected: 201 X: 7 Selected Y: 4
+LEFT Selected: 201 X: 7 Selected Y: 4
+LEFT Selected: 201 X: 7 Selected Y: 4
+LEFT Selected: 201 X: 7 Selected Y: 4
+LEFT Selected: 201 X: 7 Selected Y: 4
+LEFT Selected: 201 X: 7 Selected Y: 4
+LEFT Selected: 201 X: 7 Selected Y: 4
+LEFT Selected: 201 X: 7 Selected Y: 4
+LEFT Selected: 201 X: 7 Selected Y: 4
+LEFT Selected: 201 X: 7 Selected Y: 4
+LEFT Selected: 201 X: 7 Selected Y: 4
+LEFT Selected: 201 X: 7 Selected Y: 4
+LEFT Selected: 201 X: 8 Selected Y: 4
+LEFT Selected: 201 X: 8 Selected Y: 4
+LEFT Selected: 201 X: 8 Selected Y: 4
+LEFT Selected: 201 X: 8 Selected Y: 4
+LEFT Selected: 201 X: 8 Selected Y: 4
+LEFT Selected: 201 X: 8 Selected Y: 4
+LEFT Selected: 201 X: 8 Selected Y: 4
+LEFT Selected: 201 X: 8 Selected Y: 4
+LEFT Selected: 201 X: 8 Selected Y: 4
+LEFT Selected: 201 X: 8 Selected Y: 4
+LEFT Selected: 201 X: 8 Selected Y: 4
+LEFT Selected: 201 X: 8 Selected Y: 4
+LEFT Selected: 201 X: 8 Selected Y: 4
+LEFT Selected: 201 X: 8 Selected Y: 4
+LEFT Selected: 201 X: 8 Selected Y: 4
+LEFT Selected: 201 X: 8 Selected Y: 4
+LEFT Selected: 201 X: 8 Selected Y: 4
+LEFT Selected: 201 X: 8 Selected Y: 4
+LEFT Selected: 201 X: 8 Selected Y: 4
+LEFT Selected: 201 X: 8 Selected Y: 5
+LEFT Selected: 201 X: 8 Selected Y: 5
+LEFT Selected: 201 X: 8 Selected Y: 5
+FPS: 178 Updates: 60
+LEFT Selected: 201 X: 8 Selected Y: 5
+LEFT Selected: 201 X: 8 Selected Y: 5
+LEFT Selected: 201 X: 8 Selected Y: 5
+LEFT Selected: 201 X: 8 Selected Y: 5
+LEFT Selected: 201 X: 8 Selected Y: 5
+LEFT Selected: 201 X: 8 Selected Y: 5
+LEFT Selected: 201 X: 8 Selected Y: 5
+LEFT Selected: 201 X: 8 Selected Y: 5
+LEFT Selected: 201 X: 8 Selected Y: 5
+LEFT Selected: 201 X: 8 Selected Y: 5
+LEFT Selected: 201 X: 8 Selected Y: 5
+LEFT Selected: 201 X: 8 Selected Y: 5
+LEFT Selected: 201 X: 8 Selected Y: 5
+LEFT Selected: 201 X: 8 Selected Y: 5
+LEFT Selected: 201 X: 8 Selected Y: 6
+LEFT Selected: 201 X: 8 Selected Y: 6
+LEFT Selected: 201 X: 8 Selected Y: 6
+LEFT Selected: 201 X: 8 Selected Y: 6
+LEFT Selected: 201 X: 8 Selected Y: 6
+LEFT Selected: 201 X: 8 Selected Y: 6
+LEFT Selected: 201 X: 8 Selected Y: 6
+LEFT Selected: 201 X: 8 Selected Y: 6
+LEFT Selected: 201 X: 7 Selected Y: 6
+LEFT Selected: 201 X: 7 Selected Y: 6
+LEFT Selected: 201 X: 7 Selected Y: 6
+LEFT Selected: 201 X: 7 Selected Y: 6
+LEFT Selected: 201 X: 7 Selected Y: 6
+LEFT Selected: 201 X: 7 Selected Y: 6
+LEFT Selected: 201 X: 7 Selected Y: 6
+LEFT Selected: 201 X: 7 Selected Y: 6
+LEFT Selected: 201 X: 7 Selected Y: 6
+LEFT Selected: 201 X: 7 Selected Y: 6
+LEFT Selected: 201 X: 7 Selected Y: 6
+LEFT Selected: 201 X: 7 Selected Y: 7
+LEFT Selected: 201 X: 7 Selected Y: 7
+LEFT Selected: 201 X: 7 Selected Y: 7
+LEFT Selected: 201 X: 7 Selected Y: 7
+LEFT Selected: 201 X: 7 Selected Y: 7
+LEFT Selected: 201 X: 7 Selected Y: 7
+LEFT Selected: 201 X: 7 Selected Y: 7
+LEFT Selected: 201 X: 7 Selected Y: 7
+LEFT Selected: 201 X: 7 Selected Y: 7
+LEFT Selected: 201 X: 7 Selected Y: 7
+LEFT Selected: 201 X: 7 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 5 Selected Y: 7
+LEFT Selected: 201 X: 5 Selected Y: 7
+LEFT Selected: 201 X: 5 Selected Y: 7
+LEFT Selected: 201 X: 5 Selected Y: 7
+LEFT Selected: 201 X: 5 Selected Y: 7
+LEFT Selected: 201 X: 5 Selected Y: 7
+LEFT Selected: 201 X: 5 Selected Y: 7
+LEFT Selected: 201 X: 5 Selected Y: 7
+LEFT Selected: 201 X: 5 Selected Y: 7
+LEFT Selected: 201 X: 5 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 3 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 4 Selected Y: 7
+LEFT Selected: 201 X: 5 Selected Y: 7
+LEFT Selected: 201 X: 5 Selected Y: 7
+LEFT Selected: 201 X: 5 Selected Y: 7
+LEFT Selected: 201 X: 5 Selected Y: 7
+LEFT Selected: 201 X: 5 Selected Y: 7
+LEFT Selected: 201 X: 5 Selected Y: 7
+LEFT Selected: 201 X: 5 Selected Y: 7
+LEFT Selected: 201 X: 5 Selected Y: 7
+LEFT Selected: 201 X: 5 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 7 Selected Y: 7
+LEFT Selected: 201 X: 7 Selected Y: 7
+LEFT Selected: 201 X: 7 Selected Y: 7
+LEFT Selected: 201 X: 7 Selected Y: 7
+LEFT Selected: 201 X: 7 Selected Y: 7
+LEFT Selected: 201 X: 7 Selected Y: 7
+LEFT Selected: 201 X: 7 Selected Y: 7
+LEFT Selected: 201 X: 7 Selected Y: 7
+LEFT Selected: 201 X: 7 Selected Y: 7
+LEFT Selected: 201 X: 7 Selected Y: 7
+LEFT Selected: 201 X: 7 Selected Y: 7
+LEFT Selected: 201 X: 7 Selected Y: 7
+LEFT Selected: 201 X: 7 Selected Y: 7
+LEFT Selected: 201 X: 7 Selected Y: 7
+LEFT Selected: 201 X: 7 Selected Y: 7
+LEFT Selected: 201 X: 7 Selected Y: 7
+LEFT Selected: 201 X: 7 Selected Y: 7
+LEFT Selected: 201 X: 7 Selected Y: 7
+LEFT Selected: 201 X: 7 Selected Y: 7
+LEFT Selected: 201 X: 7 Selected Y: 7
+LEFT Selected: 201 X: 7 Selected Y: 7
+LEFT Selected: 201 X: 7 Selected Y: 7
+LEFT Selected: 201 X: 7 Selected Y: 7
+LEFT Selected: 201 X: 7 Selected Y: 7
+LEFT Selected: 201 X: 7 Selected Y: 7
+LEFT Selected: 201 X: 7 Selected Y: 7
+LEFT Selected: 201 X: 7 Selected Y: 7
+LEFT Selected: 201 X: 8 Selected Y: 7
+LEFT Selected: 201 X: 8 Selected Y: 7
+LEFT Selected: 201 X: 8 Selected Y: 7
+LEFT Selected: 201 X: 8 Selected Y: 7
+LEFT Selected: 201 X: 8 Selected Y: 7
+LEFT Selected: 201 X: 8 Selected Y: 7
+LEFT Selected: 201 X: 8 Selected Y: 7
+LEFT Selected: 201 X: 8 Selected Y: 7
+LEFT Selected: 201 X: 8 Selected Y: 7
+LEFT Selected: 201 X: 8 Selected Y: 7
+FPS: 182 Updates: 60
+LEFT Selected: 201 X: 8 Selected Y: 7
+LEFT Selected: 201 X: 8 Selected Y: 7
+LEFT Selected: 201 X: 8 Selected Y: 7
+LEFT Selected: 201 X: 7 Selected Y: 7
+LEFT Selected: 201 X: 7 Selected Y: 7
+LEFT Selected: 201 X: 7 Selected Y: 7
+LEFT Selected: 201 X: 7 Selected Y: 7
+LEFT Selected: 201 X: 7 Selected Y: 7
+LEFT Selected: 201 X: 7 Selected Y: 7
+LEFT Selected: 201 X: 7 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 5 Selected Y: 6
+LEFT Selected: 201 X: 5 Selected Y: 6
+LEFT Selected: 201 X: 5 Selected Y: 6
+LEFT Selected: 201 X: 5 Selected Y: 6
+LEFT Selected: 201 X: 5 Selected Y: 6
+LEFT Selected: 201 X: 5 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 6
+LEFT Selected: 201 X: 4 Selected Y: 5
+LEFT Selected: 201 X: 4 Selected Y: 5
+LEFT Selected: 201 X: 4 Selected Y: 5
+LEFT Selected: 201 X: 4 Selected Y: 5
+LEFT Selected: 201 X: 4 Selected Y: 5
+LEFT Selected: 201 X: 4 Selected Y: 5
+LEFT Selected: 201 X: 4 Selected Y: 5
+LEFT Selected: 201 X: 4 Selected Y: 5
+LEFT Selected: 201 X: 4 Selected Y: 5
+LEFT Selected: 201 X: 4 Selected Y: 5
+LEFT Selected: 201 X: 4 Selected Y: 5
+LEFT Selected: 201 X: 4 Selected Y: 5
+LEFT Selected: 201 X: 5 Selected Y: 5
+LEFT Selected: 201 X: 5 Selected Y: 5
+LEFT Selected: 201 X: 5 Selected Y: 5
+LEFT Selected: 201 X: 5 Selected Y: 5
+LEFT Selected: 201 X: 5 Selected Y: 5
+LEFT Selected: 201 X: 5 Selected Y: 5
+LEFT Selected: 201 X: 5 Selected Y: 5
+LEFT Selected: 201 X: 5 Selected Y: 5
+LEFT Selected: 201 X: 5 Selected Y: 5
+LEFT Selected: 201 X: 5 Selected Y: 5
+LEFT Selected: 201 X: 5 Selected Y: 5
+LEFT Selected: 201 X: 5 Selected Y: 5
+LEFT Selected: 201 X: 6 Selected Y: 5
+LEFT Selected: 201 X: 6 Selected Y: 5
+LEFT Selected: 201 X: 6 Selected Y: 5
+LEFT Selected: 201 X: 6 Selected Y: 5
+LEFT Selected: 201 X: 6 Selected Y: 5
+LEFT Selected: 201 X: 6 Selected Y: 5
+LEFT Selected: 201 X: 6 Selected Y: 5
+LEFT Selected: 201 X: 6 Selected Y: 5
+LEFT Selected: 201 X: 6 Selected Y: 5
+LEFT Selected: 201 X: 6 Selected Y: 5
+LEFT Selected: 201 X: 6 Selected Y: 5
+LEFT Selected: 201 X: 6 Selected Y: 5
+LEFT Selected: 201 X: 6 Selected Y: 5
+LEFT Selected: 201 X: 6 Selected Y: 5
+LEFT Selected: 201 X: 6 Selected Y: 5
+LEFT Selected: 201 X: 6 Selected Y: 5
+LEFT Selected: 201 X: 7 Selected Y: 5
+LEFT Selected: 201 X: 7 Selected Y: 5
+LEFT Selected: 201 X: 7 Selected Y: 5
+LEFT Selected: 201 X: 7 Selected Y: 5
+LEFT Selected: 201 X: 7 Selected Y: 5
+LEFT Selected: 201 X: 7 Selected Y: 5
+LEFT Selected: 201 X: 7 Selected Y: 5
+LEFT Selected: 201 X: 7 Selected Y: 5
+LEFT Selected: 201 X: 7 Selected Y: 5
+LEFT Selected: 201 X: 7 Selected Y: 5
+LEFT Selected: 201 X: 7 Selected Y: 5
+LEFT Selected: 201 X: 7 Selected Y: 5
+LEFT Selected: 201 X: 7 Selected Y: 6
+LEFT Selected: 201 X: 7 Selected Y: 6
+LEFT Selected: 201 X: 7 Selected Y: 6
+LEFT Selected: 201 X: 7 Selected Y: 6
+LEFT Selected: 201 X: 7 Selected Y: 6
+LEFT Selected: 201 X: 7 Selected Y: 6
+LEFT Selected: 201 X: 7 Selected Y: 6
+LEFT Selected: 201 X: 7 Selected Y: 6
+LEFT Selected: 201 X: 7 Selected Y: 6
+LEFT Selected: 201 X: 7 Selected Y: 6
+LEFT Selected: 201 X: 7 Selected Y: 6
+LEFT Selected: 201 X: 7 Selected Y: 6
+LEFT Selected: 201 X: 7 Selected Y: 6
+LEFT Selected: 201 X: 6 Selected Y: 6
+LEFT Selected: 201 X: 6 Selected Y: 6
+LEFT Selected: 201 X: 6 Selected Y: 6
+LEFT Selected: 201 X: 6 Selected Y: 6
+LEFT Selected: 201 X: 6 Selected Y: 6
+LEFT Selected: 201 X: 6 Selected Y: 6
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 6 Selected Y: 7
+LEFT Selected: 201 X: 5 Selected Y: 7
+LEFT Selected: 201 X: 5 Selected Y: 7
+LEFT Selected: 201 X: 5 Selected Y: 7
+LEFT Selected: 201 X: 5 Selected Y: 7
+LEFT Selected: 201 X: 5 Selected Y: 7
+LEFT Selected: 201 X: 5 Selected Y: 7
+LEFT Selected: 201 X: 5 Selected Y: 7
+LEFT Selected: 201 X: 5 Selected Y: 6
+LEFT Selected: 201 X: 5 Selected Y: 6
+LEFT Selected: 201 X: 5 Selected Y: 6
+LEFT Selected: 201 X: 5 Selected Y: 6
+LEFT Selected: 201 X: 5 Selected Y: 6
+LEFT Selected: 201 X: 5 Selected Y: 6
+LEFT Selected: 201 X: 5 Selected Y: 6
+LEFT Selected: 201 X: 6 Selected Y: 6
+LEFT Selected: 201 X: 6 Selected Y: 6
+LEFT Selected: 201 X: 6 Selected Y: 6
+LEFT Selected: 201 X: 6 Selected Y: 5
+LEFT Selected: 201 X: 6 Selected Y: 5
+LEFT Selected: 201 X: 6 Selected Y: 5
+LEFT Selected: 201 X: 6 Selected Y: 5
+LEFT Selected: 201 X: 6 Selected Y: 5
+LEFT Selected: 201 X: 6 Selected Y: 5
+LEFT Selected: 201 X: 6 Selected Y: 5
+LEFT Selected: 201 X: 7 Selected Y: 5
+LEFT Selected: 201 X: 7 Selected Y: 5
+LEFT Selected: 201 X: 7 Selected Y: 5
+LEFT Selected: 201 X: 7 Selected Y: 5
+LEFT Selected: 201 X: 7 Selected Y: 5
+LEFT Selected: 201 X: 7 Selected Y: 5
+LEFT Selected: 201 X: 7 Selected Y: 5
+LEFT Selected: 201 X: 6 Selected Y: 5
+LEFT Selected: 201 X: 6 Selected Y: 5
+LEFT Selected: 201 X: 6 Selected Y: 5
+LEFT Selected: 201 X: 6 Selected Y: 5
+LEFT Selected: 201 X: 6 Selected Y: 5
+LEFT Selected: 201 X: 6 Selected Y: 5
+FPS: 186 Updates: 60
+LEFT Selected: 201 X: 6 Selected Y: 5
+LEFT Selected: 201 X: 6 Selected Y: 5
+LEFT Selected: 201 X: 6 Selected Y: 5
+LEFT Selected: 201 X: 6 Selected Y: 5
+LEFT Selected: 201 X: 6 Selected Y: 5
+FPS: 206 Updates: 60
+FPS: 214 Updates: 60
+FPS: 218 Updates: 60
+LEFT Selected: 504 X: 2 Selected Y: 8
+LEFT Selected: 504 X: 2 Selected Y: 8
+LEFT Selected: 504 X: 2 Selected Y: 8
+LEFT Selected: 504 X: 2 Selected Y: 8
+LEFT Selected: 504 X: 3 Selected Y: 8
+LEFT Selected: 504 X: 3 Selected Y: 8
+LEFT Selected: 504 X: 3 Selected Y: 8
+LEFT Selected: 504 X: 3 Selected Y: 8
+LEFT Selected: 504 X: 3 Selected Y: 8
+LEFT Selected: 504 X: 3 Selected Y: 8
+LEFT Selected: 504 X: 3 Selected Y: 8
+LEFT Selected: 504 X: 3 Selected Y: 8
+LEFT Selected: 504 X: 3 Selected Y: 8
+LEFT Selected: 504 X: 3 Selected Y: 8
+LEFT Selected: 504 X: 3 Selected Y: 8
+LEFT Selected: 504 X: 3 Selected Y: 8
+LEFT Selected: 504 X: 3 Selected Y: 8
+LEFT Selected: 504 X: 3 Selected Y: 8
+LEFT Selected: 504 X: 3 Selected Y: 8
+LEFT Selected: 504 X: 3 Selected Y: 8
+LEFT Selected: 504 X: 3 Selected Y: 8
+LEFT Selected: 504 X: 4 Selected Y: 8
+LEFT Selected: 504 X: 4 Selected Y: 8
+LEFT Selected: 504 X: 4 Selected Y: 8
+LEFT Selected: 504 X: 4 Selected Y: 8
+LEFT Selected: 504 X: 4 Selected Y: 8
+LEFT Selected: 504 X: 4 Selected Y: 8
+LEFT Selected: 504 X: 4 Selected Y: 8
+LEFT Selected: 504 X: 4 Selected Y: 8
+LEFT Selected: 504 X: 4 Selected Y: 8
+LEFT Selected: 504 X: 4 Selected Y: 8
+LEFT Selected: 504 X: 5 Selected Y: 8
+LEFT Selected: 504 X: 5 Selected Y: 8
+LEFT Selected: 504 X: 5 Selected Y: 8
+LEFT Selected: 504 X: 5 Selected Y: 8
+FPS: 209 Updates: 60
+LEFT Selected: 504 X: 5 Selected Y: 8
+LEFT Selected: 504 X: 5 Selected Y: 8
+LEFT Selected: 504 X: 5 Selected Y: 8
+LEFT Selected: 504 X: 5 Selected Y: 8
+LEFT Selected: 504 X: 5 Selected Y: 8
+LEFT Selected: 504 X: 5 Selected Y: 8
+LEFT Selected: 504 X: 5 Selected Y: 8
+LEFT Selected: 504 X: 5 Selected Y: 8
+LEFT Selected: 504 X: 5 Selected Y: 8
+LEFT Selected: 504 X: 6 Selected Y: 8
+LEFT Selected: 504 X: 6 Selected Y: 8
+LEFT Selected: 504 X: 6 Selected Y: 8
+LEFT Selected: 504 X: 6 Selected Y: 8
+LEFT Selected: 504 X: 6 Selected Y: 8
+LEFT Selected: 504 X: 6 Selected Y: 8
+LEFT Selected: 504 X: 6 Selected Y: 8
+LEFT Selected: 504 X: 6 Selected Y: 8
+LEFT Selected: 504 X: 6 Selected Y: 8
+LEFT Selected: 504 X: 6 Selected Y: 8
+LEFT Selected: 504 X: 6 Selected Y: 8
+LEFT Selected: 504 X: 6 Selected Y: 8
+LEFT Selected: 504 X: 6 Selected Y: 8
+LEFT Selected: 504 X: 6 Selected Y: 8
+LEFT Selected: 504 X: 6 Selected Y: 8
+LEFT Selected: 504 X: 6 Selected Y: 8
+LEFT Selected: 504 X: 6 Selected Y: 8
+LEFT Selected: 504 X: 6 Selected Y: 8
+LEFT Selected: 504 X: 6 Selected Y: 8
+LEFT Selected: 504 X: 6 Selected Y: 8
+LEFT Selected: 504 X: 6 Selected Y: 8
+LEFT Selected: 504 X: 6 Selected Y: 8
+LEFT Selected: 504 X: 6 Selected Y: 8
+LEFT Selected: 504 X: 6 Selected Y: 8
+LEFT Selected: 504 X: 6 Selected Y: 8
+LEFT Selected: 504 X: 6 Selected Y: 8
+LEFT Selected: 504 X: 6 Selected Y: 8
+LEFT Selected: 504 X: 7 Selected Y: 8
+LEFT Selected: 504 X: 7 Selected Y: 8
+LEFT Selected: 504 X: 7 Selected Y: 8
+LEFT Selected: 504 X: 7 Selected Y: 8
+LEFT Selected: 504 X: 7 Selected Y: 8
+LEFT Selected: 504 X: 7 Selected Y: 8
+LEFT Selected: 504 X: 7 Selected Y: 8
+LEFT Selected: 504 X: 7 Selected Y: 8
+LEFT Selected: 504 X: 7 Selected Y: 8
+LEFT Selected: 504 X: 7 Selected Y: 8
+LEFT Selected: 504 X: 7 Selected Y: 8
+LEFT Selected: 504 X: 7 Selected Y: 8
+LEFT Selected: 504 X: 7 Selected Y: 8
+LEFT Selected: 504 X: 7 Selected Y: 8
+LEFT Selected: 504 X: 7 Selected Y: 8
+LEFT Selected: 504 X: 7 Selected Y: 8
+LEFT Selected: 504 X: 7 Selected Y: 8
+LEFT Selected: 504 X: 7 Selected Y: 8
+LEFT Selected: 504 X: 7 Selected Y: 8
+LEFT Selected: 504 X: 7 Selected Y: 8
+LEFT Selected: 504 X: 7 Selected Y: 8
+LEFT Selected: 504 X: 7 Selected Y: 8
+LEFT Selected: 504 X: 7 Selected Y: 8
+LEFT Selected: 504 X: 7 Selected Y: 8
+LEFT Selected: 504 X: 7 Selected Y: 8
+LEFT Selected: 504 X: 7 Selected Y: 8
+LEFT Selected: 504 X: 7 Selected Y: 8
+LEFT Selected: 504 X: 7 Selected Y: 8
+LEFT Selected: 504 X: 7 Selected Y: 8
+LEFT Selected: 504 X: 7 Selected Y: 8
+LEFT Selected: 504 X: 7 Selected Y: 8
+LEFT Selected: 504 X: 7 Selected Y: 8
+LEFT Selected: 504 X: 7 Selected Y: 8
+LEFT Selected: 504 X: 8 Selected Y: 8
+LEFT Selected: 504 X: 8 Selected Y: 8
+LEFT Selected: 504 X: 8 Selected Y: 8
+LEFT Selected: 504 X: 8 Selected Y: 8
+LEFT Selected: 504 X: 8 Selected Y: 8
+LEFT Selected: 504 X: 8 Selected Y: 8
+LEFT Selected: 504 X: 8 Selected Y: 8
+LEFT Selected: 504 X: 8 Selected Y: 8
+LEFT Selected: 504 X: 8 Selected Y: 8
+FPS: 202 Updates: 60
+FPS: 216 Updates: 60
+FPS: 214 Updates: 60
+FPS: 220 Updates: 60
+FPS: 219 Updates: 60
+FPS: 217 Updates: 60
+LEFT Selected: 503 X: 1 Selected Y: 8
+FPS: 216 Updates: 60
+FPS: 209 Updates: 60
+LEFT Selected: 505 X: 9 Selected Y: 8
+FPS: 213 Updates: 60
+FPS: 214 Updates: 60
+FPS: 216 Updates: 60
+FPS: 213 Updates: 60
+LEFT Selected: 202 X: 9 Selected Y: 7
+LEFT Selected: 202 X: 9 Selected Y: 7
+LEFT Selected: 202 X: 9 Selected Y: 7
+LEFT Selected: 202 X: 9 Selected Y: 7
+LEFT Selected: 202 X: 9 Selected Y: 7
+LEFT Selected: 202 X: 9 Selected Y: 7
+LEFT Selected: 202 X: 9 Selected Y: 7
+LEFT Selected: 202 X: 9 Selected Y: 7
+LEFT Selected: 202 X: 9 Selected Y: 7
+LEFT Selected: 202 X: 9 Selected Y: 7
+LEFT Selected: 202 X: 9 Selected Y: 7
+LEFT Selected: 202 X: 9 Selected Y: 7
+LEFT Selected: 202 X: 9 Selected Y: 7
+LEFT Selected: 202 X: 9 Selected Y: 7
+LEFT Selected: 202 X: 9 Selected Y: 6
+LEFT Selected: 202 X: 9 Selected Y: 6
+LEFT Selected: 202 X: 9 Selected Y: 6
+LEFT Selected: 202 X: 9 Selected Y: 6
+LEFT Selected: 202 X: 9 Selected Y: 6
+LEFT Selected: 202 X: 9 Selected Y: 6
+LEFT Selected: 202 X: 9 Selected Y: 6
+LEFT Selected: 202 X: 9 Selected Y: 6
+LEFT Selected: 202 X: 9 Selected Y: 6
+LEFT Selected: 202 X: 9 Selected Y: 6
+LEFT Selected: 202 X: 9 Selected Y: 6
+LEFT Selected: 202 X: 9 Selected Y: 6
+LEFT Selected: 202 X: 9 Selected Y: 6
+LEFT Selected: 202 X: 9 Selected Y: 6
+LEFT Selected: 202 X: 9 Selected Y: 6
+LEFT Selected: 202 X: 9 Selected Y: 6
+LEFT Selected: 202 X: 9 Selected Y: 6
+LEFT Selected: 202 X: 9 Selected Y: 6
+LEFT Selected: 202 X: 9 Selected Y: 6
+LEFT Selected: 202 X: 9 Selected Y: 6
+LEFT Selected: 202 X: 9 Selected Y: 6
+LEFT Selected: 202 X: 9 Selected Y: 6
+LEFT Selected: 202 X: 9 Selected Y: 6
+LEFT Selected: 202 X: 9 Selected Y: 6
+LEFT Selected: 202 X: 9 Selected Y: 6
+LEFT Selected: 202 X: 9 Selected Y: 6
+LEFT Selected: 202 X: 9 Selected Y: 5
+LEFT Selected: 202 X: 9 Selected Y: 5
+LEFT Selected: 202 X: 9 Selected Y: 5
+LEFT Selected: 202 X: 9 Selected Y: 5
+LEFT Selected: 202 X: 9 Selected Y: 5
+LEFT Selected: 202 X: 9 Selected Y: 5
+LEFT Selected: 202 X: 9 Selected Y: 5
+LEFT Selected: 202 X: 9 Selected Y: 5
+LEFT Selected: 202 X: 9 Selected Y: 5
+LEFT Selected: 202 X: 9 Selected Y: 5
+FPS: 205 Updates: 60
+LEFT Selected: 202 X: 9 Selected Y: 5
+LEFT Selected: 202 X: 9 Selected Y: 5
+LEFT Selected: 202 X: 9 Selected Y: 5
+LEFT Selected: 202 X: 9 Selected Y: 5
+LEFT Selected: 202 X: 9 Selected Y: 5
+LEFT Selected: 202 X: 9 Selected Y: 5
+LEFT Selected: 202 X: 9 Selected Y: 5
+LEFT Selected: 202 X: 9 Selected Y: 5
+LEFT Selected: 202 X: 9 Selected Y: 5
+LEFT Selected: 202 X: 9 Selected Y: 5
+LEFT Selected: 202 X: 9 Selected Y: 5
+LEFT Selected: 202 X: 9 Selected Y: 5
+LEFT Selected: 202 X: 9 Selected Y: 5
+LEFT Selected: 202 X: 9 Selected Y: 5
+LEFT Selected: 202 X: 9 Selected Y: 4
+LEFT Selected: 202 X: 9 Selected Y: 4
+LEFT Selected: 202 X: 9 Selected Y: 4
+LEFT Selected: 202 X: 9 Selected Y: 4
+LEFT Selected: 202 X: 9 Selected Y: 4
+LEFT Selected: 202 X: 9 Selected Y: 4
+LEFT Selected: 202 X: 9 Selected Y: 4
+LEFT Selected: 202 X: 9 Selected Y: 4
+LEFT Selected: 202 X: 9 Selected Y: 4
+LEFT Selected: 202 X: 9 Selected Y: 4
+LEFT Selected: 202 X: 9 Selected Y: 4
+LEFT Selected: 202 X: 9 Selected Y: 4
+LEFT Selected: 202 X: 9 Selected Y: 4
+LEFT Selected: 202 X: 9 Selected Y: 4
+LEFT Selected: 202 X: 9 Selected Y: 4
+LEFT Selected: 202 X: 9 Selected Y: 4
+LEFT Selected: 202 X: 9 Selected Y: 4
+LEFT Selected: 202 X: 9 Selected Y: 4
+LEFT Selected: 202 X: 9 Selected Y: 4
+LEFT Selected: 202 X: 9 Selected Y: 4
+LEFT Selected: 202 X: 9 Selected Y: 4
+LEFT Selected: 202 X: 9 Selected Y: 4
+LEFT Selected: 202 X: 9 Selected Y: 4
+LEFT Selected: 202 X: 9 Selected Y: 4
+LEFT Selected: 202 X: 9 Selected Y: 4
+LEFT Selected: 202 X: 9 Selected Y: 4
+LEFT Selected: 202 X: 9 Selected Y: 4
+LEFT Selected: 202 X: 9 Selected Y: 3
+LEFT Selected: 202 X: 9 Selected Y: 3
+LEFT Selected: 202 X: 9 Selected Y: 3
+LEFT Selected: 202 X: 9 Selected Y: 3
+LEFT Selected: 202 X: 9 Selected Y: 3
+LEFT Selected: 202 X: 9 Selected Y: 3
+LEFT Selected: 202 X: 9 Selected Y: 3
+LEFT Selected: 202 X: 9 Selected Y: 3
+LEFT Selected: 202 X: 9 Selected Y: 3
+LEFT Selected: 202 X: 9 Selected Y: 3
+LEFT Selected: 202 X: 9 Selected Y: 3
+LEFT Selected: 202 X: 9 Selected Y: 3
+LEFT Selected: 202 X: 9 Selected Y: 3
+LEFT Selected: 202 X: 9 Selected Y: 3
+LEFT Selected: 202 X: 9 Selected Y: 3
+LEFT Selected: 202 X: 9 Selected Y: 3
+LEFT Selected: 202 X: 9 Selected Y: 3
+LEFT Selected: 202 X: 9 Selected Y: 3
+LEFT Selected: 202 X: 9 Selected Y: 3
+LEFT Selected: 202 X: 9 Selected Y: 3
+LEFT Selected: 202 X: 9 Selected Y: 3
+LEFT Selected: 202 X: 9 Selected Y: 3
+LEFT Selected: 202 X: 9 Selected Y: 3
+LEFT Selected: 202 X: 9 Selected Y: 3
+LEFT Selected: 202 X: 9 Selected Y: 3
+LEFT Selected: 202 X: 9 Selected Y: 3
+LEFT Selected: 202 X: 9 Selected Y: 3
+LEFT Selected: 202 X: 9 Selected Y: 3
+LEFT Selected: 202 X: 9 Selected Y: 3
+LEFT Selected: 202 X: 9 Selected Y: 3
+LEFT Selected: 202 X: 9 Selected Y: 3
+LEFT Selected: 202 X: 9 Selected Y: 3
+LEFT Selected: 202 X: 9 Selected Y: 3
+LEFT Selected: 202 X: 9 Selected Y: 3
+LEFT Selected: 202 X: 9 Selected Y: 3
+LEFT Selected: 202 X: 9 Selected Y: 2
+LEFT Selected: 202 X: 9 Selected Y: 2
+LEFT Selected: 202 X: 9 Selected Y: 2
+LEFT Selected: 202 X: 9 Selected Y: 2
+LEFT Selected: 202 X: 9 Selected Y: 2
+LEFT Selected: 202 X: 9 Selected Y: 2
+LEFT Selected: 202 X: 9 Selected Y: 2
+LEFT Selected: 202 X: 9 Selected Y: 2
+LEFT Selected: 202 X: 9 Selected Y: 2
+LEFT Selected: 202 X: 9 Selected Y: 2
+LEFT Selected: 202 X: 9 Selected Y: 2
+LEFT Selected: 202 X: 9 Selected Y: 2
+LEFT Selected: 202 X: 9 Selected Y: 2
+LEFT Selected: 202 X: 9 Selected Y: 2
+LEFT Selected: 202 X: 9 Selected Y: 2
+LEFT Selected: 202 X: 9 Selected Y: 2
+FPS: 195 Updates: 60
+FPS: 217 Updates: 60
+LEFT Selected: 200 X: 1 Selected Y: 7
+LEFT Selected: 200 X: 1 Selected Y: 7
+LEFT Selected: 200 X: 1 Selected Y: 7
+LEFT Selected: 200 X: 1 Selected Y: 7
+LEFT Selected: 200 X: 1 Selected Y: 7
+LEFT Selected: 200 X: 1 Selected Y: 7
+LEFT Selected: 200 X: 1 Selected Y: 6
+LEFT Selected: 200 X: 1 Selected Y: 6
+LEFT Selected: 200 X: 1 Selected Y: 6
+LEFT Selected: 200 X: 1 Selected Y: 6
+LEFT Selected: 200 X: 1 Selected Y: 6
+LEFT Selected: 200 X: 1 Selected Y: 5
+LEFT Selected: 200 X: 1 Selected Y: 5
+LEFT Selected: 200 X: 1 Selected Y: 5
+LEFT Selected: 200 X: 1 Selected Y: 5
+LEFT Selected: 200 X: 1 Selected Y: 5
+LEFT Selected: 200 X: 1 Selected Y: 5
+LEFT Selected: 200 X: 1 Selected Y: 5
+LEFT Selected: 200 X: 1 Selected Y: 5
+LEFT Selected: 200 X: 1 Selected Y: 5
+LEFT Selected: 200 X: 1 Selected Y: 4
+LEFT Selected: 200 X: 1 Selected Y: 4
+LEFT Selected: 200 X: 1 Selected Y: 4
+LEFT Selected: 200 X: 1 Selected Y: 4
+LEFT Selected: 200 X: 1 Selected Y: 4
+LEFT Selected: 200 X: 1 Selected Y: 4
+LEFT Selected: 200 X: 1 Selected Y: 4
+LEFT Selected: 200 X: 1 Selected Y: 4
+LEFT Selected: 200 X: 1 Selected Y: 4
+LEFT Selected: 200 X: 1 Selected Y: 4
+LEFT Selected: 200 X: 1 Selected Y: 3
+LEFT Selected: 200 X: 1 Selected Y: 3
+LEFT Selected: 200 X: 1 Selected Y: 3
+LEFT Selected: 200 X: 1 Selected Y: 3
+LEFT Selected: 200 X: 1 Selected Y: 3
+LEFT Selected: 200 X: 1 Selected Y: 3
+LEFT Selected: 200 X: 1 Selected Y: 3
+LEFT Selected: 200 X: 1 Selected Y: 3
+LEFT Selected: 200 X: 1 Selected Y: 3
+LEFT Selected: 200 X: 1 Selected Y: 3
+LEFT Selected: 200 X: 1 Selected Y: 3
+LEFT Selected: 200 X: 1 Selected Y: 3
+LEFT Selected: 200 X: 1 Selected Y: 3
+LEFT Selected: 200 X: 1 Selected Y: 3
+LEFT Selected: 200 X: 1 Selected Y: 3
+LEFT Selected: 200 X: 1 Selected Y: 3
+LEFT Selected: 200 X: 1 Selected Y: 3
+LEFT Selected: 200 X: 2 Selected Y: 2
+LEFT Selected: 200 X: 2 Selected Y: 2
+LEFT Selected: 200 X: 2 Selected Y: 2
+LEFT Selected: 200 X: 2 Selected Y: 2
+LEFT Selected: 200 X: 2 Selected Y: 2
+LEFT Selected: 200 X: 2 Selected Y: 2
+LEFT Selected: 200 X: 2 Selected Y: 2
+LEFT Selected: 200 X: 2 Selected Y: 2
+LEFT Selected: 200 X: 2 Selected Y: 2
+LEFT Selected: 200 X: 2 Selected Y: 2
+FPS: 202 Updates: 60
+LEFT Selected: 200 X: 2 Selected Y: 2
+LEFT Selected: 200 X: 2 Selected Y: 2
+LEFT Selected: 200 X: 2 Selected Y: 2
+LEFT Selected: 200 X: 2 Selected Y: 2
+LEFT Selected: 200 X: 2 Selected Y: 2
+LEFT Selected: 200 X: 2 Selected Y: 2
+LEFT Selected: 200 X: 2 Selected Y: 2
+LEFT Selected: 200 X: 2 Selected Y: 2
+LEFT Selected: 200 X: 2 Selected Y: 2
+LEFT Selected: 200 X: 1 Selected Y: 2
+LEFT Selected: 200 X: 1 Selected Y: 2
+LEFT Selected: 200 X: 1 Selected Y: 2
+LEFT Selected: 200 X: 1 Selected Y: 2
+LEFT Selected: 200 X: 1 Selected Y: 2
+LEFT Selected: 200 X: 1 Selected Y: 2
+LEFT Selected: 200 X: 1 Selected Y: 2
+LEFT Selected: 200 X: 1 Selected Y: 2
+LEFT Selected: 200 X: 1 Selected Y: 2
+LEFT Selected: 200 X: 1 Selected Y: 2
+LEFT Selected: 200 X: 1 Selected Y: 2
+LEFT Selected: 200 X: 1 Selected Y: 2
+FPS: 213 Updates: 60
+FPS: 217 Updates: 60
+LEFT Selected: 201 X: 2 Selected Y: 2
+FPS: 211 Updates: 60
+LEFT Selected: 100 X: 1 Selected Y: 1
+LEFT Selected: 100 X: 1 Selected Y: 1
+LEFT Selected: 100 X: 1 Selected Y: 1
+FPS: 215 Updates: 60
+FPS: 202 Updates: 60
+LEFT Selected: 101 X: 2 Selected Y: 1
+LEFT Selected: 101 X: 2 Selected Y: 1
+LEFT Selected: 101 X: 2 Selected Y: 1
+LEFT Selected: 101 X: 2 Selected Y: 1
+LEFT Selected: 101 X: 2 Selected Y: 1
+LEFT Selected: 101 X: 3 Selected Y: 1
+LEFT Selected: 101 X: 3 Selected Y: 1
+LEFT Selected: 101 X: 3 Selected Y: 1
+LEFT Selected: 101 X: 3 Selected Y: 1
+LEFT Selected: 101 X: 3 Selected Y: 1
+LEFT Selected: 101 X: 3 Selected Y: 1
+LEFT Selected: 101 X: 4 Selected Y: 1
+LEFT Selected: 101 X: 4 Selected Y: 1
+LEFT Selected: 101 X: 4 Selected Y: 1
+LEFT Selected: 101 X: 4 Selected Y: 1
+LEFT Selected: 101 X: 4 Selected Y: 1
+LEFT Selected: 101 X: 4 Selected Y: 1
+LEFT Selected: 101 X: 5 Selected Y: 1
+LEFT Selected: 101 X: 5 Selected Y: 1
+LEFT Selected: 101 X: 5 Selected Y: 1
+LEFT Selected: 101 X: 5 Selected Y: 1
+LEFT Selected: 101 X: 5 Selected Y: 1
+LEFT Selected: 101 X: 5 Selected Y: 1
+LEFT Selected: 101 X: 5 Selected Y: 1
+LEFT Selected: 101 X: 6 Selected Y: 1
+LEFT Selected: 101 X: 6 Selected Y: 1
+LEFT Selected: 101 X: 6 Selected Y: 1
+LEFT Selected: 101 X: 6 Selected Y: 1
+LEFT Selected: 101 X: 6 Selected Y: 1
+LEFT Selected: 101 X: 6 Selected Y: 1
+LEFT Selected: 101 X: 6 Selected Y: 1
+LEFT Selected: 101 X: 6 Selected Y: 1
+LEFT Selected: 101 X: 6 Selected Y: 1
+LEFT Selected: 101 X: 6 Selected Y: 1
+LEFT Selected: 101 X: 6 Selected Y: 1
+LEFT Selected: 101 X: 6 Selected Y: 1
+LEFT Selected: 101 X: 7 Selected Y: 1
+LEFT Selected: 101 X: 7 Selected Y: 1
+LEFT Selected: 101 X: 7 Selected Y: 1
+LEFT Selected: 101 X: 7 Selected Y: 1
+LEFT Selected: 101 X: 7 Selected Y: 1
+LEFT Selected: 101 X: 7 Selected Y: 1
+LEFT Selected: 101 X: 7 Selected Y: 1
+LEFT Selected: 101 X: 7 Selected Y: 1
+LEFT Selected: 101 X: 7 Selected Y: 1
+LEFT Selected: 101 X: 7 Selected Y: 1
+LEFT Selected: 101 X: 7 Selected Y: 1
+LEFT Selected: 101 X: 7 Selected Y: 1
+LEFT Selected: 101 X: 7 Selected Y: 1
+LEFT Selected: 101 X: 7 Selected Y: 1
+LEFT Selected: 101 X: 7 Selected Y: 1
+LEFT Selected: 101 X: 7 Selected Y: 1
+LEFT Selected: 101 X: 7 Selected Y: 1
+LEFT Selected: 101 X: 7 Selected Y: 1
+LEFT Selected: 101 X: 7 Selected Y: 1
+LEFT Selected: 101 X: 7 Selected Y: 1
+LEFT Selected: 101 X: 7 Selected Y: 1
+LEFT Selected: 101 X: 7 Selected Y: 1
+LEFT Selected: 101 X: 7 Selected Y: 1
+LEFT Selected: 101 X: 8 Selected Y: 1
+LEFT Selected: 101 X: 8 Selected Y: 1
+LEFT Selected: 101 X: 8 Selected Y: 1
+LEFT Selected: 101 X: 8 Selected Y: 1
+LEFT Selected: 101 X: 8 Selected Y: 1
+LEFT Selected: 101 X: 8 Selected Y: 1
+LEFT Selected: 101 X: 8 Selected Y: 1
+LEFT Selected: 101 X: 8 Selected Y: 1
+LEFT Selected: 101 X: 8 Selected Y: 1
+LEFT Selected: 101 X: 8 Selected Y: 1
+LEFT Selected: 101 X: 8 Selected Y: 1
+LEFT Selected: 101 X: 8 Selected Y: 1
+LEFT Selected: 101 X: 8 Selected Y: 1
+LEFT Selected: 101 X: 8 Selected Y: 1
+LEFT Selected: 101 X: 8 Selected Y: 1
+LEFT Selected: 101 X: 8 Selected Y: 1
+LEFT Selected: 101 X: 8 Selected Y: 1
+LEFT Selected: 101 X: 8 Selected Y: 1
+LEFT Selected: 101 X: 8 Selected Y: 1
+LEFT Selected: 101 X: 8 Selected Y: 1
+LEFT Selected: 101 X: 8 Selected Y: 1
+LEFT Selected: 101 X: 8 Selected Y: 1
+LEFT Selected: 101 X: 8 Selected Y: 1
+LEFT Selected: 101 X: 8 Selected Y: 1
+LEFT Selected: 101 X: 8 Selected Y: 1
+LEFT Selected: 101 X: 8 Selected Y: 1
+LEFT Selected: 101 X: 8 Selected Y: 1
+FPS: 185 Updates: 60
+LEFT Selected: 101 X: 8 Selected Y: 1
+LEFT Selected: 101 X: 8 Selected Y: 1
+LEFT Selected: 101 X: 8 Selected Y: 1
+LEFT Selected: 101 X: 8 Selected Y: 1
+LEFT Selected: 101 X: 8 Selected Y: 1
+LEFT Selected: 101 X: 8 Selected Y: 1
+LEFT Selected: 101 X: 8 Selected Y: 1
+LEFT Selected: 101 X: 8 Selected Y: 1
+LEFT Selected: 101 X: 9 Selected Y: 1
+LEFT Selected: 101 X: 9 Selected Y: 1
+LEFT Selected: 101 X: 9 Selected Y: 1
+FPS: 201 Updates: 60
+FPS: 204 Updates: 60
+LEFT Selected: 102 X: 9 Selected Y: 1
+FPS: 195 Updates: 60
+FPS: 197 Updates: 60
+FPS: 171 Updates: 60
+FPS: 158 Updates: 60
+FPS: 152 Updates: 60
+FPS: 154 Updates: 60
+FPS: 154 Updates: 60
+FPS: 156 Updates: 60
+LEFT Selected: 1300 X: 5 Selected Y: 5
+LEFT Selected: 1300 X: 5 Selected Y: 5
+FPS: 154 Updates: 60
+FPS: 142 Updates: 60
+LEFT Selected: 1301 X: 6 Selected Y: 5
+FPS: 132 Updates: 60
+FPS: 147 Updates: 60
+FPS: 154 Updates: 60
+LEFT Selected: 1200 X: 5 Selected Y: 4
+FPS: 151 Updates: 60
+FPS: 153 Updates: 60
+LEFT Selected: 1201 X: 6 Selected Y: 4
+FPS: 152 Updates: 60
+FPS: 141 Updates: 60
+FPS: 115 Updates: 60
+FPS: 115 Updates: 60
+LEFT Selected: 1302 X: 5 Selected Y: 3
+FPS: 111 Updates: 60
+FPS: 112 Updates: 60
+LEFT Selected: 1303 X: 6 Selected Y: 3
+FPS: 112 Updates: 60
+FPS: 112 Updates: 60
+FPS: 111 Updates: 60
+LEFT Selected: 1203 X: 6 Selected Y: 2
+FPS: 108 Updates: 60
+FPS: 109 Updates: 60
+FPS: 107 Updates: 60
+LEFT Selected: 1202 X: 5 Selected Y: 2
+FPS: 107 Updates: 60
+FPS: 100 Updates: 60
+FPS: 85 Updates: 60
+FPS: 101 Updates: 60
+LEFT Selected: 701 X: 2 Selected Y: 5
+FPS: 101 Updates: 60
+FPS: 102 Updates: 60
+FPS: 99 Updates: 60
+FPS: 100 Updates: 60
+FPS: 99 Updates: 60
+FPS: 95 Updates: 60
+FPS: 95 Updates: 60
+LEFT Selected: 403 X: 2 Selected Y: 5
+FPS: 100 Updates: 60
+FPS: 99 Updates: 60
+FPS: 97 Updates: 60
+LEFT Selected: 404 X: 3 Selected Y: 5
+FPS: 96 Updates: 60
+FPS: 101 Updates: 60
+FPS: 101 Updates: 60
+LEFT Selected: 201 X: 3 Selected Y: 5
+LEFT Selected: 201 X: 2 Selected Y: 5
+FPS: 101 Updates: 60
+FPS: 108 Updates: 60
+FPS: 109 Updates: 60
+FPS: 108 Updates: 60
+FPS: 111 Updates: 60
+FPS: 111 Updates: 60
+FPS: 119 Updates: 60

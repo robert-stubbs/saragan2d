@@ -64,7 +64,8 @@ namespace Editor {
 
 				ImGui::SameLine();
 				if (ImGui::Button("Add")) {
-
+					Map* m = Engine::getWorld()->GetMap();
+					m->AddLayer();
 				}
 				ImGui::SameLine();
 				if (ImGui::Button("Remove")) {

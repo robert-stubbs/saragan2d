@@ -383,6 +383,8 @@ typedef struct
 		int width;
 		int height;
 		int sheet_id; // id of the atlas to use
+
+		int last_index;
 		//Includes indices showing what type of tile should be placed on each position in the grid.
 		std::vector<std::vector<GameEngine::SingleTile>> Tiles;
 	} TileLayer;

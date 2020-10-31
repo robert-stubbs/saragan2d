@@ -137,6 +137,115 @@ namespace GameEngine
 		}
 	}
 
+	int Map::AddLayer()
+	{
+		TileLayer t = TileLayer();
+		t.height = _definition.map_height;
+		t.width = _definition.map_width;
+		t.layer_index = (int)_definition._layers.size();
+		_definition.number_of_layers++;
+
+		t.name = "Layer " + std::to_string(t.layer_index);
+		t.sheet_id = 0;
+		t.Tiles = std::vector<std::vector<SingleTile>>();
+		t.last_index = 0;
+
+		for (int y = 0; y < _definition.map_height; y++)
+		{
+			t.Tiles.push_back(std::vector<SingleTile>());
+
+			std::vector<SingleTile>& row = t.Tiles[y];
+
+			for (int x = 0; x < _definition.map_width; x++)
+			{
+				SingleTile tile = SingleTile();
+				tile.id = t.last_index;
+				tile.tile_id = 0;
+				tile.tile_index_x = x;
+				tile.tile_index_y = y;
+
+				row.push_back(tile);
+				t.last_index++;
+			}
+		}
+
+		_definition._layers.push_back(t);
+
+		int x_pos = 0;
+		int y_pos = 0;
+
+		glm::vec4 color = glm::vec4(0.0f, 0.0f, 0.0f, 0.0f);
+		hover_color = glm::vec4(1.0f, 0.0f, 0.0f, 0.5f);
+		glm::vec2 min_text = { -99.0f,-99.0f };
+		glm::vec2 max_text = { -99.0f,-99.0f };
+
+		int texture_index = _definition._layers[t.layer_index].sheet_id;
+
+		TileAtlas& atlas = _definition._images[texture_index];
+
+		float image_width = (float)atlas.image_width;
+		float image_height = (float)atlas.image_height;
+		float image_tile_width = (float)atlas.tile_width;
+		float image_tile_height = (float)atlas.tile_height;
+		int number_of_cols = (int)((float)image_width / float(image_tile_width));
+		int number_of_rows = (int)((float)image_height / float(image_tile_height));
+
+		float ratio_x = (image_tile_width / image_width);
+		float ratio_y = (image_tile_height / image_height);
+
+		_quads.push_back(std::vector<std::vector<TextureQuad>>());
+
+		for (int y = 0; y < _definition.map_height; y++)
+		{
+			_quads[t.layer_index].push_back(std::vector<TextureQuad>());
+
+			std::vector<SingleTile>& row = _definition._layers[t.layer_index].Tiles[y];
+
+			for (int x = 0; x < _definition.map_width; x++)
+			{
+				SingleTile& tile = row[x];
+
+				color = glm::vec4(0.5f, 0.5f, 0.5f, 0.5f);
+				if (t.layer_index > 0) {
+					color = glm::vec4(1.0f, 1.0f, 1.0f, 0.0f);
+				}
+				min_text = { -99.0f,-99.0f };
+				max_text = { -99.0f,-99.0f };
+
+				if (texture_index > -1 && tile.tile_id > 0) {
+
+					tile.tile_index_x = (tile.tile_id % number_of_cols);
+					tile.tile_index_y = (tile.tile_id / number_of_rows);
+
+					color = glm::vec4(1.0f, 1.0f, 1.0f, 1.0f);
+					min_text.x = ratio_x * (float)tile.tile_index_x;
+					min_text.y = ratio_y * (float)tile.tile_index_y;
+
+					max_text.x = ratio_x * (float)(tile.tile_index_x + 1);
+					max_text.y = ratio_y * (float)(tile.tile_index_y + 1);
+				}
+
+				_quads[t.layer_index][y].push_back(TextureQuad());
+				_quads[t.layer_index][y][x].Init((float)x_pos, (float)y_pos, (float)_definition.quad_width, (float)_definition.quad_height, (float)t.layer_index, min_text, max_text, color);
+
+				x_pos += _definition.quad_width;
+
+			}
+			y_pos += _definition.quad_height;
+			x_pos = 0;
+		}
+
+		x_pos = 0;
+		y_pos = 0;
+
+		return t.layer_index;
+	}
+
+	void Map::RemoveLayer(int index)
+	{
+
+	}
+
 	void Map::Update(float dt)
 	{
 		if (!_loaded) {
@@ -307,13 +416,13 @@ namespace GameEngine
 	{
 		if (render_grid && !hover_loaded && HoverVAIO != 0) {
 
-			vert2D tleft = { {0.0f,0.0f,0.0f,1.0f},{-99.0f,-99.0f}, {hover_color.r, hover_color.g, hover_color.b, hover_color.a } };
+			vert2D tleft = { {0.0f,0.0f,-1.0f,1.0f},{-99.0f,-99.0f}, {hover_color.r, hover_color.g, hover_color.b, hover_color.a } };
 
-			vert2D tright = { {(float)_definition.quad_width,0.0f,0.0f,1.0f},{-99.0f,-99.0f}, {hover_color.r, hover_color.g, hover_color.b, hover_color.a } };
+			vert2D tright = { {(float)_definition.quad_width,0.0f,-1.0f,1.0f},{-99.0f,-99.0f}, {hover_color.r, hover_color.g, hover_color.b, hover_color.a } };
 
-			vert2D bright = { {(float)_definition.quad_width,(float)_definition.quad_height,0.0f,1.0f},{-99.0f,-99.0f}, {hover_color.r, hover_color.g, hover_color.b, hover_color.a } };
+			vert2D bright = { {(float)_definition.quad_width,(float)_definition.quad_height,-1.0f,1.0f},{-99.0f,-99.0f}, {hover_color.r, hover_color.g, hover_color.b, hover_color.a } };
 
-			vert2D bleft = { {0.0f,(float)_definition.quad_height,0.0f,1.0f},{-99.0f,-99.0f}, {hover_color.r, hover_color.g, hover_color.b, hover_color.a } };
+			vert2D bleft = { {0.0f,(float)_definition.quad_height,-1.0f,1.0f},{-99.0f,-99.0f}, {hover_color.r, hover_color.g, hover_color.b, hover_color.a } };
 
 			_hover_verts.push_back(tleft);
 			_hover_verts.push_back(tright);
@@ -440,7 +549,7 @@ namespace GameEngine
 			l.height = atoi(e->Attribute("height"));
 			l.sheet_id = atoi(e->Attribute("sheet_id"));
 
-			int index = 0;
+			l.last_index = 0;
 			l.Tiles = std::vector<std::vector<GameEngine::SingleTile>>();
 
 			// grab all the layer data
@@ -457,11 +566,11 @@ namespace GameEngine
 				for (std::string& t : row_strings)
 				{
 					SingleTile tile = SingleTile();
-					tile.id = index;
+					tile.id = l.last_index;
 					tile.tile_id = atoi(t.c_str());
 
 					row.push_back(tile);
-					index++;
+					l.last_index++;
 				}
 
 				if (row.size() == l.width) {

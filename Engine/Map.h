@@ -63,6 +63,10 @@ namespace GameEngine
 			void ThreadLoad();
 			bool LoadMapDefinition();
 			void LoadTextureBuffers();
+			
+			int AddLayer();
+			void RemoveLayer(int index);
+			
 			void Update(float dt);
 			
 			void RenderBackground();
