@@ -78,7 +78,7 @@ namespace GameEngine
 			void UpdateHoverPosition(float x, float y);
 			void RenderHoverQuad();
 
-			void UpdateTileTexture(int x, int y, int layer, int texture_selection);
+			void UpdateTileTexture(int x, int y, int layer, int texture_selection, glm::vec2 min, glm::vec2 max);
 
 			void Cleanup();
 

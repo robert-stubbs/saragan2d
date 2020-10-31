@@ -241,7 +241,14 @@ namespace Editor {
 
 			if (LeftClickDown|| update_current_tile) {
 				LOG("LEFT Selected: "+std::to_string(selected_tile)+" X: " + std::to_string(WorldSelectedX) + " Selected Y: " + std::to_string(WorldSelectedY));
-				m->UpdateTileTexture(WorldSelectedX, WorldSelectedY, selected_layer, selected_tile);
+				m->UpdateTileTexture(
+					WorldSelectedX, 
+					WorldSelectedY, 
+					selected_layer, 
+					selected_tile, 
+					glm::vec2(selected_start_pos.x, selected_start_pos.y), 
+					glm::vec2(selected_end_pos.x, selected_end_pos.y)
+				);
 				update_current_tile = false;
 
 			}
