@@ -81083,3 +81083,235 @@ FPS: 257 Updates: 60
 FPS: 257 Updates: 60
 FPS: 256 Updates: 60
 FPS: 256 Updates: 60
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 457.09
+Initializing Engine
+Post Load
+Starting Render Loop
+FPS: 111 Updates: 33
+FPS: 208 Updates: 86
+FPS: 280 Updates: 60
+FPS: 279 Updates: 60
+FPS: 210 Updates: 60
+FPS: 212 Updates: 60
+FPS: 228 Updates: 60
+FPS: 229 Updates: 60
+FPS: 232 Updates: 60
+FPS: 228 Updates: 60
+FPS: 228 Updates: 60
+FPS: 230 Updates: 60
+FPS: 226 Updates: 60
+FPS: 223 Updates: 60
+FPS: 158 Updates: 60
+FPS: 159 Updates: 60
+FPS: 159 Updates: 60
+FPS: 159 Updates: 60
+FPS: 158 Updates: 60
+FPS: 121 Updates: 60
+FPS: 122 Updates: 60
+FPS: 121 Updates: 60
+FPS: 112 Updates: 60
+FPS: 121 Updates: 60
+FPS: 121 Updates: 60
+FPS: 124 Updates: 60
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 457.09
+Initializing Engine
+Post Load
+Starting Render Loop
+FPS: 27 Updates: 17
+FPS: 204 Updates: 102
+FPS: 281 Updates: 60
+FPS: 279 Updates: 60
+FPS: 281 Updates: 60
+FPS: 204 Updates: 60
+FPS: 229 Updates: 60
+FPS: 227 Updates: 60
+FPS: 229 Updates: 60
+FPS: 228 Updates: 60
+FPS: 229 Updates: 60
+FPS: 229 Updates: 60
+FPS: 205 Updates: 60
+FPS: 160 Updates: 60
+FPS: 162 Updates: 60
+FPS: 159 Updates: 60
+FPS: 161 Updates: 60
+FPS: 157 Updates: 60
+FPS: 160 Updates: 60
+FPS: 159 Updates: 60
+FPS: 159 Updates: 60
+FPS: 160 Updates: 60
+FPS: 161 Updates: 60
+FPS: 158 Updates: 60
+FPS: 158 Updates: 60
+FPS: 157 Updates: 60
+FPS: 133 Updates: 60
+FPS: 111 Updates: 60
+FPS: 112 Updates: 60
+FPS: 119 Updates: 60
+FPS: 120 Updates: 60
+FPS: 122 Updates: 60
+FPS: 122 Updates: 60
+FPS: 148 Updates: 60
+FPS: 159 Updates: 60
+FPS: 160 Updates: 60
+FPS: 152 Updates: 60
+FPS: 122 Updates: 60
+FPS: 123 Updates: 60
+FPS: 121 Updates: 60
+FPS: 122 Updates: 60
+FPS: 122 Updates: 60
+FPS: 122 Updates: 60
+FPS: 124 Updates: 60
+FPS: 125 Updates: 60
+FPS: 121 Updates: 60
+FPS: 121 Updates: 60
+FPS: 122 Updates: 60
+FPS: 123 Updates: 60
+FPS: 124 Updates: 60
+FPS: 122 Updates: 60
+FPS: 122 Updates: 60
+FPS: 120 Updates: 60
+FPS: 122 Updates: 60
+FPS: 123 Updates: 60
+FPS: 126 Updates: 60
+FPS: 159 Updates: 60
+FPS: 159 Updates: 60
+FPS: 160 Updates: 60
+FPS: 156 Updates: 60
+FPS: 160 Updates: 60
+FPS: 159 Updates: 60
+FPS: 161 Updates: 60
+FPS: 161 Updates: 60
+FPS: 163 Updates: 60
+FPS: 162 Updates: 60
+FPS: 160 Updates: 60
+FPS: 162 Updates: 60
+FPS: 160 Updates: 60
+FPS: 157 Updates: 60
+FPS: 161 Updates: 60
+FPS: 156 Updates: 60
+FPS: 159 Updates: 60
+FPS: 158 Updates: 60
+FPS: 162 Updates: 60
+FPS: 160 Updates: 60
+FPS: 165 Updates: 60
+FPS: 163 Updates: 60
+FPS: 163 Updates: 60
+FPS: 162 Updates: 60
+FPS: 164 Updates: 60
+FPS: 161 Updates: 60
+FPS: 161 Updates: 60
+FPS: 162 Updates: 60
+FPS: 159 Updates: 60
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 457.09
+Initializing Engine
+Post Load
+Starting Render Loop
+FPS: 49 Updates: 59
+FPS: 277 Updates: 60
+FPS: 273 Updates: 60
+FPS: 239 Updates: 60
+FPS: 234 Updates: 60
+FPS: 205 Updates: 60
+FPS: 227 Updates: 60
+FPS: 226 Updates: 60
+FPS: 224 Updates: 60
+FPS: 226 Updates: 60
+FPS: 226 Updates: 60
+FPS: 222 Updates: 60
+FPS: 222 Updates: 60
+FPS: 219 Updates: 60
+FPS: 210 Updates: 60
+FPS: 156 Updates: 60
+FPS: 160 Updates: 60
+FPS: 159 Updates: 60
+FPS: 159 Updates: 60
+FPS: 144 Updates: 60
+FPS: 156 Updates: 60
+FPS: 148 Updates: 60
+FPS: 145 Updates: 60
+FPS: 153 Updates: 60
+FPS: 151 Updates: 60
+FPS: 158 Updates: 60
+FPS: 143 Updates: 60
+FPS: 150 Updates: 60
+FPS: 158 Updates: 60
+FPS: 155 Updates: 60
+FPS: 156 Updates: 60
+FPS: 156 Updates: 60
+FPS: 156 Updates: 60
+FPS: 156 Updates: 60
+FPS: 154 Updates: 60
+FPS: 159 Updates: 60
+FPS: 155 Updates: 60
+FPS: 152 Updates: 60
+FPS: 152 Updates: 60
+FPS: 155 Updates: 60
+FPS: 155 Updates: 60
+FPS: 157 Updates: 60
+FPS: 160 Updates: 60
+FPS: 160 Updates: 60
+FPS: 157 Updates: 60
+FPS: 159 Updates: 60
+FPS: 158 Updates: 60
+FPS: 159 Updates: 60
+FPS: 158 Updates: 60
+FPS: 157 Updates: 60
+FPS: 157 Updates: 60
+FPS: 158 Updates: 60
+Loading Ini File
+Setting Platform: GLFW
+Setting Renderer:OpenGL
+Setting Asset Directory: C:/Assets/
+Pre-Initializing Engine
+4.6.0 NVIDIA 457.09
+Initializing Engine
+Post Load
+Starting Render Loop
+FPS: 112 Updates: 33
+FPS: 249 Updates: 86
+FPS: 276 Updates: 60
+FPS: 245 Updates: 60
+FPS: 241 Updates: 60
+FPS: 216 Updates: 60
+FPS: 234 Updates: 60
+FPS: 233 Updates: 60
+FPS: 230 Updates: 60
+FPS: 214 Updates: 60
+FPS: 235 Updates: 60
+FPS: 175 Updates: 60
+FPS: 162 Updates: 60
+FPS: 158 Updates: 60
+FPS: 150 Updates: 60
+FPS: 162 Updates: 60
+FPS: 164 Updates: 60
+FPS: 164 Updates: 60
+FPS: 164 Updates: 60
+FPS: 153 Updates: 60
+FPS: 123 Updates: 60
+FPS: 125 Updates: 60
+FPS: 124 Updates: 60
+FPS: 125 Updates: 60
+FPS: 141 Updates: 60
+FPS: 164 Updates: 60
+FPS: 176 Updates: 60
+FPS: 212 Updates: 60
+FPS: 163 Updates: 60
+FPS: 162 Updates: 60
+FPS: 162 Updates: 60
+FPS: 159 Updates: 60
+FPS: 162 Updates: 60

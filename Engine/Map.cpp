@@ -243,6 +243,20 @@ namespace GameEngine
 
 	void Map::RemoveLayer(int index)
 	{
+		if (index >= 0 && index < _definition._layers.size()) {
+			// remove layer in definition
+			// remove quads in quad array
+			_definition._layers[index].Tiles.clear();
+			_definition._layers.erase(_definition._layers.begin() + index);
+
+			for (int i = 0; i < _definition._layers.size(); i++)
+			{
+				_definition._layers[i].layer_index = i;
+			}
+			_quads[index].clear();
+			_quads.erase(_quads.begin() + index);
+			_definition.number_of_layers = (int)_definition._layers.size();
+		}
 
 	}
 

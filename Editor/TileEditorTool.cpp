@@ -69,6 +69,9 @@ namespace Editor {
 				}
 				ImGui::SameLine();
 				if (ImGui::Button("Remove")) {
+					Map* m = Engine::getWorld()->GetMap();
+					m->RemoveLayer(selected_layer);
+					selected_layer = 0;
 
 				}
 				if (ImGui::ListBoxHeader("", ImVec2(viewportPanelSize.x - 20, 150)))
@@ -239,6 +242,13 @@ namespace Editor {
 		if (Engine::get().EditorFocusViewport)
 		{
 			int selected_tile = selected_x + (selected_y * d->map_width);
+
+			if (LeftClickDown && Input::Get().IsMouseButtonReleased(0)) {
+				LeftClickDown = false;
+			}
+			if (RightClickDown && Input::Get().IsMouseButtonReleased(1)) {
+				RightClickDown = false;
+			}
 
 			if (LeftClickDown|| update_current_tile_x) {
 				m->UpdateTileTexture(

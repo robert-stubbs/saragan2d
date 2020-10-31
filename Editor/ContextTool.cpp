@@ -42,7 +42,7 @@ namespace Editor {
 
 				ImGui::Image(reinterpret_cast<void*>(Engine::get().FBOTexture), ImVec2(_parent->vp_width, _parent->vp_height), ImVec2{ 0, 1 }, ImVec2{ 1, 0 });
 
-				if (ImGui::IsWindowFocused()) {
+				if (ImGui::IsWindowFocused() || ImGui::IsWindowHovered()) {
 					Engine::get().EditorFocusViewport = true;
 				}
 				else {
