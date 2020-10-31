@@ -11,6 +11,7 @@ namespace Editor {
 	void EditorDockTool::Init()
 	{
 		_entity_manager_panel = Editor::EntityManagerTool();
+		_entity_manager_panel.SetParent(this);
 
 		_debug_window = Editor::DebugTool();
 		_debug_window.SetParent(this);

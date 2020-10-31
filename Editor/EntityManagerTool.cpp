@@ -4,6 +4,7 @@
 #include "GUI.h"
 #include "Engine.h"
 #include "EntityManager.h"
+#include "EditorDockTool.h"
 #include <imgui_internal.h>
 
 using namespace GameEngine;
@@ -16,6 +17,11 @@ namespace Editor {
 		if (GUI::GetGUI().HasInstance()) {
 			// TODO Tool to manage Entities in World Map (empty until World Map is Loaded)
 			GUI::Get().Begin("Entity Manager");
+
+				if (ImGui::IsWindowFocused() && _parent != nullptr) {
+					((EditorDockTool*)_parent)->_current_tool = this;
+					((EditorDockTool*)_parent)->has_current_tool = true;
+				}
 
 				ImGui::TextUnformatted("Entity Manager Area Test");
 
