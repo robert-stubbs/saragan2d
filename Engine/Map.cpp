@@ -263,6 +263,17 @@ namespace GameEngine
 
 	}
 
+	void Map::SwapLayer(int from, int to)
+	{
+		if (from < _quads.size() && to < _quads.size() && from >= 0 && to >= 0) {
+			std::swap(_quads[from], _quads[to]);
+			std::swap(_definition._layers[from], _definition._layers[to]);
+			_definition._layers[to].layer_index = to;
+			_definition._layers[from].layer_index = from;
+		}
+
+	}
+
 	void Map::Update(float dt)
 	{
 		if (!_loaded) {

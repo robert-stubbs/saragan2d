@@ -74,12 +74,30 @@ namespace Editor {
 					selected_layer = 0;
 
 				}
+
+				ImGui::SameLine();
+				if (ImGui::Button("Up")) {
+					Map* m = Engine::getWorld()->GetMap();
+					if (selected_layer > 0 && selected_layer < m->GetDefinition()->number_of_layers) {
+						m->SwapLayer(selected_layer, selected_layer - 1);
+						selected_layer--;
+					}
+				}
+				ImGui::SameLine();
+				if (ImGui::Button("Down")) {
+					Map* m = Engine::getWorld()->GetMap();					
+					if (selected_layer >= 0 && selected_layer < m->GetDefinition()->number_of_layers - 1) {
+						m->SwapLayer(selected_layer, selected_layer + 1);
+						selected_layer++;
+					}
+				}
+
 				if (ImGui::ListBoxHeader("", ImVec2(viewportPanelSize.x - 20, 150)))
 				{
 					std::string layername = "";
 					for (int i = 0; i < def->_layers.size(); i++)
 					{
-						layername = "Layer " + std::to_string(i);
+						layername = def->_layers[i].name;
 
 						if (selected_layer == i) {
 							layername += " - Selected";

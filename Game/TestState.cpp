@@ -22,10 +22,14 @@ TestState::~TestState()
 void TestState::Init()
 {
 	World* w = Engine::getWorld();
-	w->LoadMap("Test Map", "");
-	w->LoadMap("Test2 Map", "");
+	w->LoadMap("Test Level", "Maps/Test Level/");
 
-	w->SetMap("Test Map");
+	w->SetMap("Test Level");
+
+	Map* current_level = w->GetMap();
+	if (current_level != nullptr) {
+		current_level->SetRenderGrid(false);
+	}
 
 	p = new PlayerEnt();
 	Engine::EntityMgr()->RegisterEntity(p, true);

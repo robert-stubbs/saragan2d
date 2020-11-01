@@ -67,6 +67,7 @@ namespace GameEngine
 			
 			int AddLayer();
 			void RemoveLayer(int index);
+			void SwapLayer(int from, int to);
 			
 			void Update(float dt);
 			
