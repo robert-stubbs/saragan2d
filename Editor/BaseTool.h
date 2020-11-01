@@ -34,11 +34,14 @@ namespace Editor {
 			virtual void Init() {}
 			virtual void RenderUI() = 0;
 
+			virtual void RenderProperties() {};
+
 			virtual void MouseDown(int button) {};
 			virtual void MouseUp(int button) {};
 			virtual void MouseMove(float x, float y) {};
 			virtual void MouseMoveContext(float x, float y) {};
 			virtual void MouseScroll(float xoffset, float yoffset) {};
+
 	};
 }
 

@@ -60,6 +60,7 @@ namespace Editor {
 
 		virtual void LoadTexture();
 		virtual void RenderUI() override;
+		virtual void RenderProperties() override;
 
 		virtual void MouseDown(int button) override;
 		virtual void MouseUp(int button) override;

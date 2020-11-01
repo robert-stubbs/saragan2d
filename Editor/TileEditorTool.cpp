@@ -74,7 +74,6 @@ namespace Editor {
 					selected_layer = 0;
 
 				}
-
 				ImGui::SameLine();
 				if (ImGui::Button("Up")) {
 					Map* m = Engine::getWorld()->GetMap();
@@ -120,36 +119,7 @@ namespace Editor {
 
 			if (_t->TextureID) {
 
-				ImGui::PushFont(f);
-
-				ImGui::BeginChild("Tile Selection Details", ImVec2(viewportPanelSize.x-123, 120), true, flags);
-
-				std::string loc = "Location: " + std::to_string((int)selected_x) + "," + std::to_string((int)selected_y);
-				ImGui::Text(loc.c_str());
-
-				ImGui::Text("Texture Min:");
-				std::string min = "(" + std::to_string(selected_start_pos.x) + "," + std::to_string(selected_start_pos.y) + ")";
-				ImGui::Text(min.c_str());
-
-				ImGui::Text("Texture Max:");
-				std::string max = "(" + std::to_string(selected_end_pos.x) + "," + std::to_string(selected_end_pos.y) + ")";
-				ImGui::Text(max.c_str());
-
-				ImGui::EndChild();
-
-				ImGui::PopFont();
-			
-				ImGui::SameLine();
-
-				ImGui::PushStyleVar(ImGuiStyleVar_WindowPadding, ImVec2(5.0f, 5.0f));
-				ImGui::BeginChild("Tile Map Image", ImVec2(115, 120), true, flags);
-
-				ImGui::Image((ImTextureID)_t->TextureID, ImVec2(100, 100), selected_start_pos, selected_end_pos, bg_color, selected_tint_color);
-
-				ImGui::EndChild();
-				ImGui::PopStyleVar();
-
-				ImGui::BeginChild("colors", ImVec2(viewportPanelSize.x, viewportPanelSize.y - 330), true, flags);
+				ImGui::BeginChild("colors", ImVec2(viewportPanelSize.x, viewportPanelSize.y - 210), true, flags);
 				ImGui::PushStyleVar(ImGuiStyleVar_ItemSpacing, ImVec2(0.0f, 0.0f));
 
 				button_id = 0;
@@ -192,6 +162,84 @@ namespace Editor {
 
 			GUI::Get().End();
 		}
+	}
+
+	void TileEditorTool::RenderProperties() {
+
+		if (_t->TextureID) {
+			ImGuiIO& io = ImGui::GetIO();
+			auto f = io.Fonts->Fonts[5];
+			ImVec2 viewportPanelSize = ImGui::GetContentRegionAvail();
+
+			ImGui::PushFont(f);
+
+			ImGui::BeginChild("Tile Selection Details", ImVec2(viewportPanelSize.x - 123, 120), true, flags);
+
+			std::string loc = "Location: " + std::to_string((int)selected_x) + "," + std::to_string((int)selected_y);
+			ImGui::Text(loc.c_str());
+
+			ImGui::Text("Texture Min:");
+			std::string min = "(" + std::to_string(selected_start_pos.x) + "," + std::to_string(selected_start_pos.y) + ")";
+			ImGui::Text(min.c_str());
+
+			ImGui::Text("Texture Max:");
+			std::string max = "(" + std::to_string(selected_end_pos.x) + "," + std::to_string(selected_end_pos.y) + ")";
+			ImGui::Text(max.c_str());
+
+			ImGui::EndChild();
+
+			ImGui::PopFont();
+
+			ImGui::SameLine();
+
+			ImGui::PushStyleVar(ImGuiStyleVar_WindowPadding, ImVec2(5.0f, 5.0f));
+			ImGui::BeginChild("Tile Map Image", ImVec2(115, 120), true, flags);
+
+			ImGui::Image((ImTextureID)_t->TextureID, ImVec2(100, 100), selected_start_pos, selected_end_pos, bg_color, selected_tint_color);
+
+			ImGui::EndChild();
+			ImGui::PopStyleVar();
+		}
+
+		ImGui::Separator();
+
+		if (def != nullptr)
+		{
+			TileLayer* l = &def->_layers[selected_layer];
+
+			ImGui::Text("Layer Name"); ImGui::SameLine(); ImGui::InputFloat("", &l->name);
+
+
+
+		}
+		//ImGui::Text("Edit Viewport Focused"); ImGui::SameLine(); ImGui::Checkbox("", &Engine::get().EditorFocusViewport);
+
+		//ImGui::Separator();
+
+		//ImGui::Text("World X"); ImGui::SameLine(); ImGui::InputFloat("", &_parent->world_x);
+		//ImGui::Text("World Y"); ImGui::SameLine(); ImGui::InputFloat("", &_parent->world_y);
+
+		//ImGui::Separator();
+
+		//ImGui::Text("ImGui Mouse X"); ImGui::SameLine(); ImGui::InputFloat("", &_parent->gui_mouse_x);
+		//ImGui::Text("ImGui Mouse Y"); ImGui::SameLine(); ImGui::InputFloat("", &_parent->gui_mouse_y);
+
+		//ImGui::Separator();
+
+		//ImGui::Text("System Mouse X"); ImGui::SameLine(); ImGui::InputFloat("", &_parent->system_mouse_x);
+		//ImGui::Text("System Mouse Y"); ImGui::SameLine(); ImGui::InputFloat("", &_parent->system_mouse_y);
+
+		//ImGui::Separator();
+
+		//ImGui::Text("ImGui Window X"); ImGui::SameLine(); ImGui::InputFloat("", &_parent->window_x);
+		//ImGui::Text("ImGui Window Y"); ImGui::SameLine(); ImGui::InputFloat("", &_parent->window_y);
+
+		//ImGui::Separator();
+
+		//ImGui::Text("Framebuffer Width"); ImGui::SameLine(); ImGui::InputFloat("", &_parent->vp_width);
+		//ImGui::Text("Framebuffer Height"); ImGui::SameLine(); ImGui::InputFloat("", &_parent->vp_height);
+
+	
 	}
 
 	void TileEditorTool::MouseDown(int button)

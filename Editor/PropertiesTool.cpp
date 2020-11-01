@@ -14,32 +14,9 @@ namespace Editor {
 
 			GUI::Get().Begin("Properties");
 
-			ImGui::Text("World X"); ImGui::SameLine(); ImGui::InputFloat("", &_parent->world_x);
-			ImGui::Text("World Y"); ImGui::SameLine(); ImGui::InputFloat("", &_parent->world_y);
-
-			ImGui::Separator();
-
-			ImGui::Text("ImGui Mouse X"); ImGui::SameLine(); ImGui::InputFloat("", &_parent->gui_mouse_x);
-			ImGui::Text("ImGui Mouse Y"); ImGui::SameLine(); ImGui::InputFloat("", &_parent->gui_mouse_y);
-
-			ImGui::Separator();
-
-			ImGui::Text("System Mouse X"); ImGui::SameLine(); ImGui::InputFloat("", &_parent->system_mouse_x);
-			ImGui::Text("System Mouse Y"); ImGui::SameLine(); ImGui::InputFloat("", &_parent->system_mouse_y);
-
-			ImGui::Separator();
-
-			ImGui::Text("ImGui Window X"); ImGui::SameLine(); ImGui::InputFloat("", &_parent->window_x);
-			ImGui::Text("ImGui Window Y"); ImGui::SameLine(); ImGui::InputFloat("", &_parent->window_y);
-
-			ImGui::Separator();
-
-			ImGui::Text("Framebuffer Width"); ImGui::SameLine(); ImGui::InputFloat("", &_parent->vp_width);
-			ImGui::Text("Framebuffer Height"); ImGui::SameLine(); ImGui::InputFloat("", &_parent->vp_height);
-
-			ImGui::Separator();
-
-			ImGui::Text("Edit Viewport Focused"); ImGui::SameLine(); ImGui::Checkbox("", &Engine::get().EditorFocusViewport);
+			if (_parent != nullptr && _parent->_current_tool != nullptr) {
+				_parent->_current_tool->RenderProperties();
+			}
 
 			GUI::Get().End();
 		}
