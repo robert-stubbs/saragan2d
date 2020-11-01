@@ -51,8 +51,12 @@ namespace Editor {
 			GUI::Get().Begin("Tile Editor");		
 
 			if (ImGui::IsWindowFocused() && _parent != nullptr) {
+				has_focus = true;
 				((EditorDockTool*)_parent)->_current_tool = this;
 				((EditorDockTool*)_parent)->has_current_tool = true;
+			}
+			else {
+				has_focus = false;
 			}
 
 			ImVec2 viewportPanelSize = ImGui::GetContentRegionAvail();
@@ -207,8 +211,18 @@ namespace Editor {
 		{
 			TileLayer* l = &def->_layers[selected_layer];
 
-			ImGui::Text("Layer Name"); ImGui::SameLine(); ImGui::InputFloat("", &l->name);
+			ImGui::PushID("Layer Name");
+			ImGui::Text("Layer Name"); ImGui::SameLine(); ImGui::InputText("", &l->name);
+			ImGui::PopID();
 
+			std::string layer_index = "Layer Index: " + std::to_string(l->layer_index);
+			ImGui::Text(layer_index.c_str());
+
+
+			std::string layer_width = "Layer Width: " + std::to_string(l->width);
+			std::string layer_height = "Layer Height: " + std::to_string(l->height);
+			ImGui::Text(layer_width.c_str());
+			ImGui::Text(layer_height.c_str());
 
 
 		}

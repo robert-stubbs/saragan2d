@@ -125,7 +125,11 @@ namespace Editor {
 		{
 			_context_window.MouseDown(button);
 
-		} else if (_current_tool != nullptr && has_current_tool) {
+		}
+		else if (_properties_tool.has_focus) {
+			_properties_tool.MouseDown(button);
+		}
+		else if (_current_tool != nullptr && has_current_tool) {
 			_current_tool->MouseDown(button);
 		}
 	}
@@ -136,6 +140,9 @@ namespace Editor {
 		{
 			_context_window.MouseUp(button);
 
+		}
+		else if (_properties_tool.has_focus) {
+			_properties_tool.MouseUp(button);
 		} else if (_current_tool != nullptr && has_current_tool) {
 			_current_tool->MouseUp(button);
 		}
@@ -147,14 +154,21 @@ namespace Editor {
 		{
 			_context_window.MouseMove(x, y);
 
-		} else if (_current_tool != nullptr && has_current_tool) {
+		}
+		else if (_properties_tool.has_focus) {
+			_properties_tool.MouseMove(x,y);
+		}
+		else if (_current_tool != nullptr && has_current_tool) {
 			_current_tool->MouseMove(x,y);
 		}
 	}
 
 	void EditorDockTool::MouseScroll(float xoffset, float yoffset)
 	{
-		if (_current_tool != nullptr && has_current_tool) {
+		if (_properties_tool.has_focus) {
+			_properties_tool.MouseScroll(xoffset, yoffset);
+		}
+		else if (_current_tool != nullptr && has_current_tool) {
 			_current_tool->MouseScroll(xoffset, yoffset);
 		}
 	}

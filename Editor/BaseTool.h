@@ -14,6 +14,8 @@ namespace Editor {
 			BaseTool* _current_tool;
 			bool has_current_tool = false;
 
+			bool has_focus;
+
 			float window_x = 0.0f;
 			float window_y = 0.0f;
 			float vp_width = 0.0f;

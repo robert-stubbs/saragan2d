@@ -344,7 +344,9 @@ project "ImGui"
 		"ThirdParty/%{prj.name}/backends/imgui_impl_glfw.h",
 		"ThirdParty/%{prj.name}/backends/imgui_impl_glfw.cpp",
 		"ThirdParty/%{prj.name}/backends/imgui_impl_opengl3.h",
-		"ThirdParty/%{prj.name}/backends/imgui_impl_opengl3.cpp"
+		"ThirdParty/%{prj.name}/backends/imgui_impl_opengl3.cpp",
+		"ThirdParty/%{prj.name}/misc/cpp/imgui_stdlib.h",
+		"ThirdParty/%{prj.name}/misc/cpp/imgui_stdlib.cpp"
 	}
 	
 	includedirs
