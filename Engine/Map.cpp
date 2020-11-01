@@ -274,6 +274,14 @@ namespace GameEngine
 
 	}
 
+	void Map::AddTexture(TileAtlas a)
+	{
+		std::string asset_dir = Engine::get().asset_dir;
+		_textures.push_back(Texture());
+		_textures.back().LoadFile(asset_dir + a.image_path + a.name, TEXTURETYPES::SARAGAN_PNG);
+		_textures.back().GenerateAlphaBuffer();
+	}
+
 	void Map::Update(float dt)
 	{
 		if (!_loaded) {

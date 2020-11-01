@@ -68,6 +68,8 @@ namespace GameEngine
 			int AddLayer();
 			void RemoveLayer(int index);
 			void SwapLayer(int from, int to);
+
+			void AddTexture(TileAtlas a);
 			
 			void Update(float dt);
 			

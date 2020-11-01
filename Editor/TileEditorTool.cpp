@@ -238,6 +238,10 @@ namespace Editor {
 			ImGui::SameLine();
 			if (ImGui::Button("Add")) {
 				Map* m = Engine::getWorld()->GetMap();
+				// TODO - from selection
+				TileAtlas a = def->_images.at(0);
+				def->_images.push_back(a);
+				m->AddTexture(a);
 			}
 			ImGui::SameLine();
 			if (ImGui::Button("Remove")) {
