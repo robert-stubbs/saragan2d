@@ -10,33 +10,35 @@ namespace Editor {
 
 	void TileEditorTool::LoadTexture()
 	{
-		World* w = Engine::getWorld();
-		Map* m = w->GetMap();
+		if (current_image != selected_image) {
+			World* w = Engine::getWorld();
+			Map* m = w->GetMap();
 
-		if (m != nullptr) {
-			def = m->GetDefinition();
+			if (m != nullptr) {
+				def = m->GetDefinition();
 
-			std::vector<Texture>* textures = m->GetTextures();
+				std::vector<Texture>* textures = m->GetTextures();
 
-			if (textures->size()) {
-				_t = &textures->at(0);
+				if (textures->size()) {
+					_t = &textures->at(selected_image);
 
-				_hasTexture = (_t->TextureID > 0);
+					_hasTexture = (_t->TextureID > 0);
 
-				tile_width = (float)def->tile_width;
-				tile_height = (float)def->tile_height;
-				number_of_tiles_width = _t->width / (int)tile_width;
-				number_of_tiles_height = _t->height / (int)tile_height;
+					tile_width = (float)def->tile_width;
+					tile_height = (float)def->tile_height;
+					number_of_tiles_width = _t->width / (int)tile_width;
+					number_of_tiles_height = _t->height / (int)tile_height;
 
-				delta_w = (float)tile_width / (float)_t->width;
-				delta_h = (float)tile_height / (float)_t->height;
+					delta_w = (float)tile_width / (float)_t->width;
+					delta_h = (float)tile_height / (float)_t->height;
 
-				selected_start_pos = start_pos;
-				end_pos.x = delta_w * (float)(1);
-				end_pos.y = delta_h * (float)(1);
-				selected_end_pos.x = delta_w * (float)(1);
-				selected_end_pos.y = delta_h * (float)(1);
-				flags = ImGuiWindowFlags_HorizontalScrollbar;
+					selected_start_pos = start_pos;
+					end_pos.x = delta_w * (float)(1);
+					end_pos.y = delta_h * (float)(1);
+					selected_end_pos.x = delta_w * (float)(1);
+					selected_end_pos.y = delta_h * (float)(1);
+					flags = ImGuiWindowFlags_HorizontalScrollbar;
+				}
 			}
 		}
 	}
@@ -170,11 +172,11 @@ namespace Editor {
 
 	void TileEditorTool::RenderProperties() {
 
-		if (_t->TextureID) {
-			ImGuiIO& io = ImGui::GetIO();
-			auto f = io.Fonts->Fonts[5];
-			ImVec2 viewportPanelSize = ImGui::GetContentRegionAvail();
+		ImGuiIO& io = ImGui::GetIO();
+		auto f = io.Fonts->Fonts[5];
+		ImVec2 viewportPanelSize = ImGui::GetContentRegionAvail();
 
+		if (_t->TextureID) {
 			ImGui::PushFont(f);
 
 			ImGui::BeginChild("Tile Selection Details", ImVec2(viewportPanelSize.x - 123, 120), true, flags);
@@ -224,7 +226,56 @@ namespace Editor {
 			ImGui::Text(layer_width.c_str());
 			ImGui::Text(layer_height.c_str());
 
+			std::string tile_count = "Tile Count: " + std::to_string(l->width * l->height);
+			ImGui::Text(tile_count.c_str());
 
+
+			ImGui::PushFont(f);
+
+			ImGui::BeginChild("Map Images", ImVec2(viewportPanelSize.x, 200), true, flags);
+			ImGui::Text("Images:");
+
+			ImGui::SameLine();
+			if (ImGui::Button("Add")) {
+				Map* m = Engine::getWorld()->GetMap();
+			}
+			ImGui::SameLine();
+			if (ImGui::Button("Remove")) {
+				Map* m = Engine::getWorld()->GetMap();
+			}
+
+			if (ImGui::ListBoxHeader("", ImVec2(viewportPanelSize.x - 20, 150)))
+			{
+				std::string image_name = "";
+				for (int i = 0; i < def->_images.size(); i++)
+				{
+					image_name = def->_images[i].name;
+
+					ImGui::PushID(image_name.c_str());
+					if (selected_image == i) {
+						image_name += " - Selected";
+					}
+					if (ImGui::Selectable(image_name.c_str(), (selected_image == i)))
+					{
+						// handle selection
+						selected_image = i;
+						LoadTexture();											
+
+						selected_x = 0;
+						selected_y = 0;
+						selected_start_pos = ImVec2(0.0, 0.0);
+						selected_end_pos = ImVec2(0.0f + delta_w, 0.0f + delta_h);
+
+					}
+					ImGui::PopID();
+				}
+
+				ImGui::ListBoxFooter();
+			}
+
+			ImGui::EndChild();
+
+			ImGui::PopFont();
 		}
 		//ImGui::Text("Edit Viewport Focused"); ImGui::SameLine(); ImGui::Checkbox("", &Engine::get().EditorFocusViewport);
 
@@ -233,25 +284,6 @@ namespace Editor {
 		//ImGui::Text("World X"); ImGui::SameLine(); ImGui::InputFloat("", &_parent->world_x);
 		//ImGui::Text("World Y"); ImGui::SameLine(); ImGui::InputFloat("", &_parent->world_y);
 
-		//ImGui::Separator();
-
-		//ImGui::Text("ImGui Mouse X"); ImGui::SameLine(); ImGui::InputFloat("", &_parent->gui_mouse_x);
-		//ImGui::Text("ImGui Mouse Y"); ImGui::SameLine(); ImGui::InputFloat("", &_parent->gui_mouse_y);
-
-		//ImGui::Separator();
-
-		//ImGui::Text("System Mouse X"); ImGui::SameLine(); ImGui::InputFloat("", &_parent->system_mouse_x);
-		//ImGui::Text("System Mouse Y"); ImGui::SameLine(); ImGui::InputFloat("", &_parent->system_mouse_y);
-
-		//ImGui::Separator();
-
-		//ImGui::Text("ImGui Window X"); ImGui::SameLine(); ImGui::InputFloat("", &_parent->window_x);
-		//ImGui::Text("ImGui Window Y"); ImGui::SameLine(); ImGui::InputFloat("", &_parent->window_y);
-
-		//ImGui::Separator();
-
-		//ImGui::Text("Framebuffer Width"); ImGui::SameLine(); ImGui::InputFloat("", &_parent->vp_width);
-		//ImGui::Text("Framebuffer Height"); ImGui::SameLine(); ImGui::InputFloat("", &_parent->vp_height);
 
 	
 	}

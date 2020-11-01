@@ -17,6 +17,8 @@ namespace Editor {
 		bool _hasTexture = false;
 
 		int selected_layer = 0;
+		int selected_image = 0;
+		int current_image = -1;
 
 		GameEngine::TileMap* def;
 
