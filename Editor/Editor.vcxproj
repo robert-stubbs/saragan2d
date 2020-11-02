@@ -59,6 +59,7 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>EditorPCH.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>SARAGAN_WIN_32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>..\Engine;..\ThirdParty\glm\include;..\ThirdParty\glfw\include;..\ThirdParty\glew\include;..\ThirdParty\freetype2;..\ThirdParty\freetype-gl;..\ThirdParty\OpenAL\include;..\ThirdParty\ImGui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
@@ -75,6 +76,7 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>EditorPCH.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>SARAGAN_WIN_32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>..\Engine;..\ThirdParty\glm\include;..\ThirdParty\glfw\include;..\ThirdParty\glew\include;..\ThirdParty\freetype2;..\ThirdParty\freetype-gl;..\ThirdParty\OpenAL\include;..\ThirdParty\ImGui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>

@@ -103,7 +103,7 @@ namespace GameEngine
 					if (texture_index > -1 && tile.tile_id > 0) {
 
 						tile.tile_index_x = (tile.tile_id % number_of_cols);
-						tile.tile_index_y = floor(((float)tile.tile_id / (float)number_of_cols));
+						tile.tile_index_y = (int)floor(((float)tile.tile_id / (float)number_of_cols));
 
 						color = glm::vec4(1.0f, 1.0f, 1.0f, 1.0f);
 						min_text.x = (image_tile_width / image_width) * (float)tile.tile_index_x;
@@ -545,7 +545,8 @@ namespace GameEngine
 		_loaded = false;
 		_name = name;
 
-		std::string map_path = Engine::get().asset_dir + file_path + name + ".s_map";
+		std::string map_path = file_path + name + ".s_map";
+		//std::string map_path = Engine::get().asset_dir + file_path + name + ".s_map";
 
 		_path = map_path;
 
@@ -698,7 +699,9 @@ namespace GameEngine
 
 	void Map::SaveMapAsToFile(std::string file_path, std::string name)
 	{
-
+		std::string map_path = file_path + name + ".s_map";
+		_path = map_path;
+		SaveMapToFile();
 	}
 
 	std::vector<std::string> Map::split(std::string& str, std::string& delim)

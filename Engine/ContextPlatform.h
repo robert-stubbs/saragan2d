@@ -32,6 +32,9 @@ namespace GameEngine
 			virtual void SwapContextBuffers() = 0;
 
 			virtual double GetTime() = 0;
+
+			virtual std::string OpenFileDialog(const char* filter) { return std::string(); };
+			virtual std::string SaveFileDialog(const char* filter) { return std::string(); };
 	};
 }
 

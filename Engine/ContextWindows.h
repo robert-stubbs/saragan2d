@@ -42,6 +42,9 @@ namespace GameEngine
 			virtual double GetSystemTime();
 			virtual double GetSystemFrequency();
 
+			std::string OpenFileDialog(const char* filter) { return std::string(); };
+			std::string SaveFileDialog(const char* filter) { return std::string(); };
+
 			static LRESULT CALLBACK WndProcRouter(HWND hWnd, UINT Msg, WPARAM wParam, LPARAM lParam);
 			LRESULT CALLBACK WndProc(HWND hWnd, UINT Msg, WPARAM wParam, LPARAM lParam);
 	};

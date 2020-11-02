@@ -23,6 +23,9 @@ namespace GameEngine
 			virtual void SwapContextBuffers() override;
 			virtual double GetTime() override;
 
+			std::string OpenFileDialog(const char* filter) override;
+			std::string SaveFileDialog(const char* filter) override;
+
 			static void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 
 			static void static_key_callback(GLFWwindow* window, int key, int scancode, int action, int mods);

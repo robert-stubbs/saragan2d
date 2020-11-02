@@ -3,6 +3,7 @@
 
 #include "GUI.h"
 #include "Engine.h"
+#include <filesystem>
 
 using namespace GameEngine;
 
@@ -66,11 +67,27 @@ namespace Editor {
 				}
 
 				if (OpenMapModal) {
-					ImGui::OpenPopup("Open Map");
+					std::string selected = Engine::getContext().Get().OpenFileDialog("Saragan Map (*.s_map)\0*.s_map\0");
+		
+					std::filesystem::path p = std::filesystem::path(selected);
+					std::string file_name = p.stem().string();
+					std::string folder = p.parent_path().string() + "\\";
+
+					World* w = Engine::getWorld();
+					w->LoadMap(file_name, folder);
+					w->SetMap(file_name);
+					OpenMapModal = false;
 				}
 
 				if (SaveAsMapModal) {
-					ImGui::OpenPopup("SaveAs Map");
+					std::string selected = Engine::getContext().Get().SaveFileDialog("Saragan Map (*.s_map)\0*.s_map\0");
+		
+					std::filesystem::path p = std::filesystem::path(selected);
+					std::string file_name = p.stem().string();
+					std::string folder = p.parent_path().string() + "\\";
+					World* w = Engine::getWorld();
+					w->GetMap()->SaveMapAsToFile(folder, file_name);
+					SaveAsMapModal = false;
 				}
 
 				//################################################################################################
@@ -83,32 +100,6 @@ namespace Editor {
 
 					if (ImGui::Button("Close")) {
 						NewMapModal = false;
-						ImGui::CloseCurrentPopup();
-					}
-					ImGui::EndPopup();
-				}
-
-				if (ImGui::BeginPopupModal("Open Map"))
-				{
-					ImGui::Text("Lorem ipsum");
-					World* w = Engine::getWorld();
-					w->LoadMap("Test Level", "Maps/Test Level/");
-
-					if (ImGui::Button("Close")) {
-
-						w->SetMap("Test Level");
-						OpenMapModal = false;
-						ImGui::CloseCurrentPopup();
-					}
-					ImGui::EndPopup();
-				}
-
-				if (ImGui::BeginPopupModal("SaveAs Map"))
-				{
-					ImGui::Text("Lorem ipsum");
-
-					if (ImGui::Button("Close")) {
-						SaveAsMapModal = false;
 						ImGui::CloseCurrentPopup();
 					}
 					ImGui::EndPopup();

@@ -2,6 +2,15 @@
 #include "ContextGLFW.h"
 #include "Engine.h"
 
+#ifdef SARAGAN_WIN_32
+
+#include <commdlg.h>
+#include <GLFW/glfw3.h>
+#define GLFW_EXPOSE_NATIVE_WIN32
+#include <GLFW/glfw3native.h>
+
+#endif
+
 namespace GameEngine
 {
 	ContextGLFW::ContextGLFW() : ContextPlatform()
@@ -120,6 +129,48 @@ namespace GameEngine
 		return glfwGetTime();
 	}
 
+	std::string ContextGLFW::OpenFileDialog(const char* filter)
+	{
+		// TODO - work through this, see if there is a c++ 17 way of doing this
+		OPENFILENAMEA ofn;
+		CHAR szFile[260] = { 0 };
+		ZeroMemory(&ofn, sizeof(OPENFILENAME));
+		ofn.lStructSize = sizeof(OPENFILENAME);
+		ofn.hwndOwner = glfwGetWin32Window(window);
+		ofn.lpstrFile = szFile;
+		ofn.nMaxFile = sizeof(szFile);
+		ofn.lpstrFilter = filter;
+		ofn.nFilterIndex = 1;
+		ofn.Flags = OFN_PATHMUSTEXIST | OFN_FILEMUSTEXIST;// | OFN_NOCHANGEDIR;
+		
+		if (GetOpenFileNameA(&ofn) == TRUE) {
+			return ofn.lpstrFile;
+		}
+
+		return std::string();
+	}
+
+	std::string ContextGLFW::SaveFileDialog(const char* filter)
+	{
+		// TODO - work through this, see if there is a c++ 17 way of doing this
+		OPENFILENAMEA ofn;
+		CHAR szFile[260] = { 0 };
+		ZeroMemory(&ofn, sizeof(OPENFILENAME));
+		ofn.lStructSize = sizeof(OPENFILENAME);
+		ofn.hwndOwner = glfwGetWin32Window(window);
+		ofn.lpstrFile = szFile;
+		ofn.nMaxFile = sizeof(szFile);
+		ofn.lpstrFilter = filter;
+		ofn.nFilterIndex = 1;
+		ofn.Flags = OFN_PATHMUSTEXIST | OFN_FILEMUSTEXIST;// | OFN_NOCHANGEDIR;
+
+		if (GetSaveFileNameA(&ofn) == TRUE) {
+			return ofn.lpstrFile;
+		}
+
+		return std::string();
+	}
+
 	void ContextGLFW::framebuffer_size_callback(GLFWwindow* window, int width, int height)
 	{
 		Engine::getRenderer().ResizeWindow(width, height);
@@ -163,7 +214,7 @@ namespace GameEngine
 
 	void ContextGLFW::scroll_callback(GLFWwindow* window, double xoffset, double yoffset)
 	{
-		Engine::get().MouseScroll(xoffset, yoffset);
+		Engine::get().MouseScroll((float)xoffset, (float)yoffset);
 	}
 
 	void ContextGLFW::mouse_button_callback(GLFWwindow* window, int button, int action, int mods)
