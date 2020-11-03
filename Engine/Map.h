@@ -65,6 +65,9 @@ namespace GameEngine
 			bool LoadMapDefinition();
 			void LoadTextureBuffers();
 			
+			void NewMap(std::string name);
+			void SetMapDimension(int distance_to_load=50, int width=100, int height=100);
+
 			int AddLayer();
 			void RemoveLayer(int index);
 			void SwapLayer(int from, int to);

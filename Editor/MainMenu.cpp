@@ -12,6 +12,7 @@ namespace Editor {
 	void MainMenu::RenderUI()
 	{
 		if (GUI::GetGUI().HasInstance()) {
+			World* w = Engine::getWorld();
 
 			if (ImGui::BeginMainMenuBar()) {
 				if (ImGui::BeginMenu("File"))
@@ -29,7 +30,6 @@ namespace Editor {
 
 						//Do something
 						LOG("I CLICKED Save");
-						World* w = Engine::getWorld();
 						Map* m = w->GetMap();
 						if (m != nullptr) {
 							m->SaveMapToFile();
@@ -73,7 +73,6 @@ namespace Editor {
 					std::string file_name = p.stem().string();
 					std::string folder = p.parent_path().string() + "\\";
 
-					World* w = Engine::getWorld();
 					w->LoadMap(file_name, folder);
 					w->SetMap(file_name);
 					OpenMapModal = false;
@@ -85,7 +84,6 @@ namespace Editor {
 					std::filesystem::path p = std::filesystem::path(selected);
 					std::string file_name = p.stem().string();
 					std::string folder = p.parent_path().string() + "\\";
-					World* w = Engine::getWorld();
 					w->GetMap()->SaveMapAsToFile(folder, file_name);
 					SaveAsMapModal = false;
 				}
@@ -93,12 +91,38 @@ namespace Editor {
 				//################################################################################################
 				// Modals
 				//################################################################################################
-
-				if (ImGui::BeginPopupModal("New Map"))
+				ImGui::SetNextWindowPos(ImVec2(200, 100));
+			
+				if (ImGui::BeginPopupModal("New Map", &NewMapModal, 0))
 				{
-					ImGui::Text("Lorem ipsum");
+					ImGui::PushID("NewMapName");
+					ImGui::Text("Map Name"); ImGui::SameLine(); ImGui::InputText("", &_new_map_name);
+					ImGui::PopID();
+					ImGui::PushID("NewMapWidth");
+					ImGui::Text("Map Width"); ImGui::SameLine(); ImGui::InputInt("", &_new_map_width);
+					ImGui::PopID();
+					ImGui::PushID("NewMapHeight");
+					ImGui::Text("Map Height"); ImGui::SameLine(); ImGui::InputInt("", &_new_map_height);
+					ImGui::PopID();
+					ImGui::PushID("NewMapDistance");
+					ImGui::Text("Distance"); ImGui::SameLine(); ImGui::InputInt("", &_new_map_distance);
+					ImGui::PopID();
 
-					if (ImGui::Button("Close")) {
+					ImGui::Separator();
+					if (ImGui::Button("Cancel")) {
+						NewMapModal = false;
+						ImGui::CloseCurrentPopup();
+					}
+					ImGui::SameLine();
+					if (ImGui::Button("Create")) {
+						_map = new Map();
+						_map->NewMap(_new_map_name);
+						_map->SetMapDimension(50, _new_map_width, _new_map_height);
+						_map->SetRenderGrid(true);
+
+						w->AddMap(_new_map_name,_map);
+						w->SetMap(_new_map_name);
+
 						NewMapModal = false;
 						ImGui::CloseCurrentPopup();
 					}

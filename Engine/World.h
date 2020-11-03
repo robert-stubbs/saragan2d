@@ -19,6 +19,7 @@ namespace GameEngine
 			World();
 			~World();
 
+			void AddMap(std::string name, Map* m);
 			void LoadMap(std::string name, std::string map_path, bool render_grid = false);
 			void SetMap(std::string name);
 

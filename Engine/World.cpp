@@ -16,6 +16,14 @@ namespace GameEngine
 
 	}
 
+	void World::AddMap(std::string name, Map* m)
+	{
+		if (_maps.find(name) == _maps.end())
+		{
+			_maps[name] = m;
+		}
+	}
+
 	void World::LoadMap(std::string name, std::string map_path, bool render_grid)
 	{
 

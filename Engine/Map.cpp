@@ -140,6 +140,27 @@ namespace GameEngine
 		}
 	}
 
+	void Map::NewMap(std::string name)
+	{
+		_name = name;
+		_definition = TileMap();
+		_definition.version = 1.0;
+		_definition.number_of_layers = 0;
+		_definition.map_height = 100;
+		_definition.map_width = 100;
+		_definition.quad_height = 50;
+		_definition.quad_width = 50;
+		_definition.tile_height = 32;
+		_definition.tile_width = 32;
+	}
+
+	void Map::SetMapDimension(int distance_to_load, int width, int height)
+	{
+		distance_load = distance_to_load;
+		_definition.map_width = width;
+		_definition.map_height = height;
+	}
+
 	int Map::AddLayer()
 	{
 		TileLayer t = TileLayer();
@@ -354,7 +375,7 @@ namespace GameEngine
 		Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["viewMatrix"], Engine::get().current_cam->ViewMatrix, 1, false);
 		Engine::getRenderer().UniformMat4(Engine::getCurrentShader()["modelMatrix"], glm::mat4(1.0f), 1, false);
 
-		if (Engine::getRenderer().CurrentTextureID != _textures[0].TextureID)
+		if (_textures.size() > 0 && Engine::getRenderer().CurrentTextureID != _textures[0].TextureID)
 		{
 			if (!_textures[0].loaded) {
 				LoadTextureBuffers();
