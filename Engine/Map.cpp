@@ -152,6 +152,8 @@ namespace GameEngine
 		_definition.quad_width = 50;
 		_definition.tile_height = 32;
 		_definition.tile_width = 32;
+		_definition._layers = std::vector<TileLayer>();
+		_definition._images = std::vector<TileAtlas>();
 	}
 
 	void Map::SetMapDimension(int distance_to_load, int width, int height)
@@ -205,17 +207,20 @@ namespace GameEngine
 
 		int texture_index = _definition._layers[t.layer_index].sheet_id;
 
-		TileAtlas& atlas = _definition._images[texture_index];
+		if (_definition._images.size() > 0) {
 
-		float image_width = (float)atlas.image_width;
-		float image_height = (float)atlas.image_height;
-		float image_tile_width = (float)atlas.tile_width;
-		float image_tile_height = (float)atlas.tile_height;
-		int number_of_cols = (int)((float)image_width / float(image_tile_width));
-		int number_of_rows = (int)((float)image_height / float(image_tile_height));
+			TileAtlas& atlas = _definition._images[texture_index];
 
-		float ratio_x = (image_tile_width / image_width);
-		float ratio_y = (image_tile_height / image_height);
+			image_width = (float)atlas.image_width;
+			image_height = (float)atlas.image_height;
+			image_tile_width = (float)atlas.tile_width;
+			image_tile_height = (float)atlas.tile_height;
+			number_of_cols = (int)((float)image_width / float(image_tile_width));
+			number_of_rows = (int)((float)image_height / float(image_tile_height));
+
+			ratio_x = (image_tile_width / image_width);
+			ratio_y = (image_tile_height / image_height);
+		}
 
 		_quads.push_back(std::vector<std::vector<TextureQuad>>());
 
@@ -382,8 +387,9 @@ namespace GameEngine
 			}
 			Engine::getRenderer().CurrentTextureID = _textures[0].TextureID;
 		}
-
-		Engine::getRenderer().BindTextureBuffer(_textures[0].TextureID);
+		if (_textures.size() > 0) {
+			Engine::getRenderer().BindTextureBuffer(_textures[0].TextureID);
+		}
 
 		if (layer < _definition.number_of_layers) {
 			_batch.BeginBatch();

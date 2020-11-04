@@ -12,7 +12,7 @@ namespace Editor {
 	class TileEditorTool : public BaseTool
 	{
 	public:
-		GameEngine::Texture* _t;
+		GameEngine::Texture* _t = nullptr;
 		std::string _path;
 		bool _hasTexture = false;
 
@@ -22,7 +22,7 @@ namespace Editor {
 
 		GameEngine::TileMap* def;
 
-		ImGuiTreeNodeFlags flags;
+		ImGuiTreeNodeFlags flags = 0;
 
 		int button_id = 0;
 		float tile_width;

@@ -36,7 +36,7 @@ namespace GameEngine
 		unsigned int width, height;
 		bool loaded;
 		bool GeneratedBuffer;
-		GLuint TextureID;
+		GLuint TextureID = 0;
 
 		GLuint TextureType = GL_RGB;
 		int Bpp;

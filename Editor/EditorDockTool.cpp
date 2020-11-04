@@ -3,6 +3,7 @@
 
 #include "GUI.h"
 #include "Engine.h"
+#include "Map.h"
 
 using namespace GameEngine;
 
@@ -88,10 +89,15 @@ namespace Editor {
 			{
 				_entity_manager_panel.RenderUI();
 
-				if (!_tile_editor_tool._hasTexture) {
-					_tile_editor_tool.LoadTexture();
+				World* w = Engine::getWorld();
+				Map* m = w->GetMap();
+
+				if (m == nullptr) {
 				}
 				else {
+					if (!_tile_editor_tool._hasTexture) {
+						_tile_editor_tool.LoadTexture();
+					}
 					ImGui::SetNextWindowDockID(left_dock_id, ImGuiCond_Once);
 					_tile_editor_tool.RenderUI();
 				}

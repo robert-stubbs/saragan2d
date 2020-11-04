@@ -99,21 +99,23 @@ namespace Editor {
 
 				if (ImGui::ListBoxHeader("", ImVec2(viewportPanelSize.x - 20, 150)))
 				{
-					std::string layername = "";
-					for (int i = 0; i < def->_layers.size(); i++)
-					{
-						layername = def->_layers[i].name;
-
-						if (selected_layer == i) {
-							layername += " - Selected";
-						}
-						ImGui::PushID((int)i);
-						if (ImGui::Selectable(layername.c_str(), (selected_layer == i)))
+					if (def->_layers.size() > 0) {
+						std::string layername = "";
+						for (int i = 0; i < def->_layers.size(); i++)
 						{
-							// handle selection
-							selected_layer = i;
+							layername = def->_layers[i].name;
+
+							if (selected_layer == i) {
+								layername += " - Selected";
+							}
+							ImGui::PushID((int)i);
+							if (ImGui::Selectable(layername.c_str(), (selected_layer == i)))
+							{
+								// handle selection
+								selected_layer = i;
+							}
+							ImGui::PopID();
 						}
-						ImGui::PopID();
 					}
 
 					ImGui::ListBoxFooter();
@@ -123,7 +125,7 @@ namespace Editor {
 
 			ImGui::PopFont();
 
-			if (_t->TextureID) {
+			if (_t != nullptr && _t->TextureID) {
 
 				ImGui::BeginChild("colors", ImVec2(viewportPanelSize.x, viewportPanelSize.y - 210), true, flags);
 				ImGui::PushStyleVar(ImGuiStyleVar_ItemSpacing, ImVec2(0.0f, 0.0f));
@@ -176,7 +178,7 @@ namespace Editor {
 		auto f = io.Fonts->Fonts[5];
 		ImVec2 viewportPanelSize = ImGui::GetContentRegionAvail();
 
-		if (_t->TextureID) {
+		if (_t != nullptr && _t->TextureID) {
 			ImGui::PushFont(f);
 
 			ImGui::BeginChild("Tile Selection Details", ImVec2(viewportPanelSize.x - 123, 120), true, flags);
@@ -209,7 +211,7 @@ namespace Editor {
 
 		ImGui::Separator();
 
-		if (def != nullptr)
+		if (def != nullptr && def->_layers.size() > 0)
 		{
 			TileLayer* l = &def->_layers[selected_layer];
 
@@ -357,7 +359,7 @@ namespace Editor {
 				m->UpdateHoverPosition((float)WorldSelectedX * d->quad_width, (float)WorldSelectedY * d->quad_height);
 			}
 
-			if (Engine::get().EditorFocusViewport)
+			if (Engine::get().EditorFocusViewport && d->_images.size() > 0)
 			{		
 				int number_of_cols = (int)((float)d->_images.at(0).image_width / float(d->tile_width));
 				int selected_tile = (selected_x) + ((selected_y) * number_of_cols);

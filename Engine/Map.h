@@ -47,6 +47,17 @@ namespace GameEngine
 			int max_x;
 			int max_y;
 
+			// New Layer info
+			float image_width = 100.0f;
+			float image_height = 100.0f;
+			float image_tile_width = 32.0f;
+			float image_tile_height = 32.0f;
+			int number_of_cols = 10;
+			int number_of_rows = 10;
+
+			float ratio_x = 10.0f;
+			float ratio_y = 10.0f;
+
 		public:
 			Map();
 			~Map();

@@ -115,10 +115,12 @@ namespace Editor {
 					}
 					ImGui::SameLine();
 					if (ImGui::Button("Create")) {
-						_map = new Map();
-						_map->NewMap(_new_map_name);
-						_map->SetMapDimension(50, _new_map_width, _new_map_height);
-						_map->SetRenderGrid(true);
+						Map* m = new Map();
+						m->NewMap(_new_map_name);
+						m->SetMapDimension(50, _new_map_width, _new_map_height);
+						m->SetRenderGrid(true);
+
+						_map = m;
 
 						w->AddMap(_new_map_name,_map);
 						w->SetMap(_new_map_name);
