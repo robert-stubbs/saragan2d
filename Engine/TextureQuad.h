@@ -40,7 +40,7 @@ namespace GameEngine
 		glm::vec2 texture_min;
 		glm::vec2 texture_max;
 
-		unsigned int texture_id;
+		unsigned int texture_id = -1;
 
 		glm::vec4 colour;
 	};

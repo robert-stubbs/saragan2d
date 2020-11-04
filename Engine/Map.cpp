@@ -308,6 +308,42 @@ namespace GameEngine
 		_textures.back().GenerateAlphaBuffer();
 	}
 
+	void Map::RemoveTexture(int index)
+	{
+		// needs to loop through ALL the tiles in all the layers and clear them out
+		// then we can remove the texture
+
+		if (index >= 0 && index < _definition._images.size())
+		{
+			for (int l = 0; l < _definition._layers.size(); l++)
+			{
+				for (int y = 0; y < _definition._layers[l].Tiles.size(); y++)
+				{
+					for (int x = 0; x < _definition._layers[l].Tiles[y].size(); x++)
+					{
+						SingleTile& s = _definition._layers[l].Tiles[y][x];
+						s.tile_id = -1;
+					}
+				}
+			}
+
+			for (int l = 0; l < _quads.size(); l++)
+			{
+				for (int y = 0; y < _quads[l].size(); y++)
+				{
+					for (int x = 0; x < _quads[l][y].size(); x++)
+					{
+						_quads[l][y][x].texture_id = -1;
+						_quads[l][y][x].texture_min = glm::vec2(0.0f, 0.0f);
+						_quads[l][y][x].texture_max = glm::vec2(0.0f, 0.0f);
+					}
+				}
+			}
+
+			_definition._images.erase(_definition._images.begin() + index);
+		}
+	}
+
 	void Map::Update(float dt)
 	{
 		if (!_loaded) {

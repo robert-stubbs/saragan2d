@@ -248,6 +248,11 @@ namespace Editor {
 			ImGui::SameLine();
 			if (ImGui::Button("Remove")) {
 				Map* m = Engine::getWorld()->GetMap();
+				m->RemoveTexture(selected_image);
+				if (m->GetDefinition()->_images.size() > 0)
+				{
+					selected_image = 0;
+				}
 			}
 
 			if (ImGui::ListBoxHeader("", ImVec2(viewportPanelSize.x - 20, 150)))
