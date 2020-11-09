@@ -154,6 +154,7 @@ namespace GameEngine
 		_definition.tile_width = 32;
 		_definition._layers = std::vector<TileLayer>();
 		_definition._images = std::vector<TileAtlas>();
+		_batch.Init(1000);
 	}
 
 	void Map::SetMapDimension(int distance_to_load, int width, int height)
@@ -436,6 +437,7 @@ namespace GameEngine
 					_batch.AddQuad(_quads[layer][y][x]);
 				}
 			}
+
 			_batch.EndBatch();
 		}
 	}

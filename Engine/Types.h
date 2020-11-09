@@ -417,6 +417,8 @@ typedef struct
 		int number_of_layers;
 		float version;
 
+		int player_layer;
+
 	} TileMap;
 
 #pragma endregion TileMap
