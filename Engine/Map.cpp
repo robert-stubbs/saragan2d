@@ -389,17 +389,36 @@ namespace GameEngine
 
 	void Map::RenderBackground()
 	{
-		RenderLayer(0);
+		for (int i = 0; i < _definition.number_of_layers; i++)
+		{
+			// 0 is the background layer
+			if (_definition._layers[i].layer_type == 0) {
+				RenderLayer(i);
+			}
+		}
+
 	}
 
 	void Map::Render()
 	{
-		RenderLayer(1);
+		for (int i = 0; i < _definition.number_of_layers; i++)
+		{
+			// this is the layer just under the player
+			if (_definition._layers[i].layer_type == 1) {
+				RenderLayer(i);
+			}
+		}
 	}
 
 	void Map::RenderForeground()
 	{
-		RenderLayer(2);
+		for (int i = 0; i < _definition.number_of_layers; i++)
+		{
+			// any forground layers
+			if (_definition._layers[i].layer_type == 2) {
+				RenderLayer(i);
+			}
+		}
 		RenderGrid();
 		RenderHoverQuad();
 	}
@@ -633,6 +652,7 @@ namespace GameEngine
 		_definition.tile_height = atoi(map->Attribute("tileheight"));
 		_definition.quad_width = atoi(map->Attribute("quad_width"));
 		_definition.quad_height = atoi(map->Attribute("quad_height"));
+
 		_definition.number_of_layers = 0;
 
 		for (tinyxml2::XMLElement* e = map->FirstChildElement("sheets"); e != NULL; e = e->NextSiblingElement("sheets"))
@@ -661,7 +681,8 @@ namespace GameEngine
 			l.width = atoi(e->Attribute("width"));
 			l.height = atoi(e->Attribute("height"));
 			l.sheet_id = atoi(e->Attribute("sheet_id"));
-
+			l.layer_type = atoi(e->Attribute("layer_type"));
+				
 			l.last_index = 0;
 			l.Tiles = std::vector<std::vector<GameEngine::SingleTile>>();
 
@@ -710,7 +731,7 @@ namespace GameEngine
 		map->SetAttribute("tileheight", std::to_string(_definition.tile_height).c_str());
 		map->SetAttribute("quad_width", std::to_string(_definition.quad_width).c_str());
 		map->SetAttribute("quad_height", std::to_string(_definition.quad_height).c_str());
-
+		
 		tinyxml2::XMLElement* sheets = map->InsertNewChildElement("sheets");
 		// Images
 		for (int i = 0; i < _definition._images.size(); i++)
@@ -738,6 +759,7 @@ namespace GameEngine
 			layer->SetAttribute("width", std::to_string(l.width).c_str());
 			layer->SetAttribute("height", std::to_string(l.height).c_str());
 			layer->SetAttribute("sheet_id", std::to_string(l.sheet_id).c_str());
+			layer->SetAttribute("layer_type", std::to_string(l.layer_type).c_str());
 
 			tinyxml2::XMLElement* data = layer->InsertNewChildElement("data");
 

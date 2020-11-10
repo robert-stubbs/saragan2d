@@ -68,13 +68,16 @@ namespace Editor {
 
 				if (OpenMapModal) {
 					std::string selected = Engine::getContext().Get().OpenFileDialog("Saragan Map (*.s_map)\0*.s_map\0");
-		
-					std::filesystem::path p = std::filesystem::path(selected);
-					std::string file_name = p.stem().string();
-					std::string folder = p.parent_path().string() + "\\";
+			
+					if (selected.length() > 0) {
 
-					w->LoadMap(file_name, folder);
-					w->SetMap(file_name);
+						std::filesystem::path p = std::filesystem::path(selected);
+						std::string file_name = p.stem().string();
+						std::string folder = p.parent_path().string() + "\\";
+
+						w->LoadMap(file_name, folder);
+						w->SetMap(file_name);
+					}
 					OpenMapModal = false;
 				}
 

@@ -40,6 +40,7 @@ namespace GameEngine {
 		float  pos[4];
 		float  Text[2];
 		float  col[4];
+		short  TextIndex;
 	} vert2D;
 #pragma endregion Positions
 
@@ -379,6 +380,7 @@ typedef struct
 	typedef struct
 	{
 		int layer_index; // should match position in layers array
+		int layer_type;
 		std::string name;
 		int width;
 		int height;
@@ -417,7 +419,6 @@ typedef struct
 		int number_of_layers;
 		float version;
 
-		int player_layer;
 
 	} TileMap;
 

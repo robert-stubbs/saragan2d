@@ -17,6 +17,8 @@ namespace GameEngine
 			std::string _path;
 			TileMap _definition;
 
+
+
 			glm::vec4 hover_color;
 			glm::vec4 temp_color;
 

@@ -36,6 +36,7 @@ namespace GameEngine {
         s->bindings.push_back({ GameEngine::SHADER_TYPES::ATRIBLOCATION, "in_Position", 0, 4, false, sizeof(vert2D), (GLvoid*)offsetof(vert2D, pos) });
         s->bindings.push_back({ GameEngine::SHADER_TYPES::ATRIBLOCATION, "in_Texture", 1, 2, true, sizeof(vert2D), (GLvoid*)offsetof(vert2D, Text) });
         s->bindings.push_back({ GameEngine::SHADER_TYPES::ATRIBLOCATION, "in_Color", 2, 4, true, sizeof(vert2D), (GLvoid*)offsetof(vert2D, col) });
+        s->bindings.push_back({ GameEngine::SHADER_TYPES::ATRIBLOCATION, "in_TextureID", 3, 1, true, sizeof(vert2D), (GLvoid*)offsetof(vert2D, TextIndex) });
     }
 
     void Default2DShader::SetupUniformLocations()
