@@ -7,6 +7,10 @@ namespace GameEngine {
 
 	OpenGLRenderEngine::OpenGLRenderEngine()
 	{
+		for (int i = 0; i < MAX_TEXTURES; i++)
+		{
+			TextureArray[i] = -1;
+		}
 
 	}
 
@@ -317,6 +321,8 @@ namespace GameEngine {
 		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
 	}
 
+
+	// Textures
 	void OpenGLRenderEngine::GenerateTextureBuffer(unsigned int& TBO, int width, int height, void* data, COLOR_TYPE internalformat, COLOR_TYPE format, VALUE_TYPE type)
 	{
 		int t = GL_UNSIGNED_BYTE;
@@ -402,6 +408,9 @@ namespace GameEngine {
 		case TEXTURE_TARGET::ENGINE_TEXTURE_2D:
 			t = GL_TEXTURE_2D;
 			break;
+		case TEXTURE_TARGET::ENGINE_TEXTURE_2D_ARRAY:
+			t = GL_TEXTURE_2D_ARRAY;
+			break;
 		default:
 			break;
 		}
@@ -460,7 +469,127 @@ namespace GameEngine {
 	{
 		glBindTexture(GL_TEXTURE_2D, 0);
 	}
+	
+	void OpenGLRenderEngine::GenerateTextureArrayBuffer(unsigned int& TBO, int width, int height, int number_of_textures, COLOR_TYPE internalformat, COLOR_TYPE format, VALUE_TYPE type)
+	{
+		int t = GL_UNSIGNED_BYTE;
+		switch (type)
+		{
+		case GameEngine::VALUE_TYPE::UNSIGNED_BYTE:
+			t = GL_UNSIGNED_BYTE;
+			break;
+		case GameEngine::VALUE_TYPE::UNSIGNED_SHORT:
+			t = GL_UNSIGNED_SHORT;
+			break;
+		case GameEngine::VALUE_TYPE::UNSIGNED_INT:
+			t = GL_UNSIGNED_INT;
+			break;
+		default:
+			break;
+		}
 
+		int iformat = GL_RGB;
+
+		switch (internalformat)
+		{
+		case GameEngine::COLOR_TYPE::ENGINE_RED:
+			iformat = GL_RED;
+			break;
+		case GameEngine::COLOR_TYPE::ENGINE_GREEN:
+			iformat = GL_GREEN;
+			break;
+		case GameEngine::COLOR_TYPE::ENGINE_BLUE:
+			iformat = GL_BLUE;
+			break;
+		case GameEngine::COLOR_TYPE::ENGINE_RGB:
+			iformat = GL_RGB;
+			break;
+		case GameEngine::COLOR_TYPE::ENGINE_RGBA:
+			iformat = GL_RGBA;
+			break;
+		default:
+			break;
+		}
+
+		int form = GL_RGB;
+
+		switch (format)
+		{
+		case GameEngine::COLOR_TYPE::ENGINE_RED:
+			form = GL_RED;
+			break;
+		case GameEngine::COLOR_TYPE::ENGINE_GREEN:
+			form = GL_GREEN;
+			break;
+		case GameEngine::COLOR_TYPE::ENGINE_BLUE:
+			form = GL_BLUE;
+			break;
+		case GameEngine::COLOR_TYPE::ENGINE_RGB:
+			form = GL_RGB;
+			break;
+		case GameEngine::COLOR_TYPE::ENGINE_RGBA:
+			form = GL_RGBA;
+			break;
+		default:
+			break;
+		}
+
+		glGenTextures(1, &TBO);
+		glBindTexture(GL_TEXTURE_2D, TBO);
+		// Create a TEXTURE_2D_ARRAY, making sure the texture widthand height are the dimensions of your largest texture.
+		// The last argument is NULL as we want to iterate through our images and put them in the correct position in our texture array using glTexSubImage
+		glTexImage3D(GL_TEXTURE_2D_ARRAY, 0, iformat, width, height, number_of_textures, 0, form, t, NULL);
+	}
+
+	void OpenGLRenderEngine::AddTextureToArrayBuffer(unsigned int& TBO, int width, int height, int index, void* data, COLOR_TYPE format, VALUE_TYPE type)
+	{
+		int t = GL_UNSIGNED_BYTE;
+		switch (type)
+		{
+			case GameEngine::VALUE_TYPE::UNSIGNED_BYTE:
+				t = GL_UNSIGNED_BYTE;
+				break;
+			case GameEngine::VALUE_TYPE::UNSIGNED_SHORT:
+				t = GL_UNSIGNED_SHORT;
+				break;
+			case GameEngine::VALUE_TYPE::UNSIGNED_INT:
+				t = GL_UNSIGNED_INT;
+				break;
+			default:
+				break;
+		}
+
+		int form = GL_RGB;
+
+		switch (format)
+		{
+			case GameEngine::COLOR_TYPE::ENGINE_RED:
+				form = GL_RED;
+				break;
+			case GameEngine::COLOR_TYPE::ENGINE_GREEN:
+				form = GL_GREEN;
+				break;
+			case GameEngine::COLOR_TYPE::ENGINE_BLUE:
+				form = GL_BLUE;
+				break;
+			case GameEngine::COLOR_TYPE::ENGINE_RGB:
+				form = GL_RGB;
+				break;
+			case GameEngine::COLOR_TYPE::ENGINE_RGBA:
+				form = GL_RGBA;
+				break;
+			default:
+				break;
+		}
+
+		glBindTexture(GL_TEXTURE_2D, TBO);
+		glTexSubImage3D(GL_TEXTURE_2D_ARRAY, 0, 0, 0, index, width, height, 1, form, t, data);
+	}
+	
+	void ClearTextureArray() 
+	{
+		//clear the textures? or just clear the bound textures?
+	}
 
 	// Frame buffer
 	void OpenGLRenderEngine::GenerateFrameBuffer(unsigned int& FBO)

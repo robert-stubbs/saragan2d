@@ -60,6 +60,10 @@ namespace GameEngine {
 			virtual void GenerateTextureMipmap() override;
 			virtual void UnbindTextureBuffer() override;
 
+			virtual void GenerateTextureArrayBuffer(unsigned int& TBO, int width, int height, int number_of_textures, COLOR_TYPE internalformat, COLOR_TYPE format, VALUE_TYPE type) override;
+			virtual void AddTextureToArrayBuffer(unsigned int& TBO, int width, int height, int index, void* data, COLOR_TYPE format, VALUE_TYPE type) override;
+			virtual void ClearTextureArray() override;
+
 			// Frame buffer
 			virtual void GenerateFrameBuffer(unsigned int& FBO) override;
 			virtual void BindFrameBuffer(unsigned int& FBO) override;

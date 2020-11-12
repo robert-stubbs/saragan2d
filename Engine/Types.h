@@ -2,6 +2,8 @@
 #define _TYPES_H_
 namespace GameEngine {
 
+#define MAX_TEXTURES 32
+
 #pragma region Events
 	struct EventType {
 		class Event* event;
@@ -152,7 +154,8 @@ namespace GameEngine {
 
 	enum class TEXTURE_TARGET
 	{
-		ENGINE_TEXTURE_2D
+		ENGINE_TEXTURE_2D,
+		ENGINE_TEXTURE_2D_ARRAY
 	};
 
 	enum class TEXTURE_TARGET_NAME

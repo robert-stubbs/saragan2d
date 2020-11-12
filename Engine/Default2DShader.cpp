@@ -45,6 +45,8 @@ namespace GameEngine {
         s->bindings.push_back({ GameEngine::SHADER_TYPES::UNIFORM, "viewMatrix", 0, 0, false, 0, 0 });
         s->bindings.push_back({ GameEngine::SHADER_TYPES::UNIFORM, "modelMatrix", 0, 0, false, 0, 0 });
         s->bindings.push_back({ GameEngine::SHADER_TYPES::UNIFORM, "is_Text", 0, 0, false, 0, 0 });
+
+
     }
 
     void Default2DShader::BindVertStructure()

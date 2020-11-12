@@ -9,6 +9,8 @@ namespace GameEngine {
 		public:
 			unsigned int CurrentTextureID = -1;
 
+			unsigned int TextureArray[MAX_TEXTURES];
+
 			float frame_buffer_width = 0.0f;
 			float frame_buffer_height = 0.0f;
 
@@ -63,6 +65,10 @@ namespace GameEngine {
 			virtual void BindTextureBufferParams(TEXTURE_TARGET target, TEXTURE_TARGET_NAME name, TEXTURE_TARGET_PARAM param) = 0;
 			virtual void GenerateTextureMipmap() = 0;
 			virtual void UnbindTextureBuffer() = 0;
+
+			virtual void GenerateTextureArrayBuffer(unsigned int& TBO, int width, int height, int number_of_textures, COLOR_TYPE internalformat, COLOR_TYPE format, VALUE_TYPE type) = 0;
+			virtual void AddTextureToArrayBuffer(unsigned int& TBO, int width, int height, int index, void* data, COLOR_TYPE format, VALUE_TYPE type) = 0;
+			virtual void ClearTextureArray() = 0;
 
 			// Frame buffer
 			virtual void GenerateFrameBuffer(unsigned int& FBO) = 0;
