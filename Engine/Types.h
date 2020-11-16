@@ -404,6 +404,7 @@ typedef struct
 		int image_width;
 		int image_height;
 		std::string image_path;
+		int start_index;
 
 	} TileAtlas;
 

@@ -586,7 +586,7 @@ namespace GameEngine {
 		glTexSubImage3D(GL_TEXTURE_2D_ARRAY, 0, 0, 0, index, width, height, 1, form, t, data);
 	}
 	
-	void ClearTextureArray() 
+	void OpenGLRenderEngine::ClearTextureArray()
 	{
 		//clear the textures? or just clear the bound textures?
 	}

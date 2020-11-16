@@ -174,6 +174,8 @@ namespace Editor {
 
 	void TileEditorTool::RenderProperties() {
 
+		Map* m = Engine::getWorld()->GetMap();
+
 		ImGuiIO& io = ImGui::GetIO();
 		auto f = io.Fonts->Fonts[5];
 		ImVec2 viewportPanelSize = ImGui::GetContentRegionAvail();
@@ -239,11 +241,7 @@ namespace Editor {
 
 			ImGui::SameLine();
 			if (ImGui::Button("Add")) {
-				Map* m = Engine::getWorld()->GetMap();
-				// TODO - from selection
-				TileAtlas a = def->_images.at(0);
-				def->_images.push_back(a);
-				m->AddTexture(a);
+				showAddImage = true;
 			}
 			ImGui::SameLine();
 			if (ImGui::Button("Remove")) {
@@ -295,7 +293,68 @@ namespace Editor {
 		//ImGui::Text("World X"); ImGui::SameLine(); ImGui::InputFloat("", &_parent->world_x);
 		//ImGui::Text("World Y"); ImGui::SameLine(); ImGui::InputFloat("", &_parent->world_y);
 
+		if (showAddImage) {
+			ImGui::OpenPopup("Add Texture");
+		}
 
+		ImGui::SetNextWindowPos(ImVec2(300, 100));
+		if (ImGui::BeginPopupModal("Add Texture", &showAddImage, 0))
+		{
+			/*
+			int id;				// auto ID
+			std::string name;	// custom name
+			std::string type;	// get from file
+			int tile_width;		// get from box
+			int tile_height;	// get from box
+			int image_width;	// get from image
+			int image_height;	// get from image
+			std::string image_path; // ask from user
+			int start_index;	// work out from last index of previous texture
+			*/
+
+			ImGui::PushID("NewImageName");
+			ImGui::Text("Image Name"); ImGui::SameLine(); ImGui::InputText("", &newAtlas.name);
+			ImGui::PopID();
+			ImGui::PushID("NewImageTileWidth");
+			ImGui::Text("Tile Width"); ImGui::SameLine(); ImGui::InputInt("", &newAtlas.tile_width);
+			ImGui::PopID();
+			ImGui::PushID("NewImageTileHeight");
+			ImGui::Text("Tile Height"); ImGui::SameLine(); ImGui::InputInt("", &newAtlas.tile_height);
+			ImGui::PopID();
+
+			ImGui::PushID("NewSourceTexture");
+				ImGui::Text("Source"); 
+				ImGui::SameLine(); 
+				ImGui::InputText("", &newAtlas.image_path); 
+				ImGui::SameLine();
+				if (ImGui::Button("Find")) {
+
+					std::string selected = Engine::getContext().Get().SaveFileDialog("Image PNG (*.png)\0*.png\0");
+					std::filesystem::path p = std::filesystem::path(selected);
+					std::string file_name = p.stem().string();
+					std::string folder = p.parent_path().string() + "\\";
+					newAtlas.image_path = p.string();
+				}
+			ImGui::PopID();
+
+			ImGui::Separator();
+			if (ImGui::Button("Cancel")) {
+				showAddImage = false;
+				ImGui::CloseCurrentPopup();
+			}
+			ImGui::SameLine();
+			if (ImGui::Button("Create")) {
+
+				//TileAtlas a = def->_images.at(0);
+				//def->_images.push_back(a);
+				//m->AddTexture(a);
+
+
+				showAddImage = false;
+				ImGui::CloseCurrentPopup();
+			}
+			ImGui::EndPopup();
+		}
 	
 	}
 

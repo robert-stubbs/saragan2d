@@ -638,6 +638,7 @@ namespace GameEngine
 		doc.LoadFile(map_path.c_str());
 			
 		int error = doc.ErrorID();
+		std::string error_str = doc.ErrorStr();
 
 		tinyxml2::XMLElement* map = doc.FirstChildElement("map");
 
@@ -657,18 +658,19 @@ namespace GameEngine
 
 		for (tinyxml2::XMLElement* e = map->FirstChildElement("sheets"); e != NULL; e = e->NextSiblingElement("sheets"))
 		{
-			tinyxml2::XMLElement* sheet = e->FirstChildElement("image");
-			if (sheet != nullptr)
+			tinyxml2::XMLElement* atlas = e->FirstChildElement("image");
+			if (atlas != nullptr)
 			{
 				TileAtlas t = TileAtlas();
-				t.id = atoi(sheet->Attribute("id"));
-				t.name = sheet->Attribute("name");
-				t.image_path = sheet->Attribute("path");
-				t.type = sheet->Attribute("type");
-				t.tile_width = atoi(sheet->Attribute("tilewidth"));
-				t.tile_height = atoi(sheet->Attribute("tileheight"));
-				t.image_width = atoi(sheet->Attribute("width"));
-				t.image_height = atoi(sheet->Attribute("height"));
+				t.id = atoi(atlas->Attribute("id"));
+				t.name = atlas->Attribute("name");
+				t.image_path = atlas->Attribute("path");
+				t.type = atlas->Attribute("type");
+				t.tile_width = atoi(atlas->Attribute("tilewidth"));
+				t.tile_height = atoi(atlas->Attribute("tileheight"));
+				t.image_width = atoi(atlas->Attribute("width"));
+				t.image_height = atoi(atlas->Attribute("height"));
+				t.start_index = atoi(atlas->Attribute("start_index"));
 				_definition._images.push_back(t);
 			}
 		}
@@ -737,16 +739,16 @@ namespace GameEngine
 		for (int i = 0; i < _definition._images.size(); i++)
 		{
 			TileAtlas& t = _definition._images.at(i);
-			tinyxml2::XMLElement* sheet = sheets->InsertNewChildElement("image");
-			sheet->SetAttribute("id", std::to_string(t.id).c_str());
-			sheet->SetAttribute("name", t.name.c_str());
-			sheet->SetAttribute("path", t.image_path.c_str());
-			sheet->SetAttribute("type", t.type.c_str());
-			sheet->SetAttribute("tilewidth", std::to_string(t.tile_width).c_str());
-			sheet->SetAttribute("tileheight", std::to_string(t.tile_height).c_str());
-			sheet->SetAttribute("width", std::to_string(t.image_width).c_str());
-			sheet->SetAttribute("height", std::to_string(t.image_height).c_str());
-
+			tinyxml2::XMLElement* atlas = sheets->InsertNewChildElement("image");
+			atlas->SetAttribute("id", std::to_string(t.id).c_str());
+			atlas->SetAttribute("name", t.name.c_str());
+			atlas->SetAttribute("path", t.image_path.c_str());
+			atlas->SetAttribute("type", t.type.c_str());
+			atlas->SetAttribute("tilewidth", std::to_string(t.tile_width).c_str());
+			atlas->SetAttribute("tileheight", std::to_string(t.tile_height).c_str());
+			atlas->SetAttribute("width", std::to_string(t.image_width).c_str());
+			atlas->SetAttribute("height", std::to_string(t.image_height).c_str());
+			atlas->SetAttribute("start_index", std::to_string(t.start_index).c_str());
 		}
 
 		for (int i = 0; i < _definition._layers.size(); i++)

@@ -5,6 +5,7 @@
 #include "Texture.h"
 #include "Engine.h"
 #include "World.h"
+#include "Types.h"
 #include "Map.h"
 
 namespace Editor {
@@ -44,6 +45,10 @@ namespace Editor {
 		float delta_w;
 		float delta_h;
 
+		bool showAddImage = false;
+
+		GameEngine::TileAtlas newAtlas;
+
 		//###########################################
 		// Selection in viewport
 		//###########################################
@@ -56,7 +61,9 @@ namespace Editor {
 		int WorldSelectedY = -1;
 		//###########################################
 
-		TileEditorTool() {};
+		TileEditorTool() {
+			newAtlas = GameEngine::TileAtlas();
+		};
 
 		~TileEditorTool() {};
 
